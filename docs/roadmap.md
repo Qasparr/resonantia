@@ -225,3 +225,16 @@ bundled — the repo stays lean); GPU strongly recommended, CPU fallback
 documented as slow; every adapter degrades to a loud skip when its
 model or torch is absent. No cloud AI dependency is ever required —
 the wing runs offline by design, which is also the privacy story.
+
+## v0.5.0 — The Field Kit (Android, Termux-first) — specified 2026-10-05
+
+RESONANCE goes to the phone — both platforms, desktop keeps its crown.
+The audit verdict: zero platform-sensitive imports, numpy-only runtime,
+file-rendering throughout — the engine is Termux-compatible by
+construction. `docs/ANDROID.md` is the field manual: Termux setup,
+808 rendering (`resonance.synth.cli`), binaural rendering
+(`binaural_beat`), playback via `termux-media-player`. Both pillars
+verified rendering on the build host; on-device verification is John's.
+Honest limits: `burn/` stays desktop; AI wing local guests want a GPU;
+the FastAPI render-job API is the next on-device experiment. v0.6.0
+(native APK via Chaquopy/Kivy) waits on an Android SDK build machine.
