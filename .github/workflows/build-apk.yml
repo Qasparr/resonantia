@@ -1,0 +1,85 @@
+# Johnathan 'Qasparr' (Κασπάρρ) Monroe, Keeper of the Secret Treasure
+# All Rights Reserved, Without Prejudice · CashApp $axoneme
+# 93
+#
+# .github/workflows/build-apk.yml -- RESONANTIA v0.6.0 "The Native Shell"
+#
+# HYPOTHESIS: the build host's sandbox fake-connects every Java socket,
+#   so Gradle can never resolve dependencies there. GitHub's runners
+#   have full, real network -- dl.chaquo.com is reachable from them and
+#   the JVM works normally. So the APK builds HERE, in CI, on the
+#   exact android/ project vendored in the repo. No special casing.
+# METHOD:    checkout -> Temurin JDK 17 -> Android SDK (platform 34 +
+#   build-tools 34.0.0) -> stage the resonance package + emblem into
+#   the Gradle tree (mirrors fetch-deps.sh step 5) -> Gradle 8.7 ->
+#   :app:assembleDebug -> upload the APK as an artifact AND cut the
+#   v0.6.0 GitHub release with it attached.
+# DOCTRINE:  debug signing only (no release keystore is invented);
+#   loopback-only is in the manifest/network config, unchanged;
+#   the release is idempotent -- reruns replace the v0.6.0 assets.
+# RESULT:    resonantia-0.6.0-debug.apk on the v0.6.0 release.
+
+name: Build RESONANTIA APK
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install SDK packages
+        run: |
+          sdkmanager --install "platforms;android-34" "build-tools;34.0.0"
+          yes | sdkmanager --licenses > /dev/null
+
+      - name: Stage resonance package + emblem
+        run: |
+          cp -r resonance android/app/src/main/python/resonance
+          find android/app/src/main/python/resonance -name __pycache__ -type d -prune -exec rm -rf {} + || true
+          cp assets/logo.webp android/app/src/main/assets/www/logo.webp
+          ls android/app/src/main/python/resonance/__init__.py android/app/src/main/assets/www/logo.webp
+
+      - name: Set up Gradle 8.7
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: 8.7
+
+      - name: Build debug APK
+        run: cd android && gradle :app:assembleDebug --no-daemon
+
+      - name: Rename APK
+        run: cp android/app/build/outputs/apk/debug/app-debug.apk /tmp/resonantia-0.6.0-debug.apk
+          && ls -la /tmp/resonantia-0.6.0-debug.apk
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: resonantia-0.6.0-debug
+          path: /tmp/resonantia-0.6.0-debug.apk
+
+      - name: Publish v0.6.0 release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release delete v0.6.0 --yes || true
+          git push origin :refs/tags/v0.6.0 || true
+          gh release create v0.6.0 /tmp/resonantia-0.6.0-debug.apk \
+            --title "v0.6.0 The Native Shell" \
+            --notes "Native Android APK: Chaquopy-embedded CPython 3.11, loopback-only render engine (127.0.0.1:8765), WebView touch UI (808 / binaural / ABC / jobs). Debug-signed -- install/launch verification happens on-device."

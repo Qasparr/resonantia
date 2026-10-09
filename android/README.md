@@ -54,11 +54,18 @@ gradle :app:assembleDebug
 
 ## Result -- status
 
-**BLOCKED on `dl.chaquo.com`** (the Chaquopy download host: TLS opens,
-then empty replies -- HTTP 000 -- since 2026-10-08). Everything else in
-DEPS.md is fetched or fetchable. A scheduled watch
-(`resonantia-apk-block-watch`, every 6 hours) probes the host; the
-moment it answers, the watch runs fetch-deps.sh, builds the APK, and
-pushes it to GitHub as the v0.6.0 release. Nothing for anyone to do
-until then -- final install/launch verification happens on John's
-Android device regardless, since the build host cannot boot Android.
+**Primary path: GitHub Actions** (`.github/workflows/build-apk.yml`).
+The build host's sandbox fake-connects every Java socket, so Gradle can
+never resolve dependencies there -- but GitHub's runners have full, real
+network (`dl.chaquo.com` reachable, JVM normal). Trigger with
+`gh workflow run build-apk.yml --repo Qasparr/resonantia`; the workflow
+builds `:app:assembleDebug` and publishes `resonantia-0.6.0-debug.apk`
+on the v0.6.0 release.
+
+**Fallback: local build** (blocked on two conditions). Everything else
+is vendored for a local build via `./deps/fetch-deps.sh`, but it needs
+(1) `dl.chaquo.com` reachable AND (2) JVM TCP allowed (Muse settings ->
+Permissions -> Direct network protocols -> `other_tcp` to Allow).
+A scheduled watch (`resonantia-apk-block-watch`, every 6 hours) probes
+both; the moment they clear it builds locally and pushes. The watch is
+a backup while the Actions path is primary.
