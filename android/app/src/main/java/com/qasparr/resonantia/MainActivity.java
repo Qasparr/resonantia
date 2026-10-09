@@ -21,6 +21,9 @@
 package com.qasparr.resonantia;
 
 import android.app.Activity;
+import android.content.pm.PackageManager;
+import android.Manifest;
+import android.os.Build;
 import android.os.Bundle;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -33,9 +36,28 @@ public class MainActivity extends Activity {
 
     private WebView webView;
 
+    // MECHANISM: READ_MEDIA_AUDIO is a dangerous permission -- the
+    //   manifest declares it, but Android still demands a runtime ask.
+    //   The cutter refuses loudly without it (the engine never fails
+    //   silent), so the request fires once at launch; denial simply
+    //   leaves the cutter gated until the user grants it in Settings.
+    // DOCTRINE:  ask for the one thing the features need, at the
+    //   moment the app starts, with no dark patterns and no retries.
+    private static final int REQ_AUDIO = 77;
+
+    private void ensureAudioPermission() {
+        String perm = (Build.VERSION.SDK_INT >= 33)
+                ? Manifest.permission.READ_MEDIA_AUDIO
+                : Manifest.permission.READ_EXTERNAL_STORAGE;
+        if (checkSelfPermission(perm) != PackageManager.PERMISSION_GRANTED) {
+            requestPermissions(new String[]{perm}, REQ_AUDIO);
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ensureAudioPermission();
 
         // The engine thread: boots CPython, then blocks inside uvicorn
         // serving 127.0.0.1:8765. Daemon so it dies with the activity.
