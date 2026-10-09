@@ -115,6 +115,12 @@ class Player:
         self.position_s = 0.0
         self.karaoke = None
         self.status = "ready"
+        # MECHANISM: the pitch-preservation checkbox, TUI edition.
+        # Tri-state: None = AUTO (backend decides), True = ON (demanded),
+        # False = OFF (tape-style, deliberate). The TUI performs no
+        # audio I/O -- this is the user's setting, displayed honestly
+        # in the statusbar and handed to MasterTempo by the real player.
+        self.preserve_pitch = None
 
     # -- skin ---------------------------------------------------------
     def apply_skin(self, skin_input):
@@ -187,6 +193,18 @@ class Player:
             self.state = "paused"
         elif self.state == "paused":
             self.state = "playing"
+
+    def toggle_pitch_preserve(self):
+        """Cycle the pitch-preservation checkbox: AUTO -> ON -> OFF -> AUTO.
+
+        Returns the new value (None / True / False). This is the TUI's
+        checkbox: the same tri-state MasterTempo takes as preserve_pitch,
+        so the setting transfers to the real engine without translation.
+        """
+        order = (None, True, False)
+        self.preserve_pitch = order[
+            (order.index(self.preserve_pitch) + 1) % len(order)]
+        return self.preserve_pitch
 
     def stop(self):
         """Stop playback; fires player.track.end {title,artist}."""
@@ -405,8 +423,11 @@ class Player:
         return _fg(colors["accent"]) + "\n".join(rows) + _RESET
 
     def _render_statusbar(self, colors, phase):
+        # The checkbox, rendered: [x] ON, [ ] OFF, [~] AUTO.
+        pp = self.preserve_pitch
+        pp_glyph = "[x]" if pp is True else ("[ ]" if pp is False else "[~]")
         parts = [f"state={self.state}", f"skin={self._skin_name}",
-                 self.status]
+                 f"pitch-preserve={pp_glyph}", self.status]
         if self.karaoke is not None:
             try:
                 line = self.karaoke.line_at(self.position_s)

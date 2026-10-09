@@ -60,6 +60,17 @@ def build_parser():
     pl.add_argument("paths", nargs="+", help="audio file(s) to play")
     pl.add_argument("--tempo", type=float, default=1.0,
                     help="master tempo ratio 0.25..4.0 (default 1.0)")
+    # MECHANISM: the pitch-preservation checkbox, CLI edition. Mutually
+    # exclusive by construction -- the user picks demanded, tape-style,
+    # or says nothing (auto). Maps straight onto
+    # MasterTempo(preserve_pitch=...).
+    pitch = pl.add_mutually_exclusive_group()
+    pitch.add_argument("--preserve-pitch", action="store_true",
+                       help="demand pitch-preserving time-stretch; fails "
+                            "loudly if the rubberband tool is missing")
+    pitch.add_argument("--no-preserve-pitch", action="store_true",
+                       help="tape-style tempo: pitch shifts with tempo, "
+                            "deliberately (rehearsal-grade)")
     pl.add_argument("--rehearsal", action="store_true",
                     help="force silent rehearsal even if a backend exists")
     pl.add_argument("--no-autoplay", action="store_true",
@@ -68,7 +79,25 @@ def build_parser():
     st = sub.add_parser("status", help="probe backends; print the honest story")
     st.add_argument("--tempo", type=float, default=1.0,
                     help="tempo ratio to report the backend story for")
+    st_pitch = st.add_mutually_exclusive_group()
+    st_pitch.add_argument("--preserve-pitch", action="store_true",
+                          help="report the story as if preservation demanded")
+    st_pitch.add_argument("--no-preserve-pitch", action="store_true",
+                          help="report the story as if tape-style chosen")
     return p
+
+
+def _pitch_toggle(args):
+    """Map the --preserve-pitch/--no-preserve-pitch flags to the toggle.
+
+    Returns True / False / None (auto) -- the third state is why this
+    is a helper and not a boolean.
+    """
+    if args.preserve_pitch:
+        return True
+    if args.no_preserve_pitch:
+        return False
+    return None
 
 
 def cmd_list(directory):
@@ -87,7 +116,7 @@ def cmd_list(directory):
     return 0
 
 
-def cmd_status(tempo_ratio=1.0):
+def cmd_status(tempo_ratio=1.0, preserve_pitch=None):
     """Print backend probe results + tempo backend story. Returns int."""
     backends = probe_audio_backends()
     print("Audio backends (probe order aplay/paplay/afplay/ffplay):")
@@ -101,14 +130,15 @@ def cmd_status(tempo_ratio=1.0):
         print("  real transport, real clock, NO audible sound. Install a")
         print("  system player (e.g. ffmpeg, which provides ffplay) for audio.")
     print()
-    tempo = MasterTempo(ratio=tempo_ratio)
+    tempo = MasterTempo(ratio=tempo_ratio, preserve_pitch=preserve_pitch)
     print(tempo.describe())
     return 0
 
 
-def cmd_play(paths, tempo_ratio=1.0, rehearsal=False, autoplay=True):
+def cmd_play(paths, tempo_ratio=1.0, rehearsal=False, autoplay=True,
+             preserve_pitch=None):
     """Load paths and play through them. Returns int exit code."""
-    tempo = MasterTempo(ratio=tempo_ratio)
+    tempo = MasterTempo(ratio=tempo_ratio, preserve_pitch=preserve_pitch)
     if rehearsal:
         from resonance.player.engine import SILENT_REHEARSAL, AudioBackend
         backend = AudioBackend(name=SILENT_REHEARSAL, argv=(),
@@ -154,11 +184,12 @@ def main(argv=None):
     if args.command == "list":
         return cmd_list(args.directory)
     if args.command == "status":
-        return cmd_status(args.tempo)
+        return cmd_status(args.tempo, preserve_pitch=_pitch_toggle(args))
     if args.command == "play":
         return cmd_play(args.paths, tempo_ratio=args.tempo,
                         rehearsal=args.rehearsal,
-                        autoplay=not args.no_autoplay)
+                        autoplay=not args.no_autoplay,
+                        preserve_pitch=_pitch_toggle(args))
     return 2  # unreachable: required=True
 
 

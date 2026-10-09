@@ -313,6 +313,22 @@ def t_tui_tick_advances_and_autonext():
     assert player._current_track()["title"] == "Two"
 
 
+def t_tui_pitch_preserve_checkbox():
+    # The checkbox, TUI edition: AUTO -> ON -> OFF -> AUTO, and the
+    # statusbar shows the state honestly at each step.
+    player = Player(manager=fresh_manager())
+    assert player.preserve_pitch is None
+    assert player.toggle_pitch_preserve() is True
+    assert player.toggle_pitch_preserve() is False
+    assert player.toggle_pitch_preserve() is None
+    player.preserve_pitch = True
+    assert "pitch-preserve=[x]" in player.render_to_string()
+    player.preserve_pitch = False
+    assert "pitch-preserve=[ ]" in player.render_to_string()
+    player.preserve_pitch = None
+    assert "pitch-preserve=[~]" in player.render_to_string()
+
+
 if __name__ == "__main__":
     check("fixture midnight-mandala.json is valid", t_fixture_skin_valid)
     check("DEFAULT_SKIN is valid", t_default_skin_valid)
@@ -347,4 +363,6 @@ if __name__ == "__main__":
           t_tui_visualizer_bindings_render)
     check("tick advances clock and auto-advances",
           t_tui_tick_advances_and_autonext)
+    check("pitch-preserve checkbox cycles + renders",
+          t_tui_pitch_preserve_checkbox)
     print(f"{PASSED} ui tests passed.")

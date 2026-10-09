@@ -292,20 +292,55 @@ class MasterTempo:
       CLI is absent, recording .fallback_reason -- the fallback is loud
       (logged + in describe()), never silent. adapter="rubberband"
       raises LoudMissingBackend instead of falling back; an explicit
-      adapter instance is used as given. ratio accepts 0.25..4.0 and
-      warns past 2x either way.
+      adapter instance is used as given. preserve_pitch is the user's
+      own toggle: True demands a pitch-preserving backend (raises
+      loudly when Rubber Band is absent -- no silent fallback);
+      False deliberately chooses tape-style resample (pitch rides
+      along with tempo, on purpose); None (default) keeps the auto
+      behavior. ratio accepts 0.25..4.0 and warns past 2x either way.
     Observation: .pitch_preserved and .grade always describe the ACTIVE
       backend, so a UI can print "pitch preserved: NO (rehearsal)" and
-      mean it.
+      mean it; .preserve_pitch reports what the USER asked for, so a
+      checkbox can show its own state honestly.
     Result:    process(buf) returns the tempo-scaled mix; set_bpm /
       set_ratio move the slider; describe() prints the honest backend
       story in one paragraph.
     """
 
-    def __init__(self, adapter="auto", ratio=1.0, sample_rate=44100):
+    def __init__(self, adapter="auto", ratio=1.0, sample_rate=44100,
+                 preserve_pitch=None):
         self._stretcher = None
         self.fallback_reason = None
-        if adapter == "auto":
+        # MECHANISM: the user's toggle, kept separate from the backend's
+        # capability -- .preserve_pitch is what was ASKED, .pitch_preserved
+        # is what the active backend DELIVERS. A checkbox shows the first;
+        # the status line shows both.
+        if preserve_pitch not in (True, False, None):
+            raise ValueError(
+                f"MasterTempo: preserve_pitch must be True, False, or None, "
+                f"got {preserve_pitch!r}")
+        self._preserve_pitch = preserve_pitch
+        if preserve_pitch is True:
+            # DOCTRINE: the user demanded pitch preservation -- there is
+            # no silent fallback. Rubber Band absent means a loud error,
+            # never a quiet resample wearing its clothes.
+            if adapter not in ("auto", "rubberband"):
+                raise ValueError(
+                    f"MasterTempo: preserve_pitch=True conflicts with "
+                    f"adapter={adapter!r} -- pick one.")
+            self._stretcher = RubberBandAdapter(sample_rate=sample_rate)
+        elif preserve_pitch is False:
+            # DOCTRINE: the user explicitly chose tape-style -- pitch
+            # shifts with tempo, deliberately, not by accident. This is
+            # a choice, not a fallback, so fallback_reason stays None.
+            if adapter != "auto":
+                raise ValueError(
+                    f"MasterTempo: preserve_pitch=False conflicts with "
+                    f"adapter={adapter!r} -- pick one.")
+            self._stretcher = NumpyResampleStretcher()
+            log.info("MasterTempo: pitch preservation explicitly OFF -- "
+                     "tape-style resample by user choice.")
+        elif adapter == "auto":
             try:
                 self._stretcher = RubberBandAdapter(sample_rate=sample_rate)
                 log.info("MasterTempo: using %s", self._stretcher.label)
@@ -339,6 +374,15 @@ class MasterTempo:
     def pitch_preserved(self):
         """Whether the ACTIVE backend preserves pitch (honest)."""
         return bool(self._stretcher.pitch_preserved)
+
+    @property
+    def preserve_pitch(self):
+        """The user's toggle: True (demanded) / False (tape-style) / None (auto).
+
+        MECHANISM: this is what was ASKED, not what was delivered --
+          a checkbox binds here; .pitch_preserved reports the backend.
+        """
+        return self._preserve_pitch
 
     @property
     def grade(self):
@@ -402,9 +446,12 @@ class MasterTempo:
 
     def describe(self):
         """One-paragraph honest backend story for status output."""
+        toggle = {True: "ON (demanded)", False: "OFF (tape-style)",
+                  None: "AUTO"}[self._preserve_pitch]
         lines = [
             f"Master tempo: {self._ratio:.3f}x "
             f"(pitch preserved: {'YES' if self.pitch_preserved else 'NO'})",
+            f"Pitch-preserve toggle: {toggle}",
             f"Backend: {self.backend_label} [{self.grade}]",
         ]
         if self.fallback_reason is not None:

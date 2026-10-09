@@ -556,6 +556,101 @@ def t_cli_list_runs():
         _sh.rmtree(tmp, ignore_errors=True)
 
 
+# --------------------------------------- pitch-preservation toggle
+
+def t_preserve_pitch_true_demands_rubberband():
+    # The toggle ON means: pitch MUST be preserved. Absent Rubber Band
+    # is a loud error -- never a silent resample.
+    with mock.patch.object(shutil, "which", return_value=None):
+        try:
+            MasterTempo(preserve_pitch=True)
+        except LoudMissingBackend as exc:
+            assert "rubberband" in str(exc)
+        else:
+            raise AssertionError(
+                "preserve_pitch=True must not silently fall back")
+
+
+def t_preserve_pitch_true_uses_rubberband_when_present():
+    with mock.patch.object(shutil, "which",
+                           return_value="/usr/bin/rubberband"):
+        m = MasterTempo(preserve_pitch=True)
+    assert isinstance(m.stretcher, RubberBandAdapter)
+    assert m.pitch_preserved is True
+    assert m.preserve_pitch is True
+    assert "ON (demanded)" in m.describe()
+
+
+def t_preserve_pitch_false_is_deliberate_tape():
+    # The toggle OFF means: tape-style, on purpose. Works everywhere
+    # numpy does; fallback_reason stays None because this is a choice,
+    # not a fallback.
+    m = MasterTempo(preserve_pitch=False)
+    assert isinstance(m.stretcher, NumpyResampleStretcher)
+    assert m.pitch_preserved is False
+    assert m.preserve_pitch is False
+    assert m.fallback_reason is None
+    desc = m.describe()
+    assert "OFF (tape-style)" in desc
+    assert "pitch preserved: NO" in desc
+    # and it still stretches
+    buf = np.zeros(4410, dtype=np.float32)
+    out = m.process(buf)
+    assert out.dtype == np.float32 and len(out) > 0
+
+
+def t_preserve_pitch_conflicts_rejected():
+    for kw in (dict(adapter=NumpyResampleStretcher(), preserve_pitch=True),
+               dict(adapter="rubberband", preserve_pitch=False),
+               dict(preserve_pitch="yes")):
+        try:
+            MasterTempo(**kw)
+        except (ValueError, LoudMissingBackend):
+            pass
+        else:
+            raise AssertionError(
+                f"conflicting {kw} must be rejected")
+
+
+def t_preserve_pitch_default_is_auto():
+    with mock.patch.object(shutil, "which", return_value=None):
+        m = MasterTempo()
+    assert m.preserve_pitch is None
+    assert "AUTO" in m.describe()
+
+
+def t_cli_pitch_flags_parse():
+    from resonance.player.cli import build_parser, _pitch_toggle
+    p = build_parser()
+    a = p.parse_args(["play", "x.wav", "--preserve-pitch"])
+    assert _pitch_toggle(a) is True
+    a = p.parse_args(["play", "x.wav", "--no-preserve-pitch"])
+    assert _pitch_toggle(a) is False
+    a = p.parse_args(["play", "x.wav"])
+    assert _pitch_toggle(a) is None
+    a = p.parse_args(["status", "--preserve-pitch"])
+    assert _pitch_toggle(a) is True
+    # mutually exclusive by construction
+    try:
+        p.parse_args(["play", "x.wav", "--preserve-pitch",
+                      "--no-preserve-pitch"])
+    except SystemExit:
+        pass
+    else:
+        raise AssertionError("both pitch flags must be rejected")
+
+
+def t_cli_status_reports_toggle():
+    from resonance.player.cli import main
+    import io as _io
+    with mock.patch.object(shutil, "which", return_value=None):
+        buf = _io.StringIO()
+        with mock.patch("sys.stdout", buf):
+            rc = main(["status", "--no-preserve-pitch"])
+        assert rc == 0, rc
+        assert "OFF (tape-style)" in buf.getvalue()
+
+
 TESTS = [
     ("transport state machine", t_state_machine),
     ("play on empty playlist raises", t_play_empty_playlist_raises),
@@ -583,6 +678,13 @@ TESTS = [
     ("status dict shape", t_status_shape),
     ("cli status runs", t_cli_status_runs),
     ("cli list runs", t_cli_list_runs),
+    ("preserve_pitch=True demands rubberband", t_preserve_pitch_true_demands_rubberband),
+    ("preserve_pitch=True uses rubberband when present", t_preserve_pitch_true_uses_rubberband_when_present),
+    ("preserve_pitch=False is deliberate tape-style", t_preserve_pitch_false_is_deliberate_tape),
+    ("preserve_pitch conflicts rejected", t_preserve_pitch_conflicts_rejected),
+    ("preserve_pitch default is auto", t_preserve_pitch_default_is_auto),
+    ("cli pitch flags parse", t_cli_pitch_flags_parse),
+    ("cli status reports toggle", t_cli_status_reports_toggle),
 ]
 
 
