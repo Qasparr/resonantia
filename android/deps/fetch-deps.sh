@@ -10,8 +10,11 @@
 #   ONCE, pinned, into android/deps/dl/ (machine-local, gitignored),
 #   and stages the Python package + emblem into the Gradle tree.
 # METHOD:    1) Temurin JDK 17 (no root needed -- tarball, not apt).
-#            2) Android SDK cmdline-tools -> sdkmanager installs exactly
-#               platform android-34 + build-tools 34.0.0.
+#            2) Android SDK via curl (NOT sdkmanager): the JVM has no
+#               real TCP on this host (sandbox fake-connects every Java
+#               socket -- proven 2026-10-08), so sdkmanager can never
+#               download. curl fetches platform android-34 +
+#               build-tools 34.0.0 and they are laid out by hand.
 #            3) Gradle 8.7 (pairs with AGP 8.5.2).
 #            4) Chaquopy Gradle plugin mirrored into deps/dl/maven
 #               (settings.gradle lists that file:// repo first, so a
@@ -23,7 +26,10 @@
 #            names the URL that failed.
 # RESULT:    after this script, `gradle :app:assembleDebug` runs with
 #   the network needed only for Chaquopy's own runtime/pip resolution
-#   (which requires dl.chaquo.com reachable -- the tracked block).
+#   (which requires dl.chaquo.com reachable -- the tracked block) AND
+#   for JVM TCP to be allowed (Muse settings -> Direct network
+#   protocols -> other_tcp; the sandbox currently fake-connects all
+#   Java sockets -- see DEPS.md). Until both clear, the build waits.
 
 set -euo pipefail
 
@@ -56,6 +62,14 @@ export PATH="$JAVA_HOME/bin:$PATH"
 java -version 2>&1 | head -1
 
 # -- 2. Android SDK -------------------------------------------------------
+# DOCTRINE (2026-10-08): the JVM has NO real TCP on this host -- the
+#   sandbox fake-connects every Java socket (proven: connect() to a
+#   closed port "succeeds"). So sdkmanager (JVM) can never download.
+#   curl (native, proxy-fluent) fetches the zips; we lay out the SDK
+#   by hand exactly as sdkmanager would. When John's Muse setting
+#   "Direct network protocols / other_tcp" allows JVM TCP again, the
+#   sdkmanager path below can be re-enabled -- until then, curl rules.
+SDK="$DEPS/android-sdk"
 if [ ! -x "$DEPS/android-sdk/cmdline-tools/latest/bin/sdkmanager" ]; then
     echo "fetch-deps: SDK cmdline-tools ..."
     curl -sSL -o cmdline.zip "$CMDLINE_URL"
@@ -64,11 +78,47 @@ if [ ! -x "$DEPS/android-sdk/cmdline-tools/latest/bin/sdkmanager" ]; then
     mv android-sdk/cmdline-tools/cmdline-tools android-sdk/cmdline-tools/latest
     rm cmdline.zip
 fi
-export ANDROID_HOME="$DEPS/android-sdk"
-export ANDROID_SDK_ROOT="$ANDROID_HOME"
-export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$PATH"
-yes | sdkmanager --licenses >/dev/null 2>&1 || true
-sdkmanager --install "platforms;android-34" "build-tools;34.0.0" 2>&1 | tail -2
+# platform android-34 (latest ext revision at pin time)
+if [ ! -f "$SDK/platforms/android-34/android.jar" ]; then
+    echo "fetch-deps: platform android-34 (via curl, not sdkmanager) ..."
+    curl -sSL -o platform.zip \
+        "https://dl.google.com/android/repository/platform-34-ext12_r01.zip"
+    mkdir -p "$SDK/platforms"
+    unzip -q platform.zip -d "$SDK/platforms"
+    # the zip carries android-34-extNN/ (SDK extension revision); the SDK
+    # layout wants android-34/
+    for d in "$SDK"/platforms/android-*/; do
+        case "$d" in
+            */android-34/) ;;
+            *) mv "$d" "$SDK/platforms/android-34" ;;
+        esac
+    done
+    rm platform.zip
+fi
+# build-tools 34.0.0
+if [ ! -x "$SDK/build-tools/34.0.0/aapt2" ]; then
+    echo "fetch-deps: build-tools 34.0.0 (via curl, not sdkmanager) ..."
+    curl -sSL -o bt.zip \
+        "https://dl.google.com/android/repository/build-tools_r34-linux.zip"
+    mkdir -p "$SDK/build-tools"
+    unzip -q bt.zip -d "$SDK/build-tools"
+    # the zip carries android-14/ (or similar); the SDK layout wants 34.0.0/
+    for d in "$SDK"/build-tools/android-*/; do
+        case "$d" in
+            */34.0.0/) ;;
+            *) mv "$d" "$SDK/build-tools/34.0.0" ;;
+        esac
+    done
+    rm bt.zip
+fi
+# licenses: the hashes sdkmanager --licenses would write on `yes`.
+# (Standard CI practice: accepting the SDK licenses for this machine.)
+mkdir -p "$SDK/licenses"
+echo "8933bad161af4178b1185d1a37fbf41ea5269c55" > "$SDK/licenses/android-sdk-license"
+echo "84831b9409646a918e30573bab4c9c91346d8a" > "$SDK/licenses/android-sdk-preview-license"
+export ANDROID_HOME="$SDK"
+export ANDROID_SDK_ROOT="$SDK"
+echo "fetch-deps: SDK ready at $SDK"
 
 # -- 3. Gradle ------------------------------------------------------------
 if [ ! -x "$DEPS/gradle-${GRADLE_VERSION}/bin/gradle" ]; then

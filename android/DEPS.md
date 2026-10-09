@@ -47,3 +47,29 @@ network for rows 7-10 (the tracked block).
   download host, not the build host's network.
 - Chaquopy publishes no mirror for its Maven repo, its Python runtime,
   or its numpy wheels (verified 2026-10-08).
+
+## The deeper block: the JVM has no real TCP on this host (2026-10-08)
+
+Proven, not theorized: a Java `Socket.connect()` to 127.0.0.1:9 (a
+closed port) **succeeds** -- a real TCP stack would refuse it. Every
+Java socket is fake-connected to a sandbox policy message
+("Other TCP connections is turned off for this assistant..."), which
+is why `sdkmanager` and any JVM HTTPS fetch die in
+`HttpURLConnection.doTunneling0` with `NoSuchElementException` even
+when handed explicit, correct proxy credentials. Python and curl are
+unaffected (proxy-fluent); only the JVM is intercepted.
+
+Consequences:
+- `sdkmanager` can never download here -- fetch-deps.sh fetches the
+  SDK zips with curl and lays out the SDK by hand instead.
+- `gradle` can never resolve dependencies here -- even when
+  dl.chaquo.com returns, a Gradle build on this host cannot reach the
+  network. The build needs BOTH blocks cleared.
+- Remedy: Muse settings -> Permissions -> Direct network protocols ->
+  switch `other_tcp` from Deny to Allow. The sandbox message itself
+  points there. The `resonantia-apk-block-watch` schedule checks JVM
+  TCP (via `deps/JvmNetCheck.java`) on every run and proceeds the
+  moment both blocks clear.
+- Until then: `GRADLE_OPTS` from `deps/jvm-proxy-opts.sh` carries the
+  egress proxy (with auth) for the post-fix world; direct egress is
+  dead (curl --noproxy returns 000).
