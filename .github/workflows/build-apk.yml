@@ -2,7 +2,7 @@
 # All Rights Reserved, Without Prejudice · CashApp $axoneme
 # 93
 #
-# .github/workflows/build-apk.yml -- RESONANTIA v0.6.0 "The Native Shell"
+# .github/workflows/build-apk.yml -- RESONANTIA v0.6.1 "The Native Shell"
 #
 # HYPOTHESIS: the build host's sandbox fake-connects every Java socket,
 #   so Gradle can never resolve dependencies there. GitHub's runners
@@ -13,11 +13,11 @@
 #   build-tools 34.0.0) -> stage the resonance package + emblem into
 #   the Gradle tree (mirrors fetch-deps.sh step 5) -> Gradle 8.7 ->
 #   :app:assembleDebug -> upload the APK as an artifact AND cut the
-#   v0.6.0 GitHub release with it attached.
+#   v0.6.1 GitHub release with it attached.
 # DOCTRINE:  debug signing only (no release keystore is invented);
 #   loopback-only is in the manifest/network config, unchanged;
-#   the release is idempotent -- reruns replace the v0.6.0 assets.
-# RESULT:    resonantia-0.6.0-debug.apk on the v0.6.0 release.
+#   the release is idempotent -- reruns replace the v0.6.1 assets.
+# RESULT:    resonantia-0.6.1-debug.apk on the v0.6.1 release.
 
 name: Build RESONANTIA APK
 
@@ -76,21 +76,21 @@ jobs:
         run: cd android && gradle :app:assembleDebug --no-daemon
 
       - name: Rename APK
-        run: cp android/app/build/outputs/apk/debug/app-debug.apk /tmp/resonantia-0.6.0-debug.apk
-          && ls -la /tmp/resonantia-0.6.0-debug.apk
+        run: cp android/app/build/outputs/apk/debug/app-debug.apk /tmp/resonantia-0.6.1-debug.apk
+          && ls -la /tmp/resonantia-0.6.1-debug.apk
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
-          name: resonantia-0.6.0-debug
-          path: /tmp/resonantia-0.6.0-debug.apk
+          name: resonantia-0.6.1-debug
+          path: /tmp/resonantia-0.6.1-debug.apk
 
-      - name: Publish v0.6.0 release
+      - name: Publish v0.6.1 release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh release delete v0.6.0 --yes || true
-          git push origin :refs/tags/v0.6.0 || true
-          gh release create v0.6.0 /tmp/resonantia-0.6.0-debug.apk \
-            --title "v0.6.0 The Native Shell" \
+          gh release delete v0.6.1 --yes || true
+          git push origin :refs/tags/v0.6.1 || true
+          gh release create v0.6.1 /tmp/resonantia-0.6.1-debug.apk \
+            --title "v0.6.1 The Native Shell" \
             --notes "Native Android APK: Chaquopy-embedded CPython 3.11, loopback-only render engine (127.0.0.1:8765), WebView touch UI (808 / binaural / ABC / jobs). Debug-signed -- install/launch verification happens on-device."
