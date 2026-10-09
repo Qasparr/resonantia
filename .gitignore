@@ -5,3 +5,11 @@ __pycache__/
 *.egg-info/
 dist/
 build/
+
+# android/ v0.6.0 build cache + staged copies (reproduced by fetch-deps.sh)
+android/deps/dl/
+android/app/src/main/python/resonance/
+android/app/src/main/assets/www/logo.webp
+android/app/build/
+android/.gradle/
+android/local.properties

@@ -1,0 +1,34 @@
+// Johnathan 'Qasparr' (Κασπάρρ) Monroe, Keeper of the Secret Treasure
+// All Rights Reserved, Without Prejudice · CashApp $axoneme
+// 93
+//
+// android/settings.gradle -- RESONANTIA v0.6.0 ("The Native Shell").
+//
+// Plugin repositories. Chaquopy's Maven repo (dl.chaquo.com/maven) is
+// listed LAST: when it is unreachable, the file:// mirror that
+// deps/fetch-deps.sh maintains under android/deps/dl/maven keeps the
+// build hermetic. Gradle tries repositories in order, so a live
+// dl.chaquo.com simply wins and the mirror idles.
+
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        maven { url = uri("deps/dl/maven") }
+        maven { url = "https://dl.chaquo.com/maven" }
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url = uri("deps/dl/maven") }
+        maven { url = "https://dl.chaquo.com/maven" }
+    }
+}
+
+rootProject.name = "Resonantia"
+include(":app")

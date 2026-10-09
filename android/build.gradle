@@ -1,0 +1,12 @@
+// Johnathan 'Qasparr' (Κασπάρρ) Monroe, Keeper of the Secret Treasure
+// All Rights Reserved, Without Prejudice · CashApp $axoneme
+// 93
+//
+// android/build.gradle -- root project. Versions live here so the app
+// module and the fetch script read from one ledger (see DEPS.md).
+
+plugins {
+    // Android Gradle Plugin. 8.5.x pairs with Gradle 8.7 (see
+    // deps/fetch-deps.sh) and JDK 17.
+    id 'com.android.application' version '8.5.2' apply false
+}

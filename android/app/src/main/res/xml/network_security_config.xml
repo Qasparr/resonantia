@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Johnathan 'Qasparr' (Κασπάρρ) Monroe, Keeper of the Secret Treasure
+     All Rights Reserved, Without Prejudice · CashApp $axoneme · 93
+     Doctrine, in XML: cleartext is permitted ONLY to loopback. The
+     WebView UI is a file:// asset that fetches http://127.0.0.1:8765;
+     nothing else on the network is ever spoken to. -->
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">127.0.0.1</domain>
+        <domain includeSubdomains="false">localhost</domain>
+    </domain-config>
+</network-security-config>

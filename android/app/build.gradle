@@ -1,0 +1,72 @@
+// Johnathan 'Qasparr' (Κασπάρρ) Monroe, Keeper of the Secret Treasure
+// All Rights Reserved, Without Prejudice · CashApp $axoneme
+// 93
+//
+// android/app/build.gradle -- the RESONANTIA APK.
+//
+// HYPOTHESIS: the honest native shell is Chaquopy embedding CPython:
+//   the Python the engine is already written in, running on-device,
+//   with the FastAPI render engine bound to 127.0.0.1:8765 and a
+//   WebView for touch. No rewrite, no second implementation.
+// METHOD:    com.chaquo.python plugin (PINNED below -- verify against
+//   https://dl.chaquo.com/maven when reachable; fetch-deps.sh warns
+//   when the pin trails the upstream latest). The chaquopy block pins
+//   the embedded CPython and the pip set: numpy (Chaquopy's own
+//   Android wheels), fastapi + uvicorn (pure Python, via Chaquopy's
+//   index). The resonance package itself is copied into
+//   src/main/python by the build (see README.md) -- never duplicated
+//   in the repo.
+// DOCTRINE:  loopback-only is preserved on-device. The embedded
+//   server binds 127.0.0.1:8765 exactly as on desktop; the WebView
+//   only ever fetches 127.0.0.1 (see network_security_config.xml).
+//   INTERNET permission is NOT requested: loopback needs none.
+
+plugins {
+    id 'com.android.application'
+    // PINNED -- confirmed against chaquo.com docs 2026-10-08 (v17.0).
+    // Re-verify with: curl
+    // https://dl.chaquo.com/maven/com/chaquo/python/gradle/maven-metadata.xml
+    id 'com.chaquo.python' version '17.0.0'
+}
+
+android {
+    namespace = "com.qasparr.resonantia"
+    compileSdk = 34
+
+    defaultConfig {
+        applicationId = "com.qasparr.resonantia"
+        minSdk = 26
+        targetSdk = 34
+        versionCode = 1
+        versionName = "0.6.0"
+    }
+
+    buildTypes {
+        debug {
+            // Debug signing only -- no release keystore is invented here.
+            // A release keystore is John's to create and keep.
+            applicationIdSuffix = ".debug"
+        }
+        release {
+            minifyEnabled = false
+        }
+    }
+}
+
+chaquopy {
+    defaultConfig {
+        // Embedded CPython. resonance requires-python >= 3.10;
+        // 3.11 is the mature middle of Chaquopy 17's range.
+        version = "3.11"
+        pip {
+            install "numpy"
+            install "fastapi"
+            install "uvicorn"
+        }
+    }
+    // Ship one ABI: arm64-v8a covers the real devices. (x86_64 would
+    // serve only the emulator; armeabi-v7a is legacy.)
+    ndk {
+        abiFilters "arm64-v8a"
+    }
+}

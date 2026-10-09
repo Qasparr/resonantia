@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<!--
+  Johnathan 'Qasparr' (Κασπάρρ) Monroe, Keeper of the Secret Treasure
+  All Rights Reserved, Without Prejudice · CashApp $axoneme · 93
+
+  RESONANTIA v0.6.0 -- the on-device touch UI.
+
+  HYPOTHESIS: the phone UI must speak the SAME loopback API as every
+    other client: POST /jobs/render, GET /jobs/{id}, GET /jobs/{id}/download
+    on http://127.0.0.1:8765. No second protocol, no special casing.
+  METHOD:    vanilla JS, no frameworks (the asset must load instantly
+    from file://). The engine polls /health until uvicorn answers, then
+    unlocks the tabs. Rendered WAVs arrive via fetch with the Bearer
+    token and play through blob URLs -- <audio> cannot set headers, so
+    the token travels on fetch, never in a URL.
+  DOCTRINE:  127.0.0.1:8765 is the only origin ever fetched. The token
+    is the prototype dev token (see resonance/api/auth.py); it lives in
+    localStorage on the device, never in this file's history.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Resonantia</title>
+<style>
+  :root { --gold:#d4a017; --gold-dim:#8a6a10; --bg:#0d0a14; --panel:#171222;
+          --text:#f0e6c8; --muted:#9a8f6f; }
+  * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  body { margin:0; background:var(--bg); color:var(--text);
+         font-family:system-ui,-apple-system,sans-serif; font-size:16px; }
+  header { padding:14px 16px 10px; border-bottom:1px solid var(--gold-dim);
+           display:flex; align-items:center; gap:12px; }
+  header img { width:44px; height:44px; border-radius:50%; }
+  header h1 { margin:0; font-size:20px; letter-spacing:3px; color:var(--gold); }
+  header small { display:block; font-size:11px; letter-spacing:1px; color:var(--muted); }
+  #engine { margin-left:auto; font-size:12px; color:var(--muted); text-align:right; }
+  #engine .dot { display:inline-block; width:10px; height:10px; border-radius:50%;
+                 background:#a00; margin-right:6px; vertical-align:baseline; }
+  #engine.up .dot { background:#3d3; }
+  nav { display:flex; border-bottom:1px solid var(--gold-dim); }
+  nav button { flex:1; background:none; border:none; color:var(--muted);
+               padding:14px 4px; font-size:15px; letter-spacing:1px; }
+  nav button.active { color:var(--gold); border-bottom:2px solid var(--gold); }
+  main { padding:16px; padding-bottom:90px; }
+  .tab { display:none; } .tab.active { display:block; }
+  label.row { display:flex; align-items:center; gap:10px; margin:12px 0; }
+  label.row span { flex:0 0 110px; color:var(--muted); font-size:14px; }
+  label.row output { flex:0 0 64px; text-align:right; color:var(--gold); }
+  input[type=range] { flex:1; accent-color:var(--gold); }
+  textarea { width:100%; min-height:120px; background:var(--panel); color:var(--text);
+             border:1px solid var(--gold-dim); border-radius:8px; padding:10px;
+             font-family:monospace; font-size:14px; }
+  input[type=text], input[type=password] { width:100%; background:var(--panel);
+             color:var(--text); border:1px solid var(--gold-dim); border-radius:8px;
+             padding:10px; font-size:14px; }
+  .btn { display:block; width:100%; margin:18px 0; padding:15px; font-size:17px;
+         letter-spacing:2px; background:var(--gold); color:#1a1206; border:none;
+         border-radius:10px; font-weight:bold; }
+  .btn:disabled { background:#4a3f1e; color:#9a8f6f; }
+  #grid { display:grid; grid-template-columns:86px repeat(16,1fr); gap:3px;
+          margin-top:12px; overflow-x:auto; }
+  #grid .vlabel { color:var(--gold); font-size:11px; display:flex;
+                  align-items:center; padding-right:4px; white-space:nowrap; }
+  #grid .step { aspect-ratio:1; min-width:0; background:var(--panel);
+                border:1px solid #2c2540; border-radius:4px; padding:0; }
+  #grid .step.on { background:var(--gold); border-color:var(--gold); }
+  #grid .step.beat { border-color:var(--gold-dim); }
+  .job { background:var(--panel); border:1px solid var(--gold-dim);
+         border-radius:10px; padding:12px; margin:10px 0; }
+  .job .jid { font-family:monospace; font-size:12px; color:var(--muted); }
+  .job .st { float:right; color:var(--gold); font-size:13px; }
+  .job audio { width:100%; margin-top:8px; }
+  .job .dl { color:var(--gold); font-size:14px; }
+  #boot { position:fixed; inset:0; background:var(--bg); display:flex;
+          flex-direction:column; align-items:center; justify-content:center;
+          gap:14px; z-index:10; }
+  #boot img { width:120px; height:120px; border-radius:50%;
+              animation:pulse 2s infinite; }
+  @keyframes pulse { 50% { opacity:.55; } }
+  #boot p { color:var(--muted); letter-spacing:2px; font-size:14px; }
+  .hint { color:var(--muted); font-size:13px; margin:8px 0; }
+</style>
+</head>
+<body>
+<div id="boot">
+  <img src="logo.webp" alt="Resonantia emblem">
+  <p>WAKING THE ENGINE…</p>
+</div>
+
+<header>
+  <img src="logo.webp" alt="Resonantia emblem">
+  <div><h1>RESONANTIA<small>THE NATIVE SHELL · v0.6.0</small></h1></div>
+  <div id="engine"><span class="dot"></span><span id="engine-t">starting</span></div>
+</header>
+
+<nav>
+  <button data-tab="t808" class="active">808</button>
+  <button data-tab="tbin">Binaural</button>
+  <button data-tab="tabc">ABC</button>
+  <button data-tab="tjobs">Jobs</button>
+  <button data-tab="tset">Keys</button>
+</nav>
+
+<main>
+  <section id="t808" class="tab active">
+    <label class="row"><span>BPM</span><input id="bpm" type="range" min="60" max="180" value="120"><output id="bpm-o">120</output></label>
+    <label class="row"><span>Bars</span><input id="bars" type="range" min="1" max="4" step="1" value="1"><output id="bars-o">1</output></label>
+    <label class="row"><span>Swing</span><input id="swing" type="range" min="0" max="0.5" step="0.01" value="0"><output id="swing-o">0.00</output></label>
+    <div id="grid"></div>
+    <button class="btn" id="render808">RENDER 808</button>
+  </section>
+
+  <section id="tbin" class="tab">
+    <label class="row"><span>Beat Hz</span><input id="beathz" type="range" min="1" max="40" step="0.5" value="10"><output id="beathz-o">10</output></label>
+    <label class="row"><span>Carrier Hz</span><input id="carrier" type="range" min="100" max="1000" step="5" value="440"><output id="carrier-o">440</output></label>
+    <label class="row"><span>Seconds</span><input id="bindur" type="range" min="5" max="300" step="5" value="30"><output id="bindur-o">30</output></label>
+    <button class="btn" id="renderbin">RENDER BINAURAL</button>
+  </section>
+
+  <section id="tabc" class="tab">
+    <p class="hint">ABC notation -- the music bridge. Paste a tune, render it.</p>
+    <textarea id="abctext">X:1
+T:Resonantia Scale
+M:4/4
+L:1/4
+K:C
+C D E F|G A B c|</textarea>
+    <button class="btn" id="renderabc">RENDER ABC</button>
+  </section>
+
+  <section id="tjobs" class="tab">
+    <p class="hint">Render jobs, newest first. WAVs play in place.</p>
+    <div id="jobs"></div>
+  </section>
+
+  <section id="tset" class="tab">
+    <p class="hint">Prototype bearer token (see resonance/api/auth.py). Stored on-device only.</p>
+    <label class="row"><span>Token</span></label>
+    <input id="token" type="text" autocomplete="off" spellcheck="false">
+    <button class="btn" id="savetoken">SAVE TOKEN</button>
+  </section>
+</main>
+
+<script>
+"use strict";
+/* The loopback doctrine, in one constant. */
+const API = "http://127.0.0.1:8765";
+const VOICES = ["kick","snare","closed_hat","open_hat","clap","rimshot","cowbell"];
+const STEPS = 16;
+
+const $ = id => document.getElementById(id);
+const token = () => localStorage.getItem("res_token") || "dev-token-001";
+const auth = () => ({"Authorization": "Bearer " + token(),
+                     "Content-Type": "application/json"});
+
+/* ---- tabs ---- */
+document.querySelectorAll("nav button").forEach(b => b.addEventListener("click", () => {
+  document.querySelectorAll("nav button").forEach(x => x.classList.remove("active"));
+  document.querySelectorAll(".tab").forEach(x => x.classList.remove("active"));
+  b.classList.add("active");
+  $(b.dataset.tab).classList.add("active");
+}));
+
+/* ---- sliders echo their values ---- */
+[["bpm","bpm-o"],["bars","bars-o"],["swing","swing-o",2],
+ ["beathz","beathz-o"],["carrier","carrier-o"],["bindur","bindur-o"]
+].forEach(([i,o,dec]) => {
+  const el = $(i);
+  const show = () => { $(o).textContent = dec ? (+el.value).toFixed(dec) : el.value; };
+  el.addEventListener("input", show); show();
+});
+
+/* ---- 808 step grid ---- */
+const gridState = {};
+VOICES.forEach(v => { gridState[v] = new Array(STEPS).fill(0); });
+/* A starter boom-bap: kick 0/7/10, snare 4/12, hats eighths. */
+[0,7,10].forEach(s => gridState.kick[s] = 1);
+[4,12].forEach(s => gridState.snare[s] = 1);
+for (let s = 0; s < STEPS; s += 2) gridState.closed_hat[s] = 1;
+(function buildGrid(){
+  const g = $("grid");
+  VOICES.forEach(v => {
+    const lab = document.createElement("div");
+    lab.className = "vlabel"; lab.textContent = v.replace("_"," ");
+    g.appendChild(lab);
+    for (let s = 0; s < STEPS; s++) {
+      const b = document.createElement("button");
+      b.className = "step" + (s % 4 === 0 ? " beat" : "") + (gridState[v][s] ? " on" : "");
+      b.addEventListener("click", () => {
+        gridState[v][s] ^= 1;
+        b.classList.toggle("on", !!gridState[v][s]);
+      });
+      g.appendChild(b);
+    }
+  });
+})();
+
+/* ---- engine readiness ---- */
+let engineUp = false;
+async function waitEngine(){
+  for (;;) {
+    try {
+      const r = await fetch(API + "/health");
+      if (r.ok) { engineUp = true; break; }
+    } catch (e) { /* not up yet */ }
+    await new Promise(r => setTimeout(r, 800));
+  }
+  $("engine").classList.add("up");
+  $("engine-t").textContent = "engine live";
+  $("boot").style.display = "none";
+  document.querySelectorAll(".btn").forEach(b => b.disabled = false);
+}
+
+/* ---- jobs ---- */
+let jobs = [];
+try { jobs = JSON.parse(localStorage.getItem("res_jobs") || "[]"); } catch (e) { jobs = []; }
+function saveJobs(){ try { localStorage.setItem("res_jobs", JSON.stringify(jobs.slice(0,20))); } catch(e){} }
+
+async function submit(kind, params, label){
+  if (!engineUp) return;
+  const r = await fetch(API + "/jobs/render",
+    {method:"POST", headers:auth(), body:JSON.stringify({kind, params})});
+  if (!r.ok) { alert("render refused: " + r.status); return; }
+  const j = await r.json();
+  jobs.unshift({id:j.job_id, kind, label, status:"rendering", wavUrl:null});
+  saveJobs(); renderJobs();
+  document.querySelector('[data-tab="tjobs"]').click();
+}
+
+async function pollJobs(){
+  for (const j of jobs) {
+    if (j.status === "rendering" || j.status === "queued") {
+      try {
+        const r = await fetch(API + "/jobs/" + j.id, {headers:auth()});
+        if (r.ok) { const rec = await r.json(); j.status = rec.status || j.status; }
+      } catch (e) {}
+    }
+  }
+  saveJobs(); renderJobs();
+}
+setInterval(pollJobs, 2500);
+
+async function playJob(j, audioEl){
+  const r = await fetch(API + "/jobs/" + j.id + "/download", {headers:auth()});
+  if (!r.ok) { alert("download failed: " + r.status); return; }
+  const blob = await r.blob();
+  if (j.wavUrl) URL.revokeObjectURL(j.wavUrl);
+  j.wavUrl = URL.createObjectURL(blob);
+  audioEl.src = j.wavUrl;
+  audioEl.play();
+}
+
+function renderJobs(){
+  const box = $("jobs"); box.innerHTML = "";
+  if (!jobs.length) { box.innerHTML = '<p class="hint">No jobs yet -- render something.</p>'; return; }
+  jobs.forEach(j => {
+    const d = document.createElement("div");
+    d.className = "job";
+    d.innerHTML = '<span class="st"></span><div><b></b></div><div class="jid"></div>';
+    d.querySelector("b").textContent = j.label;
+    d.querySelector(".jid").textContent = j.id;
+    d.querySelector(".st").textContent = j.status;
+    if (j.status === "done") {
+      const a = document.createElement("audio");
+      a.controls = true; a.preload = "none";
+      d.appendChild(a);
+      const pb = document.createElement("button");
+      pb.className = "btn"; pb.style.margin = "10px 0 0"; pb.textContent = "LOAD + PLAY";
+      pb.addEventListener("click", () => playJob(j, a));
+      d.appendChild(pb);
+    }
+    box.appendChild(d);
+  });
+}
+
+/* ---- render buttons ---- */
+$("render808").addEventListener("click", () => {
+  const pattern = {};
+  VOICES.forEach(v => { if (gridState[v].some(x => x)) pattern[v] = gridState[v].slice(); });
+  submit("pattern", {pattern, bpm:+$("bpm").value, bars:+$("bars").value,
+                     swing:+$("swing").value, sr:44100}, "808 @" + $("bpm").value + " BPM");
+});
+$("renderbin").addEventListener("click", () => {
+  submit("binaural", {beat_hz:+$("beathz").value, carrier:+$("carrier").value,
+                      duration:+$("bindur").value, sample_rate:44100},
+         "binaural " + $("beathz").value + " Hz");
+});
+$("renderabc").addEventListener("click", () => {
+  submit("abc", {abc:$("abctext").value, sr:44100}, "abc tune");
+});
+$("savetoken").addEventListener("click", () => {
+  localStorage.setItem("res_token", $("token").value.trim());
+  alert("token saved on-device");
+});
+
+/* ---- boot ---- */
+$("token").value = token();
+document.querySelectorAll(".btn").forEach(b => b.disabled = true);
+renderJobs();
+waitEngine();
+</script>
+</body>
+</html>
