@@ -252,4 +252,113 @@ def t_gain_db_math():
 check("t_gain_db_math", t_gain_db_math)
 
 
+# ------------------------------------------------------- cut subcommand
+
+def _cut_fixture_wav(seconds=10.0, sr=44100, stereo=False):
+    """A real input file for the cutter: returns (path, tmpdir)."""
+    from resonance.core import io as core_io
+    import tempfile
+    n = int(seconds * sr)
+    t = np.arange(n, dtype=np.float64) / sr
+    buf = (0.5 * np.sin(2 * np.pi * 440.0 * t)).astype(np.float32)
+    if stereo:
+        buf = np.stack([buf, buf * 0.5])
+    tmp = tempfile.mkdtemp(prefix="resonance_test_cut_")
+    path = str(Path(tmp) / "song.wav")
+    core_io.write_wav(path, buf, sample_rate=sr)
+    return path, tmp
+
+
+def t_cut_slices_wav_with_fades_and_normalize():
+    from resonance.core.cli import main
+    from resonance.core import io as core_io
+    import tempfile
+    src, tmp = _cut_fixture_wav()
+    out = str(Path(tmp) / "ring.wav")
+    rc = main(["cut", "-i", src, "--start", "2", "--duration", "3",
+               "-o", out])
+    assert rc == 0, rc
+    audio, sr = core_io.read_wav(out)
+    assert sr == 44100
+    # 3 s slice, sample-accurate.
+    assert audio.shape[-1] == 3 * 44100, audio.shape
+    # Normalized to the 0.95 target.
+    assert abs(float(np.abs(audio).max()) - 0.95) < 1e-3
+    # Fades are real: the slice starts and ends near silence.
+    assert abs(float(audio.flat[0])) < 0.05
+    assert abs(float(audio.flat[-1])) < 0.05
+    import shutil as _sh
+    _sh.rmtree(tmp, ignore_errors=True)
+check("t_cut_slices_wav_with_fades_and_normalize",
+      t_cut_slices_wav_with_fades_and_normalize)
+
+
+def t_cut_end_flag_and_clamping():
+    from resonance.core.cli import main
+    from resonance.core import io as core_io
+    import tempfile
+    src, tmp = _cut_fixture_wav(seconds=10.0)
+    out = str(Path(tmp) / "ring.wav")
+    # --end alternative to --duration.
+    rc = main(["cut", "-i", src, "--start", "1", "--end", "4",
+               "-o", out])
+    assert rc == 0, rc
+    audio, _ = core_io.read_wav(out)
+    assert audio.shape[-1] == 3 * 44100
+    # Over-long requests clamp to the file instead of failing.
+    out2 = str(Path(tmp) / "ring2.wav")
+    rc = main(["cut", "-i", src, "--start", "8", "--duration", "30",
+               "-o", out2])
+    assert rc == 0, rc
+    audio2, _ = core_io.read_wav(out2)
+    assert audio2.shape[-1] == 2 * 44100, audio2.shape
+    import shutil as _sh
+    _sh.rmtree(tmp, ignore_errors=True)
+check("t_cut_end_flag_and_clamping", t_cut_end_flag_and_clamping)
+
+
+def t_cut_empty_selection_is_loud():
+    from resonance.core.cli import main
+    import tempfile
+    src, tmp = _cut_fixture_wav(seconds=5.0)
+    out = str(Path(tmp) / "ring.wav")
+    # Start past EOF: no silent 0-byte file -- exit 1, loudly.
+    rc = main(["cut", "-i", src, "--start", "99", "-o", out])
+    assert rc == 1, rc
+    assert not Path(out).exists()
+    import shutil as _sh
+    _sh.rmtree(tmp, ignore_errors=True)
+check("t_cut_empty_selection_is_loud", t_cut_empty_selection_is_loud)
+
+
+def t_cut_mono_mixdown():
+    from resonance.core.cli import main
+    from resonance.core import io as core_io
+    import tempfile
+    src, tmp = _cut_fixture_wav(seconds=6.0, stereo=True)
+    out = str(Path(tmp) / "ring.wav")
+    rc = main(["cut", "-i", src, "--start", "1", "--duration", "2",
+               "--mono", "-o", out])
+    assert rc == 0, rc
+    audio, _ = core_io.read_wav(out)
+    assert audio.ndim == 1, audio.shape
+    assert audio.shape[-1] == 2 * 44100
+    import shutil as _sh
+    _sh.rmtree(tmp, ignore_errors=True)
+check("t_cut_mono_mixdown", t_cut_mono_mixdown)
+
+
+def t_cut_default_output_name():
+    from resonance.core.cli import main
+    import tempfile
+    src, tmp = _cut_fixture_wav(seconds=6.0)
+    rc = main(["cut", "-i", src, "--start", "1", "--duration", "2"])
+    assert rc == 0, rc
+    expected = str(Path(tmp) / "song_cut.wav")
+    assert Path(expected).exists(), expected
+    import shutil as _sh
+    _sh.rmtree(tmp, ignore_errors=True)
+check("t_cut_default_output_name", t_cut_default_output_name)
+
+
 print(f"\n{PASSED} edit tests passed.")
