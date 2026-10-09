@@ -20,7 +20,19 @@ Uses only PUBLIC APIs (numpy, and the buffer contract shapes). No medical
 or therapeutic claims are involved; this certifies frequencies, nothing
 more.
 """
-import numpy as np
+# MECHANISM: numpy is imported LAZILY (see _np below), never at module
+#   import -- same rationale as diagnostics/measure.py (2026-10-08):
+#   keep native code out of the import chain so `import
+#   resonance.diagnostics` stays light on every platform, Android
+#   included.
+# DOCTRINE:  certifying a frequency must not require loading the
+#   number-cruncher just to pick up the certificate.
+
+
+def _np():
+    """The lazy numpy. One import site, so the laziness is auditable."""
+    import numpy as np
+    return np
 
 from resonance.core import buffers
 
@@ -32,6 +44,7 @@ def _spectral_peak(channel, sample_rate, expected_hz, search_hz=5.0):
     detector honest: it cannot wander off and declare some unrelated
     strong tone "the carrier".
     """
+    np = _np()
     x = np.asarray(channel, dtype=np.float64)
     n = len(x)
     # Hann window: trades a wider main lobe for far lower sidelobes, so a

@@ -18,7 +18,21 @@ reaches into module internals.
 """
 import time
 
-import numpy as np
+# MECHANISM: numpy is imported LAZILY (inside the functions that need
+#   it), never at module import. Rationale, filed 2026-10-08: on
+#   Android (Chaquopy) the v0.6.0 app died on launch, and the startup
+#   import chain's only native code was numpy (via this module,
+#   pulled in by resonance.api.service.create_app). Deferring the
+#   native import out of the startup path both tests that hypothesis
+#   and keeps `import resonance.diagnostics` cheap everywhere.
+# DOCTRINE:  a measuring tool must not demand the heavy machinery
+#   just to be picked up. Import light; pay for numpy per use.
+
+
+def _np():
+    """The lazy numpy. One import site, so the laziness is auditable."""
+    import numpy as np
+    return np
 
 
 def measure_throughput(render_fn, *args, n_runs=3, **kwargs):
@@ -52,6 +66,7 @@ def measure_throughput(render_fn, *args, n_runs=3, **kwargs):
     wall = float(sum(walls))
     # The result must be real audio: a finite, non-empty array. Anything
     # else means the render function is broken, and the benchmark says so.
+    np = _np()
     arr = np.asarray(result)
     assert arr.size > 0, "measure_throughput: render_fn returned empty result"
     assert np.all(np.isfinite(arr)), \

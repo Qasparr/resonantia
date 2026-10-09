@@ -141,7 +141,14 @@ def create_app(jobs_dir=None):
     Depends, FastAPI, Header, HTTPException, FileResponse = _require_fastapi()
     import resonance
     from resonance import API_VERSION, __version__
-    from resonance.diagnostics import measure as diag_measure
+    # NOTE (2026-10-08): diagnostics.measure is imported LAZILY inside
+    #   the /diagnostics/benchmark endpoint, NOT here. Rationale: the
+    #   diagnostics package pulls resonance.core, which imports numpy
+    #   (native code). On Android (Chaquopy) the v0.6.0 app died on
+    #   launch, and numpy was the only native code in the startup
+    #   import chain. Keeping native imports out of the startup path
+    #   lets the engine boot light; numpy loads on first render, where
+    #   a failure is catchable and reportable instead of a dead splash.
 
     root = jobs_dir if jobs_dir is not None else tempfile.mkdtemp(
         prefix="resonance-jobs-")
@@ -198,6 +205,9 @@ def create_app(jobs_dir=None):
         it via diagnostics.measure_throughput.
         """
         from resonance.binaural.generator import binaural_beat
+        # Lazy: diagnostics pulls resonance.core -> numpy (native).
+        # Import here so startup never loads native code.
+        from resonance.diagnostics import measure as diag_measure
 
         def render():
             return binaural_beat(10.0, carrier=440.0, duration=2.0,
