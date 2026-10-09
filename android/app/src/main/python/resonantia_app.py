@@ -59,6 +59,26 @@ def main(boot_log=None):
 
         log("py: create_app()")
         app = create_app()
+        # Lifespan hook: the single POSITIVE signal that the server is
+        # really up. Without it, a healthy engine relaunching would
+        # look like a death in the boot log (the log would end at
+        # "uvicorn.run", never reaching "serving"), and the next
+        # launch would falsely report "died during: uvicorn.run".
+        # With it, the forensics stay honest: "serving" means serving.
+        from contextlib import asynccontextmanager
+
+        _lifespan = app.router.lifespan_context
+
+        @asynccontextmanager
+        async def _boot_lifespan(app_):
+            log("py: serving")
+            if _lifespan is not None:
+                async with _lifespan(app_):
+                    yield
+            else:
+                yield
+
+        app.router.lifespan_context = _boot_lifespan
         log("py: uvicorn.run(127.0.0.1:8765)")
         # log_level warning: on a phone, uvicorn's access chatter is noise.
         uvicorn.run(app, host=HOST, port=PORT, log_level="warning")

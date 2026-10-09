@@ -78,6 +78,34 @@ def _require_fastapi():
     return Depends, FastAPI, Header, HTTPException, FileResponse
 
 
+def _enable_cors(app):
+    """CORS for the on-device WebView UI (and only it).
+
+    HYPOTHESIS: the Android WebView loads the UI from file:// and
+      fetches the engine at http://127.0.0.1:8765. A file:// origin
+      is opaque, so every fetch -- the /health poll that unlocks the
+      UI, the Bearer-token render calls -- needs the server to answer
+      Access-Control-Allow-Origin, or the browser swallows the
+      response and the UI polls forever. (Found 2026-10-09: the v0.6.0
+      APK hung on "WAKING THE ENGINE..." with a live engine -- the
+      missing CORS headers were the wall.)
+    METHOD:   Starlette's CORSMiddleware, permissive origins/methods/
+      headers.
+    DOCTRINE: permissive CORS is safe HERE because the server binds
+      127.0.0.1 only -- it is unreachable from any network, so there
+      is no cross-site attacker to defend against. The loopback-only
+      doctrine is enforced at the bind level and by Android's network
+      security config, not by CORS. Desktop curl usage is unaffected.
+    """
+    from fastapi.middleware.cors import CORSMiddleware
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=["*"],
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
+
+
 # Re-exported for backwards compatibility (tests import TOKEN_ROLES here).
 from resonance.api.auth import TOKEN_ROLES, role_from_token  # noqa: E402
 from resonance.api.jobs import JobQueue  # noqa: E402
@@ -181,6 +209,7 @@ def create_app(jobs_dir=None):
             "audio engine. Prototype auth: Bearer token -> role."
         ),
     )
+    _enable_cors(app)  # the WebView UI fetches from file://; see above.
 
     @app.get("/health")
     def health():
