@@ -46,10 +46,35 @@ android {
         }
     }
 
+    signingConfigs {
+        debug {
+            // The committed persistent debug key (see buildTypes.debug
+            // for the rationale). Same key every CI run: updates
+            // install over each other instead of conflicting.
+            storeFile = rootProject.file("debug.keystore")
+            storePassword = "android"
+            keyAlias = "androiddebugkey"
+            keyPassword = "android"
+        }
+    }
+
     buildTypes {
         debug {
             // Debug signing only -- no release keystore is invented here.
             // A release keystore is John's to create and keep.
+            //
+            // MECHANISM: a PERSISTENT debug key (android/debug.keystore,
+            //   committed) instead of the runner's throwaway
+            //   ~/.android/debug.keystore. Rationale, filed 2026-10-09:
+            //   every CI run minted a fresh debug key, so Android
+            //   refused to install each new APK over the last one
+            //   ("signatures do not match") and John had to uninstall
+            //   first. One stable debug key: updates install cleanly.
+            // DOCTRINE:  debug keys are explicitly non-secret (the
+            //   password "android" is public knowledge); committing it
+            //   is standard practice. The RELEASE key is never
+            //   committed, never invented -- that one is his.
+            signingConfig = signingConfigs.debug
             applicationIdSuffix = ".debug"
         }
         release {
