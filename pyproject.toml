@@ -52,8 +52,8 @@ studio = []                                     # v0.3.0 Studio Shell: pitch + q
 ai = []                                         # v0.4.0 AI Wing (numpy only; Gemini key at runtime, torch optional)
 
 [project.urls]
-Homepage = "https://github.com/Qasparr/resonance"
-Repository = "https://github.com/Qasparr/resonance"
+Homepage = "https://github.com/Qasparr/resonantia"
+Repository = "https://github.com/Qasparr/resonantia"
 License = "https://www.gnu.org/licenses/agpl-3.0.html"
 
 [project.scripts]

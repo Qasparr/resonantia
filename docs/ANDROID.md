@@ -39,7 +39,7 @@ pkg install -y python git
 pip install numpy
 
 # MECHANISM: fetch the engine. No build step — it is pure Python.
-git clone https://github.com/Qasparr/resonance
+git clone https://github.com/Qasparr/resonantia
 cd resonance
 ```
 

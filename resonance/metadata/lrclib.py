@@ -33,7 +33,7 @@ import urllib.parse
 import urllib.request
 
 LRCLIB_BASE = "https://lrclib.net/api/"
-USER_AGENT = "RESONANCE/0.2.0 (https://github.com/Qasparr/resonance; lyrics lookup)"
+USER_AGENT = "RESONANCE/0.2.0 (https://github.com/Qasparr/resonantia; lyrics lookup)"
 TIMEOUT_SECONDS = 15
 
 

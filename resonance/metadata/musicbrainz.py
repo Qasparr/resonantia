@@ -35,7 +35,7 @@ import urllib.request
 MB_BASE = "https://musicbrainz.org/ws/2/"
 
 #: Their policy requires a meaningful User-Agent; this is ours.
-USER_AGENT = "RESONANCE/0.2.0 (https://github.com/Qasparr/resonance; metadata lookup)"
+USER_AGENT = "RESONANCE/0.2.0 (https://github.com/Qasparr/resonantia; metadata lookup)"
 
 #: Published rate limit: https://musicbrainz.org/doc/XML_Web_Service/Rate_Limiting
 _RATE_LIMIT_SECONDS = 1.0

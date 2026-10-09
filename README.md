@@ -1,12 +1,12 @@
-# RESONANCE v0.3.0 — The Studio Shell
+# RESONANTIA v0.5.0 — The Field Kit
 
-![RESONANCE logo: a flower-of-life mandala with a waveform pulse through its center](assets/logo.webp)
+![RESONANTIA logo: a flower-of-life mandala with a waveform pulse through its center](assets/logo.webp)
 
 Johnathan 'Qasparr' (Κασπάρρ) Monroe, Keeper of the Secret Treasure
 All Rights Reserved, Without Prejudice · CashApp $axoneme
 SPDX-License-Identifier: AGPL-3.0-only
 
-RESONANCE is a generative audio engine: binaural entrainment tones,
+RESONANTIA (Latin for resonance, from *resonare* — to resound; formerly RESONANCE) is a generative audio engine: binaural entrainment tones,
 808 drum synthesis, ABC-notation music, headless sacred-geometry
 visuals, a plugin system, a render-job HTTP API, and real
 measurements. Every pillar installs standalone — the library never
