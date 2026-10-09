@@ -41,6 +41,13 @@ jobs:
           distribution: temurin
           java-version: '17'
 
+      - name: Set up build Python 3.11
+        # Chaquopy runs pip on the BUILD machine and demands a desktop
+        # Python matching the embedded version's major.minor.
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
       - name: Install SDK packages
         # The runner preinstalls the SDK, but sdkmanager is not on PATH
         # (the removed setup-android action used to put it there).
