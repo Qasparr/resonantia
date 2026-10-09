@@ -8,14 +8,14 @@
          loopback sockets need no permission, by doctrine. -->
 
     <!-- HYPOTHESIS: the only feature that touches the user's own files
-         is the ringtone cutter -- it reads audio from shared storage.
+         is the ringtone cutter: it reads audio from shared storage.
          Everything else (renders, playback, jobs) lives in app-private
          storage and needs no permission at all.
          METHOD:   READ_MEDIA_AUDIO on API 33+; the legacy
          READ_EXTERNAL_STORAGE capped at 32 for older devices. Both are
          dangerous permissions, so MainActivity requests at runtime.
          DOCTRINE: least privilege. No CAMERA, no RECORD_AUDIO, no
-         INTERNET, no location -- the manifest asks for exactly what
+         INTERNET, no location: the manifest asks for exactly what
          the features need, and nothing they do not. -->
     <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
