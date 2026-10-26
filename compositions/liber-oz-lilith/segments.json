@@ -1,0 +1,1460 @@
+[
+ {
+  "bar": 0,
+  "section": "invocation",
+  "label": "rung UT",
+  "verse": null,
+  "chord": null,
+  "carrier_hz": 396,
+  "offset_hz": 1
+ },
+ {
+  "bar": 1,
+  "section": "invocation",
+  "label": "rung RE",
+  "verse": null,
+  "chord": null,
+  "carrier_hz": 417,
+  "offset_hz": 1
+ },
+ {
+  "bar": 2,
+  "section": "invocation",
+  "label": "rung MI",
+  "verse": null,
+  "chord": null,
+  "carrier_hz": 528,
+  "offset_hz": 1
+ },
+ {
+  "bar": 3,
+  "section": "invocation",
+  "label": "rung FA",
+  "verse": null,
+  "chord": null,
+  "carrier_hz": 639,
+  "offset_hz": 1
+ },
+ {
+  "bar": 4,
+  "section": "invocation",
+  "label": "rung SOL",
+  "verse": null,
+  "chord": null,
+  "carrier_hz": 741,
+  "offset_hz": 1
+ },
+ {
+  "bar": 5,
+  "section": "invocation",
+  "label": "rung LA",
+  "verse": null,
+  "chord": null,
+  "carrier_hz": 852,
+  "offset_hz": 1
+ },
+ {
+  "bar": 6,
+  "section": "working",
+  "label": "v. 0",
+  "verse": 0,
+  "chord": 0,
+  "carrier_hz": 396,
+  "offset_hz": 1
+ },
+ {
+  "bar": 7,
+  "section": "working",
+  "label": "v. 0",
+  "verse": 0,
+  "chord": 0,
+  "carrier_hz": 396,
+  "offset_hz": 1
+ },
+ {
+  "bar": 8,
+  "section": "working",
+  "label": "v. 0",
+  "verse": 0,
+  "chord": 0,
+  "carrier_hz": 396,
+  "offset_hz": 1
+ },
+ {
+  "bar": 9,
+  "section": "working",
+  "label": "v. 0",
+  "verse": 0,
+  "chord": 0,
+  "carrier_hz": 396,
+  "offset_hz": 1
+ },
+ {
+  "bar": 10,
+  "section": "working",
+  "label": "v. 0",
+  "verse": 0,
+  "chord": 0,
+  "carrier_hz": 396,
+  "offset_hz": 1
+ },
+ {
+  "bar": 11,
+  "section": "working",
+  "label": "v. 1",
+  "verse": 1,
+  "chord": 0,
+  "carrier_hz": 396,
+  "offset_hz": 1
+ },
+ {
+  "bar": 12,
+  "section": "working",
+  "label": "v. 1",
+  "verse": 1,
+  "chord": 0,
+  "carrier_hz": 396,
+  "offset_hz": 1
+ },
+ {
+  "bar": 13,
+  "section": "working",
+  "label": "v. 2",
+  "verse": 2,
+  "chord": 0,
+  "carrier_hz": 396,
+  "offset_hz": 1
+ },
+ {
+  "bar": 14,
+  "section": "working",
+  "label": "v. 2",
+  "verse": 2,
+  "chord": 0,
+  "carrier_hz": 396,
+  "offset_hz": 1
+ },
+ {
+  "bar": 15,
+  "section": "working",
+  "label": "v. 2",
+  "verse": 2,
+  "chord": 0,
+  "carrier_hz": 396,
+  "offset_hz": 1
+ },
+ {
+  "bar": 16,
+  "section": "working",
+  "label": "v. 2",
+  "verse": 2,
+  "chord": 0,
+  "carrier_hz": 396,
+  "offset_hz": 1
+ },
+ {
+  "bar": 17,
+  "section": "working",
+  "label": "v. 2",
+  "verse": 2,
+  "chord": 0,
+  "carrier_hz": 396,
+  "offset_hz": 1
+ },
+ {
+  "bar": 18,
+  "section": "working",
+  "label": "v. 2",
+  "verse": 2,
+  "chord": 0,
+  "carrier_hz": 396,
+  "offset_hz": 1
+ },
+ {
+  "bar": 19,
+  "section": "working",
+  "label": "v. 3",
+  "verse": 3,
+  "chord": 1,
+  "carrier_hz": 417,
+  "offset_hz": 1
+ },
+ {
+  "bar": 20,
+  "section": "working",
+  "label": "v. 3",
+  "verse": 3,
+  "chord": 1,
+  "carrier_hz": 417,
+  "offset_hz": 1
+ },
+ {
+  "bar": 21,
+  "section": "working",
+  "label": "v. 3",
+  "verse": 3,
+  "chord": 1,
+  "carrier_hz": 417,
+  "offset_hz": 1
+ },
+ {
+  "bar": 22,
+  "section": "working",
+  "label": "v. 3",
+  "verse": 3,
+  "chord": 1,
+  "carrier_hz": 417,
+  "offset_hz": 1
+ },
+ {
+  "bar": 23,
+  "section": "working",
+  "label": "v. 3",
+  "verse": 3,
+  "chord": 1,
+  "carrier_hz": 417,
+  "offset_hz": 1
+ },
+ {
+  "bar": 24,
+  "section": "working",
+  "label": "v. 3",
+  "verse": 3,
+  "chord": 1,
+  "carrier_hz": 417,
+  "offset_hz": 1
+ },
+ {
+  "bar": 25,
+  "section": "working",
+  "label": "v. 4",
+  "verse": 4,
+  "chord": 1,
+  "carrier_hz": 417,
+  "offset_hz": 1
+ },
+ {
+  "bar": 26,
+  "section": "working",
+  "label": "v. 4",
+  "verse": 4,
+  "chord": 1,
+  "carrier_hz": 417,
+  "offset_hz": 1
+ },
+ {
+  "bar": 27,
+  "section": "working",
+  "label": "v. 4",
+  "verse": 4,
+  "chord": 1,
+  "carrier_hz": 417,
+  "offset_hz": 1
+ },
+ {
+  "bar": 28,
+  "section": "working",
+  "label": "v. 4",
+  "verse": 4,
+  "chord": 1,
+  "carrier_hz": 417,
+  "offset_hz": 1
+ },
+ {
+  "bar": 29,
+  "section": "working",
+  "label": "v. 4",
+  "verse": 4,
+  "chord": 1,
+  "carrier_hz": 417,
+  "offset_hz": 1
+ },
+ {
+  "bar": 30,
+  "section": "working",
+  "label": "v. 4",
+  "verse": 4,
+  "chord": 1,
+  "carrier_hz": 417,
+  "offset_hz": 1
+ },
+ {
+  "bar": 31,
+  "section": "working",
+  "label": "v. 4",
+  "verse": 4,
+  "chord": 1,
+  "carrier_hz": 417,
+  "offset_hz": 1
+ },
+ {
+  "bar": 32,
+  "section": "working",
+  "label": "v. 4",
+  "verse": 4,
+  "chord": 1,
+  "carrier_hz": 417,
+  "offset_hz": 1
+ },
+ {
+  "bar": 33,
+  "section": "working",
+  "label": "v. 5",
+  "verse": 5,
+  "chord": 1,
+  "carrier_hz": 417,
+  "offset_hz": 1
+ },
+ {
+  "bar": 34,
+  "section": "working",
+  "label": "v. 5",
+  "verse": 5,
+  "chord": 1,
+  "carrier_hz": 417,
+  "offset_hz": 1
+ },
+ {
+  "bar": 35,
+  "section": "working",
+  "label": "v. 5",
+  "verse": 5,
+  "chord": 1,
+  "carrier_hz": 417,
+  "offset_hz": 1
+ },
+ {
+  "bar": 36,
+  "section": "working",
+  "label": "v. 5",
+  "verse": 5,
+  "chord": 1,
+  "carrier_hz": 417,
+  "offset_hz": 1
+ },
+ {
+  "bar": 37,
+  "section": "working",
+  "label": "v. 5",
+  "verse": 5,
+  "chord": 1,
+  "carrier_hz": 417,
+  "offset_hz": 1
+ },
+ {
+  "bar": 38,
+  "section": "working",
+  "label": "v. 5",
+  "verse": 5,
+  "chord": 1,
+  "carrier_hz": 417,
+  "offset_hz": 1
+ },
+ {
+  "bar": 39,
+  "section": "working",
+  "label": "v. 6",
+  "verse": 6,
+  "chord": 2,
+  "carrier_hz": 528,
+  "offset_hz": 2
+ },
+ {
+  "bar": 40,
+  "section": "working",
+  "label": "v. 6",
+  "verse": 6,
+  "chord": 2,
+  "carrier_hz": 528,
+  "offset_hz": 2
+ },
+ {
+  "bar": 41,
+  "section": "working",
+  "label": "v. 6",
+  "verse": 6,
+  "chord": 2,
+  "carrier_hz": 528,
+  "offset_hz": 2
+ },
+ {
+  "bar": 42,
+  "section": "working",
+  "label": "v. 6",
+  "verse": 6,
+  "chord": 2,
+  "carrier_hz": 528,
+  "offset_hz": 2
+ },
+ {
+  "bar": 43,
+  "section": "working",
+  "label": "v. 7",
+  "verse": 7,
+  "chord": 2,
+  "carrier_hz": 528,
+  "offset_hz": 2
+ },
+ {
+  "bar": 44,
+  "section": "working",
+  "label": "v. 7",
+  "verse": 7,
+  "chord": 2,
+  "carrier_hz": 528,
+  "offset_hz": 2
+ },
+ {
+  "bar": 45,
+  "section": "working",
+  "label": "v. 7",
+  "verse": 7,
+  "chord": 2,
+  "carrier_hz": 528,
+  "offset_hz": 2
+ },
+ {
+  "bar": 46,
+  "section": "working",
+  "label": "v. 7",
+  "verse": 7,
+  "chord": 2,
+  "carrier_hz": 528,
+  "offset_hz": 2
+ },
+ {
+  "bar": 47,
+  "section": "working",
+  "label": "v. 8",
+  "verse": 8,
+  "chord": 2,
+  "carrier_hz": 528,
+  "offset_hz": 2
+ },
+ {
+  "bar": 48,
+  "section": "working",
+  "label": "v. 8",
+  "verse": 8,
+  "chord": 2,
+  "carrier_hz": 528,
+  "offset_hz": 2
+ },
+ {
+  "bar": 49,
+  "section": "working",
+  "label": "v. 8",
+  "verse": 8,
+  "chord": 2,
+  "carrier_hz": 528,
+  "offset_hz": 2
+ },
+ {
+  "bar": 50,
+  "section": "working",
+  "label": "v. 9",
+  "verse": 9,
+  "chord": 3,
+  "carrier_hz": 639,
+  "offset_hz": 3
+ },
+ {
+  "bar": 51,
+  "section": "working",
+  "label": "v. 9",
+  "verse": 9,
+  "chord": 3,
+  "carrier_hz": 639,
+  "offset_hz": 3
+ },
+ {
+  "bar": 52,
+  "section": "working",
+  "label": "v. 9",
+  "verse": 9,
+  "chord": 3,
+  "carrier_hz": 639,
+  "offset_hz": 3
+ },
+ {
+  "bar": 53,
+  "section": "working",
+  "label": "v. 9",
+  "verse": 9,
+  "chord": 3,
+  "carrier_hz": 639,
+  "offset_hz": 3
+ },
+ {
+  "bar": 54,
+  "section": "working",
+  "label": "v. 9",
+  "verse": 9,
+  "chord": 3,
+  "carrier_hz": 639,
+  "offset_hz": 3
+ },
+ {
+  "bar": 55,
+  "section": "working",
+  "label": "v. 10",
+  "verse": 10,
+  "chord": 3,
+  "carrier_hz": 639,
+  "offset_hz": 3
+ },
+ {
+  "bar": 56,
+  "section": "working",
+  "label": "v. 10",
+  "verse": 10,
+  "chord": 3,
+  "carrier_hz": 639,
+  "offset_hz": 3
+ },
+ {
+  "bar": 57,
+  "section": "working",
+  "label": "v. 10",
+  "verse": 10,
+  "chord": 3,
+  "carrier_hz": 639,
+  "offset_hz": 3
+ },
+ {
+  "bar": 58,
+  "section": "working",
+  "label": "v. 10",
+  "verse": 10,
+  "chord": 3,
+  "carrier_hz": 639,
+  "offset_hz": 3
+ },
+ {
+  "bar": 59,
+  "section": "working",
+  "label": "v. 11",
+  "verse": 11,
+  "chord": 3,
+  "carrier_hz": 639,
+  "offset_hz": 3
+ },
+ {
+  "bar": 60,
+  "section": "working",
+  "label": "v. 12",
+  "verse": 12,
+  "chord": 4,
+  "carrier_hz": 741,
+  "offset_hz": 5
+ },
+ {
+  "bar": 61,
+  "section": "working",
+  "label": "v. 13",
+  "verse": 13,
+  "chord": 4,
+  "carrier_hz": 741,
+  "offset_hz": 5
+ },
+ {
+  "bar": 62,
+  "section": "working",
+  "label": "v. 13",
+  "verse": 13,
+  "chord": 4,
+  "carrier_hz": 741,
+  "offset_hz": 5
+ },
+ {
+  "bar": 63,
+  "section": "working",
+  "label": "v. 13",
+  "verse": 13,
+  "chord": 4,
+  "carrier_hz": 741,
+  "offset_hz": 5
+ },
+ {
+  "bar": 64,
+  "section": "working",
+  "label": "v. 13",
+  "verse": 13,
+  "chord": 4,
+  "carrier_hz": 741,
+  "offset_hz": 5
+ },
+ {
+  "bar": 65,
+  "section": "working",
+  "label": "v. 13",
+  "verse": 13,
+  "chord": 4,
+  "carrier_hz": 741,
+  "offset_hz": 5
+ },
+ {
+  "bar": 66,
+  "section": "working",
+  "label": "v. 13",
+  "verse": 13,
+  "chord": 4,
+  "carrier_hz": 741,
+  "offset_hz": 5
+ },
+ {
+  "bar": 67,
+  "section": "working",
+  "label": "v. 13",
+  "verse": 13,
+  "chord": 4,
+  "carrier_hz": 741,
+  "offset_hz": 5
+ },
+ {
+  "bar": 68,
+  "section": "working",
+  "label": "v. 14",
+  "verse": 14,
+  "chord": 5,
+  "carrier_hz": 852,
+  "offset_hz": 8
+ },
+ {
+  "bar": 69,
+  "section": "working",
+  "label": "v. 14",
+  "verse": 14,
+  "chord": 5,
+  "carrier_hz": 852,
+  "offset_hz": 8
+ },
+ {
+  "bar": 70,
+  "section": "working",
+  "label": "v. 14",
+  "verse": 14,
+  "chord": 5,
+  "carrier_hz": 852,
+  "offset_hz": 8
+ },
+ {
+  "bar": 71,
+  "section": "working",
+  "label": "v. 14",
+  "verse": 14,
+  "chord": 5,
+  "carrier_hz": 852,
+  "offset_hz": 8
+ },
+ {
+  "bar": 72,
+  "section": "working",
+  "label": "v. 14",
+  "verse": 14,
+  "chord": 5,
+  "carrier_hz": 852,
+  "offset_hz": 8
+ },
+ {
+  "bar": 73,
+  "section": "working",
+  "label": "v. 14",
+  "verse": 14,
+  "chord": 5,
+  "carrier_hz": 852,
+  "offset_hz": 8
+ },
+ {
+  "bar": 74,
+  "section": "working",
+  "label": "v. 14",
+  "verse": 14,
+  "chord": 5,
+  "carrier_hz": 852,
+  "offset_hz": 8
+ },
+ {
+  "bar": 75,
+  "section": "working",
+  "label": "v. 15",
+  "verse": 15,
+  "chord": 5,
+  "carrier_hz": 852,
+  "offset_hz": 8
+ },
+ {
+  "bar": 76,
+  "section": "working",
+  "label": "v. 15",
+  "verse": 15,
+  "chord": 5,
+  "carrier_hz": 852,
+  "offset_hz": 8
+ },
+ {
+  "bar": 77,
+  "section": "working",
+  "label": "v. 15",
+  "verse": 15,
+  "chord": 5,
+  "carrier_hz": 852,
+  "offset_hz": 8
+ },
+ {
+  "bar": 78,
+  "section": "working",
+  "label": "v. 15",
+  "verse": 15,
+  "chord": 5,
+  "carrier_hz": 852,
+  "offset_hz": 8
+ },
+ {
+  "bar": 79,
+  "section": "working",
+  "label": "v. 16",
+  "verse": 16,
+  "chord": 5,
+  "carrier_hz": 852,
+  "offset_hz": 8
+ },
+ {
+  "bar": 80,
+  "section": "working",
+  "label": "v. 16",
+  "verse": 16,
+  "chord": 5,
+  "carrier_hz": 852,
+  "offset_hz": 8
+ },
+ {
+  "bar": 81,
+  "section": "working",
+  "label": "v. 16",
+  "verse": 16,
+  "chord": 5,
+  "carrier_hz": 852,
+  "offset_hz": 8
+ },
+ {
+  "bar": 82,
+  "section": "working",
+  "label": "v. 16",
+  "verse": 16,
+  "chord": 5,
+  "carrier_hz": 852,
+  "offset_hz": 8
+ },
+ {
+  "bar": 83,
+  "section": "working",
+  "label": "v. 17",
+  "verse": 17,
+  "chord": 6,
+  "carrier_hz": 396,
+  "offset_hz": 13
+ },
+ {
+  "bar": 84,
+  "section": "working",
+  "label": "v. 17",
+  "verse": 17,
+  "chord": 6,
+  "carrier_hz": 396,
+  "offset_hz": 13
+ },
+ {
+  "bar": 85,
+  "section": "working",
+  "label": "v. 17",
+  "verse": 17,
+  "chord": 6,
+  "carrier_hz": 396,
+  "offset_hz": 13
+ },
+ {
+  "bar": 86,
+  "section": "working",
+  "label": "v. 17",
+  "verse": 17,
+  "chord": 6,
+  "carrier_hz": 396,
+  "offset_hz": 13
+ },
+ {
+  "bar": 87,
+  "section": "working",
+  "label": "v. 17",
+  "verse": 17,
+  "chord": 6,
+  "carrier_hz": 396,
+  "offset_hz": 13
+ },
+ {
+  "bar": 88,
+  "section": "working",
+  "label": "v. 17",
+  "verse": 17,
+  "chord": 6,
+  "carrier_hz": 396,
+  "offset_hz": 13
+ },
+ {
+  "bar": 89,
+  "section": "working",
+  "label": "v. 18",
+  "verse": 18,
+  "chord": 6,
+  "carrier_hz": 396,
+  "offset_hz": 13
+ },
+ {
+  "bar": 90,
+  "section": "working",
+  "label": "v. 18",
+  "verse": 18,
+  "chord": 6,
+  "carrier_hz": 396,
+  "offset_hz": 13
+ },
+ {
+  "bar": 91,
+  "section": "working",
+  "label": "v. 18",
+  "verse": 18,
+  "chord": 6,
+  "carrier_hz": 396,
+  "offset_hz": 13
+ },
+ {
+  "bar": 92,
+  "section": "working",
+  "label": "v. 18",
+  "verse": 18,
+  "chord": 6,
+  "carrier_hz": 396,
+  "offset_hz": 13
+ },
+ {
+  "bar": 93,
+  "section": "working",
+  "label": "v. 18",
+  "verse": 18,
+  "chord": 6,
+  "carrier_hz": 396,
+  "offset_hz": 13
+ },
+ {
+  "bar": 94,
+  "section": "working",
+  "label": "v. 18",
+  "verse": 18,
+  "chord": 6,
+  "carrier_hz": 396,
+  "offset_hz": 13
+ },
+ {
+  "bar": 95,
+  "section": "working",
+  "label": "v. 19",
+  "verse": 19,
+  "chord": 6,
+  "carrier_hz": 396,
+  "offset_hz": 13
+ },
+ {
+  "bar": 96,
+  "section": "working",
+  "label": "v. 19",
+  "verse": 19,
+  "chord": 6,
+  "carrier_hz": 396,
+  "offset_hz": 13
+ },
+ {
+  "bar": 97,
+  "section": "working",
+  "label": "v. 19",
+  "verse": 19,
+  "chord": 6,
+  "carrier_hz": 396,
+  "offset_hz": 13
+ },
+ {
+  "bar": 98,
+  "section": "working",
+  "label": "v. 19",
+  "verse": 19,
+  "chord": 6,
+  "carrier_hz": 396,
+  "offset_hz": 13
+ },
+ {
+  "bar": 99,
+  "section": "working",
+  "label": "v. 20",
+  "verse": 20,
+  "chord": 7,
+  "carrier_hz": 417,
+  "offset_hz": 1
+ },
+ {
+  "bar": 100,
+  "section": "working",
+  "label": "v. 20",
+  "verse": 20,
+  "chord": 7,
+  "carrier_hz": 417,
+  "offset_hz": 1
+ },
+ {
+  "bar": 101,
+  "section": "working",
+  "label": "v. 20",
+  "verse": 20,
+  "chord": 7,
+  "carrier_hz": 417,
+  "offset_hz": 1
+ },
+ {
+  "bar": 102,
+  "section": "working",
+  "label": "v. 20",
+  "verse": 20,
+  "chord": 7,
+  "carrier_hz": 417,
+  "offset_hz": 1
+ },
+ {
+  "bar": 103,
+  "section": "working",
+  "label": "v. 21",
+  "verse": 21,
+  "chord": 7,
+  "carrier_hz": 417,
+  "offset_hz": 1
+ },
+ {
+  "bar": 104,
+  "section": "working",
+  "label": "v. 21",
+  "verse": 21,
+  "chord": 7,
+  "carrier_hz": 417,
+  "offset_hz": 1
+ },
+ {
+  "bar": 105,
+  "section": "working",
+  "label": "v. 21",
+  "verse": 21,
+  "chord": 7,
+  "carrier_hz": 417,
+  "offset_hz": 1
+ },
+ {
+  "bar": 106,
+  "section": "working",
+  "label": "v. 22",
+  "verse": 22,
+  "chord": 7,
+  "carrier_hz": 417,
+  "offset_hz": 1
+ },
+ {
+  "bar": 107,
+  "section": "working",
+  "label": "v. 22",
+  "verse": 22,
+  "chord": 7,
+  "carrier_hz": 417,
+  "offset_hz": 1
+ },
+ {
+  "bar": 108,
+  "section": "working",
+  "label": "v. 22",
+  "verse": 22,
+  "chord": 7,
+  "carrier_hz": 417,
+  "offset_hz": 1
+ },
+ {
+  "bar": 109,
+  "section": "working",
+  "label": "v. 22",
+  "verse": 22,
+  "chord": 7,
+  "carrier_hz": 417,
+  "offset_hz": 1
+ },
+ {
+  "bar": 110,
+  "section": "working",
+  "label": "v. 22",
+  "verse": 22,
+  "chord": 7,
+  "carrier_hz": 417,
+  "offset_hz": 1
+ },
+ {
+  "bar": 111,
+  "section": "working",
+  "label": "v. 23",
+  "verse": 23,
+  "chord": 8,
+  "carrier_hz": 528,
+  "offset_hz": 1
+ },
+ {
+  "bar": 112,
+  "section": "working",
+  "label": "v. 23",
+  "verse": 23,
+  "chord": 8,
+  "carrier_hz": 528,
+  "offset_hz": 1
+ },
+ {
+  "bar": 113,
+  "section": "working",
+  "label": "v. 23",
+  "verse": 23,
+  "chord": 8,
+  "carrier_hz": 528,
+  "offset_hz": 1
+ },
+ {
+  "bar": 114,
+  "section": "working",
+  "label": "v. 24",
+  "verse": 24,
+  "chord": 8,
+  "carrier_hz": 528,
+  "offset_hz": 1
+ },
+ {
+  "bar": 115,
+  "section": "working",
+  "label": "v. 24",
+  "verse": 24,
+  "chord": 8,
+  "carrier_hz": 528,
+  "offset_hz": 1
+ },
+ {
+  "bar": 116,
+  "section": "working",
+  "label": "v. 25",
+  "verse": 25,
+  "chord": 9,
+  "carrier_hz": 639,
+  "offset_hz": 2
+ },
+ {
+  "bar": 117,
+  "section": "working",
+  "label": "v. 25",
+  "verse": 25,
+  "chord": 9,
+  "carrier_hz": 639,
+  "offset_hz": 2
+ },
+ {
+  "bar": 118,
+  "section": "working",
+  "label": "v. 25",
+  "verse": 25,
+  "chord": 9,
+  "carrier_hz": 639,
+  "offset_hz": 2
+ },
+ {
+  "bar": 119,
+  "section": "working",
+  "label": "v. 25",
+  "verse": 25,
+  "chord": 9,
+  "carrier_hz": 639,
+  "offset_hz": 2
+ },
+ {
+  "bar": 120,
+  "section": "working",
+  "label": "v. 26",
+  "verse": 26,
+  "chord": 9,
+  "carrier_hz": 639,
+  "offset_hz": 2
+ },
+ {
+  "bar": 121,
+  "section": "working",
+  "label": "v. 26",
+  "verse": 26,
+  "chord": 9,
+  "carrier_hz": 639,
+  "offset_hz": 2
+ },
+ {
+  "bar": 122,
+  "section": "working",
+  "label": "v. 26",
+  "verse": 26,
+  "chord": 9,
+  "carrier_hz": 639,
+  "offset_hz": 2
+ },
+ {
+  "bar": 123,
+  "section": "working",
+  "label": "v. 26",
+  "verse": 26,
+  "chord": 9,
+  "carrier_hz": 639,
+  "offset_hz": 2
+ },
+ {
+  "bar": 124,
+  "section": "working",
+  "label": "v. 27",
+  "verse": 27,
+  "chord": 9,
+  "carrier_hz": 639,
+  "offset_hz": 2
+ },
+ {
+  "bar": 125,
+  "section": "working",
+  "label": "v. 27",
+  "verse": 27,
+  "chord": 9,
+  "carrier_hz": 639,
+  "offset_hz": 2
+ },
+ {
+  "bar": 126,
+  "section": "working",
+  "label": "v. 27",
+  "verse": 27,
+  "chord": 9,
+  "carrier_hz": 639,
+  "offset_hz": 2
+ },
+ {
+  "bar": 127,
+  "section": "working",
+  "label": "v. 27",
+  "verse": 27,
+  "chord": 9,
+  "carrier_hz": 639,
+  "offset_hz": 2
+ },
+ {
+  "bar": 128,
+  "section": "working",
+  "label": "v. 27",
+  "verse": 27,
+  "chord": 9,
+  "carrier_hz": 639,
+  "offset_hz": 2
+ },
+ {
+  "bar": 129,
+  "section": "working",
+  "label": "v. 27",
+  "verse": 27,
+  "chord": 9,
+  "carrier_hz": 639,
+  "offset_hz": 2
+ },
+ {
+  "bar": 130,
+  "section": "working",
+  "label": "v. 28",
+  "verse": 28,
+  "chord": 10,
+  "carrier_hz": 741,
+  "offset_hz": 3
+ },
+ {
+  "bar": 131,
+  "section": "working",
+  "label": "v. 28",
+  "verse": 28,
+  "chord": 10,
+  "carrier_hz": 741,
+  "offset_hz": 3
+ },
+ {
+  "bar": 132,
+  "section": "working",
+  "label": "v. 28",
+  "verse": 28,
+  "chord": 10,
+  "carrier_hz": 741,
+  "offset_hz": 3
+ },
+ {
+  "bar": 133,
+  "section": "working",
+  "label": "v. 28",
+  "verse": 28,
+  "chord": 10,
+  "carrier_hz": 741,
+  "offset_hz": 3
+ },
+ {
+  "bar": 134,
+  "section": "working",
+  "label": "v. 29",
+  "verse": 29,
+  "chord": 10,
+  "carrier_hz": 741,
+  "offset_hz": 3
+ },
+ {
+  "bar": 135,
+  "section": "working",
+  "label": "v. 29",
+  "verse": 29,
+  "chord": 10,
+  "carrier_hz": 741,
+  "offset_hz": 3
+ },
+ {
+  "bar": 136,
+  "section": "working",
+  "label": "v. 29",
+  "verse": 29,
+  "chord": 10,
+  "carrier_hz": 741,
+  "offset_hz": 3
+ },
+ {
+  "bar": 137,
+  "section": "working",
+  "label": "v. 29",
+  "verse": 29,
+  "chord": 10,
+  "carrier_hz": 741,
+  "offset_hz": 3
+ },
+ {
+  "bar": 138,
+  "section": "working",
+  "label": "v. 30",
+  "verse": 30,
+  "chord": 10,
+  "carrier_hz": 741,
+  "offset_hz": 3
+ },
+ {
+  "bar": 139,
+  "section": "working",
+  "label": "v. 30",
+  "verse": 30,
+  "chord": 10,
+  "carrier_hz": 741,
+  "offset_hz": 3
+ },
+ {
+  "bar": 140,
+  "section": "working",
+  "label": "v. 30",
+  "verse": 30,
+  "chord": 10,
+  "carrier_hz": 741,
+  "offset_hz": 3
+ },
+ {
+  "bar": 141,
+  "section": "working",
+  "label": "v. 30",
+  "verse": 30,
+  "chord": 10,
+  "carrier_hz": 741,
+  "offset_hz": 3
+ },
+ {
+  "bar": 142,
+  "section": "working",
+  "label": "v. 30",
+  "verse": 30,
+  "chord": 10,
+  "carrier_hz": 741,
+  "offset_hz": 3
+ },
+ {
+  "bar": 143,
+  "section": "working",
+  "label": "v. 30",
+  "verse": 30,
+  "chord": 10,
+  "carrier_hz": 741,
+  "offset_hz": 3
+ },
+ {
+  "bar": 144,
+  "section": "working",
+  "label": "v. 30",
+  "verse": 30,
+  "chord": 10,
+  "carrier_hz": 741,
+  "offset_hz": 3
+ },
+ {
+  "bar": 145,
+  "section": "working",
+  "label": "v. 31",
+  "verse": 31,
+  "chord": 11,
+  "carrier_hz": 852,
+  "offset_hz": 5
+ },
+ {
+  "bar": 146,
+  "section": "working",
+  "label": "v. 31",
+  "verse": 31,
+  "chord": 11,
+  "carrier_hz": 852,
+  "offset_hz": 5
+ },
+ {
+  "bar": 147,
+  "section": "working",
+  "label": "v. 31",
+  "verse": 31,
+  "chord": 11,
+  "carrier_hz": 852,
+  "offset_hz": 5
+ },
+ {
+  "bar": 148,
+  "section": "working",
+  "label": "v. 31",
+  "verse": 31,
+  "chord": 11,
+  "carrier_hz": 852,
+  "offset_hz": 5
+ },
+ {
+  "bar": 149,
+  "section": "working",
+  "label": "v. 32",
+  "verse": 32,
+  "chord": 11,
+  "carrier_hz": 852,
+  "offset_hz": 5
+ },
+ {
+  "bar": 150,
+  "section": "working",
+  "label": "v. 32",
+  "verse": 32,
+  "chord": 11,
+  "carrier_hz": 852,
+  "offset_hz": 5
+ },
+ {
+  "bar": 151,
+  "section": "working",
+  "label": "v. 33",
+  "verse": 33,
+  "chord": 11,
+  "carrier_hz": 852,
+  "offset_hz": 5
+ },
+ {
+  "bar": 152,
+  "section": "working",
+  "label": "v. 33",
+  "verse": 33,
+  "chord": 11,
+  "carrier_hz": 852,
+  "offset_hz": 5
+ },
+ {
+  "bar": 153,
+  "section": "working",
+  "label": "v. 34",
+  "verse": 34,
+  "chord": 12,
+  "carrier_hz": 396,
+  "offset_hz": 8
+ },
+ {
+  "bar": 154,
+  "section": "working",
+  "label": "v. 34",
+  "verse": 34,
+  "chord": 12,
+  "carrier_hz": 396,
+  "offset_hz": 8
+ },
+ {
+  "bar": 155,
+  "section": "working",
+  "label": "v. 35",
+  "verse": 35,
+  "chord": 12,
+  "carrier_hz": 396,
+  "offset_hz": 8
+ },
+ {
+  "bar": 156,
+  "section": "working",
+  "label": "v. 35",
+  "verse": 35,
+  "chord": 12,
+  "carrier_hz": 396,
+  "offset_hz": 8
+ },
+ {
+  "bar": 157,
+  "section": "working",
+  "label": "v. 35",
+  "verse": 35,
+  "chord": 12,
+  "carrier_hz": 396,
+  "offset_hz": 8
+ },
+ {
+  "bar": 158,
+  "section": "sealing",
+  "label": "Mother tongue",
+  "verse": null,
+  "chord": 12,
+  "carrier_hz": 396,
+  "offset_hz": 1
+ },
+ {
+  "bar": 159,
+  "section": "sealing",
+  "label": "Father tongue",
+  "verse": null,
+  "chord": 12,
+  "carrier_hz": 396,
+  "offset_hz": 1
+ },
+ {
+  "bar": 160,
+  "section": "sealing",
+  "label": "Child",
+  "verse": null,
+  "chord": 12,
+  "carrier_hz": 396,
+  "offset_hz": 1
+ },
+ {
+  "bar": 161,
+  "section": "am",
+  "label": "AM",
+  "verse": null,
+  "chord": 12,
+  "carrier_hz": 396,
+  "offset_hz": 1
+ }
+]

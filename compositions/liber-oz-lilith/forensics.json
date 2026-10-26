@@ -1,0 +1,562 @@
+[
+ {
+  "layer": "ground",
+  "bars": [
+   1,
+   1
+  ],
+  "segment": "rung UT",
+  "carrier_hz": 396,
+  "offset_hz": 1,
+  "peak_l_hz": 395.5,
+  "peak_r_hz": 396.5,
+  "beat_measured_hz": 1.0,
+  "passed": true
+ },
+ {
+  "layer": "ground",
+  "bars": [
+   2,
+   2
+  ],
+  "segment": "rung RE",
+  "carrier_hz": 417,
+  "offset_hz": 1,
+  "peak_l_hz": 416.5,
+  "peak_r_hz": 417.5,
+  "beat_measured_hz": 1.0,
+  "passed": true
+ },
+ {
+  "layer": "ground",
+  "bars": [
+   3,
+   3
+  ],
+  "segment": "rung MI",
+  "carrier_hz": 528,
+  "offset_hz": 1,
+  "peak_l_hz": 527.5,
+  "peak_r_hz": 528.5,
+  "beat_measured_hz": 1.0,
+  "passed": true
+ },
+ {
+  "layer": "ground",
+  "bars": [
+   4,
+   4
+  ],
+  "segment": "rung FA",
+  "carrier_hz": 639,
+  "offset_hz": 1,
+  "peak_l_hz": 638.5,
+  "peak_r_hz": 639.5,
+  "beat_measured_hz": 1.0,
+  "passed": true
+ },
+ {
+  "layer": "ground",
+  "bars": [
+   5,
+   5
+  ],
+  "segment": "rung SOL",
+  "carrier_hz": 741,
+  "offset_hz": 1,
+  "peak_l_hz": 740.5,
+  "peak_r_hz": 741.5,
+  "beat_measured_hz": 1.0,
+  "passed": true
+ },
+ {
+  "layer": "ground",
+  "bars": [
+   6,
+   6
+  ],
+  "segment": "rung LA",
+  "carrier_hz": 852,
+  "offset_hz": 1,
+  "peak_l_hz": 851.5,
+  "peak_r_hz": 852.5,
+  "beat_measured_hz": 1.0,
+  "passed": true
+ },
+ {
+  "layer": "ground",
+  "bars": [
+   7,
+   19
+  ],
+  "segment": "working",
+  "carrier_hz": 396,
+  "offset_hz": 1,
+  "peak_l_hz": 395.5,
+  "peak_r_hz": 396.5,
+  "beat_measured_hz": 1.0,
+  "passed": true
+ },
+ {
+  "layer": "ground",
+  "bars": [
+   20,
+   39
+  ],
+  "segment": "working",
+  "carrier_hz": 417,
+  "offset_hz": 1,
+  "peak_l_hz": 416.5,
+  "peak_r_hz": 417.5,
+  "beat_measured_hz": 1.0,
+  "passed": true
+ },
+ {
+  "layer": "ground",
+  "bars": [
+   40,
+   50
+  ],
+  "segment": "working",
+  "carrier_hz": 528,
+  "offset_hz": 2,
+  "peak_l_hz": 527.0,
+  "peak_r_hz": 529.0,
+  "beat_measured_hz": 2.0,
+  "passed": true
+ },
+ {
+  "layer": "ground",
+  "bars": [
+   51,
+   60
+  ],
+  "segment": "working",
+  "carrier_hz": 639,
+  "offset_hz": 3,
+  "peak_l_hz": 637.5,
+  "peak_r_hz": 640.5,
+  "beat_measured_hz": 3.0,
+  "passed": true
+ },
+ {
+  "layer": "ground",
+  "bars": [
+   61,
+   68
+  ],
+  "segment": "working",
+  "carrier_hz": 741,
+  "offset_hz": 5,
+  "peak_l_hz": 738.5,
+  "peak_r_hz": 743.5,
+  "beat_measured_hz": 5.0,
+  "passed": true
+ },
+ {
+  "layer": "ground",
+  "bars": [
+   69,
+   83
+  ],
+  "segment": "working",
+  "carrier_hz": 852,
+  "offset_hz": 8,
+  "peak_l_hz": 848.0,
+  "peak_r_hz": 856.0,
+  "beat_measured_hz": 8.0,
+  "passed": true
+ },
+ {
+  "layer": "ground",
+  "bars": [
+   84,
+   99
+  ],
+  "segment": "working",
+  "carrier_hz": 396,
+  "offset_hz": 13,
+  "peak_l_hz": 389.5,
+  "peak_r_hz": 402.5,
+  "beat_measured_hz": 13.0,
+  "passed": true
+ },
+ {
+  "layer": "ground",
+  "bars": [
+   100,
+   111
+  ],
+  "segment": "working",
+  "carrier_hz": 417,
+  "offset_hz": 1,
+  "peak_l_hz": 416.5,
+  "peak_r_hz": 417.5,
+  "beat_measured_hz": 1.0,
+  "passed": true
+ },
+ {
+  "layer": "ground",
+  "bars": [
+   112,
+   116
+  ],
+  "segment": "working",
+  "carrier_hz": 528,
+  "offset_hz": 1,
+  "peak_l_hz": 527.5,
+  "peak_r_hz": 528.5,
+  "beat_measured_hz": 1.0,
+  "passed": true
+ },
+ {
+  "layer": "ground",
+  "bars": [
+   117,
+   130
+  ],
+  "segment": "working",
+  "carrier_hz": 639,
+  "offset_hz": 2,
+  "peak_l_hz": 638.0,
+  "peak_r_hz": 640.0,
+  "beat_measured_hz": 2.0,
+  "passed": true
+ },
+ {
+  "layer": "ground",
+  "bars": [
+   131,
+   145
+  ],
+  "segment": "working",
+  "carrier_hz": 741,
+  "offset_hz": 3,
+  "peak_l_hz": 739.5,
+  "peak_r_hz": 742.5,
+  "beat_measured_hz": 3.0,
+  "passed": true
+ },
+ {
+  "layer": "ground",
+  "bars": [
+   146,
+   153
+  ],
+  "segment": "working",
+  "carrier_hz": 852,
+  "offset_hz": 5,
+  "peak_l_hz": 849.5,
+  "peak_r_hz": 854.5,
+  "beat_measured_hz": 5.0,
+  "passed": true
+ },
+ {
+  "layer": "ground",
+  "bars": [
+   154,
+   158
+  ],
+  "segment": "working",
+  "carrier_hz": 396,
+  "offset_hz": 8,
+  "peak_l_hz": 392.0,
+  "peak_r_hz": 400.0,
+  "beat_measured_hz": 8.0,
+  "passed": true
+ },
+ {
+  "layer": "ground",
+  "bars": [
+   159,
+   162
+  ],
+  "segment": "sealing",
+  "carrier_hz": 396,
+  "offset_hz": 1,
+  "peak_l_hz": 395.5,
+  "peak_r_hz": 396.5,
+  "beat_measured_hz": 1.0,
+  "passed": true
+ },
+ {
+  "layer": "mix",
+  "bars": [
+   1,
+   1
+  ],
+  "segment": "rung UT",
+  "carrier_hz": 396,
+  "offset_hz": 1,
+  "peak_l_hz": 395.5,
+  "peak_r_hz": 396.5,
+  "beat_measured_hz": 1.0,
+  "passed": true
+ },
+ {
+  "layer": "mix",
+  "bars": [
+   2,
+   2
+  ],
+  "segment": "rung RE",
+  "carrier_hz": 417,
+  "offset_hz": 1,
+  "peak_l_hz": 416.499,
+  "peak_r_hz": 417.5,
+  "beat_measured_hz": 1.001,
+  "passed": true
+ },
+ {
+  "layer": "mix",
+  "bars": [
+   3,
+   3
+  ],
+  "segment": "rung MI",
+  "carrier_hz": 528,
+  "offset_hz": 1,
+  "peak_l_hz": 527.5,
+  "peak_r_hz": 528.5,
+  "beat_measured_hz": 1.0,
+  "passed": true
+ },
+ {
+  "layer": "mix",
+  "bars": [
+   4,
+   4
+  ],
+  "segment": "rung FA",
+  "carrier_hz": 639,
+  "offset_hz": 1,
+  "peak_l_hz": 638.5,
+  "peak_r_hz": 639.5,
+  "beat_measured_hz": 1.0,
+  "passed": true
+ },
+ {
+  "layer": "mix",
+  "bars": [
+   5,
+   5
+  ],
+  "segment": "rung SOL",
+  "carrier_hz": 741,
+  "offset_hz": 1,
+  "peak_l_hz": 740.506,
+  "peak_r_hz": 741.5,
+  "beat_measured_hz": 0.994,
+  "passed": true
+ },
+ {
+  "layer": "mix",
+  "bars": [
+   6,
+   6
+  ],
+  "segment": "rung LA",
+  "carrier_hz": 852,
+  "offset_hz": 1,
+  "peak_l_hz": 851.5,
+  "peak_r_hz": 852.5,
+  "beat_measured_hz": 1.0,
+  "passed": true
+ },
+ {
+  "layer": "mix",
+  "bars": [
+   7,
+   19
+  ],
+  "segment": "working",
+  "carrier_hz": 396,
+  "offset_hz": 1,
+  "peak_l_hz": 395.5,
+  "peak_r_hz": 396.5,
+  "beat_measured_hz": 1.0,
+  "passed": true
+ },
+ {
+  "layer": "mix",
+  "bars": [
+   20,
+   39
+  ],
+  "segment": "working",
+  "carrier_hz": 417,
+  "offset_hz": 1,
+  "peak_l_hz": 416.5,
+  "peak_r_hz": 417.5,
+  "beat_measured_hz": 1.0,
+  "passed": true
+ },
+ {
+  "layer": "mix",
+  "bars": [
+   40,
+   50
+  ],
+  "segment": "working",
+  "carrier_hz": 528,
+  "offset_hz": 2,
+  "peak_l_hz": 527.0,
+  "peak_r_hz": 529.0,
+  "beat_measured_hz": 2.0,
+  "passed": true
+ },
+ {
+  "layer": "mix",
+  "bars": [
+   51,
+   60
+  ],
+  "segment": "working",
+  "carrier_hz": 639,
+  "offset_hz": 3,
+  "peak_l_hz": 637.5,
+  "peak_r_hz": 640.5,
+  "beat_measured_hz": 3.0,
+  "passed": true
+ },
+ {
+  "layer": "mix",
+  "bars": [
+   61,
+   68
+  ],
+  "segment": "working",
+  "carrier_hz": 741,
+  "offset_hz": 5,
+  "peak_l_hz": 738.5,
+  "peak_r_hz": 743.5,
+  "beat_measured_hz": 5.0,
+  "passed": true
+ },
+ {
+  "layer": "mix",
+  "bars": [
+   69,
+   83
+  ],
+  "segment": "working",
+  "carrier_hz": 852,
+  "offset_hz": 8,
+  "peak_l_hz": 848.0,
+  "peak_r_hz": 856.0,
+  "beat_measured_hz": 8.0,
+  "passed": true
+ },
+ {
+  "layer": "mix",
+  "bars": [
+   84,
+   99
+  ],
+  "segment": "working",
+  "carrier_hz": 396,
+  "offset_hz": 13,
+  "peak_l_hz": 389.5,
+  "peak_r_hz": 402.5,
+  "beat_measured_hz": 13.0,
+  "passed": true
+ },
+ {
+  "layer": "mix",
+  "bars": [
+   100,
+   111
+  ],
+  "segment": "working",
+  "carrier_hz": 417,
+  "offset_hz": 1,
+  "peak_l_hz": 416.5,
+  "peak_r_hz": 417.5,
+  "beat_measured_hz": 1.0,
+  "passed": true
+ },
+ {
+  "layer": "mix",
+  "bars": [
+   112,
+   116
+  ],
+  "segment": "working",
+  "carrier_hz": 528,
+  "offset_hz": 1,
+  "peak_l_hz": 527.5,
+  "peak_r_hz": 528.5,
+  "beat_measured_hz": 1.0,
+  "passed": true
+ },
+ {
+  "layer": "mix",
+  "bars": [
+   117,
+   130
+  ],
+  "segment": "working",
+  "carrier_hz": 639,
+  "offset_hz": 2,
+  "peak_l_hz": 638.0,
+  "peak_r_hz": 640.0,
+  "beat_measured_hz": 2.0,
+  "passed": true
+ },
+ {
+  "layer": "mix",
+  "bars": [
+   131,
+   145
+  ],
+  "segment": "working",
+  "carrier_hz": 741,
+  "offset_hz": 3,
+  "peak_l_hz": 739.5,
+  "peak_r_hz": 742.5,
+  "beat_measured_hz": 3.0,
+  "passed": true
+ },
+ {
+  "layer": "mix",
+  "bars": [
+   146,
+   153
+  ],
+  "segment": "working",
+  "carrier_hz": 852,
+  "offset_hz": 5,
+  "peak_l_hz": 849.5,
+  "peak_r_hz": 854.5,
+  "beat_measured_hz": 5.0,
+  "passed": true
+ },
+ {
+  "layer": "mix",
+  "bars": [
+   154,
+   158
+  ],
+  "segment": "working",
+  "carrier_hz": 396,
+  "offset_hz": 8,
+  "peak_l_hz": 392.0,
+  "peak_r_hz": 400.0,
+  "beat_measured_hz": 8.0,
+  "passed": true
+ },
+ {
+  "layer": "mix",
+  "bars": [
+   159,
+   162
+  ],
+  "segment": "sealing",
+  "carrier_hz": 396,
+  "offset_hz": 1,
+  "peak_l_hz": 395.5,
+  "peak_r_hz": 396.5,
+  "beat_measured_hz": 1.0,
+  "passed": true
+ }
+]

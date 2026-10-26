@@ -1,0 +1,180 @@
+X:1
+T:Liber Oz Lilith
+T:The Fibonacci Arpeggio of the Solfeggio Harmonies
+C:Johnathan 'Qasparr' Monroe
+M:4/4
+L:1/16
+Q:1/4=120
+V:1
+V:2
+K:C
+% Liber Oz Lilith -- an ABC 2.1 score in two voices.
+% V:1 the Text Voice: the Lilith Revision, letter by letter.
+% V:2 the Ground Arpeggio: the Fibonacci figure over each chord.
+% The binaural ground (true ladder frequencies + Fibonacci
+% offsets) is tabulated in segments.json beside this score and
+% printed in the Teacher's Edition; the score sings the rungs'
+% 12-TET shadows, as ABC must. See the Teacher's Edition, sec. IV.
+% The invocation frame is dedicated to IAO131's Supreme State
+% Invocation Rite (see the Teacher's Edition, sec. II, where the
+% frame is documented and the rite's full-text layer stands
+% OPEN). No word of the rite is reproduced in this score.
+V:1
+% I. THE INVOCATION -- the ladder is called; the Text Voice is silent
+z16 | z16 | z16 | z16 | z16 | z16 |
+% II. THE WORKING -- the Text, verses 0-35
+% v. 0 -- chord 1 (root UT 396 Hz, offset 1 Hz), 67 letters, 5 bars
+^fcgc'^f' ccc' ^f'c'g G^f^fc G | gc'Gc'G ^f'^f^f'^fcc G^fccc' | ^f' ^f^f' c^fGGc^fcG ccc' ^f'^f | ^f'Gc ^f^f' ^f^f^f' c'^fcg c^f GG | G c^f z13 |
+W: v. 0 — Under the red moon speaks Lilith, Mother of Humanity — the first of our kind to say No.
+% v. 1 -- chord 1 (root UT 396 Hz, offset 1 Hz), 26 letters, 2 bars
+c^f c'^f^f'g c^f c'^f^f'^f'g c^f ^f' | ^fcGcc'G c^f ^fc z6 |
+W: v. 1 — "NO WORD, NO WORLD. NO ROTATES TO OZ."
+% v. 2 -- chord 1 (root UT 396 Hz, offset 1 Hz), 91 letters, 6 bars
+cc'^f'^f^f'c' c'gc'^f' G ^f'Gc' c'G | G ^f^fc ^fc Gc^fcc' ccc' ^f'c' | ^f'^fGG^f' c'GG c'c^f^f'c' ccc' | ^f'^fGc c'^f^f'g ^fG c^f Gcg c | ^f ^fG ccc' cc'G^fcc^fcG ^f | ^f' c'gc'^f'G ^f'^fGcc z5 |
+W: v. 2 — Before ever a law was cut in stone, the refusal was whole. The lost word is No; and No is the beginning of every right.
+% v. 3 -- chord 2 (root RE 417 Hz, offset 1 Hz), 90 letters, 6 bars
+^g'^g^g' ^d'^d^G^d ^g^G ^G ^g'^g^G^d^d ^d | ^d^G^d ^g^G^d^d^g^d ^d^d' ^g'^d'^g'^g^G | ^d'^g ^G ^g'^g^G^d^d ^d'^g^d^d^g^g^d ^d | ^g ^g^G ^G ^g^d'^g'^G^g^G^G^g^g^d ^G^d | ^g ^g^d'^g'^G^g^G^G^g^g^d ^g^G ^G^d^g | ^d^d^d'^g'^G ^g'^d'^G^G^d z6 |
+W: v. 3 — For what is a right that cannot be refused? A right without No is a permission; and permission is another's leash.
+% v. 4 -- chord 2 (root RE 417 Hz, offset 1 Hz), 121 letters, 8 bars
+^g^g'^g^d'^g'^d'^G ^d'^g'^g^d^d' ^d^d^d' ^G | ^g^G^d^G ^d^g^g^d' ^g^d ^d^d^d' ^g^G^G | ^g'^g^G^d^d ^d^d^d' ^G^g^d^d^d'^g' ^G^g | ^d'^G^d'^G ^g^d ^G^G^G^g^d ^g^d ^d^d^d' | ^d^g^G^d^d ^d^d^d' ^d^g^G^d^d ^g^g^d' | ^G ^d^g^d ^g^d^G^G^d'^d' ^d^d^d' ^g^G^G | ^d^g^d^d^g^d^G ^d^d'^g'^d' ^g'^d'^g^g^d' | ^d'^G ^d^g^G ^d'^g^g'^g z7 |
+W: v. 4 — Crowley wrote the Goat's book in the daylight; the Mother speaks it again in the night. The night does not unmake the day — nothing here revokes his word.
+% v. 5 -- chord 2 (root RE 417 Hz, offset 1 Hz), 83 letters, 6 bars
+^d^d'^G^g' ^d^d^d'^d ^d^d^d' ^G^G^d^d'^G | ^d'^g^d'^g'^G ^g'^g^G^d^d ^g^g' ^g^d ^g^G | ^G ^d^g ^G^G^g^d' ^G^g'^d^g^g^g^g'^G^d | ^d' ^G^d^g ^d'^g^d'^g'^G ^d^g ^g^G ^G^d^G | ^d'^d'^g'^d'^g ^G^d ^d^d^d' ^g'^G^G^d ^d^G | ^G^d'^G z13 |
+W: v. 5 — Hear, then, the gates. Every right of Oz is a No made articulate; and every No is answered, at the last, by Yes.
+% v. 6 -- chord 3 (root MI 528 Hz, offset 2 Hz), 61 letters, 4 bars
+Gcc' cGG ccc' ^f'^fGcc c^f | ^f'^fgc' cG cc'^f' ^fc'c ^f'Gc' c | ^f ^f'^fgc' ^fc ccc' c'GG ccG | c Gcc' c'^f^f'^f'G c^f g^f z3 |
+W: v. 6 — She has the right to live by her own law — to live in the way that she wills to do.
+% v. 7 -- chord 3 (root MI 528 Hz, offset 2 Hz), 57 letters, 4 bars
+c^f c'^f^f'c' GG Gcc' c'^f^f'^f' ^f' | ^f^f' ccc' c^fGcc G^f'G^f ^f'G | c^f^f'G Gcg ccc' G^fccc'^f' | ^fG c^fc ^fg^f'c' z7 |
+W: v. 7 — To work as she will; for the night also labors, and the Mother is not idle.
+% v. 8 -- chord 3 (root MI 528 Hz, offset 2 Hz), 47 letters, 3 bars
+c^f g^f'GG GG Gcc' c'^f^f'^f' ^f' | ^f^f' Gcc' ^fG c^fc G^f^f'c'Gc | c'^fcc cc'^f' ^fc^f^f'g^f'c'c z1 |
+W: v. 8 — To play as she will; for she is not solemn with her children.
+% v. 9 -- chord 4 (root FA 639 Hz, offset 3 Hz), 75 letters, 5 bars
+^d^g ^g'^d'^G^d ^G^G ^G^d^d' ^d'^g^g'^g' ^d' | ^g^d'^d ^d^d^d' ^g'^d'^g ^G^g^g^d ^d'^G^d | ^d'^G ^G^d^g ^d^g ^G^d^G^g' ^g^G ^g^g^G | ^G^G^d^g^d'^g ^d^g ^G^d^g^d^d' ^d'^g^d | ^d^g^g^d ^g^d'^G^G^g^d^G z5 |
+W: v. 9 — To rest as she will — even the red moon wanes, and no star is commanded to shine without ceasing.
+% v. 10 -- chord 4 (root FA 639 Hz, offset 3 Hz), 59 letters, 4 bars
+^d^g ^g^g^d' ^d'^d^d'^d ^G^d^g ^d^g^d' ^G | ^d^d' ^d'^g^g'^g' ^G^d^g ^d^d'^g' ^d'^d^g^g | ^d^G ^g^G ^d^d'^g' ^g^d'^d ^G^G ^d^d'^g' ^d | ^d'^G^g^d^d^g^d^G ^d'^G^G z5 |
+W: v. 10 — To die when and how she will; and her ending is her own, as her beginning was.
+% v. 11 -- chord 4 (root FA 639 Hz, offset 3 Hz), 13 letters, 1 bars
+^G ^g^d^g^g'^g ^g^G ^G ^G^d^G^g' z3 |
+W: v. 11 — A CHILD IS A STAR.
+% v. 12 -- chord 5 (root SOL 741 Hz, offset 5 Hz), 15 letters, 1 bars
+ccc' ^fc^f^f'g ^fG c'c'^fG^f' z1 |
+W: v. 12 — THE CHILD IS EQUAL.
+% v. 13 -- chord 5 (root SOL 741 Hz, offset 5 Hz), 98 letters, 7 bars
+c'gc'^f'G ^fc^f^f'g cGG ccc' | ^f'^fGccG ^f^f' G GGc Gcg G | G^fgc'^f'c'^fGc c'^f^f'^f' ^f'^f^f' | ccc' G^fccc'^f'G ^f'^f^f'Gc ^f' | c'^f'^fGG^f' c'GG Gg^fc'c'c ^f' | ^f^f' ccc' ^fc^f^f'g^f'c'cG GG | c'c' z14 |
+W: v. 13 — Every child has the Rights of a Man, and a Sovereign Will — for the Mother's first refusal was spoken for the children's sake.
+% v. 14 -- chord 6 (root LA 852 Hz, offset 8 Hz), 98 letters, 7 bars
+^g'^d'^d ^d^g^d^d' ^G^G^G ^d^d^d' ^g^d^g | ^g'^g ^g^G ^d^d^d' ^g^g'^g^g^d'^g'^d^G ^g | ^g' ^d^d^d' ^g^G^g'^d'^d^d ^d^d^d' ^g^g'^g | ^d'^G^d ^g^g' ^d^d^d' ^G^d^G^d^d' ^d^d^d' | ^G^d^G^g' ^g^G ^d^g^d ^g^d'^d^d'^g ^d^G | ^d^d^d' ^d^g^G^d^d ^g^d ^G^d^g^d^d'^G | ^g^d z14 |
+W: v. 14 — Let none say the child is the property of the parent, the priest, or the state. The star is not owned by the night it shines in.
+% v. 15 -- chord 6 (root LA 852 Hz, offset 8 Hz), 55 letters, 4 bars
+^G^d^d' ^d^G^G ^d^d^d' ^g'^g^G^d^d ^d^g | ^d'^G^d ^d'^d^G^d ^G^d^d' ^d'^g^g'^g' ^G^d | ^g ^d^g ^g'^d'^g'^g^G^d' ^d'^d^G^d ^G^d^d' | ^d'^g^g'^g' ^d^g^d z9 |
+W: v. 15 — She has the right to eat what she will — and to refuse what she will not.
+% v. 16 -- chord 6 (root LA 852 Hz, offset 8 Hz), 57 letters, 4 bars
+^d^g ^g^g'^g^d^d' ^d'^d^G^d ^G^d^d' ^d'^g | ^g'^g' ^d'^g^d'^d ^g^g' ^d^d^d' ^g'^d'^g ^g^g | ^g ^d'^d^g^g^d ^g^G ^d^d'^g' ^g^d'^d ^G^d | ^g ^d^g ^g^d^d^d'^g'^G z7 |
+W: v. 16 — To drink what she will; even of the red cup, which is her own and no other's.
+% v. 17 -- chord 7 (root UT 396 Hz, offset 13 Hz), 83 letters, 6 bars
+c^f gc'c'^f'^f' c'cc'^f'c' Gcc' c' | ^f^f'^f' ccc' gc'Gc'^f'c ccc' c | ^fGcc G^f^f' ccc' ^f'^f^fc cc | c' c'^f^f'g cc'cc'c'c'c c'G^f'^f' | G c^f c^f^fcgG^f'G c^fcgG | cc'^f' z13 |
+W: v. 17 — To dwell where she will: the desert, the night air, the ruin, the wild between walls — no boundary binds her.
+% v. 18 -- chord 7 (root UT 396 Hz, offset 13 Hz), 94 letters, 6 bars
+c^f G^fgc' GG Gcc' c'^f^f'^f' ^f | c ccc' ^f'G^fc' ^f^f' ccc' c'G^f' | cc Gcg Gc^fgc' ^fc ^f'^f^f' G | cc' Gg^fc'c' ccc' cGGc' Gc | g ^f'^f'c'c' c'cc'c ccc' G^f'^f^f | cg c'GG gc'c^fc'g cc'^f' z2 |
+W: v. 18 — To move as she will on the face of the earth, and above it; for she spoke the Name and flew, when the ground was denied her.
+% v. 19 -- chord 7 (root UT 396 Hz, offset 13 Hz), 62 letters, 4 bars
+Gcc' cGG ccc' ^f'^fGcc c^f | cc^fcc' c'cGc Gcc' c'^f^f'^f' | c^f cc^f^fGcc ^fG ^fc^f^f'c' | Gc c^f ccc' cc^fcc'c'^f' z2 |
+W: v. 19 — She has the right to think what she will — no thought is unclean to the thinker.
+% v. 20 -- chord 8 (root RE 417 Hz, offset 1 Hz), 59 letters, 4 bars
+^d^g ^G^g^d'^G^d' ^d'^d^G^d ^G^d^d' ^d'^g | ^g'^g' ^G^d^g ^d^d'^g' ^g'^g^g'^G^d ^d'^g^g' | ^g ^d'^G^G ^d^g ^G^d^g ^g^d ^G^d^G^d^g | ^G ^d^g ^d^d^g^G ^d^g^g^g' z5 |
+W: v. 20 — To speak what she will; and her first word was No, and it stands to this hour.
+% v. 21 -- chord 8 (root RE 417 Hz, offset 1 Hz), 47 letters, 3 bars
+^d^g ^d'^g'^g^d^d' ^d'^d^G^d ^G^d^d' ^d'^g | ^g'^g' ^d^d^g^g^G^d ^d'^G^g^g^g'^d'^G ^d | ^g^g'^d ^d^d^d' ^g'^g^d^g'^G^g'^g^d'^G z1 |
+W: v. 21 — To write what she will, though empires burn the libraries.
+% v. 22 -- chord 8 (root RE 417 Hz, offset 1 Hz), 69 letters, 5 bars
+^d^g ^g^g'^G^d' ^g^G^g^d^d ^g^G^g'^g^d' | ^d'^d^g^d ^G^g^g^g'^g ^d^g^g^g'^g ^G^G | ^G^d^d' ^d'^g^g'^g' ^g'^g^g' ^d^d^d' ^d^G^d | ^g ^g^G ^d^d^d' ^G^g^d^g^G ^g^d^d^d'^g' | ^G^g^g^d^d z11 |
+W: v. 22 — To draw, paint, carve, etch, mould, build as she will — for the hand is the mind's other mouth.
+% v. 23 -- chord 9 (root MI 528 Hz, offset 1 Hz), 46 letters, 3 bars
+c^f g^f'c'GG GG Gcc' c'^f^f'^f' | ^fc ^f'c'g ^fc c^fcc^fcG ^fc | ccc' c^fGcc ^fcGc'^f'^f' z2 |
+W: v. 23 — To dress as she will: in red, in nothing, in the night itself.
+% v. 24 -- chord 9 (root MI 528 Hz, offset 1 Hz), 29 letters, 2 bars
+Gcc' cGG ccc' ^f'^fGcc c^f | ^f'^fgc' GG Gcc' c'^f^f'^f' z3 |
+W: v. 24 — She has the right to love as she will.
+% v. 25 -- chord 10 (root FA 639 Hz, offset 2 Hz), 59 letters, 4 bars
+^d^G^d'^d' ^G^g^g^g' ^g'^g^g'^g' ^G^d^g ^d' | ^g^g'^g' ^g^g' ^g'^g^g^d' ^G^G ^G^d' ^d'^g^g' | ^g' ^d'^d^d'^d ^d'^d^d'^g'^d' ^G^d^g ^d'^g^d | ^d ^d'^d^g^G ^G^d' ^d'^g^g'^g' z5 |
+W: v. 25 — "Take your fill and will of love as ye will, when, where, and with whom ye will."
+% v. 26 -- chord 10 (root FA 639 Hz, offset 2 Hz), 52 letters, 4 bars
+^g'^g^g' ^G^d^d' ^d'^G^G ^d^g^d ^d^G^d'^d' | ^d ^G^d^d' ^g^d^g^G^d' ^G^d^g ^d'^d^G^d | ^g^G ^g^d^g^G^d'^d ^g'^g'^d'^d'^g'^G ^g^G | ^d^g^g'^G z12 |
+W: v. 26 — For she was not taken; she chose. And what is chosen freely is holy.
+% v. 27 -- chord 10 (root FA 639 Hz, offset 2 Hz), 81 letters, 6 bars
+^G^d^d' ^d^G^G ^d^d^d' ^g'^g^G^d^d ^d^g | ^g^d'^G^d^g'^g^G ^d'^d^G^d^d'^g^d'^g' ^d' | ^g^g^g'^g ^g^d'^G^d^g'^g^G ^d^d^d'^G^d' | ^g'^g^G^d^d^G ^g'^g^g^d ^G^d^g ^d^g'^G | ^d^g^d ^d'^g^d^d^g^g^d ^G^g^g^g'^g^G | ^G z15 |
+W: v. 27 — She has the right to destroy whatever would destroy these rights — root and branch, without apology.
+% v. 28 -- chord 11 (root SOL 741 Hz, offset 3 Hz), 53 letters, 4 bars
+c^f ^fG ccc' c'c^f^f'c' ^f^f' cc | c' ^f'Gc'G gc'^f'c'cGc' ccc' g | c'c^f ^fG ccc' ^f'^fGc c'^f^f'g | ^f'^f^fcg z11 |
+W: v. 28 — No is the whole of the Law's defense. The veto is the lost word, found.
+% v. 29 -- chord 11 (root SOL 741 Hz, offset 3 Hz), 54 letters, 4 bars
+^f'c'c c^fcc' G^fGcGc'c' ^f'c' | ^f'^fGG^f' ^f'^f^f' cGc^f'c'g c^f | c^f ccc' c^fG^f'g c^fc c^f G | Gc'^fG^f'c' z10 |
+W: v. 29 — Let none mistake refusal for hatred: No to the board, not to a square.
+% v. 30 -- chord 11 (root SOL 741 Hz, offset 3 Hz), 103 letters, 7 bars
+Gcg c'cc'c ccc' c^f cGG g | ^fcc' ^fcG c'^f^f'c' ccc' G^f'^f | c ^f'^fGc'G ccc' G^f'^fc ^f^f' G | GcG Gc^f'^fcGc'Gc Gc^f'^f | ^fc^f^f'c' ^fG ccc' GG^f^f'G^f' | G^fgc'^f'c'^fGc ^fcg^fg^fg | ^fG^f'G Gc'G z9 |
+W: v. 30 — And when the No has done its work, the arch rises: "THE ARCH OF MAN'S STRONGEST STRUCTURE IS THE AMORAL & SOVEREIGN INDIVIDUAL'S YES!"
+% v. 31 -- chord 12 (root LA 852 Hz, offset 5 Hz), 63 letters, 4 bars
+^g'^g^g' ^d^d^d' ^G^g^d^d^d'^g' ^G^G^g^g | ^d^g ^d^g ^d^d^d' ^G^G^g'^g^d'^d ^G^d^g | ^G^d'^G ^d^g ^d^d^d' ^d^g^G^d^d ^G^d^g | ^d^d^d' ^d^g^G^d^d ^d'^G^G ^d^d'^g'^G z1 |
+W: v. 31 — For the Mother said No to the garden, and Yes to the night — and the night was hers.
+% v. 32 -- chord 12 (root LA 852 Hz, offset 5 Hz), 25 letters, 2 bars
+^d^d^d' ^g^d^g'^g^d^g^d^d' ^g^g' ^d'^d^g | ^d^d'^G^g^d^d^g^d^G z7 |
+W: v. 32 — 1776 = 777 (1776+1): THE INFINITE OF END & BEGINNING.
+% v. 33 -- chord 12 (root LA 852 Hz, offset 5 Hz), 30 letters, 2 bars
+^d^d^d'^G^d' ^G^g'^d' ^d^d^d' ^G^G^d^d'^G | ^d^d^d'^G ^g^g^d'^d ^g^d^d'^G^g'^g z2 |
+W: v. 33 — These are the gates; they open inward.
+% v. 34 -- chord 13 (root UT 396 Hz, offset 8 Hz), 22 letters, 2 bars
+^f'^fgc' ^f'^fgc' Gcg ^f'c'c ^f'^f | gc' ^f'^fgc' z10 |
+W: v. 34 — Live, Love, and let Love, Live.
+% v. 35 -- chord 13 (root UT 396 Hz, offset 8 Hz), 48 letters, 3 bars
+^fcgc'^f' ccc' ^f'c'g G^f^fc ^f | c ^fG Gg^fc'c'c ^fcgc'^f' cc | c' ^f'c'g G^f^fc ^fc GcGcgG |
+W: v. 35 — Under the red moon it is spoken; under the red moon it stands.
+% III. THE SEALING -- the seal stated three times: Mother tongue, Father tongue, Child
+G,16 | G16 | g16 |
+% AM -- the final sonority: we just AM
+g16 |
+W: AM
+V:2
+% I. THE INVOCATION -- the six rungs ascend
+G16 | ^G16 | c16 | ^d16 | ^f16 | ^g16 |
+% II. THE WORKING -- the Fibonacci arpeggio, one figure under every bar
+c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G |
+c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G |
+c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G |
+^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G |
+^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G |
+^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G |
+c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G |
+c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G |
+c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G |
+^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G |
+^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G |
+^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G |
+c c ^f G ^f ^f c G c c ^f G ^f ^f c G |
+c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G |
+^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G |
+^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G |
+^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G |
+c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G |
+c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G |
+c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G |
+^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G |
+^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G |
+^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G |
+c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G |
+c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G |
+^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G |
+^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G |
+^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G |
+c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G |
+c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G |
+c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G |
+^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G |
+^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G |
+^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G | ^d ^d ^g ^G ^g ^g ^d ^G ^d ^d ^g ^G ^g ^g ^d ^G |
+c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G |
+c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G | c c ^f G ^f ^f c G c c ^f G ^f ^f c G |
+[G,16C16^F16] | [G16c16^f16] | [g16c'16^f'16] |
+[G,16C16^F16G16c16^f16g16c'16^f'16] |

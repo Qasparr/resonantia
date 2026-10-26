@@ -105,6 +105,22 @@ the diagnosis):
 for t in tests/test_*.py; do python3 "$t"; done
 ```
 
+## Compositions
+
+`compositions/liber-oz-lilith/` — **Liber Oz Lilith**: the Lilith
+Revision's 36 verses set letter-by-letter over the six solfeggio
+rungs of the Author's Axoneme mandala, one full cycle of the 13
+Sacred Chords, the binaural offset arpeggiating the Fibonacci set
+{1, 1, 2, 3, 5, 8, 13} Hz. Ships the ABC 2.1 score, the segment
+table, the rendered binaural WAV (324.0 s, FFT-verified per segment
+by `resonance.diagnostics.verify`), and a Teacher's Edition (MD +
+PDF) with the mandala plates, the full score in its notes, and the
+audit ledgers. The invocation is framed by IAO131's Supreme State
+Invocation Rite — credited, quoted within the standing budget, its
+full-text layer marked OPEN in the edition. Rebuild order:
+`build_composition.py`, `render_composition.py`,
+`build_teachers_edition.py`; tests in `tests/test_liber_oz_lilith.py`.
+
 ## Honesty
 
 - No medical or therapeutic efficacy is claimed anywhere — not for
