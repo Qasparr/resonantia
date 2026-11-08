@@ -1,0 +1,16 @@
+{
+  "finalize": [
+    {
+      "npy": "/home/hatch/workspace/resonance/studio-runs/brightmoor-rachets/_master_float.npy",
+      "out": "/home/hatch/workspace/resonance/studio-runs/brightmoor-rachets/master.wav",
+      "sample_rate": 48000,
+      "subtype": "PCM_24"
+    },
+    {
+      "npy": "/home/hatch/workspace/resonance/studio-runs/brightmoor-rachets/_sigma_float.npy",
+      "out": "/home/hatch/workspace/resonance/studio-runs/brightmoor-rachets/sigma.wav",
+      "sample_rate": 48000,
+      "subtype": "PCM_24"
+    }
+  ]
+}

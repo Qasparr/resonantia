@@ -1,0 +1,120 @@
+{
+  "title": "BRIGHTMOOR RACHETS (Instrumental)",
+  "prompt_base": "detroit bounce hip hop instrumental, f minor, minor-key piano riff, mournful strings, bounce groove feel, melodic content in front, rhythm section soft underneath",
+  "sections": [
+    {
+      "name": "intro",
+      "prompt_suffix": "sparse piano motif only, no drums, dusty vinyl texture",
+      "seconds": 22.0
+    },
+    {
+      "name": "hook1",
+      "prompt_suffix": "full bounce energy, piano and strings riff, big melodic hook",
+      "seconds": 21.0
+    },
+    {
+      "name": "verse1a",
+      "prompt_suffix": "driving bounce groove, piano riff working, strings low",
+      "seconds": 20.0
+    },
+    {
+      "name": "verse1b",
+      "prompt_suffix": "driving bounce groove, piano riff develops, call and response",
+      "seconds": 20.0
+    },
+    {
+      "name": "hook2",
+      "prompt_suffix": "hook returns bigger, piano and strings riff, full melodic hook",
+      "seconds": 21.0
+    },
+    {
+      "name": "feature_a",
+      "prompt_suffix": "open bounce groove, space in the middle, piano and soft strings, room for a vocal to sit",
+      "seconds": 20.0
+    },
+    {
+      "name": "feature_b",
+      "prompt_suffix": "open bounce groove continues, melodic answers in the gaps, airy strings",
+      "seconds": 20.0
+    },
+    {
+      "name": "hook3",
+      "prompt_suffix": "hook returns, piano and strings riff, big melodic hook",
+      "seconds": 21.0
+    },
+    {
+      "name": "verse3a",
+      "prompt_suffix": "driving bounce groove, piano riff, final verse energy",
+      "seconds": 20.0
+    },
+    {
+      "name": "verse3b",
+      "prompt_suffix": "driving bounce groove, riff at its peak, strings swell",
+      "seconds": 20.0
+    },
+    {
+      "name": "hook_out",
+      "prompt_suffix": "final hook, chant energy, piano strings and bounce groove, fading at the end",
+      "seconds": 30.0
+    }
+  ],
+  "seed": 93,
+  "sigma": {
+    "left_hz": 200.0,
+    "right_hz": 213.0,
+    "gain_db": -28.0
+  },
+  "master": {
+    "target_lufs": -14.0,
+    "ceiling_dbtp": -1.0
+  },
+  "spine": {
+    "bpm": 103.0,
+    "swing": 0.12,
+    "root_midi": 29,
+    "beats_per_bar": 4,
+    "sections": [
+      {
+        "name": "intro",
+        "bars": 8,
+        "density": "sparse"
+      },
+      {
+        "name": "hook",
+        "bars": 8,
+        "density": "full"
+      },
+      {
+        "name": "verse1",
+        "bars": 16,
+        "density": "driving"
+      },
+      {
+        "name": "hook",
+        "bars": 8,
+        "density": "full"
+      },
+      {
+        "name": "feature",
+        "bars": 16,
+        "density": "open"
+      },
+      {
+        "name": "hook",
+        "bars": 8,
+        "density": "full"
+      },
+      {
+        "name": "verse3",
+        "bars": 16,
+        "density": "driving"
+      },
+      {
+        "name": "hook_out",
+        "bars": 10,
+        "density": "full"
+      }
+    ]
+  },
+  "out_dir": "/home/hatch/workspace/resonance/studio-runs/brightmoor-rachets"
+}

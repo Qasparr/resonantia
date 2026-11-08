@@ -14,12 +14,24 @@
 # because the system python carries no torch. The two interpreters
 # exchange JSON only: a job file in, one JSON result line on stdout,
 # all progress chatter on stderr. Two job kinds:
-#   {"segments": [{index, prompt, seconds, seed, file}], "out_dir": …}
+#   {"segments": [{index, prompt, seconds, seed, file,
+#                   continue_seconds?}], "out_dir": …}
 #       Load facebook/musicgen-small ONCE, render each segment in
 #       order (seeded per segment), write segNN.wav at the model's
 #       native 32 kHz, PCM_16. Encodec runs at 50 tokens per second,
 #       so seconds*50 max_new_tokens; guidance_scale 3.0 -- the exact
 #       recipe proven by ~/workspace/musicgen/render_first.py.
+#       A segment with continue_seconds > 0 is CHAINED: it is
+#       generated conditioned on the tail of its predecessor's audio
+#       (the previous segment this job rendered, or segNN-1.wav read
+#       back from out_dir -- the resume road), and the returned
+#       audio's prompt span is sliced off, so the file holds only
+#       the newly generated seconds. The mechanism was proven by the
+#       desk's feasibility probe (2026-11-08): transformers 5.19's
+#       processor accepts audio conditioning, the output is prompt +
+#       continuation, and a direct splice at the joint measured a
+#       SMALLER sample jump than 99% of the source's own internal
+#       transitions.
 #   {"finalize": [{"npy": path, "out": path, "subtype": "PCM_24"}]}
 #       Load each float32 (frames, channels) .npy and write it as a
 #       real WAV via soundfile -- the system interpreter has no
@@ -79,29 +91,71 @@ def _render_segments(job):
     _log(f"model loaded in {time.time() - t0:.0f}s")
     sample_rate = int(model.config.audio_encoder.sampling_rate)
     results = []
+    prev_audio = None        # (frames,) mono float -- last struck audio
+    prev_index = None
     for seg in job["segments"]:
+        index = int(seg["index"])
         seed = int(seg["seed"])
         torch.manual_seed(seed)
         tokens = int(round(float(seg["seconds"]) * TOKENS_PER_SECOND))
-        inputs = processor(text=[seg["prompt"]], padding=True,
-                           return_tensors="pt")
+        cont_s = float(seg.get("continue_seconds", 0.0) or 0.0)
+        continued_from = None
+        tail = None
+        if cont_s > 0:
+            # The conditioning source: this job's previous render if
+            # it is the immediate predecessor, else the predecessor's
+            # file on disk (the resume road). No source, no chain --
+            # the segment renders plain and the result SAYS so.
+            src = None
+            if prev_audio is not None and prev_index == index - 1:
+                src = prev_audio
+            else:
+                prior = os.path.join(out_dir, f"seg{index - 1:02d}.wav")
+                if index > 0 and os.path.exists(prior):
+                    arr, _sr = sf.read(prior, dtype="float32")
+                    src = arr[:, 0] if arr.ndim == 2 else arr
+            if src is not None and len(src) > sample_rate:
+                n_tail = int(round(cont_s * sample_rate))
+                # Whole codec frames only: 640 samples per token at
+                # 32 kHz -- the slice arithmetic must be exact.
+                frame = sample_rate // TOKENS_PER_SECOND
+                n_tail = (n_tail // frame) * frame
+                tail = np.ascontiguousarray(src[-n_tail:])
+                continued_from = index - 1
         t1 = time.time()
-        with torch.no_grad():
-            audio = model.generate(**inputs, max_new_tokens=tokens,
-                                   guidance_scale=GUIDANCE_SCALE)
+        if tail is not None:
+            inputs = processor(text=[seg["prompt"]], audio=tail,
+                               sampling_rate=sample_rate,
+                               return_tensors="pt", padding=True)
+            with torch.no_grad():
+                audio = model.generate(**inputs, max_new_tokens=tokens,
+                                       guidance_scale=GUIDANCE_SCALE)
+        else:
+            inputs = processor(text=[seg["prompt"]], padding=True,
+                               return_tensors="pt")
+            with torch.no_grad():
+                audio = model.generate(**inputs, max_new_tokens=tokens,
+                                       guidance_scale=GUIDANCE_SCALE)
         # audio: (batch, channels, samples); musicgen-small is mono.
         wav = audio[0].cpu().numpy()
         if wav.ndim == 2:      # (channels, samples) -> keep channel axis
             data = wav.T       # soundfile wants (frames, channels)
         else:
             data = wav
+        if tail is not None:
+            # The decoded stream opens with the prompt's own span
+            # (the tail, re-decoded); only the continuation is the
+            # segment. Slice exactly the tail's sample count.
+            data = data[len(tail):]
         path = os.path.join(out_dir, seg["file"])
         sf.write(path, data, sample_rate, subtype="PCM_16")
         wall = time.time() - t1
-        _log(f"segment {seg['index']}: {seg['seconds']}s rendered "
-             f"in {wall:.0f}s -> {path}")
+        _log(f"segment {index}: {seg['seconds']}s rendered "
+             f"in {wall:.0f}s -> {path}"
+             + (f" (continued from {continued_from})"
+                if continued_from is not None else ""))
         results.append({
-            "index": int(seg["index"]),
+            "index": index,
             "file": seg["file"],
             "path": path,
             "seed": seed,
@@ -111,7 +165,13 @@ def _render_segments(job):
             "frames": int(data.shape[0]),
             "channels": int(data.shape[1]) if data.ndim == 2 else 1,
             "wall_seconds": round(wall, 2),
+            "continued_from": continued_from,
+            "continue_seconds": cont_s if continued_from is not None
+            else 0.0,
         })
+        prev_audio = (data[:, 0] if data.ndim == 2 else data)
+        prev_audio = np.ascontiguousarray(prev_audio, dtype=np.float32)
+        prev_index = index
     return {"ok": True, "kind": "segments", "model": MODEL_ID,
             "segments": results,
             "wall_seconds": round(time.time() - t0, 2)}

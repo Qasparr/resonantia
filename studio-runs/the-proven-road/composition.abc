@@ -1,0 +1,62 @@
+X:1
+T:THE PROVEN ROAD (Pipeline Proof No. 1) -- composition layer notation
+C:Johnathan 'Qasparr' Monroe, ARR, All Rights Reserved, Without Prejudice
+O:RESONANTIA studio pipeline, VII day of November, Anno V:xii e.n. (2026 e.v.)
+M:4/4
+L:1/4
+K:C
+% ---------------------------------------------------------------------
+% WHAT THIS FILE IS -- AND IS NOT (the founder's rule: a track with no
+% notation gets a transcription production, never a fabricated sheet).
+% This ABC notates the COMPOSITION layer of the track: the Sigma
+% solfeggio ladder arpeggiated in Fibonacci order, and the section
+% chart the bed was rendered to. The MusicGen bed is a rendered
+% performance; nothing below pretends to transcribe it. Its
+% transcription is a separate production, still owed.
+% ---------------------------------------------------------------------
+% THE SIGMA LADDER, as pitch approximations of the carrier ladder:
+%   UT 396 Hz -> G4   (true G4 = 392.00; the carrier stands +1.0% sharp)
+%   RE 417 Hz -> G#4  (true G#4 = 415.30; +0.4%)
+%   MI 528 Hz -> C5   (true C5 = 523.25; +0.9%)
+%   FA 639 Hz -> Eb5  (true Eb5 = 622.25; +2.7% -- the ladder's widest step)
+%   SOL 741 Hz -> F#5 (true F#5 = 739.99; +0.1%)
+%   LA 852 Hz -> G#5  (true G#5 = 830.61; +2.6%)
+% In the track itself the Sigma ground is NOT this melody: it is the
+% pure carrier pair 200.0 Hz (left) / 213.0 Hz (right), a 13 Hz beat,
+% laid at -28 dB under the bed's RMS by resonance.binaural. The melody
+% below is the house's arpeggio figure over the solfeggio ladder --
+% the composition's signature, notated so it can be played, weighed,
+% and argued with.
+% ---------------------------------------------------------------------
+% Fibonacci phrasing: phrase lengths run 1, 1, 2, 3, 5, 8 notes,
+% climbing the ladder cyclically (G ^G c _e ^f ^g, then again).
+% Phrase 1 (1):  G
+% Phrase 2 (1):  ^G
+% Phrase 3 (2):  c _e
+% Phrase 4 (3):  ^f ^g G
+% Phrase 5 (5):  ^G c _e ^f ^g
+% Phrase 6 (8):  G ^G c _e ^f ^g G ^G
+P:SIGMA
+G | ^G | c _e | ^f ^g G ^G | c _e ^f ^g G | ^G c _e ^f | ^g G ^G z |
+% ---------------------------------------------------------------------
+% SECTION CHART (P: parts) -- the arrangement the bed was rendered to.
+% 9 sections x 30 s rendered = 270 s; 2 s equal-power crossfades
+% between sections give a 254 s program. Seeds run 93..101 in order.
+%   P:INTRO   0:00  sparse piano, no drums                        seed 93
+%   P:VERSE1  0:28  full drums and 808                            seed 94
+%   P:VERSE2  0:56  full drums and 808, piano riff develops       seed 95
+%   P:HOOK1   1:24  add mournful strings                          seed 96
+%   P:VERSE3  1:52  full drums and 808, strings fall away         seed 97
+%   P:HOOK2   2:20  add mournful strings, biggest drums           seed 98
+%   P:BRIDGE  2:48  drums stripped, piano and bass only           seed 99
+%   P:HOOK3   3:16  add mournful strings, full drums, final       seed 100
+%   P:OUTRO   3:44  piano fading, vinyl crackle                   seed 101
+% Prompt base for every section: "dark gritty detroit boom bap hip
+% hop instrumental, deep 808 bass, eerie minor-key piano, dusty
+% vinyl texture, 93 bpm feel" + the section suffix above.
+% Master: -14 LUFS integrated (K-weighted, ungated), -1.0 dBTP
+% ceiling (the ceiling outranks the loudness when they fight).
+% ---------------------------------------------------------------------
+P:CHART
+G4 | ^G4 | c4 | _e4 | ^f4 | ^g4 |
+% 93 -- Live, Love, and let Love, Live.

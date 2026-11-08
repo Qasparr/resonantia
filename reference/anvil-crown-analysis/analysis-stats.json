@@ -1,0 +1,381 @@
+{
+ "audio": "/home/hatch/workspace/resonance/reference/the-anvil-crown.mp3",
+ "sr": 44100,
+ "duration_s": 158.145,
+ "bpm_measured_bench": 69.8,
+ "beat_s": 0.859599,
+ "bar_s": 3.438395,
+ "downbeat_phase_s": 0.57,
+ "n_bars": 46,
+ "boundaries": [
+  {
+   "t_raw": 6.711,
+   "t_used": 7.4467908309455595,
+   "snap_distance_s": 0.736,
+   "novelty": 0.393,
+   "prominence_ratio": 1.22,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 18.715,
+   "t_used": 17.7619770773639,
+   "snap_distance_s": 0.953,
+   "novelty": 0.3703,
+   "prominence_ratio": 1.15,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 26.285,
+   "t_used": 24.638767908309458,
+   "snap_distance_s": 1.646,
+   "novelty": 0.3693,
+   "prominence_ratio": 1.15,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 41.866,
+   "t_used": 41.830744985673356,
+   "snap_distance_s": 0.035,
+   "novelty": 0.342,
+   "prominence_ratio": 1.06,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 50.225,
+   "t_used": 48.707535816618915,
+   "snap_distance_s": 1.517,
+   "novelty": 0.3252,
+   "prominence_ratio": 1.01,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 63.042,
+   "t_used": 62.46111747851003,
+   "snap_distance_s": 0.581,
+   "novelty": 0.3465,
+   "prominence_ratio": 1.08,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 70.844,
+   "t_used": 69.33790830945559,
+   "snap_distance_s": 1.506,
+   "novelty": 0.3677,
+   "prominence_ratio": 1.15,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 77.88,
+   "t_used": 76.21469914040114,
+   "snap_distance_s": 1.665,
+   "novelty": 0.3402,
+   "prominence_ratio": 1.06,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 95.829,
+   "t_used": 96.84507163323782,
+   "snap_distance_s": 1.016,
+   "novelty": 0.415,
+   "prominence_ratio": 1.29,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 104.42,
+   "t_used": 103.72186246418337,
+   "snap_distance_s": 0.698,
+   "novelty": 0.3569,
+   "prominence_ratio": 1.11,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 111.386,
+   "t_used": 110.59865329512894,
+   "snap_distance_s": 0.787,
+   "novelty": 0.3857,
+   "prominence_ratio": 1.2,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 119.002,
+   "t_used": 117.4754441260745,
+   "snap_distance_s": 1.527,
+   "novelty": 0.3632,
+   "prominence_ratio": 1.13,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 132.098,
+   "t_used": 131.2290257879656,
+   "snap_distance_s": 0.869,
+   "novelty": 0.3464,
+   "prominence_ratio": 1.08,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 145.775,
+   "t_used": 144.98260744985674,
+   "snap_distance_s": 0.792,
+   "novelty": 0.3797,
+   "prominence_ratio": 1.18,
+   "confidence": 0.75
+  }
+ ],
+ "boundaries_merged_away": [
+  {
+   "boundary_s": 34.953954154727796,
+   "novelty": 0.3624
+  }
+ ],
+ "chord_distribution": {
+  "A": 21,
+  "A#m": 1,
+  "C#": 1,
+  "C#m": 5,
+  "Dm": 1,
+  "UNCLEAR": 17
+ },
+ "segments": [
+  {
+   "t0": 0.0,
+   "t1": 7.447,
+   "dur": 7.447,
+   "bar0": 0,
+   "n_bars": 2,
+   "mean_db": -25.685,
+   "slope_db_s": 0.641,
+   "centroid_hz": 2517.53,
+   "chroma_stability": 0.656,
+   "voiced_density": 0.459,
+   "recurrence_sim": 0.933,
+   "recurrence_with": 1
+  },
+  {
+   "t0": 7.447,
+   "t1": 17.762,
+   "dur": 10.315,
+   "bar0": 2,
+   "n_bars": 3,
+   "mean_db": -21.537,
+   "slope_db_s": 1.039,
+   "centroid_hz": 3106.779,
+   "chroma_stability": 0.677,
+   "voiced_density": 0.368,
+   "recurrence_sim": 0.933,
+   "recurrence_with": 0
+  },
+  {
+   "t0": 17.762,
+   "t1": 24.639,
+   "dur": 6.877,
+   "bar0": 5,
+   "n_bars": 2,
+   "mean_db": -16.031,
+   "slope_db_s": 0.526,
+   "centroid_hz": 3677.02,
+   "chroma_stability": 0.673,
+   "voiced_density": 0.283,
+   "recurrence_sim": 0.795,
+   "recurrence_with": 9
+  },
+  {
+   "t0": 24.639,
+   "t1": 41.831,
+   "dur": 17.192,
+   "bar0": 7,
+   "n_bars": 5,
+   "mean_db": -15.597,
+   "slope_db_s": -0.097,
+   "centroid_hz": 4017.068,
+   "chroma_stability": 0.676,
+   "voiced_density": 0.222,
+   "recurrence_sim": 0.845,
+   "recurrence_with": 9
+  },
+  {
+   "t0": 41.831,
+   "t1": 48.708,
+   "dur": 6.877,
+   "bar0": 12,
+   "n_bars": 2,
+   "mean_db": -13.889,
+   "slope_db_s": 0.343,
+   "centroid_hz": 3472.509,
+   "chroma_stability": 0.743,
+   "voiced_density": 0.248,
+   "recurrence_sim": 0.772,
+   "recurrence_with": 12
+  },
+  {
+   "t0": 48.708,
+   "t1": 62.461,
+   "dur": 13.754,
+   "bar0": 14,
+   "n_bars": 4,
+   "mean_db": -15.648,
+   "slope_db_s": -0.499,
+   "centroid_hz": 3964.211,
+   "chroma_stability": 0.717,
+   "voiced_density": 0.195,
+   "recurrence_sim": 0.806,
+   "recurrence_with": 3
+  },
+  {
+   "t0": 62.461,
+   "t1": 69.338,
+   "dur": 6.877,
+   "bar0": 18,
+   "n_bars": 2,
+   "mean_db": -15.472,
+   "slope_db_s": 0.294,
+   "centroid_hz": 3991.562,
+   "chroma_stability": 0.698,
+   "voiced_density": 0.201,
+   "recurrence_sim": 0.884,
+   "recurrence_with": 10
+  },
+  {
+   "t0": 69.338,
+   "t1": 76.215,
+   "dur": 6.877,
+   "bar0": 20,
+   "n_bars": 2,
+   "mean_db": -14.144,
+   "slope_db_s": 0.495,
+   "centroid_hz": 4166.404,
+   "chroma_stability": 0.686,
+   "voiced_density": 0.201,
+   "recurrence_sim": 0.873,
+   "recurrence_with": 6
+  },
+  {
+   "t0": 76.215,
+   "t1": 96.845,
+   "dur": 20.63,
+   "bar0": 22,
+   "n_bars": 6,
+   "mean_db": -14.743,
+   "slope_db_s": 0.007,
+   "centroid_hz": 3801.812,
+   "chroma_stability": 0.711,
+   "voiced_density": 0.191,
+   "recurrence_sim": 0.919,
+   "recurrence_with": 12
+  },
+  {
+   "t0": 96.845,
+   "t1": 103.722,
+   "dur": 6.877,
+   "bar0": 28,
+   "n_bars": 2,
+   "mean_db": -16.914,
+   "slope_db_s": 0.766,
+   "centroid_hz": 4194.582,
+   "chroma_stability": 0.693,
+   "voiced_density": 0.236,
+   "recurrence_sim": 0.845,
+   "recurrence_with": 3
+  },
+  {
+   "t0": 103.722,
+   "t1": 110.599,
+   "dur": 6.877,
+   "bar0": 30,
+   "n_bars": 2,
+   "mean_db": -14.764,
+   "slope_db_s": 0.189,
+   "centroid_hz": 4137.611,
+   "chroma_stability": 0.681,
+   "voiced_density": 0.241,
+   "recurrence_sim": 0.884,
+   "recurrence_with": 6
+  },
+  {
+   "t0": 110.599,
+   "t1": 117.475,
+   "dur": 6.877,
+   "bar0": 32,
+   "n_bars": 2,
+   "mean_db": -14.276,
+   "slope_db_s": 0.404,
+   "centroid_hz": 4158.492,
+   "chroma_stability": 0.707,
+   "voiced_density": 0.22,
+   "recurrence_sim": 0.833,
+   "recurrence_with": 1
+  },
+  {
+   "t0": 117.475,
+   "t1": 131.229,
+   "dur": 13.754,
+   "bar0": 34,
+   "n_bars": 4,
+   "mean_db": -14.043,
+   "slope_db_s": 0.428,
+   "centroid_hz": 3909.814,
+   "chroma_stability": 0.72,
+   "voiced_density": 0.223,
+   "recurrence_sim": 0.919,
+   "recurrence_with": 8
+  },
+  {
+   "t0": 131.229,
+   "t1": 144.983,
+   "dur": 13.754,
+   "bar0": 38,
+   "n_bars": 4,
+   "mean_db": -23.155,
+   "slope_db_s": -0.49,
+   "centroid_hz": 2751.113,
+   "chroma_stability": 0.694,
+   "voiced_density": 0.471,
+   "recurrence_sim": 0.782,
+   "recurrence_with": 3
+  },
+  {
+   "t0": 144.983,
+   "t1": 158.145,
+   "dur": 13.163,
+   "bar0": 42,
+   "n_bars": 4,
+   "mean_db": -39.321,
+   "slope_db_s": -4.561,
+   "centroid_hz": 2766.203,
+   "chroma_stability": 0.754,
+   "voiced_density": 0.254,
+   "recurrence_sim": 0.652,
+   "recurrence_with": 6
+  }
+ ],
+ "key_top3": [
+  {
+   "key": "A major",
+   "corr": 0.669
+  },
+  {
+   "key": "C# minor",
+   "corr": 0.587
+  },
+  {
+   "key": "F# minor",
+   "corr": 0.369
+  }
+ ],
+ "key_margin": 0.081,
+ "global_chroma": [
+  0.0708,
+  0.1141,
+  0.0837,
+  0.0706,
+  0.0799,
+  0.0735,
+  0.0587,
+  0.0606,
+  0.1039,
+  0.1292,
+  0.0773,
+  0.0777
+ ],
+ "n_notes_sketch": 325,
+ "sketch_coverage": 0.264
+}

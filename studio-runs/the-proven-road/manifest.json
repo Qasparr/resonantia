@@ -1,0 +1,230 @@
+{
+  "title": "THE PROVEN ROAD (Pipeline Proof No. 1)",
+  "title_status": "working title",
+  "dry_run": false,
+  "created_utc": "2026-11-08T03:31:08.757738+00:00",
+  "pipeline": "resonance.studio v1 (proof-of-concept build)",
+  "spec": {
+    "title": "THE PROVEN ROAD (Pipeline Proof No. 1)",
+    "prompt_base": "dark gritty detroit boom bap hip hop instrumental, deep 808 bass, eerie minor-key piano, dusty vinyl texture, 93 bpm feel",
+    "sections": [
+      {
+        "name": "intro",
+        "prompt_suffix": "sparse piano, no drums",
+        "seconds": 30.0
+      },
+      {
+        "name": "verse1",
+        "prompt_suffix": "full drums and 808",
+        "seconds": 30.0
+      },
+      {
+        "name": "verse2",
+        "prompt_suffix": "full drums and 808, piano riff develops",
+        "seconds": 30.0
+      },
+      {
+        "name": "hook1",
+        "prompt_suffix": "add mournful strings",
+        "seconds": 30.0
+      },
+      {
+        "name": "verse3",
+        "prompt_suffix": "full drums and 808, strings fall away",
+        "seconds": 30.0
+      },
+      {
+        "name": "hook2",
+        "prompt_suffix": "add mournful strings, biggest drums",
+        "seconds": 30.0
+      },
+      {
+        "name": "bridge",
+        "prompt_suffix": "drums stripped, piano and bass only",
+        "seconds": 30.0
+      },
+      {
+        "name": "hook3",
+        "prompt_suffix": "add mournful strings, full drums and 808, final chorus",
+        "seconds": 30.0
+      },
+      {
+        "name": "outro",
+        "prompt_suffix": "piano fading, vinyl crackle",
+        "seconds": 30.0
+      }
+    ],
+    "seed": 93,
+    "sigma": {
+      "left_hz": 200.0,
+      "right_hz": 213.0,
+      "gain_db": -28.0
+    },
+    "master": {
+      "target_lufs": -14.0,
+      "ceiling_dbtp": -1.0
+    },
+    "out_dir": "/home/hatch/workspace/resonance/studio-runs/the-proven-road"
+  },
+  "sections": [
+    {
+      "name": "intro",
+      "prompt": "dark gritty detroit boom bap hip hop instrumental, deep 808 bass, eerie minor-key piano, dusty vinyl texture, 93 bpm feel, sparse piano, no drums",
+      "seed": 93,
+      "seconds": 30.0,
+      "native_sample_rate": 32000,
+      "file": "seg00.wav",
+      "wall_seconds": null,
+      "resumed_from_disk": true,
+      "rms_matched_from": 0.18296
+    },
+    {
+      "name": "verse1",
+      "prompt": "dark gritty detroit boom bap hip hop instrumental, deep 808 bass, eerie minor-key piano, dusty vinyl texture, 93 bpm feel, full drums and 808",
+      "seed": 94,
+      "seconds": 30.0,
+      "native_sample_rate": 32000,
+      "file": "seg01.wav",
+      "wall_seconds": null,
+      "resumed_from_disk": true,
+      "rms_matched_from": 0.16918
+    },
+    {
+      "name": "verse2",
+      "prompt": "dark gritty detroit boom bap hip hop instrumental, deep 808 bass, eerie minor-key piano, dusty vinyl texture, 93 bpm feel, full drums and 808, piano riff develops",
+      "seed": 95,
+      "seconds": 30.0,
+      "native_sample_rate": 32000,
+      "file": "seg02.wav",
+      "wall_seconds": null,
+      "resumed_from_disk": true,
+      "rms_matched_from": 0.31771
+    },
+    {
+      "name": "hook1",
+      "prompt": "dark gritty detroit boom bap hip hop instrumental, deep 808 bass, eerie minor-key piano, dusty vinyl texture, 93 bpm feel, add mournful strings",
+      "seed": 96,
+      "seconds": 30.0,
+      "native_sample_rate": 32000,
+      "file": "seg03.wav",
+      "wall_seconds": 1231.28,
+      "resumed_from_disk": false,
+      "rms_matched_from": 0.21072
+    },
+    {
+      "name": "verse3",
+      "prompt": "dark gritty detroit boom bap hip hop instrumental, deep 808 bass, eerie minor-key piano, dusty vinyl texture, 93 bpm feel, full drums and 808, strings fall away",
+      "seed": 97,
+      "seconds": 30.0,
+      "native_sample_rate": 32000,
+      "file": "seg04.wav",
+      "wall_seconds": 1299.27,
+      "resumed_from_disk": false,
+      "rms_matched_from": 0.21338
+    },
+    {
+      "name": "hook2",
+      "prompt": "dark gritty detroit boom bap hip hop instrumental, deep 808 bass, eerie minor-key piano, dusty vinyl texture, 93 bpm feel, add mournful strings, biggest drums",
+      "seed": 98,
+      "seconds": 30.0,
+      "native_sample_rate": 32000,
+      "file": "seg05.wav",
+      "wall_seconds": 1059.57,
+      "resumed_from_disk": false,
+      "rms_matched_from": 0.15798
+    },
+    {
+      "name": "bridge",
+      "prompt": "dark gritty detroit boom bap hip hop instrumental, deep 808 bass, eerie minor-key piano, dusty vinyl texture, 93 bpm feel, drums stripped, piano and bass only",
+      "seed": 99,
+      "seconds": 30.0,
+      "native_sample_rate": 32000,
+      "file": "seg06.wav",
+      "wall_seconds": 1076.0,
+      "resumed_from_disk": false,
+      "rms_matched_from": 0.21336
+    },
+    {
+      "name": "hook3",
+      "prompt": "dark gritty detroit boom bap hip hop instrumental, deep 808 bass, eerie minor-key piano, dusty vinyl texture, 93 bpm feel, add mournful strings, full drums and 808, final chorus",
+      "seed": 100,
+      "seconds": 30.0,
+      "native_sample_rate": 32000,
+      "file": "seg07.wav",
+      "wall_seconds": 1089.0,
+      "resumed_from_disk": false,
+      "rms_matched_from": 0.20467
+    },
+    {
+      "name": "outro",
+      "prompt": "dark gritty detroit boom bap hip hop instrumental, deep 808 bass, eerie minor-key piano, dusty vinyl texture, 93 bpm feel, piano fading, vinyl crackle",
+      "seed": 101,
+      "seconds": 30.0,
+      "native_sample_rate": 32000,
+      "file": "seg08.wav",
+      "wall_seconds": 1072.67,
+      "resumed_from_disk": false,
+      "rms_matched_from": 0.13848
+    }
+  ],
+  "render": {
+    "model": "facebook/musicgen-small",
+    "wall_seconds_this_run": 6836.57,
+    "resumed_segments": [
+      0,
+      1,
+      2
+    ],
+    "rendered_seconds_total": 270.0
+  },
+  "program": {
+    "seconds": 253.46,
+    "sample_rate": 48000,
+    "channels": 2,
+    "bit_depth": 24
+  },
+  "sigma": {
+    "intended_left_hz": 200.0,
+    "intended_right_hz": 213.0,
+    "measured_left_hz": 200.0,
+    "measured_right_hz": 213.0,
+    "measured_separation_hz": 13.0,
+    "gain_db": -28.0,
+    "gain_reference": "relative to the bed's RMS level",
+    "engine": "resonance.binaural.generator.binaural_beat"
+  },
+  "master": {
+    "lufs_before": -14.81,
+    "gain_applied_db": 0.81,
+    "trim_db": -0.18,
+    "lufs_after": -14.19,
+    "sample_peak_db": -1.19,
+    "true_peak_dbtp": -1.02,
+    "ceiling_overrode_loudness": true,
+    "target_lufs": -14.0,
+    "ceiling_dbtp": -1.0
+  },
+  "files": {
+    "master_wav": {
+      "path": "/home/hatch/workspace/resonance/studio-runs/the-proven-road/master.wav",
+      "bytes": 72996524
+    },
+    "preview_mp3": {
+      "path": "/home/hatch/workspace/resonance/studio-runs/the-proven-road/preview.mp3",
+      "bytes": 10140525
+    },
+    "sigma_wav": {
+      "path": "/home/hatch/workspace/resonance/studio-runs/the-proven-road/sigma.wav",
+      "bytes": 72996524
+    },
+    "spec_json": "/home/hatch/workspace/resonance/studio-runs/the-proven-road/spec.json",
+    "render_log": "/home/hatch/workspace/resonance/studio-runs/the-proven-road/render.log"
+  },
+  "wall_seconds_total": 6971.39,
+  "notes": [
+    "musicgen-small renders mono; the bed is dual-mono by construction -- the stereo field is carried by the Sigma layer in this proof.",
+    "loudness is K-weighted integrated, UNGATED (BS.1770 gating omitted in the proof build, stated not hidden).",
+    "section levels RMS-matched to the median section, clamped to +/-6 dB, before crossfading.",
+    "2 s tail fade + 5 ms head fade applied before mastering."
+  ]
+}

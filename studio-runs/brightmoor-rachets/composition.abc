@@ -1,0 +1,78 @@
+X:1
+T:BRIGHTMOOR RACHETS (Instrumental) -- the house layer, notated
+C:RESONANTIA studio pipeline, Pipeline Proof No. 2
+R:Detroit bounce, 103 BPM, F minor
+M:4/4
+L:1/1
+K:Fmin clef=bass
+%
+% WHAT THIS SHEET IS -- AND IS NOT (the founder's rule, kept):
+% This notation covers EXACTLY what the house engine composed and
+% struck: the rhythmic spine (drums + 808 bass, rendered by
+% resonance.studio.spine on resonance.grid arithmetic) and the
+% Sigma binaural ground (resonance.binaural). The MusicGen bed
+% (piano / strings melodic content, F minor) is NOT transcribed
+% here: its transcription is a separate production, still owed,
+% and no sheet for it has been fabricated.
+%
+% THE GRID: 103 BPM, 48 kHz. One bar = 111,940.68 samples of float
+% truth; the program is bars_to_samples(90) = 10,066,019 samples
+% = 209.709 s, one rounding at the total. Swing 0.12 (odd 16th
+% steps delayed by 0.12 of a step -- the bounce). Every hit below
+% sits at round(step * 27,985.17) samples (+ swing on odd steps).
+%
+% SECTION CHART (spine truth; the bed follows this map):
+%   intro    bars  1- 8   sparse    0:00.0 - 0:18.6
+%   hook     bars  9-16   full      0:18.6 - 0:37.3
+%   verse1   bars 17-32   driving   0:37.3 - 1:14.6
+%   hook     bars 33-40   full      1:14.6 - 1:33.2
+%   feature  bars 41-56   open      1:33.2 - 2:10.5
+%   hook     bars 57-64   full      2:10.5 - 2:29.1
+%   verse3   bars 65-80   driving   2:29.1 - 3:06.4
+%   hook_out bars 81-90   full      3:06.4 - 3:29.7
+%
+% DRUM PATTERNS -- one bar of 16 steps per density.
+% (X = hit, number beneath = velocity; steps read 1..16.)
+% FULL (hook):
+%   kick       X . . . . . x . X . x . . . x .    1 . . . . . .75 . 1 . .8 . . . .8 .
+%   clap       . . . . X . . . . . . . X . . .
+%   closed hat x . x . x . x . x . x . x . x .    accents on the beats
+%   open hat   . . . . . . . . . . . . . . X .    odd bars only, step 15
+%   808        steps 1 (6 long), 7 (2), 9 (6)     on the bar root
+% DRIVING (verse):
+%   kick       X . . . . . . . X . x . . . . .    ghost x on step 16, odd bars
+%   snare      . . . . X . . . . . . . X . . .
+%   closed hat all 16 steps, accents on the beats, ghosts between
+%   open hat   step 15, every 4th bar
+%   808        steps 1 (4), 4 (1), 7 (2), 9 (4), 11 (2), 13 (3)
+% OPEN (feature slot -- air, but grooving):
+%   kick       X . . . . . . . X . . . . . . .
+%   snare      . . . . X . . . . . . . X . . .
+%   closed hat x . x . x . x . x . x . x . x .
+%   open hat   step 15 + rimshot steps 8, 16, odd bars only
+%   808        steps 1 (8 long), 9 (6)            long tones, room to rap
+% SPARSE (intro):
+%   kick       X . . . . . . . . . . . . . . .
+%   closed hat X . . . . . . . X . . . . . . .    steps 5, 13 join from bar 3
+%   rimshot    step 5, odd bars
+%   808        step 1, 12 long                    the root, held
+% FILL (last bar of every full/driving section):
+%   kick steps 1, 9 only; hats silent; snare walks 13-16 at
+%   velocities .5 / .65 / .8 / 1.0; 808 step 1 (8 long).
+%
+% THE 808 MOVEMENT -- the four-bar chord cycle, restarting at the
+% tonic each section: F - Db - Ab - Eb (i - VI - III - VII).
+% Roots as struck (MIDI): F1=29, Db2=37, Ab1=32, Eb2=39.
+% In the staff below (bass clef, whole notes): F,, Db, Ab,, Eb,
+F,,4|Db,4|Ab,,4|Eb,4|]
+%
+% THE SIGMA GROUND: two pure carriers, left 200 Hz / right 213 Hz
+% (measured on the struck sigma.wav: 200.0 / 213.0, separation
+% 13.0 Hz), laid at -28 dB under the bed's RMS for the full
+% program. The solfeggio ladder the ground descends from, as
+% struck by resonance.binaural in this house's proofs:
+% UT 396, RE 417, MI 528, FA 639, SOL 741, LA 852 Hz -- pure
+% tones, not staff pitches; no notation is pretended for them
+% beyond these measured frequencies.
+%
+% 93 -- Live, Love, and let Love, Live.

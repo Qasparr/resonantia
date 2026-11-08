@@ -1,0 +1,16 @@
+{
+  "finalize": [
+    {
+      "npy": "/home/hatch/workspace/resonance/studio-runs/the-proven-road/_master_float.npy",
+      "out": "/home/hatch/workspace/resonance/studio-runs/the-proven-road/master.wav",
+      "sample_rate": 48000,
+      "subtype": "PCM_24"
+    },
+    {
+      "npy": "/home/hatch/workspace/resonance/studio-runs/the-proven-road/_sigma_float.npy",
+      "out": "/home/hatch/workspace/resonance/studio-runs/the-proven-road/sigma.wav",
+      "sample_rate": 48000,
+      "subtype": "PCM_24"
+    }
+  ]
+}

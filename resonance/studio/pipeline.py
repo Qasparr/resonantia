@@ -41,10 +41,14 @@ import numpy as np
 
 from resonance import grid
 from resonance.binaural.generator import binaural_beat
+from resonance.studio import arpeggio as arpeggio_mod
 from resonance.studio import spine as spine_mod
 
 TARGET_SR = 48000            # The master's sample rate, full stop.
-CROSSFADE_S = 2.0            # Equal-power overlap between sections.
+CROSSFADE_S = 2.0            # Equal-power overlap between sections
+                             # (the default; a spine spec may instead
+                             # ask for whole-bar crossfades -- see
+                             # "crossfade_bars" in validate_spec).
 END_FADE_S = 2.0             # A record ends; it does not stop.
 HEAD_FADE_S = 0.005          # 5 ms: no click at the needle drop.
 VENV_PYTHON = os.environ.get(
@@ -102,6 +106,18 @@ def validate_spec(spec):
     if not isinstance(base, str) or not base.strip():
         raise ValueError("prompt_base: required, a non-empty string")
     out["prompt_base"] = base.strip()
+    # The motif: ONE named musical idea, carried verbatim in every
+    # section prompt (see _full_prompt) -- the cure for the
+    # Frankenstein bed, in which eleven sections dreamed eleven
+    # different songs. Optional; absent, prompts are what they
+    # always were.
+    motif = spec.get("motif")
+    if motif is not None:
+        if not isinstance(motif, str) or not motif.strip():
+            raise ValueError("motif: must be a non-empty string")
+        out["motif"] = motif.strip()
+    else:
+        out.pop("motif", None)
     sections = spec.get("sections")
     if not isinstance(sections, list) or not sections:
         raise ValueError("sections: required, a non-empty list")
@@ -150,6 +166,50 @@ def validate_spec(spec):
         out["spine"] = spine_mod.normalize_spine_spec(spec["spine"])
     else:
         out.pop("spine", None)
+    # Crossfades in whole bars: on a spine production the stitch
+    # may ask for its overlaps in the grid's own unit (a positive
+    # int of bars), so seams lengthen AND stay on bar lines. Absent
+    # (or spine-less), the legacy CROSSFADE_S seconds rule stands.
+    xfade = spec.get("crossfade_bars")
+    if xfade is not None:
+        if not isinstance(xfade, int) or isinstance(xfade, bool) \
+                or not 1 <= xfade <= 8:
+            raise ValueError(
+                f"crossfade_bars: {xfade!r} must be an int in 1..8")
+        out["crossfade_bars"] = xfade
+    else:
+        out.pop("crossfade_bars", None)
+    # The arpeggio layer: the composed dancer. It is written in
+    # bars, so it requires the spine's schedule to dance on;
+    # asking for it spine-less is refused by name, not improvised.
+    if spec.get("arpeggio") is not None:
+        if "spine" not in out:
+            raise ValueError(
+                "arpeggio: requires a spine (the composition is "
+                "written in bars)")
+        out["arpeggio"] = arpeggio_mod.normalize_arpeggio_spec(
+            spec["arpeggio"], default_seed=out["seed"])
+    else:
+        out.pop("arpeggio", None)
+    # Chained bed rendering: each section after the first is
+    # generated CONTINUED from the tail of its predecessor's audio
+    # -- the Lyria lesson, one performance instead of a collage.
+    # The mechanism was proven by the desk's feasibility probe
+    # (2026-11-08, transformers 5.19): the processor accepts audio
+    # conditioning and the joint measures seamless. Optional; the
+    # chain is a fact about the render, never the arrangement --
+    # prompts still steer every section.
+    if spec.get("chained"):
+        cs = spec.get("continue_seconds", 5.0)
+        if isinstance(cs, bool) or not isinstance(cs, (int, float)) \
+                or not 2.0 <= float(cs) <= 10.0:
+            raise ValueError(
+                f"continue_seconds: {cs!r} outside 2.0..10.0")
+        out["chained"] = True
+        out["continue_seconds"] = float(cs)
+    else:
+        out.pop("chained", None)
+        out.pop("continue_seconds", None)
     # The Stereo Law's width: how far the mono bed is widened
     # (widen_bed). The law defaults ON for spine productions -- a
     # spined record ships stereo or says why not -- and OFF on the
@@ -173,9 +233,38 @@ def validate_spec(spec):
 
 
 def _full_prompt(spec, section):
-    """prompt_base + section suffix: one voice, many arrangements."""
+    """prompt_base + section suffix (+ the motif): one song, told whole.
+
+    MECHANISM: when the spec carries a motif, it is appended
+    verbatim to EVERY section prompt -- the same named figure, in
+    the same words, in every generation -- so the sections are
+    variations on one performance instead of strangers stitched
+    together. Without a motif the prompt is exactly the legacy
+    base (+ suffix) form.
+    """
     suffix = section["prompt_suffix"].strip()
-    return f"{spec['prompt_base']}, {suffix}" if suffix else spec["prompt_base"]
+    parts = [spec["prompt_base"]]
+    if suffix:
+        parts.append(suffix)
+    if spec.get("motif"):
+        parts.append(spec["motif"])
+    return ", ".join(parts)
+
+
+def _crossfade_samples(spec):
+    """The stitch overlap, in samples: whole bars when so asked.
+
+    MECHANISM: with a spine and "crossfade_bars", the overlap is
+    grid.bars_to_samples of that many bars at the spine's tempo --
+    seams that are longer than the legacy 2 s AND land on bar
+    lines, so the grid the spine keeps is the grid the stitch
+    respects. Otherwise the legacy CROSSFADE_S seconds.
+    """
+    if spec.get("crossfade_bars") and spec.get("spine"):
+        return grid.bars_to_samples(spec["crossfade_bars"],
+                                    spec["spine"]["bpm"], TARGET_SR,
+                                    spec["spine"]["beats_per_bar"])
+    return int(CROSSFADE_S * TARGET_SR)
 
 
 # ---------------------------------------------------------------------
@@ -624,17 +713,21 @@ def _segment_file_ok(path, seconds):
 def _dry_run_manifest(spec):
     """The manifest skeleton for --dry-run: the plan, weighed, unbuilt."""
     total_render = sum(s["seconds"] for s in spec["sections"])
-    overlaps = CROSSFADE_S * max(0, len(spec["sections"]) - 1)
+    fade_s = _crossfade_samples(spec) / TARGET_SR
+    overlaps = fade_s * max(0, len(spec["sections"]) - 1)
     planned = {
         "sections": [
             {"name": s["name"], "prompt": _full_prompt(spec, s),
              "seed": spec["seed"] + i, "seconds": s["seconds"]}
             for i, s in enumerate(spec["sections"])],
         "rendered_seconds_total": total_render,
+        "crossfade_seconds_each": round(fade_s, 4),
         "program_seconds_after_crossfades": total_render - overlaps,
         "sample_rate": TARGET_SR,
         "sigma": spec["sigma"],
         "master": spec["master"],
+        "chained": bool(spec.get("chained")),
+        "continue_seconds": spec.get("continue_seconds"),
     }
     if spec.get("spine"):
         sp = spec["spine"]
@@ -643,6 +736,16 @@ def _dry_run_manifest(spec):
             "total_bars": spine_mod.total_bars(sp),
             "exact_samples": spine_mod.spine_samples(sp, TARGET_SR),
             "sections": sp["sections"],
+        }
+    if spec.get("arpeggio"):
+        events, modes = arpeggio_mod.compose_events(
+            spec["spine"]["sections"], spec["arpeggio"]["mode_overrides"])
+        planned["arpeggio"] = {
+            "level_db": spec["arpeggio"]["level_db"],
+            "orbit_hz": spec["arpeggio"]["orbit_hz"],
+            "total_notes": len(events),
+            "modes": modes,
+            "ladder": arpeggio_mod.ladder_inventory(),
         }
     if spec["stereo"]["width"] > 0.0 or spec.get("spine"):
         planned["stereo"] = {
@@ -712,10 +815,17 @@ def produce(spec, dry_run=False, log=None):
     render_model = "facebook/musicgen-small"
     render_wall = 0.0
     if todo:
+        chained = bool(spec.get("chained"))
         job = {"out_dir": str(out_dir), "segments": [
             {"index": i, "prompt": _full_prompt(spec, sections[i]),
              "seconds": sections[i]["seconds"],
-             "seed": spec["seed"] + i, "file": f"seg{i:02d}.wav"}
+             "seed": spec["seed"] + i, "file": f"seg{i:02d}.wav",
+             # The chain: every section after the first continues
+             # from its predecessor's tail. The bridge falls back
+             # to the predecessor's file on disk under the resume
+             # law, and reports honestly when it could not chain.
+             "continue_seconds": (spec["continue_seconds"]
+                                  if chained and i > 0 else 0.0)}
             for i in todo]}
         log(f"rendering {len(todo)} sections via the venv bridge...")
         render = _run_bridge(job, out_dir, log)
@@ -747,7 +857,7 @@ def produce(spec, dry_run=False, log=None):
             gain = median_rms / seg_rms[i]
             gain = min(max(gain, 10 ** (-6 / 20)), 10 ** (6 / 20))
             arrays[i] = arr * gain  # +/-6 dB at most: match, don't force
-    fade = int(CROSSFADE_S * TARGET_SR)
+    fade = _crossfade_samples(spec)
     bed = arrays[0]
     for nxt in arrays[1:]:
         t = np.linspace(0.0, 1.0, fade, dtype=np.float64)
@@ -793,6 +903,11 @@ def produce(spec, dry_run=False, log=None):
             "native_sample_rate": r["sample_rate"],
             "file": r["file"], "wall_seconds": r["wall_seconds"],
             "resumed_from_disk": bool(r.get("resumed")),
+            # The chain, as the bridge reported it: the index this
+            # segment was continued from, or null (first section,
+            # unchained spec, or a render that could not chain).
+            "continued_from": r.get("continued_from"),
+            "continue_seconds": r.get("continue_seconds", 0.0),
             "rms_matched_from": round(seg_rms[i], 5),
         })
 
@@ -841,6 +956,31 @@ def produce(spec, dry_run=False, log=None):
             "engine": "resonance.studio.spine (resonance.synth "
                       "voices + grid arithmetic)",
         }
+
+    # -- (b3) the arpeggio layer: the composed dancer ------------------
+    # When the spec carries an arpeggio block, the house's composed
+    # violin line is rendered over the program's exact grid (the
+    # spine's schedule, swing included) and mixed at its station:
+    # level_db relative to the RMS of everything already standing
+    # (bed + spine). It is laid BEFORE the Sigma ground, like every
+    # musical layer; the ground stays under all of them.
+    arpeggio_report = None
+    if spec.get("arpeggio"):
+        log("composing and striking the arpeggio layer...")
+        layer, arp_rep = arpeggio_mod.render_arpeggio(
+            spec["arpeggio"], spec["spine"], TARGET_SR)
+        assert layer.shape[1] == bed.shape[1]
+        layer_rms = float(np.sqrt(np.mean(layer ** 2)))
+        mixed_dbfs = None
+        if layer_rms > 0:
+            ref_rms = float(np.sqrt(np.mean(bed ** 2)))
+            gain = (ref_rms
+                    * 10 ** (spec["arpeggio"]["level_db"] / 20.0)
+                    / layer_rms)
+            bed = bed + layer * gain
+            mixed_dbfs = round(20.0 * math.log10(layer_rms * gain), 2)
+        arp_rep["mixed_layer_rms_dbfs"] = mixed_dbfs
+        arpeggio_report = arp_rep
 
     # -- (c)+(d) the Sigma ground, laid under the bed ------------------
     log("laying the Sigma ground...")
@@ -921,6 +1061,7 @@ def produce(spec, dry_run=False, log=None):
                     "sample_rate": TARGET_SR, "channels": 2,
                     "bit_depth": 24},
         "spine": spine_report,
+        "arpeggio": arpeggio_report,
         "stereo": stereo_report,
         "sigma": {
             "intended_left_hz": spec["sigma"]["left_hz"],
@@ -969,7 +1110,27 @@ def produce(spec, dry_run=False, log=None):
             "on the resonance.grid arithmetic -- whole bars, exact "
             "samples; the bed was trimmed in LENGTH to that grid, "
             "never tempo-shifted.",
-        ] if spine_report else []),
+        ] if spine_report else []) + ([
+            f"motif: every bed section prompt carries the spec's "
+            f"motif verbatim -- {spec['motif']!r} -- the anti-"
+            f"Frankenstein law: one named figure in every dream the "
+            f"bed dreams.",
+        ] if spec.get("motif") else []) + ([
+            f"crossfades: {spec['crossfade_bars']} whole bars each "
+            f"({_crossfade_samples(spec)} samples) -- seams on bar "
+            f"lines, not the legacy 2 s.",
+        ] if spec.get("crossfade_bars") else []) + ([
+            f"chained bed: every section after the first was "
+            f"generated CONTINUED from the tail of its predecessor "
+            f"({spec['continue_seconds']} s of audio conditioning) -- "
+            f"one performance, section by section; each segment's "
+            f"continued_from stands in the render report.",
+        ] if spec.get("chained") else []) + ([
+            "arpeggio: the composed violin layer is RESONANTIA's "
+            "own composition -- the solfeggio ladder in Fibonacci "
+            "phrases, humanized and orbited; its inventory stands "
+            "in the arpeggio block, its notation in composition.abc.",
+        ] if arpeggio_report else []),
     }
     (out_dir / "manifest.json").write_text(
         json.dumps(manifest, indent=2), encoding="utf-8")

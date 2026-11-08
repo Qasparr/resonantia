@@ -1,0 +1,384 @@
+{
+  "title": "BRIGHTMOOR RACHETS (Instrumental)",
+  "title_status": "working title",
+  "dry_run": false,
+  "created_utc": "2026-11-08T14:33:29.731112+00:00",
+  "pipeline": "resonance.studio v1 (proof-of-concept build)",
+  "spec": {
+    "title": "BRIGHTMOOR RACHETS (Instrumental)",
+    "prompt_base": "detroit bounce hip hop instrumental, f minor, minor-key piano riff, mournful strings, bounce groove feel, melodic content in front, rhythm section soft underneath",
+    "sections": [
+      {
+        "name": "intro",
+        "prompt_suffix": "sparse piano motif only, no drums, dusty vinyl texture",
+        "seconds": 22.0
+      },
+      {
+        "name": "hook1",
+        "prompt_suffix": "full bounce energy, piano and strings riff, big melodic hook",
+        "seconds": 21.0
+      },
+      {
+        "name": "verse1a",
+        "prompt_suffix": "driving bounce groove, piano riff working, strings low",
+        "seconds": 20.0
+      },
+      {
+        "name": "verse1b",
+        "prompt_suffix": "driving bounce groove, piano riff develops, call and response",
+        "seconds": 20.0
+      },
+      {
+        "name": "hook2",
+        "prompt_suffix": "hook returns bigger, piano and strings riff, full melodic hook",
+        "seconds": 21.0
+      },
+      {
+        "name": "feature_a",
+        "prompt_suffix": "open bounce groove, space in the middle, piano and soft strings, room for a vocal to sit",
+        "seconds": 20.0
+      },
+      {
+        "name": "feature_b",
+        "prompt_suffix": "open bounce groove continues, melodic answers in the gaps, airy strings",
+        "seconds": 20.0
+      },
+      {
+        "name": "hook3",
+        "prompt_suffix": "hook returns, piano and strings riff, big melodic hook",
+        "seconds": 21.0
+      },
+      {
+        "name": "verse3a",
+        "prompt_suffix": "driving bounce groove, piano riff, final verse energy",
+        "seconds": 20.0
+      },
+      {
+        "name": "verse3b",
+        "prompt_suffix": "driving bounce groove, riff at its peak, strings swell",
+        "seconds": 20.0
+      },
+      {
+        "name": "hook_out",
+        "prompt_suffix": "final hook, chant energy, piano strings and bounce groove, fading at the end",
+        "seconds": 30.0
+      }
+    ],
+    "seed": 93,
+    "sigma": {
+      "left_hz": 200.0,
+      "right_hz": 213.0,
+      "gain_db": -28.0
+    },
+    "master": {
+      "target_lufs": -14.0,
+      "ceiling_dbtp": -1.0
+    },
+    "spine": {
+      "bpm": 103.0,
+      "swing": 0.12,
+      "root_midi": 29,
+      "beats_per_bar": 4,
+      "sections": [
+        {
+          "name": "intro",
+          "bars": 8,
+          "density": "sparse"
+        },
+        {
+          "name": "hook",
+          "bars": 8,
+          "density": "full"
+        },
+        {
+          "name": "verse1",
+          "bars": 16,
+          "density": "driving"
+        },
+        {
+          "name": "hook",
+          "bars": 8,
+          "density": "full"
+        },
+        {
+          "name": "feature",
+          "bars": 16,
+          "density": "open"
+        },
+        {
+          "name": "hook",
+          "bars": 8,
+          "density": "full"
+        },
+        {
+          "name": "verse3",
+          "bars": 16,
+          "density": "driving"
+        },
+        {
+          "name": "hook_out",
+          "bars": 10,
+          "density": "full"
+        }
+      ]
+    },
+    "out_dir": "/home/hatch/workspace/resonance/studio-runs/brightmoor-rachets-v2",
+    "stereo": {
+      "width": 1.0
+    }
+  },
+  "sections": [
+    {
+      "name": "intro",
+      "prompt": "detroit bounce hip hop instrumental, f minor, minor-key piano riff, mournful strings, bounce groove feel, melodic content in front, rhythm section soft underneath, sparse piano motif only, no drums, dusty vinyl texture",
+      "seed": 93,
+      "seconds": 22.0,
+      "native_sample_rate": 32000,
+      "file": "seg00.wav",
+      "wall_seconds": null,
+      "resumed_from_disk": true,
+      "rms_matched_from": 0.12607
+    },
+    {
+      "name": "hook1",
+      "prompt": "detroit bounce hip hop instrumental, f minor, minor-key piano riff, mournful strings, bounce groove feel, melodic content in front, rhythm section soft underneath, full bounce energy, piano and strings riff, big melodic hook",
+      "seed": 94,
+      "seconds": 21.0,
+      "native_sample_rate": 32000,
+      "file": "seg01.wav",
+      "wall_seconds": null,
+      "resumed_from_disk": true,
+      "rms_matched_from": 0.18469
+    },
+    {
+      "name": "verse1a",
+      "prompt": "detroit bounce hip hop instrumental, f minor, minor-key piano riff, mournful strings, bounce groove feel, melodic content in front, rhythm section soft underneath, driving bounce groove, piano riff working, strings low",
+      "seed": 95,
+      "seconds": 20.0,
+      "native_sample_rate": 32000,
+      "file": "seg02.wav",
+      "wall_seconds": null,
+      "resumed_from_disk": true,
+      "rms_matched_from": 0.14219
+    },
+    {
+      "name": "verse1b",
+      "prompt": "detroit bounce hip hop instrumental, f minor, minor-key piano riff, mournful strings, bounce groove feel, melodic content in front, rhythm section soft underneath, driving bounce groove, piano riff develops, call and response",
+      "seed": 96,
+      "seconds": 20.0,
+      "native_sample_rate": 32000,
+      "file": "seg03.wav",
+      "wall_seconds": null,
+      "resumed_from_disk": true,
+      "rms_matched_from": 0.15828
+    },
+    {
+      "name": "hook2",
+      "prompt": "detroit bounce hip hop instrumental, f minor, minor-key piano riff, mournful strings, bounce groove feel, melodic content in front, rhythm section soft underneath, hook returns bigger, piano and strings riff, full melodic hook",
+      "seed": 97,
+      "seconds": 21.0,
+      "native_sample_rate": 32000,
+      "file": "seg04.wav",
+      "wall_seconds": null,
+      "resumed_from_disk": true,
+      "rms_matched_from": 0.12729
+    },
+    {
+      "name": "feature_a",
+      "prompt": "detroit bounce hip hop instrumental, f minor, minor-key piano riff, mournful strings, bounce groove feel, melodic content in front, rhythm section soft underneath, open bounce groove, space in the middle, piano and soft strings, room for a vocal to sit",
+      "seed": 98,
+      "seconds": 20.0,
+      "native_sample_rate": 32000,
+      "file": "seg05.wav",
+      "wall_seconds": null,
+      "resumed_from_disk": true,
+      "rms_matched_from": 0.0701
+    },
+    {
+      "name": "feature_b",
+      "prompt": "detroit bounce hip hop instrumental, f minor, minor-key piano riff, mournful strings, bounce groove feel, melodic content in front, rhythm section soft underneath, open bounce groove continues, melodic answers in the gaps, airy strings",
+      "seed": 99,
+      "seconds": 20.0,
+      "native_sample_rate": 32000,
+      "file": "seg06.wav",
+      "wall_seconds": null,
+      "resumed_from_disk": true,
+      "rms_matched_from": 0.10094
+    },
+    {
+      "name": "hook3",
+      "prompt": "detroit bounce hip hop instrumental, f minor, minor-key piano riff, mournful strings, bounce groove feel, melodic content in front, rhythm section soft underneath, hook returns, piano and strings riff, big melodic hook",
+      "seed": 100,
+      "seconds": 21.0,
+      "native_sample_rate": 32000,
+      "file": "seg07.wav",
+      "wall_seconds": null,
+      "resumed_from_disk": true,
+      "rms_matched_from": 0.14142
+    },
+    {
+      "name": "verse3a",
+      "prompt": "detroit bounce hip hop instrumental, f minor, minor-key piano riff, mournful strings, bounce groove feel, melodic content in front, rhythm section soft underneath, driving bounce groove, piano riff, final verse energy",
+      "seed": 101,
+      "seconds": 20.0,
+      "native_sample_rate": 32000,
+      "file": "seg08.wav",
+      "wall_seconds": null,
+      "resumed_from_disk": true,
+      "rms_matched_from": 0.07832
+    },
+    {
+      "name": "verse3b",
+      "prompt": "detroit bounce hip hop instrumental, f minor, minor-key piano riff, mournful strings, bounce groove feel, melodic content in front, rhythm section soft underneath, driving bounce groove, riff at its peak, strings swell",
+      "seed": 102,
+      "seconds": 20.0,
+      "native_sample_rate": 32000,
+      "file": "seg09.wav",
+      "wall_seconds": null,
+      "resumed_from_disk": true,
+      "rms_matched_from": 0.1279
+    },
+    {
+      "name": "hook_out",
+      "prompt": "detroit bounce hip hop instrumental, f minor, minor-key piano riff, mournful strings, bounce groove feel, melodic content in front, rhythm section soft underneath, final hook, chant energy, piano strings and bounce groove, fading at the end",
+      "seed": 103,
+      "seconds": 30.0,
+      "native_sample_rate": 32000,
+      "file": "seg10.wav",
+      "wall_seconds": null,
+      "resumed_from_disk": true,
+      "rms_matched_from": 0.10399
+    }
+  ],
+  "render": {
+    "model": "facebook/musicgen-small",
+    "wall_seconds_this_run": 0.0,
+    "resumed_segments": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "rendered_seconds_total": 235.0
+  },
+  "program": {
+    "seconds": 209.709,
+    "sample_rate": 48000,
+    "channels": 2,
+    "bit_depth": 24
+  },
+  "spine": {
+    "bpm": 103.0,
+    "swing": 0.12,
+    "root_midi": 29,
+    "bars_scheduled": 90,
+    "bars_used": 90,
+    "exact_samples": 10066019,
+    "bed_trimmed_to_grid": true,
+    "sections": [
+      {
+        "name": "intro",
+        "bars": 8,
+        "density": "sparse"
+      },
+      {
+        "name": "hook",
+        "bars": 8,
+        "density": "full"
+      },
+      {
+        "name": "verse1",
+        "bars": 16,
+        "density": "driving"
+      },
+      {
+        "name": "hook",
+        "bars": 8,
+        "density": "full"
+      },
+      {
+        "name": "feature",
+        "bars": 16,
+        "density": "open"
+      },
+      {
+        "name": "hook",
+        "bars": 8,
+        "density": "full"
+      },
+      {
+        "name": "verse3",
+        "bars": 16,
+        "density": "driving"
+      },
+      {
+        "name": "hook_out",
+        "bars": 10,
+        "density": "full"
+      }
+    ],
+    "engine": "resonance.studio.spine (resonance.synth voices + grid arithmetic)"
+  },
+  "stereo": {
+    "bed_width": 1.0,
+    "spine_panned_by_role": true,
+    "low_cut_hz": 180.0,
+    "bed_correlation_before": 1.0,
+    "bed_correlation_after": 0.9057,
+    "bed_low_band_correlation_after": 1.0,
+    "master_correlation": 0.9527,
+    "master_side_rms_dbfs": -32.02
+  },
+  "sigma": {
+    "intended_left_hz": 200.0,
+    "intended_right_hz": 213.0,
+    "measured_left_hz": 200.0,
+    "measured_right_hz": 213.0,
+    "measured_separation_hz": 13.0,
+    "gain_db": -28.0,
+    "gain_reference": "relative to the bed's RMS level",
+    "engine": "resonance.binaural.generator.binaural_beat"
+  },
+  "master": {
+    "lufs_before": -14.0,
+    "gain_applied_db": 0.0,
+    "trim_db": -1.01,
+    "lufs_after": -15.02,
+    "sample_peak_db": -2.01,
+    "true_peak_dbtp": -1.02,
+    "ceiling_overrode_loudness": true,
+    "target_lufs": -14.0,
+    "ceiling_dbtp": -1.0
+  },
+  "files": {
+    "master_wav": {
+      "path": "/home/hatch/workspace/resonance/studio-runs/brightmoor-rachets-v2/master.wav",
+      "bytes": 60396158
+    },
+    "preview_mp3": {
+      "path": "/home/hatch/workspace/resonance/studio-runs/brightmoor-rachets-v2/preview.mp3",
+      "bytes": 8390445
+    },
+    "sigma_wav": {
+      "path": "/home/hatch/workspace/resonance/studio-runs/brightmoor-rachets-v2/sigma.wav",
+      "bytes": 60396158
+    },
+    "spec_json": "/home/hatch/workspace/resonance/studio-runs/brightmoor-rachets-v2/spec.json",
+    "render_log": "/home/hatch/workspace/resonance/studio-runs/brightmoor-rachets-v2/render.log"
+  },
+  "wall_seconds_total": 113.5,
+  "notes": [
+    "loudness is K-weighted integrated, UNGATED (BS.1770 gating omitted in the proof build, stated not hidden).",
+    "section levels RMS-matched to the median section, clamped to +/-6 dB, before crossfading.",
+    "2 s tail fade + 5 ms head fade applied before mastering.",
+    "stereo law: musicgen-small renders mono, and the stitched bed starts dual-mono; the Stereo Law answers in three parts -- the spine is panned by role (kick and 808 centered, hats and rim wide), the bed is widened by quadrature side synthesis above 180 Hz with the mid preserved exactly and the lows left fully mono, and the Sigma layer is never processed. The widths are measured in the stereo block, not claimed.",
+    "spine: the rhythmic spine is RESONANTIA's own synthesis on the resonance.grid arithmetic -- whole bars, exact samples; the bed was trimmed in LENGTH to that grid, never tempo-shifted."
+  ]
+}

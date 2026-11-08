@@ -1,0 +1,79 @@
+X:1
+T:BRIGHTMOOR RACHETS (Instrumental) v3 -- ONE BODY: the house layer, notated
+C:Johnathan 'Qasparr' Monroe, ARR, All Rights Reserved, Without Prejudice
+R:Detroit bounce, 137 BPM, F minor
+M:4/4
+L:1/16
+K:Fmin
+%
+% WHAT THIS SHEET IS -- AND IS NOT (the founder's rule, kept):
+% This notation covers EXACTLY what the house engine composed
+% and struck: the rhythmic spine (resonance.studio.spine),
+% the composed violin arpeggio (resonance.studio.arpeggio),
+% and the Sigma binaural ground (resonance.binaural). The
+% MusicGen bed is NOT transcribed here: its transcription is
+% a separate production, still owed, and no sheet for it has
+% been fabricated. What the bed WAS told, in every section,
+% stands below as the motif: the same repeating four-note F minor piano motif (F, A-flat, C, A-flat)
+%
+% THE GRID: 137 BPM, 48 kHz. One bar = 84,087.59 samples of float truth;
+% the program is bars_to_samples(120) = 10,090,511 samples = 210.219 s, one rounding at
+% the total. Swing 0.12 on spine and dancer alike. Stitch
+% crossfades are 2 WHOLE BARS each, on bar lines.
+%
+% SECTION CHART (spine truth; modes = the arpeggio's realization):
+%   intro     bars   1-  8  sparse   arp:statement     0:00.0 - 0:14.0
+%   hook      bars   9- 16  full     arp:runs          0:14.0 - 0:28.0
+%   verse1    bars  17- 32  driving  arp:bariolage     0:28.0 - 0:56.1
+%   hook      bars  33- 40  full     arp:runs          0:56.1 - 1:10.1
+%   feature   bars  41- 56  open     arp:runs          1:10.1 - 1:38.1
+%   hook      bars  57- 64  full     arp:runs          1:38.1 - 1:52.1
+%   verse2    bars  65- 80  driving  arp:bariolage     1:52.1 - 2:20.1
+%   hook      bars  81- 88  full     arp:runs          2:20.1 - 2:34.2
+%   verse3    bars  89-104  driving  arp:bariolage16   2:34.2 - 3:02.2
+%   hook_out  bars 105-112  full     arp:runs          3:02.2 - 3:16.2
+%   outro     bars 113-120  sparse   arp:statement_fade 3:16.2 - 3:30.2
+%
+% DRUM PATTERNS -- one bar of 16 steps per density (see spine.py):
+% FULL (hook): kick 1 . . . . . x . 1 . x . . . x . ; clap 5,13;
+%   closed hats on the 8ths, open hat step 15 odd bars; 808 1(6) 7(2) 9(6).
+% DRIVING (verse): kick 1, 9, 11 (ghost 16 odd bars); snare 5,13;
+%   hats all 16 steps; 808 1(4) 4(1) 7(2) 9(4) 11(2) 13(3).
+% OPEN (feature): kick 1, 9; snare 5,13; hats on 8ths; 808 1(8) 9(6) long.
+% SPARSE (intro/outro): kick 1; hats 1, 9 (5, 13 from bar 3); 808 1(12) held.
+% FILL (last bar of full/driving): snare walks 13-16, .5/.65/.8/1.0.
+% THE 808 MOVEMENT: F - Db - Ab - Eb (i - VI - III - VII), roots
+% MIDI 29 / 37 / 32 / 39, restarting at the tonic each section.
+F,,4|Db,4|Ab,,4|Eb,4|]
+%
+% THE ARPEGGIO -- the dancer. Composed from the SOLFEGGIO LADDER,
+% played at its equal-tempered staff approximations; each carrier's
+% cents offset from its staff pitch is stated, never smoothed:
+%   UT      396 Hz -> G   (MIDI 67, 392.0 Hz) +17.6 cents
+%   RE      417 Hz -> ^G  (MIDI 68, 415.3 Hz) +7.1 cents
+%   MI      528 Hz -> c   (MIDI 72, 523.25 Hz) +15.6 cents
+%   FA      639 Hz -> _e  (MIDI 75, 622.25 Hz) +46.0 cents
+%   SOL     741 Hz -> ^f  (MIDI 78, 739.99 Hz) +2.4 cents
+%   LA      852 Hz -> ^g  (MIDI 80, 830.61 Hz) +44.0 cents
+% Phrasing is Fibonacci -- phrase lengths 1, 1, 2, 3, 5, 8 climbing
+% the ladder cyclically. THE FIGURE (one cell, 20 notes, L:1/16):
+G ^G c _e ^f ^g G ^G c _e ^f ^g G ^G c _e ^f ^g G ^G |
+% Phrase map: [1] G | [1] ^G | [2] c _e | [3] ^f ^g G |
+%   [5] ^G c _e ^f ^g | [8] G ^G c _e ^f ^g G ^G
+% REALIZATIONS: RUNS = the cell tiled at 16ths, phrase heads
+% accented. BARIOLAGE = at 8ths, cell notes alternate with the
+% pedal c (MI, the open string). One full bariolage cell (L:1/8):
+G c ^G c c c _e c ^f c ^g c G c ^G c c c _e c ^f c ^g c G c ^G c c c _e c ^f c ^g c G c ^G c |
+% BARIOLAGE16 = the same alternation at 16ths (verse3, the biggest
+% chair). STATEMENT = the figure at 8th spacing, phrase-final notes
+% held two extra steps, passes repeated; the outro's statement fades.
+% TOTAL ARPEGGIO NOTES AS STRUCK: 1504 (per section: intro=48, hook=128, verse1=128, hook=128, feature=256, hook=128, verse2=128, hook=128, verse3=256, hook_out=128, outro=48).
+% The contour is humanized (micro-drift + vibrato, Tools Wing) and
+% the layer orbits at 0.03 Hz, mixed at -9.0 dB under the standing mix's RMS.
+%
+% THE SIGMA GROUND: carriers intended 200.0 / 213.0 Hz, MEASURED on the struck sigma.wav:
+% 200.0 / 213.0 Hz, separation 13.0 Hz, at -28.0 dB under the bed's RMS.
+% MASTER: -15.02 LUFS after (target -14.0), true peak -1.02 dBTP, ceiling overrode loudness: True.
+% STEREO LAW: bed correlation 1.0 -> 0.9364, low band 1.0, master correlation 0.8865, side -28.3 dBFS.
+%
+% 93 -- Live, Love, and let Love, Live.

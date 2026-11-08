@@ -1,0 +1,15 @@
+{"event": "model_ready", "wall_s": 11.9, "sources": ["drums", "bass", "other", "vocals"]}
+{"event": "job_done", "src": "original.wav", "prefix": "p1", "sr": 44100, "wall_s": 1341.3}
+Traceback (most recent call last):
+  File "/home/hatch/workspace/resonance/reference/anvil-crown-instrumental/work/separate_pass.py", line 67, in <module>
+    main()
+  File "/home/hatch/workspace/resonance/reference/anvil-crown-instrumental/work/separate_pass.py", line 51, in main
+    origin, stems = sep.separate_audio_file(str(src))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hatch/workspace/stem-libs/demucs/api.py", line 304, in separate_audio_file
+    return self.separate_tensor(self._load_audio(file), self.samplerate)
+                                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hatch/workspace/stem-libs/demucs/api.py", line 233, in _load_audio
+    raise LoadAudioError(
+demucs.api.LoadAudioError: When trying to load using sphn, got the following error: "accomp1.wav": No such file or directory (os error 2)
+When trying to load using ffmpeg, got the following error: FFmpeg could not read the file.

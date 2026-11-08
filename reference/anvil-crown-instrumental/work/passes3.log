@@ -1,0 +1,4 @@
+{"event": "model_ready", "wall_s": 13.1, "sources": ["drums", "bass", "other", "vocals"]}
+{"event": "job_done", "src": "accomp1.wav", "prefix": "p2", "sr": 44100, "wall_s": 1386.9}
+{"event": "job_done", "src": "p2_accomp.wav", "prefix": "p3", "sr": 44100, "wall_s": 1349.3}
+{"event": "all_done", "total_wall_s": 2749.5}

@@ -1,0 +1,16 @@
+[studio] section 0 (intro) already rendered -- resuming past it
+[studio] section 1 (hook1) already rendered -- resuming past it
+[studio] section 2 (verse1a) already rendered -- resuming past it
+[studio] section 3 (verse1b) already rendered -- resuming past it
+[studio] section 4 (hook2) already rendered -- resuming past it
+[studio] section 5 (feature_a) already rendered -- resuming past it
+[studio] section 6 (feature_b) already rendered -- resuming past it
+[studio] section 7 (hook3) already rendered -- resuming past it
+[studio] section 8 (verse3a) already rendered -- resuming past it
+[studio] section 9 (verse3b) already rendered -- resuming past it
+[studio] section 10 (hook_out) already rendered -- resuming past it
+[studio] resampling and stitching...
+[studio] laying the spine: 90 bars at 103.0 BPM, 10066019 samples exactly...
+[studio] laying the Sigma ground...
+[studio] mastering...
+[studio] done in 84.49s -> /home/hatch/workspace/resonance/studio-runs/brightmoor-rachets/master.wav

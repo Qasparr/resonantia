@@ -1,0 +1,21 @@
+[transformers] Model config: pad_token_id must be `None` or an integer within the vocabulary (between 0 and 2047), got 2048. This may result in unexpected behavior.
+[transformers] Model config: bos_token_id must be `None` or an integer within the vocabulary (between 0 and 2047), got 2048. This may result in unexpected behavior.
+Loading weights:   0%|          | 0/611 [00:00<?, ?it/s]Loading weights:  14%|█▎        | 84/611 [00:00<00:00, 733.19it/s]Loading weights:  26%|██▌       | 158/611 [00:00<00:01, 412.14it/s]Loading weights:  38%|███▊      | 230/611 [00:00<00:00, 466.15it/s]Loading weights:  46%|████▌     | 282/611 [00:00<00:00, 391.15it/s]Loading weights:  53%|█████▎    | 325/611 [00:00<00:00, 380.83it/s]Loading weights:  60%|█████▉    | 366/611 [00:00<00:00, 375.60it/s]Loading weights:  66%|██████▋   | 405/611 [00:01<00:00, 301.40it/s]Loading weights:  72%|███████▏  | 438/611 [00:01<00:00, 218.35it/s]Loading weights:  84%|████████▍ | 514/611 [00:01<00:00, 298.83it/s]Loading weights:  90%|█████████ | 550/611 [00:01<00:00, 287.39it/s]Loading weights:  95%|█████████▌| 583/611 [00:01<00:00, 204.15it/s]Loading weights: 100%|██████████| 611/611 [00:02<00:00, 295.47it/s]
+[render_musicgen] model loaded in 4s
+[render_musicgen] segment 0: 17.5s rendered in 624s -> /home/hatch/workspace/resonance/studio-runs/brightmoor-rachets-v3/seg00.wav
+[render_musicgen] segment 1: 17.5s rendered in 626s -> /home/hatch/workspace/resonance/studio-runs/brightmoor-rachets-v3/seg01.wav (continued from 0)
+[render_musicgen] segment 2: 17.5s rendered in 2300s -> /home/hatch/workspace/resonance/studio-runs/brightmoor-rachets-v3/seg02.wav (continued from 1)
+[render_musicgen] segment 3: 17.5s rendered in 4416s -> /home/hatch/workspace/resonance/studio-runs/brightmoor-rachets-v3/seg03.wav (continued from 2)
+[render_musicgen] segment 4: 17.5s rendered in 1921s -> /home/hatch/workspace/resonance/studio-runs/brightmoor-rachets-v3/seg04.wav (continued from 3)
+[render_musicgen] segment 5: 17.5s rendered in 564s -> /home/hatch/workspace/resonance/studio-runs/brightmoor-rachets-v3/seg05.wav (continued from 4)
+[render_musicgen] segment 6: 17.5s rendered in 563s -> /home/hatch/workspace/resonance/studio-runs/brightmoor-rachets-v3/seg06.wav (continued from 5)
+[render_musicgen] segment 7: 17.5s rendered in 576s -> /home/hatch/workspace/resonance/studio-runs/brightmoor-rachets-v3/seg07.wav (continued from 6)
+[render_musicgen] segment 8: 17.5s rendered in 560s -> /home/hatch/workspace/resonance/studio-runs/brightmoor-rachets-v3/seg08.wav (continued from 7)
+[render_musicgen] segment 9: 17.5s rendered in 568s -> /home/hatch/workspace/resonance/studio-runs/brightmoor-rachets-v3/seg09.wav (continued from 8)
+[render_musicgen] segment 10: 17.5s rendered in 561s -> /home/hatch/workspace/resonance/studio-runs/brightmoor-rachets-v3/seg10.wav (continued from 9)
+[render_musicgen] segment 11: 17.5s rendered in 514s -> /home/hatch/workspace/resonance/studio-runs/brightmoor-rachets-v3/seg11.wav (continued from 10)
+[render_musicgen] segment 12: 17.5s rendered in 525s -> /home/hatch/workspace/resonance/studio-runs/brightmoor-rachets-v3/seg12.wav (continued from 11)
+[render_musicgen] segment 13: 17.5s rendered in 522s -> /home/hatch/workspace/resonance/studio-runs/brightmoor-rachets-v3/seg13.wav (continued from 12)
+[render_musicgen] segment 14: 17.5s rendered in 610s -> /home/hatch/workspace/resonance/studio-runs/brightmoor-rachets-v3/seg14.wav (continued from 13)
+[render_musicgen] finalized /home/hatch/workspace/resonance/studio-runs/brightmoor-rachets-v3/master.wav (60543110 bytes)
+[render_musicgen] finalized /home/hatch/workspace/resonance/studio-runs/brightmoor-rachets-v3/sigma.wav (60543110 bytes)

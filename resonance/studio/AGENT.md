@@ -91,12 +91,16 @@ median, 50–1000 Hz) — `carriers_hz: [left, right]`.
 {
   "title": "string, default 'Untitled' (always a working title)",
   "prompt_base": "string, REQUIRED, non-empty — the song's identity",
+  "motif": "string, optional — ONE named musical idea appended verbatim to EVERY section prompt (see 'The motif' below)",
   "sections": [
     {"name": "string, default 'sectionN'",
      "prompt_suffix": "string, default '' — arrangement for this section",
      "seconds": "number, REQUIRED in effect, 3..30"}
   ],
   "seed": "int, default 93 — section i renders with seed + i",
+  "chained": "bool, optional — render each section CONTINUED from its predecessor's audio tail (see 'The chain' below)",
+  "continue_seconds": "number 2..10, default 5.0 — how much of the predecessor's tail conditions a chained section",
+  "crossfade_bars": "int 1..8, optional — stitch overlaps in whole bars at the spine's tempo instead of the legacy 2 s (spine specs only in effect)",
   "sigma": {
     "left_hz":  "number, default 200.0",
     "right_hz": "number, default 213.0 — must be > left_hz, both 20..1000",
@@ -115,6 +119,13 @@ median, 50–1000 Hz) — `carriers_hz: [left, right]`.
   },
   "stereo": {
     "width": "number, range 0..1 — how far the mono bed is widened. Default: 1.0 when a spine is present, 0.0 otherwise. An explicit value always outranks the default."
+  },
+  "arpeggio": {
+    "level_db":  "number, default -9.0, range -30..0 — the composed violin's station relative to the standing mix's RMS",
+    "orbit_hz":  "number, default 0.03, range 0.005..0.5 — the layer's spatial lap rate (resonance.spatial.orbit)",
+    "strength":  "number, default 1.0, range 0..2 — the pitch humanizer's strength (0 = dead-tempered)",
+    "seed":      "int, optional — the humanizer's seed; default the spec's seed",
+    "mode_overrides": "object, optional — {section_index_as_string: mode} outranking the density map; modes: runs | bariolage | bariolage16 | statement | statement_fade | mute"
   },
   "out_dir": "string, REQUIRED — created if missing"
 }
@@ -140,9 +151,60 @@ Proof No. 1 road, unchanged.
 Rules the validator enforces (violations return a named error):
 `prompt_base` non-empty; `sections` non-empty; every `seconds` in
 3..30; `left_hz < right_hz`; gain/target/ceiling inside their ranges;
-`stereo.width` inside 0..1; `out_dir` present. The full prompt for
-section *i* is `prompt_base + ", " + prompt_suffix` (or
-`prompt_base` alone when the suffix is empty).
+`stereo.width` inside 0..1; `arpeggio` requires `spine`;
+`out_dir` present. The full prompt for section *i* is
+`prompt_base + ", " + prompt_suffix` (or `prompt_base` alone when
+the suffix is empty) — plus the motif, when one is set.
+
+**The chain (optional).** The stronger form of the same cure,
+learned from how Lyria assembles tracks (plan the sections, then
+generate the song as one pass): with `"chained": true`, the bridge
+renders section *i* **conditioned on the last `continue_seconds`
+of section *i−1*'s audio** (MusicGen audio continuation), and the
+file holds only the newly generated seconds. The desk's
+feasibility probe (2026-11-08) measured the difference against a
+same-prompt, same-seed plain control: a direct splice across the
+joint jumped **0.0043** chained vs **0.0746** plain, with a level
+step of **1.3 dB** vs **13.9 dB**. Under the resume law the bridge
+reads a resumed predecessor's file from disk as the conditioning
+source; a section whose predecessor is unavailable renders plain
+and its manifest entry says so (`continued_from: null`). Each
+render report carries `continued_from` / `continue_seconds` per
+segment.
+
+**The motif (optional).** A bed stitched from independently
+generated sections has no memory: Proof No. 2's founder verdict
+named it a *Frankenstein beat* — parts that groove, a whole that
+lurches. The motif is the first cure: one named musical idea (e.g.
+*"the same repeating four-note F minor piano motif (F, A-flat, C,
+A-flat)"*) that the pipeline appends **verbatim to every section
+prompt**, so each generation is told, in identical words, what the
+song's figure is. `"crossfade_bars"` is the cure's other half: on a
+spine production the stitch overlaps become that many **whole
+bars** at the spine's tempo — longer than the legacy 2 s, and
+landing on bar lines instead of mid-bar.
+
+**The arpeggio layer (optional, requires `spine`).** The second
+cure, and the answer to the founder's other count — the Paganini
+element was absent from the proofs; the Sigma ground is a bed of
+tones, not a dancer. When `arpeggio` is present,
+`resonance.studio.arpeggio` composes a violin-voice line from the
+**solfeggio ladder** (UT 396 / RE 417 / MI 528 / FA 639 / SOL 741 /
+LA 852 Hz, played at their equal-tempered staff approximations —
+G4/G#4/C5/Eb5/F#5/G#5 — with each carrier's cents offset documented
+in the manifest), phrased in **Fibonacci lengths 1-1-2-3-5-8** (the
+20-note figure of the Proven Road sheet). Realization follows the
+spine's arrangement: hooks and the feature slot take fast **runs**;
+verses take **bariolage** (the figure alternating with the MI
+pedal; the third verse at 16ths); sparse sections take a slow
+**statement**; the outro's statement fades. The pitch contour is
+humanized by the Tools Wing (`vocal.humanize_contour` — micro-drift
+and vibrato, never a transposition), and the layer is set moving
+with a slow `resonance.spatial` orbit before being mixed at
+`level_db` under the standing mix. The manifest's `arpeggio` block
+carries the note inventory, per-section modes and counts, and the
+layer's measured RMS; `composition.abc` in the run directory
+notates the figure and its realizations.
 
 **The Stereo Law.** MusicGen's bed is born mono — Proof No. 2's
 master measured L/R correlation 0.9984, side energy −46.5 dBFS
@@ -195,6 +257,12 @@ Progress and logs go to stderr only. Key fields:
              "bed_low_band_correlation_after": 1.0,
              "master_correlation": 0.0, "master_side_rms_dbfs": 0.0},
              // null when the Stereo Law does not apply (no spine, width 0)
+  "arpeggio": {"level_db": -9.0, "orbit_hz": 0.03, "total_notes": 0,
+            "sections": [{"name": "...", "mode": "runs", "notes": 0}],
+            "ladder": [{"syllable": "UT", "carrier_hz": 396.0,
+                        "midi": 67, "cents_offset": 17.6}],
+            "mixed_layer_rms_dbfs": 0.0},
+             // null when the spec carries no arpeggio block
   "master": {"lufs_before": 0.0, "lufs_after": -14.0,
              "gain_applied_db": 0.0, "trim_db": 0.0,
              "sample_peak_db": -1.02, "true_peak_dbtp": -1.02,

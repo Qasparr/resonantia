@@ -1,0 +1,62 @@
+{
+  "title": "THE PROVEN ROAD (Pipeline Proof No. 1)",
+  "prompt_base": "dark gritty detroit boom bap hip hop instrumental, deep 808 bass, eerie minor-key piano, dusty vinyl texture, 93 bpm feel",
+  "sections": [
+    {
+      "name": "intro",
+      "prompt_suffix": "sparse piano, no drums",
+      "seconds": 30.0
+    },
+    {
+      "name": "verse1",
+      "prompt_suffix": "full drums and 808",
+      "seconds": 30.0
+    },
+    {
+      "name": "verse2",
+      "prompt_suffix": "full drums and 808, piano riff develops",
+      "seconds": 30.0
+    },
+    {
+      "name": "hook1",
+      "prompt_suffix": "add mournful strings",
+      "seconds": 30.0
+    },
+    {
+      "name": "verse3",
+      "prompt_suffix": "full drums and 808, strings fall away",
+      "seconds": 30.0
+    },
+    {
+      "name": "hook2",
+      "prompt_suffix": "add mournful strings, biggest drums",
+      "seconds": 30.0
+    },
+    {
+      "name": "bridge",
+      "prompt_suffix": "drums stripped, piano and bass only",
+      "seconds": 30.0
+    },
+    {
+      "name": "hook3",
+      "prompt_suffix": "add mournful strings, full drums and 808, final chorus",
+      "seconds": 30.0
+    },
+    {
+      "name": "outro",
+      "prompt_suffix": "piano fading, vinyl crackle",
+      "seconds": 30.0
+    }
+  ],
+  "seed": 93,
+  "sigma": {
+    "left_hz": 200.0,
+    "right_hz": 213.0,
+    "gain_db": -28.0
+  },
+  "master": {
+    "target_lufs": -14.0,
+    "ceiling_dbtp": -1.0
+  },
+  "out_dir": "/home/hatch/workspace/resonance/studio-runs/the-proven-road"
+}
