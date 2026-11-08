@@ -36,8 +36,10 @@ Outputs, all inside your chosen `out_dir`:
 | `render.log` | the venv bridge's stderr (model load, per-section timing) |
 
 Reality notes, stated before you promise anything on this tool's
-behalf: MusicGen-small renders **mono** (the bed is dual-mono; the
-stereo field is carried by the Sigma layer). Generation is **slow on
+behalf: MusicGen-small renders **mono** (the bed starts dual-mono;
+the Stereo Law — spine panned by role, bed widened by band with the
+lows kept mono, Sigma untouched — manufactures the stereo field on
+spine productions; see the spec schema). Generation is **slow on
 CPU** — a 30 s section takes minutes; a full 270 s song is a long
 background job, not an interactive call. Loudness is **ungated**
 integrated (BS.1770 weighting, no -70/-10 gating).
@@ -111,6 +113,9 @@ median, 50–1000 Hz) — `carriers_hz: [left, right]`.
     "sections":  [{"name": "string", "bars": "positive int, REQUIRED",
                    "density": "sparse | driving | full | open"}]
   },
+  "stereo": {
+    "width": "number, range 0..1 — how far the mono bed is widened. Default: 1.0 when a spine is present, 0.0 otherwise. An explicit value always outranks the default."
+  },
   "out_dir": "string, REQUIRED — created if missing"
 }
 ```
@@ -135,9 +140,32 @@ Proof No. 1 road, unchanged.
 Rules the validator enforces (violations return a named error):
 `prompt_base` non-empty; `sections` non-empty; every `seconds` in
 3..30; `left_hz < right_hz`; gain/target/ceiling inside their ranges;
-`out_dir` present. The full prompt for section *i* is
-`prompt_base + ", " + prompt_suffix` (or `prompt_base` alone when the
-suffix is empty).
+`stereo.width` inside 0..1; `out_dir` present. The full prompt for
+section *i* is `prompt_base + ", " + prompt_suffix` (or
+`prompt_base` alone when the suffix is empty).
+
+**The Stereo Law.** MusicGen's bed is born mono — Proof No. 2's
+master measured L/R correlation 0.9984, side energy −46.5 dBFS
+against a −15.5 dBFS mid: a mono record in a stereo coat. The law
+manufactures width honestly, in three parts. (1) **The spine is
+panned by role**: kick and 808 dead center, snare/clap near center
+(never past ±0.15), hats and rimshot alternating wide (±0.45..0.65)
+by pattern position — panning scales channels only, no onset moves
+in time. (2) **The bed is widened by band** (`widen_bed`, driven by
+`stereo.width`): below 180 Hz the bed stays fully mono; above, a
+synthesized side — the mid's own quadrature, scaled by a
+log-frequency ramp reaching 0.75×width at 2 kHz — decorrelates the
+channels. The mid is preserved exactly, so the mono fold-down of a
+widened bed is the original signal sample-for-sample. (3) **The
+Sigma layer is never processed**; its measured carriers stay what
+the FFT finds. A run under the law carries a `stereo` block in its
+manifest with the bed correlations before/after, the low band's
+correlation after, and the master's correlation and side RMS —
+measured, not claimed. The law is default-on for spine productions
+(`stereo.width` 1.0) and default-off on the spine-less road, whose
+dual-mono character stands as it was proved; set `"stereo":
+{"width": 0}` to exempt a spine run, or a positive width to widen a
+spine-less one.
 
 ## Result / manifest schema
 
@@ -161,6 +189,12 @@ Progress and logs go to stderr only. Key fields:
             "measured_left_hz": 200.0, "measured_right_hz": 213.0,
             "measured_separation_hz": 13.0,
             "gain_db": -28.0, "gain_reference": "relative to the bed's RMS"},
+  "stereo": {"bed_width": 1.0, "spine_panned_by_role": true,
+             "low_cut_hz": 180.0, "bed_correlation_before": 1.0,
+             "bed_correlation_after": 0.0,
+             "bed_low_band_correlation_after": 1.0,
+             "master_correlation": 0.0, "master_side_rms_dbfs": 0.0},
+             // null when the Stereo Law does not apply (no spine, width 0)
   "master": {"lufs_before": 0.0, "lufs_after": -14.0,
              "gain_applied_db": 0.0, "trim_db": 0.0,
              "sample_peak_db": -1.02, "true_peak_dbtp": -1.02,

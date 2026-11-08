@@ -20,7 +20,12 @@
 #
 # DOCTRINE: a claim you cannot measure is a wish. This module's whole
 # shape -- spec in, manifest out, every number weighed -- exists so
-# the words "studio grade" are a measurement, not a mood.
+# the words "studio grade" are a measurement, not a mood. The Stereo
+# Law (VIII day of November) rides the same doctrine: MusicGen's bed
+# is born mono, so width is MANUFACTURED honestly -- spine panned by
+# role, bed widened by band with the lows kept mono and the mid
+# preserved exactly, Sigma untouched -- and the correlations are
+# measured into the manifest, never asserted.
 # ---------------------------------------------------------------------
 
 import json
@@ -62,6 +67,16 @@ DEFAULTS = {
     "sigma": {"left_hz": 200.0, "right_hz": 213.0, "gain_db": -28.0},
     "master": {"target_lufs": -14.0, "ceiling_dbtp": -1.0},
 }
+
+# The Stereo Law's bed constants (part 2; part 1 is the spine's
+# pans, part 3 is Sigma left untouched). Below STEREO_LOW_CUT_HZ the
+# bed stays fully mono -- lows are summed by every club system on
+# earth and the 808's throne is not negotiable. The synthesized
+# side's ratio to the mid ramps up in log-frequency and reaches
+# STEREO_MAX_SIDE at STEREO_RAMP_END_HZ, holding above it.
+STEREO_LOW_CUT_HZ = 180.0
+STEREO_RAMP_END_HZ = 2000.0
+STEREO_MAX_SIDE = 0.75
 
 
 # ---------------------------------------------------------------------
@@ -135,6 +150,22 @@ def validate_spec(spec):
         out["spine"] = spine_mod.normalize_spine_spec(spec["spine"])
     else:
         out.pop("spine", None)
+    # The Stereo Law's width: how far the mono bed is widened
+    # (widen_bed). The law defaults ON for spine productions -- a
+    # spined record ships stereo or says why not -- and OFF on the
+    # Proof No. 1 road, whose dual-mono bed stays as it was proved.
+    # An explicit "stereo": {"width": w} always outranks the default.
+    stereo_raw = spec.get("stereo")
+    if stereo_raw is None:
+        width = 1.0 if out.get("spine") else 0.0
+    else:
+        if not isinstance(stereo_raw, dict):
+            raise ValueError("stereo: must be an object")
+        width = float(stereo_raw.get(
+            "width", 1.0 if out.get("spine") else 0.0))
+    if not 0.0 <= width <= 1.0:
+        raise ValueError(f"stereo.width: {width} outside 0..1")
+    out["stereo"] = {"width": width}
     if not spec.get("out_dir"):
         raise ValueError("out_dir: required")
     out["out_dir"] = str(spec["out_dir"])
@@ -415,6 +446,126 @@ def measure_carrier(samples_1d, sr, lo_hz, hi_hz):
 
 
 # ---------------------------------------------------------------------
+# The Stereo Law, part 2: the bed takes its width by band.
+# (Part 1 is the spine's role pans in spine.py; part 3 is that the
+#  Sigma layer is never passed through any of this.)
+# ---------------------------------------------------------------------
+
+def channel_correlation(samples):
+    """Pearson correlation between the channels of a (2, N) signal.
+
+    MECHANISM: the forensic number itself -- Proof No. 2's master
+    read 0.9984, which is a mono record in a stereo coat. Mono or
+    single-channel input reads 1.0 by definition.
+    """
+    x = np.asarray(samples, dtype=np.float64)
+    if x.ndim == 1 or x.shape[0] < 2:
+        return 1.0
+    a = x[0] - float(np.mean(x[0]))
+    b = x[1] - float(np.mean(x[1]))
+    den = float(np.sqrt(np.dot(a, a) * np.dot(b, b)))
+    return float(np.dot(a, b) / den) if den > 0.0 else 1.0
+
+
+def band_correlation(samples, sr, lo_hz, hi_hz):
+    """Channel correlation inside [lo_hz, hi_hz) only.
+
+    MECHANISM: by Parseval, the correlation of the band-limited
+    channels is Re sum(A * conj(B)) / sqrt(sum|A|^2 * sum|B|^2)
+    over the band's rfft bins -- the same number a brick-wall
+    filter and a stopwatch would give, without the filter. The
+    transform runs at a fast length (see _fast_len).
+    """
+    x = np.asarray(samples, dtype=np.float64)
+    if x.ndim == 1 or x.shape[0] < 2:
+        return 1.0
+    n = x.shape[1]
+    n_pad = _fast_len(n)
+    freqs = np.fft.rfftfreq(n_pad, d=1.0 / sr)
+    band = (freqs >= lo_hz) & (freqs < hi_hz)
+    if not np.any(band):
+        return 1.0
+    a = np.fft.rfft(x[0], n=n_pad)[band]
+    b = np.fft.rfft(x[1], n=n_pad)[band]
+    num = float(np.real(np.sum(a * np.conj(b))))
+    den = float(np.sqrt(np.sum(np.abs(a) ** 2)
+                        * np.sum(np.abs(b) ** 2)))
+    return num / den if den > 0.0 else 1.0
+
+
+def side_rms_dbfs(samples):
+    """RMS of the stereo side (L-R)/2, in dBFS.
+
+    MECHANISM: the width you can weigh. Proof No. 2's master read
+    -46.5 dBFS against a -15.5 dBFS mid -- 31 dB of width missing.
+    """
+    x = np.asarray(samples, dtype=np.float64)
+    if x.ndim == 1 or x.shape[0] < 2:
+        return -120.0
+    side = 0.5 * (x[0] - x[1])
+    rms = float(np.sqrt(np.mean(side ** 2))) if side.size else 0.0
+    return 20.0 * math.log10(rms) if rms > 0.0 else -120.0
+
+
+def stereo_side_ratio(freqs, width):
+    """The synthesized side's ratio to the mid, per frequency.
+
+    MECHANISM: 0 below STEREO_LOW_CUT_HZ (lows stay fully mono),
+    then a smoothstep in log-frequency up to width *
+    STEREO_MAX_SIDE at STEREO_RAMP_END_HZ, holding flat above.
+    Smooth, monotone, deterministic -- no per-bin randomness, so a
+    render is reproducible and the correlation bound is provable:
+    at ratio k with a quadrature side, a band's channel correlation
+    is (1 - k^2) / (1 + k^2).
+    """
+    f = np.asarray(freqs, dtype=np.float64)
+    k = np.zeros(f.shape, dtype=np.float64)
+    lo, hi = math.log(STEREO_LOW_CUT_HZ), math.log(STEREO_RAMP_END_HZ)
+    ramp = (f >= STEREO_LOW_CUT_HZ) & (f < STEREO_RAMP_END_HZ)
+    if np.any(ramp):
+        t = (np.log(f[ramp]) - lo) / (hi - lo)
+        k[ramp] = t * t * (3.0 - 2.0 * t)
+    k[f >= STEREO_RAMP_END_HZ] = 1.0
+    return k * (float(width) * STEREO_MAX_SIDE)
+
+
+def widen_bed(bed, sr, width):
+    """Widen a (2, N) bed per the Stereo Law; returns a new array.
+
+    MECHANISM: mid/side surgery. The mid (L+R)/2 is preserved
+    EXACTLY -- the mono fold-down of the widened bed is the
+    original signal, sample for sample, so nothing the bed was
+    proved on changes. The side keeps whatever it honestly had
+    (zero, for MusicGen's dual-mono) and gains a synthesized side:
+    the mid's own quadrature -- every widened frequency rotated
+    +90 degrees -- scaled by stereo_side_ratio. A quadrature side
+    decorrelates without combing any single channel (each channel
+    keeps the mid's per-band energy profile, plus the side's), and
+    below 180 Hz the ratio is 0, so the lows come out L == R,
+    fully mono, untouched. The transform runs at a fast length
+    (see _fast_len) and the result is cut back to the bed's exact
+    length: widening moves no onset in time either.
+    """
+    x = np.asarray(bed, dtype=np.float64)
+    if x.ndim == 1:
+        x = np.stack([x, x])
+    if not 0.0 <= float(width) <= 1.0:
+        raise ValueError(f"widen_bed width: {width} outside 0..1")
+    if width == 0.0:
+        return x.copy()
+    mid = 0.5 * (x[0] + x[1])
+    side = 0.5 * (x[0] - x[1])
+    n = mid.shape[0]
+    n_pad = _fast_len(n)
+    spectrum = np.fft.rfft(mid, n=n_pad)
+    freqs = np.fft.rfftfreq(n_pad, d=1.0 / sr)
+    k = stereo_side_ratio(freqs, width)
+    synth = np.fft.irfft(spectrum * (k * 1j), n=n_pad)[:n]
+    side = side + synth
+    return np.stack([mid + side, mid - side])
+
+
+# ---------------------------------------------------------------------
 # The venv bridge: two small JSON doors in a necessary wall.
 # ---------------------------------------------------------------------
 
@@ -492,6 +643,12 @@ def _dry_run_manifest(spec):
             "total_bars": spine_mod.total_bars(sp),
             "exact_samples": spine_mod.spine_samples(sp, TARGET_SR),
             "sections": sp["sections"],
+        }
+    if spec["stereo"]["width"] > 0.0 or spec.get("spine"):
+        planned["stereo"] = {
+            "bed_width": spec["stereo"]["width"],
+            "spine_panned_by_role": bool(spec.get("spine")),
+            "low_cut_hz": STEREO_LOW_CUT_HZ,
         }
     return {
         "title": spec["title"],
@@ -600,6 +757,34 @@ def produce(spec, dry_run=False, log=None):
         bed = np.concatenate([bed[:, :-fade], overlap, nxt[:, fade:]],
                              axis=1)
     total_seconds = bed.shape[1] / TARGET_SR
+
+    # -- (b1) the Stereo Law, part 2: the bed takes its width ---------
+    # The stitched bed is dual-mono (MusicGen has no stereo to give).
+    # Widening happens HERE -- after the stitch, before the spine --
+    # so the spine's own pans and the Sigma ground are never passed
+    # through it (parts 1 and 3 of the law). The correlations are
+    # measured on the bed itself, before and after, and the low
+    # band is weighed separately: it must come out still mono.
+    stereo_width = spec["stereo"]["width"]
+    stereo_report = None
+    if stereo_width > 0.0 or spec.get("spine"):
+        stereo_report = {
+            "bed_width": stereo_width,
+            "spine_panned_by_role": bool(spec.get("spine")),
+            "low_cut_hz": STEREO_LOW_CUT_HZ,
+        }
+    if stereo_width > 0.0:
+        corr_before = channel_correlation(bed)
+        log(f"widening the bed (Stereo Law, width "
+            f"{stereo_width:.2f})...")
+        bed = widen_bed(bed, TARGET_SR, stereo_width)
+        stereo_report.update({
+            "bed_correlation_before": round(corr_before, 4),
+            "bed_correlation_after": round(channel_correlation(bed), 4),
+            "bed_low_band_correlation_after": round(
+                band_correlation(bed, TARGET_SR, 20.0,
+                                 STEREO_LOW_CUT_HZ), 4),
+        })
     for i, s in enumerate(sections):
         r = render_by_index[i]
         seg_reports.append({
@@ -690,6 +875,11 @@ def produce(spec, dry_run=False, log=None):
     mastered, master_report = master_signal(
         mix, TARGET_SR, spec["master"]["target_lufs"],
         spec["master"]["ceiling_dbtp"])
+    if stereo_report is not None:
+        stereo_report.update({
+            "master_correlation": round(channel_correlation(mastered), 4),
+            "master_side_rms_dbfs": round(side_rms_dbfs(mastered), 2),
+        })
     mastered32 = np.asarray(mastered, dtype=np.float32)
     sigma32 = np.asarray(sigma * scale, dtype=np.float32)
 
@@ -731,6 +921,7 @@ def produce(spec, dry_run=False, log=None):
                     "sample_rate": TARGET_SR, "channels": 2,
                     "bit_depth": 24},
         "spine": spine_report,
+        "stereo": stereo_report,
         "sigma": {
             "intended_left_hz": spec["sigma"]["left_hz"],
             "intended_right_hz": spec["sigma"]["right_hz"],
@@ -755,15 +946,25 @@ def produce(spec, dry_run=False, log=None):
         },
         "wall_seconds_total": round(time.time() - t_start, 2),
         "notes": [
-            "musicgen-small renders mono; the bed is dual-mono by "
-            "construction -- the stereo field is carried by the Sigma "
-            "layer in this proof.",
             "loudness is K-weighted integrated, UNGATED (BS.1770 "
             "gating omitted in the proof build, stated not hidden).",
             "section levels RMS-matched to the median section, "
             "clamped to +/-6 dB, before crossfading.",
             "2 s tail fade + 5 ms head fade applied before mastering.",
         ] + ([
+            "musicgen-small renders mono; the bed is dual-mono by "
+            "construction -- the stereo field is carried by the Sigma "
+            "layer in this proof.",
+        ] if stereo_report is None else [
+            "stereo law: musicgen-small renders mono, and the "
+            "stitched bed starts dual-mono; the Stereo Law answers "
+            "in three parts -- the spine is panned by role (kick "
+            "and 808 centered, hats and rim wide), the bed is "
+            "widened by quadrature side synthesis above 180 Hz with "
+            "the mid preserved exactly and the lows left fully "
+            "mono, and the Sigma layer is never processed. The "
+            "widths are measured in the stereo block, not claimed.",
+        ]) + ([
             "spine: the rhythmic spine is RESONANTIA's own synthesis "
             "on the resonance.grid arithmetic -- whole bars, exact "
             "samples; the bed was trimmed in LENGTH to that grid, "

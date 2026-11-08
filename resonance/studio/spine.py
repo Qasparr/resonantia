@@ -23,6 +23,8 @@
 # and the arithmetic closes to the sample.
 # ---------------------------------------------------------------------
 
+import math
+
 import numpy as np
 
 from resonance import grid
@@ -153,6 +155,67 @@ def _bar_pattern(density, bar_in_section, bars_in_section, fill):
 
 
 # ---------------------------------------------------------------------
+# The Stereo Law, part 1: the spine takes its width by role.
+#
+# MECHANISM: every hit is placed through a constant-power pan law
+# whose gains are scaled by sqrt(2), so a CENTERED hit (pan 0) puts
+# gain exactly 1.0 in each channel -- sample-identical to the
+# pre-law dual-mono placement. A panned hit conserves its total
+# power against that center reference; it only changes WHERE the
+# hit stands, never WHEN: the placement offset `at` is computed
+# before, and independently of, the pan.
+#
+# DOCTRINE (the founder's forensic, 2026-11-08): a record whose
+# channels correlate at 0.9984 is a mono record wearing a stereo
+# coat. The spine is ours hit by hit, so its width costs nothing
+# and is owed: kick and 808 dead center, where bounce keeps its
+# power; snare and clap near center (never past +/-0.15); hats and
+# rimshot alternating wide by pattern position (+/-0.45..0.65).
+# ---------------------------------------------------------------------
+
+def role_pan(voice, step_pos):
+    """The pan (-1..1) the Stereo Law assigns `voice` at `step_pos`.
+
+    MECHANISM: `step_pos` is the hit's global step index across the
+    whole spine, so alternation flows across bar lines instead of
+    resetting per bar. Snare and clap lean opposite ways by beat
+    group and stay inside +/-0.15; closed hats alternate at 0.55,
+    open hats counter-alternate at 0.65, rimshots at 0.45. Kick --
+    and the 808 bass, placed separately at pan 0 -- never move.
+    """
+    if voice == "snare":
+        return 0.10 if (step_pos // 4) % 2 == 0 else -0.10
+    if voice == "clap":
+        return -0.12 if (step_pos // 4) % 2 == 0 else 0.12
+    # Hat phase convention: even steps lean left, odd steps lean
+    # right (open hats counter-lean). The phase is the law's free
+    # choice; this one keeps the off-step hat energy out of the
+    # left channel's way, which the onset tests weigh.
+    if voice == "closed_hat":
+        return -0.55 if step_pos % 2 == 0 else 0.55
+    if voice == "open_hat":
+        return 0.65 if step_pos % 2 == 0 else -0.65
+    if voice == "rimshot":
+        return 0.45 if step_pos % 2 == 0 else -0.45
+    return 0.0  # kick, and anything unlisted: dead center
+
+
+def _pan_gains(pan):
+    """Constant-power (left, right) gains for `pan`, center-true.
+
+    MECHANISM: (cos, sin) of the pan angle, each scaled by sqrt(2)
+    so pan 0 yields (1.0, 1.0) -- the legacy placement. Pan 0 is
+    returned exactly, not through the trig: cos(pi/4) and sin(pi/4)
+    differ in the last ulp, and a centered render must be dual-mono
+    to the bit, as the pre-law render was.
+    """
+    if float(pan) == 0.0:
+        return 1.0, 1.0
+    ang = (float(pan) + 1.0) * math.pi / 4.0
+    return math.sqrt(2.0) * math.cos(ang), math.sqrt(2.0) * math.sin(ang)
+
+
+# ---------------------------------------------------------------------
 # Spec handling: normalize + measure, shared by validation and render.
 # ---------------------------------------------------------------------
 
@@ -232,7 +295,7 @@ def trim_spine_spec(spine, max_bars):
 # The render itself.
 # ---------------------------------------------------------------------
 
-def render_spine(spine, sr=48000):
+def render_spine(spine, sr=48000, pan_fn=None):
     """Render the spine: float64 stereo (2, N), N exact by the grid.
 
     MECHANISM: hits are placed at round(global_step * step_float),
@@ -247,6 +310,13 @@ def render_spine(spine, sr=48000):
     last bar of any record is cut by the record ending. Peak above
     1.0 is normalized to 0.95, the sequencer's own convention; a
     quieter spine keeps its dynamics.
+
+    STEREO LAW: each hit is placed through `pan_fn(voice, step_pos)`
+    (default role_pan) as constant-power gains. The pan scales the
+    placed waveform per channel; the offset `at` is computed first
+    and is pan-independent, so no onset moves in time. A caller may
+    pass pan_fn=lambda voice, pos: 0.0 to recover the exact pre-law
+    dual-mono render (the tests weigh precisely that).
     """
     spine = normalize_spine_spec(spine)
     bpm, sr = spine["bpm"], int(sr)
@@ -255,6 +325,7 @@ def render_spine(spine, sr=48000):
     step_float = grid.samples_per_beat(bpm, sr) / 4.0
     swing_late = spine["swing"] * step_float
     voice_cache = {}
+    pan_fn = role_pan if pan_fn is None else pan_fn
 
     def hit(voice, velocity):
         key = (voice, round(float(velocity), 3))
@@ -263,13 +334,14 @@ def render_spine(spine, sr=48000):
                 velocity=float(velocity), sr=sr).astype(np.float64)
         return voice_cache[key]
 
-    def place(buf, at):
+    def place(buf, at, pan=0.0):
         if at >= n:
             return
         end = min(n, at + buf.shape[0])
         if end > at:
-            mix[0, at:end] += buf[:end - at]
-            mix[1, at:end] += buf[:end - at]
+            gl, gr = _pan_gains(pan)
+            mix[0, at:end] += buf[:end - at] * gl
+            mix[1, at:end] += buf[:end - at] * gr
 
     global_step = 0
     for sec in spine["sections"]:
@@ -284,12 +356,13 @@ def render_spine(spine, sr=48000):
                         continue
                     at = int(round((global_step + step) * step_float
                                    + (swing_late if step % 2 else 0.0)))
-                    place(hit(voice, vel), at)
+                    place(hit(voice, vel), at,
+                          pan_fn(voice, global_step + step))
             for step, length in bass:
                 at = int(round((global_step + step) * step_float
                                + (swing_late if step % 2 else 0.0)))
                 note = bass808(root, length * step_float / sr, sr)
-                place(note, at)
+                place(note, at)  # the 808 never leaves the center
             global_step += STEPS_PER_BAR
     peak = float(np.max(np.abs(mix))) if n else 0.0
     if peak > 1.0:
@@ -303,6 +376,7 @@ __all__ = [
     "bass808",
     "normalize_spine_spec",
     "render_spine",
+    "role_pan",
     "spine_samples",
     "total_bars",
     "trim_spine_spec",
