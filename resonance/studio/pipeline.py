@@ -34,7 +34,9 @@ from pathlib import Path
 
 import numpy as np
 
+from resonance import grid
 from resonance.binaural.generator import binaural_beat
+from resonance.studio import spine as spine_mod
 
 TARGET_SR = 48000            # The master's sample rate, full stop.
 CROSSFADE_S = 2.0            # Equal-power overlap between sections.
@@ -126,6 +128,13 @@ def validate_spec(spec):
     master.update(target_lufs=float(master["target_lufs"]),
                   ceiling_dbtp=float(master["ceiling_dbtp"]))
     out["master"] = master
+    # The optional rhythmic spine: absent is the Proof No. 1 road,
+    # unchanged. Present, it is normalized by its own validator,
+    # whose refusals name their fields the same way.
+    if spec.get("spine") is not None:
+        out["spine"] = spine_mod.normalize_spine_spec(spec["spine"])
+    else:
+        out.pop("spine", None)
     if not spec.get("out_dir"):
         raise ValueError("out_dir: required")
     out["out_dir"] = str(spec["out_dir"])
@@ -196,6 +205,31 @@ def _biquad_response(b, a, freqs, sr):
     return num / den
 
 
+def _fast_len(n):
+    """Smallest m >= n whose prime factors are all in {2, 3, 5, 7}.
+
+    MECHANISM: pocketfft is fast and lean on smooth lengths, but a
+    length with a large prime factor (the 10,066,019-sample spine
+    grid of Pipeline Proof No. 2 is 23 x 437653) falls back to
+    Bluestein's algorithm -- multiple half-gigabyte chirp buffers
+    and minutes of compute, which on a shared box reads as a hang
+    and ends as an OOM kill. Zero-padding a measurement transform
+    up to the next smooth length changes none of the physics (the
+    padded spectrum is the same spectrum, interpolated); it only
+    changes which algorithm carries it. Every measurement FFT in
+    this module therefore runs at a fast length.
+    """
+    m = int(n)
+    while True:
+        r = m
+        for p in (2, 3, 5, 7):
+            while r % p == 0:
+                r //= p
+        if r == 1:
+            return m
+        m += 1
+
+
 def measure_loudness_lufs(samples, sr):
     """K-weighted integrated loudness (LUFS), ungated, stereo or mono.
 
@@ -217,18 +251,31 @@ def measure_loudness_lufs(samples, sr):
     if x.ndim == 1:
         x = x[np.newaxis, :]
     n = x.shape[1]
-    freqs = np.fft.rfftfreq(n, d=1.0 / sr)
-    h = (_biquad_response(_K_PRE_B, _K_PRE_A, freqs, sr)
-         * _biquad_response(_K_RLB_B, _K_RLB_A, freqs, sr))
-    weight = np.abs(h) ** 2
+    # The transform runs at the next fast length (see _fast_len):
+    # zero-padding interpolates the same spectrum onto a grid the
+    # FFT can carry cheaply. Parseval bookkeeping follows the pad:
+    # sum|H*X_pad|^2 / (n_pad * n) is the filtered mean square over
+    # the original n samples. The K-weight response is evaluated in
+    # blocks so no full-length complex temporaries ever exist.
+    n_pad = _fast_len(n)
+    n_bins = n_pad // 2 + 1
+    weight = np.empty(n_bins, dtype=np.float64)
+    block = 1 << 18
+    for lo in range(0, n_bins, block):
+        hi = min(n_bins, lo + block)
+        freqs = np.fft.rfftfreq(n_pad, d=1.0 / sr)[lo:hi]
+        h = (_biquad_response(_K_PRE_B, _K_PRE_A, freqs, sr)
+             * _biquad_response(_K_RLB_B, _K_RLB_A, freqs, sr))
+        weight[lo:hi] = np.abs(h) ** 2
     total = 0.0
     for ch in x:
-        spectrum = np.fft.rfft(ch)
+        spectrum = np.fft.rfft(ch, n=n_pad)
         # Parseval: mean square of the filtered signal from its spectrum.
-        ms = np.sum(weight * np.abs(spectrum) ** 2) / (n * n)
+        ms = np.sum(weight * np.abs(spectrum) ** 2) / (n_pad * n)
         # rfft folds negative frequencies; restore their energy.
-        ms *= 2.0 if n % 2 == 0 else 2.0  # endpoints negligible at song scale
+        ms *= 2.0  # endpoints negligible at song scale
         total += ms
+        del spectrum
     if total <= 0.0:
         return -120.0
     return float(-0.691 + 10.0 * math.log10(total))
@@ -249,10 +296,16 @@ def true_peak_dbtp(samples, sr, oversample=4):
     for ch in x:
         n = ch.shape[0]
         spectrum = np.fft.rfft(ch)
-        padded = np.zeros(spectrum.shape[0] * oversample,
-                          dtype=spectrum.dtype)
+        # The oversampled reconstruction runs at the next fast
+        # length at or beyond n * oversample (see _fast_len): the
+        # interpolation is the same band-limited one, carried by
+        # radix FFTs instead of Bluestein buffers. The amplitude
+        # scale of an irfft over a zero-padded spectrum is the
+        # length ratio, generalized here from `oversample`.
+        up_len = _fast_len(n * oversample)
+        padded = np.zeros(up_len // 2 + 1, dtype=spectrum.dtype)
         padded[:spectrum.shape[0]] = spectrum
-        up = np.fft.irfft(padded, n=n * oversample) * oversample
+        up = np.fft.irfft(padded, n=up_len) * (up_len / n)
         peak = max(peak, float(np.max(np.abs(up))) if up.size else 0.0)
         del spectrum, padded, up
     return 20.0 * math.log10(peak) if peak > 0.0 else -120.0
@@ -353,8 +406,9 @@ def measure_carrier(samples_1d, sr, lo_hz, hi_hz):
     the measured separation, never the intended one.
     """
     x = np.asarray(samples_1d, dtype=np.float64)
-    spectrum = np.abs(np.fft.rfft(x))
-    freqs = np.fft.rfftfreq(x.shape[0], d=1.0 / sr)
+    n_pad = _fast_len(x.shape[0])
+    spectrum = np.abs(np.fft.rfft(x, n=n_pad))
+    freqs = np.fft.rfftfreq(n_pad, d=1.0 / sr)
     band = (freqs >= lo_hz) & (freqs <= hi_hz)
     idx = np.argmax(np.where(band, spectrum, 0.0))
     return float(freqs[idx])
@@ -420,22 +474,31 @@ def _dry_run_manifest(spec):
     """The manifest skeleton for --dry-run: the plan, weighed, unbuilt."""
     total_render = sum(s["seconds"] for s in spec["sections"])
     overlaps = CROSSFADE_S * max(0, len(spec["sections"]) - 1)
+    planned = {
+        "sections": [
+            {"name": s["name"], "prompt": _full_prompt(spec, s),
+             "seed": spec["seed"] + i, "seconds": s["seconds"]}
+            for i, s in enumerate(spec["sections"])],
+        "rendered_seconds_total": total_render,
+        "program_seconds_after_crossfades": total_render - overlaps,
+        "sample_rate": TARGET_SR,
+        "sigma": spec["sigma"],
+        "master": spec["master"],
+    }
+    if spec.get("spine"):
+        sp = spec["spine"]
+        planned["spine"] = {
+            "bpm": sp["bpm"],
+            "total_bars": spine_mod.total_bars(sp),
+            "exact_samples": spine_mod.spine_samples(sp, TARGET_SR),
+            "sections": sp["sections"],
+        }
     return {
         "title": spec["title"],
         "title_status": "working title",
         "dry_run": True,
         "spec": spec,
-        "planned": {
-            "sections": [
-                {"name": s["name"], "prompt": _full_prompt(spec, s),
-                 "seed": spec["seed"] + i, "seconds": s["seconds"]}
-                for i, s in enumerate(spec["sections"])],
-            "rendered_seconds_total": total_render,
-            "program_seconds_after_crossfades": total_render - overlaps,
-            "sample_rate": TARGET_SR,
-            "sigma": spec["sigma"],
-            "master": spec["master"],
-        },
+        "planned": planned,
         "files": {},
         "notes": ["dry run: spec validated, nothing rendered"],
     }
@@ -548,6 +611,52 @@ def produce(spec, dry_run=False, log=None):
             "rms_matched_from": round(seg_rms[i], 5),
         })
 
+    # -- (b2) the rhythmic spine: the house engine owns the clock -----
+    # When the spec carries a spine, the program is trimmed DOWN to
+    # the spine's exact whole-bar length (never stretched, never
+    # tempo-shifted -- a length trim, not surgery) and the spine is
+    # mixed under the bed RMS-matched, so the drums the founder can
+    # hold to a number are OURS, struck on the grid of resonance.grid.
+    spine_report = None
+    if spec.get("spine"):
+        sp = spec["spine"]
+        bar_float = grid.samples_per_bar(sp["bpm"], TARGET_SR,
+                                         sp["beats_per_bar"])
+        bars_wanted = spine_mod.total_bars(sp)
+        bars_fit = int(bed.shape[1] // bar_float)
+        bars_used = min(bars_wanted, bars_fit)
+        if bars_used < 1:
+            raise RuntimeError(
+                "spine: the stitched bed is shorter than one bar at "
+                f"{sp['bpm']} BPM -- cannot lay a spine on it")
+        if bars_used < bars_wanted:
+            sp = spine_mod.trim_spine_spec(sp, bars_used)
+            log(f"spine: bed holds only {bars_used} whole bars; "
+                f"schedule trimmed from {bars_wanted}")
+        spine_len = spine_mod.spine_samples(sp, TARGET_SR)
+        bed_trimmed = bed.shape[1] > spine_len
+        if bed_trimmed:
+            bed = bed[:, :spine_len]
+        total_seconds = bed.shape[1] / TARGET_SR
+        log(f"laying the spine: {bars_used} bars at {sp['bpm']} BPM, "
+            f"{spine_len} samples exactly...")
+        spine_arr = spine_mod.render_spine(sp, TARGET_SR)
+        assert spine_arr.shape[1] == bed.shape[1]
+        spine_rms = float(np.sqrt(np.mean(spine_arr ** 2)))
+        if spine_rms > 0:
+            b_rms = float(np.sqrt(np.mean(bed ** 2)))
+            bed = bed + spine_arr * (b_rms / spine_rms)
+        spine_report = {
+            "bpm": sp["bpm"], "swing": sp["swing"],
+            "root_midi": sp["root_midi"],
+            "bars_scheduled": bars_wanted, "bars_used": bars_used,
+            "exact_samples": spine_len,
+            "bed_trimmed_to_grid": bool(bed_trimmed),
+            "sections": sp["sections"],
+            "engine": "resonance.studio.spine (resonance.synth "
+                      "voices + grid arithmetic)",
+        }
+
     # -- (c)+(d) the Sigma ground, laid under the bed ------------------
     log("laying the Sigma ground...")
     sigma = sigma_layer(spec, total_seconds)
@@ -621,6 +730,7 @@ def produce(spec, dry_run=False, log=None):
         "program": {"seconds": round(total_seconds, 3),
                     "sample_rate": TARGET_SR, "channels": 2,
                     "bit_depth": 24},
+        "spine": spine_report,
         "sigma": {
             "intended_left_hz": spec["sigma"]["left_hz"],
             "intended_right_hz": spec["sigma"]["right_hz"],
@@ -653,7 +763,12 @@ def produce(spec, dry_run=False, log=None):
             "section levels RMS-matched to the median section, "
             "clamped to +/-6 dB, before crossfading.",
             "2 s tail fade + 5 ms head fade applied before mastering.",
-        ],
+        ] + ([
+            "spine: the rhythmic spine is RESONANTIA's own synthesis "
+            "on the resonance.grid arithmetic -- whole bars, exact "
+            "samples; the bed was trimmed in LENGTH to that grid, "
+            "never tempo-shifted.",
+        ] if spine_report else []),
     }
     (out_dir / "manifest.json").write_text(
         json.dumps(manifest, indent=2), encoding="utf-8")

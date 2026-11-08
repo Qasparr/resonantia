@@ -104,9 +104,33 @@ median, 50–1000 Hz) — `carriers_hz: [left, right]`.
     "target_lufs":   "number, default -14.0, range -30..-6",
     "ceiling_dbtp":  "number, default -1.0, range -3..-0.1"
   },
+  "spine": {
+    "bpm":       "number, REQUIRED inside spine, range 40..240",
+    "swing":     "number, default 0.0, range 0..0.6 (off-step delay)",
+    "root_midi": "int, default 29 (F1), range 12..60 — the 808 root",
+    "sections":  [{"name": "string", "bars": "positive int, REQUIRED",
+                   "density": "sparse | driving | full | open"}]
+  },
   "out_dir": "string, REQUIRED — created if missing"
 }
 ```
+
+**The spine (optional).** MusicGen has no clock: Proof No. 1 asked
+for 93 BPM in prompt prose and the bed realized ~62. When a spec
+carries `spine`, the house engine owns the rhythm instead —
+`resonance.studio.spine` renders a drum + 808 spine with
+RESONANTIA's own synthesis (the `resonance.synth` 808 voices and a
+pitched-drop bass following a four-bar i–VI–III–VII cycle from
+`root_midi`), every hit placed on the exact arithmetic of
+`resonance.grid`, section lengths in whole bars, total length
+exactly `bars_to_samples(total_bars)`. The stitched bed is trimmed
+in LENGTH down to that grid (never tempo-shifted — a trim, not
+surgery; if the bed is shorter than the schedule, trailing bars are
+dropped and the manifest says so) and the spine is mixed in
+RMS-matched to the bed, before the Sigma ground and mastering. A
+spine run's manifest carries a `spine` block (bpm, bars scheduled
+vs used, exact samples, sections). Specs without `spine` run the
+Proof No. 1 road, unchanged.
 
 Rules the validator enforces (violations return a named error):
 `prompt_base` non-empty; `sections` non-empty; every `seconds` in
