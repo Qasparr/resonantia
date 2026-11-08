@@ -1,0 +1,1716 @@
+{
+  "stem_audit": {
+    "file": "/home/hatch/workspace/resonance/studio-runs/v4-proof-3/sigma.wav",
+    "samples": 7899429,
+    "seconds": 164.571,
+    "channels": {
+      "left": {
+        "rms_dbfs": -47.58,
+        "peak_dbfs": -44.57,
+        "max_sample_delta": 0.00015473365783691406,
+        "max_sample_delta_at_s": 0.003,
+        "longest_exact_zero_run_samples": 1,
+        "intended_hz": 200.0,
+        "window_rms_median_dbfs": -47.58,
+        "window_rms_min_dbfs": -47.58,
+        "window_rms_max_dbfs": -47.58,
+        "window_fft_peak_median_hz": 200.0,
+        "window_fft_peak_min_hz": 200.0,
+        "window_fft_peak_max_hz": 200.0,
+        "pure_tone_max_delta_theory": 0.00015468785740358778,
+        "delta_ratio_measured_over_theory": 1.0
+      },
+      "right": {
+        "rms_dbfs": -47.58,
+        "peak_dbfs": -44.57,
+        "max_sample_delta": 0.0001647472381591797,
+        "max_sample_delta_at_s": 0.002,
+        "longest_exact_zero_run_samples": 1,
+        "intended_hz": 213.0,
+        "window_rms_median_dbfs": -47.58,
+        "window_rms_min_dbfs": -47.58,
+        "window_rms_max_dbfs": -47.58,
+        "window_fft_peak_median_hz": 213.0,
+        "window_fft_peak_min_hz": 213.0,
+        "window_fft_peak_max_hz": 213.0,
+        "pure_tone_max_delta_theory": 0.00016474193664010975,
+        "delta_ratio_measured_over_theory": 1.0
+      }
+    },
+    "windows": [
+      {
+        "window": 0,
+        "t0_s": 0.0,
+        "t1_s": 1.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 1,
+        "t0_s": 1.0,
+        "t1_s": 2.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 2,
+        "t0_s": 2.0,
+        "t1_s": 3.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 3,
+        "t0_s": 3.0,
+        "t1_s": 4.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 4,
+        "t0_s": 4.0,
+        "t1_s": 5.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 5,
+        "t0_s": 5.0,
+        "t1_s": 6.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 6,
+        "t0_s": 6.0,
+        "t1_s": 7.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 7,
+        "t0_s": 7.0,
+        "t1_s": 8.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 8,
+        "t0_s": 8.0,
+        "t1_s": 9.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 9,
+        "t0_s": 9.0,
+        "t1_s": 10.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 10,
+        "t0_s": 10.0,
+        "t1_s": 11.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 11,
+        "t0_s": 11.0,
+        "t1_s": 12.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 12,
+        "t0_s": 12.0,
+        "t1_s": 13.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 13,
+        "t0_s": 13.0,
+        "t1_s": 14.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 14,
+        "t0_s": 14.0,
+        "t1_s": 15.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 15,
+        "t0_s": 15.0,
+        "t1_s": 16.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 16,
+        "t0_s": 16.0,
+        "t1_s": 17.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 17,
+        "t0_s": 17.0,
+        "t1_s": 18.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 18,
+        "t0_s": 18.0,
+        "t1_s": 19.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 19,
+        "t0_s": 19.0,
+        "t1_s": 20.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 20,
+        "t0_s": 20.0,
+        "t1_s": 21.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 21,
+        "t0_s": 21.0,
+        "t1_s": 22.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 22,
+        "t0_s": 22.0,
+        "t1_s": 23.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 23,
+        "t0_s": 23.0,
+        "t1_s": 24.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 24,
+        "t0_s": 24.0,
+        "t1_s": 25.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 25,
+        "t0_s": 25.0,
+        "t1_s": 26.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 26,
+        "t0_s": 26.0,
+        "t1_s": 27.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 27,
+        "t0_s": 27.0,
+        "t1_s": 28.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 28,
+        "t0_s": 28.0,
+        "t1_s": 29.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 29,
+        "t0_s": 29.0,
+        "t1_s": 30.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 30,
+        "t0_s": 30.0,
+        "t1_s": 31.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 31,
+        "t0_s": 31.0,
+        "t1_s": 32.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 32,
+        "t0_s": 32.0,
+        "t1_s": 33.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 33,
+        "t0_s": 33.0,
+        "t1_s": 34.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 34,
+        "t0_s": 34.0,
+        "t1_s": 35.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 35,
+        "t0_s": 35.0,
+        "t1_s": 36.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 36,
+        "t0_s": 36.0,
+        "t1_s": 37.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 37,
+        "t0_s": 37.0,
+        "t1_s": 38.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 38,
+        "t0_s": 38.0,
+        "t1_s": 39.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 39,
+        "t0_s": 39.0,
+        "t1_s": 40.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 40,
+        "t0_s": 40.0,
+        "t1_s": 41.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 41,
+        "t0_s": 41.0,
+        "t1_s": 42.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 42,
+        "t0_s": 42.0,
+        "t1_s": 43.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 43,
+        "t0_s": 43.0,
+        "t1_s": 44.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 44,
+        "t0_s": 44.0,
+        "t1_s": 45.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 45,
+        "t0_s": 45.0,
+        "t1_s": 46.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 46,
+        "t0_s": 46.0,
+        "t1_s": 47.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 47,
+        "t0_s": 47.0,
+        "t1_s": 48.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 48,
+        "t0_s": 48.0,
+        "t1_s": 49.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 49,
+        "t0_s": 49.0,
+        "t1_s": 50.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 50,
+        "t0_s": 50.0,
+        "t1_s": 51.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 51,
+        "t0_s": 51.0,
+        "t1_s": 52.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 52,
+        "t0_s": 52.0,
+        "t1_s": 53.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 53,
+        "t0_s": 53.0,
+        "t1_s": 54.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 54,
+        "t0_s": 54.0,
+        "t1_s": 55.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 55,
+        "t0_s": 55.0,
+        "t1_s": 56.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 56,
+        "t0_s": 56.0,
+        "t1_s": 57.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 57,
+        "t0_s": 57.0,
+        "t1_s": 58.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 58,
+        "t0_s": 58.0,
+        "t1_s": 59.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 59,
+        "t0_s": 59.0,
+        "t1_s": 60.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 60,
+        "t0_s": 60.0,
+        "t1_s": 61.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 61,
+        "t0_s": 61.0,
+        "t1_s": 62.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 62,
+        "t0_s": 62.0,
+        "t1_s": 63.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 63,
+        "t0_s": 63.0,
+        "t1_s": 64.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 64,
+        "t0_s": 64.0,
+        "t1_s": 65.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 65,
+        "t0_s": 65.0,
+        "t1_s": 66.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 66,
+        "t0_s": 66.0,
+        "t1_s": 67.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 67,
+        "t0_s": 67.0,
+        "t1_s": 68.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 68,
+        "t0_s": 68.0,
+        "t1_s": 69.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 69,
+        "t0_s": 69.0,
+        "t1_s": 70.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 70,
+        "t0_s": 70.0,
+        "t1_s": 71.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 71,
+        "t0_s": 71.0,
+        "t1_s": 72.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 72,
+        "t0_s": 72.0,
+        "t1_s": 73.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 73,
+        "t0_s": 73.0,
+        "t1_s": 74.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 74,
+        "t0_s": 74.0,
+        "t1_s": 75.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 75,
+        "t0_s": 75.0,
+        "t1_s": 76.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 76,
+        "t0_s": 76.0,
+        "t1_s": 77.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 77,
+        "t0_s": 77.0,
+        "t1_s": 78.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 78,
+        "t0_s": 78.0,
+        "t1_s": 79.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 79,
+        "t0_s": 79.0,
+        "t1_s": 80.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 80,
+        "t0_s": 80.0,
+        "t1_s": 81.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 81,
+        "t0_s": 81.0,
+        "t1_s": 82.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 82,
+        "t0_s": 82.0,
+        "t1_s": 83.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 83,
+        "t0_s": 83.0,
+        "t1_s": 84.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 84,
+        "t0_s": 84.0,
+        "t1_s": 85.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 85,
+        "t0_s": 85.0,
+        "t1_s": 86.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 86,
+        "t0_s": 86.0,
+        "t1_s": 87.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 87,
+        "t0_s": 87.0,
+        "t1_s": 88.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 88,
+        "t0_s": 88.0,
+        "t1_s": 89.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 89,
+        "t0_s": 89.0,
+        "t1_s": 90.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 90,
+        "t0_s": 90.0,
+        "t1_s": 91.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 91,
+        "t0_s": 91.0,
+        "t1_s": 92.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 92,
+        "t0_s": 92.0,
+        "t1_s": 93.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 93,
+        "t0_s": 93.0,
+        "t1_s": 94.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 94,
+        "t0_s": 94.0,
+        "t1_s": 95.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 95,
+        "t0_s": 95.0,
+        "t1_s": 96.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 96,
+        "t0_s": 96.0,
+        "t1_s": 97.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 97,
+        "t0_s": 97.0,
+        "t1_s": 98.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 98,
+        "t0_s": 98.0,
+        "t1_s": 99.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 99,
+        "t0_s": 99.0,
+        "t1_s": 100.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 100,
+        "t0_s": 100.0,
+        "t1_s": 101.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 101,
+        "t0_s": 101.0,
+        "t1_s": 102.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 102,
+        "t0_s": 102.0,
+        "t1_s": 103.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 103,
+        "t0_s": 103.0,
+        "t1_s": 104.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 104,
+        "t0_s": 104.0,
+        "t1_s": 105.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 105,
+        "t0_s": 105.0,
+        "t1_s": 106.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 106,
+        "t0_s": 106.0,
+        "t1_s": 107.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 107,
+        "t0_s": 107.0,
+        "t1_s": 108.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 108,
+        "t0_s": 108.0,
+        "t1_s": 109.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 109,
+        "t0_s": 109.0,
+        "t1_s": 110.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 110,
+        "t0_s": 110.0,
+        "t1_s": 111.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 111,
+        "t0_s": 111.0,
+        "t1_s": 112.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 112,
+        "t0_s": 112.0,
+        "t1_s": 113.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 113,
+        "t0_s": 113.0,
+        "t1_s": 114.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 114,
+        "t0_s": 114.0,
+        "t1_s": 115.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 115,
+        "t0_s": 115.0,
+        "t1_s": 116.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 116,
+        "t0_s": 116.0,
+        "t1_s": 117.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 117,
+        "t0_s": 117.0,
+        "t1_s": 118.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 118,
+        "t0_s": 118.0,
+        "t1_s": 119.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 119,
+        "t0_s": 119.0,
+        "t1_s": 120.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 120,
+        "t0_s": 120.0,
+        "t1_s": 121.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 121,
+        "t0_s": 121.0,
+        "t1_s": 122.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 122,
+        "t0_s": 122.0,
+        "t1_s": 123.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 123,
+        "t0_s": 123.0,
+        "t1_s": 124.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 124,
+        "t0_s": 124.0,
+        "t1_s": 125.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 125,
+        "t0_s": 125.0,
+        "t1_s": 126.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 126,
+        "t0_s": 126.0,
+        "t1_s": 127.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 127,
+        "t0_s": 127.0,
+        "t1_s": 128.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 128,
+        "t0_s": 128.0,
+        "t1_s": 129.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 129,
+        "t0_s": 129.0,
+        "t1_s": 130.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 130,
+        "t0_s": 130.0,
+        "t1_s": 131.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 131,
+        "t0_s": 131.0,
+        "t1_s": 132.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 132,
+        "t0_s": 132.0,
+        "t1_s": 133.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 133,
+        "t0_s": 133.0,
+        "t1_s": 134.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 134,
+        "t0_s": 134.0,
+        "t1_s": 135.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 135,
+        "t0_s": 135.0,
+        "t1_s": 136.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 136,
+        "t0_s": 136.0,
+        "t1_s": 137.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 137,
+        "t0_s": 137.0,
+        "t1_s": 138.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 138,
+        "t0_s": 138.0,
+        "t1_s": 139.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 139,
+        "t0_s": 139.0,
+        "t1_s": 140.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 140,
+        "t0_s": 140.0,
+        "t1_s": 141.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 141,
+        "t0_s": 141.0,
+        "t1_s": 142.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 142,
+        "t0_s": 142.0,
+        "t1_s": 143.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 143,
+        "t0_s": 143.0,
+        "t1_s": 144.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 144,
+        "t0_s": 144.0,
+        "t1_s": 145.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 145,
+        "t0_s": 145.0,
+        "t1_s": 146.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 146,
+        "t0_s": 146.0,
+        "t1_s": 147.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 147,
+        "t0_s": 147.0,
+        "t1_s": 148.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 148,
+        "t0_s": 148.0,
+        "t1_s": 149.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 149,
+        "t0_s": 149.0,
+        "t1_s": 150.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 150,
+        "t0_s": 150.0,
+        "t1_s": 151.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 151,
+        "t0_s": 151.0,
+        "t1_s": 152.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 152,
+        "t0_s": 152.0,
+        "t1_s": 153.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 153,
+        "t0_s": 153.0,
+        "t1_s": 154.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 154,
+        "t0_s": 154.0,
+        "t1_s": 155.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 155,
+        "t0_s": 155.0,
+        "t1_s": 156.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 156,
+        "t0_s": 156.0,
+        "t1_s": 157.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 157,
+        "t0_s": 157.0,
+        "t1_s": 158.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 158,
+        "t0_s": 158.0,
+        "t1_s": 159.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 159,
+        "t0_s": 159.0,
+        "t1_s": 160.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 160,
+        "t0_s": 160.0,
+        "t1_s": 161.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 161,
+        "t0_s": 161.0,
+        "t1_s": 162.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 162,
+        "t0_s": 162.0,
+        "t1_s": 163.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 163,
+        "t0_s": 163.0,
+        "t1_s": 164.0,
+        "partial": false,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 200.0,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.0
+      },
+      {
+        "window": 164,
+        "t0_s": 164.0,
+        "t1_s": 164.57,
+        "partial": true,
+        "left_rms_dbfs": -47.58,
+        "left_fft_peak_hz": 199.5,
+        "right_rms_dbfs": -47.58,
+        "right_fft_peak_hz": 213.5
+      }
+    ],
+    "anomalies": [],
+    "verdict": "CLEAN AND CONSTANT \u2014 no dropout, hole, click, or carrier drift found in any 1-second window of either channel"
+  },
+  "sigma_in_v4_master": {
+    "file": "/home/hatch/workspace/resonance/studio-runs/v4-proof-3/master.wav",
+    "channels": {
+      "left": {
+        "master_band_190_220hz_vs_broadband_db": -21.18,
+        "master_rms_dbfs": -17.91,
+        "sigma_stem_rms_vs_master_rms_db": -29.67,
+        "sigma_stem_band_energy_vs_master_broadband_db": -29.68,
+        "sigma_stem_band_share_note": "the stem's 190-220 Hz energy weighed against the master's TOTAL energy; the master's own band ratio above includes the bed's low piano content in the same band",
+        "_stem_band_frac_of_own_energy": -0.0
+      },
+      "right": {
+        "master_band_190_220hz_vs_broadband_db": -20.66,
+        "master_rms_dbfs": -18.44,
+        "sigma_stem_rms_vs_master_rms_db": -29.14,
+        "sigma_stem_band_energy_vs_master_broadband_db": -29.14,
+        "sigma_stem_band_share_note": "the stem's 190-220 Hz energy weighed against the master's TOTAL energy; the master's own band ratio above includes the bed's low piano content in the same band",
+        "_stem_band_frac_of_own_energy": -0.0
+      }
+    }
+  }
+}

@@ -1,0 +1,1987 @@
+{
+  "title": "VELVET HAMMER (Instrumental) \u2014 Studio Proof No. 3 \u2014 VARIANT v4b: NO SIGMA (A/B)",
+  "title_status": "working title",
+  "variant": {
+    "of": "studio-runs/v4-proof-3 \u2014 VELVET HAMMER (Studio Proof No. 3)",
+    "single_difference": "sigma: absent \u2014 the Sigma binaural layer (200.0 Hz L / 213.0 Hz R at \u221228 dB under the bed in v4) is not present in this mix. Every other layer, placement, and law is identical: same bed segments (resumed from disk), same RMS match and stitch, same Stereo Law, same sampled-kit spine, same arpeggio render, same fades, same mastering law (\u221214 LUFS target, \u22121 dBTP ceiling).",
+    "validation": {
+      "reconstruction": "v4 rebuilt through the identical code path WITH its Sigma layer and mastered; compared against the shipped master.wav",
+      "max_abs_sample_diff": 1.1897259355464485e-07,
+      "max_abs_sample_diff_lsb24": 0.998,
+      "corr_reconstructed": 0.7089,
+      "side_reconstructed_dbfs": -26.52,
+      "lufs_reconstructed": -15.49,
+      "true_peak_reconstructed_dbtp": -1.02,
+      "v4_manifest": {
+        "corr": 0.7089,
+        "side_dbfs": -26.52,
+        "lufs": -15.49,
+        "true_peak_dbtp": -1.02
+      }
+    }
+  },
+  "dry_run": false,
+  "created_utc": "2026-11-08T23:24:33Z",
+  "pipeline": "resonance.studio v1 (proof-of-concept build) \u2014 variant struck by produce_no_sigma.py driving the pipeline's own stages",
+  "spec": {
+    "arpeggio": {
+      "level_db": -9.0,
+      "orbit_hz": 0.03,
+      "strength": 1.0,
+      "seed": 777,
+      "mode_overrides": {}
+    },
+    "chained": true,
+    "continue_seconds": 5.0,
+    "crossfade_bars": 2,
+    "master": {
+      "target_lufs": -14.0,
+      "ceiling_dbtp": -1.0
+    },
+    "motif": "the same repeating five-note F minor piano motif (F, A-flat, G, F, E-flat)",
+    "out_dir": "/home/hatch/workspace/resonance/studio-runs/v4b-no-sigma",
+    "prompt_base": "detroit bounce hip hop instrumental, f minor, warm felt piano and analog synth pads, dusty soulful texture, instrumental only, no vocals, melodic content in front, rhythm section soft underneath",
+    "sections": [
+      {
+        "name": "intro",
+        "prompt_suffix": "sparse piano motif only, no drums, dusty texture, felt piano alone",
+        "seconds": 18.0
+      },
+      {
+        "name": "hook1",
+        "prompt_suffix": "full bounce energy, piano and synth pads riff, big melodic hook",
+        "seconds": 18.0
+      },
+      {
+        "name": "verse1a",
+        "prompt_suffix": "driving bounce groove, piano motif working, pads low",
+        "seconds": 18.0
+      },
+      {
+        "name": "verse1b",
+        "prompt_suffix": "driving bounce groove, motif develops, call and response between piano and pads",
+        "seconds": 18.0
+      },
+      {
+        "name": "hook2",
+        "prompt_suffix": "hook returns bigger, piano and pads riff, full melodic hook",
+        "seconds": 18.0
+      },
+      {
+        "name": "feature_a",
+        "prompt_suffix": "open bounce groove, space in the middle, piano and soft pads, room for a vocal to sit",
+        "seconds": 18.0
+      },
+      {
+        "name": "feature_b",
+        "prompt_suffix": "open bounce groove continues, melodic answers in the gaps, airy pads",
+        "seconds": 18.0
+      },
+      {
+        "name": "hook3",
+        "prompt_suffix": "hook returns, piano and pads riff, big melodic hook",
+        "seconds": 18.0
+      },
+      {
+        "name": "verse2a",
+        "prompt_suffix": "driving bounce groove, piano motif working, pads low",
+        "seconds": 18.0
+      },
+      {
+        "name": "verse2b",
+        "prompt_suffix": "driving bounce groove, motif at its peak, pads swell",
+        "seconds": 18.0
+      },
+      {
+        "name": "hook_out",
+        "prompt_suffix": "final hook, chant energy, piano pads and bounce groove",
+        "seconds": 18.0
+      },
+      {
+        "name": "outro",
+        "prompt_suffix": "piano motif fading, pads fall away, dusty texture, ending",
+        "seconds": 18.0
+      }
+    ],
+    "seed": 777,
+    "sigma": {
+      "absent": true,
+      "note": "the Sigma binaural layer is OMITTED from this variant's mix at the founder's order (the A/B experiment, 2026-11-08). v4's spec carried 200.0/213.0 Hz at -28 dB under the bed; those values are recorded here so the one change is fully described, not merely named.",
+      "v4_values": {
+        "left_hz": 200.0,
+        "right_hz": 213.0,
+        "gain_db": -28.0
+      }
+    },
+    "spine": {
+      "bpm": 140.0,
+      "swing": 0.12,
+      "root_midi": 29,
+      "beats_per_bar": 4,
+      "sections": [
+        {
+          "name": "intro",
+          "bars": 8,
+          "density": "sparse"
+        },
+        {
+          "name": "hook",
+          "bars": 8,
+          "density": "full"
+        },
+        {
+          "name": "verse1",
+          "bars": 16,
+          "density": "driving"
+        },
+        {
+          "name": "hook",
+          "bars": 8,
+          "density": "full"
+        },
+        {
+          "name": "feature",
+          "bars": 16,
+          "density": "open"
+        },
+        {
+          "name": "hook",
+          "bars": 8,
+          "density": "full"
+        },
+        {
+          "name": "verse2",
+          "bars": 16,
+          "density": "driving"
+        },
+        {
+          "name": "hook_out",
+          "bars": 8,
+          "density": "full"
+        },
+        {
+          "name": "outro",
+          "bars": 8,
+          "density": "sparse"
+        }
+      ],
+      "samples": {
+        "kick": "/home/hatch/workspace/resonance/studio-runs/v4-proof-3/kit/kick.wav",
+        "snare": "/home/hatch/workspace/resonance/studio-runs/v4-proof-3/kit/snare.wav",
+        "clap": "/home/hatch/workspace/resonance/studio-runs/v4-proof-3/kit/clap.wav",
+        "closed_hat": "/home/hatch/workspace/resonance/studio-runs/v4-proof-3/kit/closed_hat.wav",
+        "open_hat": "/home/hatch/workspace/resonance/studio-runs/v4-proof-3/kit/open_hat.wav",
+        "rimshot": "/home/hatch/workspace/resonance/studio-runs/v4-proof-3/kit/rimshot.wav",
+        "bass808": {
+          "29": "/home/hatch/workspace/resonance/studio-runs/v4-proof-3/kit/bass29.wav",
+          "32": "/home/hatch/workspace/resonance/studio-runs/v4-proof-3/kit/bass32.wav",
+          "37": "/home/hatch/workspace/resonance/studio-runs/v4-proof-3/kit/bass37.wav",
+          "39": "/home/hatch/workspace/resonance/studio-runs/v4-proof-3/kit/bass39.wav"
+        }
+      }
+    },
+    "stereo": {
+      "width": 1.0
+    },
+    "title": "VELVET HAMMER (Instrumental) \u2014 Studio Proof No. 3 \u2014 VARIANT v4b: NO SIGMA (A/B)"
+  },
+  "sections": [
+    {
+      "name": "intro",
+      "prompt": "detroit bounce hip hop instrumental, f minor, warm felt piano and analog synth pads, dusty soulful texture, instrumental only, no vocals, melodic content in front, rhythm section soft underneath, sparse piano motif only, no drums, dusty texture, felt piano alone, the same repeating five-note F minor piano motif (F, A-flat, G, F, E-flat)",
+      "seed": 777,
+      "seconds": 18.0,
+      "native_sample_rate": 32000,
+      "file": "seg00.wav",
+      "wall_seconds": null,
+      "resumed_from_disk": true,
+      "source_run": "studio-runs/v4-proof-3 (segments copied byte-identical; no re-render)",
+      "continued_from": null,
+      "continue_seconds": 0.0,
+      "rms_matched_from": 0.02601
+    },
+    {
+      "name": "hook1",
+      "prompt": "detroit bounce hip hop instrumental, f minor, warm felt piano and analog synth pads, dusty soulful texture, instrumental only, no vocals, melodic content in front, rhythm section soft underneath, full bounce energy, piano and synth pads riff, big melodic hook, the same repeating five-note F minor piano motif (F, A-flat, G, F, E-flat)",
+      "seed": 778,
+      "seconds": 18.0,
+      "native_sample_rate": 32000,
+      "file": "seg01.wav",
+      "wall_seconds": null,
+      "resumed_from_disk": true,
+      "source_run": "studio-runs/v4-proof-3 (segments copied byte-identical; no re-render)",
+      "continued_from": null,
+      "continue_seconds": 0.0,
+      "rms_matched_from": 0.02495
+    },
+    {
+      "name": "verse1a",
+      "prompt": "detroit bounce hip hop instrumental, f minor, warm felt piano and analog synth pads, dusty soulful texture, instrumental only, no vocals, melodic content in front, rhythm section soft underneath, driving bounce groove, piano motif working, pads low, the same repeating five-note F minor piano motif (F, A-flat, G, F, E-flat)",
+      "seed": 779,
+      "seconds": 18.0,
+      "native_sample_rate": 32000,
+      "file": "seg02.wav",
+      "wall_seconds": null,
+      "resumed_from_disk": true,
+      "source_run": "studio-runs/v4-proof-3 (segments copied byte-identical; no re-render)",
+      "continued_from": null,
+      "continue_seconds": 0.0,
+      "rms_matched_from": 0.04817
+    },
+    {
+      "name": "verse1b",
+      "prompt": "detroit bounce hip hop instrumental, f minor, warm felt piano and analog synth pads, dusty soulful texture, instrumental only, no vocals, melodic content in front, rhythm section soft underneath, driving bounce groove, motif develops, call and response between piano and pads, the same repeating five-note F minor piano motif (F, A-flat, G, F, E-flat)",
+      "seed": 780,
+      "seconds": 18.0,
+      "native_sample_rate": 32000,
+      "file": "seg03.wav",
+      "wall_seconds": null,
+      "resumed_from_disk": true,
+      "source_run": "studio-runs/v4-proof-3 (segments copied byte-identical; no re-render)",
+      "continued_from": null,
+      "continue_seconds": 0.0,
+      "rms_matched_from": 0.07127
+    },
+    {
+      "name": "hook2",
+      "prompt": "detroit bounce hip hop instrumental, f minor, warm felt piano and analog synth pads, dusty soulful texture, instrumental only, no vocals, melodic content in front, rhythm section soft underneath, hook returns bigger, piano and pads riff, full melodic hook, the same repeating five-note F minor piano motif (F, A-flat, G, F, E-flat)",
+      "seed": 781,
+      "seconds": 18.0,
+      "native_sample_rate": 32000,
+      "file": "seg04.wav",
+      "wall_seconds": null,
+      "resumed_from_disk": true,
+      "source_run": "studio-runs/v4-proof-3 (segments copied byte-identical; no re-render)",
+      "continued_from": null,
+      "continue_seconds": 0.0,
+      "rms_matched_from": 0.05113
+    },
+    {
+      "name": "feature_a",
+      "prompt": "detroit bounce hip hop instrumental, f minor, warm felt piano and analog synth pads, dusty soulful texture, instrumental only, no vocals, melodic content in front, rhythm section soft underneath, open bounce groove, space in the middle, piano and soft pads, room for a vocal to sit, the same repeating five-note F minor piano motif (F, A-flat, G, F, E-flat)",
+      "seed": 782,
+      "seconds": 18.0,
+      "native_sample_rate": 32000,
+      "file": "seg05.wav",
+      "wall_seconds": null,
+      "resumed_from_disk": true,
+      "source_run": "studio-runs/v4-proof-3 (segments copied byte-identical; no re-render)",
+      "continued_from": 4,
+      "continue_seconds": 5.0,
+      "rms_matched_from": 0.06765
+    },
+    {
+      "name": "feature_b",
+      "prompt": "detroit bounce hip hop instrumental, f minor, warm felt piano and analog synth pads, dusty soulful texture, instrumental only, no vocals, melodic content in front, rhythm section soft underneath, open bounce groove continues, melodic answers in the gaps, airy pads, the same repeating five-note F minor piano motif (F, A-flat, G, F, E-flat)",
+      "seed": 783,
+      "seconds": 18.0,
+      "native_sample_rate": 32000,
+      "file": "seg06.wav",
+      "wall_seconds": null,
+      "resumed_from_disk": true,
+      "source_run": "studio-runs/v4-proof-3 (segments copied byte-identical; no re-render)",
+      "continued_from": 5,
+      "continue_seconds": 5.0,
+      "rms_matched_from": 0.18876
+    },
+    {
+      "name": "hook3",
+      "prompt": "detroit bounce hip hop instrumental, f minor, warm felt piano and analog synth pads, dusty soulful texture, instrumental only, no vocals, melodic content in front, rhythm section soft underneath, hook returns, piano and pads riff, big melodic hook, the same repeating five-note F minor piano motif (F, A-flat, G, F, E-flat)",
+      "seed": 784,
+      "seconds": 18.0,
+      "native_sample_rate": 32000,
+      "file": "seg07.wav",
+      "wall_seconds": null,
+      "resumed_from_disk": true,
+      "source_run": "studio-runs/v4-proof-3 (segments copied byte-identical; no re-render)",
+      "continued_from": 6,
+      "continue_seconds": 5.0,
+      "rms_matched_from": 0.07218
+    },
+    {
+      "name": "verse2a",
+      "prompt": "detroit bounce hip hop instrumental, f minor, warm felt piano and analog synth pads, dusty soulful texture, instrumental only, no vocals, melodic content in front, rhythm section soft underneath, driving bounce groove, piano motif working, pads low, the same repeating five-note F minor piano motif (F, A-flat, G, F, E-flat)",
+      "seed": 785,
+      "seconds": 18.0,
+      "native_sample_rate": 32000,
+      "file": "seg08.wav",
+      "wall_seconds": null,
+      "resumed_from_disk": true,
+      "source_run": "studio-runs/v4-proof-3 (segments copied byte-identical; no re-render)",
+      "continued_from": 7,
+      "continue_seconds": 5.0,
+      "rms_matched_from": 0.03302
+    },
+    {
+      "name": "verse2b",
+      "prompt": "detroit bounce hip hop instrumental, f minor, warm felt piano and analog synth pads, dusty soulful texture, instrumental only, no vocals, melodic content in front, rhythm section soft underneath, driving bounce groove, motif at its peak, pads swell, the same repeating five-note F minor piano motif (F, A-flat, G, F, E-flat)",
+      "seed": 786,
+      "seconds": 18.0,
+      "native_sample_rate": 32000,
+      "file": "seg09.wav",
+      "wall_seconds": null,
+      "resumed_from_disk": true,
+      "source_run": "studio-runs/v4-proof-3 (segments copied byte-identical; no re-render)",
+      "continued_from": 8,
+      "continue_seconds": 5.0,
+      "rms_matched_from": 0.03207
+    },
+    {
+      "name": "hook_out",
+      "prompt": "detroit bounce hip hop instrumental, f minor, warm felt piano and analog synth pads, dusty soulful texture, instrumental only, no vocals, melodic content in front, rhythm section soft underneath, final hook, chant energy, piano pads and bounce groove, the same repeating five-note F minor piano motif (F, A-flat, G, F, E-flat)",
+      "seed": 787,
+      "seconds": 18.0,
+      "native_sample_rate": 32000,
+      "file": "seg10.wav",
+      "wall_seconds": null,
+      "resumed_from_disk": true,
+      "source_run": "studio-runs/v4-proof-3 (segments copied byte-identical; no re-render)",
+      "continued_from": 9,
+      "continue_seconds": 5.0,
+      "rms_matched_from": 0.07835
+    },
+    {
+      "name": "outro",
+      "prompt": "detroit bounce hip hop instrumental, f minor, warm felt piano and analog synth pads, dusty soulful texture, instrumental only, no vocals, melodic content in front, rhythm section soft underneath, piano motif fading, pads fall away, dusty texture, ending, the same repeating five-note F minor piano motif (F, A-flat, G, F, E-flat)",
+      "seed": 788,
+      "seconds": 18.0,
+      "native_sample_rate": 32000,
+      "file": "seg11.wav",
+      "wall_seconds": null,
+      "resumed_from_disk": true,
+      "source_run": "studio-runs/v4-proof-3 (segments copied byte-identical; no re-render)",
+      "continued_from": 10,
+      "continue_seconds": 5.0,
+      "rms_matched_from": 0.09488
+    }
+  ],
+  "render": {
+    "model": "facebook/musicgen-small",
+    "wall_seconds_this_run": 0.0,
+    "resumed_segments": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "rendered_seconds_total": 216.0,
+    "note": "no MusicGen rendering in this run \u2014 all twelve segments resumed from v4-proof-3 on disk under the resume law"
+  },
+  "program": {
+    "seconds": 164.571,
+    "sample_rate": 48000,
+    "channels": 2,
+    "bit_depth": 24
+  },
+  "spine": {
+    "bpm": 140.0,
+    "swing": 0.12,
+    "root_midi": 29,
+    "bars_scheduled": 96,
+    "bars_used": 96,
+    "exact_samples": 7899429,
+    "bed_trimmed_to_grid": true,
+    "sections": [
+      {
+        "name": "intro",
+        "bars": 8,
+        "density": "sparse"
+      },
+      {
+        "name": "hook",
+        "bars": 8,
+        "density": "full"
+      },
+      {
+        "name": "verse1",
+        "bars": 16,
+        "density": "driving"
+      },
+      {
+        "name": "hook",
+        "bars": 8,
+        "density": "full"
+      },
+      {
+        "name": "feature",
+        "bars": 16,
+        "density": "open"
+      },
+      {
+        "name": "hook",
+        "bars": 8,
+        "density": "full"
+      },
+      {
+        "name": "verse2",
+        "bars": 16,
+        "density": "driving"
+      },
+      {
+        "name": "hook_out",
+        "bars": 8,
+        "density": "full"
+      },
+      {
+        "name": "outro",
+        "bars": 8,
+        "density": "sparse"
+      }
+    ],
+    "engine": "resonance.studio.spine as SAMPLER (rendered one-shot kit + grid arithmetic; zero synthesis)",
+    "kit": {
+      "samples": {
+        "kick": "/home/hatch/workspace/resonance/studio-runs/v4-proof-3/kit/kick.wav",
+        "snare": "/home/hatch/workspace/resonance/studio-runs/v4-proof-3/kit/snare.wav",
+        "clap": "/home/hatch/workspace/resonance/studio-runs/v4-proof-3/kit/clap.wav",
+        "closed_hat": "/home/hatch/workspace/resonance/studio-runs/v4-proof-3/kit/closed_hat.wav",
+        "open_hat": "/home/hatch/workspace/resonance/studio-runs/v4-proof-3/kit/open_hat.wav",
+        "rimshot": "/home/hatch/workspace/resonance/studio-runs/v4-proof-3/kit/rimshot.wav",
+        "bass808": {
+          "29": "/home/hatch/workspace/resonance/studio-runs/v4-proof-3/kit/bass29.wav",
+          "32": "/home/hatch/workspace/resonance/studio-runs/v4-proof-3/kit/bass32.wav",
+          "37": "/home/hatch/workspace/resonance/studio-runs/v4-proof-3/kit/bass37.wav",
+          "39": "/home/hatch/workspace/resonance/studio-runs/v4-proof-3/kit/bass39.wav"
+        }
+      },
+      "manifest": {
+        "kit": "rendered one-shot library (RESONANTIA studio kit)",
+        "model": "facebook/musicgen-small",
+        "created_utc": "2026-11-08T21:31:45Z",
+        "sample_rate": 48000,
+        "peak_target": 0.9,
+        "voices": {
+          "kick": {
+            "source_take": "kick_t1.wav",
+            "seed": 5001,
+            "basis": "first hit cut from a looped take",
+            "metrics": {
+              "peak_dbfs": -9.11,
+              "hit_regions": 13,
+              "onset_s": 0.046,
+              "decay_end_s": 0.254,
+              "hit_length_s": 0.208,
+              "next_onset_s": 0.255,
+              "tail_rms_db_rel_peak": -34.41,
+              "tonality": 0.212,
+              "fundamental_hz": null,
+              "cents_from_target": null,
+              "sustain_db": -45.4,
+              "env_end_db": -47.6,
+              "decayed_within_take": true,
+              "loop_cut": true,
+              "clean_single": false,
+              "trimmable": false
+            },
+            "provenance": "rendered one-shot (facebook/musicgen-small, isolated-hit prompt)"
+          },
+          "snare": {
+            "source_take": "snare_t1.wav",
+            "seed": 5005,
+            "basis": "best of an imperfect field (single hit, flaws in the metrics)",
+            "metrics": {
+              "peak_dbfs": -9.06,
+              "hit_regions": 1,
+              "onset_s": 1.104,
+              "decay_end_s": 2.939,
+              "hit_length_s": 1.835,
+              "next_onset_s": null,
+              "tail_rms_db_rel_peak": -45.05,
+              "tonality": 0.154,
+              "fundamental_hz": null,
+              "cents_from_target": null,
+              "sustain_db": -26.9,
+              "env_end_db": -35.4,
+              "decayed_within_take": false,
+              "loop_cut": false,
+              "clean_single": false,
+              "trimmable": false
+            },
+            "provenance": "rendered one-shot (facebook/musicgen-small, isolated-hit prompt)"
+          },
+          "clap": {
+            "source_take": "clap_t0.wav",
+            "seed": 5008,
+            "basis": "first hit cut from a looped take",
+            "metrics": {
+              "peak_dbfs": -2.85,
+              "hit_regions": 2,
+              "onset_s": 0.044,
+              "decay_end_s": 0.296,
+              "hit_length_s": 0.252,
+              "next_onset_s": 0.297,
+              "tail_rms_db_rel_peak": -30.45,
+              "tonality": 0.167,
+              "fundamental_hz": null,
+              "cents_from_target": null,
+              "sustain_db": -30.2,
+              "env_end_db": -37.7,
+              "decayed_within_take": true,
+              "loop_cut": true,
+              "clean_single": false,
+              "trimmable": false
+            },
+            "provenance": "rendered one-shot (facebook/musicgen-small, isolated-hit prompt)"
+          },
+          "closed_hat": {
+            "source_take": "kit-fallback/closed_hat.wav",
+            "seed": null,
+            "basis": "license-clean fallback -- rendered isolation failed for this voice (every take in all_takes failed the usability bar)",
+            "metrics": {
+              "peak_dbfs": -4.17,
+              "hit_regions": 1,
+              "onset_s": 0.0,
+              "decay_end_s": 0.175,
+              "hit_length_s": 0.175,
+              "next_onset_s": null,
+              "tail_rms_db_rel_peak": -69.73,
+              "tonality": 0.925,
+              "fundamental_hz": null,
+              "cents_from_target": null,
+              "sustain_db": -70.9,
+              "env_end_db": -77.0,
+              "decayed_within_take": true,
+              "loop_cut": false,
+              "clean_single": false,
+              "trimmable": false
+            },
+            "provenance": "license-clean fallback one-shot (CC0 1.0): TR-808 closed hi-hat HC25 from tidalcycles/Dirt-Samples, retrieved 2026-11-08 from raw.githubusercontent.com (URL verbatim from the Recall sample-sources reference). Rendered isolation failed for this voice -- 8 MusicGen takes across 3 prompt strategies, none a struck hit (every take a slow-rising sustained texture; envelope peaks at 0.7-2.8 s, no attack transient anywhere in the field) -- so the founder's fallback clause stands this sample in its place. Measured by the house scales on arrival: single hit region, 0.175 s decay, tail -69.7 dB rel peak, sustain -70.9 dB, decays fully within the file. Its tonality reads 0.925: that is the TR-808 hat's own metallic partial stack (six fixed square-wave oscillators), not melodic bleed -- stated so the number is never mistaken for the failure it convicted in the rendered takes.",
+            "fallback": {
+              "file": "closed_hat.wav",
+              "format": "WAV, 16-bit mono, 44100 Hz, 0.500 s",
+              "license": "CC0 1.0 Universal (public domain dedication)",
+              "license_basis": "Per-file CC0 tag in the Recall sample-sources reference (github.com/VeeraSaiJoshik/Recall -- app/garageband/samples/samples-sources.md: 'hihat_tr808 -- TR-808 closed hi-hat 25% decay, CC0'), corroborated by the gp200-studio drums README (github.com/kabir0st/gp200-studio) listing tidalcycles TR-808 recordings as CC0 1.0, no attribution required.",
+              "provenance": "license-clean fallback one-shot (CC0 1.0): TR-808 closed hi-hat HC25 from tidalcycles/Dirt-Samples, retrieved 2026-11-08 from raw.githubusercontent.com (URL verbatim from the Recall sample-sources reference). Rendered isolation failed for this voice -- 8 MusicGen takes across 3 prompt strategies, none a struck hit (every take a slow-rising sustained texture; envelope peaks at 0.7-2.8 s, no attack transient anywhere in the field) -- so the founder's fallback clause stands this sample in its place. Measured by the house scales on arrival: single hit region, 0.175 s decay, tail -69.7 dB rel peak, sustain -70.9 dB, decays fully within the file. Its tonality reads 0.925: that is the TR-808 hat's own metallic partial stack (six fixed square-wave oscillators), not melodic bleed -- stated so the number is never mistaken for the failure it convicted in the rendered takes.",
+              "retrieved_utc": "2026-11-08T21:31Z",
+              "sha256": "3476e81b5a43031d7dccdf3d15706c0ca4cb0acfc384b8686791f55c253fe6e1",
+              "source_repo": "tidalcycles/Dirt-Samples, folder 808hc, file HC25.WAV (TR-808 closed hi-hat, 25% decay setting)",
+              "source_url": "https://raw.githubusercontent.com/tidalcycles/Dirt-Samples/master/808hc/HC25.WAV",
+              "voice": "closed_hat"
+            }
+          },
+          "open_hat": {
+            "source_take": "open_hat_t3.wav",
+            "seed": 5019,
+            "basis": "best of an imperfect field (single hit, flaws in the metrics)",
+            "metrics": {
+              "peak_dbfs": -19.69,
+              "hit_regions": 1,
+              "onset_s": 0.0,
+              "decay_end_s": 2.939,
+              "hit_length_s": 2.939,
+              "next_onset_s": null,
+              "tail_rms_db_rel_peak": -26.86,
+              "tonality": 0.221,
+              "fundamental_hz": null,
+              "cents_from_target": null,
+              "sustain_db": -25.8,
+              "env_end_db": -22.6,
+              "decayed_within_take": false,
+              "loop_cut": false,
+              "clean_single": false,
+              "trimmable": false
+            },
+            "provenance": "rendered one-shot (facebook/musicgen-small, isolated-hit prompt)"
+          },
+          "rimshot": {
+            "source_take": "rimshot_t1.wav",
+            "seed": 5021,
+            "basis": "first hit cut from a looped take",
+            "metrics": {
+              "peak_dbfs": -9.64,
+              "hit_regions": 6,
+              "onset_s": 0.0,
+              "decay_end_s": 0.576,
+              "hit_length_s": 0.576,
+              "next_onset_s": 0.577,
+              "tail_rms_db_rel_peak": -23.25,
+              "tonality": 0.65,
+              "fundamental_hz": null,
+              "cents_from_target": null,
+              "sustain_db": -40.2,
+              "env_end_db": -41.3,
+              "decayed_within_take": true,
+              "loop_cut": true,
+              "clean_single": false,
+              "trimmable": false
+            },
+            "provenance": "rendered one-shot (facebook/musicgen-small, isolated-hit prompt)"
+          },
+          "bass29": {
+            "source_take": "bass37_t2.wav",
+            "seed": 5034,
+            "basis": "derived from the best measured 808 take by exact rate shift",
+            "metrics": {
+              "peak_dbfs": -4.7,
+              "hit_regions": 1,
+              "onset_s": 0.0,
+              "decay_end_s": 2.386,
+              "hit_length_s": 2.386,
+              "next_onset_s": null,
+              "tail_rms_db_rel_peak": -57.61,
+              "tonality": null,
+              "fundamental_hz": 44.55,
+              "cents_from_target": -764.9,
+              "sustain_db": -36.9,
+              "env_end_db": -59.7,
+              "decayed_within_take": true,
+              "loop_cut": false,
+              "clean_single": false,
+              "trimmable": false
+            },
+            "shift_semitones": -0.352,
+            "source_fundamental_hz": 44.55,
+            "provenance": "rendered one-shot bass37_t2.wav (measured 44.55 Hz = MIDI 29.35) replayed at -0.35 semitones (exact sampler rate shift) to F; one rendered timbre carries all four roots, each landed on true pitch"
+          },
+          "bass32": {
+            "source_take": "bass37_t2.wav",
+            "seed": 5034,
+            "basis": "derived from the best measured 808 take by exact rate shift",
+            "metrics": {
+              "peak_dbfs": -4.7,
+              "hit_regions": 1,
+              "onset_s": 0.0,
+              "decay_end_s": 2.386,
+              "hit_length_s": 2.386,
+              "next_onset_s": null,
+              "tail_rms_db_rel_peak": -57.61,
+              "tonality": null,
+              "fundamental_hz": 44.55,
+              "cents_from_target": -764.9,
+              "sustain_db": -36.9,
+              "env_end_db": -59.7,
+              "decayed_within_take": true,
+              "loop_cut": false,
+              "clean_single": false,
+              "trimmable": false
+            },
+            "shift_semitones": 2.648,
+            "source_fundamental_hz": 44.55,
+            "provenance": "rendered one-shot bass37_t2.wav (measured 44.55 Hz = MIDI 29.35) replayed at +2.65 semitones (exact sampler rate shift) to A flat; one rendered timbre carries all four roots, each landed on true pitch"
+          },
+          "bass37": {
+            "source_take": "bass37_t2.wav",
+            "seed": 5034,
+            "basis": "derived from the best measured 808 take by exact rate shift",
+            "metrics": {
+              "peak_dbfs": -4.7,
+              "hit_regions": 1,
+              "onset_s": 0.0,
+              "decay_end_s": 2.386,
+              "hit_length_s": 2.386,
+              "next_onset_s": null,
+              "tail_rms_db_rel_peak": -57.61,
+              "tonality": null,
+              "fundamental_hz": 44.55,
+              "cents_from_target": -764.9,
+              "sustain_db": -36.9,
+              "env_end_db": -59.7,
+              "decayed_within_take": true,
+              "loop_cut": false,
+              "clean_single": false,
+              "trimmable": false
+            },
+            "shift_semitones": 7.648,
+            "source_fundamental_hz": 44.55,
+            "provenance": "rendered one-shot bass37_t2.wav (measured 44.55 Hz = MIDI 29.35) replayed at +7.65 semitones (exact sampler rate shift) to D flat; one rendered timbre carries all four roots, each landed on true pitch"
+          },
+          "bass39": {
+            "source_take": "bass37_t2.wav",
+            "seed": 5034,
+            "basis": "derived from the best measured 808 take by exact rate shift",
+            "metrics": {
+              "peak_dbfs": -4.7,
+              "hit_regions": 1,
+              "onset_s": 0.0,
+              "decay_end_s": 2.386,
+              "hit_length_s": 2.386,
+              "next_onset_s": null,
+              "tail_rms_db_rel_peak": -57.61,
+              "tonality": null,
+              "fundamental_hz": 44.55,
+              "cents_from_target": -764.9,
+              "sustain_db": -36.9,
+              "env_end_db": -59.7,
+              "decayed_within_take": true,
+              "loop_cut": false,
+              "clean_single": false,
+              "trimmable": false
+            },
+            "shift_semitones": 9.648,
+            "source_fundamental_hz": 44.55,
+            "provenance": "rendered one-shot bass37_t2.wav (measured 44.55 Hz = MIDI 29.35) replayed at +9.65 semitones (exact sampler rate shift) to E flat; one rendered timbre carries all four roots, each landed on true pitch"
+          }
+        },
+        "all_takes": {
+          "bass29": [
+            {
+              "file": "bass29_t0.wav",
+              "seed": 5024,
+              "metrics": {
+                "peak_dbfs": 0.0,
+                "hit_regions": 4,
+                "onset_s": 0.001,
+                "decay_end_s": 0.973,
+                "hit_length_s": 0.972,
+                "next_onset_s": 0.974,
+                "tail_rms_db_rel_peak": -12.92,
+                "tonality": null,
+                "fundamental_hz": 50.02,
+                "cents_from_target": 235.7,
+                "sustain_db": -22.7,
+                "env_end_db": -49.0,
+                "decayed_within_take": true,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "bass29_t1.wav",
+              "seed": 5025,
+              "metrics": {
+                "peak_dbfs": -1.74,
+                "hit_regions": 3,
+                "onset_s": 0.012,
+                "decay_end_s": 1.726,
+                "hit_length_s": 1.714,
+                "next_onset_s": 1.727,
+                "tail_rms_db_rel_peak": -12.8,
+                "tonality": null,
+                "fundamental_hz": 47.85,
+                "cents_from_target": 159.1,
+                "sustain_db": -21.6,
+                "env_end_db": -43.4,
+                "decayed_within_take": true,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "bass29_t2.wav",
+              "seed": 5026,
+              "metrics": {
+                "peak_dbfs": 0.0,
+                "hit_regions": 2,
+                "onset_s": 0.0,
+                "decay_end_s": 3.779,
+                "hit_length_s": 3.779,
+                "next_onset_s": 3.78,
+                "tail_rms_db_rel_peak": -43.63,
+                "tonality": null,
+                "fundamental_hz": 49.61,
+                "cents_from_target": 221.5,
+                "sustain_db": -10.2,
+                "env_end_db": -52.1,
+                "decayed_within_take": true,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "bass29_t3.wav",
+              "seed": 5027,
+              "metrics": {
+                "peak_dbfs": -8.19,
+                "hit_regions": 1,
+                "onset_s": 0.0,
+                "decay_end_s": 3.939,
+                "hit_length_s": 3.939,
+                "next_onset_s": null,
+                "tail_rms_db_rel_peak": -16.94,
+                "tonality": null,
+                "fundamental_hz": 39.23,
+                "cents_from_target": -184.9,
+                "sustain_db": -11.1,
+                "env_end_db": -12.4,
+                "decayed_within_take": false,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            }
+          ],
+          "bass32": [
+            {
+              "file": "bass32_t0.wav",
+              "seed": 5028,
+              "metrics": {
+                "peak_dbfs": -4.96,
+                "hit_regions": 1,
+                "onset_s": 0.0,
+                "decay_end_s": 3.939,
+                "hit_length_s": 3.939,
+                "next_onset_s": null,
+                "tail_rms_db_rel_peak": -23.56,
+                "tonality": null,
+                "fundamental_hz": 47.37,
+                "cents_from_target": -158.7,
+                "sustain_db": -6.8,
+                "env_end_db": -24.0,
+                "decayed_within_take": false,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "bass32_t1.wav",
+              "seed": 5029,
+              "metrics": {
+                "peak_dbfs": -4.61,
+                "hit_regions": 5,
+                "onset_s": 0.0,
+                "decay_end_s": 3.654,
+                "hit_length_s": 3.654,
+                "next_onset_s": 3.655,
+                "tail_rms_db_rel_peak": -35.52,
+                "tonality": null,
+                "fundamental_hz": 90.04,
+                "cents_from_target": 953.4,
+                "sustain_db": -8.3,
+                "env_end_db": -41.3,
+                "decayed_within_take": true,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "bass32_t2.wav",
+              "seed": 5030,
+              "metrics": {
+                "peak_dbfs": -6.91,
+                "hit_regions": 2,
+                "onset_s": 0.0,
+                "decay_end_s": 3.828,
+                "hit_length_s": 3.828,
+                "next_onset_s": 3.829,
+                "tail_rms_db_rel_peak": -19.32,
+                "tonality": null,
+                "fundamental_hz": 52.2,
+                "cents_from_target": 9.7,
+                "sustain_db": -17.8,
+                "env_end_db": -19.8,
+                "decayed_within_take": true,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "bass32_t3.wav",
+              "seed": 5031,
+              "metrics": {
+                "peak_dbfs": -1.99,
+                "hit_regions": 1,
+                "onset_s": 0.0,
+                "decay_end_s": 3.939,
+                "hit_length_s": 3.939,
+                "next_onset_s": null,
+                "tail_rms_db_rel_peak": -5.76,
+                "tonality": null,
+                "fundamental_hz": 46.22,
+                "cents_from_target": -201.1,
+                "sustain_db": -8.9,
+                "env_end_db": -10.4,
+                "decayed_within_take": false,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            }
+          ],
+          "bass37": [
+            {
+              "file": "bass37_t0.wav",
+              "seed": 5032,
+              "metrics": {
+                "peak_dbfs": -7.05,
+                "hit_regions": 2,
+                "onset_s": 0.0,
+                "decay_end_s": 2.081,
+                "hit_length_s": 2.081,
+                "next_onset_s": 2.082,
+                "tail_rms_db_rel_peak": -18.19,
+                "tonality": null,
+                "fundamental_hz": 32.51,
+                "cents_from_target": -1310.0,
+                "sustain_db": -24.9,
+                "env_end_db": -11.7,
+                "decayed_within_take": true,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "bass37_t1.wav",
+              "seed": 5033,
+              "metrics": {
+                "peak_dbfs": -5.95,
+                "hit_regions": 4,
+                "onset_s": 0.0,
+                "decay_end_s": 2.715,
+                "hit_length_s": 2.715,
+                "next_onset_s": 2.716,
+                "tail_rms_db_rel_peak": -21.48,
+                "tonality": null,
+                "fundamental_hz": 36.93,
+                "cents_from_target": -1089.8,
+                "sustain_db": -17.0,
+                "env_end_db": -22.1,
+                "decayed_within_take": true,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "bass37_t2.wav",
+              "seed": 5034,
+              "metrics": {
+                "peak_dbfs": -4.7,
+                "hit_regions": 1,
+                "onset_s": 0.0,
+                "decay_end_s": 2.386,
+                "hit_length_s": 2.386,
+                "next_onset_s": null,
+                "tail_rms_db_rel_peak": -57.61,
+                "tonality": null,
+                "fundamental_hz": 44.55,
+                "cents_from_target": -764.9,
+                "sustain_db": -36.9,
+                "env_end_db": -59.7,
+                "decayed_within_take": true,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "bass37_t3.wav",
+              "seed": 5035,
+              "metrics": {
+                "peak_dbfs": -4.45,
+                "hit_regions": 1,
+                "onset_s": 0.067,
+                "decay_end_s": 1.873,
+                "hit_length_s": 1.806,
+                "next_onset_s": null,
+                "tail_rms_db_rel_peak": -63.56,
+                "tonality": null,
+                "fundamental_hz": 61.36,
+                "cents_from_target": -210.6,
+                "sustain_db": -25.6,
+                "env_end_db": -58.5,
+                "decayed_within_take": true,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            }
+          ],
+          "bass39": [
+            {
+              "file": "bass39_t0.wav",
+              "seed": 5036,
+              "metrics": {
+                "peak_dbfs": -14.79,
+                "hit_regions": 3,
+                "onset_s": 0.0,
+                "decay_end_s": 0.989,
+                "hit_length_s": 0.989,
+                "next_onset_s": 0.99,
+                "tail_rms_db_rel_peak": -22.61,
+                "tonality": null,
+                "fundamental_hz": 38.77,
+                "cents_from_target": -1205.5,
+                "sustain_db": -22.7,
+                "env_end_db": -30.2,
+                "decayed_within_take": true,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "bass39_t1.wav",
+              "seed": 5037,
+              "metrics": {
+                "peak_dbfs": -34.39,
+                "hit_regions": 1,
+                "onset_s": 0.0,
+                "decay_end_s": 3.939,
+                "hit_length_s": 3.939,
+                "next_onset_s": null,
+                "tail_rms_db_rel_peak": -11.72,
+                "tonality": null,
+                "fundamental_hz": 133.16,
+                "cents_from_target": 930.9,
+                "sustain_db": -12.4,
+                "env_end_db": -11.8,
+                "decayed_within_take": false,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "bass39_t2.wav",
+              "seed": 5038,
+              "metrics": {
+                "peak_dbfs": -3.91,
+                "hit_regions": 1,
+                "onset_s": 0.0,
+                "decay_end_s": 3.939,
+                "hit_length_s": 3.939,
+                "next_onset_s": null,
+                "tail_rms_db_rel_peak": -30.76,
+                "tonality": null,
+                "fundamental_hz": 49.12,
+                "cents_from_target": -795.7,
+                "sustain_db": -8.2,
+                "env_end_db": -34.5,
+                "decayed_within_take": false,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "bass39_t3.wav",
+              "seed": 5039,
+              "metrics": {
+                "peak_dbfs": -49.17,
+                "hit_regions": 1,
+                "onset_s": 0.0,
+                "decay_end_s": 3.939,
+                "hit_length_s": 3.939,
+                "next_onset_s": null,
+                "tail_rms_db_rel_peak": -28.4,
+                "tonality": null,
+                "fundamental_hz": 65.34,
+                "cents_from_target": -301.7,
+                "sustain_db": -13.5,
+                "env_end_db": -14.0,
+                "decayed_within_take": false,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            }
+          ],
+          "clap": [
+            {
+              "file": "clap_t0.wav",
+              "seed": 5008,
+              "metrics": {
+                "peak_dbfs": -2.85,
+                "hit_regions": 2,
+                "onset_s": 0.044,
+                "decay_end_s": 0.296,
+                "hit_length_s": 0.252,
+                "next_onset_s": 0.297,
+                "tail_rms_db_rel_peak": -30.45,
+                "tonality": 0.167,
+                "fundamental_hz": null,
+                "cents_from_target": null,
+                "sustain_db": -30.2,
+                "env_end_db": -37.7,
+                "decayed_within_take": true,
+                "loop_cut": true,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "clap_t1.wav",
+              "seed": 5009,
+              "metrics": {
+                "peak_dbfs": -4.7,
+                "hit_regions": 9,
+                "onset_s": 0.044,
+                "decay_end_s": 0.088,
+                "hit_length_s": 0.044,
+                "next_onset_s": 0.184,
+                "tail_rms_db_rel_peak": -24.9,
+                "tonality": 0.299,
+                "fundamental_hz": null,
+                "cents_from_target": null,
+                "sustain_db": -40.3,
+                "env_end_db": -28.6,
+                "decayed_within_take": true,
+                "loop_cut": true,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "clap_t2.wav",
+              "seed": 5010,
+              "metrics": {
+                "peak_dbfs": -0.48,
+                "hit_regions": 1,
+                "onset_s": 0.002,
+                "decay_end_s": 2.939,
+                "hit_length_s": 2.937,
+                "next_onset_s": null,
+                "tail_rms_db_rel_peak": -34.28,
+                "tonality": 0.116,
+                "fundamental_hz": null,
+                "cents_from_target": null,
+                "sustain_db": -27.3,
+                "env_end_db": -19.6,
+                "decayed_within_take": false,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "clap_t3.wav",
+              "seed": 5011,
+              "metrics": {
+                "peak_dbfs": -9.45,
+                "hit_regions": 8,
+                "onset_s": 0.0,
+                "decay_end_s": 1.168,
+                "hit_length_s": 1.168,
+                "next_onset_s": 1.169,
+                "tail_rms_db_rel_peak": -31.88,
+                "tonality": 0.166,
+                "fundamental_hz": null,
+                "cents_from_target": null,
+                "sustain_db": -32.1,
+                "env_end_db": -38.9,
+                "decayed_within_take": true,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            }
+          ],
+          "closed_hat": [
+            {
+              "file": "closed_hat_t0.wav",
+              "seed": 5012,
+              "metrics": {
+                "peak_dbfs": -16.16,
+                "hit_regions": 1,
+                "onset_s": 0.0,
+                "decay_end_s": 2.939,
+                "hit_length_s": 2.939,
+                "next_onset_s": null,
+                "tail_rms_db_rel_peak": -11.86,
+                "tonality": 0.684,
+                "fundamental_hz": null,
+                "cents_from_target": null,
+                "sustain_db": -13.2,
+                "env_end_db": -4.3,
+                "decayed_within_take": false,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "closed_hat_t1.wav",
+              "seed": 5013,
+              "metrics": {
+                "peak_dbfs": -27.28,
+                "hit_regions": 1,
+                "onset_s": 0.0,
+                "decay_end_s": 2.939,
+                "hit_length_s": 2.939,
+                "next_onset_s": null,
+                "tail_rms_db_rel_peak": -9.31,
+                "tonality": 0.695,
+                "fundamental_hz": null,
+                "cents_from_target": null,
+                "sustain_db": -21.3,
+                "env_end_db": -9.9,
+                "decayed_within_take": false,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "closed_hat_t2.wav",
+              "seed": 5014,
+              "metrics": {
+                "peak_dbfs": -38.14,
+                "hit_regions": 1,
+                "onset_s": 0.0,
+                "decay_end_s": 2.939,
+                "hit_length_s": 2.939,
+                "next_onset_s": null,
+                "tail_rms_db_rel_peak": -28.61,
+                "tonality": 0.908,
+                "fundamental_hz": null,
+                "cents_from_target": null,
+                "sustain_db": -13.8,
+                "env_end_db": -24.9,
+                "decayed_within_take": false,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "closed_hat_t3.wav",
+              "seed": 5015,
+              "metrics": {
+                "peak_dbfs": -4.84,
+                "hit_regions": 2,
+                "onset_s": 0.0,
+                "decay_end_s": 2.753,
+                "hit_length_s": 2.753,
+                "next_onset_s": 2.754,
+                "tail_rms_db_rel_peak": -21.28,
+                "tonality": 0.201,
+                "fundamental_hz": null,
+                "cents_from_target": null,
+                "sustain_db": -27.3,
+                "env_end_db": -24.1,
+                "decayed_within_take": true,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "closed_hat_t4.wav",
+              "seed": 5040,
+              "metrics": {
+                "peak_dbfs": -59.68,
+                "hit_regions": 1,
+                "onset_s": 0.0,
+                "decay_end_s": 2.939,
+                "hit_length_s": 2.939,
+                "next_onset_s": null,
+                "tail_rms_db_rel_peak": -19.2,
+                "tonality": 0.537,
+                "fundamental_hz": null,
+                "cents_from_target": null,
+                "sustain_db": -10.2,
+                "env_end_db": -3.7,
+                "decayed_within_take": false,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "closed_hat_t5.wav",
+              "seed": 5041,
+              "metrics": {
+                "peak_dbfs": -2.64,
+                "hit_regions": 2,
+                "onset_s": 0.003,
+                "decay_end_s": 1.31,
+                "hit_length_s": 1.307,
+                "next_onset_s": 1.311,
+                "tail_rms_db_rel_peak": -8.37,
+                "tonality": 0.137,
+                "fundamental_hz": null,
+                "cents_from_target": null,
+                "sustain_db": -15.8,
+                "env_end_db": -7.3,
+                "decayed_within_take": true,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "closed_hat_t6.wav",
+              "seed": 5042,
+              "metrics": {
+                "peak_dbfs": -33.93,
+                "hit_regions": 1,
+                "onset_s": 0.0,
+                "decay_end_s": 2.939,
+                "hit_length_s": 2.939,
+                "next_onset_s": null,
+                "tail_rms_db_rel_peak": -36.24,
+                "tonality": 0.511,
+                "fundamental_hz": null,
+                "cents_from_target": null,
+                "sustain_db": -9.6,
+                "env_end_db": -28.4,
+                "decayed_within_take": false,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "closed_hat_t7.wav",
+              "seed": 5043,
+              "metrics": {
+                "peak_dbfs": -25.64,
+                "hit_regions": 1,
+                "onset_s": 0.0,
+                "decay_end_s": 2.939,
+                "hit_length_s": 2.939,
+                "next_onset_s": null,
+                "tail_rms_db_rel_peak": -23.38,
+                "tonality": 0.521,
+                "fundamental_hz": null,
+                "cents_from_target": null,
+                "sustain_db": -13.7,
+                "env_end_db": -20.8,
+                "decayed_within_take": false,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            }
+          ],
+          "kick": [
+            {
+              "file": "kick_t0.wav",
+              "seed": 5000,
+              "metrics": {
+                "peak_dbfs": -18.12,
+                "hit_regions": 4,
+                "onset_s": 0.0,
+                "decay_end_s": 1.389,
+                "hit_length_s": 1.389,
+                "next_onset_s": 1.39,
+                "tail_rms_db_rel_peak": -29.5,
+                "tonality": 0.173,
+                "fundamental_hz": null,
+                "cents_from_target": null,
+                "sustain_db": -31.6,
+                "env_end_db": -43.4,
+                "decayed_within_take": true,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "kick_t1.wav",
+              "seed": 5001,
+              "metrics": {
+                "peak_dbfs": -9.11,
+                "hit_regions": 13,
+                "onset_s": 0.046,
+                "decay_end_s": 0.254,
+                "hit_length_s": 0.208,
+                "next_onset_s": 0.255,
+                "tail_rms_db_rel_peak": -34.41,
+                "tonality": 0.212,
+                "fundamental_hz": null,
+                "cents_from_target": null,
+                "sustain_db": -45.4,
+                "env_end_db": -47.6,
+                "decayed_within_take": true,
+                "loop_cut": true,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "kick_t2.wav",
+              "seed": 5002,
+              "metrics": {
+                "peak_dbfs": -30.68,
+                "hit_regions": 2,
+                "onset_s": 0.223,
+                "decay_end_s": 1.68,
+                "hit_length_s": 1.457,
+                "next_onset_s": 1.681,
+                "tail_rms_db_rel_peak": -21.66,
+                "tonality": 0.518,
+                "fundamental_hz": null,
+                "cents_from_target": null,
+                "sustain_db": -42.3,
+                "env_end_db": -9.5,
+                "decayed_within_take": true,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "kick_t3.wav",
+              "seed": 5003,
+              "metrics": {
+                "peak_dbfs": -24.67,
+                "hit_regions": 1,
+                "onset_s": 0.0,
+                "decay_end_s": 2.939,
+                "hit_length_s": 2.939,
+                "next_onset_s": null,
+                "tail_rms_db_rel_peak": -7.93,
+                "tonality": 0.701,
+                "fundamental_hz": null,
+                "cents_from_target": null,
+                "sustain_db": -14.0,
+                "env_end_db": -8.2,
+                "decayed_within_take": false,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            }
+          ],
+          "open_hat": [
+            {
+              "file": "open_hat_t0.wav",
+              "seed": 5016,
+              "metrics": {
+                "peak_dbfs": -40.82,
+                "hit_regions": 1,
+                "onset_s": 0.0,
+                "decay_end_s": 2.939,
+                "hit_length_s": 2.939,
+                "next_onset_s": null,
+                "tail_rms_db_rel_peak": -30.44,
+                "tonality": 0.861,
+                "fundamental_hz": null,
+                "cents_from_target": null,
+                "sustain_db": -7.9,
+                "env_end_db": -19.2,
+                "decayed_within_take": false,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "open_hat_t1.wav",
+              "seed": 5017,
+              "metrics": {
+                "peak_dbfs": -6.22,
+                "hit_regions": 1,
+                "onset_s": 0.0,
+                "decay_end_s": 2.939,
+                "hit_length_s": 2.939,
+                "next_onset_s": null,
+                "tail_rms_db_rel_peak": -21.5,
+                "tonality": 0.612,
+                "fundamental_hz": null,
+                "cents_from_target": null,
+                "sustain_db": -15.1,
+                "env_end_db": -24.0,
+                "decayed_within_take": false,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "open_hat_t2.wav",
+              "seed": 5018,
+              "metrics": {
+                "peak_dbfs": -12.08,
+                "hit_regions": 1,
+                "onset_s": 0.0,
+                "decay_end_s": 2.939,
+                "hit_length_s": 2.939,
+                "next_onset_s": null,
+                "tail_rms_db_rel_peak": -13.12,
+                "tonality": 0.212,
+                "fundamental_hz": null,
+                "cents_from_target": null,
+                "sustain_db": -13.6,
+                "env_end_db": -23.0,
+                "decayed_within_take": false,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "open_hat_t3.wav",
+              "seed": 5019,
+              "metrics": {
+                "peak_dbfs": -19.69,
+                "hit_regions": 1,
+                "onset_s": 0.0,
+                "decay_end_s": 2.939,
+                "hit_length_s": 2.939,
+                "next_onset_s": null,
+                "tail_rms_db_rel_peak": -26.86,
+                "tonality": 0.221,
+                "fundamental_hz": null,
+                "cents_from_target": null,
+                "sustain_db": -25.8,
+                "env_end_db": -22.6,
+                "decayed_within_take": false,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "open_hat_t4.wav",
+              "seed": 5044,
+              "metrics": {
+                "peak_dbfs": -18.13,
+                "hit_regions": 1,
+                "onset_s": 0.0,
+                "decay_end_s": 2.939,
+                "hit_length_s": 2.939,
+                "next_onset_s": null,
+                "tail_rms_db_rel_peak": -15.76,
+                "tonality": 0.154,
+                "fundamental_hz": null,
+                "cents_from_target": null,
+                "sustain_db": -5.8,
+                "env_end_db": -12.1,
+                "decayed_within_take": false,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "open_hat_t5.wav",
+              "seed": 5045,
+              "metrics": {
+                "peak_dbfs": -24.38,
+                "hit_regions": 1,
+                "onset_s": 0.019,
+                "decay_end_s": 2.939,
+                "hit_length_s": 2.92,
+                "next_onset_s": null,
+                "tail_rms_db_rel_peak": -30.56,
+                "tonality": 0.19,
+                "fundamental_hz": null,
+                "cents_from_target": null,
+                "sustain_db": -12.1,
+                "env_end_db": -23.7,
+                "decayed_within_take": false,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            }
+          ],
+          "rimshot": [
+            {
+              "file": "rimshot_t0.wav",
+              "seed": 5020,
+              "metrics": {
+                "peak_dbfs": -12.17,
+                "hit_regions": 1,
+                "onset_s": 0.0,
+                "decay_end_s": 2.939,
+                "hit_length_s": 2.939,
+                "next_onset_s": null,
+                "tail_rms_db_rel_peak": -22.07,
+                "tonality": 0.326,
+                "fundamental_hz": null,
+                "cents_from_target": null,
+                "sustain_db": -14.6,
+                "env_end_db": -24.2,
+                "decayed_within_take": false,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "rimshot_t1.wav",
+              "seed": 5021,
+              "metrics": {
+                "peak_dbfs": -9.64,
+                "hit_regions": 6,
+                "onset_s": 0.0,
+                "decay_end_s": 0.576,
+                "hit_length_s": 0.576,
+                "next_onset_s": 0.577,
+                "tail_rms_db_rel_peak": -23.25,
+                "tonality": 0.65,
+                "fundamental_hz": null,
+                "cents_from_target": null,
+                "sustain_db": -40.2,
+                "env_end_db": -41.3,
+                "decayed_within_take": true,
+                "loop_cut": true,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "rimshot_t2.wav",
+              "seed": 5022,
+              "metrics": {
+                "peak_dbfs": -6.72,
+                "hit_regions": 1,
+                "onset_s": 0.0,
+                "decay_end_s": 2.939,
+                "hit_length_s": 2.939,
+                "next_onset_s": null,
+                "tail_rms_db_rel_peak": -27.24,
+                "tonality": 0.737,
+                "fundamental_hz": null,
+                "cents_from_target": null,
+                "sustain_db": -12.7,
+                "env_end_db": -25.7,
+                "decayed_within_take": false,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "rimshot_t3.wav",
+              "seed": 5023,
+              "metrics": {
+                "peak_dbfs": -11.77,
+                "hit_regions": 1,
+                "onset_s": 0.0,
+                "decay_end_s": 2.939,
+                "hit_length_s": 2.939,
+                "next_onset_s": null,
+                "tail_rms_db_rel_peak": -32.62,
+                "tonality": 0.22,
+                "fundamental_hz": null,
+                "cents_from_target": null,
+                "sustain_db": -28.9,
+                "env_end_db": -27.5,
+                "decayed_within_take": false,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            }
+          ],
+          "snare": [
+            {
+              "file": "snare_t0.wav",
+              "seed": 5004,
+              "metrics": {
+                "peak_dbfs": -12.14,
+                "hit_regions": 1,
+                "onset_s": 0.0,
+                "decay_end_s": 2.939,
+                "hit_length_s": 2.939,
+                "next_onset_s": null,
+                "tail_rms_db_rel_peak": -16.26,
+                "tonality": 0.247,
+                "fundamental_hz": null,
+                "cents_from_target": null,
+                "sustain_db": -17.9,
+                "env_end_db": -19.1,
+                "decayed_within_take": false,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "snare_t1.wav",
+              "seed": 5005,
+              "metrics": {
+                "peak_dbfs": -9.06,
+                "hit_regions": 1,
+                "onset_s": 1.104,
+                "decay_end_s": 2.939,
+                "hit_length_s": 1.835,
+                "next_onset_s": null,
+                "tail_rms_db_rel_peak": -45.05,
+                "tonality": 0.154,
+                "fundamental_hz": null,
+                "cents_from_target": null,
+                "sustain_db": -26.9,
+                "env_end_db": -35.4,
+                "decayed_within_take": false,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "snare_t2.wav",
+              "seed": 5006,
+              "metrics": {
+                "peak_dbfs": -9.91,
+                "hit_regions": 3,
+                "onset_s": 0.0,
+                "decay_end_s": 2.697,
+                "hit_length_s": 2.697,
+                "next_onset_s": 2.698,
+                "tail_rms_db_rel_peak": -37.61,
+                "tonality": 0.466,
+                "fundamental_hz": null,
+                "cents_from_target": null,
+                "sustain_db": -18.9,
+                "env_end_db": -36.5,
+                "decayed_within_take": true,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            },
+            {
+              "file": "snare_t3.wav",
+              "seed": 5007,
+              "metrics": {
+                "peak_dbfs": -40.32,
+                "hit_regions": 1,
+                "onset_s": 0.0,
+                "decay_end_s": 2.939,
+                "hit_length_s": 2.939,
+                "next_onset_s": null,
+                "tail_rms_db_rel_peak": -28.62,
+                "tonality": 0.325,
+                "fundamental_hz": null,
+                "cents_from_target": null,
+                "sustain_db": -16.8,
+                "env_end_db": -20.9,
+                "decayed_within_take": false,
+                "loop_cut": false,
+                "clean_single": false,
+                "trimmable": false
+              }
+            }
+          ]
+        },
+        "files": {
+          "kick.wav": "studio-runs/v4-proof-3/kit/kick.wav",
+          "snare.wav": "studio-runs/v4-proof-3/kit/snare.wav",
+          "clap.wav": "studio-runs/v4-proof-3/kit/clap.wav",
+          "closed_hat.wav": "studio-runs/v4-proof-3/kit/closed_hat.wav",
+          "open_hat.wav": "studio-runs/v4-proof-3/kit/open_hat.wav",
+          "rimshot.wav": "studio-runs/v4-proof-3/kit/rimshot.wav",
+          "bass29.wav": "studio-runs/v4-proof-3/kit/bass29.wav",
+          "bass32.wav": "studio-runs/v4-proof-3/kit/bass32.wav",
+          "bass37.wav": "studio-runs/v4-proof-3/kit/bass37.wav",
+          "bass39.wav": "studio-runs/v4-proof-3/kit/bass39.wav"
+        },
+        "doctrine": "every sample is rendered audio (MusicGen one-shot takes, selected by measurement); the spine places samples and synthesizes nothing. The four 808 roots are one measured rendered take replayed at exact fractional rate shifts, stated per voice above."
+      }
+    }
+  },
+  "arpeggio": {
+    "level_db": -9.0,
+    "orbit_hz": 0.03,
+    "strength": 1.0,
+    "seed": 777,
+    "total_notes": 1120,
+    "sections": [
+      {
+        "name": "intro",
+        "bars": 8,
+        "density": "sparse",
+        "mode": "statement",
+        "notes": 48
+      },
+      {
+        "name": "hook",
+        "bars": 8,
+        "density": "full",
+        "mode": "runs",
+        "notes": 128
+      },
+      {
+        "name": "verse1",
+        "bars": 16,
+        "density": "driving",
+        "mode": "bariolage",
+        "notes": 128
+      },
+      {
+        "name": "hook",
+        "bars": 8,
+        "density": "full",
+        "mode": "runs",
+        "notes": 128
+      },
+      {
+        "name": "feature",
+        "bars": 16,
+        "density": "open",
+        "mode": "runs",
+        "notes": 256
+      },
+      {
+        "name": "hook",
+        "bars": 8,
+        "density": "full",
+        "mode": "runs",
+        "notes": 128
+      },
+      {
+        "name": "verse2",
+        "bars": 16,
+        "density": "driving",
+        "mode": "bariolage",
+        "notes": 128
+      },
+      {
+        "name": "hook_out",
+        "bars": 8,
+        "density": "full",
+        "mode": "runs",
+        "notes": 128
+      },
+      {
+        "name": "outro",
+        "bars": 8,
+        "density": "sparse",
+        "mode": "statement_fade",
+        "notes": 48
+      }
+    ],
+    "ladder": [
+      {
+        "syllable": "UT",
+        "carrier_hz": 396.0,
+        "midi": 67,
+        "staff_hz": 392.0,
+        "cents_offset": 17.6,
+        "abc": "G"
+      },
+      {
+        "syllable": "RE",
+        "carrier_hz": 417.0,
+        "midi": 68,
+        "staff_hz": 415.3,
+        "cents_offset": 7.1,
+        "abc": "^G"
+      },
+      {
+        "syllable": "MI",
+        "carrier_hz": 528.0,
+        "midi": 72,
+        "staff_hz": 523.25,
+        "cents_offset": 15.6,
+        "abc": "c"
+      },
+      {
+        "syllable": "FA",
+        "carrier_hz": 639.0,
+        "midi": 75,
+        "staff_hz": 622.25,
+        "cents_offset": 46.0,
+        "abc": "_e"
+      },
+      {
+        "syllable": "SOL",
+        "carrier_hz": 741.0,
+        "midi": 78,
+        "staff_hz": 739.99,
+        "cents_offset": 2.4,
+        "abc": "^f"
+      },
+      {
+        "syllable": "LA",
+        "carrier_hz": 852.0,
+        "midi": 80,
+        "staff_hz": 830.61,
+        "cents_offset": 44.0,
+        "abc": "^g"
+      }
+    ],
+    "fibonacci_phrases": [
+      1,
+      1,
+      2,
+      3,
+      5,
+      8
+    ],
+    "figure_cell_midi": [
+      67,
+      68,
+      72,
+      75,
+      78,
+      80,
+      67,
+      68,
+      72,
+      75,
+      78,
+      80,
+      67,
+      68,
+      72,
+      75,
+      78,
+      80,
+      67,
+      68
+    ],
+    "layer_rms_dbfs": -15.84,
+    "mixed_layer_rms_dbfs": -29.12
+  },
+  "stereo": {
+    "bed_width": 1.0,
+    "spine_panned_by_role": true,
+    "low_cut_hz": 180.0,
+    "bed_correlation_before": 1.0,
+    "bed_correlation_after": 0.6342,
+    "bed_low_band_correlation_after": 1.0,
+    "master_correlation": 0.7101,
+    "master_side_rms_dbfs": -26.53
+  },
+  "sigma": {
+    "status": "ABSENT",
+    "intended_left_hz": null,
+    "intended_right_hz": null,
+    "measured_left_hz": null,
+    "measured_right_hz": null,
+    "gain_db": null,
+    "note": "no Sigma layer was generated or mixed; there is no sigma.wav in this run directory, by design. The founder's A/B question \u2014 what the track is without the ground \u2014 is answered by this file and no other change."
+  },
+  "master": {
+    "lufs_before": -16.89,
+    "gain_applied_db": 2.89,
+    "trim_db": -1.41,
+    "lufs_after": -15.49,
+    "sample_peak_db": -2.41,
+    "true_peak_dbtp": -1.02,
+    "ceiling_overrode_loudness": true,
+    "target_lufs": -14.0,
+    "ceiling_dbtp": -1.0
+  },
+  "desk_remeasure": {
+    "seconds": 164.571,
+    "samples": 7899429,
+    "correlation": 0.7101,
+    "side_rms_dbfs": -26.53,
+    "lufs": -15.49,
+    "true_peak_dbtp": -1.02
+  },
+  "files": {
+    "master_wav": {
+      "path": "/home/hatch/workspace/resonance/studio-runs/v4b-no-sigma/master.wav",
+      "bytes": 47396618
+    },
+    "preview_mp3": {
+      "path": "/home/hatch/workspace/resonance/studio-runs/v4b-no-sigma/preview.mp3",
+      "bytes": 6585645
+    },
+    "sigma_wav": null,
+    "spec_json": "/home/hatch/workspace/resonance/studio-runs/v4b-no-sigma/spec.json"
+  },
+  "wall_seconds_total": 112.01,
+  "notes": [
+    "VARIANT of v4-proof-3: the single difference is the ABSENT Sigma layer; the validation block proves the bed under this mix is the bed under v4's, sample for sample.",
+    "loudness is K-weighted integrated, UNGATED (BS.1770 gating omitted in the proof build, stated not hidden).",
+    "section levels RMS-matched to the median section, clamped to +/-6 dB, before crossfading.",
+    "2 s tail fade + 5 ms head fade applied before mastering.",
+    "stereo law: the spine is panned by role, the bed is widened by quadrature side synthesis above 180 Hz with the mid preserved exactly and the lows left fully mono. In v4 the Sigma layer stood outside that law, never processed; in this variant there is no Sigma layer to exempt.",
+    "spine: SAMPLED KIT \u2014 rendered one-shots placed by resonance.studio.spine, ZERO synthesis; provenance in the spine block's kit manifest (the kit itself lives in v4-proof-3 and is referenced, not copied).",
+    "arpeggio: the house's composed violin layer, as v4; its notation stands in composition.abc."
+  ]
+}
