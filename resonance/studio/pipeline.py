@@ -737,6 +737,9 @@ def _dry_run_manifest(spec):
             "exact_samples": spine_mod.spine_samples(sp, TARGET_SR),
             "sections": sp["sections"],
         }
+        if sp.get("samples"):
+            planned["spine"]["samples"] = sp["samples"]
+            planned["spine"]["mode"] = "sampled kit (zero synthesis)"
     if spec.get("arpeggio"):
         events, modes = arpeggio_mod.compose_events(
             spec["spine"]["sections"], spec["arpeggio"]["mode_overrides"])
@@ -940,7 +943,22 @@ def produce(spec, dry_run=False, log=None):
         total_seconds = bed.shape[1] / TARGET_SR
         log(f"laying the spine: {bars_used} bars at {sp['bpm']} BPM, "
             f"{spine_len} samples exactly...")
-        spine_arr = spine_mod.render_spine(sp, TARGET_SR)
+        # Sampled mode (Proof No. 3's law): when the spec names a
+        # rendered kit, the spine PLACES samples and synthesizes
+        # nothing. The kit loads whole or the run refuses here --
+        # there is no partial kit and no silent fallback.
+        spine_kit = None
+        kit_manifest = None
+        if sp.get("samples"):
+            spine_kit = spine_mod.load_kit(sp["samples"], TARGET_SR)
+            log("spine kit loaded: rendered one-shots, no synthesis")
+            kman = Path(sp["samples"]["kick"]).parent \
+                / "kit_manifest.json"
+            if kman.exists():
+                kit_manifest = json.loads(
+                    kman.read_text(encoding="utf-8"))
+        spine_arr = spine_mod.render_spine(sp, TARGET_SR,
+                                           kit=spine_kit)
         assert spine_arr.shape[1] == bed.shape[1]
         spine_rms = float(np.sqrt(np.mean(spine_arr ** 2)))
         if spine_rms > 0:
@@ -953,9 +971,18 @@ def produce(spec, dry_run=False, log=None):
             "exact_samples": spine_len,
             "bed_trimmed_to_grid": bool(bed_trimmed),
             "sections": sp["sections"],
-            "engine": "resonance.studio.spine (resonance.synth "
-                      "voices + grid arithmetic)",
+            "engine": ("resonance.studio.spine as SAMPLER "
+                       "(rendered one-shot kit + grid arithmetic; "
+                       "zero synthesis)"
+                       if spine_kit is not None else
+                       "resonance.studio.spine (resonance.synth "
+                       "voices + grid arithmetic)"),
         }
+        if spine_kit is not None:
+            spine_report["kit"] = {
+                "samples": sp["samples"],
+                "manifest": kit_manifest,
+            }
 
     # -- (b3) the arpeggio layer: the composed dancer ------------------
     # When the spec carries an arpeggio block, the house's composed
@@ -1106,6 +1133,15 @@ def produce(spec, dry_run=False, log=None):
             "mono, and the Sigma layer is never processed. The "
             "widths are measured in the stereo block, not claimed.",
         ]) + ([
+            "spine: the rhythmic spine is a SAMPLED KIT -- drum "
+            "one-shots rendered by MusicGen and selected by "
+            "measurement (resonance.studio.kit), placed by "
+            "resonance.studio.spine on the resonance.grid "
+            "arithmetic -- whole bars, exact samples, ZERO "
+            "synthesis; the bed was trimmed in LENGTH to that "
+            "grid, never tempo-shifted. Provenance and per-take "
+            "metrics stand in the spine block's kit manifest.",
+        ] if spine_report and spine_report.get("kit") else [
             "spine: the rhythmic spine is RESONANTIA's own synthesis "
             "on the resonance.grid arithmetic -- whole bars, exact "
             "samples; the bed was trimmed in LENGTH to that grid, "

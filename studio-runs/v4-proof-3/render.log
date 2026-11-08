@@ -1,0 +1,141 @@
+[transformers] Model config: pad_token_id must be `None` or an integer within the vocabulary (between 0 and 2047), got 2048. This may result in unexpected behavior.
+[transformers] Model config: bos_token_id must be `None` or an integer within the vocabulary (between 0 and 2047), got 2048. This may result in unexpected behavior.
+Loading weights:   0%|          | 0/611 [00:00<?, ?it/s]Loading weights:   0%|          | 3/611 [00:00<00:22, 26.54it/s]Loading weights:   9%|▉         | 57/611 [00:00<00:02, 238.08it/s]Loading weights:  13%|█▎        | 79/611 [00:00<00:02, 199.98it/s]Loading weights:  20%|██        | 125/611 [00:00<00:01, 259.66it/s]Loading weights:  25%|██▍       | 151/611 [00:00<00:02, 207.55it/s]Loading weights:  29%|██▉       | 179/611 [00:00<00:02, 212.22it/s]Loading weights:  33%|███▎      | 201/611 [00:01<00:02, 185.78it/s]Loading weights:  36%|███▌      | 221/611 [00:01<00:02, 156.53it/s]Loading weights:  39%|███▉      | 238/611 [00:01<00:03, 117.05it/s]Loading weights:  42%|████▏     | 258/611 [00:01<00:02, 126.19it/s]Loading weights:  45%|████▍     | 273/611 [00:01<00:02, 120.24it/s]Loading weights:  47%|████▋     | 286/611 [00:01<00:03, 96.66it/s] Loading weights:  49%|████▊     | 297/611 [00:02<00:03, 93.85it/s]Loading weights:  52%|█████▏    | 317/611 [00:02<00:02, 112.18it/s]Loading weights:  54%|█████▍    | 330/611 [00:02<00:02, 113.77it/s]Loading weights:  56%|█████▌    | 343/611 [00:02<00:02, 107.93it/s]Loading weights:  58%|█████▊    | 355/611 [00:02<00:02, 86.42it/s] Loading weights:  62%|██████▏   | 379/611 [00:02<00:02, 104.99it/s]Loading weights:  64%|██████▍   | 391/611 [00:03<00:02, 83.23it/s] Loading weights:  69%|██████▉   | 422/611 [00:03<00:01, 111.65it/s]Loading weights:  73%|███████▎  | 447/611 [00:03<00:01, 117.69it/s]Loading weights:  76%|███████▌  | 463/611 [00:03<00:01, 123.22it/s]Loading weights:  79%|███████▊  | 480/611 [00:03<00:00, 132.17it/s]Loading weights:  81%|████████  | 495/611 [00:03<00:00, 129.07it/s]Loading weights:  84%|████████▍ | 516/611 [00:03<00:00, 122.57it/s]Loading weights:  87%|████████▋ | 529/611 [00:04<00:00, 111.84it/s]Loading weights:  89%|████████▊ | 542/611 [00:04<00:00, 111.67it/s]Loading weights:  91%|█████████▏| 558/611 [00:04<00:00, 115.88it/s]Loading weights:  93%|█████████▎| 570/611 [00:04<00:00, 104.29it/s]Loading weights:  97%|█████████▋| 595/611 [00:04<00:00, 116.11it/s]Loading weights: 100%|██████████| 611/611 [00:04<00:00, 130.11it/s]
+[render_musicgen] model loaded in 8s
+[render_musicgen] segment 0: 3.0s rendered in 98s -> studio-runs/v4-proof-3/kitbuild/kick_t0.wav
+[render_musicgen] segment 1: 3.0s rendered in 117s -> studio-runs/v4-proof-3/kitbuild/kick_t1.wav
+[render_musicgen] segment 2: 3.0s rendered in 90s -> studio-runs/v4-proof-3/kitbuild/kick_t2.wav
+[render_musicgen] segment 3: 3.0s rendered in 90s -> studio-runs/v4-proof-3/kitbuild/kick_t3.wav
+[render_musicgen] segment 4: 3.0s rendered in 72s -> studio-runs/v4-proof-3/kitbuild/snare_t0.wav
+[render_musicgen] segment 5: 3.0s rendered in 72s -> studio-runs/v4-proof-3/kitbuild/snare_t1.wav
+[render_musicgen] segment 6: 3.0s rendered in 70s -> studio-runs/v4-proof-3/kitbuild/snare_t2.wav
+[transformers] Model config: pad_token_id must be `None` or an integer within the vocabulary (between 0 and 2047), got 2048. This may result in unexpected behavior.
+[transformers] Model config: bos_token_id must be `None` or an integer within the vocabulary (between 0 and 2047), got 2048. This may result in unexpected behavior.
+Loading weights:   0%|          | 0/611 [00:00<?, ?it/s]Loading weights:   9%|▉         | 56/611 [00:00<00:01, 411.43it/s]Loading weights:  18%|█▊        | 112/611 [00:00<00:01, 484.59it/s]Loading weights:  27%|██▋       | 162/611 [00:00<00:01, 233.86it/s]Loading weights:  32%|███▏      | 196/611 [00:00<00:02, 163.64it/s]Loading weights:  36%|███▌      | 220/611 [00:01<00:02, 172.67it/s]Loading weights:  40%|███▉      | 243/611 [00:01<00:02, 150.10it/s]Loading weights:  46%|████▌     | 281/611 [00:01<00:01, 183.23it/s]Loading weights:  50%|████▉     | 304/611 [00:01<00:01, 168.29it/s]Loading weights:  53%|█████▎    | 324/611 [00:01<00:01, 164.11it/s]Loading weights:  56%|█████▌    | 343/611 [00:01<00:01, 144.55it/s]Loading weights:  59%|█████▉    | 359/611 [00:02<00:01, 131.94it/s]Loading weights:  64%|██████▍   | 391/611 [00:02<00:01, 163.13it/s]Loading weights:  67%|██████▋   | 409/611 [00:02<00:01, 156.82it/s]Loading weights:  70%|██████▉   | 426/611 [00:02<00:01, 120.65it/s]Loading weights:  72%|███████▏  | 440/611 [00:02<00:01, 120.88it/s]Loading weights:  75%|███████▌  | 460/611 [00:02<00:01, 137.16it/s]Loading weights:  78%|███████▊  | 476/611 [00:02<00:01, 131.74it/s]Loading weights:  80%|████████  | 491/611 [00:03<00:01, 106.79it/s]Loading weights:  84%|████████▍ | 512/611 [00:03<00:00, 124.87it/s]Loading weights:  86%|████████▌ | 526/611 [00:03<00:00, 102.38it/s]Loading weights:  89%|████████▊ | 541/611 [00:03<00:00, 109.92it/s]Loading weights:  92%|█████████▏| 560/611 [00:03<00:00, 115.51it/s]Loading weights:  95%|█████████▌| 582/611 [00:03<00:00, 120.07it/s]Loading weights: 100%|██████████| 611/611 [00:03<00:00, 154.93it/s]
+[render_musicgen] model loaded in 6s
+[render_musicgen] segment 0: 3.0s rendered in 78s -> studio-runs/v4-proof-3/kitbuild/kick_t0.wav
+[render_musicgen] segment 1: 3.0s rendered in 58s -> studio-runs/v4-proof-3/kitbuild/kick_t1.wav
+[render_musicgen] segment 2: 3.0s rendered in 60s -> studio-runs/v4-proof-3/kitbuild/kick_t2.wav
+[render_musicgen] segment 3: 3.0s rendered in 54s -> studio-runs/v4-proof-3/kitbuild/kick_t3.wav
+[render_musicgen] segment 4: 3.0s rendered in 66s -> studio-runs/v4-proof-3/kitbuild/snare_t0.wav
+[render_musicgen] segment 5: 3.0s rendered in 59s -> studio-runs/v4-proof-3/kitbuild/snare_t1.wav
+[render_musicgen] segment 6: 3.0s rendered in 58s -> studio-runs/v4-proof-3/kitbuild/snare_t2.wav
+[render_musicgen] segment 7: 3.0s rendered in 47s -> studio-runs/v4-proof-3/kitbuild/snare_t3.wav
+[render_musicgen] segment 8: 3.0s rendered in 49s -> studio-runs/v4-proof-3/kitbuild/clap_t0.wav
+[render_musicgen] segment 9: 3.0s rendered in 56s -> studio-runs/v4-proof-3/kitbuild/clap_t1.wav
+[render_musicgen] segment 10: 3.0s rendered in 60s -> studio-runs/v4-proof-3/kitbuild/clap_t2.wav
+[render_musicgen] segment 11: 3.0s rendered in 56s -> studio-runs/v4-proof-3/kitbuild/clap_t3.wav
+[render_musicgen] segment 12: 3.0s rendered in 57s -> studio-runs/v4-proof-3/kitbuild/closed_hat_t0.wav
+[render_musicgen] segment 13: 3.0s rendered in 54s -> studio-runs/v4-proof-3/kitbuild/closed_hat_t1.wav
+[render_musicgen] segment 14: 3.0s rendered in 55s -> studio-runs/v4-proof-3/kitbuild/closed_hat_t2.wav
+[render_musicgen] segment 15: 3.0s rendered in 61s -> studio-runs/v4-proof-3/kitbuild/closed_hat_t3.wav
+[render_musicgen] segment 16: 3.0s rendered in 57s -> studio-runs/v4-proof-3/kitbuild/open_hat_t0.wav
+[render_musicgen] segment 17: 3.0s rendered in 56s -> studio-runs/v4-proof-3/kitbuild/open_hat_t1.wav
+[render_musicgen] segment 18: 3.0s rendered in 55s -> studio-runs/v4-proof-3/kitbuild/open_hat_t2.wav
+[render_musicgen] segment 19: 3.0s rendered in 51s -> studio-runs/v4-proof-3/kitbuild/open_hat_t3.wav
+[render_musicgen] segment 20: 3.0s rendered in 52s -> studio-runs/v4-proof-3/kitbuild/rimshot_t0.wav
+[render_musicgen] segment 21: 3.0s rendered in 64s -> studio-runs/v4-proof-3/kitbuild/rimshot_t1.wav
+[render_musicgen] segment 22: 3.0s rendered in 73s -> studio-runs/v4-proof-3/kitbuild/rimshot_t2.wav
+[render_musicgen] segment 23: 3.0s rendered in 53s -> studio-runs/v4-proof-3/kitbuild/rimshot_t3.wav
+[render_musicgen] segment 24: 4.0s rendered in 80s -> studio-runs/v4-proof-3/kitbuild/bass29_t0.wav
+[render_musicgen] segment 25: 4.0s rendered in 92s -> studio-runs/v4-proof-3/kitbuild/bass29_t1.wav
+[render_musicgen] segment 26: 4.0s rendered in 85s -> studio-runs/v4-proof-3/kitbuild/bass29_t2.wav
+[render_musicgen] segment 27: 4.0s rendered in 66s -> studio-runs/v4-proof-3/kitbuild/bass29_t3.wav
+[render_musicgen] segment 28: 4.0s rendered in 80s -> studio-runs/v4-proof-3/kitbuild/bass32_t0.wav
+[render_musicgen] segment 29: 4.0s rendered in 76s -> studio-runs/v4-proof-3/kitbuild/bass32_t1.wav
+[render_musicgen] segment 30: 4.0s rendered in 75s -> studio-runs/v4-proof-3/kitbuild/bass32_t2.wav
+[render_musicgen] segment 31: 4.0s rendered in 66s -> studio-runs/v4-proof-3/kitbuild/bass32_t3.wav
+[render_musicgen] segment 32: 4.0s rendered in 76s -> studio-runs/v4-proof-3/kitbuild/bass37_t0.wav
+[render_musicgen] segment 33: 4.0s rendered in 71s -> studio-runs/v4-proof-3/kitbuild/bass37_t1.wav
+[render_musicgen] segment 34: 4.0s rendered in 72s -> studio-runs/v4-proof-3/kitbuild/bass37_t2.wav
+[render_musicgen] segment 35: 4.0s rendered in 67s -> studio-runs/v4-proof-3/kitbuild/bass37_t3.wav
+[render_musicgen] segment 36: 4.0s rendered in 61s -> studio-runs/v4-proof-3/kitbuild/bass39_t0.wav
+[render_musicgen] segment 37: 4.0s rendered in 71s -> studio-runs/v4-proof-3/kitbuild/bass39_t1.wav
+[render_musicgen] segment 38: 4.0s rendered in 71s -> studio-runs/v4-proof-3/kitbuild/bass39_t2.wav
+[render_musicgen] segment 39: 4.0s rendered in 71s -> studio-runs/v4-proof-3/kitbuild/bass39_t3.wav
+[render_musicgen] finalized studio-runs/v4-proof-3/kit/bass29.wav (567404 bytes)
+[render_musicgen] finalized studio-runs/v4-proof-3/kit/bass32.wav (477134 bytes)
+[render_musicgen] finalized studio-runs/v4-proof-3/kit/bass37.wav (357458 bytes)
+[render_musicgen] finalized studio-runs/v4-proof-3/kit/bass39.wav (318464 bytes)
+[render_musicgen] finalized studio-runs/v4-proof-3/kit/clap.wav (423404 bytes)
+[render_musicgen] finalized studio-runs/v4-proof-3/kit/closed_hat.wav (423404 bytes)
+[render_musicgen] finalized studio-runs/v4-proof-3/kit/kick.wav (217340 bytes)
+[render_musicgen] finalized studio-runs/v4-proof-3/kit/open_hat.wav (423404 bytes)
+[render_musicgen] finalized studio-runs/v4-proof-3/kit/rimshot.wav (423404 bytes)
+[render_musicgen] finalized studio-runs/v4-proof-3/kit/snare.wav (423404 bytes)
+[transformers] Model config: pad_token_id must be `None` or an integer within the vocabulary (between 0 and 2047), got 2048. This may result in unexpected behavior.
+[transformers] Model config: bos_token_id must be `None` or an integer within the vocabulary (between 0 and 2047), got 2048. This may result in unexpected behavior.
+Loading weights:   0%|          | 0/611 [00:00<?, ?it/s]Loading weights:  10%|▉         | 61/611 [00:00<00:00, 560.26it/s]Loading weights:  19%|█▉        | 118/611 [00:00<00:01, 455.57it/s]Loading weights:  27%|██▋       | 165/611 [00:00<00:01, 223.53it/s]Loading weights:  32%|███▏      | 197/611 [00:00<00:02, 204.60it/s]Loading weights:  36%|███▋      | 223/611 [00:01<00:02, 146.24it/s]Loading weights:  41%|████      | 251/611 [00:01<00:02, 158.77it/s]Loading weights:  44%|████▍     | 271/611 [00:01<00:02, 139.14it/s]Loading weights:  48%|████▊     | 293/611 [00:01<00:02, 135.19it/s]Loading weights:  53%|█████▎    | 326/611 [00:01<00:01, 170.83it/s]Loading weights:  57%|█████▋    | 347/611 [00:02<00:01, 138.54it/s]Loading weights:  60%|█████▉    | 364/611 [00:02<00:01, 129.28it/s]Loading weights:  64%|██████▎   | 388/611 [00:02<00:02, 110.70it/s]Loading weights:  67%|██████▋   | 412/611 [00:02<00:01, 131.28it/s]Loading weights:  71%|███████   | 434/611 [00:02<00:01, 128.00it/s]Loading weights:  73%|███████▎  | 449/611 [00:02<00:01, 131.37it/s]Loading weights:  76%|███████▌  | 464/611 [00:03<00:01, 110.84it/s]Loading weights:  78%|███████▊  | 477/611 [00:03<00:01, 108.51it/s]Loading weights:  81%|████████  | 493/611 [00:03<00:01, 117.51it/s]Loading weights:  83%|████████▎ | 506/611 [00:03<00:00, 115.85it/s]Loading weights:  86%|████████▌ | 525/611 [00:03<00:00, 132.59it/s]Loading weights:  88%|████████▊ | 540/611 [00:03<00:00, 134.92it/s]Loading weights:  91%|█████████ | 555/611 [00:03<00:00, 129.67it/s]Loading weights:  93%|█████████▎| 569/611 [00:03<00:00, 95.89it/s] Loading weights:  97%|█████████▋| 591/611 [00:04<00:00, 112.36it/s]Loading weights: 100%|██████████| 611/611 [00:04<00:00, 146.97it/s]
+[render_musicgen] model loaded in 6s
+[render_musicgen] segment 0: 3.0s rendered in 65s -> studio-runs/v4-proof-3/kitbuild/kick_t0.wav
+[render_musicgen] segment 1: 3.0s rendered in 55s -> studio-runs/v4-proof-3/kitbuild/kick_t1.wav
+[render_musicgen] segment 2: 3.0s rendered in 54s -> studio-runs/v4-proof-3/kitbuild/kick_t2.wav
+[render_musicgen] segment 3: 3.0s rendered in 45s -> studio-runs/v4-proof-3/kitbuild/kick_t3.wav
+[render_musicgen] segment 4: 3.0s rendered in 52s -> studio-runs/v4-proof-3/kitbuild/snare_t0.wav
+[render_musicgen] segment 5: 3.0s rendered in 40s -> studio-runs/v4-proof-3/kitbuild/snare_t1.wav
+[render_musicgen] segment 6: 3.0s rendered in 47s -> studio-runs/v4-proof-3/kitbuild/snare_t2.wav
+[render_musicgen] segment 7: 3.0s rendered in 46s -> studio-runs/v4-proof-3/kitbuild/snare_t3.wav
+[render_musicgen] segment 8: 3.0s rendered in 45s -> studio-runs/v4-proof-3/kitbuild/clap_t0.wav
+[render_musicgen] segment 9: 3.0s rendered in 50s -> studio-runs/v4-proof-3/kitbuild/clap_t1.wav
+[render_musicgen] segment 10: 3.0s rendered in 51s -> studio-runs/v4-proof-3/kitbuild/clap_t2.wav
+[render_musicgen] segment 11: 3.0s rendered in 49s -> studio-runs/v4-proof-3/kitbuild/clap_t3.wav
+[render_musicgen] segment 12: 3.0s rendered in 40s -> studio-runs/v4-proof-3/kitbuild/closed_hat_t0.wav
+[render_musicgen] segment 13: 3.0s rendered in 47s -> studio-runs/v4-proof-3/kitbuild/closed_hat_t1.wav
+[render_musicgen] segment 14: 3.0s rendered in 46s -> studio-runs/v4-proof-3/kitbuild/closed_hat_t2.wav
+[render_musicgen] segment 15: 3.0s rendered in 42s -> studio-runs/v4-proof-3/kitbuild/closed_hat_t3.wav
+[render_musicgen] segment 16: 3.0s rendered in 43s -> studio-runs/v4-proof-3/kitbuild/open_hat_t0.wav
+[render_musicgen] segment 17: 3.0s rendered in 48s -> studio-runs/v4-proof-3/kitbuild/open_hat_t1.wav
+[render_musicgen] segment 18: 3.0s rendered in 48s -> studio-runs/v4-proof-3/kitbuild/open_hat_t2.wav
+[render_musicgen] segment 19: 3.0s rendered in 49s -> studio-runs/v4-proof-3/kitbuild/open_hat_t3.wav
+[render_musicgen] segment 20: 3.0s rendered in 46s -> studio-runs/v4-proof-3/kitbuild/rimshot_t0.wav
+[render_musicgen] segment 21: 3.0s rendered in 45s -> studio-runs/v4-proof-3/kitbuild/rimshot_t1.wav
+[render_musicgen] segment 22: 3.0s rendered in 50s -> studio-runs/v4-proof-3/kitbuild/rimshot_t2.wav
+[render_musicgen] segment 23: 3.0s rendered in 46s -> studio-runs/v4-proof-3/kitbuild/rimshot_t3.wav
+[render_musicgen] segment 40: 3.0s rendered in 43s -> studio-runs/v4-proof-3/kitbuild/closed_hat_t4.wav
+[render_musicgen] segment 41: 3.0s rendered in 39s -> studio-runs/v4-proof-3/kitbuild/closed_hat_t5.wav
+[render_musicgen] segment 42: 3.0s rendered in 44s -> studio-runs/v4-proof-3/kitbuild/closed_hat_t6.wav
+[render_musicgen] segment 43: 3.0s rendered in 43s -> studio-runs/v4-proof-3/kitbuild/closed_hat_t7.wav
+[render_musicgen] segment 44: 3.0s rendered in 50s -> studio-runs/v4-proof-3/kitbuild/open_hat_t4.wav
+[render_musicgen] segment 45: 3.0s rendered in 44s -> studio-runs/v4-proof-3/kitbuild/open_hat_t5.wav
+[render_musicgen] finalized studio-runs/v4-proof-3/kit/bass29.wav (368318 bytes)
+[render_musicgen] finalized studio-runs/v4-proof-3/kit/bass32.wav (309726 bytes)
+[render_musicgen] finalized studio-runs/v4-proof-3/kit/bass37.wav (232040 bytes)
+[render_musicgen] finalized studio-runs/v4-proof-3/kit/bass39.wav (206730 bytes)
+[render_musicgen] finalized studio-runs/v4-proof-3/kit/clap.wav (42092 bytes)
+[render_musicgen] finalized studio-runs/v4-proof-3/kit/closed_hat.wav (423404 bytes)
+[render_musicgen] finalized studio-runs/v4-proof-3/kit/kick.wav (36044 bytes)
+[render_musicgen] finalized studio-runs/v4-proof-3/kit/open_hat.wav (423404 bytes)
+[render_musicgen] finalized studio-runs/v4-proof-3/kit/rimshot.wav (82412 bytes)
+[render_musicgen] finalized studio-runs/v4-proof-3/kit/snare.wav (423404 bytes)
+[render_musicgen] finalized studio-runs/v4-proof-3/kit/bass29.wav (368318 bytes)
+[render_musicgen] finalized studio-runs/v4-proof-3/kit/bass32.wav (309726 bytes)
+[render_musicgen] finalized studio-runs/v4-proof-3/kit/bass37.wav (232040 bytes)
+[render_musicgen] finalized studio-runs/v4-proof-3/kit/bass39.wav (206730 bytes)
+[render_musicgen] finalized studio-runs/v4-proof-3/kit/clap.wav (42092 bytes)
+[render_musicgen] finalized studio-runs/v4-proof-3/kit/closed_hat.wav (42524 bytes)
+[render_musicgen] finalized studio-runs/v4-proof-3/kit/kick.wav (36044 bytes)
+[render_musicgen] finalized studio-runs/v4-proof-3/kit/open_hat.wav (423404 bytes)
+[render_musicgen] finalized studio-runs/v4-proof-3/kit/rimshot.wav (82412 bytes)
+[render_musicgen] finalized studio-runs/v4-proof-3/kit/snare.wav (423404 bytes)
+[transformers] Model config: pad_token_id must be `None` or an integer within the vocabulary (between 0 and 2047), got 2048. This may result in unexpected behavior.
+[transformers] Model config: bos_token_id must be `None` or an integer within the vocabulary (between 0 and 2047), got 2048. This may result in unexpected behavior.
+Loading weights:   0%|          | 0/611 [00:00<?, ?it/s]Loading weights:   9%|▉         | 57/611 [00:00<00:01, 491.65it/s]Loading weights:  18%|█▊        | 107/611 [00:00<00:01, 334.60it/s]Loading weights:  23%|██▎       | 143/611 [00:00<00:01, 260.17it/s]Loading weights:  28%|██▊       | 172/611 [00:00<00:01, 244.25it/s]Loading weights:  32%|███▏      | 198/611 [00:00<00:02, 153.98it/s]Loading weights:  37%|███▋      | 226/611 [00:01<00:02, 174.88it/s]Loading weights:  41%|████      | 248/611 [00:01<00:02, 171.41it/s]Loading weights:  45%|████▍     | 273/611 [00:01<00:01, 176.64it/s]Loading weights:  48%|████▊     | 293/611 [00:01<00:01, 173.51it/s]Loading weights:  51%|█████     | 312/611 [00:01<00:01, 169.92it/s]Loading weights:  54%|█████▍    | 330/611 [00:02<00:03, 88.51it/s] Loading weights:  64%|██████▍   | 390/611 [00:02<00:01, 160.00it/s]Loading weights:  68%|██████▊   | 414/611 [00:02<00:01, 148.84it/s]Loading weights:  71%|███████   | 435/611 [00:02<00:01, 137.03it/s]Loading weights:  74%|███████▍  | 453/611 [00:02<00:01, 124.91it/s]Loading weights:  77%|███████▋  | 469/611 [00:02<00:01, 113.78it/s]Loading weights:  80%|███████▉  | 488/611 [00:03<00:00, 125.53it/s]Loading weights:  82%|████████▏ | 503/611 [00:03<00:00, 110.04it/s]Loading weights:  86%|████████▋ | 527/611 [00:03<00:00, 114.56it/s]Loading weights:  90%|████████▉ | 549/611 [00:03<00:00, 112.04it/s]Loading weights:  94%|█████████▍| 574/611 [00:03<00:00, 137.12it/s]Loading weights:  97%|█████████▋| 594/611 [00:03<00:00, 149.96it/s]Loading weights: 100%|██████████| 611/611 [00:03<00:00, 156.75it/s]
+[render_musicgen] model loaded in 6s
+[render_musicgen] segment 0: 18.0s rendered in 347s -> /home/hatch/workspace/resonance/studio-runs/v4-proof-3/seg00.wav
+[render_musicgen] segment 1: 18.0s rendered in 327s -> /home/hatch/workspace/resonance/studio-runs/v4-proof-3/seg01.wav (continued from 0)
+[render_musicgen] segment 2: 18.0s rendered in 314s -> /home/hatch/workspace/resonance/studio-runs/v4-proof-3/seg02.wav (continued from 1)
+[render_musicgen] segment 3: 18.0s rendered in 320s -> /home/hatch/workspace/resonance/studio-runs/v4-proof-3/seg03.wav (continued from 2)
+[render_musicgen] segment 4: 18.0s rendered in 322s -> /home/hatch/workspace/resonance/studio-runs/v4-proof-3/seg04.wav (continued from 3)
+[transformers] Model config: pad_token_id must be `None` or an integer within the vocabulary (between 0 and 2047), got 2048. This may result in unexpected behavior.
+[transformers] Model config: bos_token_id must be `None` or an integer within the vocabulary (between 0 and 2047), got 2048. This may result in unexpected behavior.
+Loading weights:   0%|          | 0/611 [00:00<?, ?it/s]Loading weights:  13%|█▎        | 78/611 [00:00<00:00, 640.69it/s]Loading weights:  23%|██▎       | 143/611 [00:00<00:01, 274.21it/s]Loading weights:  30%|██▉       | 181/611 [00:00<00:01, 247.94it/s]Loading weights:  35%|███▍      | 211/611 [00:00<00:02, 196.06it/s]Loading weights:  38%|███▊      | 234/611 [00:01<00:02, 171.54it/s]Loading weights:  42%|████▏     | 254/611 [00:01<00:02, 169.96it/s]Loading weights:  45%|████▍     | 273/611 [00:01<00:02, 143.40it/s]Loading weights:  49%|████▉     | 299/611 [00:01<00:01, 165.06it/s]Loading weights:  52%|█████▏    | 318/611 [00:01<00:01, 154.81it/s]Loading weights:  56%|█████▋    | 345/611 [00:01<00:01, 180.17it/s]Loading weights:  60%|█████▉    | 365/611 [00:01<00:01, 154.56it/s]Loading weights:  63%|██████▎   | 383/611 [00:02<00:01, 133.07it/s]Loading weights:  65%|██████▌   | 398/611 [00:02<00:01, 123.70it/s]Loading weights:  67%|██████▋   | 412/611 [00:02<00:01, 104.75it/s]Loading weights:  70%|███████   | 429/611 [00:02<00:01, 112.79it/s]Loading weights:  72%|███████▏  | 442/611 [00:02<00:01, 109.97it/s]Loading weights:  76%|███████▌  | 464/611 [00:02<00:01, 128.84it/s]Loading weights:  78%|███████▊  | 478/611 [00:03<00:01, 113.39it/s]Loading weights:  81%|████████  | 492/611 [00:03<00:01, 106.33it/s]Loading weights:  82%|████████▏ | 504/611 [00:03<00:01, 105.16it/s]Loading weights:  86%|████████▌ | 526/611 [00:03<00:00, 131.54it/s]Loading weights:  89%|████████▊ | 541/611 [00:03<00:00, 116.24it/s]Loading weights:  91%|█████████ | 554/611 [00:03<00:00, 118.92it/s]Loading weights:  93%|█████████▎| 567/611 [00:03<00:00, 117.04it/s]Loading weights:  96%|█████████▋| 589/611 [00:03<00:00, 141.22it/s]Loading weights:  99%|█████████▉| 604/611 [00:04<00:00, 140.18it/s]Loading weights: 100%|██████████| 611/611 [00:04<00:00, 152.32it/s]
+[render_musicgen] model loaded in 6s
+[render_musicgen] segment 5: 18.0s rendered in 376s -> /home/hatch/workspace/resonance/studio-runs/v4-proof-3/seg05.wav (continued from 4)
+[render_musicgen] segment 6: 18.0s rendered in 385s -> /home/hatch/workspace/resonance/studio-runs/v4-proof-3/seg06.wav (continued from 5)
+[render_musicgen] segment 7: 18.0s rendered in 483s -> /home/hatch/workspace/resonance/studio-runs/v4-proof-3/seg07.wav (continued from 6)
+[render_musicgen] segment 8: 18.0s rendered in 425s -> /home/hatch/workspace/resonance/studio-runs/v4-proof-3/seg08.wav (continued from 7)
+[render_musicgen] segment 9: 18.0s rendered in 436s -> /home/hatch/workspace/resonance/studio-runs/v4-proof-3/seg09.wav (continued from 8)
+[render_musicgen] segment 10: 18.0s rendered in 481s -> /home/hatch/workspace/resonance/studio-runs/v4-proof-3/seg10.wav (continued from 9)
+[render_musicgen] segment 11: 18.0s rendered in 454s -> /home/hatch/workspace/resonance/studio-runs/v4-proof-3/seg11.wav (continued from 10)
+[render_musicgen] finalized /home/hatch/workspace/resonance/studio-runs/v4-proof-3/master.wav (47396618 bytes)
+[render_musicgen] finalized /home/hatch/workspace/resonance/studio-runs/v4-proof-3/sigma.wav (47396618 bytes)

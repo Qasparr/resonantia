@@ -1,0 +1,99 @@
+X:1
+T:VELVET HAMMER (Instrumental) — Studio Proof No. 3: the house layer, notated
+C:Johnathan 'Qasparr' Monroe, ARR, All Rights Reserved, Without Prejudice
+R:Detroit bounce, 140 BPM, F minor
+M:4/4
+L:1/16
+K:Fmin
+%
+% WHAT THIS SHEET IS -- AND IS NOT (the founder's rule, kept):
+% This notation covers EXACTLY what the house engine composed
+% and struck: the rhythmic spine -- in this proof a SAMPLED KIT
+% of rendered one-shots placed by resonance.studio.spine -- the
+% composed violin arpeggio (resonance.studio.arpeggio), and the
+% Sigma binaural ground (resonance.binaural). The MusicGen bed
+% is NOT transcribed here: its transcription is a separate
+% production, still owed, and no sheet for it has been fabricated.
+% What the bed WAS told, in every section, stands below as the
+% motif: the same repeating five-note F minor piano motif (F, A-flat, G, F, E-flat)
+%
+% THE GRID: 140 BPM, 48 kHz. One bar = 82,285.71 samples of float truth;
+% the program is bars_to_samples(96) = 7,899,429 samples = 164.571 s, one rounding at
+% the total. Swing 0.12 on spine and dancer alike. Stitch
+% crossfades are 2 WHOLE BARS each, on bar lines. The bed
+% is CHAINED: each section generated continued from its predecessor's
+% tail (5.0 s of audio conditioning).
+%
+% SECTION CHART (spine truth; modes = the arpeggio's realization):
+%   intro     bars   1-8   sparse   arp:statement        0.0 -  13.7
+%   hook      bars   9-16  full     arp:runs            13.7 -  27.4
+%   verse1    bars  17-32  driving  arp:bariolage       27.4 -  54.9
+%   hook      bars  33-40  full     arp:runs            54.9 -  68.6
+%   feature   bars  41-56  open     arp:runs            68.6 -  96.0
+%   hook      bars  57-64  full     arp:runs            96.0 - 109.7
+%   verse2    bars  65-80  driving  arp:bariolage      109.7 - 137.1
+%   hook_out  bars  81-88  full     arp:runs           137.1 - 150.9
+%   outro     bars  89-96  sparse   arp:statement_fade 150.9 - 164.6
+%
+% THE KIT -- rendered one-shots, selected by measurement
+% (resonance.studio.kit; provenance per voice; full take metrics
+% stand in kit/kit_manifest.json):
+%   kick        from kick_t1.wav (first hit cut from a looped take): 13 hit region(s), decay 0.208 s, tail -34.41 dB rel peak, tonality 0.212
+%   snare       from snare_t1.wav (best of an imperfect field (single hit, flaws in the metrics)): 1 hit region(s), decay 1.835 s, tail -45.05 dB rel peak, tonality 0.154
+%   clap        from clap_t0.wav (first hit cut from a looped take): 2 hit region(s), decay 0.252 s, tail -30.45 dB rel peak, tonality 0.167
+%   closed_hat  from kit-fallback/closed_hat.wav (license-clean fallback -- rendered isolation failed for this voice (every take in all_takes failed the usability bar)): 1 hit region(s), decay 0.175 s, tail -69.73 dB rel peak, tonality 0.925
+%   open_hat    from open_hat_t3.wav (best of an imperfect field (single hit, flaws in the metrics)): 1 hit region(s), decay 2.939 s, tail -26.86 dB rel peak, tonality 0.221
+%   rimshot     from rimshot_t1.wav (first hit cut from a looped take): 6 hit region(s), decay 0.576 s, tail -23.25 dB rel peak, tonality 0.65
+%   bass29      from bass37_t2.wav (derived from the best measured 808 take by exact rate shift): source struck 44.55 Hz, replayed at -0.35 semitones -- lands on this root exact
+%               provenance: rendered one-shot bass37_t2.wav (measured 44.55 Hz = MIDI 29.35) replayed at -0.35 semitones (exact sampler rate shift) to F; one rendered timbre carries all four roots, each landed on true pitch
+%   bass32      from bass37_t2.wav (derived from the best measured 808 take by exact rate shift): source struck 44.55 Hz, replayed at +2.65 semitones -- lands on this root exact
+%               provenance: rendered one-shot bass37_t2.wav (measured 44.55 Hz = MIDI 29.35) replayed at +2.65 semitones (exact sampler rate shift) to A flat; one rendered timbre carries all four roots, each landed on true pitch
+%   bass37      from bass37_t2.wav (derived from the best measured 808 take by exact rate shift): source struck 44.55 Hz, replayed at +7.65 semitones -- lands on this root exact
+%               provenance: rendered one-shot bass37_t2.wav (measured 44.55 Hz = MIDI 29.35) replayed at +7.65 semitones (exact sampler rate shift) to D flat; one rendered timbre carries all four roots, each landed on true pitch
+%   bass39      from bass37_t2.wav (derived from the best measured 808 take by exact rate shift): source struck 44.55 Hz, replayed at +9.65 semitones -- lands on this root exact
+%               provenance: rendered one-shot bass37_t2.wav (measured 44.55 Hz = MIDI 29.35) replayed at +9.65 semitones (exact sampler rate shift) to E flat; one rendered timbre carries all four roots, each landed on true pitch
+% Drum hits ring out naturally (sampler placement); the 808 is GATED
+% to each event's written length with a 30 ms release, as the synth
+% voice sustained them in earlier proofs.
+%
+% DRUM PATTERNS -- one bar of 16 steps per density (see spine.py;
+% steps are 1-based; the last bar of a full / driving section is a
+% FILL: hats and kick step back, snare walks 13-16 at .5/.65/.8/1.0):
+% SPARSE: kick 1; closed_hat 1 9; 808 1(12).
+% DRIVING: kick 1 9 11; snare 5 13; closed_hat 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16; 808 1(4) 4(1) 7(2) 9(4) 11(2) 13(3).
+% FULL: kick 1 7 9 15; clap 5 13; closed_hat 1 3 5 7 9 11 13 15; 808 1(6) 7(2) 9(6).
+% OPEN: kick 1 9; snare 5 13; closed_hat 1 3 5 7 9 11 13 15; 808 1(8) 9(6).
+% THE 808 MOVEMENT: F - Db - Ab - Eb (i - VI - III - VII), roots
+% MIDI 29 / 37 / 32 / 39, restarting at the tonic each section.
+F,,4|Db,4|Ab,,4|Eb,4|]
+%
+% THE ARPEGGIO -- the dancer. Composed from the SOLFEGGIO LADDER,
+% played at its equal-tempered staff approximations; each carrier's
+% cents offset from its staff pitch is stated, never smoothed:
+%   UT   396 Hz -> G   (MIDI 67, 392.0 Hz) +17.6 cents
+%   RE   417 Hz -> ^G  (MIDI 68, 415.3 Hz) +7.1 cents
+%   MI   528 Hz -> c   (MIDI 72, 523.25 Hz) +15.6 cents
+%   FA   639 Hz -> _e  (MIDI 75, 622.25 Hz) +46.0 cents
+%   SOL  741 Hz -> ^f  (MIDI 78, 739.99 Hz) +2.4 cents
+%   LA   852 Hz -> ^g  (MIDI 80, 830.61 Hz) +44.0 cents
+% Phrasing is Fibonacci -- phrase lengths 1, 1, 2, 3, 5, 8 climbing
+% the ladder cyclically. THE FIGURE (one cell, 20 notes, L:1/16):
+G ^G c _e ^f ^g G ^G c _e ^f ^g G ^G c _e ^f ^g G ^G |
+% BARIOLAGE (verses): the figure alternating with the MI pedal, 8ths --
+% the first bar as composed:
+G c ^G c c c _e c ^f c ^g c G c ^G c |
+% RUNS (hooks / feature): the figure cell at 16ths, phrase heads
+% accented, tiling the section. STATEMENT (intro): the figure at
+% 8th spacing, phrase-final notes held; the outro's statement fades.
+%
+% THE SIGMA GROUND: two pure carriers, 200.0 Hz left / 213.0 Hz
+% right (13.0 Hz separation), struck by resonance.binaural at
+% -28 dB under the bed's RMS, never processed by the Stereo Law.
+% THE STEREO LAW: spine panned by role (kick / 808 center, snare /
+% clap within +/-0.15, hats and rimshot wide), bed widened by band
+% above 180 Hz with the mid preserved exactly and the lows mono,
+% Sigma untouched. Correlations stand measured in the manifest.
+%
+% SALVAGE FROM PROOF No. 2 (v3): auditioned by measurement and
+% DECLINED -- see the run report. No fragment of the older record
+% stands in this one.

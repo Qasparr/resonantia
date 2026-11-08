@@ -1,0 +1,45 @@
+[kit] take bass29_t0.wav already rendered -- resuming
+[kit] take bass29_t1.wav already rendered -- resuming
+[kit] take bass29_t2.wav already rendered -- resuming
+[kit] take bass29_t3.wav already rendered -- resuming
+[kit] take bass32_t0.wav already rendered -- resuming
+[kit] take bass32_t1.wav already rendered -- resuming
+[kit] take bass32_t2.wav already rendered -- resuming
+[kit] take bass32_t3.wav already rendered -- resuming
+[kit] take bass37_t0.wav already rendered -- resuming
+[kit] take bass37_t1.wav already rendered -- resuming
+[kit] take bass37_t2.wav already rendered -- resuming
+[kit] take bass37_t3.wav already rendered -- resuming
+[kit] take bass39_t0.wav already rendered -- resuming
+[kit] take bass39_t1.wav already rendered -- resuming
+[kit] take bass39_t2.wav already rendered -- resuming
+[kit] take bass39_t3.wav already rendered -- resuming
+[kit] rendering 30 one-shot takes via the bridge...
+[kit] kit struck: 10 samples in studio-runs/v4-proof-3/kit
+{
+  "ok": true,
+  "voices": [
+    "bass29",
+    "bass32",
+    "bass37",
+    "bass39",
+    "clap",
+    "closed_hat",
+    "kick",
+    "open_hat",
+    "rimshot",
+    "snare"
+  ],
+  "files": {
+    "kick.wav": "studio-runs/v4-proof-3/kit/kick.wav",
+    "snare.wav": "studio-runs/v4-proof-3/kit/snare.wav",
+    "clap.wav": "studio-runs/v4-proof-3/kit/clap.wav",
+    "closed_hat.wav": "studio-runs/v4-proof-3/kit/closed_hat.wav",
+    "open_hat.wav": "studio-runs/v4-proof-3/kit/open_hat.wav",
+    "rimshot.wav": "studio-runs/v4-proof-3/kit/rimshot.wav",
+    "bass29.wav": "studio-runs/v4-proof-3/kit/bass29.wav",
+    "bass32.wav": "studio-runs/v4-proof-3/kit/bass32.wav",
+    "bass37.wav": "studio-runs/v4-proof-3/kit/bass37.wav",
+    "bass39.wav": "studio-runs/v4-proof-3/kit/bass39.wav"
+  }
+}

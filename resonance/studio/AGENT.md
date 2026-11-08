@@ -115,7 +115,8 @@ median, 50–1000 Hz) — `carriers_hz: [left, right]`.
     "swing":     "number, default 0.0, range 0..0.6 (off-step delay)",
     "root_midi": "int, default 29 (F1), range 12..60 — the 808 root",
     "sections":  [{"name": "string", "bars": "positive int, REQUIRED",
-                   "density": "sparse | driving | full | open"}]
+                   "density": "sparse | driving | full | open"}],
+    "samples":   "object, optional — a RENDERED one-shot kit (see 'The sampled kit' below). Keys: one WAV path per drum voice (kick, snare, clap, closed_hat, open_hat, rimshot) plus \"bass808\": {\"<chord-root MIDI>\": path} covering every root of the chord cycle from root_midi. Present, the spine synthesizes NOTHING."
   },
   "stereo": {
     "width": "number, range 0..1 — how far the mono bed is widened. Default: 1.0 when a spine is present, 0.0 otherwise. An explicit value always outranks the default."
@@ -155,6 +156,25 @@ Rules the validator enforces (violations return a named error):
 `out_dir` present. The full prompt for section *i* is
 `prompt_base + ", " + prompt_suffix` (or `prompt_base` alone when
 the suffix is empty) — plus the motif, when one is set.
+
+**The sampled kit (optional, inside `spine`).** The founder's ear
+has condemned note-by-note synthesis three times and passed
+rendered audio every time, so Proof No. 3's spine is a SAMPLER:
+with `spine.samples` set, every hit is a rendered one-shot (built
+by `resonance.studio.kit` — MusicGen renders several isolated-hit
+takes per voice, each take is measured for single onset, clean
+decay, tail silence and, for the 808s, struck pitch, and the winner
+is struck as a 48 kHz WAV with its metrics in `kit_manifest.json`)
+placed on the identical grid — same swing, same role pans; drum
+hits ring out, the 808 is gated to its written event length.
+Sampled mode is all-or-nothing BY LAW: a `samples` block missing
+any voice or chord root is refused at validation naming the field,
+an unloadable or wrong-rate file is refused at load, and an
+incomplete in-memory kit is refused at render — the spine NEVER
+falls back to the synth voices to fill a hole. Specs without
+`samples` take the synthesis road exactly as before. A sampled
+run's manifest spine block carries `"kit"` with the sample paths
+and the kit manifest (provenance + per-take metrics).
 
 **The chain (optional).** The stronger form of the same cure,
 learned from how Lyria assembles tracks (plan the sections, then

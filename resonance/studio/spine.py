@@ -21,6 +21,18 @@
 # The spine supplies the clock. The founder refused tempo surgery
 # on the bed; instead the house engine owns the rhythmic spine,
 # and the arithmetic closes to the sample.
+#
+# THE SAMPLED MODE (Proof No. 3, the founder's verdict law): every
+# note-by-note SYNTHESIZED voice has failed the founder's ear
+# ("sounds MIDI"); every RENDERED layer has passed. So a spine
+# spec may carry a "samples" block -- paths to a rendered one-shot
+# kit (resonance.studio.kit) -- and then this module is a SAMPLER:
+# it places struck audio on the same grid and synthesizes nothing.
+# Sampled mode is all-or-nothing BY LAW: a samples block missing a
+# voice or a chord root is REFUSED at validation, and a kit short
+# a voice at render is refused -- the code never falls back to the
+# synth voices to fill a hole. The synth road remains for specs
+# that do not ask for samples, exactly as it was proved.
 # ---------------------------------------------------------------------
 
 import math
@@ -42,6 +54,12 @@ CHORD_CYCLE = (0, 8, 3, 10)
 DENSITIES = ("sparse", "driving", "full", "open")
 
 DEFAULT_ROOT_MIDI = 29  # F1: the root of F minor, where the song lives.
+
+# The voices a sampled kit must carry -- the same names the pattern
+# table speaks. In sampled mode every one is required; there is no
+# partial kit, by the law stated in the header.
+KIT_VOICES = ("kick", "snare", "clap", "closed_hat", "open_hat",
+              "rimshot")
 
 
 # ---------------------------------------------------------------------
@@ -257,8 +275,47 @@ def normalize_spine_spec(raw):
                 f"{DENSITIES}")
         norm.append({"name": str(sec.get("name", f"spine{i + 1}")),
                      "bars": bars, "density": density})
-    return {"bpm": bpm, "swing": swing, "root_midi": root,
-            "beats_per_bar": 4, "sections": norm}
+    out = {"bpm": bpm, "swing": swing, "root_midi": root,
+           "beats_per_bar": 4, "sections": norm}
+    # The sampled kit: present, the spine is a sampler and NOTHING
+    # is synthesized; the block must name every voice the patterns
+    # speak and an 808 sample for every root the chord cycle walks
+    # from this spec's root. A hole is a refusal, never a fallback.
+    samples = raw.get("samples")
+    if samples is not None:
+        if not isinstance(samples, dict):
+            raise ValueError("spine.samples: must be an object")
+        unknown = set(samples) - set(KIT_VOICES) - {"bass808"}
+        if unknown:
+            raise ValueError(
+                f"spine.samples: unknown keys {sorted(unknown)}")
+        norm_samples = {}
+        for voice in KIT_VOICES:
+            path = samples.get(voice)
+            if not isinstance(path, str) or not path.strip():
+                raise ValueError(
+                    f"spine.samples.{voice}: a sample path is "
+                    f"required -- sampled mode never falls back "
+                    f"to synthesis")
+            norm_samples[voice] = path
+        bass_raw = samples.get("bass808")
+        if not isinstance(bass_raw, dict):
+            raise ValueError(
+                "spine.samples.bass808: must be an object mapping "
+                "chord-root MIDI to a sample path")
+        bass = {}
+        for midi in sorted({root + off for off in CHORD_CYCLE}):
+            path = bass_raw.get(str(midi))
+            if not isinstance(path, str) or not path.strip():
+                raise ValueError(
+                    f"spine.samples.bass808[{midi}]: a sample "
+                    f"path is required for chord root MIDI {midi} "
+                    f"-- sampled mode never falls back to "
+                    f"synthesis")
+            bass[str(midi)] = path
+        norm_samples["bass808"] = bass
+        out["samples"] = norm_samples
+    return out
 
 
 def total_bars(spine):
@@ -292,10 +349,134 @@ def trim_spine_spec(spine, max_bars):
 
 
 # ---------------------------------------------------------------------
+# The sampled kit: load struck audio, or refuse.
+# ---------------------------------------------------------------------
+
+def _read_wav_mono(path):
+    """Read a PCM WAV -> (mono float64 in [-1, 1], sample rate).
+
+    MECHANISM: stdlib wave + numpy, the pipeline reader's twin,
+    kept local so this module imports nothing from the pipeline
+    (the pipeline imports THIS module; the wall stands). Stereo
+    folds to mono by the channel mean -- a kit hit is one sound,
+    wherever it was standing.
+    """
+    import wave
+    with wave.open(str(path), "rb") as w:
+        channels, width, sr, frames = (w.getnchannels(),
+                                       w.getsampwidth(),
+                                       w.getframerate(),
+                                       w.getnframes())
+        raw = w.readframes(frames)
+    if width == 2:
+        data = np.frombuffer(raw, dtype="<i2").astype(np.float64) \
+            / 32768.0
+    elif width == 3:
+        b = np.frombuffer(raw, dtype=np.uint8).reshape(-1, 3) \
+            .astype(np.int32)
+        vals = b[:, 0] | (b[:, 1] << 8) | (b[:, 2] << 16)
+        vals = np.where(vals >= 1 << 23, vals - (1 << 24), vals)
+        data = vals.astype(np.float64) / 8388608.0
+    elif width == 4:
+        data = np.frombuffer(raw, dtype="<i4").astype(np.float64) \
+            / 2147483648.0
+    else:
+        raise ValueError(f"{path}: unsupported sample width {width}")
+    data = data.reshape(-1, channels)
+    return data.mean(axis=1), sr
+
+
+def load_kit(samples, sr):
+    """Load a normalized spec's samples block into memory.
+
+    Returns {"voices": {name: float64 mono}, "bass": {midi: mono}}.
+    MECHANISM: every path is opened, rate-checked against the
+    render rate (a kit struck at another rate is refused, not
+    quietly mis-pitched), and read whole. Any failure raises a
+    ValueError naming the voice and the path -- the render that
+    follows this load either has its full kit or does not happen.
+    """
+    voices = {}
+    for name in KIT_VOICES:
+        path = samples[name]
+        try:
+            arr, file_sr = _read_wav_mono(path)
+        except Exception as exc:
+            raise ValueError(
+                f"spine.samples.{name}: cannot load {path}: {exc}")
+        if file_sr != int(sr):
+            raise ValueError(
+                f"spine.samples.{name}: {path} is {file_sr} Hz, "
+                f"the spine renders at {sr} -- strike the kit at "
+                f"the render rate")
+        if arr.size == 0:
+            raise ValueError(
+                f"spine.samples.{name}: {path} is empty")
+        voices[name] = arr
+    bass = {}
+    for key, path in samples["bass808"].items():
+        try:
+            arr, file_sr = _read_wav_mono(path)
+        except Exception as exc:
+            raise ValueError(
+                f"spine.samples.bass808[{key}]: cannot load "
+                f"{path}: {exc}")
+        if file_sr != int(sr):
+            raise ValueError(
+                f"spine.samples.bass808[{key}]: {path} is "
+                f"{file_sr} Hz, the spine renders at {sr}")
+        if arr.size == 0:
+            raise ValueError(
+                f"spine.samples.bass808[{key}]: {path} is empty")
+        bass[int(key)] = arr
+    return {"voices": voices, "bass": bass}
+
+
+def _check_kit(kit, root_midi):
+    """Refuse a kit that cannot cover the arrangement, by name.
+
+    MECHANISM: the no-fallback law at render time -- every pattern
+    voice and every chord root the cycle will visit must be in the
+    kit, or the render does not start. A partial kit is not a kit.
+    """
+    voices = kit.get("voices") or {}
+    for name in KIT_VOICES:
+        arr = voices.get(name)
+        if arr is None or len(arr) == 0:
+            raise ValueError(
+                f"kit.voices.{name}: missing or empty -- sampled "
+                f"mode never falls back to synthesis")
+    bass = kit.get("bass") or {}
+    for midi in sorted({root_midi + off for off in CHORD_CYCLE}):
+        arr = bass.get(midi)
+        if arr is None or len(arr) == 0:
+            raise ValueError(
+                f"kit.bass[{midi}]: missing or empty -- sampled "
+                f"mode never falls back to synthesis")
+
+
+def _gate_sample(buf, n_samples, sr):
+    """Cut a sample to `n_samples` with a 30 ms release fade.
+
+    MECHANISM: the 808's held lengths are compositional (the synth
+    voice sustained exactly the event's steps); a struck sample
+    that rings past its event is CUT to the event, the way a
+    sampler's envelope gate cuts it -- the release ramp keeps the
+    cut from clicking. Shorter samples pass untouched.
+    """
+    if buf.shape[0] <= n_samples:
+        return buf
+    out = buf[:n_samples].copy()
+    rel = min(out.shape[0], max(1, int(0.030 * sr)))
+    out[-rel:] *= np.linspace(1.0, 0.0, rel)
+    return out
+
+
+# ---------------------------------------------------------------------
 # The render itself.
 # ---------------------------------------------------------------------
 
-def render_spine(spine, sr=48000, pan_fn=None):
+def render_spine(spine, sr=48000, pan_fn=None, kit=None):
     """Render the spine: float64 stereo (2, N), N exact by the grid.
 
     MECHANISM: hits are placed at round(global_step * step_float),
@@ -311,6 +492,14 @@ def render_spine(spine, sr=48000, pan_fn=None):
     1.0 is normalized to 0.95, the sequencer's own convention; a
     quieter spine keeps its dynamics.
 
+    SAMPLED MODE: with `kit` (see load_kit), every hit is the kit's
+    struck sample scaled by the pattern velocity, and the bass is
+    the kit's 808 for the bar's chord root, gated to the event's
+    length. The placement arithmetic is IDENTICAL -- same grid,
+    same swing, same pans -- only the voice's origin changes: from
+    synthesis to sample. _check_kit runs first; an incomplete kit
+    refuses the render outright.
+
     STEREO LAW: each hit is placed through `pan_fn(voice, step_pos)`
     (default role_pan) as constant-power gains. The pan scales the
     placed waveform per channel; the offset `at` is computed first
@@ -319,6 +508,8 @@ def render_spine(spine, sr=48000, pan_fn=None):
     dual-mono render (the tests weigh precisely that).
     """
     spine = normalize_spine_spec(spine)
+    if kit is not None:
+        _check_kit(kit, spine["root_midi"])
     bpm, sr = spine["bpm"], int(sr)
     n = spine_samples(spine, sr)
     mix = np.zeros((2, n), dtype=np.float64)
@@ -356,12 +547,21 @@ def render_spine(spine, sr=48000, pan_fn=None):
                         continue
                     at = int(round((global_step + step) * step_float
                                    + (swing_late if step % 2 else 0.0)))
-                    place(hit(voice, vel), at,
-                          pan_fn(voice, global_step + step))
+                    if kit is not None:
+                        struck = kit["voices"][voice] * float(vel)
+                        place(struck, at,
+                              pan_fn(voice, global_step + step))
+                    else:
+                        place(hit(voice, vel), at,
+                              pan_fn(voice, global_step + step))
             for step, length in bass:
                 at = int(round((global_step + step) * step_float
                                + (swing_late if step % 2 else 0.0)))
-                note = bass808(root, length * step_float / sr, sr)
+                if kit is not None:
+                    n_ev = int(round(length * step_float))
+                    note = _gate_sample(kit["bass"][root], n_ev, sr)
+                else:
+                    note = bass808(root, length * step_float / sr, sr)
                 place(note, at)  # the 808 never leaves the center
             global_step += STEPS_PER_BAR
     peak = float(np.max(np.abs(mix))) if n else 0.0
@@ -373,7 +573,9 @@ def render_spine(spine, sr=48000, pan_fn=None):
 __all__ = [
     "CHORD_CYCLE",
     "DENSITIES",
+    "KIT_VOICES",
     "bass808",
+    "load_kit",
     "normalize_spine_spec",
     "render_spine",
     "role_pan",
