@@ -43,3 +43,14 @@ session, by this project's founder's memory. The record keeps the
 address where the finding happened.
 
 93 — Live, Love, and let Love, Live.
+
+---
+
+## ADDENDUM (same night, 19:43 EST) — the --retro rule
+
+Ordered while this finding was being filed: RESONANTIA keeps its
+16-bit MIDI/soundfont capabilities intact behind a **--retro flag** —
+notifications, ringtones, retro game soundtracks and sound FX. The
+voice the founder refused for rap is the voice he keeps for the
+short-form kingdom. Default stays HD; retro is opt-in, never for
+rap/HD deliverables.
