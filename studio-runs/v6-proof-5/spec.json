@@ -1,0 +1,67 @@
+{
+  "title": "TAKE TWO",
+  "prompt_base": "detroit bounce hip hop instrumental in F minor, energetic bouncing groove, deep rolling 808 bass, crisp drums with a live played feel, a virtuoso violin playing fast Paganini-style arpeggios dancing over the groove throughout, eerie minor-key piano motif, warm soulful strings, dusty vinyl warmth, one continuous live performance that keeps developing",
+  "performance": {
+    "takes": 8,
+    "take_seconds": 30.0,
+    "continue_seconds": 5.0,
+    "warmup_takes": 1,
+    "single_session": true
+  },
+  "seed": 777,
+  "stereo": {
+    "width": 1.0
+  },
+  "master": {
+    "target_lufs": -14.0,
+    "ceiling_dbtp": -1.0
+  },
+  "out_dir": "studio-runs/v6-proof-5",
+  "sections": [
+    {
+      "name": "take1",
+      "prompt_suffix": "",
+      "seconds": 30.0
+    },
+    {
+      "name": "take2",
+      "prompt_suffix": "",
+      "seconds": 30.0
+    },
+    {
+      "name": "take3",
+      "prompt_suffix": "",
+      "seconds": 30.0
+    },
+    {
+      "name": "take4",
+      "prompt_suffix": "",
+      "seconds": 30.0
+    },
+    {
+      "name": "take5",
+      "prompt_suffix": "",
+      "seconds": 30.0
+    },
+    {
+      "name": "take6",
+      "prompt_suffix": "",
+      "seconds": 30.0
+    },
+    {
+      "name": "take7",
+      "prompt_suffix": "",
+      "seconds": 30.0
+    },
+    {
+      "name": "take8",
+      "prompt_suffix": "",
+      "seconds": 30.0
+    }
+  ],
+  "sigma": {
+    "left_hz": 200.0,
+    "right_hz": 213.0,
+    "gain_db": -28.0
+  }
+}

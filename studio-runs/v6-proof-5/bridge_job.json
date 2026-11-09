@@ -1,0 +1,10 @@
+{
+  "finalize": [
+    {
+      "npy": "studio-runs/v6-proof-5/_master_float.npy",
+      "out": "studio-runs/v6-proof-5/master.wav",
+      "sample_rate": 48000,
+      "subtype": "PCM_24"
+    }
+  ]
+}

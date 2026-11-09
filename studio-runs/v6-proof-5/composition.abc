@@ -1,0 +1,59 @@
+X:1
+T:TAKE TWO: the performance, unaccompanied
+C:Johnathan 'Qasparr' Monroe, ARR, All Rights Reserved, Without Prejudice
+R:Detroit bounce, F minor -- tempo the performance's own: measured 88.36 BPM
+M:4/4
+L:1/16
+K:Fmin
+%
+% WHAT THIS SHEET IS -- AND IS NOT (the founder's rule, kept):
+% NO notation stands on this sheet, and that is the honest state
+% of the record. Nothing was composed over this performance:
+% no arpeggio layer, no Sigma, no spine, no kit -- the founder's
+% ruling after Proof No. 4: IF IT ISN'T IN THE PERFORMANCE, IT
+% ISN'T IN THE TRACK. The Paganini line stands in the prompt
+% below, and the performance played it as part of its own body.
+% The transcription of the performance itself -- violin line
+% included -- is a SEPARATE PRODUCTION, still OWED, and no
+% sheet for it has been fabricated.
+% What the performance was told stands below, verbatim, ONCE --
+% the single invariant prompt of the seed take and every
+% continuation:
+%   detroit bounce hip hop instrumental in F minor, energetic bouncing groove, deep rolling 808 bass, crisp drums with a live played feel, a virtuoso violin playing fast Paganini-style arpeggios dancing over the groove throughout, eerie minor-key piano motif, warm soulful strings, dusty vinyl warmth, one continuous live performance that keeps developing
+%
+% THE SESSION: the whole chain -- 8 takes -- was born in
+% ONE bridge process, every continuation conditioned on the preceding
+% audio IN MEMORY. No take was resumed from disk; an interrupted chain
+% is void by rule, and the session guard weighed this chain before
+% the splice was allowed.
+% THE WARM-UP: 1 leading take(s) were struck and
+% DISCARDED -- their audio is nowhere in this program. The warm-up's
+% own measured tempo: 96.57 BPM. The kept program
+% opens at kept take 1 (29.94 s into the chain).
+% THE PERFORMANCE: 8 takes struck, 209.6 s of kept
+% program, each extension generated CONTINUED from the preceding audio
+% (5.0 s of conditioning) -- the model plays through
+% every join. The kept takes are spliced DIRECTLY: no crossfade,
+% no RMS matching, no grid, no trim.
+%
+% THE JOINS, WEIGHED (native 32 kHz splice points, kept program):
+% the program's own internal jumps read median 0.009, p99 0.36697; the joins:
+%   join 1 after take2 at 0:29.9: waveform jump 0.29193 (32.43x the median internal jump), level step +0.90 dB
+%   join 2 after take3 at 0:59.9: waveform jump 0.54083 (60.07x the median internal jump), level step +1.47 dB
+%   join 3 after take4 at 1:29.8: waveform jump 0.18362 (20.4x the median internal jump), level step +0.59 dB
+%   join 4 after take5 at 1:59.8: waveform jump 0.05521 (6.13x the median internal jump), level step +2.54 dB
+%   join 5 after take6 at 2:29.7: waveform jump 0.22629 (25.14x the median internal jump), level step -0.09 dB
+%   join 6 after take7 at 2:59.6: waveform jump 0.17694 (19.65x the median internal jump), level step +0.09 dB
+%
+% REALIZED TEMPO (onset-envelope autocorrelation, measured on the
+% kept program, imposed by nobody): global 88.36 BPM. The 30 s windows:
+%   0s:96.54, 30s:87.23, 60s:144.54, 90s:177.32, 120s:147.92, 150s:65.15, 180s:109.15
+% Window spread: 112.17 BPM. The benchmark (the Anvil) drifts ~0; this is
+% the number this proof is weighed against.
+%
+% THE STEREO LAW (part 2 only -- there is no spine to pan, and no
+% Sigma to spare): the bed is widened by band above 180 Hz with the
+% mid preserved exactly and the lows fully mono. Correlations stand
+% measured in the manifest.
+%
+% 93 -- Live, Love, and let Love, Live.

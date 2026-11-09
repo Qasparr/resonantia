@@ -37,6 +37,31 @@
 # suspicion). If the pure method cannot reach the aimed length,
 # the honest performance is delivered at the length it reached
 # and the manifest says so.
+#
+# PROOF No. 5 (this module's second ruling): the desk's spectral
+# audit of Proof No. 4 convicted the composed arpeggio layer --
+# praised as an effect on dense assembled tracks, it read as a
+# "weird wind instrument" standing over a bare performance
+# (solfeggio ridges +9..+27 dB above the raw performance). The
+# founder's stamp on the desk's solution: IF IT ISN'T IN THE
+# PERFORMANCE, IT ISN'T IN THE TRACK. So the Paganini line moves
+# INSIDE the prompt -- the performance generates its own violin
+# arpeggios, in tune and in phrase, and NOTHING rides: no composed
+# arpeggio, no Sigma, no spine, no kit. Two more of Proof No. 4's
+# measured wounds get their cures in the same ruling. Its joins
+# clicked where the chain had been resumed across a restart; the
+# one join chained inside a single process was invisible (0.001).
+# So a spec may now demand `single_session`: the whole chain is
+# born in ONE bridge process, every continuation conditioned on
+# in-memory audio, no take is resumed from disk, and an
+# interrupted chain is VOID -- set aside under void-attempt-N/,
+# never spliced -- and the performance is re-struck whole from
+# the seed. And its tempo wandered for ~90 s before locking, so
+# a spec may strike `warmup_takes`: leading takes played and
+# DISCARDED, their audio never in the program, so the kept
+# program opens where the performance's clock has locked. The
+# warm-up's own tempo is measured and confessed, so the discard
+# stands on evidence, not on hope.
 # ---------------------------------------------------------------------
 
 import json
@@ -266,6 +291,98 @@ def measure_joins(mono, sr, join_samples, context_s=0.25):
         "splice": "direct -- no crossfade, no gain, no trim",
     }
     return joins, summary
+
+
+# ---------------------------------------------------------------------
+# The single session: one process, one chain, or the run is void.
+# ---------------------------------------------------------------------
+
+def assert_session_chain(take_reports, expected=None):
+    """Refuse any chain that was not born whole in one session.
+
+    MECHANISM: Proof No. 4's joins clicked exactly where its chain
+    had been spliced across a restart; the one join chained inside
+    a single bridge process was invisible. The single-session rule
+    therefore stands guard at the splice with three checks over
+    the take reports of ONE render result: (1) the indices are
+    exactly 0..n-1, each once -- and, when `expected` is given,
+    exactly that many takes -- so an interrupted render that
+    returned partial results names its missing takes here and the
+    run dies BEFORE any splice; (2) no take carries
+    resumed_from_disk -- a take inherited from a dead session is
+    precisely the splice the rule exists to forbid; (3) every take
+    after the seed testifies continued_from == its own index - 1
+    -- the bridge's own word that its conditioning came from the
+    in-memory predecessor, not from a file read back off disk.
+    Raises RuntimeError: a chain that fails is not repaired, it is
+    VOID. Returns the count of takes verified.
+    """
+    n = len(take_reports)
+    if n == 0:
+        raise RuntimeError(
+            "performance: single-session chain has no takes -- "
+            "the render returned nothing; the chain is void, "
+            "refusing to splice")
+    if expected is not None and n != expected:
+        raise RuntimeError(
+            f"performance: single-session chain returned {n} "
+            f"takes of {expected} -- an interrupted render is "
+            f"void, refusing to splice")
+    seen = sorted(int(r["index"]) for r in take_reports)
+    if seen != list(range(n)):
+        raise RuntimeError(
+            f"performance: single-session chain is incomplete "
+            f"(take indices {seen}, expected 0..{n - 1}) -- an "
+            f"interrupted render is void, refusing to splice")
+    for r in take_reports:
+        i = int(r["index"])
+        if r.get("resumed_from_disk"):
+            raise RuntimeError(
+                f"performance: take {i} was resumed from disk -- "
+                f"a single-session chain admits no inherited "
+                f"takes; the chain is void, refusing to splice")
+        if i > 0 and r.get("continued_from") != i - 1:
+            raise RuntimeError(
+                f"performance: take {i} testifies "
+                f"continued_from={r.get('continued_from')!r}, not "
+                f"{i - 1} -- its conditioning did not come from "
+                f"the in-memory predecessor; the chain is void, "
+                f"refusing to splice")
+    return n
+
+
+def void_prior_takes(out_dir, take_count):
+    """Set aside a dead session's takes; return the void record.
+
+    MECHANISM: before a single-session strike, any segNN.wav of
+    this chain's indices already in out_dir is the corpse of an
+    interrupted attempt. The house rule is MARKED, NEVER VANISHED:
+    the files are not deleted but moved, whole, into
+    void-attempt-N/ (N = one past the highest void directory
+    already present), and the record of what was found -- the
+    directory and the take indices -- goes into the manifest, so
+    the count of voided attempts is evidence, not anecdote.
+    Returns None when the ground was clean (no prior takes).
+    """
+    out_dir = Path(out_dir)
+    found = []
+    for i in range(take_count):
+        p = out_dir / f"seg{i:02d}.wav"
+        if p.exists():
+            found.append((i, p))
+    if not found:
+        return None
+    prior_voids = [d for d in out_dir.glob("void-attempt-*")
+                   if d.is_dir()]
+    n = len(prior_voids) + 1
+    void_dir = out_dir / f"void-attempt-{n}"
+    void_dir.mkdir(parents=True, exist_ok=False)
+    for _i, p in found:
+        p.rename(void_dir / p.name)
+    return {"attempt": n, "directory": void_dir.name,
+            "takes_found": [i for i, _p in found],
+            "disposition": "set aside unspliced; the performance "
+                           "was re-struck whole from the seed"}
 
 
 # ---------------------------------------------------------------------
@@ -509,6 +626,146 @@ def write_composition_abc(path, spec, schedule, tempo, joins,
     Path(path).write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
+def write_performance_sheet_abc(path, spec, tempo, joins,
+                                join_summary, program_seconds,
+                                warmup=None, session=None):
+    """Write composition.abc for a performance NOTHING rides.
+
+    MECHANISM: Proof No. 5's sheet. There is no house layer to
+    notate -- the composed arpeggio is gone by the founder's
+    ruling (if it isn't in the performance, it isn't in the
+    track), and the Paganini line the prompt demanded was played
+    BY the performance, as part of its body. Per the founder's
+    standing rule the sheet therefore notates NOTHING and says
+    so: what stands here is the run's own record -- the one
+    invariant prompt verbatim, the session and warm-up facts,
+    the weighed joins, the measured tempo -- and the
+    transcription of the performance itself (its violin line
+    included, being part of the body) marked OWED: a separate
+    production, never fabricated on this sheet.
+    """
+    perf = spec["performance"]
+    bpm = tempo["global_bpm"]
+    lines = []
+    lines.append("X:1")
+    lines.append(f"T:{spec['title']}: the performance, unaccompanied")
+    lines.append("C:Johnathan 'Qasparr' Monroe, ARR, All Rights "
+                 "Reserved, Without Prejudice")
+    lines.append(f"R:Detroit bounce, F minor -- tempo the "
+                 f"performance's own: measured {bpm} BPM")
+    lines.append("M:4/4")
+    lines.append("L:1/16")
+    lines.append("K:Fmin")
+    lines.append("%")
+    lines.append("% WHAT THIS SHEET IS -- AND IS NOT (the founder's "
+                 "rule, kept):")
+    lines.append("% NO notation stands on this sheet, and that is "
+                 "the honest state")
+    lines.append("% of the record. Nothing was composed over this "
+                 "performance:")
+    lines.append("% no arpeggio layer, no Sigma, no spine, no kit "
+                 "-- the founder's")
+    lines.append("% ruling after Proof No. 4: IF IT ISN'T IN THE "
+                 "PERFORMANCE, IT")
+    lines.append("% ISN'T IN THE TRACK. The Paganini line stands "
+                 "in the prompt")
+    lines.append("% below, and the performance played it as part "
+                 "of its own body.")
+    lines.append("% The transcription of the performance itself "
+                 "-- violin line")
+    lines.append("% included -- is a SEPARATE PRODUCTION, still "
+                 "OWED, and no")
+    lines.append("% sheet for it has been fabricated.")
+    lines.append("% What the performance was told stands below, "
+                 "verbatim, ONCE --")
+    lines.append("% the single invariant prompt of the seed take "
+                 "and every")
+    lines.append("% continuation:")
+    lines.append(f"%   {spec['prompt_base']}")
+    lines.append("%")
+    if session and session.get("single_session"):
+        lines.append(
+            f"% THE SESSION: the whole chain -- {perf['takes']} "
+            f"takes -- was born in")
+        lines.append(
+            "% ONE bridge process, every continuation conditioned "
+            "on the preceding")
+        lines.append(
+            "% audio IN MEMORY. No take was resumed from disk; an "
+            "interrupted chain")
+        lines.append(
+            "% is void by rule, and the session guard weighed "
+            "this chain before")
+        lines.append("% the splice was allowed.")
+        voids = session.get("voided_attempts") or []
+        if voids:
+            lines.append(
+                f"% Voided attempts set aside before this strike: "
+                f"{len(voids)} "
+                f"({', '.join(v['directory'] for v in voids)}).")
+    if warmup and warmup.get("takes"):
+        lines.append(
+            f"% THE WARM-UP: {warmup['takes']} leading take(s) "
+            f"were struck and")
+        lines.append(
+            f"% DISCARDED -- their audio is nowhere in this "
+            f"program. The warm-up's")
+        lines.append(
+            f"% own measured tempo: {warmup['tempo']['global_bpm']} "
+            f"BPM. The kept program")
+        lines.append(
+            f"% opens at kept take 1 ({warmup['kept_opens_at_seconds']} "
+            f"s into the chain).")
+    lines.append(
+        f"% THE PERFORMANCE: {tempo['takes']} takes struck, "
+        f"{program_seconds:.1f} s of kept")
+    lines.append(
+        f"% program, each extension generated CONTINUED from the "
+        f"preceding audio")
+    lines.append(
+        f"% ({tempo['continue_seconds']} s of conditioning) -- the "
+        f"model plays through")
+    lines.append("% every join. The kept takes are spliced "
+                 "DIRECTLY: no crossfade,")
+    lines.append("% no RMS matching, no grid, no trim.")
+    lines.append("%")
+    lines.append(f"% THE JOINS, WEIGHED (native 32 kHz splice "
+                 f"points, kept program):")
+    lines.append(f"% the program's own internal jumps read median "
+                 f"{join_summary['internal_jump_median']}, p99 "
+                 f"{join_summary['internal_jump_p99']}; the joins:")
+    for j in joins:
+        lines.append(
+            f"%   join {j['join']} after {j['after_take']} at "
+            f"{_mmss(j['at_seconds'])}: waveform jump "
+            f"{j['waveform_jump']} ({j['jump_vs_median_internal']}x "
+            f"the median internal jump), level step "
+            f"{j['rms_step_db']:+.2f} dB")
+    lines.append("%")
+    lines.append(f"% REALIZED TEMPO (onset-envelope "
+                 f"autocorrelation, measured on the")
+    lines.append(f"% kept program, imposed by nobody): global "
+                 f"{bpm} BPM. The 30 s windows:")
+    win = ", ".join(
+        f"{w['start_s']:.0f}s:{w['bpm']}" for w in tempo["windows_30s"])
+    lines.append(f"%   {win}")
+    lines.append(f"% Window spread: {tempo['window_bpm_spread']} "
+                 f"BPM. The benchmark (the Anvil) drifts ~0; "
+                 f"this is")
+    lines.append("% the number this proof is weighed against.")
+    lines.append("%")
+    lines.append("% THE STEREO LAW (part 2 only -- there is no "
+                 "spine to pan, and no")
+    lines.append("% Sigma to spare): the bed is widened by band "
+                 "above 180 Hz with the")
+    lines.append("% mid preserved exactly and the lows fully "
+                 "mono. Correlations stand")
+    lines.append("% measured in the manifest.")
+    lines.append("%")
+    lines.append("% 93 -- Live, Love, and let Love, Live.")
+    Path(path).write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
 # ---------------------------------------------------------------------
 # The dry-run plan: the performance weighed before it is struck.
 # ---------------------------------------------------------------------
@@ -520,13 +777,24 @@ def _planned_manifest(spec):
             "takes": perf["takes"],
             "take_seconds": perf["take_seconds"],
             "continue_seconds": perf["continue_seconds"],
+            "warmup_takes": perf["warmup_takes"],
+            "kept_takes": perf["takes"] - perf["warmup_takes"],
+            "single_session": perf["single_session"],
             "invariant_prompt": pipe._full_prompt(spec,
                                                   spec["sections"][0]),
-            "planned_program_seconds":
+            "planned_total_seconds":
                 perf["takes"] * perf["take_seconds"],
-            "joins": perf["takes"] - 1,
+            "planned_program_seconds":
+                (perf["takes"] - perf["warmup_takes"])
+                * perf["take_seconds"],
+            "joins": perf["takes"] - perf["warmup_takes"] - 1,
             "method": "one invariant prompt; a seed take extended "
-                      "only by audio continuation; direct splices",
+                      "only by audio continuation; direct splices"
+                      + ("; warm-up takes struck and discarded"
+                         if perf["warmup_takes"] else "")
+                      + ("; single session -- one bridge process, "
+                         "no resume, an interrupted chain is void"
+                         if perf["single_session"] else ""),
         },
         "arpeggio": ({
             "level_db": spec["arpeggio"]["level_db"],
@@ -563,15 +831,25 @@ def _planned_manifest(spec):
 def produce_performance(spec, dry_run=False, log=None):
     """Run a performance production; return the manifest dict.
 
-    MECHANISM: render the takes through the venv bridge (resume
-    law identical to the section road's) -> splice the take files
-    sample-exactly at the native rate and WEIGH the joins ->
-    resample the one performance to 48 kHz -> measure its realized
-    tempo, globally and per window -> widen the bed (Stereo Law,
-    part 2) -> lay the arpeggio on a schedule derived from the
-    measured tempo -> fade the ends -> master (loudness, then the
-    ceiling, which is law) -> strike the files -> manifest,
-    everything measured, everything absent confessed.
+    MECHANISM: render the takes through the venv bridge -> splice
+    the kept take files sample-exactly at the native rate and
+    WEIGH the joins -> resample the one performance to 48 kHz ->
+    measure its realized tempo, globally and per window -> widen
+    the bed (Stereo Law, part 2) -> lay the arpeggio, when the
+    spec carries one, on a schedule derived from the measured
+    tempo -> fade the ends -> master (loudness, then the ceiling,
+    which is law) -> strike the files -> manifest, everything
+    measured, everything absent confessed.
+
+    Two spec clauses change the render's shape. `single_session`
+    replaces the resume law with its opposite: prior takes are
+    voided (set aside, never spliced), the whole chain renders in
+    ONE bridge job, and the session guard verifies the chain
+    before the splice. `warmup_takes` strikes leading takes whose
+    audio never enters the program: the full chain is spliced for
+    the audit record, the kept program is spliced from the takes
+    after the warm-up, and the warm-up's own tempo is measured as
+    the discard's evidence.
     """
     log = log or (lambda msg: print(f"[studio] {msg}",
                                     file=sys.stderr, flush=True))
@@ -587,30 +865,31 @@ def produce_performance(spec, dry_run=False, log=None):
     sections = spec["sections"]
     prompt = pipe._full_prompt(spec, sections[0])
     t_start = time.time()
+    single_session = bool(perf.get("single_session"))
+    n_warm = int(perf.get("warmup_takes", 0))
+    session_block = {"single_session": single_session,
+                     "voided_attempts": [],
+                     "render_invocations_this_run": 0,
+                     "takes_verified_by_guard": None}
 
     # -- (a) render the takes, one model load, the chain unbroken --
-    # Resume law: whole takes already on disk are not re-rendered;
-    # the bridge conditions a resumed chain from the predecessor's
-    # file, so a restarted run keeps the performance whole. A
-    # truncated survivor is re-rendered, never trusted.
     render_by_index = {}
-    todo = []
-    for i, s in enumerate(sections):
-        seg_file = out_dir / f"seg{i:02d}.wav"
-        if seg_file.exists() and pipe._segment_file_ok(
-                seg_file, s["seconds"]):
-            with wave.open(str(seg_file), "rb") as w:
-                render_by_index[i] = {
-                    "index": i, "file": seg_file.name,
-                    "sample_rate": w.getframerate(),
-                    "frames": w.getnframes(),
-                    "wall_seconds": None, "resumed": True}
-            log(f"take {i} already rendered -- resuming past it")
-        else:
-            todo.append(i)
     render_model = "facebook/musicgen-small"
     render_wall = 0.0
-    if todo:
+    if single_session:
+        # THE SINGLE SESSION (Proof No. 5's ruling): any take
+        # files already on the ground are a dead session's corpse
+        # -- set them aside VOID, unspliced, then strike the WHOLE
+        # chain in one bridge job, so every continuation conditions
+        # on the bridge's own in-memory predecessor. The session
+        # guard weighs the returned chain before any splice is
+        # allowed; a chain that fails it is void, not repaired.
+        voided = void_prior_takes(out_dir, len(sections))
+        if voided is not None:
+            session_block["voided_attempts"].append(voided)
+            log(f"voided prior attempt {voided['attempt']}: takes "
+                f"{voided['takes_found']} set aside unspliced -- "
+                f"re-striking the whole performance from the seed")
         job = {"out_dir": str(out_dir), "segments": [
             {"index": i, "prompt": prompt,
              "seconds": sections[i]["seconds"],
@@ -618,14 +897,65 @@ def produce_performance(spec, dry_run=False, log=None):
              "file": f"seg{i:02d}.wav",
              "continue_seconds": (perf["continue_seconds"]
                                   if i > 0 else 0.0)}
-            for i in todo]}
-        log(f"rendering {len(todo)} takes via the venv bridge "
-            f"(one performance, chained)...")
+            for i in range(len(sections))]}
+        log(f"rendering all {len(sections)} takes in ONE bridge "
+            f"session (single-session rule: no resume; an "
+            f"interrupted chain is void)...")
         render = pipe._run_bridge(job, out_dir, log)
+        session_block["render_invocations_this_run"] = 1
         render_model = render["model"]
         render_wall = render["wall_seconds"]
         for r in render["segments"]:
             render_by_index[r["index"]] = {**r, "resumed": False}
+        guard_reports = [
+            {"index": i,
+             "resumed_from_disk": bool(
+                 render_by_index.get(i, {}).get("resumed")),
+             "continued_from":
+                 render_by_index.get(i, {}).get("continued_from")}
+            for i in sorted(render_by_index)]
+        session_block["takes_verified_by_guard"] = \
+            assert_session_chain(guard_reports,
+                                 expected=len(sections))
+        log("session guard: the chain is whole -- every take was "
+            "born in this session and continued from its in-memory "
+            "predecessor")
+    else:
+        # Resume law: whole takes already on disk are not
+        # re-rendered; the bridge conditions a resumed chain from
+        # the predecessor's file, so a restarted run keeps the
+        # performance whole. A truncated survivor is re-rendered,
+        # never trusted.
+        todo = []
+        for i, s in enumerate(sections):
+            seg_file = out_dir / f"seg{i:02d}.wav"
+            if seg_file.exists() and pipe._segment_file_ok(
+                    seg_file, s["seconds"]):
+                with wave.open(str(seg_file), "rb") as w:
+                    render_by_index[i] = {
+                        "index": i, "file": seg_file.name,
+                        "sample_rate": w.getframerate(),
+                        "frames": w.getnframes(),
+                        "wall_seconds": None, "resumed": True}
+                log(f"take {i} already rendered -- resuming past it")
+            else:
+                todo.append(i)
+        if todo:
+            job = {"out_dir": str(out_dir), "segments": [
+                {"index": i, "prompt": prompt,
+                 "seconds": sections[i]["seconds"],
+                 "seed": spec["seed"] + i,
+                 "file": f"seg{i:02d}.wav",
+                 "continue_seconds": (perf["continue_seconds"]
+                                      if i > 0 else 0.0)}
+                for i in todo]}
+            log(f"rendering {len(todo)} takes via the venv bridge "
+                f"(one performance, chained)...")
+            render = pipe._run_bridge(job, out_dir, log)
+            render_model = render["model"]
+            render_wall = render["wall_seconds"]
+            for r in render["segments"]:
+                render_by_index[r["index"]] = {**r, "resumed": False}
     take_reports = []
     for i, s in enumerate(sections):
         r = render_by_index[i]
@@ -645,10 +975,16 @@ def produce_performance(spec, dry_run=False, log=None):
         })
 
     # -- (b) the splice: direct, and then weighed ------------------
+    # The kept program is the takes after the warm-up; the full
+    # chain (warm-up included) is also spliced, for the audit
+    # record and for the warm-up's own evidence. When there is no
+    # warm-up the kept program IS the whole chain -- the Proof
+    # No. 4 shape of the record, unchanged.
     log("splicing the takes directly and weighing the joins...")
     native_path = out_dir / "performance_32k.wav"
+    kept_idx = list(range(n_warm, len(sections)))
     boundaries = _splice_take_files(
-        [out_dir / f"seg{i:02d}.wav" for i in range(len(sections))],
+        [out_dir / f"seg{i:02d}.wav" for i in kept_idx],
         native_path)
     native, native_sr = pipe.read_wav_pcm(native_path)
     if native.ndim == 2:
@@ -656,6 +992,61 @@ def produce_performance(spec, dry_run=False, log=None):
     native = np.asarray(native, dtype=np.float64)
     joins, join_summary = measure_joins(
         native, native_sr, boundaries[1:-1])
+    if n_warm:
+        # The weigher counts positions within the array it was
+        # handed; against the kept splice its "take{j+1}" names
+        # the kept position, not the chain's take. Relabel to the
+        # chain's own names so the record speaks of the takes that
+        # were actually struck.
+        for k, j in enumerate(joins):
+            j["after_take"] = f"take{n_warm + k + 1}"
+    full_path = None
+    full_chain_seconds = None
+    warmup_block = {"takes": 0, "discarded": False,
+                    "audio_in_program": False}
+    if n_warm:
+        full_path = out_dir / "performance_full_32k.wav"
+        full_bounds = _splice_take_files(
+            [out_dir / f"seg{i:02d}.wav"
+             for i in range(len(sections))], full_path)
+        full, full_sr = pipe.read_wav_pcm(full_path)
+        if full.ndim == 2:
+            full = full[0]
+        full = np.asarray(full, dtype=np.float64)
+        full_chain_seconds = round(full_bounds[-1] / full_sr, 3)
+        warm_end = full_bounds[n_warm]
+        warm_env, warm_rate = onset_envelope(
+            full[:warm_end], full_sr)
+        warm_tempo = tempo_from_envelope(warm_env, warm_rate)
+        full_joins, _full_summary = measure_joins(
+            full, full_sr, full_bounds[1:-1])
+        boundary_join = (full_joins[n_warm - 1]
+                         if len(full_joins) >= n_warm else None)
+        warmup_block = {
+            "takes": n_warm,
+            "take_indices": list(range(n_warm)),
+            "seconds_struck": round(warm_end / full_sr, 3),
+            "discarded": True,
+            "audio_in_program": False,
+            "tempo": {
+                "global_bpm": (warm_tempo or {}).get("bpm"),
+                "peak_autocorrelation":
+                    (warm_tempo or {}).get("peak_autocorrelation"),
+                "dominant_periodicity_bpm": (warm_tempo or {}).get(
+                    "dominant_periodicity_bpm"),
+                "candidate_periodicities":
+                    (warm_tempo or {}).get("candidates"),
+            },
+            "boundary_join_into_kept": boundary_join,
+            "kept_opens_at_seconds": round(warm_end / full_sr, 3),
+            "note": "the warm-up was struck to be discarded: the "
+                    "kept program opens where the performance's "
+                    "clock had locked. Its tempo stands measured "
+                    "here so the discard is evidence, not hope.",
+        }
+        log(f"warm-up discarded: {n_warm} take(s), "
+            f"{warmup_block['seconds_struck']}s, its own tempo "
+            f"{warmup_block['tempo']['global_bpm']} BPM")
 
     # -- (c) one resample of the whole performance -----------------
     bed48_path = out_dir / "performance_48k.wav"
@@ -775,6 +1166,15 @@ def produce_performance(spec, dry_run=False, log=None):
         write_composition_abc(
             out_dir / "composition.abc", spec, schedule,
             tempo_block, joins, join_summary, total_seconds)
+    else:
+        # Nothing rides (Proof No. 5's shape): the sheet carries
+        # no notation -- the performance's transcription, its
+        # in-performance violin line included, is owed, and the
+        # sheet says so instead of fabricating one.
+        write_performance_sheet_abc(
+            out_dir / "composition.abc", spec, tempo_block, joins,
+            join_summary, total_seconds, warmup=warmup_block,
+            session=session_block)
 
     # -- (g) fades: a record ends; it does not stop -----------------
     head = int(pipe.HEAD_FADE_S * pipe.TARGET_SR)
@@ -826,11 +1226,6 @@ def produce_performance(spec, dry_run=False, log=None):
         "tempo stands measured -- globally and per 30 s window -- "
         "in the performance block. Drift is reported, not "
         "corrected.",
-        "arpeggio: the composed violin layer rides on a schedule "
-        "derived from the MEASURED tempo (the performance leads, "
-        "the dancer follows), swing 0.0 -- no grid was imposed on "
-        "the performance to give the dancer one. Its notation is "
-        "complete in composition.abc.",
         "the performance itself is not transcribed in "
         "composition.abc: its transcription is a separate "
         "production, owed and marked owed -- never fabricated.",
@@ -838,6 +1233,44 @@ def produce_performance(spec, dry_run=False, log=None):
         "gating omitted in the proof build, stated not hidden).",
         "2 s tail fade + 5 ms head fade applied before mastering.",
     ]
+    if spec.get("arpeggio"):
+        notes.append(
+            "arpeggio: the composed violin layer rides on a "
+            "schedule derived from the MEASURED tempo (the "
+            "performance leads, the dancer follows), swing 0.0 -- "
+            "no grid was imposed on the performance to give the "
+            "dancer one. Its notation is complete in "
+            "composition.abc.")
+    else:
+        notes.append(
+            "nothing rides: there is NO composed arpeggio layer "
+            "in this run. The Paganini line stands in the prompt "
+            "itself, and the performance played its own violin "
+            "arpeggios as part of its body -- in tune, in phrase, "
+            "or not at all; the ear will judge what the prompt "
+            "bought. composition.abc notates nothing and marks "
+            "the performance's transcription owed.")
+    if single_session:
+        notes.append(
+            "single session: the whole chain was born in ONE "
+            "bridge process; every continuation was conditioned "
+            "on the bridge's in-memory predecessor; no take was "
+            "resumed from disk, and the session guard verified "
+            "the chain before the splice. "
+            + (f"Voided attempts set aside before this strike: "
+               f"{len(session_block['voided_attempts'])} "
+               f"({', '.join(v['directory'] for v in session_block['voided_attempts'])})."
+               if session_block["voided_attempts"] else
+               "No prior attempt stood on the ground to void."))
+    if n_warm:
+        notes.append(
+            f"warm-up: {n_warm} leading take(s) "
+            f"({warmup_block['seconds_struck']} s) were struck "
+            f"and DISCARDED -- their audio is nowhere in the "
+            f"program. The warm-up's own measured tempo was "
+            f"{warmup_block['tempo']['global_bpm']} BPM; the kept "
+            f"program's windows stand in the performance block "
+            f"for the lock-in question.")
     if not 180.0 <= total_seconds <= 210.0:
         notes.append(
             f"program length {total_seconds:.1f} s stands outside "
@@ -878,8 +1311,12 @@ def produce_performance(spec, dry_run=False, log=None):
             "takes": perf["takes"],
             "take_seconds": perf["take_seconds"],
             "continue_seconds": perf["continue_seconds"],
+            "session": session_block,
+            "warmup": warmup_block,
+            "kept_take_indices": kept_idx,
             "native_sample_rate": native_sr,
             "native_seconds": round(boundaries[-1] / native_sr, 3),
+            "full_chain_native_seconds": full_chain_seconds,
             "joins": joins,
             "join_summary": join_summary,
             "realized_tempo": tempo_block,
@@ -895,7 +1332,12 @@ def produce_performance(spec, dry_run=False, log=None):
                 "crossfade stitching of independent takes",
                 "per-section RMS matching",
                 "tempo forcing, grid trimming, time-stretching",
-            ],
+            ] + ([] if spec.get("arpeggio") else [
+                "composed arpeggio layer (the Paganini line is "
+                "generated INSIDE the performance, per the "
+                "founder's ruling: if it isn't in the performance, "
+                "it isn't in the track)",
+            ]),
         },
         "spine": None,
         "arpeggio": arpeggio_report,
@@ -921,12 +1363,14 @@ def produce_performance(spec, dry_run=False, log=None):
             "performance_32k_wav": {"path": str(native_path),
                                     "bytes": native_path.stat()
                                     .st_size},
+            "performance_full_32k_wav":
+                {"path": str(full_path),
+                 "bytes": full_path.stat().st_size}
+                if full_path is not None else None,
             "performance_48k_wav": {"path": str(bed48_path),
                                     "bytes": bed48_path.stat()
                                     .st_size},
-            "composition_abc":
-                str(out_dir / "composition.abc")
-                if spec.get("arpeggio") else None,
+            "composition_abc": str(out_dir / "composition.abc"),
             "spec_json": str(out_dir / "spec.json"),
             "render_log": str(out_dir / "render.log"),
         },
@@ -940,13 +1384,16 @@ def produce_performance(spec, dry_run=False, log=None):
 
 
 __all__ = [
+    "assert_session_chain",
     "build_arp_schedule",
     "measure_joins",
     "onset_envelope",
     "produce_performance",
     "tempo_from_envelope",
+    "void_prior_takes",
     "window_tempos",
     "write_composition_abc",
+    "write_performance_sheet_abc",
 ]
 
 # 93 -- Live, Love, and let Love, Live.

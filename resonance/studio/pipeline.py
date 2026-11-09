@@ -99,6 +99,18 @@ def _normalize_performance(raw):
     never by asking one generation to hold a longer attention than
     it honestly has. Every refusal names its field, as everywhere
     in this studio.
+
+    Proof No. 5 adds two clauses to the contract. `warmup_takes`
+    (default 0): that many leading takes are struck and DISCARDED
+    -- the performance warms up off the record, and the kept
+    program opens where its clock has locked; at least two kept
+    takes must remain, or there is no chain left to weigh.
+    `single_session` (default False): the whole chain must be born
+    in ONE bridge process, every continuation conditioned on
+    in-memory audio -- no take is ever resumed from disk, and an
+    interrupted chain is void, never spliced (see performance.py's
+    session guard). Both default to the Proof No. 4 behavior, so
+    an old spec means exactly what it meant.
     """
     if not isinstance(raw, dict):
         raise ValueError("performance: must be an object")
@@ -120,8 +132,26 @@ def _normalize_performance(raw):
         raise ValueError(
             f"performance.continue_seconds: {cont!r} "
             f"outside 2.0..10.0")
+    warmup = raw.get("warmup_takes", 0)
+    if isinstance(warmup, bool) or not isinstance(warmup, int) \
+            or not 0 <= warmup <= 4:
+        raise ValueError(
+            f"performance.warmup_takes: {warmup!r} must be an "
+            f"int in 0..4")
+    if takes - warmup < 2:
+        raise ValueError(
+            f"performance.warmup_takes: {warmup} warm-up takes "
+            f"would leave {takes - warmup} kept takes of "
+            f"{takes} -- a kept program needs at least 2 takes "
+            f"(one join to weigh)")
+    single = raw.get("single_session", False)
+    if not isinstance(single, bool):
+        raise ValueError(
+            f"performance.single_session: {single!r} must be a "
+            f"boolean")
     return {"takes": takes, "take_seconds": float(take_seconds),
-            "continue_seconds": float(cont)}
+            "continue_seconds": float(cont),
+            "warmup_takes": warmup, "single_session": single}
 
 
 def validate_spec(spec):

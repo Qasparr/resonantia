@@ -98,7 +98,7 @@ median, 50–1000 Hz) — `carriers_hz: [left, right]`.
      "seconds": "number, REQUIRED in effect, 3..30"}
   ],
   "seed": "int, default 93 — section i renders with seed + i",
-  "performance": "object, optional — Proof No. 4's road (see 'The performance' below): {takes: int 2..16 (default 7), take_seconds: 3..30 (default 30), continue_seconds: 2..10 (default 5.0)}. Present, it replaces sections wholesale, forbids spine and per-section prompts, and excludes the Sigma layer by design",
+  "performance": "object, optional — Proof No. 4's road (see 'The performance' below): {takes: int 2..16 (default 7), take_seconds: 3..30 (default 30), continue_seconds: 2..10 (default 5.0), warmup_takes: int 0..4 (default 0; at least 2 kept takes must remain), single_session: bool (default false)}. Present, it replaces sections wholesale, forbids spine and per-section prompts, and excludes the Sigma layer by design",
   "chained": "bool, optional — render each section CONTINUED from its predecessor's audio tail (see 'The chain' below)",
   "continue_seconds": "number 2..10, default 5.0 — how much of the predecessor's tail conditions a chained section",
   "crossfade_bars": "int 1..8, optional — stitch overlaps in whole bars at the spine's tempo instead of the legacy 2 s (spine specs only in effect)",
@@ -213,6 +213,32 @@ the measured tempo** (swing 0.0), never imposed on it. The Stereo
 Law defaults on (width 1.0), the mastering law is unchanged, and
 the resume law holds — the bridge conditions a resumed chain
 from the predecessor's file on disk.
+
+**Proof No. 5's two clauses (inside `"performance"`).**
+`"warmup_takes": N` strikes N leading takes and **discards their
+audio**: the full chain is spliced to `performance_full_32k.wav`
+for the audit record, the program is spliced from the kept takes
+only, and the warm-up's own measured tempo stands in the
+manifest's `performance.warmup` block as the discard's evidence —
+the kept program opens where the performance's clock locked.
+`"single_session": true` **replaces the resume law with its
+opposite**: any take files already in `out_dir` are a dead
+session's corpse — they are moved, whole, into `void-attempt-N/`
+(marked, never vanished; the manifest counts them) and the whole
+chain is rendered in **one bridge job**, every continuation
+conditioned on the bridge's in-memory predecessor. Before any
+splice, a session guard verifies the returned chain — complete
+indices, no resumed takes, every take's `continued_from` naming
+its in-memory predecessor — and a chain that fails is **void, not
+repaired**: the run raises and nothing is spliced. If the process
+or the box dies mid-render, re-running the same spec voids the
+partial takes and re-strikes the whole performance from the seed;
+a single-session performance is never spliced across a restart.
+With neither clause set, a performance runs exactly as Proof
+No. 4 did. When no arpeggio rides, `composition.abc` is the
+performance's own sheet: it notates nothing, states the invariant
+prompt and the measured record, and marks the performance's
+transcription **owed** — never fabricated.
 
 **The motif (optional).** A bed stitched from independently
 generated sections has no memory: Proof No. 2's founder verdict
