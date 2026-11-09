@@ -98,6 +98,7 @@ median, 50–1000 Hz) — `carriers_hz: [left, right]`.
      "seconds": "number, REQUIRED in effect, 3..30"}
   ],
   "seed": "int, default 93 — section i renders with seed + i",
+  "performance": "object, optional — Proof No. 4's road (see 'The performance' below): {takes: int 2..16 (default 7), take_seconds: 3..30 (default 30), continue_seconds: 2..10 (default 5.0)}. Present, it replaces sections wholesale, forbids spine and per-section prompts, and excludes the Sigma layer by design",
   "chained": "bool, optional — render each section CONTINUED from its predecessor's audio tail (see 'The chain' below)",
   "continue_seconds": "number 2..10, default 5.0 — how much of the predecessor's tail conditions a chained section",
   "crossfade_bars": "int 1..8, optional — stitch overlaps in whole bars at the spine's tempo instead of the legacy 2 s (spine specs only in effect)",
@@ -152,8 +153,9 @@ Proof No. 1 road, unchanged.
 Rules the validator enforces (violations return a named error):
 `prompt_base` non-empty; `sections` non-empty; every `seconds` in
 3..30; `left_hz < right_hz`; gain/target/ceiling inside their ranges;
-`stereo.width` inside 0..1; `arpeggio` requires `spine`;
-`out_dir` present. The full prompt for section *i* is
+`stereo.width` inside 0..1; `arpeggio` requires `spine` or
+`performance`; `performance` forbids `spine` and per-section
+prompts; `out_dir` present. The full prompt for section *i* is
 `prompt_base + ", " + prompt_suffix` (or `prompt_base` alone when
 the suffix is empty) — plus the motif, when one is set.
 
@@ -191,6 +193,26 @@ source; a section whose predecessor is unavailable renders plain
 and its manifest entry says so (`continued_from: null`). Each
 render report carries `continued_from` / `continue_seconds` per
 segment.
+
+**The performance (optional).** Proof No. 4's road, and the
+purest form of the chain: with `"performance"` present, there are
+no sections at all — one invariant prompt (`prompt_base`, plus the
+motif if one is set) strikes a seed take, and every later take is
+generated **continued from the actual preceding audio**. The
+takes are spliced **directly** — no crossfade, no per-section RMS
+matching, no grid, no trim — and each join is **measured**
+(waveform jump + level step) into the manifest's `performance`
+block, beside the realized tempo (global and per 30 s window, by
+onset-envelope autocorrelation with a stated log-Gaussian tempo
+prior; the raw dominant periodicity and candidate table stand
+beside the headline). A spine is refused by name beside a
+performance, and the **Sigma layer is not struck** (excluded for
+test purity; the manifest's sigma block records the absence). The
+arpeggio may ride a performance: its schedule is **derived from
+the measured tempo** (swing 0.0), never imposed on it. The Stereo
+Law defaults on (width 1.0), the mastering law is unchanged, and
+the resume law holds — the bridge conditions a resumed chain
+from the predecessor's file on disk.
 
 **The motif (optional).** A bed stitched from independently
 generated sections has no memory: Proof No. 2's founder verdict

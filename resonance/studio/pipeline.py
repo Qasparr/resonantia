@@ -87,6 +87,43 @@ STEREO_MAX_SIDE = 0.75
 # Spec: the contract an operator -- or an agent -- speaks to the mill.
 # ---------------------------------------------------------------------
 
+def _normalize_performance(raw):
+    """Validate a spec's "performance" block; return the normal form.
+
+    MECHANISM: Proof No. 4's contract in three numbers -- how many
+    takes the performance runs to, how many seconds each take
+    generates, and how much of the preceding audio conditions each
+    extension. take_seconds is capped at 30 for the same reason
+    section seconds are: MusicGen's token budget and attention
+    stay musical there; the performance grows by CONTINUATION,
+    never by asking one generation to hold a longer attention than
+    it honestly has. Every refusal names its field, as everywhere
+    in this studio.
+    """
+    if not isinstance(raw, dict):
+        raise ValueError("performance: must be an object")
+    takes = raw.get("takes", 7)
+    if isinstance(takes, bool) or not isinstance(takes, int) \
+            or not 2 <= takes <= 16:
+        raise ValueError(
+            f"performance.takes: {takes!r} must be an int in 2..16")
+    take_seconds = raw.get("take_seconds", 30.0)
+    if isinstance(take_seconds, bool) \
+            or not isinstance(take_seconds, (int, float)) \
+            or not 3.0 <= float(take_seconds) <= 30.0:
+        raise ValueError(
+            f"performance.take_seconds: {take_seconds!r} "
+            f"outside 3..30")
+    cont = raw.get("continue_seconds", 5.0)
+    if isinstance(cont, bool) or not isinstance(cont, (int, float)) \
+            or not 2.0 <= float(cont) <= 10.0:
+        raise ValueError(
+            f"performance.continue_seconds: {cont!r} "
+            f"outside 2.0..10.0")
+    return {"takes": takes, "take_seconds": float(take_seconds),
+            "continue_seconds": float(cont)}
+
+
 def validate_spec(spec):
     """Validate a produce() spec and return a normalized copy.
 
@@ -118,22 +155,44 @@ def validate_spec(spec):
         out["motif"] = motif.strip()
     else:
         out.pop("motif", None)
+    # Proof No. 4's road, parsed before the sections because it
+    # REDEFINES them: a performance has no sections, only takes of
+    # one invariant prompt. A spec that asks for a performance AND
+    # per-section prompts contradicts the test's purity, and is
+    # refused rather than quietly resolved.
+    perf = None
+    if spec.get("performance") is not None:
+        perf = _normalize_performance(spec["performance"])
     sections = spec.get("sections")
-    if not isinstance(sections, list) or not sections:
+    if perf is not None:
+        if sections:
+            for i, sec in enumerate(sections):
+                if not isinstance(sec, dict) \
+                        or str(sec.get("prompt_suffix", "")).strip():
+                    raise ValueError(
+                        f"sections[{i}]: a performance takes ONE "
+                        f"invariant prompt -- per-section prompts "
+                        f"are forbidden")
+        norm_sections = [{
+            "name": f"take{i + 1}", "prompt_suffix": "",
+            "seconds": perf["take_seconds"]}
+            for i in range(perf["takes"])]
+    elif not isinstance(sections, list) or not sections:
         raise ValueError("sections: required, a non-empty list")
-    norm_sections = []
-    for i, sec in enumerate(sections):
-        if not isinstance(sec, dict):
-            raise ValueError(f"sections[{i}]: must be an object")
-        seconds = float(sec.get("seconds", 30))
-        if not 3.0 <= seconds <= 30.0:
-            raise ValueError(
-                f"sections[{i}].seconds: {seconds} outside 3..30")
-        norm_sections.append({
-            "name": str(sec.get("name", f"section{i + 1}")),
-            "prompt_suffix": str(sec.get("prompt_suffix", "")),
-            "seconds": seconds,
-        })
+    else:
+        norm_sections = []
+        for i, sec in enumerate(sections):
+            if not isinstance(sec, dict):
+                raise ValueError(f"sections[{i}]: must be an object")
+            seconds = float(sec.get("seconds", 30))
+            if not 3.0 <= seconds <= 30.0:
+                raise ValueError(
+                    f"sections[{i}].seconds: {seconds} outside 3..30")
+            norm_sections.append({
+                "name": str(sec.get("name", f"section{i + 1}")),
+                "prompt_suffix": str(sec.get("prompt_suffix", "")),
+                "seconds": seconds,
+            })
     out["sections"] = norm_sections
     out["seed"] = int(spec.get("seed", DEFAULTS["seed"]))
     sigma = dict(DEFAULTS["sigma"])
@@ -163,6 +222,11 @@ def validate_spec(spec):
     # unchanged. Present, it is normalized by its own validator,
     # whose refusals name their fields the same way.
     if spec.get("spine") is not None:
+        if perf is not None:
+            raise ValueError(
+                "performance: a spine is forbidden -- the "
+                "performance keeps its own time, or the test "
+                "means nothing")
         out["spine"] = spine_mod.normalize_spine_spec(spec["spine"])
     else:
         out.pop("spine", None)
@@ -183,10 +247,10 @@ def validate_spec(spec):
     # bars, so it requires the spine's schedule to dance on;
     # asking for it spine-less is refused by name, not improvised.
     if spec.get("arpeggio") is not None:
-        if "spine" not in out:
+        if "spine" not in out and perf is None:
             raise ValueError(
-                "arpeggio: requires a spine (the composition is "
-                "written in bars)")
+                "arpeggio: requires a spine or a performance "
+                "(the composition is written in bars)")
         out["arpeggio"] = arpeggio_mod.normalize_arpeggio_spec(
             spec["arpeggio"], default_seed=out["seed"])
     else:
@@ -199,7 +263,7 @@ def validate_spec(spec):
     # conditioning and the joint measures seamless. Optional; the
     # chain is a fact about the render, never the arrangement --
     # prompts still steer every section.
-    if spec.get("chained"):
+    if spec.get("chained") and perf is None:
         cs = spec.get("continue_seconds", 5.0)
         if isinstance(cs, bool) or not isinstance(cs, (int, float)) \
                 or not 2.0 <= float(cs) <= 10.0:
@@ -217,15 +281,20 @@ def validate_spec(spec):
     # An explicit "stereo": {"width": w} always outranks the default.
     stereo_raw = spec.get("stereo")
     if stereo_raw is None:
-        width = 1.0 if out.get("spine") else 0.0
+        width = 1.0 if (out.get("spine") or perf is not None) else 0.0
     else:
         if not isinstance(stereo_raw, dict):
             raise ValueError("stereo: must be an object")
         width = float(stereo_raw.get(
-            "width", 1.0 if out.get("spine") else 0.0))
+            "width", 1.0 if (out.get("spine") or perf is not None)
+            else 0.0))
     if not 0.0 <= width <= 1.0:
         raise ValueError(f"stereo.width: {width} outside 0..1")
     out["stereo"] = {"width": width}
+    if perf is not None:
+        out["performance"] = perf
+    else:
+        out.pop("performance", None)
     if not spec.get("out_dir"):
         raise ValueError("out_dir: required")
     out["out_dir"] = str(spec["out_dir"])
@@ -785,6 +854,15 @@ def produce(spec, dry_run=False, log=None):
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "spec.json").write_text(json.dumps(spec, indent=2),
                                        encoding="utf-8")
+    if spec.get("performance"):
+        # Proof No. 4's road forks here: one performance, assembled
+        # by nobody. The performance module runs its own flow on
+        # this module's shared machinery (the bridge, the Stereo
+        # Law, the mastering law) -- imported lazily because it
+        # imports this module in turn.
+        from resonance.studio import performance as performance_mod
+        return performance_mod.produce_performance(
+            spec, dry_run=dry_run, log=log)
     if dry_run:
         manifest = _dry_run_manifest(spec)
         (out_dir / "manifest.json").write_text(

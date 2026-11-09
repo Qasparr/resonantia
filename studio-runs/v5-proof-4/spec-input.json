@@ -1,0 +1,10 @@
+{
+  "title": "SINGLE PASS",
+  "prompt_base": "detroit bounce hip hop instrumental in F minor, energetic bouncing groove, deep rolling 808 bass, crisp drums with a live played feel, eerie minor-key piano motif, warm soulful strings, dusty vinyl warmth, one continuous performance that keeps developing",
+  "performance": {"takes": 7, "take_seconds": 30, "continue_seconds": 5.0},
+  "seed": 777,
+  "arpeggio": {"level_db": -9.0, "orbit_hz": 0.03, "strength": 1.0, "seed": 777},
+  "stereo": {"width": 1.0},
+  "master": {"target_lufs": -14.0, "ceiling_dbtp": -1.0},
+  "out_dir": "studio-runs/v5-proof-4"
+}

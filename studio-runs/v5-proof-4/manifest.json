@@ -1,0 +1,586 @@
+{
+  "title": "SINGLE PASS",
+  "title_status": "working title",
+  "dry_run": false,
+  "created_utc": "2026-11-09T01:10:31.622002+00:00",
+  "pipeline": "resonance.studio v1 (proof-of-concept build)",
+  "spec": {
+    "title": "SINGLE PASS",
+    "prompt_base": "detroit bounce hip hop instrumental in F minor, energetic bouncing groove, deep rolling 808 bass, crisp drums with a live played feel, eerie minor-key piano motif, warm soulful strings, dusty vinyl warmth, one continuous performance that keeps developing",
+    "performance": {
+      "takes": 7,
+      "take_seconds": 30.0,
+      "continue_seconds": 5.0
+    },
+    "seed": 777,
+    "arpeggio": {
+      "level_db": -9.0,
+      "orbit_hz": 0.03,
+      "strength": 1.0,
+      "seed": 777,
+      "mode_overrides": {}
+    },
+    "stereo": {
+      "width": 1.0
+    },
+    "master": {
+      "target_lufs": -14.0,
+      "ceiling_dbtp": -1.0
+    },
+    "out_dir": "studio-runs/v5-proof-4",
+    "sections": [
+      {
+        "name": "take1",
+        "prompt_suffix": "",
+        "seconds": 30.0
+      },
+      {
+        "name": "take2",
+        "prompt_suffix": "",
+        "seconds": 30.0
+      },
+      {
+        "name": "take3",
+        "prompt_suffix": "",
+        "seconds": 30.0
+      },
+      {
+        "name": "take4",
+        "prompt_suffix": "",
+        "seconds": 30.0
+      },
+      {
+        "name": "take5",
+        "prompt_suffix": "",
+        "seconds": 30.0
+      },
+      {
+        "name": "take6",
+        "prompt_suffix": "",
+        "seconds": 30.0
+      },
+      {
+        "name": "take7",
+        "prompt_suffix": "",
+        "seconds": 30.0
+      }
+    ],
+    "sigma": {
+      "left_hz": 200.0,
+      "right_hz": 213.0,
+      "gain_db": -28.0
+    }
+  },
+  "sections": [
+    {
+      "name": "take1",
+      "prompt": "detroit bounce hip hop instrumental in F minor, energetic bouncing groove, deep rolling 808 bass, crisp drums with a live played feel, eerie minor-key piano motif, warm soulful strings, dusty vinyl warmth, one continuous performance that keeps developing",
+      "seed": 777,
+      "seconds": 30.0,
+      "native_sample_rate": 32000,
+      "frames": 958080,
+      "file": "seg00.wav",
+      "wall_seconds": null,
+      "resumed_from_disk": true,
+      "continued_from": null,
+      "continue_seconds": 0.0
+    },
+    {
+      "name": "take2",
+      "prompt": "detroit bounce hip hop instrumental in F minor, energetic bouncing groove, deep rolling 808 bass, crisp drums with a live played feel, eerie minor-key piano motif, warm soulful strings, dusty vinyl warmth, one continuous performance that keeps developing",
+      "seed": 778,
+      "seconds": 30.0,
+      "native_sample_rate": 32000,
+      "frames": 958080,
+      "file": "seg01.wav",
+      "wall_seconds": null,
+      "resumed_from_disk": true,
+      "continued_from": null,
+      "continue_seconds": 0.0
+    },
+    {
+      "name": "take3",
+      "prompt": "detroit bounce hip hop instrumental in F minor, energetic bouncing groove, deep rolling 808 bass, crisp drums with a live played feel, eerie minor-key piano motif, warm soulful strings, dusty vinyl warmth, one continuous performance that keeps developing",
+      "seed": 779,
+      "seconds": 30.0,
+      "native_sample_rate": 32000,
+      "frames": 958080,
+      "file": "seg02.wav",
+      "wall_seconds": 580.94,
+      "resumed_from_disk": false,
+      "continued_from": 1,
+      "continue_seconds": 5.0
+    },
+    {
+      "name": "take4",
+      "prompt": "detroit bounce hip hop instrumental in F minor, energetic bouncing groove, deep rolling 808 bass, crisp drums with a live played feel, eerie minor-key piano motif, warm soulful strings, dusty vinyl warmth, one continuous performance that keeps developing",
+      "seed": 780,
+      "seconds": 30.0,
+      "native_sample_rate": 32000,
+      "frames": 958080,
+      "file": "seg03.wav",
+      "wall_seconds": 611.98,
+      "resumed_from_disk": false,
+      "continued_from": 2,
+      "continue_seconds": 5.0
+    },
+    {
+      "name": "take5",
+      "prompt": "detroit bounce hip hop instrumental in F minor, energetic bouncing groove, deep rolling 808 bass, crisp drums with a live played feel, eerie minor-key piano motif, warm soulful strings, dusty vinyl warmth, one continuous performance that keeps developing",
+      "seed": 781,
+      "seconds": 30.0,
+      "native_sample_rate": 32000,
+      "frames": 958080,
+      "file": "seg04.wav",
+      "wall_seconds": 686.12,
+      "resumed_from_disk": false,
+      "continued_from": 3,
+      "continue_seconds": 5.0
+    },
+    {
+      "name": "take6",
+      "prompt": "detroit bounce hip hop instrumental in F minor, energetic bouncing groove, deep rolling 808 bass, crisp drums with a live played feel, eerie minor-key piano motif, warm soulful strings, dusty vinyl warmth, one continuous performance that keeps developing",
+      "seed": 782,
+      "seconds": 30.0,
+      "native_sample_rate": 32000,
+      "frames": 958080,
+      "file": "seg05.wav",
+      "wall_seconds": 653.35,
+      "resumed_from_disk": false,
+      "continued_from": 4,
+      "continue_seconds": 5.0
+    },
+    {
+      "name": "take7",
+      "prompt": "detroit bounce hip hop instrumental in F minor, energetic bouncing groove, deep rolling 808 bass, crisp drums with a live played feel, eerie minor-key piano motif, warm soulful strings, dusty vinyl warmth, one continuous performance that keeps developing",
+      "seed": 783,
+      "seconds": 30.0,
+      "native_sample_rate": 32000,
+      "frames": 958080,
+      "file": "seg06.wav",
+      "wall_seconds": 668.38,
+      "resumed_from_disk": false,
+      "continued_from": 5,
+      "continue_seconds": 5.0
+    }
+  ],
+  "render": {
+    "model": "facebook/musicgen-small",
+    "wall_seconds_this_run": 3207.08,
+    "resumed_segments": [
+      0,
+      1
+    ],
+    "rendered_seconds_total": 210.0
+  },
+  "program": {
+    "seconds": 209.58,
+    "sample_rate": 48000,
+    "channels": 2,
+    "bit_depth": 24
+  },
+  "performance": {
+    "method": "one continuous performance: a seed take extended only by audio continuation under one invariant prompt; direct splices, weighed",
+    "invariant_prompt": "detroit bounce hip hop instrumental in F minor, energetic bouncing groove, deep rolling 808 bass, crisp drums with a live played feel, eerie minor-key piano motif, warm soulful strings, dusty vinyl warmth, one continuous performance that keeps developing",
+    "takes": 7,
+    "take_seconds": 30.0,
+    "continue_seconds": 5.0,
+    "native_sample_rate": 32000,
+    "native_seconds": 209.58,
+    "joins": [
+      {
+        "join": 1,
+        "after_take": "take1",
+        "at_sample": 958080,
+        "at_seconds": 29.94,
+        "waveform_jump": 0.00095,
+        "jump_vs_median_internal": 0.12,
+        "rms_step_db": 0.46
+      },
+      {
+        "join": 2,
+        "after_take": "take2",
+        "at_sample": 1916160,
+        "at_seconds": 59.88,
+        "waveform_jump": 0.41101,
+        "jump_vs_median_internal": 50.07,
+        "rms_step_db": 0.96
+      },
+      {
+        "join": 3,
+        "after_take": "take3",
+        "at_sample": 2874240,
+        "at_seconds": 89.82,
+        "waveform_jump": 0.80933,
+        "jump_vs_median_internal": 98.59,
+        "rms_step_db": 2.3
+      },
+      {
+        "join": 4,
+        "after_take": "take4",
+        "at_sample": 3832320,
+        "at_seconds": 119.76,
+        "waveform_jump": 0.0885,
+        "jump_vs_median_internal": 10.78,
+        "rms_step_db": -0.53
+      },
+      {
+        "join": 5,
+        "after_take": "take5",
+        "at_sample": 4790400,
+        "at_seconds": 149.7,
+        "waveform_jump": 0.65796,
+        "jump_vs_median_internal": 80.15,
+        "rms_step_db": 0.46
+      },
+      {
+        "join": 6,
+        "after_take": "take6",
+        "at_sample": 5748480,
+        "at_seconds": 179.64,
+        "waveform_jump": 0.10321,
+        "jump_vs_median_internal": 12.57,
+        "rms_step_db": -0.04
+      }
+    ],
+    "join_summary": {
+      "count": 6,
+      "waveform_jump_mean": 0.34516,
+      "waveform_jump_max": 0.80933,
+      "internal_jump_median": 0.00821,
+      "internal_jump_p99": 0.30273,
+      "splice": "direct -- no crossfade, no gain, no trim"
+    },
+    "realized_tempo": {
+      "global_bpm": 106.24,
+      "global_peak_autocorrelation": 0.2421,
+      "dominant_periodicity_bpm": 44.29,
+      "candidate_periodicities": [
+        {
+          "bpm": 44.29,
+          "autocorrelation": 0.3117
+        },
+        {
+          "bpm": 76.01,
+          "autocorrelation": 0.2471
+        },
+        {
+          "bpm": 89.29,
+          "autocorrelation": 0.2423
+        }
+      ],
+      "double_time_candidate_bpm": null,
+      "estimator": "onset envelope (spectral flux) autocorrelation with a log-Gaussian tempo prior (center 100 BPM, sigma 1 octave), 40..200 BPM search on the performance's mid channel; the dominant periodicity and the candidate table stand beside the headline so the prior's work is visible",
+      "windows_30s": [
+        {
+          "start_s": 0.0,
+          "end_s": 30.0,
+          "bpm": 133.43,
+          "peak_autocorrelation": 0.5609
+        },
+        {
+          "start_s": 30.0,
+          "end_s": 60.0,
+          "bpm": 88.98,
+          "peak_autocorrelation": 0.4152
+        },
+        {
+          "start_s": 60.0,
+          "end_s": 90.0,
+          "bpm": 44.04,
+          "peak_autocorrelation": 0.5106
+        },
+        {
+          "start_s": 90.0,
+          "end_s": 120.0,
+          "bpm": 99.21,
+          "peak_autocorrelation": 0.1521
+        },
+        {
+          "start_s": 120.0,
+          "end_s": 150.0,
+          "bpm": 96.82,
+          "peak_autocorrelation": 0.2382
+        },
+        {
+          "start_s": 150.0,
+          "end_s": 180.0,
+          "bpm": 96.6,
+          "peak_autocorrelation": 0.1413
+        },
+        {
+          "start_s": 180.0,
+          "end_s": 209.6,
+          "bpm": 95.09,
+          "peak_autocorrelation": 0.326
+        }
+      ],
+      "window_bpm_min": 44.04,
+      "window_bpm_max": 133.43,
+      "window_bpm_spread": 89.39,
+      "takes": 7,
+      "continue_seconds": 5.0
+    },
+    "arpeggio_schedule": {
+      "bpm": 106.24,
+      "bpm_source": "measured from the performance itself (onset-envelope autocorrelation)",
+      "swing": 0.0,
+      "total_bars": 92,
+      "sections": [
+        {
+          "name": "intro",
+          "bars": 8,
+          "density": "sparse"
+        },
+        {
+          "name": "groove",
+          "bars": 16,
+          "density": "driving"
+        },
+        {
+          "name": "lift",
+          "bars": 15,
+          "density": "full"
+        },
+        {
+          "name": "verse3 ride",
+          "bars": 15,
+          "density": "driving"
+        },
+        {
+          "name": "groove",
+          "bars": 15,
+          "density": "driving"
+        },
+        {
+          "name": "lift",
+          "bars": 15,
+          "density": "full"
+        },
+        {
+          "name": "outro",
+          "bars": 8,
+          "density": "sparse"
+        }
+      ],
+      "layer_rendered_samples": 9975904,
+      "program_samples": 10059840,
+      "layer_fit": "zero-padded to the program"
+    },
+    "absent_by_design": [
+      "sigma layer (test purity; acquitted by the v4b A/B)",
+      "spine (synth or sampled)",
+      "kit / one-shot samples of any kind",
+      "synthesized voices",
+      "per-section prompts, motif resets, section names in generation",
+      "crossfade stitching of independent takes",
+      "per-section RMS matching",
+      "tempo forcing, grid trimming, time-stretching"
+    ]
+  },
+  "spine": null,
+  "arpeggio": {
+    "level_db": -9.0,
+    "orbit_hz": 0.03,
+    "strength": 1.0,
+    "seed": 777,
+    "total_notes": 1064,
+    "sections": [
+      {
+        "name": "intro",
+        "bars": 8,
+        "density": "sparse",
+        "mode": "statement",
+        "notes": 48
+      },
+      {
+        "name": "groove",
+        "bars": 16,
+        "density": "driving",
+        "mode": "bariolage",
+        "notes": 128
+      },
+      {
+        "name": "lift",
+        "bars": 15,
+        "density": "full",
+        "mode": "runs",
+        "notes": 240
+      },
+      {
+        "name": "verse3 ride",
+        "bars": 15,
+        "density": "driving",
+        "mode": "bariolage16",
+        "notes": 240
+      },
+      {
+        "name": "groove",
+        "bars": 15,
+        "density": "driving",
+        "mode": "bariolage",
+        "notes": 120
+      },
+      {
+        "name": "lift",
+        "bars": 15,
+        "density": "full",
+        "mode": "runs",
+        "notes": 240
+      },
+      {
+        "name": "outro",
+        "bars": 8,
+        "density": "sparse",
+        "mode": "statement_fade",
+        "notes": 48
+      }
+    ],
+    "ladder": [
+      {
+        "syllable": "UT",
+        "carrier_hz": 396.0,
+        "midi": 67,
+        "staff_hz": 392.0,
+        "cents_offset": 17.6,
+        "abc": "G"
+      },
+      {
+        "syllable": "RE",
+        "carrier_hz": 417.0,
+        "midi": 68,
+        "staff_hz": 415.3,
+        "cents_offset": 7.1,
+        "abc": "^G"
+      },
+      {
+        "syllable": "MI",
+        "carrier_hz": 528.0,
+        "midi": 72,
+        "staff_hz": 523.25,
+        "cents_offset": 15.6,
+        "abc": "c"
+      },
+      {
+        "syllable": "FA",
+        "carrier_hz": 639.0,
+        "midi": 75,
+        "staff_hz": 622.25,
+        "cents_offset": 46.0,
+        "abc": "_e"
+      },
+      {
+        "syllable": "SOL",
+        "carrier_hz": 741.0,
+        "midi": 78,
+        "staff_hz": 739.99,
+        "cents_offset": 2.4,
+        "abc": "^f"
+      },
+      {
+        "syllable": "LA",
+        "carrier_hz": 852.0,
+        "midi": 80,
+        "staff_hz": 830.61,
+        "cents_offset": 44.0,
+        "abc": "^g"
+      }
+    ],
+    "fibonacci_phrases": [
+      1,
+      1,
+      2,
+      3,
+      5,
+      8
+    ],
+    "figure_cell_midi": [
+      67,
+      68,
+      72,
+      75,
+      78,
+      80,
+      67,
+      68,
+      72,
+      75,
+      78,
+      80,
+      67,
+      68,
+      72,
+      75,
+      78,
+      80,
+      67,
+      68
+    ],
+    "layer_rms_dbfs": -16.21,
+    "mixed_layer_rms_dbfs": -18.13
+  },
+  "stereo": {
+    "bed_width": 1.0,
+    "spine_panned_by_role": false,
+    "low_cut_hz": 180.0,
+    "bed_correlation_before": 1.0,
+    "bed_correlation_after": 0.9809,
+    "bed_low_band_correlation_after": 1.0,
+    "master_correlation": 0.8995,
+    "master_side_rms_dbfs": -26.9
+  },
+  "sigma": {
+    "absent": true,
+    "intended_left_hz": null,
+    "intended_right_hz": null,
+    "measured_left_hz": null,
+    "measured_right_hz": null,
+    "measured_separation_hz": null,
+    "gain_db": null,
+    "gain_reference": "not struck in this run",
+    "engine": "excluded for test purity (founder's order); acquitted by the v4b A/B"
+  },
+  "master": {
+    "lufs_before": -8.74,
+    "gain_applied_db": -5.26,
+    "trim_db": 0.0,
+    "lufs_after": -14.0,
+    "sample_peak_db": -2.06,
+    "true_peak_dbtp": -1.79,
+    "ceiling_overrode_loudness": false,
+    "target_lufs": -14.0,
+    "ceiling_dbtp": -1.0
+  },
+  "files": {
+    "master_wav": {
+      "path": "studio-runs/v5-proof-4/master.wav",
+      "bytes": 60359084
+    },
+    "preview_mp3": {
+      "path": "studio-runs/v5-proof-4/preview.mp3",
+      "bytes": 8385645
+    },
+    "performance_32k_wav": {
+      "path": "studio-runs/v5-proof-4/performance_32k.wav",
+      "bytes": 13413164
+    },
+    "performance_48k_wav": {
+      "path": "studio-runs/v5-proof-4/performance_48k.wav",
+      "bytes": 60359142
+    },
+    "composition_abc": "studio-runs/v5-proof-4/composition.abc",
+    "spec_json": "studio-runs/v5-proof-4/spec.json",
+    "render_log": "studio-runs/v5-proof-4/render.log"
+  },
+  "wall_seconds_total": 3294.3,
+  "notes": [
+    "performance: ONE invariant prompt, struck once as a seed take and extended only by audio continuation -- the model plays through every join. The takes are spliced DIRECTLY: no crossfade, no per-take RMS matching (there are no sections to match), no grid, no trim, no tempo surgery of any kind.",
+    "absent by design: the Sigma binaural layer (excluded for test purity at the founder's order -- the v4b A/B acquitted it; its absence here is hygiene, not suspicion), any spine, any kit or sample, any synthesized voice, any second prompt.",
+    "tempo: the performance chose its own clock. The prompt asked for energy and bounce, never a number; realized tempo stands measured -- globally and per 30 s window -- in the performance block. Drift is reported, not corrected.",
+    "arpeggio: the composed violin layer rides on a schedule derived from the MEASURED tempo (the performance leads, the dancer follows), swing 0.0 -- no grid was imposed on the performance to give the dancer one. Its notation is complete in composition.abc.",
+    "the performance itself is not transcribed in composition.abc: its transcription is a separate production, owed and marked owed -- never fabricated.",
+    "loudness is K-weighted integrated, UNGATED (BS.1770 gating omitted in the proof build, stated not hidden).",
+    "2 s tail fade + 5 ms head fade applied before mastering.",
+    "takes resumed from disk carry continued_from: null in this manifest -- the chain fact lives in the render that struck them, and the manifest does not pretend to remember what it did not witness."
+  ]
+}
