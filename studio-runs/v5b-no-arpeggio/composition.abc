@@ -1,0 +1,92 @@
+X:1
+T:SINGLE PASS — VARIANT v5b: NO ARPEGGIO (A/B): the house layer, notated
+%
+% VARIANT NOTE (2026-11-09): this sheet is v5's composition.abc
+% carried over whole, with the variant marked on its face. The
+% music notated here -- the composed violin arpeggio, complete
+% below -- is IDENTICAL as a composition, but it is NOT IN THE
+% v5b MIX: the single difference between v5 and v5b is that
+% absence. Every arpeggio passage notated below is therefore
+% annotated by this note as ABSENT IN V5b; read the whole sheet
+% as the record of what was removed. The founder's ear on v5
+% heard a "weird wind instrument sound"; the desk's spectral
+% analysis points at this layer's sustained pure-tone ridges,
+% and v5b is the A/B's other half.
+C:Johnathan 'Qasparr' Monroe, ARR, All Rights Reserved, Without Prejudice
+R:Detroit bounce, F minor -- tempo the performance's own: measured 106.24 BPM
+M:4/4
+L:1/16
+K:Fmin
+%
+% WHAT THIS SHEET IS -- AND IS NOT (the founder's rule, kept):
+% This notation covers EXACTLY what the house engine composed
+% and struck over the performance: the composed violin arpeggio
+% (resonance.studio.arpeggio), complete below. The performance
+% itself -- the MusicGen bed, one continuous performance -- is
+% NOT transcribed here: its transcription is a separate
+% production, still owed, and no sheet for it has been fabricated.
+% What the bed was told stands below, verbatim, ONCE -- the
+% single invariant prompt of the seed take and every continuation:
+%   detroit bounce hip hop instrumental in F minor, energetic bouncing groove, deep rolling 808 bass, crisp drums with a live played feel, eerie minor-key piano motif, warm soulful strings, dusty vinyl warmth, one continuous performance that keeps developing
+%
+% THE PERFORMANCE: 7 takes, each extension generated
+% CONTINUED from the preceding audio (5.0 s of conditioning) -- the model plays
+% through every join. The takes are spliced DIRECTLY: no crossfade,
+% no RMS matching, no grid, no trim, no spine, no kit, no samples,
+% no synthesized voice, and NO SIGMA LAYER (excluded for test
+% purity at the founder's order; the v4b A/B acquitted Sigma -- its
+% absence here is hygiene, not suspicion).
+%
+% THE JOINS, WEIGHED (native 32 kHz splice points): the program's own
+% internal jumps read median 0.00821, p99 0.30273; the joins:
+%   join 1 after take1 at 0:29.9: waveform jump 0.00095 (0.12x the median internal jump), level step +0.46 dB
+%   join 2 after take2 at 0:59.9: waveform jump 0.41101 (50.07x the median internal jump), level step +0.96 dB
+%   join 3 after take3 at 1:29.8: waveform jump 0.80933 (98.59x the median internal jump), level step +2.30 dB
+%   join 4 after take4 at 1:59.8: waveform jump 0.0885 (10.78x the median internal jump), level step -0.53 dB
+%   join 5 after take5 at 2:29.7: waveform jump 0.65796 (80.15x the median internal jump), level step +0.46 dB
+%   join 6 after take6 at 2:59.6: waveform jump 0.10321 (12.57x the median internal jump), level step -0.04 dB
+%
+% REALIZED TEMPO (onset-envelope autocorrelation, measured on the
+% performance, imposed by nobody): global 106.24 BPM. The 30 s windows:
+%   0s:133.43, 30s:88.98, 60s:44.04, 90s:99.21, 120s:96.82, 150s:96.6, 180s:95.09
+% Window spread: 89.39 BPM. The benchmark (the Anvil) drifts ~0; this is
+% the number this proof is weighed against.
+%
+% THE ARPEGGIO -- the dancer, and the one assembled element the
+% founder's ear has praised (Proofs No. 2-3). Its schedule is DERIVED
+% FROM THE MEASURED TEMPO: 92 bars of 2.259 s, swing 0.0 --
+% no grid was imposed on the performance to give the dancer one.
+% Section chart (modes = the arpeggio's realization):
+%   intro       bars   1-8   sparse   arp:statement      0:00.0 - 0:18.1
+%   groove      bars   9-24  driving  arp:bariolage      0:18.1 - 0:54.2
+%   lift        bars  25-39  full     arp:runs           0:54.2 - 1:28.1
+%   verse3 ride bars  40-54  driving  arp:bariolage16    1:28.1 - 2:02.0
+%   groove      bars  55-69  driving  arp:bariolage      2:02.0 - 2:35.9
+%   lift        bars  70-84  full     arp:runs           2:35.9 - 3:09.8
+%   outro       bars  85-92  sparse   arp:statement_fade 3:09.8 - 3:27.8
+% Composed from the SOLFEGGIO LADDER, played at its equal-tempered
+% staff approximations; each carrier's cents offset from its staff
+% pitch is stated, never smoothed:
+%   UT   396 Hz -> G   (MIDI 67, 392.0 Hz) +17.6 cents
+%   RE   417 Hz -> ^G  (MIDI 68, 415.3 Hz) +7.1 cents
+%   MI   528 Hz -> c   (MIDI 72, 523.25 Hz) +15.6 cents
+%   FA   639 Hz -> _e  (MIDI 75, 622.25 Hz) +46.0 cents
+%   SOL  741 Hz -> ^f  (MIDI 78, 739.99 Hz) +2.4 cents
+%   LA   852 Hz -> ^g  (MIDI 80, 830.61 Hz) +44.0 cents
+% Phrasing is Fibonacci -- phrase lengths 1, 1, 2, 3, 5, 8 climbing
+% the ladder cyclically. THE FIGURE (one cell, 20 notes, L:1/16):
+G ^G c _e ^f ^g G ^G c _e ^f ^g G ^G c _e ^f ^g G ^G |
+% BARIOLAGE (the grooves): the figure alternating with the MI
+% pedal -- the first bar as composed:
+G c ^G c c c _e c ^f c ^g c G c ^G c |
+% RUNS (the lifts): the figure cell at 16ths, phrase heads accented,
+% tiling the section. STATEMENT (intro): the figure at 8th spacing,
+% phrase-final notes held; the outro's statement fades. The third
+% chair's groove takes the bariolage at 16ths.
+%
+% THE STEREO LAW (part 2 only -- there is no spine to pan, and no
+% Sigma to spare): the bed is widened by band above 180 Hz with the
+% mid preserved exactly and the lows fully mono. Correlations stand
+% measured in the manifest.
+%
+% 93 -- Live, Love, and let Love, Live.

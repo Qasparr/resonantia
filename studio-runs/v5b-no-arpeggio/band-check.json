@@ -1,0 +1,278 @@
+{
+  "method": "per window (the desk's three: 40-55 s, 100-115 s, 160-175 s): Hann-windowed FFT of each channel; one-sided power summed inside +/-2 Hz of each ladder frequency, Parseval-normalized, averaged across channels. band_dbfs is the band's absolute level; above_broadband_db is the ridge height against the window's own broadband RMS.",
+  "ladder_hz": [
+    396,
+    417,
+    528,
+    639,
+    741,
+    852
+  ],
+  "v5_master": {
+    "40-55s": {
+      "broadband_rms_dbfs": -19.28,
+      "bands": {
+        "396": {
+          "band_dbfs": -42.83,
+          "above_broadband_db": -23.55
+        },
+        "417": {
+          "band_dbfs": -44.31,
+          "above_broadband_db": -25.03
+        },
+        "528": {
+          "band_dbfs": -42.66,
+          "above_broadband_db": -23.38
+        },
+        "639": {
+          "band_dbfs": -60.47,
+          "above_broadband_db": -41.19
+        },
+        "741": {
+          "band_dbfs": -45.94,
+          "above_broadband_db": -26.66
+        },
+        "852": {
+          "band_dbfs": -67.26,
+          "above_broadband_db": -47.98
+        }
+      }
+    },
+    "100-115s": {
+      "broadband_rms_dbfs": -11.35,
+      "bands": {
+        "396": {
+          "band_dbfs": -45.99,
+          "above_broadband_db": -34.64
+        },
+        "417": {
+          "band_dbfs": -44.26,
+          "above_broadband_db": -32.91
+        },
+        "528": {
+          "band_dbfs": -37.77,
+          "above_broadband_db": -26.42
+        },
+        "639": {
+          "band_dbfs": -48.82,
+          "above_broadband_db": -37.47
+        },
+        "741": {
+          "band_dbfs": -45.44,
+          "above_broadband_db": -34.09
+        },
+        "852": {
+          "band_dbfs": -49.5,
+          "above_broadband_db": -38.15
+        }
+      }
+    },
+    "160-175s": {
+      "broadband_rms_dbfs": -13.44,
+      "bands": {
+        "396": {
+          "band_dbfs": -36.2,
+          "above_broadband_db": -22.76
+        },
+        "417": {
+          "band_dbfs": -37.41,
+          "above_broadband_db": -23.97
+        },
+        "528": {
+          "band_dbfs": -37.76,
+          "above_broadband_db": -24.32
+        },
+        "639": {
+          "band_dbfs": -42.04,
+          "above_broadband_db": -28.6
+        },
+        "741": {
+          "band_dbfs": -44.11,
+          "above_broadband_db": -30.67
+        },
+        "852": {
+          "band_dbfs": -44.63,
+          "above_broadband_db": -31.19
+        }
+      }
+    }
+  },
+  "v5b_master_no_arpeggio": {
+    "40-55s": {
+      "broadband_rms_dbfs": -19.56,
+      "bands": {
+        "396": {
+          "band_dbfs": -55.63,
+          "above_broadband_db": -36.07
+        },
+        "417": {
+          "band_dbfs": -57.21,
+          "above_broadband_db": -37.65
+        },
+        "528": {
+          "band_dbfs": -59.68,
+          "above_broadband_db": -40.12
+        },
+        "639": {
+          "band_dbfs": -69.43,
+          "above_broadband_db": -49.87
+        },
+        "741": {
+          "band_dbfs": -70.54,
+          "above_broadband_db": -50.98
+        },
+        "852": {
+          "band_dbfs": -73.6,
+          "above_broadband_db": -54.04
+        }
+      }
+    },
+    "100-115s": {
+      "broadband_rms_dbfs": -10.31,
+      "bands": {
+        "396": {
+          "band_dbfs": -60.15,
+          "above_broadband_db": -49.84
+        },
+        "417": {
+          "band_dbfs": -66.51,
+          "above_broadband_db": -56.2
+        },
+        "528": {
+          "band_dbfs": -67.23,
+          "above_broadband_db": -56.92
+        },
+        "639": {
+          "band_dbfs": -69.66,
+          "above_broadband_db": -59.35
+        },
+        "741": {
+          "band_dbfs": -65.99,
+          "above_broadband_db": -55.68
+        },
+        "852": {
+          "band_dbfs": -67.37,
+          "above_broadband_db": -57.06
+        }
+      }
+    },
+    "160-175s": {
+      "broadband_rms_dbfs": -12.89,
+      "bands": {
+        "396": {
+          "band_dbfs": -55.19,
+          "above_broadband_db": -42.3
+        },
+        "417": {
+          "band_dbfs": -57.48,
+          "above_broadband_db": -44.59
+        },
+        "528": {
+          "band_dbfs": -59.84,
+          "above_broadband_db": -46.95
+        },
+        "639": {
+          "band_dbfs": -63.0,
+          "above_broadband_db": -50.11
+        },
+        "741": {
+          "band_dbfs": -63.57,
+          "above_broadband_db": -50.68
+        },
+        "852": {
+          "band_dbfs": -64.33,
+          "above_broadband_db": -51.44
+        }
+      }
+    }
+  },
+  "raw_performance_48k": {
+    "40-55s": {
+      "broadband_rms_dbfs": -15.67,
+      "bands": {
+        "396": {
+          "band_dbfs": -51.84,
+          "above_broadband_db": -36.17
+        },
+        "417": {
+          "band_dbfs": -53.45,
+          "above_broadband_db": -37.78
+        },
+        "528": {
+          "band_dbfs": -56.15,
+          "above_broadband_db": -40.48
+        },
+        "639": {
+          "band_dbfs": -66.15,
+          "above_broadband_db": -50.48
+        },
+        "741": {
+          "band_dbfs": -67.47,
+          "above_broadband_db": -51.8
+        },
+        "852": {
+          "band_dbfs": -70.75,
+          "above_broadband_db": -55.08
+        }
+      }
+    },
+    "100-115s": {
+      "broadband_rms_dbfs": -6.39,
+      "bands": {
+        "396": {
+          "band_dbfs": -56.36,
+          "above_broadband_db": -49.97
+        },
+        "417": {
+          "band_dbfs": -62.75,
+          "above_broadband_db": -56.36
+        },
+        "528": {
+          "band_dbfs": -63.7,
+          "above_broadband_db": -57.31
+        },
+        "639": {
+          "band_dbfs": -66.38,
+          "above_broadband_db": -59.99
+        },
+        "741": {
+          "band_dbfs": -62.92,
+          "above_broadband_db": -56.53
+        },
+        "852": {
+          "band_dbfs": -64.52,
+          "above_broadband_db": -58.13
+        }
+      }
+    },
+    "160-175s": {
+      "broadband_rms_dbfs": -9.01,
+      "bands": {
+        "396": {
+          "band_dbfs": -51.41,
+          "above_broadband_db": -42.4
+        },
+        "417": {
+          "band_dbfs": -53.73,
+          "above_broadband_db": -44.72
+        },
+        "528": {
+          "band_dbfs": -56.32,
+          "above_broadband_db": -47.31
+        },
+        "639": {
+          "band_dbfs": -59.72,
+          "above_broadband_db": -50.71
+        },
+        "741": {
+          "band_dbfs": -60.5,
+          "above_broadband_db": -51.49
+        },
+        "852": {
+          "band_dbfs": -61.48,
+          "above_broadband_db": -52.47
+        }
+      }
+    }
+  }
+}

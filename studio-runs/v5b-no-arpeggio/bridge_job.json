@@ -1,0 +1,10 @@
+{
+  "finalize": [
+    {
+      "npy": "/home/hatch/workspace/resonance/studio-runs/v5b-no-arpeggio/_master_float.npy",
+      "out": "/home/hatch/workspace/resonance/studio-runs/v5b-no-arpeggio/master.wav",
+      "sample_rate": 48000,
+      "subtype": "PCM_24"
+    }
+  ]
+}

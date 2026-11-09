@@ -1,0 +1,781 @@
+{
+  "title": "SINGLE PASS \u2014 Studio Proof No. 4 \u2014 VARIANT v5b: NO ARPEGGIO (A/B)",
+  "title_status": "working title",
+  "variant": {
+    "of": "studio-runs/v5-proof-4 \u2014 SINGLE PASS (Studio Proof No. 4)",
+    "single_difference": "arpeggio: absent \u2014 the composed solfeggio arpeggio layer (1,064 notes, level \u22129 dB, orbit 0.03 Hz, seed 777, on a schedule derived from the measured tempo in v5) is not present in this mix. Everything else is identical: the same performance (performance_48k.wav resumed from v5-proof-4 on disk \u2014 no new MusicGen generation), the same Stereo Law widening, the same fades, the same mastering law (\u221214 LUFS target, \u22121 dBTP ceiling). Sigma remains absent, as in v5, by design.",
+    "validation": {
+      "reconstruction": "v5 rebuilt through the identical code path WITH its arpeggio layer and mastered; compared against the shipped master.wav",
+      "max_abs_sample_diff": 1.189691829495132e-07,
+      "max_abs_sample_diff_lsb24": 0.998,
+      "corr_reconstructed": 0.8995,
+      "side_reconstructed_dbfs": -26.9,
+      "lufs_reconstructed": -14.0,
+      "true_peak_reconstructed_dbtp": -1.79,
+      "v5_manifest": {
+        "corr": 0.8995,
+        "side_dbfs": -26.9,
+        "lufs": -14.0,
+        "true_peak_dbtp": -1.79
+      }
+    }
+  },
+  "dry_run": false,
+  "created_utc": "2026-11-09T12:37:35Z",
+  "pipeline": "resonance.studio v1 (proof-of-concept build) \u2014 variant struck by produce_no_arpeggio.py driving the pipeline's own stages",
+  "spec": {
+    "title": "SINGLE PASS \u2014 Studio Proof No. 4 \u2014 VARIANT v5b: NO ARPEGGIO (A/B)",
+    "prompt_base": "detroit bounce hip hop instrumental in F minor, energetic bouncing groove, deep rolling 808 bass, crisp drums with a live played feel, eerie minor-key piano motif, warm soulful strings, dusty vinyl warmth, one continuous performance that keeps developing",
+    "performance": {
+      "takes": 7,
+      "take_seconds": 30.0,
+      "continue_seconds": 5.0
+    },
+    "seed": 777,
+    "arpeggio": {
+      "absent": true,
+      "note": "the composed arpeggio layer is OMITTED from this variant's mix at the desk's A/B order (2026-11-09) -- the founder heard a 'weird wind instrument sound' in v5 and the spectral evidence points at this layer. v5's arpeggio values are recorded here so the one change is fully described, not merely named.",
+      "v5_values": {
+        "level_db": -9.0,
+        "orbit_hz": 0.03,
+        "strength": 1.0,
+        "seed": 777,
+        "total_notes": 1064,
+        "mixed_layer_rms_dbfs": -18.13
+      }
+    },
+    "stereo": {
+      "width": 1.0
+    },
+    "master": {
+      "target_lufs": -14.0,
+      "ceiling_dbtp": -1.0
+    },
+    "out_dir": "/home/hatch/workspace/resonance/studio-runs/v5b-no-arpeggio",
+    "sections": [
+      {
+        "name": "take1",
+        "prompt_suffix": "",
+        "seconds": 30.0
+      },
+      {
+        "name": "take2",
+        "prompt_suffix": "",
+        "seconds": 30.0
+      },
+      {
+        "name": "take3",
+        "prompt_suffix": "",
+        "seconds": 30.0
+      },
+      {
+        "name": "take4",
+        "prompt_suffix": "",
+        "seconds": 30.0
+      },
+      {
+        "name": "take5",
+        "prompt_suffix": "",
+        "seconds": 30.0
+      },
+      {
+        "name": "take6",
+        "prompt_suffix": "",
+        "seconds": 30.0
+      },
+      {
+        "name": "take7",
+        "prompt_suffix": "",
+        "seconds": 30.0
+      }
+    ],
+    "sigma": {
+      "left_hz": 200.0,
+      "right_hz": 213.0,
+      "gain_db": -28.0
+    }
+  },
+  "performance": {
+    "source_run": "studio-runs/v5-proof-4 (the performance is v5's, byte-identical: performance_48k.wav copied whole)",
+    "method": "one continuous performance: a seed take extended only by audio continuation under one invariant prompt; direct splices, weighed",
+    "realized_tempo": {
+      "global_bpm": 106.24,
+      "global_peak_autocorrelation": 0.2421,
+      "dominant_periodicity_bpm": 44.29,
+      "candidate_periodicities": [
+        {
+          "bpm": 44.29,
+          "autocorrelation": 0.3117
+        },
+        {
+          "bpm": 76.01,
+          "autocorrelation": 0.2471
+        },
+        {
+          "bpm": 89.29,
+          "autocorrelation": 0.2423
+        }
+      ],
+      "double_time_candidate_bpm": null,
+      "estimator": "onset envelope (spectral flux) autocorrelation with a log-Gaussian tempo prior (center 100 BPM, sigma 1 octave), 40..200 BPM search on the performance's mid channel; the dominant periodicity and the candidate table stand beside the headline so the prior's work is visible",
+      "windows_30s": [
+        {
+          "start_s": 0.0,
+          "end_s": 30.0,
+          "bpm": 133.43,
+          "peak_autocorrelation": 0.5609
+        },
+        {
+          "start_s": 30.0,
+          "end_s": 60.0,
+          "bpm": 88.98,
+          "peak_autocorrelation": 0.4152
+        },
+        {
+          "start_s": 60.0,
+          "end_s": 90.0,
+          "bpm": 44.04,
+          "peak_autocorrelation": 0.5106
+        },
+        {
+          "start_s": 90.0,
+          "end_s": 120.0,
+          "bpm": 99.21,
+          "peak_autocorrelation": 0.1521
+        },
+        {
+          "start_s": 120.0,
+          "end_s": 150.0,
+          "bpm": 96.82,
+          "peak_autocorrelation": 0.2382
+        },
+        {
+          "start_s": 150.0,
+          "end_s": 180.0,
+          "bpm": 96.6,
+          "peak_autocorrelation": 0.1413
+        },
+        {
+          "start_s": 180.0,
+          "end_s": 209.6,
+          "bpm": 95.09,
+          "peak_autocorrelation": 0.326
+        }
+      ],
+      "window_bpm_min": 44.04,
+      "window_bpm_max": 133.43,
+      "window_bpm_spread": 89.39,
+      "takes": 7,
+      "continue_seconds": 5.0
+    },
+    "tempo_remeasured_this_run_bpm": 106.24,
+    "joins": [
+      {
+        "join": 1,
+        "after_take": "take1",
+        "at_sample": 958080,
+        "at_seconds": 29.94,
+        "waveform_jump": 0.00095,
+        "jump_vs_median_internal": 0.12,
+        "rms_step_db": 0.46
+      },
+      {
+        "join": 2,
+        "after_take": "take2",
+        "at_sample": 1916160,
+        "at_seconds": 59.88,
+        "waveform_jump": 0.41101,
+        "jump_vs_median_internal": 50.07,
+        "rms_step_db": 0.96
+      },
+      {
+        "join": 3,
+        "after_take": "take3",
+        "at_sample": 2874240,
+        "at_seconds": 89.82,
+        "waveform_jump": 0.80933,
+        "jump_vs_median_internal": 98.59,
+        "rms_step_db": 2.3
+      },
+      {
+        "join": 4,
+        "after_take": "take4",
+        "at_sample": 3832320,
+        "at_seconds": 119.76,
+        "waveform_jump": 0.0885,
+        "jump_vs_median_internal": 10.78,
+        "rms_step_db": -0.53
+      },
+      {
+        "join": 5,
+        "after_take": "take5",
+        "at_sample": 4790400,
+        "at_seconds": 149.7,
+        "waveform_jump": 0.65796,
+        "jump_vs_median_internal": 80.15,
+        "rms_step_db": 0.46
+      },
+      {
+        "join": 6,
+        "after_take": "take6",
+        "at_sample": 5748480,
+        "at_seconds": 179.64,
+        "waveform_jump": 0.10321,
+        "jump_vs_median_internal": 12.57,
+        "rms_step_db": -0.04
+      }
+    ],
+    "join_summary": {
+      "count": 6,
+      "waveform_jump_mean": 0.34516,
+      "waveform_jump_max": 0.80933,
+      "internal_jump_median": 0.00821,
+      "internal_jump_p99": 0.30273,
+      "splice": "direct -- no crossfade, no gain, no trim"
+    }
+  },
+  "render": {
+    "model": "facebook/musicgen-small",
+    "wall_seconds_this_run": 0.0,
+    "note": "no MusicGen rendering in this run \u2014 the performance was resumed from v5-proof-4 on disk"
+  },
+  "program": {
+    "seconds": 209.58,
+    "sample_rate": 48000,
+    "channels": 2,
+    "bit_depth": 24
+  },
+  "arpeggio": {
+    "status": "ABSENT",
+    "note": "no arpeggio was rendered or mixed; the layer's v5 figures stand in the spec block above (v5_values) and in the variant block. The notation in composition.abc is v5's sheet, carried over and marked: every notated passage is a passage this mix does not contain.",
+    "validation_render": {
+      "level_db": -9.0,
+      "orbit_hz": 0.03,
+      "strength": 1.0,
+      "seed": 777,
+      "total_notes": 1064,
+      "sections": [
+        {
+          "name": "intro",
+          "bars": 8,
+          "density": "sparse",
+          "mode": "statement",
+          "notes": 48
+        },
+        {
+          "name": "groove",
+          "bars": 16,
+          "density": "driving",
+          "mode": "bariolage",
+          "notes": 128
+        },
+        {
+          "name": "lift",
+          "bars": 15,
+          "density": "full",
+          "mode": "runs",
+          "notes": 240
+        },
+        {
+          "name": "verse3 ride",
+          "bars": 15,
+          "density": "driving",
+          "mode": "bariolage16",
+          "notes": 240
+        },
+        {
+          "name": "groove",
+          "bars": 15,
+          "density": "driving",
+          "mode": "bariolage",
+          "notes": 120
+        },
+        {
+          "name": "lift",
+          "bars": 15,
+          "density": "full",
+          "mode": "runs",
+          "notes": 240
+        },
+        {
+          "name": "outro",
+          "bars": 8,
+          "density": "sparse",
+          "mode": "statement_fade",
+          "notes": 48
+        }
+      ],
+      "ladder": [
+        {
+          "syllable": "UT",
+          "carrier_hz": 396.0,
+          "midi": 67,
+          "staff_hz": 392.0,
+          "cents_offset": 17.6,
+          "abc": "G"
+        },
+        {
+          "syllable": "RE",
+          "carrier_hz": 417.0,
+          "midi": 68,
+          "staff_hz": 415.3,
+          "cents_offset": 7.1,
+          "abc": "^G"
+        },
+        {
+          "syllable": "MI",
+          "carrier_hz": 528.0,
+          "midi": 72,
+          "staff_hz": 523.25,
+          "cents_offset": 15.6,
+          "abc": "c"
+        },
+        {
+          "syllable": "FA",
+          "carrier_hz": 639.0,
+          "midi": 75,
+          "staff_hz": 622.25,
+          "cents_offset": 46.0,
+          "abc": "_e"
+        },
+        {
+          "syllable": "SOL",
+          "carrier_hz": 741.0,
+          "midi": 78,
+          "staff_hz": 739.99,
+          "cents_offset": 2.4,
+          "abc": "^f"
+        },
+        {
+          "syllable": "LA",
+          "carrier_hz": 852.0,
+          "midi": 80,
+          "staff_hz": 830.61,
+          "cents_offset": 44.0,
+          "abc": "^g"
+        }
+      ],
+      "fibonacci_phrases": [
+        1,
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "figure_cell_midi": [
+        67,
+        68,
+        72,
+        75,
+        78,
+        80,
+        67,
+        68,
+        72,
+        75,
+        78,
+        80,
+        67,
+        68,
+        72,
+        75,
+        78,
+        80,
+        67,
+        68
+      ],
+      "layer_rms_dbfs": -16.21,
+      "mixed_layer_rms_dbfs": -18.13
+    },
+    "validation_schedule": {
+      "bpm": 106.24,
+      "bpm_source": "measured from the performance itself (onset-envelope autocorrelation)",
+      "swing": 0.0,
+      "total_bars": 92,
+      "sections": [
+        {
+          "name": "intro",
+          "bars": 8,
+          "density": "sparse"
+        },
+        {
+          "name": "groove",
+          "bars": 16,
+          "density": "driving"
+        },
+        {
+          "name": "lift",
+          "bars": 15,
+          "density": "full"
+        },
+        {
+          "name": "verse3 ride",
+          "bars": 15,
+          "density": "driving"
+        },
+        {
+          "name": "groove",
+          "bars": 15,
+          "density": "driving"
+        },
+        {
+          "name": "lift",
+          "bars": 15,
+          "density": "full"
+        },
+        {
+          "name": "outro",
+          "bars": 8,
+          "density": "sparse"
+        }
+      ],
+      "layer_rendered_samples": 9975904,
+      "program_samples": 10059840,
+      "layer_fit": "zero-padded to the program"
+    }
+  },
+  "stereo": {
+    "bed_width": 1.0,
+    "spine_panned_by_role": false,
+    "low_cut_hz": 180.0,
+    "bed_correlation_before": 1.0,
+    "bed_correlation_after": 0.9809,
+    "bed_low_band_correlation_after": 1.0,
+    "master_correlation": 0.9808,
+    "master_side_rms_dbfs": -33.29
+  },
+  "sigma": {
+    "absent": true,
+    "intended_left_hz": null,
+    "intended_right_hz": null,
+    "measured_left_hz": null,
+    "measured_right_hz": null,
+    "measured_separation_hz": null,
+    "gain_db": null,
+    "gain_reference": "not struck in this run",
+    "engine": "excluded for test purity (founder's order); acquitted by the v4b A/B"
+  },
+  "master": {
+    "lufs_before": -10.06,
+    "gain_applied_db": -3.94,
+    "trim_db": 0.0,
+    "lufs_after": -14.0,
+    "sample_peak_db": -2.45,
+    "true_peak_dbtp": -1.97,
+    "ceiling_overrode_loudness": false,
+    "target_lufs": -14.0,
+    "ceiling_dbtp": -1.0
+  },
+  "desk_remeasure": {
+    "seconds": 209.58,
+    "samples": 10059840,
+    "correlation": 0.9808,
+    "side_rms_dbfs": -33.29,
+    "lufs": -14.0,
+    "true_peak_dbtp": -1.97
+  },
+  "solfeggio_band_check": {
+    "method": "per window (the desk's three: 40-55 s, 100-115 s, 160-175 s): Hann-windowed FFT of each channel; one-sided power summed inside +/-2 Hz of each ladder frequency, Parseval-normalized, averaged across channels. band_dbfs is the band's absolute level; above_broadband_db is the ridge height against the window's own broadband RMS.",
+    "ladder_hz": [
+      396,
+      417,
+      528,
+      639,
+      741,
+      852
+    ],
+    "v5_master": {
+      "40-55s": {
+        "broadband_rms_dbfs": -19.28,
+        "bands": {
+          "396": {
+            "band_dbfs": -42.83,
+            "above_broadband_db": -23.55
+          },
+          "417": {
+            "band_dbfs": -44.31,
+            "above_broadband_db": -25.03
+          },
+          "528": {
+            "band_dbfs": -42.66,
+            "above_broadband_db": -23.38
+          },
+          "639": {
+            "band_dbfs": -60.47,
+            "above_broadband_db": -41.19
+          },
+          "741": {
+            "band_dbfs": -45.94,
+            "above_broadband_db": -26.66
+          },
+          "852": {
+            "band_dbfs": -67.26,
+            "above_broadband_db": -47.98
+          }
+        }
+      },
+      "100-115s": {
+        "broadband_rms_dbfs": -11.35,
+        "bands": {
+          "396": {
+            "band_dbfs": -45.99,
+            "above_broadband_db": -34.64
+          },
+          "417": {
+            "band_dbfs": -44.26,
+            "above_broadband_db": -32.91
+          },
+          "528": {
+            "band_dbfs": -37.77,
+            "above_broadband_db": -26.42
+          },
+          "639": {
+            "band_dbfs": -48.82,
+            "above_broadband_db": -37.47
+          },
+          "741": {
+            "band_dbfs": -45.44,
+            "above_broadband_db": -34.09
+          },
+          "852": {
+            "band_dbfs": -49.5,
+            "above_broadband_db": -38.15
+          }
+        }
+      },
+      "160-175s": {
+        "broadband_rms_dbfs": -13.44,
+        "bands": {
+          "396": {
+            "band_dbfs": -36.2,
+            "above_broadband_db": -22.76
+          },
+          "417": {
+            "band_dbfs": -37.41,
+            "above_broadband_db": -23.97
+          },
+          "528": {
+            "band_dbfs": -37.76,
+            "above_broadband_db": -24.32
+          },
+          "639": {
+            "band_dbfs": -42.04,
+            "above_broadband_db": -28.6
+          },
+          "741": {
+            "band_dbfs": -44.11,
+            "above_broadband_db": -30.67
+          },
+          "852": {
+            "band_dbfs": -44.63,
+            "above_broadband_db": -31.19
+          }
+        }
+      }
+    },
+    "v5b_master_no_arpeggio": {
+      "40-55s": {
+        "broadband_rms_dbfs": -19.56,
+        "bands": {
+          "396": {
+            "band_dbfs": -55.63,
+            "above_broadband_db": -36.07
+          },
+          "417": {
+            "band_dbfs": -57.21,
+            "above_broadband_db": -37.65
+          },
+          "528": {
+            "band_dbfs": -59.68,
+            "above_broadband_db": -40.12
+          },
+          "639": {
+            "band_dbfs": -69.43,
+            "above_broadband_db": -49.87
+          },
+          "741": {
+            "band_dbfs": -70.54,
+            "above_broadband_db": -50.98
+          },
+          "852": {
+            "band_dbfs": -73.6,
+            "above_broadband_db": -54.04
+          }
+        }
+      },
+      "100-115s": {
+        "broadband_rms_dbfs": -10.31,
+        "bands": {
+          "396": {
+            "band_dbfs": -60.15,
+            "above_broadband_db": -49.84
+          },
+          "417": {
+            "band_dbfs": -66.51,
+            "above_broadband_db": -56.2
+          },
+          "528": {
+            "band_dbfs": -67.23,
+            "above_broadband_db": -56.92
+          },
+          "639": {
+            "band_dbfs": -69.66,
+            "above_broadband_db": -59.35
+          },
+          "741": {
+            "band_dbfs": -65.99,
+            "above_broadband_db": -55.68
+          },
+          "852": {
+            "band_dbfs": -67.37,
+            "above_broadband_db": -57.06
+          }
+        }
+      },
+      "160-175s": {
+        "broadband_rms_dbfs": -12.89,
+        "bands": {
+          "396": {
+            "band_dbfs": -55.19,
+            "above_broadband_db": -42.3
+          },
+          "417": {
+            "band_dbfs": -57.48,
+            "above_broadband_db": -44.59
+          },
+          "528": {
+            "band_dbfs": -59.84,
+            "above_broadband_db": -46.95
+          },
+          "639": {
+            "band_dbfs": -63.0,
+            "above_broadband_db": -50.11
+          },
+          "741": {
+            "band_dbfs": -63.57,
+            "above_broadband_db": -50.68
+          },
+          "852": {
+            "band_dbfs": -64.33,
+            "above_broadband_db": -51.44
+          }
+        }
+      }
+    },
+    "raw_performance_48k": {
+      "40-55s": {
+        "broadband_rms_dbfs": -15.67,
+        "bands": {
+          "396": {
+            "band_dbfs": -51.84,
+            "above_broadband_db": -36.17
+          },
+          "417": {
+            "band_dbfs": -53.45,
+            "above_broadband_db": -37.78
+          },
+          "528": {
+            "band_dbfs": -56.15,
+            "above_broadband_db": -40.48
+          },
+          "639": {
+            "band_dbfs": -66.15,
+            "above_broadband_db": -50.48
+          },
+          "741": {
+            "band_dbfs": -67.47,
+            "above_broadband_db": -51.8
+          },
+          "852": {
+            "band_dbfs": -70.75,
+            "above_broadband_db": -55.08
+          }
+        }
+      },
+      "100-115s": {
+        "broadband_rms_dbfs": -6.39,
+        "bands": {
+          "396": {
+            "band_dbfs": -56.36,
+            "above_broadband_db": -49.97
+          },
+          "417": {
+            "band_dbfs": -62.75,
+            "above_broadband_db": -56.36
+          },
+          "528": {
+            "band_dbfs": -63.7,
+            "above_broadband_db": -57.31
+          },
+          "639": {
+            "band_dbfs": -66.38,
+            "above_broadband_db": -59.99
+          },
+          "741": {
+            "band_dbfs": -62.92,
+            "above_broadband_db": -56.53
+          },
+          "852": {
+            "band_dbfs": -64.52,
+            "above_broadband_db": -58.13
+          }
+        }
+      },
+      "160-175s": {
+        "broadband_rms_dbfs": -9.01,
+        "bands": {
+          "396": {
+            "band_dbfs": -51.41,
+            "above_broadband_db": -42.4
+          },
+          "417": {
+            "band_dbfs": -53.73,
+            "above_broadband_db": -44.72
+          },
+          "528": {
+            "band_dbfs": -56.32,
+            "above_broadband_db": -47.31
+          },
+          "639": {
+            "band_dbfs": -59.72,
+            "above_broadband_db": -50.71
+          },
+          "741": {
+            "band_dbfs": -60.5,
+            "above_broadband_db": -51.49
+          },
+          "852": {
+            "band_dbfs": -61.48,
+            "above_broadband_db": -52.47
+          }
+        }
+      }
+    }
+  },
+  "files": {
+    "master_wav": {
+      "path": "/home/hatch/workspace/resonance/studio-runs/v5b-no-arpeggio/master.wav",
+      "bytes": 60359084
+    },
+    "preview_mp3": {
+      "path": "/home/hatch/workspace/resonance/studio-runs/v5b-no-arpeggio/preview.mp3",
+      "bytes": 8385645
+    },
+    "performance_48k_wav": {
+      "path": "/home/hatch/workspace/resonance/studio-runs/v5b-no-arpeggio/performance_48k.wav",
+      "bytes": 60359142
+    },
+    "band_check_json": "/home/hatch/workspace/resonance/studio-runs/v5b-no-arpeggio/band-check.json",
+    "composition_abc": "/home/hatch/workspace/resonance/studio-runs/v5b-no-arpeggio/composition.abc",
+    "spec_json": "/home/hatch/workspace/resonance/studio-runs/v5b-no-arpeggio/spec.json"
+  },
+  "wall_seconds_total": 114.08,
+  "notes": [
+    "VARIANT of v5-proof-4: the single difference is the ABSENT arpeggio layer; the validation block proves the performance under this mix is the performance under v5's, sample for sample.",
+    "loudness is K-weighted integrated, UNGATED (BS.1770 gating omitted in the proof build, stated not hidden).",
+    "2 s tail fade + 5 ms head fade applied before mastering, as in v5.",
+    "stereo law: the bed is widened by quadrature side synthesis above 180 Hz with the mid preserved exactly and the lows left fully mono \u2014 identical in both mixes; the correlation tick between v5 and v5b is the arpeggio's own decorrelated orbit leaving the sum, nothing else.",
+    "the solfeggio-band check stands in its own block and in band-check.json: in v5b the ladder-frequency ridges the desk measured in v5 should be gone, back to the raw performance's own levels."
+  ]
+}
