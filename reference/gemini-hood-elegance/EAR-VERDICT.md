@@ -9,3 +9,7 @@ two voices not certifiable from the confounded register bench, the hard
 stop rendered as a fast fade. The ear accepted the performance as struck;
 the record keeps what the ear forgave.
 Marked, never vanished. 93 — Live, Love, and let Love, Live.
+
+ADDENDUM (2026-11-10 08:25 EST): on the delivered house master, the founder's
+word: "Superb." Filed beside the strike verdict ("Its nice") — the master
+carries the warmer word; both stand, neither amends the other.
