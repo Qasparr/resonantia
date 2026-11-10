@@ -1,0 +1,213 @@
+X:1
+T:MELLO GHETTO HELLO CAPRICE: the performance, unaccompanied
+C:Johnathan 'Qasparr' Monroe, ARR, All Rights Reserved, Without Prejudice
+R:Detroit bounce, F minor -- tempo the performance's own: measured 144.63 BPM
+M:4/4
+L:1/16
+K:Fmin
+%
+% WHAT THIS SHEET IS -- AND IS NOT (the founder's rule, kept):
+% NO notation stands on this sheet, and that is the honest state
+% of the record. Nothing was composed over this performance:
+% no arpeggio layer, no spine, no kit rides on it -- the founder's
+% ruling after Proof No. 4: IF IT ISN'T IN THE PERFORMANCE, IT
+% ISN'T IN THE TRACK. The ONE ground under it is the Sigma the
+% founder ORDERED into this track's spec -- named, designed and
+% measured in THE PRODUCTION block below, not hidden in the mix.
+% The Paganini line stands in the prompt below, and the performance
+% played it as part of its own body.
+% The transcription of the performance itself -- violin line
+% included -- is a SEPARATE PRODUCTION, still OWED, and no
+% sheet for it has been fabricated.
+% What the performance was told stands below, verbatim, ONCE --
+% the single invariant prompt of the seed take and every
+% continuation:
+%   detroit bounce hip hop instrumental in F minor at 144 bpm, simple steady bouncing groove that repeats and builds slowly, deep rolling 808 bass, crisp drums with fast steady hi-hats, one violin playing a simple memorable repeating melody, sparse eerie piano chords, a blues harmonica answering in short phrases now and then, dusty vinyl warmth, one continuous live performance, the final third sits back to groove and piano only with a wide open pocket, closing on an open vamp, no flutes, no breathy pads
+%
+% THE SESSION: the whole chain -- 7 takes -- was born in
+% ONE bridge process, every continuation conditioned on the preceding
+% audio IN MEMORY. No take was resumed from disk; an interrupted chain
+% is void by rule, and the session guard weighed this chain before
+% the splice was allowed.
+% Voided attempts set aside before this strike: 1 (void-attempt-1).
+% THE WARM-UP: 1 leading take(s) were struck and
+% DISCARDED -- their audio is nowhere in this program. The warm-up's
+% own measured tempo: 71.8 BPM. The kept program
+% opens at kept take 1 (29.94 s into the chain).
+% THE PERFORMANCE: 7 takes struck, 179.6 s of kept
+% program, each extension generated CONTINUED from the preceding audio
+% (5.0 s of conditioning) -- the model plays through
+% every join. The kept takes are spliced DIRECTLY: no crossfade,
+% no RMS matching, no grid, no trim.
+%
+% THE JOINS, WEIGHED (native 32 kHz splice points, kept program):
+% the program's own internal jumps read median 0.00934, p99 0.24823; the joins:
+%   join 1 after take2 at 0:29.9: waveform jump 0.42447 (45.45x the median internal jump), level step -0.57 dB
+%   join 2 after take3 at 0:59.9: waveform jump 0.26831 (28.73x the median internal jump), level step -1.27 dB
+%   join 3 after take4 at 1:29.8: waveform jump 0.73462 (78.67x the median internal jump), level step +0.10 dB
+%   join 4 after take5 at 1:59.8: waveform jump 0.13513 (14.47x the median internal jump), level step +0.78 dB
+%   join 5 after take6 at 2:29.7: waveform jump 1.03787 (111.14x the median internal jump), level step +0.66 dB
+%
+% REALIZED TEMPO (onset-envelope autocorrelation, measured on the
+% kept program, imposed by nobody): global 144.63 BPM. The 30 s windows:
+%   0s:71.74, 30s:143.68, 60s:112.61, 90s:59.69, 120s:74.37, 150s:150.44
+% Window spread: 90.75 BPM. The benchmark (the Anvil) drifts ~0; this is
+% the number this proof is weighed against.
+%
+% THE STEREO LAW (part 2 only -- there is no spine to pan): the
+% bed is widened by band above 180 Hz with the mid preserved exactly
+% and the lows fully mono; the Sigma ground was mixed AFTER the
+% widening and never passed through it. Correlations stand measured
+% in the manifest.
+%
+% THE PRODUCTION (the founder's spec for this track, in the open):
+%   TRACK: 'Mello Ghetto Hello Caprice' -- the instrumental for NIGHT SUN: 77 bars written + 16 held free = 93 bars of rap.
+%   LYRIC SHEET: /home/hatch/workspace/goals/qasparr-the-unfriendly-ghost-album/files/NIGHT-SUN-77-BARS.md
+%   FRONT LINE (his order): Paganini violin, grand piano, harmonica. Ultra Detroit Bounce rhythm sections; a 144-tempo hi-hat flow. SPARSE REALIZATION (the re-strike ruling below): the violin plays a simple memorable REPEATING melody, not virtuoso figuration; the harmonica answers in short phrases, sparingly; the groove wins every contest for the prompt's budget.
+%   WIND LAW (his sanction): if wind is necessary use bagpipes -- the only sanctioned wind voice. No flutes, no breathy pads. (This sparse strike needs no wind beyond the harmonica's short phrases; the pipes stand unspent.)
+%   FEATURE TERRITORY (his ruling): the last verse and outro stay open for the Lady of the Lake, Lakeyah herself -- bars 55-77 sit back, pocket wide open, no dense lead line crowding the last-verse region; the program closes on an open outro vamp (bounce + pocket), not a composed finale.
+%   BAR MAP: Verse I bars 1-27; Verse II bars 28-54; FEATURE (Lakeyah) bars 55-77; his 16 at bars 78-93; then the open outro.
+%   SIGMA (his order): binaural in the 13-31 Hz band that dances with the melody and harmonizes with synergy in the pocket -- struck mode DRIFT over the doctrine pair 200/213 at -28 dB; measured in the manifest.
+%   EAR VERDICT ON PROOF No. 5 'TAKE TWO' (2026-11-09, the only court): FAIL -- 'Still too Frankensteinish not got a flow at all just random instruments with random notes.' Desk reading on record: MusicGen-small improvises locally and never develops; whole-performance generation stands 2-for-2 at modest briefs (the Proven Road: 'Sounds like real instruments this time') and 0-for-1 at density.
+%   RE-STRIKE RULING (his order, 2026-11-09): 'Cut it -- re-strike the Caprice sparse, Proven Road density.' The dense v7 build was cut mid-render and is VOID, unsalvaged, its audio nowhere in this run. This strike (v8) carries FEW simultaneous demands and lets the groove repeat and develop slowly -- repetition is the point; the rap carries the busy-ness. Fallback chained by his order: 'If that fails then the other method' -- the desk sequences the fallback; this run is the sparse attempt only.
+%   SIGMA, as ordered and as measured: mode DRIFT -- the beat dances
+%   sinusoidally between 13.0 and 31.0 Hz around the 206.5 Hz mean carrier (the doctrine
+%   pair 200.0/213.0), one full dance per 60.0 s, at -28.0 dB under the bed's RMS. Measured on the
+%   stem: beat trajectory 13.0..31.0 Hz (mean 22.03), stem level -37.84 dBFS.
+%
+% 93 -- Live, Love, and let Love, Live.
+
+X:2
+T:MELLO GHETTO HELLO CAPRICE: the lead line, as transcribed by the desk
+C:Johnathan 'Qasparr' Monroe, ARR, All Rights Reserved, Without Prejudice
+R:transcription at the performance's measured tempo: 144.63 BPM (its own clock)
+M:4/4
+L:1/16
+K:Fmin
+%
+% THE TRANSCRIPTION, AND ITS LIMITS (stated on its face, per the rule):
+% Struck by the desk AFTER the run, from performance_48k.wav -- the kept
+% performance before Sigma and mastering -- with the house YIN tracker
+% (resonance.pitch), lead band 180-1400 Hz. A frame was admitted ONLY where
+% YIN and the frame's own spectral peak agreed within 50 cents -- two
+% witnesses or none. It is a MONOPHONIC estimate over a dense mix:
+% where the bed out-shouts the lead, the line follows the bed or falls
+% silent (rests); octave errors are thinned by the gate, not abolished.
+% Durations are quantized to 16ths of the MEASURED tempo; pitches are
+% frame medians rounded to the staff. This is the lead line as the
+% tooling honestly hears it -- an estimate with its error budget in the
+% open, not a fabrication and not a claim of note-perfect capture.
+% COVERAGE: 199 admitted frames of 16838 tracked (422 voiced before the gates) = 2.1 s of
+% 179.6 s carried a two-witness lead; 4 notes segmented.
+%
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z2 e2 e2 z10 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z3 e1 z12 |
+z16 |
+z16 |
+z16 |
+z16 |
+z9 a7- |
+a3 z13 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z16 |
+z5 |
+%
+% 93 -- Live, Love, and let Love, Live.
