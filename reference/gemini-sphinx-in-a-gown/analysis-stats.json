@@ -1,0 +1,470 @@
+{
+ "audio": "/home/hatch/workspace/resonance/reference/gemini-sphinx-in-a-gown/sphinx_in_a_gown_0_6snr.mp3",
+ "sr": 44100,
+ "duration_s": 125.91,
+ "bpm_measured_bench": 99.93,
+ "beat_s": 0.60042,
+ "bar_s": 2.401681,
+ "downbeat_phase_s": 0.03,
+ "n_bars": 53,
+ "boundaries": [
+  {
+   "t_raw": 8.034,
+   "t_used": 7.235043530471329,
+   "snap_distance_s": 0.799,
+   "novelty": 0.3286,
+   "prominence_ratio": 1.05,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 21.153,
+   "t_used": 21.645130591413988,
+   "snap_distance_s": 0.492,
+   "novelty": 0.3571,
+   "prominence_ratio": 1.14,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 29.582,
+   "t_used": 28.850174121885317,
+   "snap_distance_s": 0.732,
+   "novelty": 0.3515,
+   "prominence_ratio": 1.13,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 36.827,
+   "t_used": 36.055217652356646,
+   "snap_distance_s": 0.772,
+   "novelty": 0.3481,
+   "prominence_ratio": 1.11,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 46.347,
+   "t_used": 45.66194235965175,
+   "snap_distance_s": 0.685,
+   "novelty": 0.357,
+   "prominence_ratio": 1.14,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 56.099,
+   "t_used": 55.26866706694686,
+   "snap_distance_s": 0.831,
+   "novelty": 0.39,
+   "prominence_ratio": 1.25,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 68.847,
+   "t_used": 69.67875412788952,
+   "snap_distance_s": 0.832,
+   "novelty": 0.3546,
+   "prominence_ratio": 1.14,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 77.601,
+   "t_used": 76.88379765836085,
+   "snap_distance_s": 0.717,
+   "novelty": 0.3673,
+   "prominence_ratio": 1.18,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 85.775,
+   "t_used": 86.49052236565595,
+   "snap_distance_s": 0.716,
+   "novelty": 0.3248,
+   "prominence_ratio": 1.04,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 93.484,
+   "t_used": 93.69556589612728,
+   "snap_distance_s": 0.212,
+   "novelty": 0.3674,
+   "prominence_ratio": 1.18,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 104.095,
+   "t_used": 103.30229060342239,
+   "snap_distance_s": 0.793,
+   "novelty": 0.3712,
+   "prominence_ratio": 1.19,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 111.293,
+   "t_used": 110.50733413389372,
+   "snap_distance_s": 0.786,
+   "novelty": 0.3632,
+   "prominence_ratio": 1.16,
+   "confidence": 0.75
+  }
+ ],
+ "boundaries_merged_away": [],
+ "chord_distribution": {
+  "A#m": 1,
+  "Am": 1,
+  "F": 7,
+  "F5": 2,
+  "Fm": 16,
+  "UNCLEAR": 26
+ },
+ "segments": [
+  {
+   "t0": 0.0,
+   "t1": 7.235,
+   "dur": 7.235,
+   "bar0": 0,
+   "n_bars": 3,
+   "mean_db": -23.493,
+   "slope_db_s": 0.731,
+   "centroid_hz": 2264.663,
+   "chroma_stability": 0.76,
+   "voiced_density": 0.809,
+   "recurrence_sim": 0.848,
+   "recurrence_with": 7
+  },
+  {
+   "t0": 7.235,
+   "t1": 21.645,
+   "dur": 14.41,
+   "bar0": 3,
+   "n_bars": 6,
+   "mean_db": -16.579,
+   "slope_db_s": 0.642,
+   "centroid_hz": 3351.915,
+   "chroma_stability": 0.722,
+   "voiced_density": 0.156,
+   "recurrence_sim": 0.899,
+   "recurrence_with": 6
+  },
+  {
+   "t0": 21.645,
+   "t1": 28.85,
+   "dur": 7.205,
+   "bar0": 9,
+   "n_bars": 3,
+   "mean_db": -13.029,
+   "slope_db_s": -0.047,
+   "centroid_hz": 3058.782,
+   "chroma_stability": 0.73,
+   "voiced_density": 0.003,
+   "recurrence_sim": 0.964,
+   "recurrence_with": 7
+  },
+  {
+   "t0": 28.85,
+   "t1": 36.055,
+   "dur": 7.205,
+   "bar0": 12,
+   "n_bars": 3,
+   "mean_db": -15.769,
+   "slope_db_s": -0.887,
+   "centroid_hz": 3645.048,
+   "chroma_stability": 0.728,
+   "voiced_density": 0.108,
+   "recurrence_sim": 0.911,
+   "recurrence_with": 8
+  },
+  {
+   "t0": 36.055,
+   "t1": 45.662,
+   "dur": 9.607,
+   "bar0": 15,
+   "n_bars": 4,
+   "mean_db": -15.643,
+   "slope_db_s": 0.502,
+   "centroid_hz": 3348.639,
+   "chroma_stability": 0.751,
+   "voiced_density": 0.116,
+   "recurrence_sim": 0.788,
+   "recurrence_with": 5
+  },
+  {
+   "t0": 45.662,
+   "t1": 55.269,
+   "dur": 9.607,
+   "bar0": 19,
+   "n_bars": 4,
+   "mean_db": -13.978,
+   "slope_db_s": 0.064,
+   "centroid_hz": 3131.099,
+   "chroma_stability": 0.704,
+   "voiced_density": 0.01,
+   "recurrence_sim": 0.952,
+   "recurrence_with": 2
+  },
+  {
+   "t0": 55.269,
+   "t1": 69.679,
+   "dur": 14.41,
+   "bar0": 23,
+   "n_bars": 6,
+   "mean_db": -14.728,
+   "slope_db_s": 0.087,
+   "centroid_hz": 3360.722,
+   "chroma_stability": 0.711,
+   "voiced_density": 0.058,
+   "recurrence_sim": 0.899,
+   "recurrence_with": 1
+  },
+  {
+   "t0": 69.679,
+   "t1": 76.884,
+   "dur": 7.205,
+   "bar0": 29,
+   "n_bars": 3,
+   "mean_db": -12.935,
+   "slope_db_s": -0.088,
+   "centroid_hz": 3097.953,
+   "chroma_stability": 0.741,
+   "voiced_density": 0.014,
+   "recurrence_sim": 0.964,
+   "recurrence_with": 2
+  },
+  {
+   "t0": 76.884,
+   "t1": 86.491,
+   "dur": 9.607,
+   "bar0": 32,
+   "n_bars": 4,
+   "mean_db": -15.994,
+   "slope_db_s": -0.568,
+   "centroid_hz": 3552.523,
+   "chroma_stability": 0.708,
+   "voiced_density": 0.146,
+   "recurrence_sim": 0.911,
+   "recurrence_with": 3
+  },
+  {
+   "t0": 86.491,
+   "t1": 93.696,
+   "dur": 7.205,
+   "bar0": 36,
+   "n_bars": 3,
+   "mean_db": -18.938,
+   "slope_db_s": -0.521,
+   "centroid_hz": 3707.633,
+   "chroma_stability": 0.685,
+   "voiced_density": 0.367,
+   "recurrence_sim": 0.743,
+   "recurrence_with": 7
+  },
+  {
+   "t0": 93.696,
+   "t1": 103.302,
+   "dur": 9.607,
+   "bar0": 39,
+   "n_bars": 4,
+   "mean_db": -15.162,
+   "slope_db_s": -0.349,
+   "centroid_hz": 3234.462,
+   "chroma_stability": 0.747,
+   "voiced_density": 0.056,
+   "recurrence_sim": 0.945,
+   "recurrence_with": 11
+  },
+  {
+   "t0": 103.302,
+   "t1": 110.507,
+   "dur": 7.205,
+   "bar0": 43,
+   "n_bars": 3,
+   "mean_db": -12.949,
+   "slope_db_s": -0.036,
+   "centroid_hz": 3155.209,
+   "chroma_stability": 0.737,
+   "voiced_density": 0.006,
+   "recurrence_sim": 0.962,
+   "recurrence_with": 7
+  },
+  {
+   "t0": 110.507,
+   "t1": 125.91,
+   "dur": 15.403,
+   "bar0": 46,
+   "n_bars": 6,
+   "mean_db": -39.379,
+   "slope_db_s": -5.882,
+   "centroid_hz": 2510.592,
+   "chroma_stability": 0.633,
+   "voiced_density": 0.131,
+   "recurrence_sim": 0.655,
+   "recurrence_with": 8
+  }
+ ],
+ "key_top3": [
+  {
+   "key": "F major",
+   "corr": 0.816
+  },
+  {
+   "key": "C major",
+   "corr": 0.699
+  },
+  {
+   "key": "F minor",
+   "corr": 0.659
+  }
+ ],
+ "key_margin": 0.117,
+ "global_chroma": [
+  0.1465,
+  0.0682,
+  0.0816,
+  0.0581,
+  0.0862,
+  0.1319,
+  0.0691,
+  0.0675,
+  0.0806,
+  0.0843,
+  0.0697,
+  0.0562
+ ],
+ "n_notes_sketch": 120,
+ "sketch_coverage": 0.14,
+ "tempo": {
+  "house_estimator": {
+   "global": {
+    "bpm": 99.93,
+    "peak_autocorrelation": 0.5867,
+    "dominant_periodicity_bpm": 99.38,
+    "candidates": [
+     {
+      "bpm": 99.38,
+      "autocorrelation": 0.5867
+     },
+     {
+      "bpm": 66.26,
+      "autocorrelation": 0.574
+     },
+     {
+      "bpm": 50.17,
+      "autocorrelation": 0.5691
+     }
+    ],
+    "double_time_candidate_bpm": 199.86
+   },
+   "windows": [
+    {
+     "start_s": 0.0,
+     "end_s": 30.0,
+     "bpm": 99.97,
+     "peak_autocorrelation": 0.6254
+    },
+    {
+     "start_s": 30.0,
+     "end_s": 60.0,
+     "bpm": 99.97,
+     "peak_autocorrelation": 0.5193
+    },
+    {
+     "start_s": 60.0,
+     "end_s": 90.0,
+     "bpm": 99.92,
+     "peak_autocorrelation": 0.4743
+    },
+    {
+     "start_s": 90.0,
+     "end_s": 120.0,
+     "bpm": 99.86,
+     "peak_autocorrelation": 0.5539
+    }
+   ],
+   "window_bpm_min": 99.86,
+   "window_bpm_max": 99.97,
+   "window_bpm_spread": 0.11
+  },
+  "flux_raw_ac_at_points": {
+   "144.0": 0.1484,
+   "132.5": 0.5552,
+   "99.93": 0.6477,
+   "99.38": 0.5862,
+   "66.26": 0.5751
+  },
+  "first_pass_instrument_reproduced": {
+   "dominant_periodicity_bpm": 132.51,
+   "strength": 0.5008,
+   "ac_at_144_bpm": 0.0094
+  }
+ },
+ "loudness_source": {
+  "house_ungated_lufs": -13.4,
+  "house_true_peak_dbtp": 0.01,
+  "sample_peak_dbfs": -0.01,
+  "ffmpeg_ebur128_gated_lufs": -13.1,
+  "ffmpeg_ebur128_true_peak_dbfs": 0.0,
+  "note": "house loudness is K-weighted integrated, UNGATED (the studio pipeline's stated simplification); the ffmpeg figure is the gated BS.1770-4 read, carried as a second witness, not a replacement."
+ },
+ "stereo": {
+  "corr_global": 0.9756,
+  "side_rms_dbfs": -33.39,
+  "mid_rms_dbfs": -14.32,
+  "windows": [
+   {
+    "start_s": 0,
+    "end_s": 30,
+    "corr": 0.9635,
+    "side_rms_dbfs": -31.96
+   },
+   {
+    "start_s": 30,
+    "end_s": 60,
+    "corr": 0.9782,
+    "side_rms_dbfs": -33.44
+   },
+   {
+    "start_s": 60,
+    "end_s": 90,
+    "corr": 0.9833,
+    "side_rms_dbfs": -34.27
+   },
+   {
+    "start_s": 90,
+    "end_s": 120,
+    "corr": 0.9749,
+    "side_rms_dbfs": -33.39
+   },
+   {
+    "start_s": 120,
+    "end_s": 125.91,
+    "corr": 0.5584,
+    "side_rms_dbfs": -49.17
+   }
+  ]
+ },
+ "sigma_probe": {
+  "doctrine_pair": {
+   "left_hz": 200.0,
+   "right_hz": 213.0
+  },
+  "probe_left_200hz": {
+   "freq_hz": 200.0,
+   "median_ratio_db": 2.58,
+   "p90_ratio_db": 6.09,
+   "persistence_gt_6db": 0.113,
+   "n_windows": 62
+  },
+  "probe_right_213hz": {
+   "freq_hz": 213.0,
+   "median_ratio_db": 4.76,
+   "p90_ratio_db": 9.12,
+   "persistence_gt_6db": 0.355,
+   "n_windows": 62
+  },
+  "certification_threshold": "median ratio >= 10 dB AND persistence (> 6 dB) >= 0.90 in BOTH channels at the exact doctrine frequencies",
+  "certified": false,
+  "verdict": "NOT CERTIFIABLE -- no persistent narrowband line stands at the doctrine pair at mastering depth; whatever energy lives at 200/213 Hz belongs to the programme (bass and voice), not to a discrete binaural layer."
+ },
+ "grid": {
+  "bpm": 99.93,
+  "beat_s": 0.60042,
+  "bar_s": 2.401681
+ }
+}

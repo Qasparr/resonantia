@@ -1,0 +1,71 @@
+{
+ "title": "SPHINX IN A GOWN \u2014 house master of the founder's Gemini strike",
+ "created_utc": "2026-11-10T11:24:47.713329+00:00",
+ "pipeline": "resonance.studio.pipeline.master_signal (intake pass, gemini-sphinx-in-a-gown)",
+ "provenance": {
+  "source_file": "sphinx_in_a_gown_0_6snr.mp3",
+  "source_sha256": "05062fff83ffd49d99fd663989813ab5af609fef3ba4eb5c5fb6a7a7915a2f5d",
+  "engine": "Gemini (Lyria), struck by the founder himself",
+  "prompt": "the desk's production spec + the founder's bars \u2014 NIGHT SUN sheet, Verses I-II (Lady Lilith, the Mother Tongue), ~/workspace/goals/qasparr-the-unfriendly-ghost-album/files/NIGHT-SUN-77-BARS.md",
+  "struck": "2026-11-10, uploaded by the founder the same day",
+  "ruling": "adoption, 2026-11-10 \u2014 Gemini strikes; the desk measures, masters, notates, records",
+  "audio_custody": "local only \u2014 rented-engine reference audio does not enter git (house rule)"
+ },
+ "spec": {
+  "target_lufs": -14.0,
+  "ceiling_dbtp": -1.0,
+  "program_sample_rate": 48000,
+  "bit_depth": 24
+ },
+ "master": {
+  "lufs_before": -13.4,
+  "gain_applied_db": -0.6,
+  "trim_db": 0.0,
+  "lufs_after": -14.0,
+  "sample_peak_db": -1.19,
+  "true_peak_dbtp": -1.17,
+  "ceiling_overrode_loudness": false,
+  "target_lufs": -14.0,
+  "ceiling_dbtp": -1.0
+ },
+ "width": {
+  "decision": "LEFT AS STRUCK",
+  "corr_source": 0.9756,
+  "corr_master": 0.9756,
+  "reason": "near-mono strike, vocal centred in the side signal's little remainder; no stems exist; any widening on this desk would move the vocal image with the bed. In doubt, leave it \u2014 confessed."
+ },
+ "sigma": {
+  "added": false,
+  "reason": "whether Sigma rides a Gemini strike is the founder's open call, not the desk's; no layer was presumed. The strike itself carries no certifiable discrete Sigma layer (see analysis-stats.json, sigma_probe)."
+ },
+ "verification": {
+  "sample_rate": 48000,
+  "duration_s": 125.91,
+  "lufs": -14.0,
+  "true_peak_dbtp": -1.17,
+  "corr": 0.9756
+ },
+ "files": {
+  "source_mp3": {
+   "path": "reference/gemini-sphinx-in-a-gown/sphinx_in_a_gown_0_6snr.mp3",
+   "bytes": 3027972,
+   "sha256": "05062fff83ffd49d99fd663989813ab5af609fef3ba4eb5c5fb6a7a7915a2f5d"
+  },
+  "master_wav": {
+   "path": "reference/gemini-sphinx-in-a-gown/master.wav",
+   "bytes": 36262184,
+   "sha256": "5b4d9d2064e1b7eda5f31d430a41156a7cbd305c8fbb04e25aff825f2cac28cb"
+  },
+  "preview_mp3": {
+   "path": "reference/gemini-sphinx-in-a-gown/preview.mp3",
+   "bytes": 5039085,
+   "sha256": "e69bf1370d7f66a84fc5d063eb37229cfbac92d35c498ded61cbcc7209dfd4d3"
+  }
+ },
+ "notes": [
+  "loudness is K-weighted integrated, UNGATED (BS.1770 gating omitted in the house scales, stated not hidden).",
+  "the ceiling is law: had the true-peak trim taken the master below the loudness target, master.ceiling_overrode_loudness would say so in the open. In the event it did not: the struck render was hot (sample peak -0.01 dBFS, true peak +0.01 dBTP), but the -0.6 dB gain to target plus the soft limiter's bend brought the true peak to -1.17 dBTP \u2014 under the ceiling with trim_db 0.0. The loudness target stands met exactly and the ceiling never had to overrule it; both facts are in the master block, not in this prose.",
+  "no head or tail fades: those belong to the performance chain's assembly of takes; an intake master of a finished render leaves the waveform's edges as struck.",
+  "nothing rides and nothing was removed: no Sigma, no EQ, no width process, no edit of any kind between decode and the loudness/ceiling law."
+ ]
+}
