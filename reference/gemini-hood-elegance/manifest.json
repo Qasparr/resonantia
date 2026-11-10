@@ -1,0 +1,71 @@
+{
+ "title": "STEEL IN THE SILK PURSE (HOOD ELEGANCE) \u2014 house master of the founder's Gemini strike",
+ "created_utc": "2026-11-10T13:15:58.749023+00:00",
+ "pipeline": "resonance.studio.pipeline.master_signal (intake pass, gemini-hood-elegance)",
+ "provenance": {
+  "source_file": "steel_in_the_silk_purse_6_qxq5.mp3",
+  "source_sha256": "ce960a72c10607b32edccc48e4e81979ddcd167a72b4f7f8f561e98d3b956157",
+  "engine": "Gemini (Lyria), struck by the founder himself",
+  "prompt": "the desk's filed v4 tag-team brief \u2014 studio-runs/gemini-hood-elegance/prompt-v4-brightmoor-signature.txt: the whole song written in the prompt; formation Qveen 2 verses + the sung hook / Qasparr 2 verses + the bridge / tag-team final verse / Qveen sung outro; Detroit bounce, G# minor; 222 BPM hi-hat arpeggio; NO violin \u2014 grand piano + guitar Paganini solfeggio arpeggios; bagpipes or harmonica; the Brightmoor Signature (four-note piano motif: alone at the open, answering every hook, last sound before the stop)",
+  "struck": "2026-11-10, uploaded by the founder the same day",
+  "ruling": "adoption, 2026-11-10 \u2014 Gemini strikes; the desk measures, masters, notates, records",
+  "audio_custody": "local only \u2014 rented-engine reference audio does not enter git (house rule)"
+ },
+ "spec": {
+  "target_lufs": -14.0,
+  "ceiling_dbtp": -1.0,
+  "program_sample_rate": 48000,
+  "bit_depth": 24
+ },
+ "master": {
+  "lufs_before": -12.19,
+  "gain_applied_db": -1.81,
+  "trim_db": 0.0,
+  "lufs_after": -14.0,
+  "sample_peak_db": -1.57,
+  "true_peak_dbtp": -1.46,
+  "ceiling_overrode_loudness": false,
+  "target_lufs": -14.0,
+  "ceiling_dbtp": -1.0
+ },
+ "width": {
+  "decision": "LEFT AS STRUCK",
+  "corr_source": 0.8583,
+  "corr_master": 0.8583,
+  "reason": "no stems exist; TWO lead voices ride the mid and bleed into what side signal there is, so any widening available to this desk would move the vocal images with the bed. The conservative correction cannot be shown to leave the voices untouched \u2014 the doubt is real, so width is left as struck, confessed."
+ },
+ "sigma": {
+  "added": false,
+  "reason": "this brief did not order a Sigma layer, and whether Sigma ever rides a Gemini strike is the founder's open call besides; no layer was presumed and none was probed."
+ },
+ "verification": {
+  "sample_rate": 48000,
+  "duration_s": 157.806,
+  "lufs": -14.0,
+  "true_peak_dbtp": -1.46,
+  "corr": 0.8583
+ },
+ "files": {
+  "source_mp3": {
+   "path": "reference/gemini-hood-elegance/steel_in_the_silk_purse_6_qxq5.mp3",
+   "bytes": 3793464,
+   "sha256": "ce960a72c10607b32edccc48e4e81979ddcd167a72b4f7f8f561e98d3b956157"
+  },
+  "master_wav": {
+   "path": "reference/gemini-hood-elegance/master.wav",
+   "bytes": 45448094,
+   "sha256": "9f4b4302f8eeaf0a101cb2dd996edfc073fd11f11ec0e437c71b62c6c342ddd9"
+  },
+  "preview_mp3": {
+   "path": "reference/gemini-hood-elegance/preview.mp3",
+   "bytes": 6314925,
+   "sha256": "0150318757a0913ac206269fde43695910ae2d7e37129943c0e1ac265288b4f2"
+  }
+ },
+ "notes": [
+  "loudness is K-weighted integrated, UNGATED (BS.1770 gating omitted in the house scales, stated not hidden).",
+  "the ceiling is law: had the true-peak trim taken the master below the loudness target, master.ceiling_overrode_loudness would say so in the open; the master block carries the gain, the trim and the flag as struck, and this prose adds nothing to them.",
+  "no head or tail fades: those belong to the performance chain's assembly of takes; an intake master of a finished render leaves the waveform's edges as struck.",
+  "nothing rides and nothing was removed: no Sigma, no EQ, no width process, no edit of any kind between decode and the loudness/ceiling law."
+ ]
+}

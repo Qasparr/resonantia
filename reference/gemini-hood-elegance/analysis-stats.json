@@ -1,0 +1,1653 @@
+{
+ "audio": "/home/hatch/workspace/resonance/reference/gemini-hood-elegance/steel_in_the_silk_purse_6_qxq5.mp3",
+ "sr": 44100,
+ "duration_s": 157.806,
+ "bpm_measured_bench": 123.78,
+ "beat_s": 0.484731,
+ "bar_s": 1.938924,
+ "downbeat_phase_s": 0.39,
+ "n_bars": 82,
+ "boundaries": [
+  {
+   "t_raw": 6.432,
+   "t_used": 6.2067716917111,
+   "snap_distance_s": 0.225,
+   "novelty": 0.3798,
+   "prominence_ratio": 1.02,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 23.87,
+   "t_used": 23.6570867668444,
+   "snap_distance_s": 0.213,
+   "novelty": 0.4514,
+   "prominence_ratio": 1.21,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 31.393,
+   "t_used": 31.412782355792537,
+   "snap_distance_s": 0.019,
+   "novelty": 0.4047,
+   "prominence_ratio": 1.09,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 40.426,
+   "t_used": 41.107401841977705,
+   "snap_distance_s": 0.681,
+   "novelty": 0.3994,
+   "prominence_ratio": 1.07,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 47.624,
+   "t_used": 46.9241735336888,
+   "snap_distance_s": 0.7,
+   "novelty": 0.4174,
+   "prominence_ratio": 1.12,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 62.346,
+   "t_used": 62.43556471158507,
+   "snap_distance_s": 0.09,
+   "novelty": 0.4184,
+   "prominence_ratio": 1.12,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 77.857,
+   "t_used": 77.94695588948134,
+   "snap_distance_s": 0.09,
+   "novelty": 0.3879,
+   "prominence_ratio": 1.04,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 94.714,
+   "t_used": 95.39727096461465,
+   "snap_distance_s": 0.683,
+   "novelty": 0.4419,
+   "prominence_ratio": 1.19,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 106.58,
+   "t_used": 107.03081434803684,
+   "snap_distance_s": 0.451,
+   "novelty": 0.4205,
+   "prominence_ratio": 1.13,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 116.518,
+   "t_used": 116.72543383422202,
+   "snap_distance_s": 0.208,
+   "novelty": 0.417,
+   "prominence_ratio": 1.12,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 132.702,
+   "t_used": 132.23682501211826,
+   "snap_distance_s": 0.465,
+   "novelty": 0.4265,
+   "prominence_ratio": 1.14,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 143.824,
+   "t_used": 143.87036839554045,
+   "snap_distance_s": 0.046,
+   "novelty": 0.4912,
+   "prominence_ratio": 1.32,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 153.298,
+   "t_used": 153.56498788172564,
+   "snap_distance_s": 0.267,
+   "novelty": 0.5429,
+   "prominence_ratio": 1.46,
+   "confidence": 0.75
+  }
+ ],
+ "boundaries_merged_away": [],
+ "chord_distribution": {
+  "A#m": 2,
+  "C": 4,
+  "C#": 4,
+  "F": 9,
+  "F#m": 1,
+  "F5": 7,
+  "Fm": 19,
+  "G#": 1,
+  "Gm": 2,
+  "UNCLEAR": 33
+ },
+ "segments": [
+  {
+   "t0": 0.0,
+   "t1": 6.207,
+   "dur": 6.207,
+   "bar0": 0,
+   "n_bars": 3,
+   "mean_db": -29.601,
+   "slope_db_s": 2.785,
+   "centroid_hz": 1430.7,
+   "chroma_stability": 0.664,
+   "voiced_density": 0.392,
+   "recurrence_sim": 0.798,
+   "recurrence_with": 4,
+   "bench_f0": {
+    "n": 209,
+    "median_hz": 131.6,
+    "p25_hz": 104.0,
+    "p75_hz": 273.9,
+    "p90_hz": 390.3
+   },
+   "register_f0": {
+    "n": 209,
+    "median_hz": 131.6,
+    "p25_hz": 104.0,
+    "p75_hz": 273.9,
+    "p90_hz": 390.3
+   },
+   "register_share_ge_300hz": 0.11,
+   "register_class": "male-rap-band"
+  },
+  {
+   "t0": 6.207,
+   "t1": 23.657,
+   "dur": 17.45,
+   "bar0": 3,
+   "n_bars": 9,
+   "mean_db": -17.037,
+   "slope_db_s": 0.319,
+   "centroid_hz": 3721.826,
+   "chroma_stability": 0.686,
+   "voiced_density": 0.279,
+   "recurrence_sim": 0.792,
+   "recurrence_with": 2,
+   "bench_f0": {
+    "n": 420,
+    "median_hz": 277.4,
+    "p25_hz": 248.8,
+    "p75_hz": 347.2,
+    "p90_hz": 393.8
+   },
+   "register_f0": {
+    "n": 428,
+    "median_hz": 280.9,
+    "p25_hz": 250.2,
+    "p75_hz": 350.0,
+    "p90_hz": 398.4
+   },
+   "register_share_ge_300hz": 0.409,
+   "register_class": "sung-high"
+  },
+  {
+   "t0": 23.657,
+   "t1": 31.413,
+   "dur": 7.756,
+   "bar0": 12,
+   "n_bars": 4,
+   "mean_db": -14.836,
+   "slope_db_s": 0.594,
+   "centroid_hz": 3944.039,
+   "chroma_stability": 0.665,
+   "voiced_density": 0.287,
+   "recurrence_sim": 0.853,
+   "recurrence_with": 3,
+   "bench_f0": {
+    "n": 192,
+    "median_hz": 363.0,
+    "p25_hz": 323.7,
+    "p75_hz": 393.8,
+    "p90_hz": 420.0
+   },
+   "register_f0": {
+    "n": 205,
+    "median_hz": 383.5,
+    "p25_hz": 336.6,
+    "p75_hz": 416.0,
+    "p90_hz": 518.8
+   },
+   "register_share_ge_300hz": 0.859,
+   "register_class": "sung-high"
+  },
+  {
+   "t0": 31.413,
+   "t1": 41.107,
+   "dur": 9.695,
+   "bar0": 16,
+   "n_bars": 5,
+   "mean_db": -14.049,
+   "slope_db_s": -0.374,
+   "centroid_hz": 4033.974,
+   "chroma_stability": 0.673,
+   "voiced_density": 0.213,
+   "recurrence_sim": 0.973,
+   "recurrence_with": 6,
+   "bench_f0": {
+    "n": 178,
+    "median_hz": 355.6,
+    "p25_hz": 337.3,
+    "p75_hz": 393.8,
+    "p90_hz": 465.7
+   },
+   "register_f0": {
+    "n": 191,
+    "median_hz": 364.5,
+    "p25_hz": 344.5,
+    "p75_hz": 457.0,
+    "p90_hz": 525.0
+   },
+   "register_share_ge_300hz": 0.89,
+   "register_class": "sung-high"
+  },
+  {
+   "t0": 41.107,
+   "t1": 46.924,
+   "dur": 5.817,
+   "bar0": 21,
+   "n_bars": 3,
+   "mean_db": -16.072,
+   "slope_db_s": -0.382,
+   "centroid_hz": 4038.797,
+   "chroma_stability": 0.688,
+   "voiced_density": 0.277,
+   "recurrence_sim": 0.862,
+   "recurrence_with": 11,
+   "bench_f0": {
+    "n": 139,
+    "median_hz": 350.0,
+    "p25_hz": 339.2,
+    "p75_hz": 360.0,
+    "p90_hz": 416.0
+   },
+   "register_f0": {
+    "n": 144,
+    "median_hz": 350.0,
+    "p25_hz": 343.2,
+    "p75_hz": 374.5,
+    "p90_hz": 420.0
+   },
+   "register_share_ge_300hz": 0.882,
+   "register_class": "sung-high"
+  },
+  {
+   "t0": 46.924,
+   "t1": 62.436,
+   "dur": 15.511,
+   "bar0": 24,
+   "n_bars": 8,
+   "mean_db": -15.561,
+   "slope_db_s": 0.182,
+   "centroid_hz": 4055.474,
+   "chroma_stability": 0.695,
+   "voiced_density": 0.241,
+   "recurrence_sim": 0.847,
+   "recurrence_with": 4,
+   "bench_f0": {
+    "n": 322,
+    "median_hz": 355.6,
+    "p25_hz": 310.6,
+    "p75_hz": 412.1,
+    "p90_hz": 469.1
+   },
+   "register_f0": {
+    "n": 346,
+    "median_hz": 383.5,
+    "p25_hz": 322.5,
+    "p75_hz": 464.2,
+    "p90_hz": 569.1
+   },
+   "register_share_ge_300hz": 0.835,
+   "register_class": "sung-high"
+  },
+  {
+   "t0": 62.436,
+   "t1": 77.947,
+   "dur": 15.511,
+   "bar0": 32,
+   "n_bars": 8,
+   "mean_db": -14.944,
+   "slope_db_s": -0.277,
+   "centroid_hz": 4048.143,
+   "chroma_stability": 0.677,
+   "voiced_density": 0.18,
+   "recurrence_sim": 0.973,
+   "recurrence_with": 3,
+   "bench_f0": {
+    "n": 241,
+    "median_hz": 214.1,
+    "p25_hz": 195.1,
+    "p75_hz": 358.5,
+    "p90_hz": 469.1
+   },
+   "register_f0": {
+    "n": 258,
+    "median_hz": 223.9,
+    "p25_hz": 196.0,
+    "p75_hz": 459.4,
+    "p90_hz": 525.0
+   },
+   "register_share_ge_300hz": 0.407,
+   "register_class": "female-rap-band"
+  },
+  {
+   "t0": 77.947,
+   "t1": 95.397,
+   "dur": 17.45,
+   "bar0": 40,
+   "n_bars": 9,
+   "mean_db": -15.159,
+   "slope_db_s": 0.274,
+   "centroid_hz": 3618.835,
+   "chroma_stability": 0.703,
+   "voiced_density": 0.094,
+   "recurrence_sim": 0.819,
+   "recurrence_with": 4,
+   "bench_f0": {
+    "n": 141,
+    "median_hz": 256.4,
+    "p25_hz": 206.1,
+    "p75_hz": 390.3,
+    "p90_hz": 474.2
+   },
+   "register_f0": {
+    "n": 160,
+    "median_hz": 291.1,
+    "p25_hz": 218.0,
+    "p75_hz": 525.0,
+    "p90_hz": 832.1
+   },
+   "register_share_ge_300hz": 0.494,
+   "register_class": "sung-high"
+  },
+  {
+   "t0": 95.397,
+   "t1": 107.031,
+   "dur": 11.634,
+   "bar0": 49,
+   "n_bars": 6,
+   "mean_db": -15.224,
+   "slope_db_s": -0.62,
+   "centroid_hz": 3988.489,
+   "chroma_stability": 0.682,
+   "voiced_density": 0.124,
+   "recurrence_sim": 0.849,
+   "recurrence_with": 4,
+   "bench_f0": {
+    "n": 124,
+    "median_hz": 213.6,
+    "p25_hz": 183.8,
+    "p75_hz": 292.6,
+    "p90_hz": 493.9
+   },
+   "register_f0": {
+    "n": 140,
+    "median_hz": 257.9,
+    "p25_hz": 187.5,
+    "p75_hz": 526.6,
+    "p90_hz": 689.1
+   },
+   "register_share_ge_300hz": 0.371,
+   "register_class": "sung-high"
+  },
+  {
+   "t0": 107.031,
+   "t1": 116.725,
+   "dur": 9.695,
+   "bar0": 55,
+   "n_bars": 5,
+   "mean_db": -15.365,
+   "slope_db_s": 0.523,
+   "centroid_hz": 3780.539,
+   "chroma_stability": 0.692,
+   "voiced_density": 0.177,
+   "recurrence_sim": 0.703,
+   "recurrence_with": 2,
+   "bench_f0": {
+    "n": 148,
+    "median_hz": 350.0,
+    "p25_hz": 211.0,
+    "p75_hz": 464.2,
+    "p90_hz": 469.1
+   },
+   "register_f0": {
+    "n": 189,
+    "median_hz": 464.2,
+    "p25_hz": 222.7,
+    "p75_hz": 525.0,
+    "p90_hz": 702.3
+   },
+   "register_share_ge_300hz": 0.667,
+   "register_class": "sung-high"
+  },
+  {
+   "t0": 116.725,
+   "t1": 132.237,
+   "dur": 15.511,
+   "bar0": 60,
+   "n_bars": 8,
+   "mean_db": -13.91,
+   "slope_db_s": 0.022,
+   "centroid_hz": 3695.868,
+   "chroma_stability": 0.702,
+   "voiced_density": 0.112,
+   "recurrence_sim": 0.915,
+   "recurrence_with": 3,
+   "bench_f0": {
+    "n": 149,
+    "median_hz": 352.8,
+    "p25_hz": 326.7,
+    "p75_hz": 464.2,
+    "p90_hz": 485.7
+   },
+   "register_f0": {
+    "n": 189,
+    "median_hz": 416.0,
+    "p25_hz": 344.5,
+    "p75_hz": 551.2,
+    "p90_hz": 938.3
+   },
+   "register_share_ge_300hz": 0.952,
+   "register_class": "sung-high"
+  },
+  {
+   "t0": 132.237,
+   "t1": 143.87,
+   "dur": 11.634,
+   "bar0": 68,
+   "n_bars": 6,
+   "mean_db": -16.002,
+   "slope_db_s": -1.129,
+   "centroid_hz": 4166.738,
+   "chroma_stability": 0.661,
+   "voiced_density": 0.309,
+   "recurrence_sim": 0.926,
+   "recurrence_with": 3,
+   "bench_f0": {
+    "n": 310,
+    "median_hz": 352.8,
+    "p25_hz": 315.6,
+    "p75_hz": 393.8,
+    "p90_hz": 464.2
+   },
+   "register_f0": {
+    "n": 315,
+    "median_hz": 380.2,
+    "p25_hz": 344.5,
+    "p75_hz": 469.1,
+    "p90_hz": 525.0
+   },
+   "register_share_ge_300hz": 0.924,
+   "register_class": "sung-high"
+  },
+  {
+   "t0": 143.87,
+   "t1": 153.565,
+   "dur": 9.695,
+   "bar0": 74,
+   "n_bars": 5,
+   "mean_db": -27.902,
+   "slope_db_s": 0.373,
+   "centroid_hz": 3913.805,
+   "chroma_stability": 0.456,
+   "voiced_density": 0.806,
+   "recurrence_sim": 0.749,
+   "recurrence_with": 0,
+   "bench_f0": {
+    "n": 673,
+    "median_hz": 355.6,
+    "p25_hz": 279.1,
+    "p75_hz": 412.1,
+    "p90_hz": 464.2
+   },
+   "register_f0": {
+    "n": 676,
+    "median_hz": 375.3,
+    "p25_hz": 315.0,
+    "p75_hz": 464.2,
+    "p90_hz": 558.2
+   },
+   "register_share_ge_300hz": 0.799,
+   "register_class": "sung-high"
+  },
+  {
+   "t0": 153.565,
+   "t1": 157.806,
+   "dur": 4.241,
+   "bar0": 79,
+   "n_bars": 2,
+   "mean_db": -79.531,
+   "slope_db_s": -34.52,
+   "centroid_hz": 3541.485,
+   "chroma_stability": 0.535,
+   "voiced_density": 0.198,
+   "recurrence_sim": 0.629,
+   "recurrence_with": 4,
+   "bench_f0": {
+    "n": 72,
+    "median_hz": 348.6,
+    "p25_hz": 344.5,
+    "p75_hz": 352.8,
+    "p90_hz": 355.6
+   },
+   "register_f0": {
+    "n": 72,
+    "median_hz": 348.6,
+    "p25_hz": 344.5,
+    "p75_hz": 352.8,
+    "p90_hz": 355.6
+   },
+   "register_share_ge_300hz": 1.0,
+   "register_class": "sung-high"
+  }
+ ],
+ "key_top3": [
+  {
+   "key": "F major",
+   "corr": 0.871
+  },
+  {
+   "key": "F minor",
+   "corr": 0.774
+  },
+  {
+   "key": "C major",
+   "corr": 0.628
+  }
+ ],
+ "key_margin": 0.097,
+ "ordered_key": "G# minor",
+ "global_chroma": [
+  0.1466,
+  0.0665,
+  0.0796,
+  0.0616,
+  0.0545,
+  0.1482,
+  0.046,
+  0.0946,
+  0.0879,
+  0.0788,
+  0.0862,
+  0.0495
+ ],
+ "n_notes_sketch": 312,
+ "sketch_coverage": 0.244,
+ "tempo": {
+  "house_estimator": {
+   "global": {
+    "bpm": 123.78,
+    "peak_autocorrelation": 0.5209,
+    "dominant_periodicity_bpm": 62.26,
+    "candidates": [
+     {
+      "bpm": 62.26,
+      "autocorrelation": 0.6005
+     },
+     {
+      "bpm": 123.05,
+      "autocorrelation": 0.5209
+     },
+     {
+      "bpm": 41.34,
+      "autocorrelation": 0.4534
+     }
+    ],
+    "double_time_candidate_bpm": null
+   },
+   "windows": [
+    {
+     "start_s": 0.0,
+     "end_s": 30.0,
+     "bpm": 62.05,
+     "peak_autocorrelation": 0.6493
+    },
+    {
+     "start_s": 30.0,
+     "end_s": 60.0,
+     "bpm": 62.05,
+     "peak_autocorrelation": 0.4944
+    },
+    {
+     "start_s": 60.0,
+     "end_s": 90.0,
+     "bpm": 62.02,
+     "peak_autocorrelation": 0.5067
+    },
+    {
+     "start_s": 90.0,
+     "end_s": 120.0,
+     "bpm": 123.57,
+     "peak_autocorrelation": 0.3534
+    },
+    {
+     "start_s": 120.0,
+     "end_s": 150.0,
+     "bpm": 123.93,
+     "peak_autocorrelation": 0.6145
+    }
+   ],
+   "window_bpm_min": 62.02,
+   "window_bpm_max": 123.93,
+   "window_bpm_spread": 61.91
+  },
+  "flux_raw_ac_at_points": {
+   "222.0": 0.257,
+   "111.0": 0.2663,
+   "144.0": 0.2579,
+   "123.78": 0.5452,
+   "62.26": 0.6003
+  },
+  "first_pass_instrument_reproduced": {
+   "dominant_periodicity_bpm": 83.35,
+   "strength": 0.2153,
+   "ac_at_222_bpm": 0.0164
+  }
+ },
+ "hats": {
+  "method": "high-band (6.5-12 kHz) spectral-flux onset envelope, plain autocorrelation; periodicities in 140-300 BPM",
+  "strongest_periodicity_bpm": 246.09,
+  "strongest_ac": 0.2243,
+  "ac_at_ordered_222": 0.1057,
+  "ac_at_half_111": 0.0813,
+  "ac_at_house_headline": 0.2426,
+  "ac_at_house_headline_double": 0.2324,
+  "ordered": "hat arpeggio at 222 BPM over the bounce"
+ },
+ "loudness_source": {
+  "house_ungated_lufs": -12.19,
+  "house_true_peak_dbtp": 0.45,
+  "sample_peak_dbfs": 0.36,
+  "ffmpeg_ebur128_gated_lufs": -11.8,
+  "ffmpeg_ebur128_true_peak_dbfs": 0.4,
+  "note": "house loudness is K-weighted integrated, UNGATED (the studio pipeline's stated simplification); the ffmpeg figure is the gated BS.1770-4 read, carried as a second witness, not a replacement."
+ },
+ "stereo": {
+  "corr_global": 0.8583,
+  "side_rms_dbfs": -25.76,
+  "mid_rms_dbfs": -14.58,
+  "windows": [
+   {
+    "start_s": 0,
+    "end_s": 30,
+    "corr": 0.8632,
+    "side_rms_dbfs": -26.63
+   },
+   {
+    "start_s": 30,
+    "end_s": 60,
+    "corr": 0.8342,
+    "side_rms_dbfs": -24.47
+   },
+   {
+    "start_s": 60,
+    "end_s": 90,
+    "corr": 0.8667,
+    "side_rms_dbfs": -25.5
+   },
+   {
+    "start_s": 90,
+    "end_s": 120,
+    "corr": 0.8698,
+    "side_rms_dbfs": -25.49
+   },
+   {
+    "start_s": 120,
+    "end_s": 150,
+    "corr": 0.8585,
+    "side_rms_dbfs": -25.9
+   },
+   {
+    "start_s": 150,
+    "end_s": 157.81,
+    "corr": 0.9117,
+    "side_rms_dbfs": -41.14
+   }
+  ]
+ },
+ "sigma": {
+  "probed": false,
+  "reason": "the Hood Elegance v4 brief did not order a Sigma layer; the doctrine-pair and sweep probes of the prior intakes were therefore not run. No claim is made in either direction."
+ },
+ "programme": {
+  "duration_s": 157.806,
+  "last_window_above_-40dbfs_s": 154.25,
+  "last_window_above_-50dbfs_s": 154.75,
+  "last_window_above_-60dbfs_s": 155.25,
+  "final_window_dbfs": -150.0
+ },
+ "voices": {
+  "method": "bench f0 (65-500 Hz) + register f0 (65-950 Hz), both normalised autocorrelation on the mid channel, gated voiced & vocal-likelihood frames only",
+  "class_thresholds": "sung-high: register median >= 240 Hz; female-rap-band: 160-240 Hz; male-rap-band: < 160 Hz; mixed/thin: < 40 gated frames",
+  "brief_orders": {
+   "his": "medium pitch, NOT a deep bass voice \u2014 the testimony register",
+   "hers": "rap in the Eve/Brat band; hooks SUNG in a soprano \u2014 bright, high, clear"
+  },
+  "two_voice_test": {
+   "her_centre_hz": 364.5,
+   "his_centre_hz": 131.6,
+   "separation_semitones": 17.64,
+   "iqr_overlap": true,
+   "her_pool": {
+    "segments": 13,
+    "median_of_medians_hz": 364.5,
+    "iqr_span_hz": [
+     187.5,
+     551.2
+    ]
+   },
+   "his_pool": {
+    "segments": 1,
+    "median_of_medians_hz": 131.6,
+    "iqr_span_hz": [
+     104.0,
+     273.9
+    ]
+   },
+   "test": "two-voice reading stands if separation >= 5 semitones AND IQR spans do not overlap",
+   "stands": false
+  },
+  "segments": [
+   {
+    "index": 0,
+    "t0": 0.0,
+    "t1": 6.2067716917111,
+    "register_class": "male-rap-band",
+    "bench_f0_median_hz": 131.6,
+    "register_f0": {
+     "n": 209,
+     "median_hz": 131.6,
+     "p25_hz": 104.0,
+     "p75_hz": 273.9,
+     "p90_hz": 390.3
+    },
+    "share_ge_300hz": 0.11
+   },
+   {
+    "index": 1,
+    "t0": 6.2067716917111,
+    "t1": 23.6570867668444,
+    "register_class": "sung-high",
+    "bench_f0_median_hz": 277.4,
+    "register_f0": {
+     "n": 428,
+     "median_hz": 280.9,
+     "p25_hz": 250.2,
+     "p75_hz": 350.0,
+     "p90_hz": 398.4
+    },
+    "share_ge_300hz": 0.409
+   },
+   {
+    "index": 2,
+    "t0": 23.6570867668444,
+    "t1": 31.412782355792537,
+    "register_class": "sung-high",
+    "bench_f0_median_hz": 363.0,
+    "register_f0": {
+     "n": 205,
+     "median_hz": 383.5,
+     "p25_hz": 336.6,
+     "p75_hz": 416.0,
+     "p90_hz": 518.8
+    },
+    "share_ge_300hz": 0.859
+   },
+   {
+    "index": 3,
+    "t0": 31.412782355792537,
+    "t1": 41.107401841977705,
+    "register_class": "sung-high",
+    "bench_f0_median_hz": 355.6,
+    "register_f0": {
+     "n": 191,
+     "median_hz": 364.5,
+     "p25_hz": 344.5,
+     "p75_hz": 457.0,
+     "p90_hz": 525.0
+    },
+    "share_ge_300hz": 0.89
+   },
+   {
+    "index": 4,
+    "t0": 41.107401841977705,
+    "t1": 46.9241735336888,
+    "register_class": "sung-high",
+    "bench_f0_median_hz": 350.0,
+    "register_f0": {
+     "n": 144,
+     "median_hz": 350.0,
+     "p25_hz": 343.2,
+     "p75_hz": 374.5,
+     "p90_hz": 420.0
+    },
+    "share_ge_300hz": 0.882
+   },
+   {
+    "index": 5,
+    "t0": 46.9241735336888,
+    "t1": 62.43556471158507,
+    "register_class": "sung-high",
+    "bench_f0_median_hz": 355.6,
+    "register_f0": {
+     "n": 346,
+     "median_hz": 383.5,
+     "p25_hz": 322.5,
+     "p75_hz": 464.2,
+     "p90_hz": 569.1
+    },
+    "share_ge_300hz": 0.835
+   },
+   {
+    "index": 6,
+    "t0": 62.43556471158507,
+    "t1": 77.94695588948134,
+    "register_class": "female-rap-band",
+    "bench_f0_median_hz": 214.1,
+    "register_f0": {
+     "n": 258,
+     "median_hz": 223.9,
+     "p25_hz": 196.0,
+     "p75_hz": 459.4,
+     "p90_hz": 525.0
+    },
+    "share_ge_300hz": 0.407
+   },
+   {
+    "index": 7,
+    "t0": 77.94695588948134,
+    "t1": 95.39727096461465,
+    "register_class": "sung-high",
+    "bench_f0_median_hz": 256.4,
+    "register_f0": {
+     "n": 160,
+     "median_hz": 291.1,
+     "p25_hz": 218.0,
+     "p75_hz": 525.0,
+     "p90_hz": 832.1
+    },
+    "share_ge_300hz": 0.494
+   },
+   {
+    "index": 8,
+    "t0": 95.39727096461465,
+    "t1": 107.03081434803684,
+    "register_class": "sung-high",
+    "bench_f0_median_hz": 213.6,
+    "register_f0": {
+     "n": 140,
+     "median_hz": 257.9,
+     "p25_hz": 187.5,
+     "p75_hz": 526.6,
+     "p90_hz": 689.1
+    },
+    "share_ge_300hz": 0.371
+   },
+   {
+    "index": 9,
+    "t0": 107.03081434803684,
+    "t1": 116.72543383422202,
+    "register_class": "sung-high",
+    "bench_f0_median_hz": 350.0,
+    "register_f0": {
+     "n": 189,
+     "median_hz": 464.2,
+     "p25_hz": 222.7,
+     "p75_hz": 525.0,
+     "p90_hz": 702.3
+    },
+    "share_ge_300hz": 0.667
+   },
+   {
+    "index": 10,
+    "t0": 116.72543383422202,
+    "t1": 132.23682501211826,
+    "register_class": "sung-high",
+    "bench_f0_median_hz": 352.8,
+    "register_f0": {
+     "n": 189,
+     "median_hz": 416.0,
+     "p25_hz": 344.5,
+     "p75_hz": 551.2,
+     "p90_hz": 938.3
+    },
+    "share_ge_300hz": 0.952
+   },
+   {
+    "index": 11,
+    "t0": 132.23682501211826,
+    "t1": 143.87036839554045,
+    "register_class": "sung-high",
+    "bench_f0_median_hz": 352.8,
+    "register_f0": {
+     "n": 315,
+     "median_hz": 380.2,
+     "p25_hz": 344.5,
+     "p75_hz": 469.1,
+     "p90_hz": 525.0
+    },
+    "share_ge_300hz": 0.924
+   },
+   {
+    "index": 12,
+    "t0": 143.87036839554045,
+    "t1": 153.56498788172564,
+    "register_class": "sung-high",
+    "bench_f0_median_hz": 355.6,
+    "register_f0": {
+     "n": 676,
+     "median_hz": 375.3,
+     "p25_hz": 315.0,
+     "p75_hz": 464.2,
+     "p90_hz": 558.2
+    },
+    "share_ge_300hz": 0.799
+   },
+   {
+    "index": 13,
+    "t0": 153.56498788172564,
+    "t1": 157.8057142857143,
+    "register_class": "sung-high",
+    "bench_f0_median_hz": 348.6,
+    "register_f0": {
+     "n": 72,
+     "median_hz": 348.6,
+     "p25_hz": 344.5,
+     "p75_hz": 352.8,
+     "p90_hz": 355.6
+    },
+    "share_ge_300hz": 1.0
+   }
+  ]
+ },
+ "signature": {
+  "ordered": "four-note grand-piano motif: opens the track alone, answers the end of every hook, last sound before the hard stop, identical wherever it plays",
+  "alone_window": {
+   "t_full_band_s": 0.2,
+   "t_first_voice_s": 39.26,
+   "alone_end_s": 0.2,
+   "bed_notes_in_window": 1
+  },
+  "motif_first_four_notes": [
+   {
+    "note": "F2",
+    "midi": 41,
+    "onset_s": 0.197,
+    "dur_s": 0.511,
+    "mean_hz": 87.7
+   },
+   {
+    "note": "G#3",
+    "midi": 56,
+    "onset_s": 0.917,
+    "dur_s": 0.07,
+    "mean_hz": 207.5
+   },
+   {
+    "note": "G#2",
+    "midi": 44,
+    "onset_s": 0.987,
+    "dur_s": 0.197,
+    "mean_hz": 104.3
+   },
+   {
+    "note": "G#2",
+    "midi": 44,
+    "onset_s": 1.416,
+    "dur_s": 0.255,
+    "mean_hz": 104.5
+   }
+  ],
+  "motif_intervals_semitones": [
+   15,
+   -12,
+   0
+  ],
+  "motif_source": "FALLBACK \u2014 the measured intro segment (segment 0): the alone-window test collapsed, so the opening pitched figure is taken from the segment the segmenter itself isolated as the intro room. A weaker instrument, marked as such wherever its results are used.",
+  "all_notes_in_alone_window": [
+   {
+    "note": "F2",
+    "onset_s": 0.197,
+    "dur_s": 0.511
+   }
+  ],
+  "intro_segment_notes": [
+   {
+    "note": "F2",
+    "midi": 41,
+    "onset_s": 0.197,
+    "dur_s": 0.511,
+    "mean_hz": 87.7
+   },
+   {
+    "note": "G#3",
+    "midi": 56,
+    "onset_s": 0.917,
+    "dur_s": 0.07,
+    "mean_hz": 207.5
+   },
+   {
+    "note": "G#2",
+    "midi": 44,
+    "onset_s": 0.987,
+    "dur_s": 0.197,
+    "mean_hz": 104.3
+   },
+   {
+    "note": "G#2",
+    "midi": 44,
+    "onset_s": 1.416,
+    "dur_s": 0.255,
+    "mean_hz": 104.5
+   },
+   {
+    "note": "F2",
+    "midi": 41,
+    "onset_s": 1.741,
+    "dur_s": 0.174,
+    "mean_hz": 87.5
+   },
+   {
+    "note": "C3",
+    "midi": 48,
+    "onset_s": 1.927,
+    "dur_s": 0.139,
+    "mean_hz": 131.6
+   },
+   {
+    "note": "F2",
+    "midi": 41,
+    "onset_s": 2.136,
+    "dur_s": 0.325,
+    "mean_hz": 88.3
+   },
+   {
+    "note": "G#2",
+    "midi": 44,
+    "onset_s": 2.879,
+    "dur_s": 0.244,
+    "mean_hz": 103.9
+   },
+   {
+    "note": "G#2",
+    "midi": 44,
+    "onset_s": 3.332,
+    "dur_s": 0.302,
+    "mean_hz": 104.8
+   },
+   {
+    "note": "A#4",
+    "midi": 70,
+    "onset_s": 3.669,
+    "dur_s": 0.116,
+    "mean_hz": 464.2
+   },
+   {
+    "note": "G#4",
+    "midi": 68,
+    "onset_s": 3.971,
+    "dur_s": 0.104,
+    "mean_hz": 412.1
+   },
+   {
+    "note": "G#3",
+    "midi": 56,
+    "onset_s": 4.528,
+    "dur_s": 0.255,
+    "mean_hz": 208.0
+   },
+   {
+    "note": "C4",
+    "midi": 60,
+    "onset_s": 4.783,
+    "dur_s": 0.093,
+    "mean_hz": 262.5
+   },
+   {
+    "note": "C4",
+    "midi": 60,
+    "onset_s": 4.899,
+    "dur_s": 0.081,
+    "mean_hz": 131.6
+   },
+   {
+    "note": "C#4",
+    "midi": 61,
+    "onset_s": 5.004,
+    "dur_s": 0.232,
+    "mean_hz": 280.0
+   },
+   {
+    "note": "C3",
+    "midi": 48,
+    "onset_s": 5.294,
+    "dur_s": 0.139,
+    "mean_hz": 131.2
+   },
+   {
+    "note": "C#4",
+    "midi": 61,
+    "onset_s": 5.48,
+    "dur_s": 0.197,
+    "mean_hz": 280.0
+   },
+   {
+    "note": "C#3",
+    "midi": 49,
+    "onset_s": 5.724,
+    "dur_s": 0.081,
+    "mean_hz": 137.8
+   },
+   {
+    "note": "A#4",
+    "midi": 70,
+    "onset_s": 5.886,
+    "dur_s": 0.128,
+    "mean_hz": 464.2
+   },
+   {
+    "note": "G4",
+    "midi": 67,
+    "onset_s": 6.014,
+    "dur_s": 0.139,
+    "mean_hz": 390.3
+   }
+  ],
+  "exact_recurrences": [
+   {
+    "onset_s": 0.197,
+    "bed_note_index": 0
+   }
+  ],
+  "transposed_recurrences": [],
+  "hook_answer_seats": [
+   {
+    "segment": 1,
+    "hook_end_s": 23.6570867668444,
+    "seat_span_s": [
+     22.66,
+     25.6
+    ],
+    "exact_in_seat": [],
+    "transposed_in_seat": []
+   },
+   {
+    "segment": 2,
+    "hook_end_s": 31.412782355792537,
+    "seat_span_s": [
+     30.41,
+     33.35
+    ],
+    "exact_in_seat": [],
+    "transposed_in_seat": []
+   },
+   {
+    "segment": 3,
+    "hook_end_s": 41.107401841977705,
+    "seat_span_s": [
+     40.11,
+     43.05
+    ],
+    "exact_in_seat": [],
+    "transposed_in_seat": []
+   },
+   {
+    "segment": 4,
+    "hook_end_s": 46.9241735336888,
+    "seat_span_s": [
+     45.92,
+     48.86
+    ],
+    "exact_in_seat": [],
+    "transposed_in_seat": []
+   },
+   {
+    "segment": 5,
+    "hook_end_s": 62.43556471158507,
+    "seat_span_s": [
+     61.44,
+     64.37
+    ],
+    "exact_in_seat": [],
+    "transposed_in_seat": []
+   },
+   {
+    "segment": 7,
+    "hook_end_s": 95.39727096461465,
+    "seat_span_s": [
+     94.4,
+     97.34
+    ],
+    "exact_in_seat": [],
+    "transposed_in_seat": []
+   },
+   {
+    "segment": 8,
+    "hook_end_s": 107.03081434803684,
+    "seat_span_s": [
+     106.03,
+     108.97
+    ],
+    "exact_in_seat": [],
+    "transposed_in_seat": []
+   },
+   {
+    "segment": 9,
+    "hook_end_s": 116.72543383422202,
+    "seat_span_s": [
+     115.73,
+     118.66
+    ],
+    "exact_in_seat": [],
+    "transposed_in_seat": []
+   },
+   {
+    "segment": 10,
+    "hook_end_s": 132.23682501211826,
+    "seat_span_s": [
+     131.24,
+     134.18
+    ],
+    "exact_in_seat": [],
+    "transposed_in_seat": []
+   },
+   {
+    "segment": 11,
+    "hook_end_s": 143.87036839554045,
+    "seat_span_s": [
+     142.87,
+     145.81
+    ],
+    "exact_in_seat": [],
+    "transposed_in_seat": []
+   },
+   {
+    "segment": 12,
+    "hook_end_s": 153.56498788172564,
+    "seat_span_s": [
+     152.56,
+     155.5
+    ],
+    "exact_in_seat": [],
+    "transposed_in_seat": []
+   },
+   {
+    "segment": 13,
+    "hook_end_s": 157.8057142857143,
+    "seat_span_s": [
+     156.81,
+     159.74
+    ],
+    "exact_in_seat": [],
+    "transposed_in_seat": []
+   }
+  ],
+  "segment_end_seats": [
+   {
+    "segment": 0,
+    "end_s": 6.2067716917111,
+    "exact_in_seat": [],
+    "transposed_in_seat": []
+   },
+   {
+    "segment": 1,
+    "end_s": 23.6570867668444,
+    "exact_in_seat": [],
+    "transposed_in_seat": []
+   },
+   {
+    "segment": 2,
+    "end_s": 31.412782355792537,
+    "exact_in_seat": [],
+    "transposed_in_seat": []
+   },
+   {
+    "segment": 3,
+    "end_s": 41.107401841977705,
+    "exact_in_seat": [],
+    "transposed_in_seat": []
+   },
+   {
+    "segment": 4,
+    "end_s": 46.9241735336888,
+    "exact_in_seat": [],
+    "transposed_in_seat": []
+   },
+   {
+    "segment": 5,
+    "end_s": 62.43556471158507,
+    "exact_in_seat": [],
+    "transposed_in_seat": []
+   },
+   {
+    "segment": 6,
+    "end_s": 77.94695588948134,
+    "exact_in_seat": [],
+    "transposed_in_seat": []
+   },
+   {
+    "segment": 7,
+    "end_s": 95.39727096461465,
+    "exact_in_seat": [],
+    "transposed_in_seat": []
+   },
+   {
+    "segment": 8,
+    "end_s": 107.03081434803684,
+    "exact_in_seat": [],
+    "transposed_in_seat": []
+   },
+   {
+    "segment": 9,
+    "end_s": 116.72543383422202,
+    "exact_in_seat": [],
+    "transposed_in_seat": []
+   },
+   {
+    "segment": 10,
+    "end_s": 132.23682501211826,
+    "exact_in_seat": [],
+    "transposed_in_seat": []
+   },
+   {
+    "segment": 11,
+    "end_s": 143.87036839554045,
+    "exact_in_seat": [],
+    "transposed_in_seat": []
+   },
+   {
+    "segment": 12,
+    "end_s": 153.56498788172564,
+    "exact_in_seat": [],
+    "transposed_in_seat": []
+   },
+   {
+    "segment": 13,
+    "end_s": 157.8057142857143,
+    "exact_in_seat": [],
+    "transposed_in_seat": []
+   }
+  ],
+  "final_seat": {
+   "programme_end_-40dbfs_s": 154.25,
+   "seat_span_s": [
+    146.25,
+    154.75
+   ],
+   "exact_in_seat": [],
+   "transposed_in_seat": []
+  },
+  "verdict": "ABSENT \u2014 no recurrence of the opening figure, exact or transposed, stands anywhere after the origin",
+  "candidate_canonical_notation": null,
+  "confound_stated": "the bed track is autocorrelation on the mid channel; a four-note coincidence inside dense rap intonation is possible, which is why the verdict requires recurrences AT THE ORDERED SEATS (hook answers, final seat), not merely anywhere in the file."
+ },
+ "violin_check": {
+  "ordered": "NO VIOLIN \u2014 grand piano leads the strings, with guitar",
+  "alone_window_attacks": [
+   {
+    "note": "F2",
+    "onset_s": 0.197,
+    "attack_ms": 28.0
+   }
+  ],
+  "median_attack_ms": 28.0,
+  "instrumental_sustained_runs_weighed": 0,
+  "vibrato_shares_4_7hz": [],
+  "median_vibrato_share": null,
+  "reading_rule": "median attack <= 30 ms AND median vibrato share < 0.25 -> consistent with piano; confidence ceiling MODERATE (a synth patch can imitate either signature)",
+  "reading": "UNREADABLE at one or both instruments \u2014 too few alone-window notes or sustained instrumental runs to weigh"
+ },
+ "form_audit": {
+  "brief": "studio-runs/gemini-hood-elegance/prompt-v4-brightmoor-signature.txt",
+  "ordered_form": [
+   "intro (Signature alone, then swell)",
+   "Qveen verse 1 (rap)",
+   "hook (Qveen sung)",
+   "Qveen verse 2 (rap, double-time)",
+   "hook (Qveen sung)",
+   "Qasparr verse 1 (rap)",
+   "Qasparr verse 2 (rap)",
+   "bridge (Qasparr, halftime)",
+   "hook (Qveen sung)",
+   "final verse (tag team, both on the last line)",
+   "outro (Qveen sung, alone)"
+  ],
+  "ordered_sections": 11,
+  "measured_segments": 14,
+  "grid": {
+   "bpm": 123.78,
+   "bar_s": 1.9389,
+   "n_bars_in_file": 82
+  },
+  "measured_map": [
+   {
+    "index": 0,
+    "t0": 0.0,
+    "t1": 6.2067716917111,
+    "bars": [
+     1,
+     3
+    ],
+    "mean_db": -29.6,
+    "register_class": "male-rap-band",
+    "register_median_hz": 131.6,
+    "recurrence_sim": 0.798,
+    "recurrence_with": 4
+   },
+   {
+    "index": 1,
+    "t0": 6.2067716917111,
+    "t1": 23.6570867668444,
+    "bars": [
+     4,
+     12
+    ],
+    "mean_db": -17.04,
+    "register_class": "sung-high",
+    "register_median_hz": 280.9,
+    "recurrence_sim": 0.792,
+    "recurrence_with": 2
+   },
+   {
+    "index": 2,
+    "t0": 23.6570867668444,
+    "t1": 31.412782355792537,
+    "bars": [
+     13,
+     16
+    ],
+    "mean_db": -14.84,
+    "register_class": "sung-high",
+    "register_median_hz": 383.5,
+    "recurrence_sim": 0.853,
+    "recurrence_with": 3
+   },
+   {
+    "index": 3,
+    "t0": 31.412782355792537,
+    "t1": 41.107401841977705,
+    "bars": [
+     17,
+     21
+    ],
+    "mean_db": -14.05,
+    "register_class": "sung-high",
+    "register_median_hz": 364.5,
+    "recurrence_sim": 0.973,
+    "recurrence_with": 6
+   },
+   {
+    "index": 4,
+    "t0": 41.107401841977705,
+    "t1": 46.9241735336888,
+    "bars": [
+     22,
+     24
+    ],
+    "mean_db": -16.07,
+    "register_class": "sung-high",
+    "register_median_hz": 350.0,
+    "recurrence_sim": 0.862,
+    "recurrence_with": 11
+   },
+   {
+    "index": 5,
+    "t0": 46.9241735336888,
+    "t1": 62.43556471158507,
+    "bars": [
+     25,
+     32
+    ],
+    "mean_db": -15.56,
+    "register_class": "sung-high",
+    "register_median_hz": 383.5,
+    "recurrence_sim": 0.847,
+    "recurrence_with": 4
+   },
+   {
+    "index": 6,
+    "t0": 62.43556471158507,
+    "t1": 77.94695588948134,
+    "bars": [
+     33,
+     40
+    ],
+    "mean_db": -14.94,
+    "register_class": "female-rap-band",
+    "register_median_hz": 223.9,
+    "recurrence_sim": 0.973,
+    "recurrence_with": 3
+   },
+   {
+    "index": 7,
+    "t0": 77.94695588948134,
+    "t1": 95.39727096461465,
+    "bars": [
+     41,
+     49
+    ],
+    "mean_db": -15.16,
+    "register_class": "sung-high",
+    "register_median_hz": 291.1,
+    "recurrence_sim": 0.819,
+    "recurrence_with": 4
+   },
+   {
+    "index": 8,
+    "t0": 95.39727096461465,
+    "t1": 107.03081434803684,
+    "bars": [
+     50,
+     55
+    ],
+    "mean_db": -15.22,
+    "register_class": "sung-high",
+    "register_median_hz": 257.9,
+    "recurrence_sim": 0.849,
+    "recurrence_with": 4
+   },
+   {
+    "index": 9,
+    "t0": 107.03081434803684,
+    "t1": 116.72543383422202,
+    "bars": [
+     56,
+     60
+    ],
+    "mean_db": -15.37,
+    "register_class": "sung-high",
+    "register_median_hz": 464.2,
+    "recurrence_sim": 0.703,
+    "recurrence_with": 2
+   },
+   {
+    "index": 10,
+    "t0": 116.72543383422202,
+    "t1": 132.23682501211826,
+    "bars": [
+     61,
+     68
+    ],
+    "mean_db": -13.91,
+    "register_class": "sung-high",
+    "register_median_hz": 416.0,
+    "recurrence_sim": 0.915,
+    "recurrence_with": 3
+   },
+   {
+    "index": 11,
+    "t0": 132.23682501211826,
+    "t1": 143.87036839554045,
+    "bars": [
+     69,
+     74
+    ],
+    "mean_db": -16.0,
+    "register_class": "sung-high",
+    "register_median_hz": 380.2,
+    "recurrence_sim": 0.926,
+    "recurrence_with": 3
+   },
+   {
+    "index": 12,
+    "t0": 143.87036839554045,
+    "t1": 153.56498788172564,
+    "bars": [
+     75,
+     79
+    ],
+    "mean_db": -27.9,
+    "register_class": "sung-high",
+    "register_median_hz": 375.3,
+    "recurrence_sim": 0.749,
+    "recurrence_with": 0
+   },
+   {
+    "index": 13,
+    "t0": 153.56498788172564,
+    "t1": 157.8057142857143,
+    "bars": [
+     80,
+     81
+    ],
+    "mean_db": -79.53,
+    "register_class": "sung-high",
+    "register_median_hz": 348.6,
+    "recurrence_sim": 0.629,
+    "recurrence_with": 4
+   }
+  ],
+  "sung_high_segments": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13
+  ],
+  "male_rap_segments": [
+   0
+  ],
+  "female_rap_segments": [
+   6
+  ]
+ },
+ "grid": {
+  "bpm": 123.78,
+  "beat_s": 0.484731,
+  "bar_s": 1.938924
+ }
+}
