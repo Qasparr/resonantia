@@ -1,0 +1,3328 @@
+{
+ "document": "TRANSCRIPTION-ANALYSIS \u2014 MELODY SKETCH (phase 1, machine sketch)",
+ "honesty_header": {
+  "status": "SKETCH \u2014 a measured pitch-track reduction for a later engraving pass. NOT a finished transcription. Do not engrave from this file without the desk's audit against the audio.",
+  "method": "Normalised-autocorrelation f0 on the mid channel (46 ms frames, 11.6 ms hop), gated by a vocal-likelihood heuristic (centred mid>side, >=45% of energy in 250-4000 Hz), median-smoothed and grouped into notes >= 90 ms.",
+  "known_failure_modes": [
+   "Octave errors survive the gate; suspects are flagged, not fixed.",
+   "Rapped/spoken passages have continuous intonation \u2014 notes there are the tracker's quantisation of speech, marked by low conf.",
+   "Dense hook stacks (doubled vocals + ad-libs) can pull the track to a harmony line instead of the lead.",
+   "Onsets are frame-quantised (+/- 12 ms) before any rhythmic quantisation an engraver later applies."
+  ],
+  "tempo_grid": "95.91 BPM bench-measured; bar = 2.5023 s; downbeat phase est. 0.075 s."
+ },
+ "notes": [
+  {
+   "onset_s": 0.522,
+   "dur_s": 0.116,
+   "midi": 67,
+   "note": "G4",
+   "mean_hz": 399.1,
+   "conf": 0.532,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 0.917,
+   "dur_s": 0.116,
+   "midi": 60,
+   "note": "C4",
+   "mean_hz": 258.7,
+   "conf": 0.802,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 1.173,
+   "dur_s": 0.116,
+   "midi": 61,
+   "note": "C#4",
+   "mean_hz": 272.2,
+   "conf": 0.39,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 1.567,
+   "dur_s": 0.093,
+   "midi": 67,
+   "note": "G4",
+   "mean_hz": 392.1,
+   "conf": 0.377,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 1.66,
+   "dur_s": 0.139,
+   "midi": 62,
+   "note": "D4",
+   "mean_hz": 299.0,
+   "conf": 0.857,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 1.904,
+   "dur_s": 0.104,
+   "midi": 67,
+   "note": "G4",
+   "mean_hz": 393.8,
+   "conf": 0.53,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 2.043,
+   "dur_s": 0.116,
+   "midi": 60,
+   "note": "C4",
+   "mean_hz": 265.7,
+   "conf": 0.734,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 2.252,
+   "dur_s": 0.104,
+   "midi": 65,
+   "note": "F4",
+   "mean_hz": 352.8,
+   "conf": 0.425,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 2.392,
+   "dur_s": 0.116,
+   "midi": 61,
+   "note": "C#4",
+   "mean_hz": 273.9,
+   "conf": 0.4,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 2.647,
+   "dur_s": 0.151,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 454.6,
+   "conf": 0.631,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 2.856,
+   "dur_s": 0.163,
+   "midi": 57,
+   "note": "A3",
+   "mean_hz": 223.9,
+   "conf": 0.592,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 3.181,
+   "dur_s": 0.116,
+   "midi": 67,
+   "note": "G4",
+   "mean_hz": 393.8,
+   "conf": 0.418,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 3.413,
+   "dur_s": 0.128,
+   "midi": 64,
+   "note": "E4",
+   "mean_hz": 321.9,
+   "conf": 0.468,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 6.966,
+   "dur_s": 0.569,
+   "midi": 56,
+   "note": "G#3",
+   "mean_hz": 209.0,
+   "conf": 0.811,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 7.57,
+   "dur_s": 0.163,
+   "midi": 56,
+   "note": "G#3",
+   "mean_hz": 209.0,
+   "conf": 0.651,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 7.732,
+   "dur_s": 0.128,
+   "midi": 49,
+   "note": "C#3",
+   "mean_hz": 137.8,
+   "conf": 0.704,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 7.86,
+   "dur_s": 0.163,
+   "midi": 61,
+   "note": "C#4",
+   "mean_hz": 277.4,
+   "conf": 0.752,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 8.22,
+   "dur_s": 0.128,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 408.3,
+   "conf": 0.785,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 8.348,
+   "dur_s": 0.116,
+   "midi": 56,
+   "note": "G#3",
+   "mean_hz": 208.0,
+   "conf": 0.826,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 8.51,
+   "dur_s": 0.789,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 412.1,
+   "conf": 0.899,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 9.392,
+   "dur_s": 0.267,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 495.5,
+   "conf": 0.919,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 9.694,
+   "dur_s": 0.116,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 474.2,
+   "conf": 0.665,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 9.81,
+   "dur_s": 0.128,
+   "midi": 56,
+   "note": "G#3",
+   "mean_hz": 207.0,
+   "conf": 0.882,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 10.008,
+   "dur_s": 0.139,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 469.1,
+   "conf": 0.544,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 10.542,
+   "dur_s": 0.209,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 495.5,
+   "conf": 0.607,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 11.099,
+   "dur_s": 0.163,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 492.8,
+   "conf": 0.652,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 11.877,
+   "dur_s": 0.104,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 416.0,
+   "conf": 0.661,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 11.981,
+   "dur_s": 0.128,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 466.7,
+   "conf": 0.628,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 12.19,
+   "dur_s": 0.116,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 469.1,
+   "conf": 0.547,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 12.748,
+   "dur_s": 0.116,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 469.1,
+   "conf": 0.62,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 12.864,
+   "dur_s": 0.116,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 495.5,
+   "conf": 0.56,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 13.816,
+   "dur_s": 0.104,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 490.0,
+   "conf": 0.611,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 14.025,
+   "dur_s": 0.128,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 495.5,
+   "conf": 0.602,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 17.194,
+   "dur_s": 0.128,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 490.0,
+   "conf": 0.538,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 17.763,
+   "dur_s": 0.128,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 420.0,
+   "conf": 0.631,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 17.891,
+   "dur_s": 0.093,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 482.0,
+   "conf": 0.676,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 17.984,
+   "dur_s": 0.116,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 464.2,
+   "conf": 0.669,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 18.553,
+   "dur_s": 0.093,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 416.0,
+   "conf": 0.657,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 18.68,
+   "dur_s": 0.151,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 474.2,
+   "conf": 0.564,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 18.866,
+   "dur_s": 0.104,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 469.1,
+   "conf": 0.63,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 19.412,
+   "dur_s": 0.116,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 464.2,
+   "conf": 0.664,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 19.528,
+   "dur_s": 0.302,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 490.0,
+   "conf": 0.665,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 20.457,
+   "dur_s": 0.337,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 469.1,
+   "conf": 0.663,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 21.095,
+   "dur_s": 0.186,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 490.0,
+   "conf": 0.716,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 21.304,
+   "dur_s": 0.093,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 464.2,
+   "conf": 0.703,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 21.618,
+   "dur_s": 0.151,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 416.0,
+   "conf": 0.596,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 22.187,
+   "dur_s": 0.116,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 495.5,
+   "conf": 0.654,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 22.512,
+   "dur_s": 0.139,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 482.0,
+   "conf": 0.69,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 23.034,
+   "dur_s": 0.151,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 469.1,
+   "conf": 0.607,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 23.185,
+   "dur_s": 0.197,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 416.0,
+   "conf": 0.564,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 23.777,
+   "dur_s": 0.232,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 490.0,
+   "conf": 0.534,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 24.474,
+   "dur_s": 0.128,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 416.0,
+   "conf": 0.599,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 24.602,
+   "dur_s": 0.186,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 464.2,
+   "conf": 0.597,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 24.892,
+   "dur_s": 0.128,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 469.1,
+   "conf": 0.574,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 25.112,
+   "dur_s": 0.128,
+   "midi": 69,
+   "note": "A4",
+   "mean_hz": 428.2,
+   "conf": 0.571,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 25.24,
+   "dur_s": 0.104,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 412.1,
+   "conf": 0.507,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 25.368,
+   "dur_s": 0.313,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 466.7,
+   "conf": 0.561,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 25.751,
+   "dur_s": 0.116,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 466.7,
+   "conf": 0.614,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 26.088,
+   "dur_s": 0.104,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 469.1,
+   "conf": 0.592,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 26.192,
+   "dur_s": 0.29,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 495.5,
+   "conf": 0.66,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 27.109,
+   "dur_s": 0.348,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 495.5,
+   "conf": 0.612,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 28.549,
+   "dur_s": 0.209,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 310.6,
+   "conf": 0.55,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 28.77,
+   "dur_s": 0.104,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 310.6,
+   "conf": 0.538,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 30.569,
+   "dur_s": 0.151,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 308.4,
+   "conf": 0.544,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 31.115,
+   "dur_s": 0.197,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 310.6,
+   "conf": 0.58,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 31.707,
+   "dur_s": 0.104,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 490.0,
+   "conf": 0.615,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 31.904,
+   "dur_s": 0.093,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 418.0,
+   "conf": 0.623,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 32.508,
+   "dur_s": 0.128,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 416.0,
+   "conf": 0.682,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 32.868,
+   "dur_s": 0.104,
+   "midi": 61,
+   "note": "C#4",
+   "mean_hz": 277.4,
+   "conf": 0.475,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 33.158,
+   "dur_s": 0.151,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 416.0,
+   "conf": 0.624,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 33.657,
+   "dur_s": 0.313,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 495.5,
+   "conf": 0.704,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 33.971,
+   "dur_s": 0.128,
+   "midi": 59,
+   "note": "B3",
+   "mean_hz": 246.4,
+   "conf": 0.748,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 34.307,
+   "dur_s": 0.139,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 471.7,
+   "conf": 0.669,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 34.447,
+   "dur_s": 0.186,
+   "midi": 59,
+   "note": "B3",
+   "mean_hz": 247.8,
+   "conf": 0.747,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 34.633,
+   "dur_s": 0.093,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 469.1,
+   "conf": 0.821,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 34.737,
+   "dur_s": 0.093,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 471.8,
+   "conf": 0.435,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 35.004,
+   "dur_s": 0.209,
+   "midi": 56,
+   "note": "G#3",
+   "mean_hz": 208.0,
+   "conf": 0.581,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 35.376,
+   "dur_s": 0.197,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 312.8,
+   "conf": 0.629,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 35.573,
+   "dur_s": 0.244,
+   "midi": 61,
+   "note": "C#4",
+   "mean_hz": 275.6,
+   "conf": 0.772,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 35.863,
+   "dur_s": 0.104,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 501.1,
+   "conf": 0.479,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 36.537,
+   "dur_s": 0.116,
+   "midi": 56,
+   "note": "G#3",
+   "mean_hz": 205.1,
+   "conf": 0.727,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 36.653,
+   "dur_s": 0.221,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 420.0,
+   "conf": 0.684,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 37.407,
+   "dur_s": 0.139,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 424.0,
+   "conf": 0.498,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 37.79,
+   "dur_s": 0.116,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 501.1,
+   "conf": 0.574,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 40.716,
+   "dur_s": 0.093,
+   "midi": 69,
+   "note": "A4",
+   "mean_hz": 495.5,
+   "conf": 0.676,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 41.993,
+   "dur_s": 0.104,
+   "midi": 61,
+   "note": "C#4",
+   "mean_hz": 385.4,
+   "conf": 0.578,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 42.434,
+   "dur_s": 0.093,
+   "midi": 61,
+   "note": "C#4",
+   "mean_hz": 279.2,
+   "conf": 0.635,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 42.794,
+   "dur_s": 0.116,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 319.6,
+   "conf": 0.543,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 43.178,
+   "dur_s": 0.104,
+   "midi": 64,
+   "note": "E4",
+   "mean_hz": 332.8,
+   "conf": 0.52,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 43.897,
+   "dur_s": 0.104,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 498.3,
+   "conf": 0.5,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 45.732,
+   "dur_s": 0.104,
+   "midi": 61,
+   "note": "C#4",
+   "mean_hz": 284.5,
+   "conf": 0.609,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 47.009,
+   "dur_s": 0.116,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 487.3,
+   "conf": 0.667,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 47.345,
+   "dur_s": 0.116,
+   "midi": 62,
+   "note": "D4",
+   "mean_hz": 296.0,
+   "conf": 0.614,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 47.833,
+   "dur_s": 0.128,
+   "midi": 62,
+   "note": "D4",
+   "mean_hz": 286.4,
+   "conf": 0.51,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 48.344,
+   "dur_s": 0.116,
+   "midi": 62,
+   "note": "D4",
+   "mean_hz": 300.0,
+   "conf": 0.623,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 48.46,
+   "dur_s": 0.104,
+   "midi": 62,
+   "note": "D4",
+   "mean_hz": 300.0,
+   "conf": 0.628,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 48.634,
+   "dur_s": 0.128,
+   "midi": 62,
+   "note": "D4",
+   "mean_hz": 295.0,
+   "conf": 0.594,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 49.505,
+   "dur_s": 0.139,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 317.3,
+   "conf": 0.547,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 49.865,
+   "dur_s": 0.104,
+   "midi": 65,
+   "note": "F4",
+   "mean_hz": 341.9,
+   "conf": 0.587,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 51.943,
+   "dur_s": 0.116,
+   "midi": 64,
+   "note": "E4",
+   "mean_hz": 323.1,
+   "conf": 0.556,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 52.198,
+   "dur_s": 0.128,
+   "midi": 62,
+   "note": "D4",
+   "mean_hz": 300.0,
+   "conf": 0.495,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 52.535,
+   "dur_s": 0.197,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 307.3,
+   "conf": 0.515,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 53.185,
+   "dur_s": 0.116,
+   "midi": 65,
+   "note": "F4",
+   "mean_hz": 341.9,
+   "conf": 0.573,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 53.824,
+   "dur_s": 0.104,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 308.4,
+   "conf": 0.632,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 53.975,
+   "dur_s": 0.116,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 304.1,
+   "conf": 0.609,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 54.439,
+   "dur_s": 0.093,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 403.7,
+   "conf": 0.59,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 55.287,
+   "dur_s": 0.174,
+   "midi": 62,
+   "note": "D4",
+   "mean_hz": 302.1,
+   "conf": 0.67,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 55.507,
+   "dur_s": 0.104,
+   "midi": 62,
+   "note": "D4",
+   "mean_hz": 484.6,
+   "conf": 0.615,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 55.995,
+   "dur_s": 0.093,
+   "midi": 64,
+   "note": "E4",
+   "mean_hz": 337.9,
+   "conf": 0.395,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 57.272,
+   "dur_s": 0.104,
+   "midi": 62,
+   "note": "D4",
+   "mean_hz": 290.1,
+   "conf": 0.481,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 57.4,
+   "dur_s": 0.116,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 310.6,
+   "conf": 0.454,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 58.375,
+   "dur_s": 0.174,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 310.6,
+   "conf": 0.537,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 59.164,
+   "dur_s": 0.116,
+   "midi": 62,
+   "note": "D4",
+   "mean_hz": 296.0,
+   "conf": 0.545,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 59.466,
+   "dur_s": 0.104,
+   "midi": 64,
+   "note": "E4",
+   "mean_hz": 501.1,
+   "conf": 0.578,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 59.884,
+   "dur_s": 0.093,
+   "midi": 64,
+   "note": "E4",
+   "mean_hz": 323.1,
+   "conf": 0.532,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 60.523,
+   "dur_s": 0.104,
+   "midi": 62,
+   "note": "D4",
+   "mean_hz": 501.1,
+   "conf": 0.653,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 60.639,
+   "dur_s": 0.128,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 312.8,
+   "conf": 0.61,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 62.137,
+   "dur_s": 0.139,
+   "midi": 62,
+   "note": "D4",
+   "mean_hz": 306.3,
+   "conf": 0.676,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 62.566,
+   "dur_s": 0.104,
+   "midi": 64,
+   "note": "E4",
+   "mean_hz": 324.3,
+   "conf": 0.634,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 62.682,
+   "dur_s": 0.104,
+   "midi": 62,
+   "note": "D4",
+   "mean_hz": 302.1,
+   "conf": 0.45,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 62.926,
+   "dur_s": 0.116,
+   "midi": 62,
+   "note": "D4",
+   "mean_hz": 295.0,
+   "conf": 0.469,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 63.553,
+   "dur_s": 0.104,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 416.0,
+   "conf": 0.573,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 63.681,
+   "dur_s": 0.383,
+   "midi": 56,
+   "note": "G#3",
+   "mean_hz": 209.0,
+   "conf": 0.788,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 64.122,
+   "dur_s": 0.209,
+   "midi": 56,
+   "note": "G#3",
+   "mean_hz": 210.0,
+   "conf": 0.645,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 64.528,
+   "dur_s": 0.139,
+   "midi": 61,
+   "note": "C#4",
+   "mean_hz": 277.4,
+   "conf": 0.733,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 64.668,
+   "dur_s": 0.139,
+   "midi": 49,
+   "note": "C#3",
+   "mean_hz": 139.1,
+   "conf": 0.605,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 64.807,
+   "dur_s": 0.093,
+   "midi": 66,
+   "note": "F#4",
+   "mean_hz": 372.2,
+   "conf": 0.557,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 65.004,
+   "dur_s": 0.163,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 416.0,
+   "conf": 0.79,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 65.19,
+   "dur_s": 0.778,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 412.1,
+   "conf": 0.89,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 66.072,
+   "dur_s": 0.267,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 495.5,
+   "conf": 0.666,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 66.339,
+   "dur_s": 0.151,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 474.2,
+   "conf": 0.635,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 66.572,
+   "dur_s": 0.093,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 416.0,
+   "conf": 0.792,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 66.723,
+   "dur_s": 0.116,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 422.0,
+   "conf": 0.434,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 67.767,
+   "dur_s": 0.139,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 492.8,
+   "conf": 0.683,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 67.965,
+   "dur_s": 0.104,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 469.1,
+   "conf": 0.65,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 68.638,
+   "dur_s": 0.116,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 464.2,
+   "conf": 0.681,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 68.847,
+   "dur_s": 0.174,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 469.1,
+   "conf": 0.576,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 69.428,
+   "dur_s": 0.104,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 464.2,
+   "conf": 0.617,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 69.532,
+   "dur_s": 0.116,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 495.5,
+   "conf": 0.556,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 69.695,
+   "dur_s": 0.104,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 495.5,
+   "conf": 0.7,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 70.438,
+   "dur_s": 0.139,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 490.0,
+   "conf": 0.615,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 70.682,
+   "dur_s": 0.174,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 495.5,
+   "conf": 0.521,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 71.274,
+   "dur_s": 0.104,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 469.1,
+   "conf": 0.507,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 73.898,
+   "dur_s": 0.29,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 490.0,
+   "conf": 0.55,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 74.432,
+   "dur_s": 0.128,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 420.0,
+   "conf": 0.62,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 74.571,
+   "dur_s": 0.209,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 469.1,
+   "conf": 0.633,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 75.221,
+   "dur_s": 0.151,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 428.2,
+   "conf": 0.61,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 75.372,
+   "dur_s": 0.104,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 479.3,
+   "conf": 0.52,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 75.546,
+   "dur_s": 0.104,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 466.7,
+   "conf": 0.594,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 76.069,
+   "dur_s": 0.139,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 469.1,
+   "conf": 0.66,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 76.208,
+   "dur_s": 0.279,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 495.5,
+   "conf": 0.721,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 77.125,
+   "dur_s": 0.325,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 469.1,
+   "conf": 0.694,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 77.752,
+   "dur_s": 0.197,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 490.0,
+   "conf": 0.713,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 77.961,
+   "dur_s": 0.128,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 464.2,
+   "conf": 0.699,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 78.263,
+   "dur_s": 0.197,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 416.0,
+   "conf": 0.592,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 78.867,
+   "dur_s": 0.093,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 495.5,
+   "conf": 0.686,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 79.18,
+   "dur_s": 0.139,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 484.7,
+   "conf": 0.658,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 79.505,
+   "dur_s": 0.139,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 471.7,
+   "conf": 0.563,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 79.702,
+   "dur_s": 0.139,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 469.1,
+   "conf": 0.623,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 79.865,
+   "dur_s": 0.163,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 416.0,
+   "conf": 0.567,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 80.434,
+   "dur_s": 0.244,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 490.0,
+   "conf": 0.565,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 81.131,
+   "dur_s": 0.139,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 416.0,
+   "conf": 0.607,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 81.27,
+   "dur_s": 0.186,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 469.1,
+   "conf": 0.607,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 81.548,
+   "dur_s": 0.151,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 469.1,
+   "conf": 0.556,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 81.781,
+   "dur_s": 0.163,
+   "midi": 69,
+   "note": "A4",
+   "mean_hz": 426.1,
+   "conf": 0.586,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 82.036,
+   "dur_s": 0.151,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 469.1,
+   "conf": 0.537,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 82.199,
+   "dur_s": 0.151,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 466.7,
+   "conf": 0.555,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 82.408,
+   "dur_s": 0.128,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 464.2,
+   "conf": 0.612,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 82.756,
+   "dur_s": 0.116,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 469.1,
+   "conf": 0.685,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 82.872,
+   "dur_s": 0.29,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 495.5,
+   "conf": 0.653,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 83.766,
+   "dur_s": 0.36,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 495.5,
+   "conf": 0.612,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 85.217,
+   "dur_s": 0.232,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 310.6,
+   "conf": 0.565,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 87.237,
+   "dur_s": 0.104,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 309.5,
+   "conf": 0.54,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 87.806,
+   "dur_s": 0.163,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 310.6,
+   "conf": 0.61,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 88.364,
+   "dur_s": 0.116,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 492.8,
+   "conf": 0.648,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 88.573,
+   "dur_s": 0.093,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 416.0,
+   "conf": 0.594,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 88.665,
+   "dur_s": 0.128,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 469.1,
+   "conf": 0.538,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 88.886,
+   "dur_s": 0.104,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 464.2,
+   "conf": 0.552,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 89.176,
+   "dur_s": 0.128,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 420.0,
+   "conf": 0.654,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 89.536,
+   "dur_s": 0.104,
+   "midi": 61,
+   "note": "C#4",
+   "mean_hz": 277.4,
+   "conf": 0.46,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 89.815,
+   "dur_s": 0.128,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 416.0,
+   "conf": 0.579,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 90.326,
+   "dur_s": 0.29,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 495.5,
+   "conf": 0.705,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 90.616,
+   "dur_s": 0.139,
+   "midi": 59,
+   "note": "B3",
+   "mean_hz": 246.4,
+   "conf": 0.739,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 90.79,
+   "dur_s": 0.104,
+   "midi": 59,
+   "note": "B3",
+   "mean_hz": 249.2,
+   "conf": 0.492,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 90.906,
+   "dur_s": 0.116,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 479.3,
+   "conf": 0.605,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 91.103,
+   "dur_s": 0.104,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 490.0,
+   "conf": 0.765,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 91.278,
+   "dur_s": 0.116,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 469.1,
+   "conf": 0.81,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 91.672,
+   "dur_s": 0.197,
+   "midi": 56,
+   "note": "G#3",
+   "mean_hz": 208.0,
+   "conf": 0.584,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 92.044,
+   "dur_s": 0.174,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 312.8,
+   "conf": 0.618,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 92.23,
+   "dur_s": 0.244,
+   "midi": 61,
+   "note": "C#4",
+   "mean_hz": 275.6,
+   "conf": 0.82,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 92.938,
+   "dur_s": 0.093,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 495.5,
+   "conf": 0.899,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 93.042,
+   "dur_s": 0.116,
+   "midi": 58,
+   "note": "A#3",
+   "mean_hz": 234.6,
+   "conf": 0.83,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 93.193,
+   "dur_s": 0.174,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 412.1,
+   "conf": 0.84,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 93.437,
+   "dur_s": 0.139,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 404.6,
+   "conf": 0.535,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 95.399,
+   "dur_s": 0.104,
+   "midi": 62,
+   "note": "D4",
+   "mean_hz": 301.0,
+   "conf": 0.517,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 96.096,
+   "dur_s": 0.128,
+   "midi": 62,
+   "note": "D4",
+   "mean_hz": 306.2,
+   "conf": 0.586,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 97.094,
+   "dur_s": 0.104,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 311.7,
+   "conf": 0.525,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 97.408,
+   "dur_s": 0.104,
+   "midi": 62,
+   "note": "D4",
+   "mean_hz": 302.1,
+   "conf": 0.508,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 98.58,
+   "dur_s": 0.104,
+   "midi": 64,
+   "note": "E4",
+   "mean_hz": 339.2,
+   "conf": 0.647,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 98.801,
+   "dur_s": 0.116,
+   "midi": 64,
+   "note": "E4",
+   "mean_hz": 318.4,
+   "conf": 0.707,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 99.207,
+   "dur_s": 0.104,
+   "midi": 64,
+   "note": "E4",
+   "mean_hz": 334.1,
+   "conf": 0.658,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 99.857,
+   "dur_s": 0.128,
+   "midi": 64,
+   "note": "E4",
+   "mean_hz": 326.7,
+   "conf": 0.566,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 100.693,
+   "dur_s": 0.093,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 306.2,
+   "conf": 0.535,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 101.088,
+   "dur_s": 0.116,
+   "midi": 64,
+   "note": "E4",
+   "mean_hz": 339.2,
+   "conf": 0.554,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 103.189,
+   "dur_s": 0.093,
+   "midi": 66,
+   "note": "F#4",
+   "mean_hz": 416.4,
+   "conf": 0.483,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 103.758,
+   "dur_s": 0.104,
+   "midi": 65,
+   "note": "F4",
+   "mean_hz": 347.2,
+   "conf": 0.703,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 103.956,
+   "dur_s": 0.116,
+   "midi": 66,
+   "note": "F#4",
+   "mean_hz": 361.5,
+   "conf": 0.694,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 104.409,
+   "dur_s": 0.116,
+   "midi": 66,
+   "note": "F#4",
+   "mean_hz": 378.5,
+   "conf": 0.694,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 104.571,
+   "dur_s": 0.104,
+   "midi": 64,
+   "note": "E4",
+   "mean_hz": 334.1,
+   "conf": 0.519,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 105.511,
+   "dur_s": 0.116,
+   "midi": 65,
+   "note": "F4",
+   "mean_hz": 350.0,
+   "conf": 0.607,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 106.208,
+   "dur_s": 0.104,
+   "midi": 65,
+   "note": "F4",
+   "mean_hz": 354.2,
+   "conf": 0.52,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 107.311,
+   "dur_s": 0.186,
+   "midi": 66,
+   "note": "F#4",
+   "mean_hz": 373.7,
+   "conf": 0.59,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 107.752,
+   "dur_s": 0.116,
+   "midi": 64,
+   "note": "E4",
+   "mean_hz": 338.0,
+   "conf": 0.544,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 108.019,
+   "dur_s": 0.163,
+   "midi": 62,
+   "note": "D4",
+   "mean_hz": 304.1,
+   "conf": 0.465,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 108.577,
+   "dur_s": 0.116,
+   "midi": 66,
+   "note": "F#4",
+   "mean_hz": 367.5,
+   "conf": 0.585,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 112.013,
+   "dur_s": 0.186,
+   "midi": 65,
+   "note": "F4",
+   "mean_hz": 347.2,
+   "conf": 0.631,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 112.791,
+   "dur_s": 0.104,
+   "midi": 65,
+   "note": "F4",
+   "mean_hz": 344.5,
+   "conf": 0.552,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 113.836,
+   "dur_s": 0.104,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 418.0,
+   "conf": 0.578,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 113.964,
+   "dur_s": 0.128,
+   "midi": 66,
+   "note": "F#4",
+   "mean_hz": 383.5,
+   "conf": 0.568,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 114.451,
+   "dur_s": 0.104,
+   "midi": 64,
+   "note": "E4",
+   "mean_hz": 329.1,
+   "conf": 0.526,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 115.229,
+   "dur_s": 0.128,
+   "midi": 66,
+   "note": "F#4",
+   "mean_hz": 373.7,
+   "conf": 0.578,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 115.937,
+   "dur_s": 0.116,
+   "midi": 64,
+   "note": "E4",
+   "mean_hz": 319.6,
+   "conf": 0.549,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 117.342,
+   "dur_s": 0.116,
+   "midi": 66,
+   "note": "F#4",
+   "mean_hz": 377.0,
+   "conf": 0.596,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 117.748,
+   "dur_s": 0.104,
+   "midi": 67,
+   "note": "G4",
+   "mean_hz": 397.3,
+   "conf": 0.609,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 118.549,
+   "dur_s": 0.128,
+   "midi": 67,
+   "note": "G4",
+   "mean_hz": 386.8,
+   "conf": 0.667,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 118.747,
+   "dur_s": 0.104,
+   "midi": 66,
+   "note": "F#4",
+   "mean_hz": 386.8,
+   "conf": 0.692,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 119.211,
+   "dur_s": 0.139,
+   "midi": 67,
+   "note": "G4",
+   "mean_hz": 390.3,
+   "conf": 0.694,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 119.42,
+   "dur_s": 0.116,
+   "midi": 69,
+   "note": "A4",
+   "mean_hz": 441.0,
+   "conf": 0.521,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 119.687,
+   "dur_s": 0.116,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 317.3,
+   "conf": 0.468,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 119.815,
+   "dur_s": 0.174,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 416.0,
+   "conf": 0.576,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 119.989,
+   "dur_s": 0.139,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 466.7,
+   "conf": 0.547,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 120.314,
+   "dur_s": 0.104,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 495.5,
+   "conf": 0.621,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 120.442,
+   "dur_s": 0.406,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 495.5,
+   "conf": 0.654,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 120.999,
+   "dur_s": 0.255,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 495.5,
+   "conf": 0.738,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 121.255,
+   "dur_s": 0.221,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 469.1,
+   "conf": 0.608,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 121.545,
+   "dur_s": 0.151,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 464.2,
+   "conf": 0.503,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 121.986,
+   "dur_s": 0.163,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 464.2,
+   "conf": 0.576,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 122.172,
+   "dur_s": 0.104,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 469.1,
+   "conf": 0.879,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 122.508,
+   "dur_s": 0.104,
+   "midi": 56,
+   "note": "G#3",
+   "mean_hz": 209.0,
+   "conf": 0.475,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 122.694,
+   "dur_s": 0.163,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 464.2,
+   "conf": 0.72,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 122.915,
+   "dur_s": 0.128,
+   "midi": 59,
+   "note": "B3",
+   "mean_hz": 247.8,
+   "conf": 0.83,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 123.043,
+   "dur_s": 0.104,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 495.5,
+   "conf": 0.769,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 123.147,
+   "dur_s": 0.209,
+   "midi": 61,
+   "note": "C#4",
+   "mean_hz": 277.4,
+   "conf": 0.662,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 123.658,
+   "dur_s": 0.104,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 479.4,
+   "conf": 0.532,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 123.762,
+   "dur_s": 0.522,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 495.5,
+   "conf": 0.669,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 124.401,
+   "dur_s": 0.116,
+   "midi": 56,
+   "note": "G#3",
+   "mean_hz": 209.0,
+   "conf": 0.743,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 124.517,
+   "dur_s": 0.174,
+   "midi": 51,
+   "note": "D#3",
+   "mean_hz": 155.3,
+   "conf": 0.731,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 124.691,
+   "dur_s": 0.116,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 310.6,
+   "conf": 0.737,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 124.819,
+   "dur_s": 0.128,
+   "midi": 47,
+   "note": "B2",
+   "mean_hz": 123.5,
+   "conf": 0.668,
+   "octave_suspect": true
+  },
+  {
+   "onset_s": 124.97,
+   "dur_s": 0.685,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 310.6,
+   "conf": 0.802,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 125.771,
+   "dur_s": 0.232,
+   "midi": 56,
+   "note": "G#3",
+   "mean_hz": 208.0,
+   "conf": 0.674,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 126.084,
+   "dur_s": 0.348,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 416.0,
+   "conf": 0.539,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 126.502,
+   "dur_s": 0.244,
+   "midi": 42,
+   "note": "F#2",
+   "mean_hz": 92.8,
+   "conf": 0.597,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 127.222,
+   "dur_s": 0.302,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 490.0,
+   "conf": 0.543,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 127.756,
+   "dur_s": 0.116,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 418.0,
+   "conf": 0.751,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 127.907,
+   "dur_s": 0.232,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 464.2,
+   "conf": 0.709,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 128.36,
+   "dur_s": 0.139,
+   "midi": 66,
+   "note": "F#4",
+   "mean_hz": 370.6,
+   "conf": 0.532,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 128.546,
+   "dur_s": 0.093,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 416.0,
+   "conf": 0.832,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 128.72,
+   "dur_s": 0.441,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 464.2,
+   "conf": 0.731,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 129.161,
+   "dur_s": 0.104,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 416.0,
+   "conf": 0.412,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 129.37,
+   "dur_s": 0.163,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 464.2,
+   "conf": 0.778,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 129.567,
+   "dur_s": 0.221,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 495.5,
+   "conf": 0.91,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 129.788,
+   "dur_s": 0.093,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 466.7,
+   "conf": 0.841,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 130.032,
+   "dur_s": 0.221,
+   "midi": 47,
+   "note": "B2",
+   "mean_hz": 123.9,
+   "conf": 0.554,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 130.276,
+   "dur_s": 0.139,
+   "midi": 58,
+   "note": "A#3",
+   "mean_hz": 232.1,
+   "conf": 0.532,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 130.473,
+   "dur_s": 0.104,
+   "midi": 58,
+   "note": "A#3",
+   "mean_hz": 233.3,
+   "conf": 0.719,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 130.577,
+   "dur_s": 0.128,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 469.1,
+   "conf": 0.74,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 130.705,
+   "dur_s": 0.128,
+   "midi": 58,
+   "note": "A#3",
+   "mean_hz": 232.1,
+   "conf": 0.596,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 130.868,
+   "dur_s": 0.174,
+   "midi": 57,
+   "note": "A3",
+   "mean_hz": 221.6,
+   "conf": 0.643,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 131.042,
+   "dur_s": 0.232,
+   "midi": 59,
+   "note": "B3",
+   "mean_hz": 247.1,
+   "conf": 0.719,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 131.274,
+   "dur_s": 0.163,
+   "midi": 58,
+   "note": "A#3",
+   "mean_hz": 233.3,
+   "conf": 0.644,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 131.518,
+   "dur_s": 0.267,
+   "midi": 56,
+   "note": "G#3",
+   "mean_hz": 208.0,
+   "conf": 0.61,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 131.913,
+   "dur_s": 0.174,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 312.8,
+   "conf": 0.575,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 132.203,
+   "dur_s": 0.093,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 308.4,
+   "conf": 0.744,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 132.296,
+   "dur_s": 0.209,
+   "midi": 64,
+   "note": "E4",
+   "mean_hz": 329.1,
+   "conf": 0.708,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 132.621,
+   "dur_s": 0.116,
+   "midi": 52,
+   "note": "E3",
+   "mean_hz": 165.2,
+   "conf": 0.477,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 132.841,
+   "dur_s": 0.151,
+   "midi": 42,
+   "note": "F#2",
+   "mean_hz": 92.3,
+   "conf": 0.532,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 133.155,
+   "dur_s": 0.267,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 490.0,
+   "conf": 0.583,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 133.422,
+   "dur_s": 0.163,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 469.1,
+   "conf": 0.517,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 133.596,
+   "dur_s": 0.104,
+   "midi": 52,
+   "note": "E3",
+   "mean_hz": 163.3,
+   "conf": 0.506,
+   "octave_suspect": true
+  },
+  {
+   "onset_s": 133.7,
+   "dur_s": 0.104,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 412.1,
+   "conf": 0.709,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 133.828,
+   "dur_s": 0.093,
+   "midi": 60,
+   "note": "C4",
+   "mean_hz": 267.3,
+   "conf": 0.582,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 133.979,
+   "dur_s": 0.313,
+   "midi": 61,
+   "note": "C#4",
+   "mean_hz": 272.2,
+   "conf": 0.598,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 134.374,
+   "dur_s": 0.116,
+   "midi": 67,
+   "note": "G4",
+   "mean_hz": 267.5,
+   "conf": 0.513,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 134.571,
+   "dur_s": 0.151,
+   "midi": 66,
+   "note": "F#4",
+   "mean_hz": 370.6,
+   "conf": 0.627,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 134.792,
+   "dur_s": 0.116,
+   "midi": 55,
+   "note": "G3",
+   "mean_hz": 191.7,
+   "conf": 0.499,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 134.989,
+   "dur_s": 0.116,
+   "midi": 60,
+   "note": "C4",
+   "mean_hz": 265.7,
+   "conf": 0.53,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 135.674,
+   "dur_s": 0.104,
+   "midi": 62,
+   "note": "D4",
+   "mean_hz": 295.0,
+   "conf": 0.476,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 135.779,
+   "dur_s": 0.174,
+   "midi": 61,
+   "note": "C#4",
+   "mean_hz": 272.2,
+   "conf": 0.736,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 135.953,
+   "dur_s": 0.116,
+   "midi": 60,
+   "note": "C4",
+   "mean_hz": 260.9,
+   "conf": 0.529,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 136.115,
+   "dur_s": 0.128,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 305.2,
+   "conf": 0.474,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 136.615,
+   "dur_s": 0.104,
+   "midi": 61,
+   "note": "C#4",
+   "mean_hz": 280.9,
+   "conf": 0.493,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 137.52,
+   "dur_s": 0.116,
+   "midi": 62,
+   "note": "D4",
+   "mean_hz": 288.2,
+   "conf": 0.417,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 137.81,
+   "dur_s": 0.116,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 311.7,
+   "conf": 0.505,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 137.985,
+   "dur_s": 0.151,
+   "midi": 60,
+   "note": "C4",
+   "mean_hz": 267.3,
+   "conf": 0.503,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 138.252,
+   "dur_s": 0.093,
+   "midi": 61,
+   "note": "C#4",
+   "mean_hz": 278.3,
+   "conf": 0.438,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 138.449,
+   "dur_s": 0.116,
+   "midi": 61,
+   "note": "C#4",
+   "mean_hz": 273.9,
+   "conf": 0.404,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 138.855,
+   "dur_s": 0.116,
+   "midi": 62,
+   "note": "D4",
+   "mean_hz": 292.1,
+   "conf": 0.624,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 138.971,
+   "dur_s": 0.093,
+   "midi": 60,
+   "note": "C4",
+   "mean_hz": 264.1,
+   "conf": 0.512,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 139.064,
+   "dur_s": 0.139,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 312.8,
+   "conf": 0.481,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 139.355,
+   "dur_s": 0.116,
+   "midi": 61,
+   "note": "C#4",
+   "mean_hz": 268.9,
+   "conf": 0.526,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 139.482,
+   "dur_s": 0.104,
+   "midi": 62,
+   "note": "D4",
+   "mean_hz": 302.1,
+   "conf": 0.47,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 140.121,
+   "dur_s": 0.139,
+   "midi": 62,
+   "note": "D4",
+   "mean_hz": 288.2,
+   "conf": 0.572,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 140.365,
+   "dur_s": 0.093,
+   "midi": 61,
+   "note": "C#4",
+   "mean_hz": 284.5,
+   "conf": 0.661,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 140.539,
+   "dur_s": 0.104,
+   "midi": 62,
+   "note": "D4",
+   "mean_hz": 284.5,
+   "conf": 0.502,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 140.655,
+   "dur_s": 0.209,
+   "midi": 62,
+   "note": "D4",
+   "mean_hz": 304.1,
+   "conf": 0.474,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 140.992,
+   "dur_s": 0.104,
+   "midi": 62,
+   "note": "D4",
+   "mean_hz": 296.0,
+   "conf": 0.402,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 141.177,
+   "dur_s": 0.163,
+   "midi": 62,
+   "note": "D4",
+   "mean_hz": 301.0,
+   "conf": 0.631,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 141.34,
+   "dur_s": 0.128,
+   "midi": 62,
+   "note": "D4",
+   "mean_hz": 294.0,
+   "conf": 0.472,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 141.63,
+   "dur_s": 0.104,
+   "midi": 62,
+   "note": "D4",
+   "mean_hz": 293.1,
+   "conf": 0.543,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 141.955,
+   "dur_s": 0.151,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 315.0,
+   "conf": 0.725,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 142.106,
+   "dur_s": 0.244,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 304.1,
+   "conf": 0.655,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 142.443,
+   "dur_s": 0.302,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 304.1,
+   "conf": 0.566,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 143.29,
+   "dur_s": 0.104,
+   "midi": 62,
+   "note": "D4",
+   "mean_hz": 298.0,
+   "conf": 0.477,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 143.801,
+   "dur_s": 0.116,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 317.3,
+   "conf": 0.459,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 144.033,
+   "dur_s": 0.104,
+   "midi": 64,
+   "note": "E4",
+   "mean_hz": 336.6,
+   "conf": 0.534,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 144.231,
+   "dur_s": 0.163,
+   "midi": 64,
+   "note": "E4",
+   "mean_hz": 326.7,
+   "conf": 0.527,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 144.556,
+   "dur_s": 0.174,
+   "midi": 64,
+   "note": "E4",
+   "mean_hz": 321.9,
+   "conf": 0.661,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 145.531,
+   "dur_s": 0.104,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 319.6,
+   "conf": 0.426,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 145.647,
+   "dur_s": 0.174,
+   "midi": 65,
+   "note": "F4",
+   "mean_hz": 344.5,
+   "conf": 0.577,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 145.903,
+   "dur_s": 0.139,
+   "midi": 65,
+   "note": "F4",
+   "mean_hz": 344.6,
+   "conf": 0.462,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 146.332,
+   "dur_s": 0.139,
+   "midi": 65,
+   "note": "F4",
+   "mean_hz": 343.2,
+   "conf": 0.525,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 146.495,
+   "dur_s": 0.151,
+   "midi": 67,
+   "note": "G4",
+   "mean_hz": 393.8,
+   "conf": 0.54,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 148.654,
+   "dur_s": 0.104,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 312.8,
+   "conf": 0.601,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 148.84,
+   "dur_s": 0.116,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 392.8,
+   "conf": 0.598,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 149.42,
+   "dur_s": 0.186,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 312.8,
+   "conf": 0.576,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 149.838,
+   "dur_s": 0.116,
+   "midi": 64,
+   "note": "E4",
+   "mean_hz": 415.1,
+   "conf": 0.591,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 151.127,
+   "dur_s": 0.116,
+   "midi": 64,
+   "note": "E4",
+   "mean_hz": 317.3,
+   "conf": 0.552,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 152.102,
+   "dur_s": 0.093,
+   "midi": 64,
+   "note": "E4",
+   "mean_hz": 324.3,
+   "conf": 0.613,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 152.195,
+   "dur_s": 0.104,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 312.8,
+   "conf": 0.474,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 152.567,
+   "dur_s": 0.104,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 317.3,
+   "conf": 0.53,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 153.983,
+   "dur_s": 0.104,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 310.6,
+   "conf": 0.526,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 154.494,
+   "dur_s": 0.093,
+   "midi": 65,
+   "note": "F4",
+   "mean_hz": 501.1,
+   "conf": 0.566,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 155.005,
+   "dur_s": 0.128,
+   "midi": 64,
+   "note": "E4",
+   "mean_hz": 329.1,
+   "conf": 0.53,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 155.133,
+   "dur_s": 0.209,
+   "midi": 64,
+   "note": "E4",
+   "mean_hz": 321.9,
+   "conf": 0.529,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 155.353,
+   "dur_s": 0.104,
+   "midi": 64,
+   "note": "E4",
+   "mean_hz": 321.9,
+   "conf": 0.448,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 156.108,
+   "dur_s": 0.186,
+   "midi": 67,
+   "note": "G4",
+   "mean_hz": 386.8,
+   "conf": 0.552,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 156.561,
+   "dur_s": 0.116,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 501.1,
+   "conf": 0.533,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 157.176,
+   "dur_s": 0.116,
+   "midi": 64,
+   "note": "E4",
+   "mean_hz": 329.1,
+   "conf": 0.588,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 157.292,
+   "dur_s": 0.116,
+   "midi": 65,
+   "note": "F4",
+   "mean_hz": 355.6,
+   "conf": 0.524,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 157.872,
+   "dur_s": 0.116,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 320.7,
+   "conf": 0.558,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 158.07,
+   "dur_s": 0.104,
+   "midi": 67,
+   "note": "G4",
+   "mean_hz": 386.8,
+   "conf": 0.456,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 158.592,
+   "dur_s": 0.104,
+   "midi": 66,
+   "note": "F#4",
+   "mean_hz": 380.2,
+   "conf": 0.529,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 158.883,
+   "dur_s": 0.104,
+   "midi": 64,
+   "note": "E4",
+   "mean_hz": 336.6,
+   "conf": 0.481,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 159.509,
+   "dur_s": 0.104,
+   "midi": 64,
+   "note": "E4",
+   "mean_hz": 334.1,
+   "conf": 0.469,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 159.835,
+   "dur_s": 0.128,
+   "midi": 66,
+   "note": "F#4",
+   "mean_hz": 381.8,
+   "conf": 0.55,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 160.438,
+   "dur_s": 0.104,
+   "midi": 64,
+   "note": "E4",
+   "mean_hz": 329.1,
+   "conf": 0.499,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 162.157,
+   "dur_s": 0.104,
+   "midi": 62,
+   "note": "D4",
+   "mean_hz": 294.0,
+   "conf": 0.5,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 163.027,
+   "dur_s": 0.104,
+   "midi": 64,
+   "note": "E4",
+   "mean_hz": 330.3,
+   "conf": 0.506,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 168.612,
+   "dur_s": 0.128,
+   "midi": 64,
+   "note": "E4",
+   "mean_hz": 334.1,
+   "conf": 0.552,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 168.914,
+   "dur_s": 0.104,
+   "midi": 66,
+   "note": "F#4",
+   "mean_hz": 370.6,
+   "conf": 0.451,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 170.388,
+   "dur_s": 0.128,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 495.5,
+   "conf": 0.597,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 170.632,
+   "dur_s": 0.174,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 495.5,
+   "conf": 0.591,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 170.841,
+   "dur_s": 0.174,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 469.1,
+   "conf": 0.547,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 171.05,
+   "dur_s": 0.151,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 492.8,
+   "conf": 0.588,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 171.201,
+   "dur_s": 0.139,
+   "midi": 70,
+   "note": "A#4",
+   "mean_hz": 469.1,
+   "conf": 0.556,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 171.445,
+   "dur_s": 0.093,
+   "midi": 67,
+   "note": "G4",
+   "mean_hz": 388.6,
+   "conf": 0.573,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 171.654,
+   "dur_s": 0.104,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 416.0,
+   "conf": 0.662,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 171.77,
+   "dur_s": 0.116,
+   "midi": 56,
+   "note": "G#3",
+   "mean_hz": 209.5,
+   "conf": 0.525,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 171.886,
+   "dur_s": 0.093,
+   "midi": 61,
+   "note": "C#4",
+   "mean_hz": 277.4,
+   "conf": 0.679,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 171.979,
+   "dur_s": 0.209,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 312.8,
+   "conf": 0.652,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 172.188,
+   "dur_s": 0.267,
+   "midi": 61,
+   "note": "C#4",
+   "mean_hz": 275.6,
+   "conf": 0.752,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 172.698,
+   "dur_s": 0.139,
+   "midi": 58,
+   "note": "A#3",
+   "mean_hz": 233.3,
+   "conf": 0.88,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 172.884,
+   "dur_s": 0.104,
+   "midi": 71,
+   "note": "B4",
+   "mean_hz": 490.0,
+   "conf": 0.911,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 173.0,
+   "dur_s": 0.093,
+   "midi": 58,
+   "note": "A#3",
+   "mean_hz": 233.3,
+   "conf": 0.882,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 173.093,
+   "dur_s": 0.313,
+   "midi": 68,
+   "note": "G#4",
+   "mean_hz": 416.0,
+   "conf": 0.865,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 173.407,
+   "dur_s": 0.128,
+   "midi": 67,
+   "note": "G4",
+   "mean_hz": 400.9,
+   "conf": 0.574,
+   "octave_suspect": false
+  },
+  {
+   "onset_s": 173.976,
+   "dur_s": 0.104,
+   "midi": 63,
+   "note": "D#4",
+   "mean_hz": 312.8,
+   "conf": 0.552,
+   "octave_suspect": false
+  }
+ ]
+}
