@@ -16,7 +16,8 @@
 # all progress chatter on stderr. Two job kinds:
 #   {"segments": [{index, prompt, seconds, seed, file,
 #                   continue_seconds?}], "out_dir": …}
-#       Load facebook/musicgen-small ONCE, render each segment in
+#       Load the MusicGen model ONCE (MODEL_ID below; small by
+#       default), render each segment in
 #       order (seeded per segment), write segNN.wav at the model's
 #       native 32 kHz, PCM_16. Encodec runs at 50 tokens per second,
 #       so seconds*50 max_new_tokens; guidance_scale 3.0 -- the exact
@@ -51,7 +52,15 @@ import soundfile as sf
 import torch
 from transformers import AutoProcessor, MusicgenForConditionalGeneration
 
-MODEL_ID = "facebook/musicgen-small"
+# Model selection (desk, 2026-11-10, for the v9 strike): the model is
+# env-driven so a run can change THE MODEL ONLY -- the founder's
+# chained fallback after v8's ear verdict -- without touching the
+# render recipe. Unset, the bridge is exactly what it was: small.
+# _run_bridge passes os.environ through, so the choice travels with
+# the produce invocation and the bridge's own result line reports
+# the model that actually loaded into the manifest.
+MODEL_ID = os.environ.get("STUDIO_MUSICGEN_MODEL",
+                          "facebook/musicgen-small")
 TOKENS_PER_SECOND = 50  # Encodec frame rate -- the codec's own clock.
 GUIDANCE_SCALE = 3.0     # The proven render_first.py recipe, unchanged.
 
@@ -72,6 +81,26 @@ except RuntimeError:
 def _log(msg):
     """Progress goes to stderr; stdout is reserved for the result."""
     print(f"[render_musicgen] {msg}", file=sys.stderr, flush=True)
+
+
+def _match_model_dtype(inputs, model):
+    """Cast floating tensors in a processor batch to the model's
+    dtype (desk fix, 2026-11-10, from the v9 strike's first death).
+
+    MECHANISM: the processor hands the conditioning audio back as
+    float32 whatever the model's residency; a bf16-resident model
+    then feeds fp32 audio into bf16-biased linears on the
+    continuation path and generate() dies on the type mismatch --
+    plain takes never touch that path, which is why a strike can
+    render its seed take and still die on its first continuation.
+    Token ids and masks are not floating point and pass untouched.
+    For the fp32 default this cast is a no-op.
+    """
+    dtype = next(model.parameters()).dtype
+    for key, value in inputs.items():
+        if torch.is_tensor(value) and value.is_floating_point():
+            inputs[key] = value.to(dtype)
+    return inputs
 
 
 def _render_segments(job):
@@ -127,17 +156,22 @@ def _render_segments(job):
             inputs = processor(text=[seg["prompt"]], audio=tail,
                                sampling_rate=sample_rate,
                                return_tensors="pt", padding=True)
+            _match_model_dtype(inputs, model)
             with torch.no_grad():
                 audio = model.generate(**inputs, max_new_tokens=tokens,
                                        guidance_scale=GUIDANCE_SCALE)
         else:
             inputs = processor(text=[seg["prompt"]], padding=True,
                                return_tensors="pt")
+            _match_model_dtype(inputs, model)
             with torch.no_grad():
                 audio = model.generate(**inputs, max_new_tokens=tokens,
                                        guidance_scale=GUIDANCE_SCALE)
         # audio: (batch, channels, samples); musicgen-small is mono.
-        wav = audio[0].cpu().numpy()
+        # .float() first: a bf16-resident model (the medium strike's
+        # road on this box) returns bf16 audio, which numpy refuses
+        # outright; for the fp32 default the cast is a no-op.
+        wav = audio[0].float().cpu().numpy()
         if wav.ndim == 2:      # (channels, samples) -> keep channel axis
             data = wav.T       # soundfile wants (frames, channels)
         else:

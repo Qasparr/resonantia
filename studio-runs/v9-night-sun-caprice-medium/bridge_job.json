@@ -1,0 +1,61 @@
+{
+  "out_dir": "studio-runs/v9-night-sun-caprice-medium",
+  "segments": [
+    {
+      "index": 0,
+      "prompt": "detroit bounce hip hop instrumental in F minor at 144 bpm, simple steady bouncing groove that repeats and builds slowly, deep rolling 808 bass, crisp drums with fast steady hi-hats, one violin playing a simple memorable repeating melody, sparse eerie piano chords, a blues harmonica answering in short phrases now and then, dusty vinyl warmth, one continuous live performance, the final third sits back to groove and piano only with a wide open pocket, closing on an open vamp, no flutes, no breathy pads",
+      "seconds": 30.0,
+      "seed": 93,
+      "file": "seg00.wav",
+      "continue_seconds": 0.0
+    },
+    {
+      "index": 1,
+      "prompt": "detroit bounce hip hop instrumental in F minor at 144 bpm, simple steady bouncing groove that repeats and builds slowly, deep rolling 808 bass, crisp drums with fast steady hi-hats, one violin playing a simple memorable repeating melody, sparse eerie piano chords, a blues harmonica answering in short phrases now and then, dusty vinyl warmth, one continuous live performance, the final third sits back to groove and piano only with a wide open pocket, closing on an open vamp, no flutes, no breathy pads",
+      "seconds": 30.0,
+      "seed": 94,
+      "file": "seg01.wav",
+      "continue_seconds": 5.0
+    },
+    {
+      "index": 2,
+      "prompt": "detroit bounce hip hop instrumental in F minor at 144 bpm, simple steady bouncing groove that repeats and builds slowly, deep rolling 808 bass, crisp drums with fast steady hi-hats, one violin playing a simple memorable repeating melody, sparse eerie piano chords, a blues harmonica answering in short phrases now and then, dusty vinyl warmth, one continuous live performance, the final third sits back to groove and piano only with a wide open pocket, closing on an open vamp, no flutes, no breathy pads",
+      "seconds": 30.0,
+      "seed": 95,
+      "file": "seg02.wav",
+      "continue_seconds": 5.0
+    },
+    {
+      "index": 3,
+      "prompt": "detroit bounce hip hop instrumental in F minor at 144 bpm, simple steady bouncing groove that repeats and builds slowly, deep rolling 808 bass, crisp drums with fast steady hi-hats, one violin playing a simple memorable repeating melody, sparse eerie piano chords, a blues harmonica answering in short phrases now and then, dusty vinyl warmth, one continuous live performance, the final third sits back to groove and piano only with a wide open pocket, closing on an open vamp, no flutes, no breathy pads",
+      "seconds": 30.0,
+      "seed": 96,
+      "file": "seg03.wav",
+      "continue_seconds": 5.0
+    },
+    {
+      "index": 4,
+      "prompt": "detroit bounce hip hop instrumental in F minor at 144 bpm, simple steady bouncing groove that repeats and builds slowly, deep rolling 808 bass, crisp drums with fast steady hi-hats, one violin playing a simple memorable repeating melody, sparse eerie piano chords, a blues harmonica answering in short phrases now and then, dusty vinyl warmth, one continuous live performance, the final third sits back to groove and piano only with a wide open pocket, closing on an open vamp, no flutes, no breathy pads",
+      "seconds": 30.0,
+      "seed": 97,
+      "file": "seg04.wav",
+      "continue_seconds": 5.0
+    },
+    {
+      "index": 5,
+      "prompt": "detroit bounce hip hop instrumental in F minor at 144 bpm, simple steady bouncing groove that repeats and builds slowly, deep rolling 808 bass, crisp drums with fast steady hi-hats, one violin playing a simple memorable repeating melody, sparse eerie piano chords, a blues harmonica answering in short phrases now and then, dusty vinyl warmth, one continuous live performance, the final third sits back to groove and piano only with a wide open pocket, closing on an open vamp, no flutes, no breathy pads",
+      "seconds": 30.0,
+      "seed": 98,
+      "file": "seg05.wav",
+      "continue_seconds": 5.0
+    },
+    {
+      "index": 6,
+      "prompt": "detroit bounce hip hop instrumental in F minor at 144 bpm, simple steady bouncing groove that repeats and builds slowly, deep rolling 808 bass, crisp drums with fast steady hi-hats, one violin playing a simple memorable repeating melody, sparse eerie piano chords, a blues harmonica answering in short phrases now and then, dusty vinyl warmth, one continuous live performance, the final third sits back to groove and piano only with a wide open pocket, closing on an open vamp, no flutes, no breathy pads",
+      "seconds": 30.0,
+      "seed": 99,
+      "file": "seg06.wav",
+      "continue_seconds": 5.0
+    }
+  ]
+}

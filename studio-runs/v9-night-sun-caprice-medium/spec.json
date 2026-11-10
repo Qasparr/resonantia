@@ -1,0 +1,89 @@
+{
+  "master": {
+    "target_lufs": -14.0,
+    "ceiling_dbtp": -1.0
+  },
+  "out_dir": "studio-runs/v9-night-sun-caprice-medium",
+  "performance": {
+    "takes": 7,
+    "take_seconds": 30.0,
+    "continue_seconds": 5.0,
+    "warmup_takes": 1,
+    "single_session": true,
+    "sigma": {
+      "mode": "drift",
+      "left_hz": 200.0,
+      "right_hz": 213.0,
+      "carrier_hz": 206.5,
+      "base_beat_hz": 13.0,
+      "beat_min_hz": 13.0,
+      "beat_max_hz": 31.0,
+      "period_s": 60.0,
+      "gain_db": -28.0
+    },
+    "aim_seconds": [
+      155.0,
+      180.0
+    ]
+  },
+  "production_notes": [
+    "TRACK: 'Mello Ghetto Hello Caprice' -- the instrumental for NIGHT SUN: 77 bars written + 16 held free = 93 bars of rap.",
+    "LYRIC SHEET: /home/hatch/workspace/goals/qasparr-the-unfriendly-ghost-album/files/NIGHT-SUN-77-BARS.md",
+    "FRONT LINE (his order): Paganini violin, grand piano, harmonica. Ultra Detroit Bounce rhythm sections; a 144-tempo hi-hat flow. SPARSE REALIZATION (the re-strike ruling below): the violin plays a simple memorable REPEATING melody, not virtuoso figuration; the harmonica answers in short phrases, sparingly; the groove wins every contest for the prompt's budget.",
+    "WIND LAW (his sanction): if wind is necessary use bagpipes -- the only sanctioned wind voice. No flutes, no breathy pads. (This sparse strike needs no wind beyond the harmonica's short phrases; the pipes stand unspent.)",
+    "FEATURE TERRITORY (his ruling): the last verse and outro stay open for the Lady of the Lake, Lakeyah herself -- bars 55-77 sit back, pocket wide open, no dense lead line crowding the last-verse region; the program closes on an open outro vamp (bounce + pocket), not a composed finale.",
+    "BAR MAP: Verse I bars 1-27; Verse II bars 28-54; FEATURE (Lakeyah) bars 55-77; his 16 at bars 78-93; then the open outro.",
+    "SIGMA (his order): binaural in the 13-31 Hz band that dances with the melody and harmonizes with synergy in the pocket -- struck mode DRIFT over the doctrine pair 200/213 at -28 dB; measured in the manifest.",
+    "EAR VERDICT ON PROOF No. 5 'TAKE TWO' (2026-11-09, the only court): FAIL -- 'Still too Frankensteinish not got a flow at all just random instruments with random notes.' Desk reading on record: MusicGen-small improvises locally and never develops; whole-performance generation stands 2-for-2 at modest briefs (the Proven Road: 'Sounds like real instruments this time') and 0-for-1 at density.",
+    "LARGER-MODEL RULING (the chained fallback, his order 2026-11-09: 'If that fails then the other method'): the sparse strike (v8, musicgen-small, this same brief, seed 93) drew the founder's ear verdict on 2026-11-10: 'Still fubard.' The desk's lever order from the Take Two verdict file fires WITHOUT a fresh ask: FIRST the larger model's longer musical memory, THEN melody-conditioned continuation. This strike (v9) is the first lever: facebook/musicgen-medium (1.5B) under the IDENTICAL brief, seed, session law and mastering law -- the model is the only variable, so the comparison against v8 is clean. If the ear fails this one too, the next lever is melody-conditioning from a strong short seed take.",
+    "DESK NOTE (v9 build, 2026-11-10): the model is facebook/musicgen-medium, fetched from the hub and sha256-verified byte-for-byte (b51b0ec2...c189). On this box its 8.04 GB fp32 checkpoint cannot be held in RAM, so the checkpoint runs in a bf16 twin cast on disk from the verified bytes (997 tensors; config amended to name bfloat16) -- the same weights at half precision, loaded from ~/workspace/musicgen/medium-bf16. Probe before the strike: 0.69 s/token, peak RSS 4.6 GB, output clean (no NaNs). Everything else -- prompt, seed 93, session law, Sigma clause, mastering law -- is v8's, unchanged, so the ear's comparison is clean: the model is the only variable."
+  ],
+  "prompt_base": "detroit bounce hip hop instrumental in F minor at 144 bpm, simple steady bouncing groove that repeats and builds slowly, deep rolling 808 bass, crisp drums with fast steady hi-hats, one violin playing a simple memorable repeating melody, sparse eerie piano chords, a blues harmonica answering in short phrases now and then, dusty vinyl warmth, one continuous live performance, the final third sits back to groove and piano only with a wide open pocket, closing on an open vamp, no flutes, no breathy pads",
+  "seed": 93,
+  "stereo": {
+    "width": 1.0
+  },
+  "title": "MELLO GHETTO HELLO CAPRICE",
+  "sections": [
+    {
+      "name": "take1",
+      "prompt_suffix": "",
+      "seconds": 30.0
+    },
+    {
+      "name": "take2",
+      "prompt_suffix": "",
+      "seconds": 30.0
+    },
+    {
+      "name": "take3",
+      "prompt_suffix": "",
+      "seconds": 30.0
+    },
+    {
+      "name": "take4",
+      "prompt_suffix": "",
+      "seconds": 30.0
+    },
+    {
+      "name": "take5",
+      "prompt_suffix": "",
+      "seconds": 30.0
+    },
+    {
+      "name": "take6",
+      "prompt_suffix": "",
+      "seconds": 30.0
+    },
+    {
+      "name": "take7",
+      "prompt_suffix": "",
+      "seconds": 30.0
+    }
+  ],
+  "sigma": {
+    "left_hz": 200.0,
+    "right_hz": 213.0,
+    "gain_db": -28.0
+  }
+}
