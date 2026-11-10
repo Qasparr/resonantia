@@ -1,0 +1,1367 @@
+{
+ "audio": "/home/hatch/workspace/resonance/reference/gemini-sovereign-threshold/sovereign_at_the_threshold__1__1_ygcl.mp3",
+ "sr": 44100,
+ "duration_s": 119.562,
+ "bpm_measured_bench": 90.07,
+ "beat_s": 0.666149,
+ "bar_s": 2.664594,
+ "downbeat_phase_s": 0.075,
+ "n_bars": 45,
+ "boundaries": [
+  {
+   "t_raw": 8.452,
+   "t_used": 8.068782613522815,
+   "snap_distance_s": 0.383,
+   "novelty": 0.4104,
+   "prominence_ratio": 1.02,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 21.711,
+   "t_used": 21.39175363606084,
+   "snap_distance_s": 0.319,
+   "novelty": 0.406,
+   "prominence_ratio": 1.01,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 50.805,
+   "t_used": 50.702289885644504,
+   "snap_distance_s": 0.103,
+   "novelty": 0.4143,
+   "prominence_ratio": 1.03,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 87.841,
+   "t_used": 88.00660874875098,
+   "snap_distance_s": 0.166,
+   "novelty": 0.4102,
+   "prominence_ratio": 1.02,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 99.126,
+   "t_used": 98.6649855667814,
+   "snap_distance_s": 0.461,
+   "novelty": 0.5,
+   "prominence_ratio": 1.24,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 110.481,
+   "t_used": 109.32336238481182,
+   "snap_distance_s": 1.157,
+   "novelty": 0.555,
+   "prominence_ratio": 1.38,
+   "confidence": 0.75
+  }
+ ],
+ "boundaries_merged_away": [],
+ "chord_distribution": {
+  "A#": 5,
+  "Am": 1,
+  "D": 5,
+  "D5": 4,
+  "Dm": 6,
+  "F": 2,
+  "UNCLEAR": 22
+ },
+ "segments": [
+  {
+   "t0": 0.0,
+   "t1": 8.069,
+   "dur": 8.069,
+   "bar0": 0,
+   "n_bars": 3,
+   "mean_db": -23.805,
+   "slope_db_s": 0.228,
+   "centroid_hz": 1351.759,
+   "chroma_stability": 0.671,
+   "voiced_density": 0.586,
+   "recurrence_sim": 0.843,
+   "recurrence_with": 2
+  },
+  {
+   "t0": 8.069,
+   "t1": 21.392,
+   "dur": 13.323,
+   "bar0": 3,
+   "n_bars": 5,
+   "mean_db": -15.374,
+   "slope_db_s": 0.486,
+   "centroid_hz": 2926.485,
+   "chroma_stability": 0.677,
+   "voiced_density": 0.198,
+   "recurrence_sim": 0.896,
+   "recurrence_with": 3
+  },
+  {
+   "t0": 21.392,
+   "t1": 50.702,
+   "dur": 29.311,
+   "bar0": 8,
+   "n_bars": 11,
+   "mean_db": -15.25,
+   "slope_db_s": -0.281,
+   "centroid_hz": 2986.88,
+   "chroma_stability": 0.709,
+   "voiced_density": 0.188,
+   "recurrence_sim": 0.843,
+   "recurrence_with": 0
+  },
+  {
+   "t0": 50.702,
+   "t1": 88.007,
+   "dur": 37.304,
+   "bar0": 19,
+   "n_bars": 14,
+   "mean_db": -14.241,
+   "slope_db_s": 0.015,
+   "centroid_hz": 3177.592,
+   "chroma_stability": 0.694,
+   "voiced_density": 0.14,
+   "recurrence_sim": 0.896,
+   "recurrence_with": 1
+  },
+  {
+   "t0": 88.007,
+   "t1": 98.665,
+   "dur": 10.658,
+   "bar0": 33,
+   "n_bars": 4,
+   "mean_db": -37.396,
+   "slope_db_s": -7.997,
+   "centroid_hz": 3270.616,
+   "chroma_stability": 0.641,
+   "voiced_density": 0.292,
+   "recurrence_sim": 0.662,
+   "recurrence_with": 6
+  },
+  {
+   "t0": 98.665,
+   "t1": 109.323,
+   "dur": 10.658,
+   "bar0": 37,
+   "n_bars": 4,
+   "mean_db": -150.0,
+   "slope_db_s": -0.0,
+   "centroid_hz": 0.0,
+   "chroma_stability": 0.0,
+   "voiced_density": 0.0,
+   "recurrence_sim": 0.0,
+   "recurrence_with": 0
+  },
+  {
+   "t0": 109.323,
+   "t1": 119.562,
+   "dur": 10.239,
+   "bar0": 41,
+   "n_bars": 4,
+   "mean_db": -69.81,
+   "slope_db_s": -2.478,
+   "centroid_hz": 2553.387,
+   "chroma_stability": 0.478,
+   "voiced_density": 0.081,
+   "recurrence_sim": 0.662,
+   "recurrence_with": 4
+  }
+ ],
+ "key_top3": [
+  {
+   "key": "D minor",
+   "corr": 0.867
+  },
+  {
+   "key": "F major",
+   "corr": 0.65
+  },
+  {
+   "key": "A minor",
+   "corr": 0.644
+  }
+ ],
+ "key_margin": 0.217,
+ "global_chroma": [
+  0.0959,
+  0.0626,
+  0.1371,
+  0.0486,
+  0.0749,
+  0.1089,
+  0.071,
+  0.0602,
+  0.0525,
+  0.1447,
+  0.0845,
+  0.0592
+ ],
+ "n_notes_sketch": 156,
+ "sketch_coverage": 0.184,
+ "tempo": {
+  "house_estimator": {
+   "global": {
+    "bpm": 90.07,
+    "peak_autocorrelation": 0.6664,
+    "dominant_periodicity_bpm": 44.94,
+    "candidates": [
+     {
+      "bpm": 44.94,
+      "autocorrelation": 0.7364
+     },
+     {
+      "bpm": 60.09,
+      "autocorrelation": 0.6975
+     },
+     {
+      "bpm": 120.19,
+      "autocorrelation": 0.669
+     }
+    ],
+    "double_time_candidate_bpm": 180.14
+   },
+   "windows": [
+    {
+     "start_s": 0.0,
+     "end_s": 30.0,
+     "bpm": 90.07,
+     "peak_autocorrelation": 0.656
+    },
+    {
+     "start_s": 30.0,
+     "end_s": 60.0,
+     "bpm": 120.1,
+     "peak_autocorrelation": 0.5631
+    },
+    {
+     "start_s": 60.0,
+     "end_s": 90.0,
+     "bpm": 90.08,
+     "peak_autocorrelation": 0.5247
+    },
+    {
+     "start_s": 90.0,
+     "end_s": 119.6,
+     "bpm": 120.03,
+     "peak_autocorrelation": 0.8069
+    }
+   ],
+   "window_bpm_min": 90.07,
+   "window_bpm_max": 120.1,
+   "window_bpm_spread": 30.03
+  },
+  "flux_raw_ac_at_points": {
+   "144.0": 0.2337,
+   "90.07": 0.6528,
+   "44.94": 0.7371,
+   "66.26": 0.2057,
+   "99.93": 0.1879
+  },
+  "first_pass_instrument_reproduced": {
+   "dominant_periodicity_bpm": 120.19,
+   "strength": 0.5581,
+   "ac_at_144_bpm": 0.0562
+  }
+ },
+ "loudness_source": {
+  "house_ungated_lufs": -13.1,
+  "house_true_peak_dbtp": 0.79,
+  "sample_peak_dbfs": 0.5,
+  "ffmpeg_ebur128_gated_lufs": -12.1,
+  "ffmpeg_ebur128_true_peak_dbfs": 0.8,
+  "note": "house loudness is K-weighted integrated, UNGATED (the studio pipeline's stated simplification); the ffmpeg figure is the gated BS.1770-4 read, carried as a second witness, not a replacement."
+ },
+ "stereo": {
+  "corr_global": 0.9352,
+  "side_rms_dbfs": -29.16,
+  "mid_rms_dbfs": -14.41,
+  "windows": [
+   {
+    "start_s": 0,
+    "end_s": 30,
+    "corr": 0.9488,
+    "side_rms_dbfs": -29.45
+   },
+   {
+    "start_s": 30,
+    "end_s": 60,
+    "corr": 0.9248,
+    "side_rms_dbfs": -27.55
+   },
+   {
+    "start_s": 60,
+    "end_s": 90,
+    "corr": 0.9426,
+    "side_rms_dbfs": -27.98
+   },
+   {
+    "start_s": 90,
+    "end_s": 119.56,
+    "corr": 0.7472,
+    "side_rms_dbfs": -34.47
+   }
+  ]
+ },
+ "sigma_probe": {
+  "doctrine_pair": {
+   "left_hz": 200.0,
+   "right_hz": 213.0
+  },
+  "probe_left_200hz": {
+   "freq_hz": 200.0,
+   "median_ratio_db": 3.49,
+   "p90_ratio_db": 7.27,
+   "persistence_gt_6db": 0.169,
+   "n_windows": 59
+  },
+  "probe_right_213hz": {
+   "freq_hz": 213.0,
+   "median_ratio_db": 0.32,
+   "p90_ratio_db": 4.07,
+   "persistence_gt_6db": 0.017,
+   "n_windows": 59
+  },
+  "certification_threshold": "median ratio >= 10 dB AND persistence (> 6 dB) >= 0.90 in BOTH channels at the exact doctrine frequencies",
+  "certified": false,
+  "verdict": "NOT CERTIFIABLE -- no persistent narrowband line stands at the doctrine pair at mastering depth; whatever energy lives at 200/213 Hz belongs to the programme (bass and voice), not to a discrete binaural layer."
+ },
+ "sigma_sweep_probe": {
+  "method": "2 s windows, 1 s hop; strongest peak-picked narrowband line per channel in 80-500 Hz; pair window = both channels hold a line with line-to-shoulder ratio > 6 dB",
+  "certification_threshold": "pair persistence >= 0.90 AND median ratio >= 10 dB in BOTH channels AND median |fR-fL| in [13,31] Hz AND |df| IQR >= 4 Hz (sweep, not detune)",
+  "n_windows": 118,
+  "pair_windows": 105,
+  "pair_persistence": 0.89,
+  "median_ratio_L_db": 14.21,
+  "median_ratio_R_db": 14.1,
+  "median_abs_df_hz": 0.0,
+  "abs_df_iqr_hz": 85.5,
+  "frac_pair_windows_df_in_13_31": 0.038,
+  "trajectory": [
+   {
+    "t": 0.0,
+    "fL": 443.0,
+    "fR": 441.0,
+    "df_hz": 2.0,
+    "ratio_L": 19.2,
+    "ratio_R": 21.4
+   },
+   {
+    "t": 1.0,
+    "fL": 465.0,
+    "fR": 441.0,
+    "df_hz": 24.0,
+    "ratio_L": 21.26,
+    "ratio_R": 19.34
+   },
+   {
+    "t": 2.0,
+    "fL": 293.5,
+    "fR": 293.5,
+    "df_hz": 0.0,
+    "ratio_L": 25.73,
+    "ratio_R": 26.86
+   },
+   {
+    "t": 3.0,
+    "fL": 294.0,
+    "fR": 293.5,
+    "df_hz": 0.5,
+    "ratio_L": 30.96,
+    "ratio_R": 33.84
+   },
+   {
+    "t": 4.0,
+    "fL": 294.0,
+    "fR": 440.5,
+    "df_hz": 146.5,
+    "ratio_L": 22.74,
+    "ratio_R": 28.97
+   },
+   {
+    "t": 5.0,
+    "fL": 116.0,
+    "fR": 116.0,
+    "df_hz": 0.0,
+    "ratio_L": 30.91,
+    "ratio_R": 34.32
+   },
+   {
+    "t": 6.0,
+    "fL": 466.0,
+    "fR": 441.0,
+    "df_hz": 25.0,
+    "ratio_L": 17.84,
+    "ratio_R": 18.63
+   },
+   {
+    "t": 7.0,
+    "fL": 441.5,
+    "fR": 440.5,
+    "df_hz": 1.0,
+    "ratio_L": 22.05,
+    "ratio_R": 21.72
+   },
+   {
+    "t": 8.0,
+    "fL": 440.5,
+    "fR": 441.5,
+    "df_hz": 1.0,
+    "ratio_L": 19.85,
+    "ratio_R": 20.22
+   },
+   {
+    "t": 9.0,
+    "fL": 351.5,
+    "fR": 439.5,
+    "df_hz": 88.0,
+    "ratio_L": 21.4,
+    "ratio_R": 27.08
+   },
+   {
+    "t": 10.0,
+    "fL": 110.0,
+    "fR": 110.0,
+    "df_hz": 0.0,
+    "ratio_L": 9.29,
+    "ratio_R": 9.32
+   },
+   {
+    "t": 11.0,
+    "fL": 110.0,
+    "fR": 110.0,
+    "df_hz": 0.0,
+    "ratio_L": 8.32,
+    "ratio_R": 7.62
+   },
+   {
+    "t": 12.0,
+    "fL": 110.0,
+    "fR": 294.0,
+    "df_hz": 184.0,
+    "ratio_L": 14.18,
+    "ratio_R": 14.4
+   },
+   {
+    "t": 13.0,
+    "fL": 110.0,
+    "fR": 110.0,
+    "df_hz": 0.0,
+    "ratio_L": 12.4,
+    "ratio_R": 12.35
+   },
+   {
+    "t": 14.0,
+    "fL": 84.0,
+    "fR": 84.0,
+    "df_hz": 0.0,
+    "ratio_L": 7.22,
+    "ratio_R": 7.23
+   },
+   {
+    "t": 15.0,
+    "fL": 88.0,
+    "fR": 88.0,
+    "df_hz": 0.0,
+    "ratio_L": 9.57,
+    "ratio_R": 9.63
+   },
+   {
+    "t": 16.0,
+    "fL": 88.0,
+    "fR": 88.0,
+    "df_hz": 0.0,
+    "ratio_L": 10.94,
+    "ratio_R": 11.06
+   },
+   {
+    "t": 17.0,
+    "fL": 466.5,
+    "fR": 88.0,
+    "df_hz": 378.5,
+    "ratio_L": 18.56,
+    "ratio_R": 6.95
+   },
+   {
+    "t": 18.0,
+    "fL": 88.0,
+    "fR": 88.0,
+    "df_hz": 0.0,
+    "ratio_L": 11.32,
+    "ratio_R": 11.22
+   },
+   {
+    "t": 19.0,
+    "fL": 88.0,
+    "fR": 88.0,
+    "df_hz": 0.0,
+    "ratio_L": 9.56,
+    "ratio_R": 9.25
+   },
+   {
+    "t": 20.0,
+    "fL": 353.0,
+    "fR": 85.0,
+    "df_hz": 268.0,
+    "ratio_L": 11.56,
+    "ratio_R": 6.39
+   },
+   {
+    "t": 21.0,
+    "fL": 110.0,
+    "fR": 220.0,
+    "df_hz": 110.0,
+    "ratio_L": 11.72,
+    "ratio_R": 17.58
+   },
+   {
+    "t": 22.0,
+    "fL": 111.0,
+    "fR": 111.0,
+    "df_hz": 0.0,
+    "ratio_L": 8.15,
+    "ratio_R": 7.87
+   },
+   {
+    "t": 23.0,
+    "fL": 110.0,
+    "fR": 110.0,
+    "df_hz": 0.0,
+    "ratio_L": 7.96,
+    "ratio_R": 7.73
+   },
+   {
+    "t": 24.0,
+    "fL": 439.5,
+    "fR": 110.0,
+    "df_hz": 329.5,
+    "ratio_L": 22.88,
+    "ratio_R": 12.56
+   },
+   {
+    "t": 25.0,
+    "fL": 110.0,
+    "fR": 84.0,
+    "df_hz": 26.0,
+    "ratio_L": 9.94,
+    "ratio_R": 6.37
+   },
+   {
+    "t": 26.0,
+    "fL": 88.0,
+    "fR": 88.0,
+    "df_hz": 0.0,
+    "ratio_L": 11.94,
+    "ratio_R": 11.83
+   },
+   {
+    "t": 27.0,
+    "fL": 88.0,
+    "fR": 88.0,
+    "df_hz": 0.0,
+    "ratio_L": 10.08,
+    "ratio_R": 10.3
+   },
+   {
+    "t": 28.0,
+    "fL": 88.0,
+    "fR": 261.0,
+    "df_hz": 173.0,
+    "ratio_L": 12.31,
+    "ratio_R": 20.46
+   },
+   {
+    "t": 29.0,
+    "fL": 88.0,
+    "fR": 88.0,
+    "df_hz": 0.0,
+    "ratio_L": 11.9,
+    "ratio_R": 11.9
+   },
+   {
+    "t": 30.0,
+    "fL": 349.0,
+    "fR": 349.0,
+    "df_hz": 0.0,
+    "ratio_L": 14.35,
+    "ratio_R": 13.73
+   },
+   {
+    "t": 31.0,
+    "fL": 147.5,
+    "fR": 349.5,
+    "df_hz": 202.0,
+    "ratio_L": 11.45,
+    "ratio_R": 14.1
+   },
+   {
+    "t": 32.0,
+    "fL": 440.5,
+    "fR": 440.5,
+    "df_hz": 0.0,
+    "ratio_L": 26.19,
+    "ratio_R": 21.45
+   },
+   {
+    "t": 33.0,
+    "fL": 183.0,
+    "fR": 182.5,
+    "df_hz": 0.5,
+    "ratio_L": 11.72,
+    "ratio_R": 12.2
+   },
+   {
+    "t": 34.0,
+    "fL": 110.0,
+    "fR": 110.0,
+    "df_hz": 0.0,
+    "ratio_L": 9.23,
+    "ratio_R": 9.46
+   },
+   {
+    "t": 35.0,
+    "fL": 84.0,
+    "fR": 84.0,
+    "df_hz": 0.0,
+    "ratio_L": 7.84,
+    "ratio_R": 7.62
+   },
+   {
+    "t": 36.0,
+    "fL": 110.0,
+    "fR": 110.0,
+    "df_hz": 0.0,
+    "ratio_L": 11.46,
+    "ratio_R": 11.1
+   },
+   {
+    "t": 37.0,
+    "fL": 88.0,
+    "fR": 88.0,
+    "df_hz": 0.0,
+    "ratio_L": 11.37,
+    "ratio_R": 11.45
+   },
+   {
+    "t": 38.0,
+    "fL": 88.5,
+    "fR": 88.5,
+    "df_hz": 0.0,
+    "ratio_L": 9.26,
+    "ratio_R": 8.71
+   },
+   {
+    "t": 39.0,
+    "fL": 88.0,
+    "fR": 88.0,
+    "df_hz": 0.0,
+    "ratio_L": 8.96,
+    "ratio_R": 8.92
+   },
+   {
+    "t": 40.0,
+    "fL": 88.0,
+    "fR": 88.0,
+    "df_hz": 0.0,
+    "ratio_L": 12.64,
+    "ratio_R": 13.02
+   },
+   {
+    "t": 41.0,
+    "fL": 84.0,
+    "fR": 84.0,
+    "df_hz": 0.0,
+    "ratio_L": 8.0,
+    "ratio_R": 8.1
+   },
+   {
+    "t": 42.0,
+    "fL": 147.0,
+    "fR": 147.5,
+    "df_hz": 0.5,
+    "ratio_L": 17.51,
+    "ratio_R": 19.15
+   },
+   {
+    "t": 43.0,
+    "fL": 443.5,
+    "fR": 441.0,
+    "df_hz": 2.5,
+    "ratio_L": 14.09,
+    "ratio_R": 20.57
+   },
+   {
+    "t": 44.0,
+    "fL": 293.5,
+    "fR": 293.5,
+    "df_hz": 0.0,
+    "ratio_L": 20.75,
+    "ratio_R": 20.3
+   },
+   {
+    "t": 45.0,
+    "fL": 293.5,
+    "fR": 293.5,
+    "df_hz": 0.0,
+    "ratio_L": 26.57,
+    "ratio_R": 29.41
+   },
+   {
+    "t": 46.0,
+    "fL": 294.0,
+    "fR": 294.0,
+    "df_hz": 0.0,
+    "ratio_L": 29.78,
+    "ratio_R": 30.84
+   },
+   {
+    "t": 47.0,
+    "fL": 116.5,
+    "fR": 116.0,
+    "df_hz": 0.5,
+    "ratio_L": 21.95,
+    "ratio_R": 22.61
+   },
+   {
+    "t": 48.0,
+    "fL": 441.0,
+    "fR": 116.0,
+    "df_hz": 325.0,
+    "ratio_L": 23.61,
+    "ratio_R": 27.14
+   },
+   {
+    "t": 49.0,
+    "fL": 466.0,
+    "fR": 466.5,
+    "df_hz": 0.5,
+    "ratio_L": 18.39,
+    "ratio_R": 17.75
+   },
+   {
+    "t": 50.0,
+    "fL": 442.0,
+    "fR": 146.0,
+    "df_hz": 296.0,
+    "ratio_L": 22.17,
+    "ratio_R": 22.94
+   },
+   {
+    "t": 51.0,
+    "fL": 440.5,
+    "fR": 441.0,
+    "df_hz": 0.5,
+    "ratio_L": 22.38,
+    "ratio_R": 20.01
+   },
+   {
+    "t": 52.0,
+    "fL": 350.0,
+    "fR": 439.5,
+    "df_hz": 89.5,
+    "ratio_L": 15.58,
+    "ratio_R": 24.11
+   },
+   {
+    "t": 53.0,
+    "fL": 110.0,
+    "fR": 110.0,
+    "df_hz": 0.0,
+    "ratio_L": 11.29,
+    "ratio_R": 11.28
+   },
+   {
+    "t": 54.0,
+    "fL": 464.5,
+    "fR": 111.0,
+    "df_hz": 353.5,
+    "ratio_L": 15.65,
+    "ratio_R": 8.32
+   },
+   {
+    "t": 55.0,
+    "fL": 184.0,
+    "fR": 184.0,
+    "df_hz": 0.0,
+    "ratio_L": 14.46,
+    "ratio_R": 14.11
+   },
+   {
+    "t": 56.0,
+    "fL": 110.0,
+    "fR": 293.5,
+    "df_hz": 183.5,
+    "ratio_L": 12.63,
+    "ratio_R": 20.7
+   },
+   {
+    "t": 57.0,
+    "fL": 84.0,
+    "fR": 84.0,
+    "df_hz": 0.0,
+    "ratio_L": 7.0,
+    "ratio_R": 7.25
+   },
+   {
+    "t": 58.0,
+    "fL": 88.0,
+    "fR": 88.0,
+    "df_hz": 0.0,
+    "ratio_L": 11.63,
+    "ratio_R": 11.84
+   },
+   {
+    "t": 59.0,
+    "fL": 441.5,
+    "fR": 88.0,
+    "df_hz": 353.5,
+    "ratio_L": 15.85,
+    "ratio_R": 8.23
+   },
+   {
+    "t": 60.0,
+    "fL": 466.0,
+    "fR": 88.0,
+    "df_hz": 378.0,
+    "ratio_L": 14.97,
+    "ratio_R": 11.51
+   },
+   {
+    "t": 61.0,
+    "fL": 88.0,
+    "fR": 88.0,
+    "df_hz": 0.0,
+    "ratio_L": 13.03,
+    "ratio_R": 13.07
+   },
+   {
+    "t": 63.0,
+    "fL": 147.5,
+    "fR": 110.0,
+    "df_hz": 37.5,
+    "ratio_L": 10.25,
+    "ratio_R": 7.16
+   },
+   {
+    "t": 64.0,
+    "fL": 110.0,
+    "fR": 110.0,
+    "df_hz": 0.0,
+    "ratio_L": 9.33,
+    "ratio_R": 8.33
+   },
+   {
+    "t": 65.0,
+    "fL": 193.5,
+    "fR": 193.5,
+    "df_hz": 0.0,
+    "ratio_L": 10.35,
+    "ratio_R": 11.06
+   },
+   {
+    "t": 66.0,
+    "fL": 110.0,
+    "fR": 110.0,
+    "df_hz": 0.0,
+    "ratio_L": 10.02,
+    "ratio_R": 9.82
+   },
+   {
+    "t": 67.0,
+    "fL": 439.5,
+    "fR": 439.5,
+    "df_hz": 0.0,
+    "ratio_L": 21.61,
+    "ratio_R": 19.76
+   },
+   {
+    "t": 68.0,
+    "fL": 110.0,
+    "fR": 110.0,
+    "df_hz": 0.0,
+    "ratio_L": 11.99,
+    "ratio_R": 11.96
+   },
+   {
+    "t": 69.0,
+    "fL": 88.0,
+    "fR": 88.0,
+    "df_hz": 0.0,
+    "ratio_L": 12.91,
+    "ratio_R": 12.33
+   },
+   {
+    "t": 70.0,
+    "fL": 88.5,
+    "fR": 88.5,
+    "df_hz": 0.0,
+    "ratio_L": 9.08,
+    "ratio_R": 9.46
+   },
+   {
+    "t": 71.0,
+    "fL": 88.0,
+    "fR": 260.5,
+    "df_hz": 172.5,
+    "ratio_L": 8.53,
+    "ratio_R": 19.91
+   },
+   {
+    "t": 72.0,
+    "fL": 88.0,
+    "fR": 88.0,
+    "df_hz": 0.0,
+    "ratio_L": 11.2,
+    "ratio_R": 11.06
+   },
+   {
+    "t": 73.0,
+    "fL": 349.5,
+    "fR": 349.5,
+    "df_hz": 0.0,
+    "ratio_L": 19.51,
+    "ratio_R": 18.28
+   },
+   {
+    "t": 74.0,
+    "fL": 441.0,
+    "fR": 110.0,
+    "df_hz": 331.0,
+    "ratio_L": 20.84,
+    "ratio_R": 8.95
+   },
+   {
+    "t": 75.0,
+    "fL": 441.0,
+    "fR": 441.0,
+    "df_hz": 0.0,
+    "ratio_L": 20.98,
+    "ratio_R": 20.69
+   },
+   {
+    "t": 76.0,
+    "fL": 110.0,
+    "fR": 439.5,
+    "df_hz": 329.5,
+    "ratio_L": 11.9,
+    "ratio_R": 16.66
+   },
+   {
+    "t": 77.0,
+    "fL": 110.0,
+    "fR": 110.0,
+    "df_hz": 0.0,
+    "ratio_L": 11.9,
+    "ratio_R": 11.91
+   },
+   {
+    "t": 78.0,
+    "fL": 84.0,
+    "fR": 84.0,
+    "df_hz": 0.0,
+    "ratio_L": 6.82,
+    "ratio_R": 6.95
+   },
+   {
+    "t": 79.0,
+    "fL": 88.0,
+    "fR": 88.0,
+    "df_hz": 0.0,
+    "ratio_L": 10.91,
+    "ratio_R": 10.88
+   },
+   {
+    "t": 80.0,
+    "fL": 88.0,
+    "fR": 88.0,
+    "df_hz": 0.0,
+    "ratio_L": 11.04,
+    "ratio_R": 11.21
+   },
+   {
+    "t": 81.0,
+    "fL": 88.0,
+    "fR": 173.5,
+    "df_hz": 85.5,
+    "ratio_L": 7.26,
+    "ratio_R": 11.0
+   },
+   {
+    "t": 82.0,
+    "fL": 88.0,
+    "fR": 88.0,
+    "df_hz": 0.0,
+    "ratio_L": 10.45,
+    "ratio_R": 10.46
+   },
+   {
+    "t": 83.0,
+    "fL": 88.0,
+    "fR": 88.0,
+    "df_hz": 0.0,
+    "ratio_L": 8.7,
+    "ratio_R": 8.63
+   },
+   {
+    "t": 85.0,
+    "fL": 443.0,
+    "fR": 147.5,
+    "df_hz": 295.5,
+    "ratio_L": 20.62,
+    "ratio_R": 23.51
+   },
+   {
+    "t": 86.0,
+    "fL": 464.0,
+    "fR": 146.0,
+    "df_hz": 318.0,
+    "ratio_L": 17.87,
+    "ratio_R": 17.8
+   },
+   {
+    "t": 87.0,
+    "fL": 293.5,
+    "fR": 293.5,
+    "df_hz": 0.0,
+    "ratio_L": 20.31,
+    "ratio_R": 21.21
+   },
+   {
+    "t": 88.0,
+    "fL": 293.5,
+    "fR": 293.5,
+    "df_hz": 0.0,
+    "ratio_L": 26.39,
+    "ratio_R": 30.64
+   },
+   {
+    "t": 89.0,
+    "fL": 294.0,
+    "fR": 294.0,
+    "df_hz": 0.0,
+    "ratio_L": 24.71,
+    "ratio_R": 25.86
+   },
+   {
+    "t": 90.0,
+    "fL": 116.0,
+    "fR": 116.0,
+    "df_hz": 0.0,
+    "ratio_L": 22.8,
+    "ratio_R": 25.86
+   },
+   {
+    "t": 91.0,
+    "fL": 441.0,
+    "fR": 174.0,
+    "df_hz": 267.0,
+    "ratio_L": 23.04,
+    "ratio_R": 20.53
+   },
+   {
+    "t": 92.0,
+    "fL": 466.5,
+    "fR": 147.0,
+    "df_hz": 319.5,
+    "ratio_L": 16.05,
+    "ratio_R": 20.94
+   },
+   {
+    "t": 93.0,
+    "fL": 442.0,
+    "fR": 146.0,
+    "df_hz": 296.0,
+    "ratio_L": 24.86,
+    "ratio_R": 22.34
+   },
+   {
+    "t": 94.0,
+    "fL": 440.5,
+    "fR": 439.5,
+    "df_hz": 1.0,
+    "ratio_L": 20.81,
+    "ratio_R": 24.72
+   },
+   {
+    "t": 95.0,
+    "fL": 350.5,
+    "fR": 439.5,
+    "df_hz": 89.0,
+    "ratio_L": 20.49,
+    "ratio_R": 27.48
+   },
+   {
+    "t": 96.0,
+    "fL": 260.0,
+    "fR": 294.0,
+    "df_hz": 34.0,
+    "ratio_L": 15.02,
+    "ratio_R": 22.08
+   },
+   {
+    "t": 97.0,
+    "fL": 293.0,
+    "fR": 266.0,
+    "df_hz": 27.0,
+    "ratio_L": 17.65,
+    "ratio_R": 14.92
+   },
+   {
+    "t": 109.0,
+    "fL": 439.5,
+    "fR": 439.0,
+    "df_hz": 0.5,
+    "ratio_L": 14.21,
+    "ratio_R": 9.16
+   },
+   {
+    "t": 110.0,
+    "fL": 293.5,
+    "fR": 431.0,
+    "df_hz": 137.5,
+    "ratio_L": 17.7,
+    "ratio_R": 11.63
+   },
+   {
+    "t": 111.0,
+    "fL": 349.0,
+    "fR": 348.5,
+    "df_hz": 0.5,
+    "ratio_L": 25.24,
+    "ratio_R": 26.07
+   },
+   {
+    "t": 112.0,
+    "fL": 350.0,
+    "fR": 348.0,
+    "df_hz": 2.0,
+    "ratio_L": 27.74,
+    "ratio_R": 31.81
+   },
+   {
+    "t": 113.0,
+    "fL": 231.0,
+    "fR": 234.5,
+    "df_hz": 3.5,
+    "ratio_L": 26.04,
+    "ratio_R": 22.31
+   },
+   {
+    "t": 114.0,
+    "fL": 447.5,
+    "fR": 445.5,
+    "df_hz": 2.0,
+    "ratio_L": 20.21,
+    "ratio_R": 19.0
+   },
+   {
+    "t": 115.0,
+    "fL": 465.0,
+    "fR": 468.5,
+    "df_hz": 3.5,
+    "ratio_L": 12.51,
+    "ratio_R": 16.11
+   },
+   {
+    "t": 116.0,
+    "fL": 349.0,
+    "fR": 349.0,
+    "df_hz": 0.0,
+    "ratio_L": 30.83,
+    "ratio_R": 31.71
+   },
+   {
+    "t": 117.0,
+    "fL": 347.5,
+    "fR": 348.0,
+    "df_hz": 0.5,
+    "ratio_L": 26.15,
+    "ratio_R": 26.47
+   }
+  ],
+  "certified": false,
+  "verdict": "NOT CERTIFIABLE -- no persistent per-channel line pair with a 13-31 Hz interaural difference stands in the render at the stated thresholds; the trajectory is printed in full so the finding can be re-weighed."
+ },
+ "programme": {
+  "duration_s": 119.562,
+  "last_window_above_-40dbfs_s": 113.75,
+  "last_window_above_-50dbfs_s": 116.75,
+  "last_window_above_-60dbfs_s": 116.75,
+  "final_window_dbfs": -150.0
+ },
+ "brief_audit": {
+  "brief": "studio-runs/gemini-49-bars/prompt.txt (pushed faf3a3b)",
+  "ordered_form": [
+   {
+    "section": "intro",
+    "bars": [
+     1,
+     3
+    ]
+   },
+   {
+    "section": "verse_I",
+    "bars": [
+     4,
+     23
+    ]
+   },
+   {
+    "section": "refrain",
+    "bars": [
+     24,
+     26
+    ]
+   },
+   {
+    "section": "verse_II",
+    "bars": [
+     27,
+     46
+    ]
+   },
+   {
+    "section": "outro",
+    "bars": [
+     47,
+     49
+    ]
+   }
+  ],
+  "ordered_total_bars": 49,
+  "grid_bars_in_file": 45,
+  "grid_bar_s": 2.6646,
+  "expected_file_span_for_49_bars_s": 130.64,
+  "programme_bars_at_-40dbfs": 43,
+  "boundary_distances": [
+   {
+    "ordered_boundary": "start of bar 4",
+    "expected_s": 8.07,
+    "nearest_measured_boundary_s": 8.069,
+    "distance_s": 0.0,
+    "distance_bars": 0.0
+   },
+   {
+    "ordered_boundary": "start of bar 24",
+    "expected_s": 61.36,
+    "nearest_measured_boundary_s": 50.702,
+    "distance_s": 10.66,
+    "distance_bars": 4.0
+   },
+   {
+    "ordered_boundary": "start of bar 27",
+    "expected_s": 69.35,
+    "nearest_measured_boundary_s": 50.702,
+    "distance_s": 18.65,
+    "distance_bars": 7.0
+   },
+   {
+    "ordered_boundary": "start of bar 47",
+    "expected_s": 122.65,
+    "nearest_measured_boundary_s": 119.562,
+    "distance_s": 3.08,
+    "distance_bars": 1.16
+   }
+  ],
+  "segment_covering_ordered_refrain_bars_24_26": {
+   "segment_index": 3,
+   "bars": [
+    20,
+    33
+   ],
+   "t0": 50.702289885644504,
+   "t1": 88.00660874875098,
+   "mean_db": -14.24109756181667,
+   "level_rank_of_segments": 1,
+   "recurrence_sim": 0.896,
+   "recurrence_with": 1
+  },
+  "measured_segments_bars": [
+   [
+    1,
+    3
+   ],
+   [
+    4,
+    8
+   ],
+   [
+    9,
+    19
+   ],
+   [
+    20,
+    33
+   ],
+   [
+    34,
+    37
+   ],
+   [
+    38,
+    41
+   ],
+   [
+    42,
+    45
+   ]
+  ]
+ },
+ "arpeggio": {
+  "bed_coverage_frames": 0.408,
+  "bed_notes_total": 426,
+  "density_notes_per_s_all_segments": 3.56,
+  "interval_census_abs_semitones": {
+   "0": 123,
+   "1": 74,
+   "2": 41,
+   "3": 12,
+   "4": 19,
+   "5": 5,
+   "6": 12,
+   "7": 6,
+   "8": 4,
+   "9": 11,
+   "10": 10,
+   "11": 6,
+   "12": 14,
+   "13": 9,
+   "14": 8,
+   "15": 10,
+   "16": 12,
+   "17": 10,
+   "18": 8,
+   "19": 14,
+   "20": 6,
+   "21": 6,
+   "23": 2,
+   "24": 1,
+   "25": 1,
+   "28": 1
+  },
+  "chord_step_share_3_4_5_7": 0.099,
+  "pattern_windows_triad_shaped": 94,
+  "pattern_score_monotone_or_single_turn": 0.894,
+  "bed_pitch_class_census": {
+   "C": 9,
+   "C#": 2,
+   "D": 50,
+   "D#": 17,
+   "E": 7,
+   "F": 30,
+   "F#": 13,
+   "G": 15,
+   "G#": 9,
+   "A": 55,
+   "A#": 60,
+   "B": 159
+  },
+  "thresholds": "presence: coverage >= 0.05 AND density >= 1.5/s AND chord-step share >= 0.45 AND pattern score >= 0.35; coverage < 0.05 -> UNREADABLE",
+  "verdict": "NOT ESTABLISHED -- the bed track's note motion does not meet the stated arpeggio thresholds; the numbers stand below for re-weighing",
+  "confound_stated": "the bed track is the mid channel without the vocal gate: where the rap rides, the 'bed' notes ARE the voice's intonation. Pattern evidence is therefore strongest where the tracker leaves the voice (intros, dips) and weakest inside the flow."
+ },
+ "grid": {
+  "bpm": 90.07,
+  "beat_s": 0.666149,
+  "bar_s": 2.664594
+ }
+}

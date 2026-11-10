@@ -1,0 +1,277 @@
+{
+ "document": "GRID B (120.19 BPM) \u2014 the alternative clock's full audit, harvested from a scratch re-run of analyze_sovereign.py with SOVEREIGN_GRID_BPM=120.19. Grid A (90.07 BPM, the estimator's headline) is the bench of record in analysis-stats.json; this file exists so grid B's coordinates can be re-weighed without re-running.",
+ "grid": {
+  "bpm": 120.19,
+  "beat_s": 0.49921,
+  "bar_s": 1.996838
+ },
+ "downbeat_phase_s": 0.26,
+ "n_bars": 60,
+ "segments": [
+  {
+   "t0": 0.0,
+   "t1": 8.247,
+   "dur": 8.247,
+   "bar0": 0,
+   "n_bars": 4,
+   "mean_db": -23.72,
+   "slope_db_s": 0.271,
+   "centroid_hz": 1348.189,
+   "chroma_stability": 0.667,
+   "voiced_density": 0.583,
+   "recurrence_sim": 0.792,
+   "recurrence_with": 2
+  },
+  {
+   "t0": 8.247,
+   "t1": 22.225,
+   "dur": 13.978,
+   "bar0": 4,
+   "n_bars": 7,
+   "mean_db": -15.095,
+   "slope_db_s": 0.476,
+   "centroid_hz": 2952.295,
+   "chroma_stability": 0.669,
+   "voiced_density": 0.183,
+   "recurrence_sim": 0.788,
+   "recurrence_with": 3
+  },
+  {
+   "t0": 22.225,
+   "t1": 50.181,
+   "dur": 27.956,
+   "bar0": 11,
+   "n_bars": 14,
+   "mean_db": -15.22,
+   "slope_db_s": -0.273,
+   "centroid_hz": 2981.659,
+   "chroma_stability": 0.711,
+   "voiced_density": 0.188,
+   "recurrence_sim": 0.792,
+   "recurrence_with": 0
+  },
+  {
+   "t0": 50.181,
+   "t1": 88.121,
+   "dur": 37.94,
+   "bar0": 25,
+   "n_bars": 19,
+   "mean_db": -14.365,
+   "slope_db_s": 0.029,
+   "centroid_hz": 3179.541,
+   "chroma_stability": 0.693,
+   "voiced_density": 0.144,
+   "recurrence_sim": 0.788,
+   "recurrence_with": 1
+  },
+  {
+   "t0": 88.121,
+   "t1": 100.102,
+   "dur": 11.981,
+   "bar0": 44,
+   "n_bars": 6,
+   "mean_db": -50.992,
+   "slope_db_s": -11.483,
+   "centroid_hz": 2877.378,
+   "chroma_stability": 0.557,
+   "voiced_density": 0.26,
+   "recurrence_sim": 0.684,
+   "recurrence_with": 0
+  },
+  {
+   "t0": 100.102,
+   "t1": 110.086,
+   "dur": 9.984,
+   "bar0": 50,
+   "n_bars": 5,
+   "mean_db": -149.996,
+   "slope_db_s": 0.003,
+   "centroid_hz": 54.545,
+   "chroma_stability": 0.0,
+   "voiced_density": 0.0,
+   "recurrence_sim": 0.108,
+   "recurrence_with": 4
+  },
+  {
+   "t0": 110.086,
+   "t1": 119.562,
+   "dur": 9.476,
+   "bar0": 55,
+   "n_bars": 5,
+   "mean_db": -63.238,
+   "slope_db_s": -7.656,
+   "centroid_hz": 2703.159,
+   "chroma_stability": 0.517,
+   "voiced_density": 0.087,
+   "recurrence_sim": 0.662,
+   "recurrence_with": 4
+  }
+ ],
+ "boundaries": [
+  {
+   "t_raw": 8.452,
+   "t_used": 8.247353357184458,
+   "snap_distance_s": 0.205,
+   "novelty": 0.4104,
+   "prominence_ratio": 1.02,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 21.711,
+   "t_used": 22.22522173225726,
+   "snap_distance_s": 0.515,
+   "novelty": 0.406,
+   "prominence_ratio": 1.01,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 50.805,
+   "t_used": 50.18095848240286,
+   "snap_distance_s": 0.624,
+   "novelty": 0.4143,
+   "prominence_ratio": 1.03,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 87.841,
+   "t_used": 88.12088692902904,
+   "snap_distance_s": 0.28,
+   "novelty": 0.4102,
+   "prominence_ratio": 1.02,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 99.126,
+   "t_used": 100.10191696480572,
+   "snap_distance_s": 0.976,
+   "novelty": 0.5,
+   "prominence_ratio": 1.24,
+   "confidence": 0.75
+  },
+  {
+   "t_raw": 110.481,
+   "t_used": 110.0861086612863,
+   "snap_distance_s": 0.394,
+   "novelty": 0.555,
+   "prominence_ratio": 1.38,
+   "confidence": 0.75
+  }
+ ],
+ "boundaries_merged_away": [],
+ "brief_audit": {
+  "brief": "studio-runs/gemini-49-bars/prompt.txt (pushed faf3a3b)",
+  "ordered_form": [
+   {
+    "section": "intro",
+    "bars": [
+     1,
+     3
+    ]
+   },
+   {
+    "section": "verse_I",
+    "bars": [
+     4,
+     23
+    ]
+   },
+   {
+    "section": "refrain",
+    "bars": [
+     24,
+     26
+    ]
+   },
+   {
+    "section": "verse_II",
+    "bars": [
+     27,
+     46
+    ]
+   },
+   {
+    "section": "outro",
+    "bars": [
+     47,
+     49
+    ]
+   }
+  ],
+  "ordered_total_bars": 49,
+  "grid_bars_in_file": 60,
+  "grid_bar_s": 1.9968,
+  "expected_file_span_for_49_bars_s": 98.11,
+  "programme_bars_at_-40dbfs": 57,
+  "boundary_distances": [
+   {
+    "ordered_boundary": "start of bar 4",
+    "expected_s": 6.25,
+    "nearest_measured_boundary_s": 8.247,
+    "distance_s": 2.0,
+    "distance_bars": 1.0
+   },
+   {
+    "ordered_boundary": "start of bar 24",
+    "expected_s": 46.19,
+    "nearest_measured_boundary_s": 50.181,
+    "distance_s": 3.99,
+    "distance_bars": 2.0
+   },
+   {
+    "ordered_boundary": "start of bar 27",
+    "expected_s": 52.18,
+    "nearest_measured_boundary_s": 50.181,
+    "distance_s": 2.0,
+    "distance_bars": 1.0
+   },
+   {
+    "ordered_boundary": "start of bar 47",
+    "expected_s": 92.11,
+    "nearest_measured_boundary_s": 88.121,
+    "distance_s": 3.99,
+    "distance_bars": 2.0
+   }
+  ],
+  "segment_covering_ordered_refrain_bars_24_26": null,
+  "measured_segments_bars": [
+   [
+    1,
+    4
+   ],
+   [
+    5,
+    11
+   ],
+   [
+    12,
+    25
+   ],
+   [
+    26,
+    44
+   ],
+   [
+    45,
+    50
+   ],
+   [
+    51,
+    55
+   ],
+   [
+    56,
+    60
+   ]
+  ]
+ },
+ "chord_distribution": {
+  "A#": 5,
+  "A#5": 1,
+  "A#m": 1,
+  "Am": 1,
+  "D": 3,
+  "D5": 5,
+  "Dm": 19,
+  "UNCLEAR": 25
+ }
+}
