@@ -1,0 +1,204 @@
+% =====================================================================
+% ALBUM I - CROWN FIRE SEASON - ABC NOTATION (hook melodies + chords)
+% The Five-Album Collabo Cycle - led by CROWN FIRE (Fire Triad)
+% =====================================================================
+% All nine hook melodies below are ORIGINAL DESK COMPOSITIONS,
+% composed by the desk for these lyric drafts - built to each
+% hook lyric's rhythm and meter. They are composition drafts
+% under the Flagpole, not transcriptions of any recording.
+% Production spec (from the Gemini prompt pack): Detroit bounce
+% trap, 144 BPM, A major, harmonica over the hooks, grand piano
+% accents. Key signature A major: F, C and G sound sharp.
+% Chords use the A-major family: A (I), F#m (vi), D (IV), E (V).
+% Lyrics: docs/collabo-cycle/ALBUM-1.md (ghost drafts, stamped
+% text pending the founder's red pen).
+% Flagpole of Claim and Coinage: Johnathan 'Qasparr' Monroe,
+% ARR, All Rights Reserved, Without Prejudice.
+% =====================================================================
+
+X:1
+T:Season Opener
+C:Desk composition for the hook lyric (draft)
+M:4/4
+L:1/8
+Q:1/4=144
+K:A
+%% Writing seat: SOL REY (Leo - IGNITE seat worn as a crown)
+%% Formation: Qveen Bee SUNG hook (feature) - Sol Rey verses -
+%% Ari Sparkz verse - Qasparr feature verse - anthem close.
+%% Hook melody: anthem arc - rises from the dominant to the
+%% tonic peak, "Crown Fire, Crown Fire" lands on a held tonic.
+%% Hook lyric: "Strike the match, let the whole block know..."
+"A"E E A A B c d2|"F#m"c c A F A B A2|"D"d d c A B c d2|"E"B B c d e2 B2|
+"A"e e d c B c d2|"F#m"c B A F A B c2|"D"d d e f "E"e d B2|"A"e c A B A4|]
+
+X:2
+T:Match Head
+C:Desk composition for the hook lyric (draft)
+M:4/4
+L:1/8
+Q:1/4=144
+K:A
+%%score 1 2
+%% Writing seat: ARI SPARKZ (Aries - IGNITE proper, the match-head)
+%% Formation: Ari Sparkz chant hook + double-time verses (body) -
+%% Qasparr feature verse - Sage Archer sung tag.
+%% V:1 = the chant hook: struck-match hits - short notes, a rest,
+%% then the "(strike!)" blow on a held note.
+%% V:2 = Ari's double-time 16th-note riff voice under the hook.
+%% Hook lyric: "I'm the match head (strike!)..."
+V:1
+"A"A A A2 z2 A2|"A"B B c2 z2 B2|"E"c c d2 z2 c2|"E"A A B2 z2 A2|
+"A"A A c2 z2 A2|"A"e e d2 z2 B2|"D"d d B2 z2 "E"c2|"A"A A B2 A4|]
+V:2
+A,/2 C/2 E/2 A/2 B/2 A/2 E/2 C/2 A,/2 C/2 E/2 A/2 B/2 c/2 B/2 A/2|
+A,/2 C/2 E/2 A/2 e/2 A/2 E/2 C/2 A,/2 C/2 E/2 A/2 B/2 A/2 E/2 C/2|
+B,/2 D/2 E/2 B/2 A/2 B/2 E/2 D/2 B,/2 D/2 E/2 B/2 c/2 B/2 A/2 B/2|
+B,/2 D/2 E/2 B/2 e/2 B/2 E/2 D/2 B,/2 D/2 E/2 B/2 A/2 G/2 E/2 D/2|
+A,/2 C/2 E/2 A/2 B/2 A/2 E/2 C/2 A,/2 C/2 E/2 A/2 B/2 c/2 B/2 A/2|
+A,/2 C/2 E/2 A/2 B/2 c/2 d/2 e/2 d/2 c/2 B/2 A/2 E/2 C/2 A,/2 z/2|
+D/2 F/2 A/2 d/2 c/2 A/2 F/2 D/2 E/2 G/2 B/2 e/2 d/2 B/2 G/2 E/2|
+A,/2 C/2 E/2 A/2 B/2 c/2 B/2 A/2 A4|]
+
+X:3
+T:Bow and Arrow
+C:Desk composition for the hook lyric (draft)
+M:4/4
+L:1/8
+Q:1/4=144
+K:A
+%% Writing seat: SAGE ARCHER (Sagittarius - TRAVEL, fire that aims)
+%% Formation: Sage Archer verses (body) - Qveen Bee SUNG hook
+%% (feature, lead color) - Qveen Bee feature rap verse - Sage
+%% sung bridge.
+%% Hook melody: drawn-bow arcs - long tones pulled back, then
+%% released upward; the last line falls home to the tonic.
+%% Hook lyric: "I pull it back, I let it fly..."
+"A"A2 c e a2 e2|"D"d2 f e d c B2|"F#m"c2 e c A B F2|"E"B2 d c B G E2|
+"A"A2 c e a2 g2|"D"f2 e d c B A2|"F#m"e2 d c B "E"c A2|"A"a g e c A4|]
+
+X:4
+T:First Through the Door
+C:Desk composition for the hook lyric (draft)
+M:4/4
+L:1/8
+Q:1/4=144
+K:A
+%% Writing seat: SOL REY (Leo - the Captain)
+%% Formation: full Crown Fire body (Sol Rey, Ari Sparkz, Sage
+%% Archer verses) - Sol Rey CHANT hook with all Crown Fire -
+%% Qasparr feature verse.
+%% Hook melody: block-square chant quarters, marching on the
+%% beat - a door kicked in four-square time.
+%% Hook lyric: "First through the door! (We don't wait!)"
+"A"A2 A2 B2 A2|"A"A2 A2 c2 A2|"D"d2 d2 c2 B2|"A"A2 B2 c2 A2|
+"A"A2 A2 B2 c2|"A"e2 e2 d2 B2|"E"B2 B2 d2 B2|"A"c2 B2 A4|]
+
+X:5
+T:Dearborn to Brightmoor
+C:Desk composition for the hook lyric (draft)
+M:4/4
+L:1/8
+Q:1/4=144
+K:A
+%%score 1 2
+%% Writing seat: ARI SPARKZ (Aries - the bridge with a bassline)
+%% Formation: Ari Sparkz verses (body) - Sage Archer SUNG hook -
+%% Qasparr lead-size feature verse (the road home).
+%% V:1 = the hook: a rolling road melody, rising out of Dearborn
+%% and settling home on the tonic at "one crown I wear".
+%% V:2 = Ari's rolling 16th-note road riff under the hook.
+%% Hook lyric: "From Dearborn to Brightmoor, one heart, one road..."
+V:1
+"A"E A B c d c B2|"E"B c d e2 d B2|"F#m"c2 A B c d B2|"D"d e f2 e d B2|
+"A"E A B c d c B2|"E"e2 d c B A B2|"D"d2 c B A "E"G B2|"A"c B A E A4|]
+V:2
+A/2 B/2 c/2 e/2 A/2 B/2 c/2 e/2 A/2 B/2 c/2 e/2 g/2 e/2 c/2 B/2|
+B,/2 E/2 G/2 B/2 B,/2 E/2 G/2 B/2 c/2 B/2 G/2 E/2 D/2 B,/2 G,/2 E/2|
+F/2 A/2 c/2 f/2 F/2 A/2 c/2 f/2 e/2 c/2 A/2 F/2 A/2 c/2 A/2 F/2|
+D/2 F/2 A/2 d/2 D/2 F/2 A/2 d/2 e/2 d/2 A/2 F/2 A/2 F/2 D/2 z/2|
+A/2 B/2 c/2 e/2 A/2 B/2 c/2 e/2 A/2 B/2 c/2 e/2 g/2 e/2 c/2 B/2|
+B,/2 E/2 G/2 B/2 e/2 B/2 G/2 E/2 B,/2 E/2 G/2 B/2 d/2 B/2 G/2 E/2|
+D/2 F/2 A/2 d/2 E/2 G/2 B/2 e/2 d/2 B/2 G/2 E/2 D/2 B,/2 E/2 z/2|
+A/2 B/2 c/2 e/2 e/2 c/2 B/2 A/2 A4|]
+
+X:6
+T:Travel Light
+C:Desk composition for the hook lyric (draft)
+M:4/4
+L:1/8
+Q:1/4=144
+K:A
+%% Writing seat: SAGE ARCHER (Sagittarius - the arrow, made to be sent)
+%% Formation: Sage Archer verses (body) - Qveen Bee SUNG hook
+%% (feature lead) - Qveen Bee feature rap verse - Sage sung close.
+%% Hook melody: dotted, light-footed figures - nothing heavy in
+%% the hands; the last line lands weighted: "Heavy. Heavy in
+%% the best way" on two long falling tones.
+%% Hook lyric: "I travel light, but I arrive like thunder..."
+"A"E3/2 A/2 B c d e d2|"D"d3/2 A/2 B c d B A2|"A"c3/2 A/2 B c B A E2|"E"B3/2 G/2 B c d B G2|
+"F#m"A3/2 F/2 A c e c A2|"D"d3/2 f/2 e d c B A2|"A"e3/2 c/2 B c d e "E"B2|"A"A3/2 E/2 A B c2 A2|]
+
+X:7
+T:The Chant
+C:Desk composition for the hook lyric (draft)
+M:4/4
+L:1/8
+Q:1/4=144
+K:A
+%% Writing seat: SOL REY (Leo - conductor of the stadium)
+%% Formation: stadium closer - call-and-response CHANT hook
+%% (all Crown Fire) - Sol Rey verse - Ari Sparkz verse -
+%% Qasparr feature verse - Sage Archer sung bridge - final chant.
+%% Hook melody: the call rises as a question, the crowd answers
+%% on one held shout (WE DID! / WE ARE!).
+%% Hook lyric: "(Call) Who lit the fire? - (Response) WE DID!"
+"A"E E A A z2 e2|"A"E E A A z2 d2|"F#m"A A c c B B A2|"D"d d c c B B A2|
+"A"E E B B z2 e2|"A"E E B B z2 d2|"E"B B d d B B G2|"A"e e d B A4|]
+
+X:8
+T:Gasoline Confession
+C:Desk composition for the hook lyric (draft)
+M:4/4
+L:1/8
+Q:1/4=144
+K:A
+%%score 1 2
+%% Writing seat: ARI SPARKZ (Aries - the kid who talked too fast)
+%% Formation: Ari Sparkz verses (body) - Qveen Bee SUNG hook
+%% (feature) - Qasparr + Qveen Bee tag-team feature (alternating
+%% 4s) - Ari close.
+%% V:1 = the hook: confessional - starts low in the F#m seat,
+%% sighing falls, then lifts as the confession lets go.
+%% V:2 = Ari's nervous double-time 16th-note riff voice.
+%% Hook lyric: "This my gasoline confession..."
+V:1
+"F#m"F2 A c B A F2|"D"A2 d c B A F2|"A"E2 A B c d B2|"E"B2 d c B G E2|
+"F#m"F2 A c e c A2|"D"f2 e d c B A2|"E"B2 c d e d B2|"A"e c A B A4|]
+V:2
+F/2 A/2 c/2 A/2 F/2 A/2 c/2 A/2 F/2 A/2 c/2 e/2 c/2 A/2 F/2 z/2|
+D/2 F/2 A/2 F/2 D/2 F/2 A/2 d/2 A/2 F/2 D/2 F/2 A/2 F/2 D/2 z/2|
+A,/2 C/2 E/2 A/2 A,/2 C/2 E/2 A/2 B/2 A/2 E/2 C/2 A,/2 C/2 E/2 z/2|
+B,/2 D/2 E/2 B/2 B,/2 D/2 E/2 B/2 A/2 G/2 E/2 D/2 B,/2 D/2 E/2 z/2|
+F/2 A/2 c/2 e/2 F/2 A/2 c/2 e/2 f/2 e/2 c/2 A/2 F/2 A/2 F/2 z/2|
+D/2 F/2 A/2 d/2 A/2 F/2 D/2 F/2 A/2 d/2 c/2 A/2 F/2 D/2 F/2 z/2|
+B,/2 D/2 E/2 B/2 e/2 B/2 E/2 D/2 B,/2 D/2 E/2 B/2 A/2 G/2 E/2 D/2|
+A,/2 C/2 E/2 A/2 B/2 c/2 B/2 A/2 A4|]
+
+X:9
+T:Crown Fire Season
+C:Desk composition for the hook lyric (draft)
+M:4/4
+L:1/8
+Q:1/4=144
+K:A
+%% Writing seat: ALL THREE (Sol Rey - Ari Sparkz - Sage Archer)
+%% Formation: title track, all voices - Crown Fire body -
+%% Qveen Bee SUNG hook (feature, all voices joining on repeat) -
+%% Qasparr feature verse - Qveen Bee feature rap verse -
+%% all-voices final hook.
+%% Hook melody: coronation - octave-leap fanfare figures and
+%% the album's highest peaks; the final line crowns on tonic.
+%% Hook lyric: "It's Crown Fire season, turn the heat up high..."
+"A"A2 e2 a2 e2|"E"e2 d B e2 B2|"F#m"c2 f e d c A2|"D"d2 f2 a2 f2|
+"A"A2 e2 a2 g2|"E"e2 g e d c B2|"D"f2 e d B c "E"d2|"A"a e c B A4|]
