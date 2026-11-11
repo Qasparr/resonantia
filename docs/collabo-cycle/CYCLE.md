@@ -15,9 +15,19 @@ stamps or strikes it. Nothing here is final text.
 
 Each album is LED by one dynamic; the other crews guest-write.
 Nine tracks per album — one per member of the nine — the lead
-writer of each track named in the tracklist. Verse law: hooks
-sung by the track's singing seat; headliners carry at least one
-verse or the hook on every track.
+writer of each track named in the tracklist.
+
+FORMATION LAW (founder's refinement, 2026-11-10 19:14 EST —
+"Each song the bars they write themselves with mine and queen
+bee featuring"): the BODY of every song is the crews' OWN bars —
+written by the members, carried by the members, in their own
+voices and seats. QASPARR and QVEEN BEE FEATURE on the songs:
+his feature verse, her feature hook or verse — the crown on the
+crews' work, not the body of it. The feature texts are
+ghost-DRAFTED by the track's writing seat in the headliners'
+chartered voices and marked GHOST — drafts until the founder
+stamps them; when he writes his own feature bars himself, they
+replace the ghost draft byte for byte.
 
 ALBUM I — CROWN FIRE SEASON (Fire leads: IGNITE · BLAZE · TRAVEL)
  1. Season Opener        (Sol Rey)     Q + QB anthem
