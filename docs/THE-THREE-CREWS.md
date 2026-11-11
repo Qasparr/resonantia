@@ -1,4 +1,4 @@
-# THE THREE CREWS — CHARTER (DESK DRAFT UNDER HIS FLAGPOLE)
+# THE THREE CREWS — CHARTER (RATIFIED BY THE FOUNDER 2026-11-10 19:13 EST — his word: "Do it.")
 
 Formed at the founder's order, 2026-11-10 19:11 EST: three rap
 crews, nine members — Crew I: 2 guys 1 girl · Crew II: 2 girls
@@ -6,8 +6,9 @@ crews, nine members — Crew I: 2 guys 1 girl · Crew II: 2 girls
 crew carries a TRIAD POWERHOUSE DYNAMIC assigned from the
 13-ZODIAC ENGINE (the 13-fold engine: twelve signs on the wheel
 + the Zero, οὐδέν, at the center). Reasoning rides with every
-assignment, per the house rule. Names and charters are desk
-drafts — the founder's pen strikes, renames, reseats at will.
+assignment, per the house rule. Names and charters were desk drafts until the ratification;
+the founder's pen strikes, renames, reseats at will — the pen
+is never retired, it is only answered.
 
 THE ENGINE'S LEDGER: three crews take three elemental triads —
 FIRE, WATER, AIR (9 signs). The EARTH triad (Taurus · Virgo ·
@@ -79,8 +80,9 @@ three weathers of the same sky.
   standing companies, not his openers.
 - Cross-crew law: any member may guest on any crew's record;
   the triad stays the triad — guests visit, seats don't move.
-- All nine charters are DRAFTS under the Flagpole. The founder
-  names finally; the desk holds the seats meanwhile.
+- All nine charters stand RATIFIED under the Flagpole
+  (2026-11-10). The desk holds the seats; the founder's red
+  pen rules them still.
 
 Flagpole of Claim and Coinage: Johnathan 'Qasparr' Monroe, ARR,
 All Rights Reserved, Without Prejudice.
