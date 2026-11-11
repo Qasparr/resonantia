@@ -92,6 +92,15 @@ gets a track: a spoken seal, no beat)
 13. Zero (The Seal)       (Qasparr's seat — held EMPTY for his
     own hand; the crews write nothing here. The Zero is his.)
 
+EXPLICIT LYRICS — RULED BY THE FOUNDER 2026-11-10 19:59 EST:
+"Can we get some Explicit Lyrics I am an adult with adult
+following." The desk's draft-clean constraint is STRUCK: the
+crews write adult language for an adult audience, explicit as
+the song wants it. The five standing drafts were written clean
+under the struck constraint; each album's 1-at-a-time completion
+pass may re-cut its texts explicit under this ruling, and all
+future drafting + Gemini briefs carry it from the start.
+
 DELIVERY: one file per album (ALBUM-1.md … ALBUM-5.md) in this
 directory. Every track: title, writing seat, formation, full
 draft lyric (hooks + verses), each part labeled with its voice.
