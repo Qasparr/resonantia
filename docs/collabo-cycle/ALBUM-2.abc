@@ -1,0 +1,153 @@
+% =====================================================================
+% ALBUM II - UNDERCURRENT - ABC NOTATION (hook melodies + chords)
+% The Five-Album Collabo Cycle - led by UNDERCURRENT (Water Triad)
+% =====================================================================
+% All nine hook melodies below are ORIGINAL DESK COMPOSITIONS,
+% composed by the desk for these lyric drafts - built to each
+% hook lyric's rhythm and meter. They are composition drafts
+% under the Flagpole, not transcriptions of any recording.
+% Production spec (from the Gemini prompt pack): Deep Detroit bounce,
+% 92 BPM, D minor. Sub-bass pressure, sparse dark grand piano,
+% low strings, brushed toms. Sigma layer: a low binaural tone pair
+% beating at 13 Hz, slow and constant. Harmonica wail on
+% Tracks 2 and 8 only - the two night-water tracks.
+% Chords use the D-minor family: Dm (i), Bb (VI), F (III),
+% C (VII), Gm (iv).
+% Lyrics: docs/collabo-cycle/ALBUM-2.md (ghost drafts, stamped
+% text pending the founder's red pen).
+% NOTE (desk flag, not a fix): Track 1's hook singer differs
+% between the files - ALBUM-2.md labels it QVEEN BEE (sung),
+% the prompt pack calls it NOIR with Lullaby Lux hum. The
+% melody below follows ALBUM-2.md; the founder's pen rules.
+% Track 9's prompt-pack part list likewise names singers the
+% lyric file does not; the folded lyrics in ALBUM-2-PROMPTS.md
+% carry the lyric file's labels byte-exact.
+% Flagpole of Claim and Coinage: Johnathan 'Qasparr' Monroe,
+% ARR, All Rights Reserved, Without Prejudice.
+% =====================================================================
+
+X:1
+T:Still Water
+C:Desk composition for the hook lyric (draft)
+M:4/4
+L:1/8
+Q:1/4=92
+K:Dm
+%% Writing seat: NOIR (Scorpio - VENOM)
+%% Formation: Qasparr feature verse opens under the surface - Noir carries the body - Qveen Bee feature hook, sung
+%% Hook melody: still water - low and level, the tonic held like a held breath; the only rise is a slow swell to F and back.
+%% Hook lyric: "Still water, still water, runnin' deep..."
+"Dm"A A D D F E D2|"Bb"F F G A G F3|"Dm"A A D E F E3|"C"E E F G A2 G2|
+"Dm"A A D D F E D2|"Bb"F F G A G F3|"F"A A c A G F3|"Dm"E D C D2 D3|]
+
+X:2
+T:3 A.M. Tide
+C:Desk composition for the hook lyric (draft)
+M:4/4
+L:1/8
+Q:1/4=92
+K:Dm
+%% Writing seat: LULLABY LUX (Pisces - DEPTH)
+%% Formation: Qveen Bee sung lead (feature) - HARMONICA WAIL, track 1 of 2
+%% Hook melody: tide swell - rises and falls like water coming in; the peak breaks on the high A and settles back to D.
+%% Hook lyric: "Three a.m. tide, pull me under, pull me home..."
+"Dm"D D E F E D3|"Gm"G G A G F E3|"Bb"F F G A B2 A2|"C"A A G E C2 D2|
+"Dm"D D E F G A3|"Gm"G A B A G F3|"F"A c A G F E3|"Dm"F E D C D4|]
+
+X:3
+T:The Ledger
+C:Desk composition for the hook lyric (draft)
+M:4/4
+L:1/8
+Q:1/4=92
+K:Dm
+%% Writing seat: HARBOR JUNE (Cancer - MEMORY)
+%% Formation: Qasparr storytelling feature - Qveen Bee sung hook
+%% Hook melody: reciting - narrow and steady, a keeper reading names; the line never strays far from the tonic.
+%% Hook lyric: "Write it in the ledger, write it in love..."
+"Dm"A A A D A A3|"Dm"A A D E D C3|"F"F F F A G F3|"C"E E G E C2 D2|
+"Dm"A A A D A A3|"Bb"F F A G F E3|"F"F G A c A G3|"Dm"F E D E D4|]
+
+X:4
+T:Venom in Velvet
+C:Desk composition for the hook lyric (draft)
+M:4/4
+L:1/8
+Q:1/4=92
+K:Dm
+%% Writing seat: NOIR (Scorpio - VENOM)
+%% Formation: Noir carries the body - Qveen Bee feature rap verse leads the middle - Noir hook, whispered
+%% Hook melody: quiet danger - low and close, the sting kept under the velvet; the correction in bar 2 rides one bar.
+%% Hook lyric: "Venom in velvet, soft to the touch..."
+"Dm"D D F E D C3|"Dm"D E F G F E3|"Bb"F G A G F E3|"C"E F G A G2 E2|
+"Dm"D D F E D C3|"Gm"G G A B A G3|"F"A G F E D C3|"Dm"D E F E D4|]
+
+X:5
+T:Drown the Chorus
+C:Desk composition for the hook lyric (draft)
+M:4/4
+L:1/8
+Q:1/4=92
+K:Dm
+%% Writing seat: LULLABY LUX (Pisces - DEPTH)
+%% Formation: Both headliners, sung - Qasparr feature verse - Lullaby Lux sung-rap close
+%% Hook melody: sinking - a slow descent from the high A down to the tonic, baptized and gone under.
+%% Hook lyric: "Drown the chorus, let it sink, let it go..."
+"Dm"A c A G F E3|"Bb"F G A G F E3|"Dm"D E F G A2 G2|"C"E D C D E2 C2|
+"Dm"A c d c A G3|"Bb"F G A B A2 G2|"F"A G F E D C3|"Dm"D C D E D4|]
+
+X:6
+T:Names and Dates
+C:Desk composition for the hook lyric (draft)
+M:4/4
+L:1/8
+Q:1/4=92
+K:Dm
+%% Writing seat: HARBOR JUNE (Cancer - MEMORY)
+%% Formation: Memory roll-call - Qasparr feature verse - Qveen Bee sung hook
+%% Hook melody: roll-call chant - repeated notes, counted off like beads; the line lifts only to name the names.
+%% Hook lyric: "Say their names, say their dates..."
+"Dm"D D D E F E3|"Dm"D D D E D C3|"F"F F F G A G3|"C"E E E F G2 E2|
+"Dm"D D D E F E3|"Bb"F F F G A2 F2|"F"A A G F E D3|"Dm"E F E D D4|]
+
+X:7
+T:Pressure
+C:Desk composition for the hook lyric (draft)
+M:4/4
+L:1/8
+Q:1/4=92
+K:Dm
+%% Writing seat: NOIR (Scorpio - VENOM)
+%% Formation: Tag-team Qasparr + Qveen Bee - hook: Noir, with Lullaby Lux & Harbor June undercurrent
+%% Hook melody: building - the line climbs under the weight and holds at the top; what the pressure doesn't break, it saves.
+%% Hook lyric: "Pressure, pressure - let it build, let it build..."
+"Dm"D E F G A G3|"Dm"A A G F E D3|"Bb"F G A B c2 A2|"C"c A G F E2 D2|
+"Dm"D E F G A c3|"Gm"d c B A G F3|"F"A c d c A2 G2|"Dm"A G F E D4|]
+
+X:8
+T:Moon over the Strait
+C:Desk composition for the hook lyric (draft)
+M:4/4
+L:1/8
+Q:1/4=92
+K:Dm
+%% Writing seat: LULLABY LUX (Pisces - DEPTH)
+%% Formation: Qveen Bee soprano closer-form (feature) - HARMONICA WAIL, track 2 of 2
+%% Hook melody: moonlight - the album's highest line, a slow silver arc to F and a long fall home to D.
+%% Hook lyric: "Moon over the strait, silver on the deep..."
+"Dm"A c d e d c3|"Bb"d c B A G2 F2|"F"A c f e d c3|"C"e d c A G2 E2|
+"Dm"A c d e f2 e2|"Gm"d e f d c A3|"F"c d e f e2 d2|"Dm"c A F E D4|]
+
+X:9
+T:Undercurrent
+C:Desk composition for the hook lyric (draft)
+M:4/4
+L:1/8
+Q:1/4=92
+K:Dm
+%% Writing seat: ALL THREE (Noir - Lullaby Lux - Harbor June)
+%% Formation: Title track, all voices - Qveen Bee sung hook + reprise (same melody)
+%% Hook melody: the whole river - the widest arc on the album, depth and venom and memory in one line, closing on the tonic.
+%% Hook lyric: "Undercurrent, undercurrent, pullin' everything true..."
+"Dm"D F A d c A3|"Bb"B A G F E2 D2|"F"F A c A G F3|"C"E G c A G2 E2|
+"Dm"D F A d c2 A2|"Gm"G B d c B2 A2|"F"A c d e d2 c2|"Dm"d c A F D4|]
