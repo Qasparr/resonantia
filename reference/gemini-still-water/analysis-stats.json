@@ -1,0 +1,1449 @@
+{
+ "audio": "/home/hatch/workspace/resonance/reference/gemini-still-water/the_weight_of_the_water_24_3i4t.mp3",
+ "sr": 44100,
+ "duration_s": 160.705,
+ "programme": {
+  "duration_s": 160.705,
+  "last_window_above_-40dbfs_s": 157.75,
+  "last_window_above_-50dbfs_s": 157.75,
+  "last_window_above_-60dbfs_s": 158.25,
+  "final_window_dbfs": -111.0,
+  "exact_zero_samples": 27746,
+  "exact_zero_seconds": 0.629
+ },
+ "tempo": {
+  "house_estimator": {
+   "global": {
+    "bpm": 74.98,
+    "peak_autocorrelation": 0.6259,
+    "dominant_periodicity_bpm": 74.9,
+    "candidates": [
+     {
+      "bpm": 74.9,
+      "autocorrelation": 0.6259
+     },
+     {
+      "bpm": 152.0,
+      "autocorrelation": 0.5477
+     },
+     {
+      "bpm": 50.17,
+      "autocorrelation": 0.5438
+     }
+    ],
+    "double_time_candidate_bpm": 149.95
+   },
+   "windows": [
+    {
+     "start_s": 0.0,
+     "end_s": 30.0,
+     "bpm": 74.98,
+     "peak_autocorrelation": 0.5714
+    },
+    {
+     "start_s": 30.0,
+     "end_s": 60.0,
+     "bpm": 74.96,
+     "peak_autocorrelation": 0.5496
+    },
+    {
+     "start_s": 60.0,
+     "end_s": 90.0,
+     "bpm": 74.99,
+     "peak_autocorrelation": 0.4668
+    },
+    {
+     "start_s": 90.0,
+     "end_s": 120.0,
+     "bpm": 74.98,
+     "peak_autocorrelation": 0.6277
+    },
+    {
+     "start_s": 120.0,
+     "end_s": 150.0,
+     "bpm": 74.97,
+     "peak_autocorrelation": 0.6305
+    },
+    {
+     "start_s": 150.0,
+     "end_s": 160.7,
+     "bpm": 99.9,
+     "peak_autocorrelation": 0.6916
+    }
+   ],
+   "window_bpm_min": 74.96,
+   "window_bpm_max": 99.9,
+   "window_bpm_spread": 24.94
+  },
+  "flux_raw_ac_at_points": {
+   "92.0": 0.1677,
+   "74.98": 0.6397,
+   "74.9": 0.6262,
+   "46.0": 0.0999
+  },
+  "first_pass_instrument_reproduced": {
+   "dominant_periodicity_bpm": 99.38,
+   "strength": 0.2076,
+   "ac_at_92_bpm": 0.0451
+  }
+ },
+ "bpm_measured_bench": 74.98,
+ "bar_s": 3.200854,
+ "n_bars_on_bench_grid": 50,
+ "brief_audit": {
+  "brief": "studio-runs/gemini-collabo-cycle/ALBUM-2-PROMPTS.md, Track 1",
+  "ordered_bpm": 92.0,
+  "ordered_total_bars": 72,
+  "expected_span_at_ordered_92bpm_s": 187.83,
+  "grid_bars_in_file": 50,
+  "grid_bar_s": 3.2009
+ },
+ "loudness_source": {
+  "house_ungated_lufs": -13.1,
+  "house_true_peak_dbtp": 0.28,
+  "sample_peak_dbfs": 0.23,
+  "ffmpeg_ebur128_gated_lufs": -12.8,
+  "ffmpeg_ebur128_true_peak_dbfs": 0.3,
+  "note": "house loudness is K-weighted integrated, UNGATED (the studio pipeline's stated simplification); the ffmpeg figure is the gated BS.1770-4 read, carried as a second witness, not a replacement."
+ },
+ "stereo": {
+  "corr_global": 0.8729,
+  "side_rms_dbfs": -26.23,
+  "mid_rms_dbfs": -14.55,
+  "windows": [
+   {
+    "start_s": 0,
+    "end_s": 30,
+    "corr": 0.9286,
+    "side_rms_dbfs": -31.19
+   },
+   {
+    "start_s": 30,
+    "end_s": 60,
+    "corr": 0.8602,
+    "side_rms_dbfs": -25.11
+   },
+   {
+    "start_s": 60,
+    "end_s": 90,
+    "corr": 0.9436,
+    "side_rms_dbfs": -29.72
+   },
+   {
+    "start_s": 90,
+    "end_s": 120,
+    "corr": 0.8397,
+    "side_rms_dbfs": -24.31
+   },
+   {
+    "start_s": 120,
+    "end_s": 150,
+    "corr": 0.8357,
+    "side_rms_dbfs": -24.39
+   },
+   {
+    "start_s": 150,
+    "end_s": 160.71,
+    "corr": 0.856,
+    "side_rms_dbfs": -28.57
+   }
+  ]
+ },
+ "sigma_probe": {
+  "doctrine_pair": {
+   "left_hz": 200.0,
+   "right_hz": 213.0
+  },
+  "probe_left_200hz": {
+   "freq_hz": 200.0,
+   "median_ratio_db": 2.49,
+   "p90_ratio_db": 7.37,
+   "persistence_gt_6db": 0.263,
+   "n_windows": 80
+  },
+  "probe_right_213hz": {
+   "freq_hz": 213.0,
+   "median_ratio_db": 4.78,
+   "p90_ratio_db": 9.19,
+   "persistence_gt_6db": 0.35,
+   "n_windows": 80
+  },
+  "certification_threshold": "median ratio >= 10 dB AND persistence (> 6 dB) >= 0.90 in BOTH channels at the exact doctrine frequencies",
+  "certified": false,
+  "verdict": "NOT CERTIFIABLE -- no persistent narrowband line stands at the doctrine pair at mastering depth; whatever energy lives at 200/213 Hz belongs to the programme (bass and voice), not to a discrete binaural layer."
+ },
+ "sigma_sweep_probe": {
+  "method": "2 s windows, 1 s hop; strongest peak-picked narrowband line per channel in 80-500 Hz; pair window = both channels hold a line with line-to-shoulder ratio > 6 dB",
+  "certification_threshold": "pair persistence >= 0.90 AND median ratio >= 10 dB in BOTH channels AND median |fR-fL| in [13,31] Hz AND |df| IQR >= 4 Hz (sweep, not detune)",
+  "ordered_layer": "a CONSTANT binaural pair beating at 13 Hz (Album II prompt pack, Track 1) -- the IQR clause above was written for a sweeping pair and cannot be met by the constant pair ordered; the measured separation is reported below as coordinates, not as a certificate",
+  "n_windows": 159,
+  "pair_windows": 153,
+  "pair_persistence": 0.962,
+  "median_ratio_L_db": 16.72,
+  "median_ratio_R_db": 16.94,
+  "median_abs_df_hz": 0.0,
+  "abs_df_iqr_hz": 2.5,
+  "frac_pair_windows_df_in_13_31": 0.0,
+  "frac_pair_windows_df_within_13_plusminus_2": 0.0,
+  "trajectory": [
+   {
+    "t": 0.0,
+    "fL": 207.5,
+    "fR": 208.5,
+    "df_hz": 1.0,
+    "ratio_L": 34.1,
+    "ratio_R": 35.57
+   },
+   {
+    "t": 1.0,
+    "fL": 207.5,
+    "fR": 208.0,
+    "df_hz": 0.5,
+    "ratio_L": 27.72,
+    "ratio_R": 28.52
+   },
+   {
+    "t": 2.0,
+    "fL": 349.0,
+    "fR": 350.0,
+    "df_hz": 1.0,
+    "ratio_L": 28.64,
+    "ratio_R": 30.24
+   },
+   {
+    "t": 3.0,
+    "fL": 261.0,
+    "fR": 348.5,
+    "df_hz": 87.5,
+    "ratio_L": 31.65,
+    "ratio_R": 25.15
+   },
+   {
+    "t": 4.0,
+    "fL": 348.0,
+    "fR": 349.0,
+    "df_hz": 1.0,
+    "ratio_L": 28.51,
+    "ratio_R": 28.73
+   },
+   {
+    "t": 5.0,
+    "fL": 310.0,
+    "fR": 393.5,
+    "df_hz": 83.5,
+    "ratio_L": 28.49,
+    "ratio_R": 21.37
+   },
+   {
+    "t": 6.0,
+    "fL": 262.0,
+    "fR": 349.0,
+    "df_hz": 87.0,
+    "ratio_L": 27.88,
+    "ratio_R": 27.81
+   },
+   {
+    "t": 7.0,
+    "fL": 348.5,
+    "fR": 349.5,
+    "df_hz": 1.0,
+    "ratio_L": 22.56,
+    "ratio_R": 27.74
+   },
+   {
+    "t": 8.0,
+    "fL": 412.5,
+    "fR": 348.5,
+    "df_hz": 64.0,
+    "ratio_L": 14.72,
+    "ratio_R": 25.78
+   },
+   {
+    "t": 9.0,
+    "fL": 261.5,
+    "fR": 207.5,
+    "df_hz": 54.0,
+    "ratio_L": 23.87,
+    "ratio_R": 18.76
+   },
+   {
+    "t": 10.0,
+    "fL": 348.0,
+    "fR": 414.5,
+    "df_hz": 66.5,
+    "ratio_L": 22.46,
+    "ratio_R": 21.22
+   },
+   {
+    "t": 11.0,
+    "fL": 232.0,
+    "fR": 233.5,
+    "df_hz": 1.5,
+    "ratio_L": 21.23,
+    "ratio_R": 20.7
+   },
+   {
+    "t": 12.0,
+    "fL": 263.0,
+    "fR": 263.0,
+    "df_hz": 0.0,
+    "ratio_L": 16.45,
+    "ratio_R": 16.5
+   },
+   {
+    "t": 13.0,
+    "fL": 104.0,
+    "fR": 104.0,
+    "df_hz": 0.0,
+    "ratio_L": 18.43,
+    "ratio_R": 18.03
+   },
+   {
+    "t": 14.0,
+    "fL": 259.5,
+    "fR": 259.5,
+    "df_hz": 0.0,
+    "ratio_L": 16.6,
+    "ratio_R": 16.45
+   },
+   {
+    "t": 15.0,
+    "fL": 105.0,
+    "fR": 105.0,
+    "df_hz": 0.0,
+    "ratio_L": 6.74,
+    "ratio_R": 6.72
+   },
+   {
+    "t": 16.0,
+    "fL": 131.5,
+    "fR": 131.5,
+    "df_hz": 0.0,
+    "ratio_L": 9.15,
+    "ratio_R": 9.08
+   },
+   {
+    "t": 18.0,
+    "fL": 100.0,
+    "fR": 100.0,
+    "df_hz": 0.0,
+    "ratio_L": 8.33,
+    "ratio_R": 8.15
+   },
+   {
+    "t": 19.0,
+    "fL": 260.5,
+    "fR": 80.0,
+    "df_hz": 180.5,
+    "ratio_L": 14.76,
+    "ratio_R": 6.04
+   },
+   {
+    "t": 20.0,
+    "fL": 260.0,
+    "fR": 260.0,
+    "df_hz": 0.0,
+    "ratio_L": 16.01,
+    "ratio_R": 14.29
+   },
+   {
+    "t": 21.0,
+    "fL": 131.0,
+    "fR": 131.0,
+    "df_hz": 0.0,
+    "ratio_L": 16.33,
+    "ratio_R": 15.83
+   },
+   {
+    "t": 22.0,
+    "fL": 131.5,
+    "fR": 131.5,
+    "df_hz": 0.0,
+    "ratio_L": 11.54,
+    "ratio_R": 11.55
+   },
+   {
+    "t": 23.0,
+    "fL": 131.5,
+    "fR": 131.5,
+    "df_hz": 0.0,
+    "ratio_L": 12.3,
+    "ratio_R": 12.3
+   },
+   {
+    "t": 24.0,
+    "fL": 116.5,
+    "fR": 116.5,
+    "df_hz": 0.0,
+    "ratio_L": 11.4,
+    "ratio_R": 11.45
+   },
+   {
+    "t": 25.0,
+    "fL": 104.0,
+    "fR": 104.0,
+    "df_hz": 0.0,
+    "ratio_L": 8.24,
+    "ratio_R": 8.09
+   },
+   {
+    "t": 26.0,
+    "fL": 293.0,
+    "fR": 293.0,
+    "df_hz": 0.0,
+    "ratio_L": 16.68,
+    "ratio_R": 17.84
+   },
+   {
+    "t": 27.0,
+    "fL": 292.0,
+    "fR": 292.0,
+    "df_hz": 0.0,
+    "ratio_L": 18.55,
+    "ratio_R": 17.64
+   },
+   {
+    "t": 28.0,
+    "fL": 131.5,
+    "fR": 131.5,
+    "df_hz": 0.0,
+    "ratio_L": 9.17,
+    "ratio_R": 9.7
+   },
+   {
+    "t": 29.0,
+    "fL": 261.0,
+    "fR": 348.5,
+    "df_hz": 87.5,
+    "ratio_L": 15.82,
+    "ratio_R": 24.01
+   },
+   {
+    "t": 30.0,
+    "fL": 100.0,
+    "fR": 100.0,
+    "df_hz": 0.0,
+    "ratio_L": 7.17,
+    "ratio_R": 7.25
+   },
+   {
+    "t": 32.0,
+    "fL": 292.0,
+    "fR": 260.5,
+    "df_hz": 31.5,
+    "ratio_L": 10.91,
+    "ratio_R": 14.26
+   },
+   {
+    "t": 33.0,
+    "fL": 341.0,
+    "fR": 262.0,
+    "df_hz": 79.0,
+    "ratio_L": 12.67,
+    "ratio_R": 14.7
+   },
+   {
+    "t": 34.0,
+    "fL": 131.0,
+    "fR": 348.5,
+    "df_hz": 217.5,
+    "ratio_L": 11.68,
+    "ratio_R": 21.77
+   },
+   {
+    "t": 35.0,
+    "fL": 131.5,
+    "fR": 131.5,
+    "df_hz": 0.0,
+    "ratio_L": 20.46,
+    "ratio_R": 20.32
+   },
+   {
+    "t": 36.0,
+    "fL": 272.0,
+    "fR": 272.0,
+    "df_hz": 0.0,
+    "ratio_L": 9.82,
+    "ratio_R": 9.66
+   },
+   {
+    "t": 37.0,
+    "fL": 232.5,
+    "fR": 229.0,
+    "df_hz": 3.5,
+    "ratio_L": 11.0,
+    "ratio_R": 10.53
+   },
+   {
+    "t": 38.0,
+    "fL": 103.0,
+    "fR": 103.0,
+    "df_hz": 0.0,
+    "ratio_L": 11.56,
+    "ratio_R": 11.45
+   },
+   {
+    "t": 39.0,
+    "fL": 103.5,
+    "fR": 103.5,
+    "df_hz": 0.0,
+    "ratio_L": 28.25,
+    "ratio_R": 30.12
+   },
+   {
+    "t": 40.0,
+    "fL": 104.5,
+    "fR": 104.5,
+    "df_hz": 0.0,
+    "ratio_L": 25.61,
+    "ratio_R": 25.29
+   },
+   {
+    "t": 41.0,
+    "fL": 139.5,
+    "fR": 139.5,
+    "df_hz": 0.0,
+    "ratio_L": 14.56,
+    "ratio_R": 14.77
+   },
+   {
+    "t": 42.0,
+    "fL": 349.5,
+    "fR": 349.5,
+    "df_hz": 0.0,
+    "ratio_L": 17.53,
+    "ratio_R": 19.24
+   },
+   {
+    "t": 43.0,
+    "fL": 97.0,
+    "fR": 97.0,
+    "df_hz": 0.0,
+    "ratio_L": 11.85,
+    "ratio_R": 12.8
+   },
+   {
+    "t": 44.0,
+    "fL": 348.0,
+    "fR": 85.0,
+    "df_hz": 263.0,
+    "ratio_L": 20.89,
+    "ratio_R": 6.24
+   },
+   {
+    "t": 45.0,
+    "fL": 87.0,
+    "fR": 87.0,
+    "df_hz": 0.0,
+    "ratio_L": 11.96,
+    "ratio_R": 12.42
+   },
+   {
+    "t": 46.0,
+    "fL": 87.0,
+    "fR": 87.0,
+    "df_hz": 0.0,
+    "ratio_L": 14.8,
+    "ratio_R": 14.57
+   },
+   {
+    "t": 47.0,
+    "fL": 129.5,
+    "fR": 129.5,
+    "df_hz": 0.0,
+    "ratio_L": 13.12,
+    "ratio_R": 11.88
+   },
+   {
+    "t": 48.0,
+    "fL": 88.0,
+    "fR": 87.0,
+    "df_hz": 1.0,
+    "ratio_L": 16.08,
+    "ratio_R": 15.65
+   },
+   {
+    "t": 49.0,
+    "fL": 116.0,
+    "fR": 116.0,
+    "df_hz": 0.0,
+    "ratio_L": 13.44,
+    "ratio_R": 13.1
+   },
+   {
+    "t": 50.0,
+    "fL": 115.5,
+    "fR": 117.5,
+    "df_hz": 2.0,
+    "ratio_L": 10.23,
+    "ratio_R": 9.8
+   },
+   {
+    "t": 51.0,
+    "fL": 104.0,
+    "fR": 104.0,
+    "df_hz": 0.0,
+    "ratio_L": 21.24,
+    "ratio_R": 21.7
+   },
+   {
+    "t": 52.0,
+    "fL": 138.5,
+    "fR": 138.5,
+    "df_hz": 0.0,
+    "ratio_L": 30.31,
+    "ratio_R": 29.42
+   },
+   {
+    "t": 53.0,
+    "fL": 103.0,
+    "fR": 103.0,
+    "df_hz": 0.0,
+    "ratio_L": 17.06,
+    "ratio_R": 16.57
+   },
+   {
+    "t": 54.0,
+    "fL": 87.0,
+    "fR": 87.0,
+    "df_hz": 0.0,
+    "ratio_L": 14.33,
+    "ratio_R": 14.65
+   },
+   {
+    "t": 55.0,
+    "fL": 87.0,
+    "fR": 87.0,
+    "df_hz": 0.0,
+    "ratio_L": 17.73,
+    "ratio_R": 17.62
+   },
+   {
+    "t": 56.0,
+    "fL": 130.0,
+    "fR": 130.0,
+    "df_hz": 0.0,
+    "ratio_L": 13.63,
+    "ratio_R": 13.25
+   },
+   {
+    "t": 57.0,
+    "fL": 349.0,
+    "fR": 131.0,
+    "df_hz": 218.0,
+    "ratio_L": 22.59,
+    "ratio_R": 17.24
+   },
+   {
+    "t": 58.0,
+    "fL": 348.0,
+    "fR": 347.0,
+    "df_hz": 1.0,
+    "ratio_L": 20.79,
+    "ratio_R": 19.85
+   },
+   {
+    "t": 59.0,
+    "fL": 87.5,
+    "fR": 87.5,
+    "df_hz": 0.0,
+    "ratio_L": 15.48,
+    "ratio_R": 15.54
+   },
+   {
+    "t": 60.0,
+    "fL": 86.5,
+    "fR": 86.5,
+    "df_hz": 0.0,
+    "ratio_L": 12.68,
+    "ratio_R": 12.39
+   },
+   {
+    "t": 61.0,
+    "fL": 87.5,
+    "fR": 87.5,
+    "df_hz": 0.0,
+    "ratio_L": 23.29,
+    "ratio_R": 23.11
+   },
+   {
+    "t": 62.0,
+    "fL": 98.5,
+    "fR": 98.5,
+    "df_hz": 0.0,
+    "ratio_L": 8.43,
+    "ratio_R": 8.35
+   },
+   {
+    "t": 63.0,
+    "fL": 350.5,
+    "fR": 350.0,
+    "df_hz": 0.5,
+    "ratio_L": 16.77,
+    "ratio_R": 17.02
+   },
+   {
+    "t": 64.0,
+    "fL": 232.5,
+    "fR": 104.0,
+    "df_hz": 128.5,
+    "ratio_L": 13.54,
+    "ratio_R": 12.48
+   },
+   {
+    "t": 65.0,
+    "fL": 260.0,
+    "fR": 262.5,
+    "df_hz": 2.5,
+    "ratio_L": 19.03,
+    "ratio_R": 20.4
+   },
+   {
+    "t": 66.0,
+    "fL": 130.5,
+    "fR": 259.5,
+    "df_hz": 129.0,
+    "ratio_L": 13.57,
+    "ratio_R": 19.12
+   },
+   {
+    "t": 67.0,
+    "fL": 394.5,
+    "fR": 393.0,
+    "df_hz": 1.5,
+    "ratio_L": 15.64,
+    "ratio_R": 18.37
+   },
+   {
+    "t": 68.0,
+    "fL": 101.0,
+    "fR": 100.0,
+    "df_hz": 1.0,
+    "ratio_L": 6.17,
+    "ratio_R": 6.05
+   },
+   {
+    "t": 69.0,
+    "fL": 100.0,
+    "fR": 100.0,
+    "df_hz": 0.0,
+    "ratio_L": 8.97,
+    "ratio_R": 8.8
+   },
+   {
+    "t": 71.0,
+    "fL": 130.5,
+    "fR": 261.0,
+    "df_hz": 130.5,
+    "ratio_L": 10.81,
+    "ratio_R": 17.09
+   },
+   {
+    "t": 72.0,
+    "fL": 131.0,
+    "fR": 131.0,
+    "df_hz": 0.0,
+    "ratio_L": 9.98,
+    "ratio_R": 11.34
+   },
+   {
+    "t": 73.0,
+    "fL": 131.5,
+    "fR": 131.5,
+    "df_hz": 0.0,
+    "ratio_L": 13.83,
+    "ratio_R": 14.11
+   },
+   {
+    "t": 74.0,
+    "fL": 131.5,
+    "fR": 131.5,
+    "df_hz": 0.0,
+    "ratio_L": 17.96,
+    "ratio_R": 18.07
+   },
+   {
+    "t": 75.0,
+    "fL": 116.5,
+    "fR": 116.5,
+    "df_hz": 0.0,
+    "ratio_L": 10.02,
+    "ratio_R": 10.09
+   },
+   {
+    "t": 76.0,
+    "fL": 390.5,
+    "fR": 117.0,
+    "df_hz": 273.5,
+    "ratio_L": 13.66,
+    "ratio_R": 6.5
+   },
+   {
+    "t": 77.0,
+    "fL": 346.0,
+    "fR": 104.0,
+    "df_hz": 242.0,
+    "ratio_L": 23.75,
+    "ratio_R": 17.91
+   },
+   {
+    "t": 78.0,
+    "fL": 207.5,
+    "fR": 207.5,
+    "df_hz": 0.0,
+    "ratio_L": 17.99,
+    "ratio_R": 18.66
+   },
+   {
+    "t": 79.0,
+    "fL": 172.0,
+    "fR": 131.5,
+    "df_hz": 40.5,
+    "ratio_L": 12.88,
+    "ratio_R": 6.96
+   },
+   {
+    "t": 80.0,
+    "fL": 131.5,
+    "fR": 416.0,
+    "df_hz": 284.5,
+    "ratio_L": 8.53,
+    "ratio_R": 18.85
+   },
+   {
+    "t": 82.0,
+    "fL": 100.0,
+    "fR": 100.0,
+    "df_hz": 0.0,
+    "ratio_L": 7.9,
+    "ratio_R": 8.05
+   },
+   {
+    "t": 84.0,
+    "fL": 347.0,
+    "fR": 415.0,
+    "df_hz": 68.0,
+    "ratio_L": 15.1,
+    "ratio_R": 17.71
+   },
+   {
+    "t": 85.0,
+    "fL": 131.0,
+    "fR": 131.0,
+    "df_hz": 0.0,
+    "ratio_L": 14.74,
+    "ratio_R": 14.0
+   },
+   {
+    "t": 86.0,
+    "fL": 133.5,
+    "fR": 131.5,
+    "df_hz": 2.0,
+    "ratio_L": 16.78,
+    "ratio_R": 16.19
+   },
+   {
+    "t": 87.0,
+    "fL": 133.5,
+    "fR": 133.5,
+    "df_hz": 0.0,
+    "ratio_L": 14.77,
+    "ratio_R": 14.79
+   },
+   {
+    "t": 88.0,
+    "fL": 261.0,
+    "fR": 261.0,
+    "df_hz": 0.0,
+    "ratio_L": 20.24,
+    "ratio_R": 18.89
+   },
+   {
+    "t": 89.0,
+    "fL": 104.0,
+    "fR": 104.0,
+    "df_hz": 0.0,
+    "ratio_L": 10.93,
+    "ratio_R": 10.1
+   },
+   {
+    "t": 90.0,
+    "fL": 138.5,
+    "fR": 105.0,
+    "df_hz": 33.5,
+    "ratio_L": 27.24,
+    "ratio_R": 25.36
+   },
+   {
+    "t": 91.0,
+    "fL": 104.5,
+    "fR": 104.5,
+    "df_hz": 0.0,
+    "ratio_L": 31.38,
+    "ratio_R": 30.48
+   },
+   {
+    "t": 92.0,
+    "fL": 103.5,
+    "fR": 103.5,
+    "df_hz": 0.0,
+    "ratio_L": 11.14,
+    "ratio_R": 11.35
+   },
+   {
+    "t": 93.0,
+    "fL": 104.0,
+    "fR": 103.5,
+    "df_hz": 0.5,
+    "ratio_L": 17.45,
+    "ratio_R": 16.82
+   },
+   {
+    "t": 94.0,
+    "fL": 348.5,
+    "fR": 98.5,
+    "df_hz": 250.0,
+    "ratio_L": 18.93,
+    "ratio_R": 10.2
+   },
+   {
+    "t": 95.0,
+    "fL": 348.0,
+    "fR": 86.0,
+    "df_hz": 262.0,
+    "ratio_L": 22.54,
+    "ratio_R": 8.5
+   },
+   {
+    "t": 96.0,
+    "fL": 86.0,
+    "fR": 86.0,
+    "df_hz": 0.0,
+    "ratio_L": 11.94,
+    "ratio_R": 11.77
+   },
+   {
+    "t": 97.0,
+    "fL": 87.0,
+    "fR": 87.0,
+    "df_hz": 0.0,
+    "ratio_L": 19.32,
+    "ratio_R": 19.22
+   },
+   {
+    "t": 98.0,
+    "fL": 87.5,
+    "fR": 87.5,
+    "df_hz": 0.0,
+    "ratio_L": 13.42,
+    "ratio_R": 13.62
+   },
+   {
+    "t": 99.0,
+    "fL": 131.0,
+    "fR": 131.0,
+    "df_hz": 0.0,
+    "ratio_L": 16.86,
+    "ratio_R": 16.11
+   },
+   {
+    "t": 100.0,
+    "fL": 87.0,
+    "fR": 87.0,
+    "df_hz": 0.0,
+    "ratio_L": 10.3,
+    "ratio_R": 10.37
+   },
+   {
+    "t": 101.0,
+    "fL": 117.0,
+    "fR": 117.0,
+    "df_hz": 0.0,
+    "ratio_L": 15.15,
+    "ratio_R": 14.12
+   },
+   {
+    "t": 102.0,
+    "fL": 104.0,
+    "fR": 104.0,
+    "df_hz": 0.0,
+    "ratio_L": 15.88,
+    "ratio_R": 16.47
+   },
+   {
+    "t": 103.0,
+    "fL": 208.0,
+    "fR": 393.5,
+    "df_hz": 185.5,
+    "ratio_L": 17.74,
+    "ratio_R": 16.94
+   },
+   {
+    "t": 104.0,
+    "fL": 104.0,
+    "fR": 104.0,
+    "df_hz": 0.0,
+    "ratio_L": 21.91,
+    "ratio_R": 21.45
+   },
+   {
+    "t": 105.0,
+    "fL": 86.5,
+    "fR": 86.5,
+    "df_hz": 0.0,
+    "ratio_L": 10.29,
+    "ratio_R": 10.06
+   },
+   {
+    "t": 106.0,
+    "fL": 87.0,
+    "fR": 87.0,
+    "df_hz": 0.0,
+    "ratio_L": 24.09,
+    "ratio_R": 24.78
+   },
+   {
+    "t": 107.0,
+    "fL": 130.0,
+    "fR": 130.0,
+    "df_hz": 0.0,
+    "ratio_L": 16.57,
+    "ratio_R": 14.44
+   },
+   {
+    "t": 108.0,
+    "fL": 349.0,
+    "fR": 129.5,
+    "df_hz": 219.5,
+    "ratio_L": 24.78,
+    "ratio_R": 13.44
+   },
+   {
+    "t": 109.0,
+    "fL": 87.0,
+    "fR": 87.0,
+    "df_hz": 0.0,
+    "ratio_L": 19.98,
+    "ratio_R": 20.0
+   },
+   {
+    "t": 110.0,
+    "fL": 86.5,
+    "fR": 86.5,
+    "df_hz": 0.0,
+    "ratio_L": 14.47,
+    "ratio_R": 14.21
+   },
+   {
+    "t": 111.0,
+    "fL": 87.0,
+    "fR": 87.0,
+    "df_hz": 0.0,
+    "ratio_L": 16.72,
+    "ratio_R": 16.7
+   },
+   {
+    "t": 112.0,
+    "fL": 87.5,
+    "fR": 87.5,
+    "df_hz": 0.0,
+    "ratio_L": 17.73,
+    "ratio_R": 17.54
+   },
+   {
+    "t": 113.0,
+    "fL": 310.5,
+    "fR": 311.0,
+    "df_hz": 0.5,
+    "ratio_L": 18.26,
+    "ratio_R": 19.53
+   },
+   {
+    "t": 114.0,
+    "fL": 350.5,
+    "fR": 98.0,
+    "df_hz": 252.5,
+    "ratio_L": 16.88,
+    "ratio_R": 11.58
+   },
+   {
+    "t": 115.0,
+    "fL": 104.0,
+    "fR": 104.0,
+    "df_hz": 0.0,
+    "ratio_L": 31.0,
+    "ratio_R": 31.65
+   },
+   {
+    "t": 116.0,
+    "fL": 82.5,
+    "fR": 82.5,
+    "df_hz": 0.0,
+    "ratio_L": 24.08,
+    "ratio_R": 22.32
+   },
+   {
+    "t": 117.0,
+    "fL": 82.5,
+    "fR": 82.5,
+    "df_hz": 0.0,
+    "ratio_L": 37.02,
+    "ratio_R": 38.11
+   },
+   {
+    "t": 118.0,
+    "fL": 130.0,
+    "fR": 130.0,
+    "df_hz": 0.0,
+    "ratio_L": 34.04,
+    "ratio_R": 33.85
+   },
+   {
+    "t": 119.0,
+    "fL": 87.0,
+    "fR": 87.0,
+    "df_hz": 0.0,
+    "ratio_L": 29.15,
+    "ratio_R": 28.97
+   },
+   {
+    "t": 120.0,
+    "fL": 98.0,
+    "fR": 98.0,
+    "df_hz": 0.0,
+    "ratio_L": 28.64,
+    "ratio_R": 30.31
+   },
+   {
+    "t": 121.0,
+    "fL": 105.0,
+    "fR": 105.0,
+    "df_hz": 0.0,
+    "ratio_L": 26.5,
+    "ratio_R": 24.74
+   },
+   {
+    "t": 122.0,
+    "fL": 104.5,
+    "fR": 175.5,
+    "df_hz": 71.0,
+    "ratio_L": 18.95,
+    "ratio_R": 22.19
+   },
+   {
+    "t": 123.0,
+    "fL": 82.0,
+    "fR": 82.0,
+    "df_hz": 0.0,
+    "ratio_L": 34.94,
+    "ratio_R": 36.44
+   },
+   {
+    "t": 124.0,
+    "fL": 87.0,
+    "fR": 87.0,
+    "df_hz": 0.0,
+    "ratio_L": 30.32,
+    "ratio_R": 29.65
+   },
+   {
+    "t": 125.0,
+    "fL": 87.0,
+    "fR": 87.0,
+    "df_hz": 0.0,
+    "ratio_L": 31.02,
+    "ratio_R": 31.08
+   },
+   {
+    "t": 126.0,
+    "fL": 466.5,
+    "fR": 131.5,
+    "df_hz": 335.0,
+    "ratio_L": 28.22,
+    "ratio_R": 28.0
+   },
+   {
+    "t": 127.0,
+    "fL": 140.0,
+    "fR": 140.0,
+    "df_hz": 0.0,
+    "ratio_L": 10.39,
+    "ratio_R": 9.46
+   },
+   {
+    "t": 128.0,
+    "fL": 351.5,
+    "fR": 103.0,
+    "df_hz": 248.5,
+    "ratio_L": 20.17,
+    "ratio_R": 12.4
+   },
+   {
+    "t": 129.0,
+    "fL": 138.0,
+    "fR": 352.5,
+    "df_hz": 214.5,
+    "ratio_L": 28.31,
+    "ratio_R": 15.83
+   },
+   {
+    "t": 130.0,
+    "fL": 104.5,
+    "fR": 104.5,
+    "df_hz": 0.0,
+    "ratio_L": 13.68,
+    "ratio_R": 14.24
+   },
+   {
+    "t": 131.0,
+    "fL": 138.5,
+    "fR": 349.0,
+    "df_hz": 210.5,
+    "ratio_L": 12.09,
+    "ratio_R": 17.84
+   },
+   {
+    "t": 132.0,
+    "fL": 349.5,
+    "fR": 348.5,
+    "df_hz": 1.0,
+    "ratio_L": 23.14,
+    "ratio_R": 22.73
+   },
+   {
+    "t": 133.0,
+    "fL": 350.0,
+    "fR": 350.0,
+    "df_hz": 0.0,
+    "ratio_L": 20.37,
+    "ratio_R": 19.41
+   },
+   {
+    "t": 134.0,
+    "fL": 87.0,
+    "fR": 87.0,
+    "df_hz": 0.0,
+    "ratio_L": 17.4,
+    "ratio_R": 17.16
+   },
+   {
+    "t": 135.0,
+    "fL": 86.5,
+    "fR": 86.5,
+    "df_hz": 0.0,
+    "ratio_L": 13.01,
+    "ratio_R": 15.56
+   },
+   {
+    "t": 136.0,
+    "fL": 87.5,
+    "fR": 87.5,
+    "df_hz": 0.0,
+    "ratio_L": 13.02,
+    "ratio_R": 13.41
+   },
+   {
+    "t": 137.0,
+    "fL": 86.5,
+    "fR": 86.5,
+    "df_hz": 0.0,
+    "ratio_L": 16.16,
+    "ratio_R": 16.31
+   },
+   {
+    "t": 138.0,
+    "fL": 87.5,
+    "fR": 87.5,
+    "df_hz": 0.0,
+    "ratio_L": 19.34,
+    "ratio_R": 20.16
+   },
+   {
+    "t": 139.0,
+    "fL": 117.5,
+    "fR": 392.0,
+    "df_hz": 274.5,
+    "ratio_L": 7.08,
+    "ratio_R": 18.31
+   },
+   {
+    "t": 141.0,
+    "fL": 104.0,
+    "fR": 138.0,
+    "df_hz": 34.0,
+    "ratio_L": 30.5,
+    "ratio_R": 30.66
+   },
+   {
+    "t": 142.0,
+    "fL": 104.5,
+    "fR": 104.5,
+    "df_hz": 0.0,
+    "ratio_L": 33.54,
+    "ratio_R": 33.15
+   },
+   {
+    "t": 143.0,
+    "fL": 86.5,
+    "fR": 86.5,
+    "df_hz": 0.0,
+    "ratio_L": 12.22,
+    "ratio_R": 11.71
+   },
+   {
+    "t": 144.0,
+    "fL": 87.0,
+    "fR": 87.0,
+    "df_hz": 0.0,
+    "ratio_L": 14.24,
+    "ratio_R": 14.62
+   },
+   {
+    "t": 145.0,
+    "fL": 130.0,
+    "fR": 130.0,
+    "df_hz": 0.0,
+    "ratio_L": 16.95,
+    "ratio_R": 17.29
+   },
+   {
+    "t": 146.0,
+    "fL": 130.5,
+    "fR": 130.5,
+    "df_hz": 0.0,
+    "ratio_L": 13.46,
+    "ratio_R": 14.12
+   },
+   {
+    "t": 147.0,
+    "fL": 348.5,
+    "fR": 348.5,
+    "df_hz": 0.0,
+    "ratio_L": 20.78,
+    "ratio_R": 22.12
+   },
+   {
+    "t": 148.0,
+    "fL": 87.5,
+    "fR": 87.5,
+    "df_hz": 0.0,
+    "ratio_L": 20.29,
+    "ratio_R": 20.33
+   },
+   {
+    "t": 149.0,
+    "fL": 87.0,
+    "fR": 87.0,
+    "df_hz": 0.0,
+    "ratio_L": 21.41,
+    "ratio_R": 21.94
+   },
+   {
+    "t": 150.0,
+    "fL": 87.0,
+    "fR": 87.0,
+    "df_hz": 0.0,
+    "ratio_L": 9.43,
+    "ratio_R": 8.92
+   },
+   {
+    "t": 151.0,
+    "fL": 131.5,
+    "fR": 131.5,
+    "df_hz": 0.0,
+    "ratio_L": 15.6,
+    "ratio_R": 14.77
+   },
+   {
+    "t": 152.0,
+    "fL": 393.0,
+    "fR": 130.0,
+    "df_hz": 263.0,
+    "ratio_L": 14.64,
+    "ratio_R": 14.32
+   },
+   {
+    "t": 153.0,
+    "fL": 350.0,
+    "fR": 350.5,
+    "df_hz": 0.5,
+    "ratio_L": 20.81,
+    "ratio_R": 18.28
+   },
+   {
+    "t": 154.0,
+    "fL": 261.0,
+    "fR": 312.5,
+    "df_hz": 51.5,
+    "ratio_L": 22.38,
+    "ratio_R": 19.44
+   },
+   {
+    "t": 155.0,
+    "fL": 312.5,
+    "fR": 311.0,
+    "df_hz": 1.5,
+    "ratio_L": 22.67,
+    "ratio_R": 23.14
+   },
+   {
+    "t": 156.0,
+    "fL": 349.0,
+    "fR": 349.0,
+    "df_hz": 0.0,
+    "ratio_L": 19.52,
+    "ratio_R": 20.49
+   },
+   {
+    "t": 157.0,
+    "fL": 347.5,
+    "fR": 347.5,
+    "df_hz": 0.0,
+    "ratio_L": 26.83,
+    "ratio_R": 27.13
+   },
+   {
+    "t": 158.0,
+    "fL": 350.5,
+    "fR": 347.0,
+    "df_hz": 3.5,
+    "ratio_L": 16.69,
+    "ratio_R": 18.31
+   }
+  ],
+  "certified": false,
+  "verdict": "NOT CERTIFIABLE under the precedent sweep bar -- the trajectory and the measured separation are printed in full so the finding can be re-weighed."
+ },
+ "key": {
+  "top3": [
+   {
+    "key": "F major",
+    "corr": 0.827
+   },
+   {
+    "key": "F minor",
+    "corr": 0.79
+   },
+   {
+    "key": "C minor",
+    "corr": 0.601
+   }
+  ],
+  "margin": 0.037,
+  "global_chroma": {
+   "C": 0.1546,
+   "C#": 0.054,
+   "D": 0.0675,
+   "D#": 0.0676,
+   "E": 0.0407,
+   "F": 0.1624,
+   "F#": 0.0332,
+   "G": 0.1073,
+   "G#": 0.1004,
+   "A": 0.0821,
+   "A#": 0.0876,
+   "B": 0.0426
+  },
+  "ordered": "D minor"
+ }
+}
