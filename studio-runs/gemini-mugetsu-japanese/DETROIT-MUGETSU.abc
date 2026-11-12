@@ -1,0 +1,68 @@
+% =====================================================================
+% DETROIT MUGETSU - ABC NOTATION (hook melody + piano riff + chant)
+% Single-song package for MUGETSU-GUMI (the Moonless Company)
+% =====================================================================
+% The hook melody below is an ORIGINAL DESK COMPOSITION, composed
+% by the desk for the filed hook lyric - built to the hook's rhythm
+% and verdict weight. It is a composition draft under the Flagpole,
+% not a transcription of any recording.
+% Production spec (from the strike prompt pack): Detroit bounce
+% trap, 144 BPM, G# minor (desk key choice: the song's family spine
+% is the Unfriendly Ghost album's 144 BPM / G# minor seat, and the
+% Brightmoor Signature's home pack - Album III - rides G# minor).
+% Key signature G# minor: F, C, G and D sound sharp.
+% Chords use the G# minor family: G#m (i), E (VI), C#m (iv),
+% D# (V).
+% Lyrics: gangsta-brief.txt in this folder (HOOK + VERSE 1 filed
+% text; VERSES 2-3 + OUTRO desk drafts) - folded byte-exact into
+% DETROIT-MUGETSU-PROMPT.md.
+% Flagpole of Claim and Coinage: Johnathan 'Qasparr' Monroe,
+% ARR, All Rights Reserved, Without Prejudice.
+% =====================================================================
+
+X:1
+T:Detroit Mugetsu
+C:Desk composition for the hook lyric (draft)
+M:4/4
+L:1/8
+Q:1/4=144
+K:G#m
+%%score 1 2
+%% Formation: KUROGANE verses (body) - YAMI SUNG hook (low alto,
+%% the hook as verdict) - SHION outro chant (see X:2).
+%% V:1 = the hook melody: a low declaration out of Brightmoor,
+%% rising to the dominant on the moonless-sky line, falling home
+%% dark, and landing the crown line on a held tonic -
+%% "a crown isn't stolen, it's worn."
+%% V:2 = the Brightmoor Signature piano riff: the four-note motif
+%% G# - E - D# - B opens every bar IDENTICALLY (the signature),
+%% the grand-piano arpeggio fills around the bar's chord.
+%% Hook lyric: "Detoroito umare, Buraitomuua sodachi..."
+V:1
+"G#m"G B d d B G B2|"E"e2 e d B c B2|"C#m"c c c B c e c2|"D#"d d f f g f d2|
+"G#m"g f d B d B G2|"E"e e e d c d e2|"C#m"G B c d e d c2|"D#"f f d B "G#m"B2 G2|]
+V:2
+G/2 E/2 D/2 B,/2 G/2 B/2 d/2 B/2 G/2 E/2 D/2 B,/2 G/2 B/2 d/2 g/2|
+G/2 E/2 D/2 B,/2 E/2 G/2 B/2 e/2 G/2 E/2 D/2 B,/2 E/2 G/2 B/2 e/2|
+G/2 E/2 D/2 B,/2 C/2 E/2 G/2 c/2 G/2 E/2 D/2 B,/2 C/2 E/2 c/2 G/2|
+G/2 E/2 D/2 B,/2 D/2 F/2 A/2 d/2 G/2 E/2 D/2 B,/2 D/2 F/2 d/2 A/2|
+G/2 E/2 D/2 B,/2 G/2 B/2 d/2 B/2 G/2 E/2 D/2 B,/2 G/2 B/2 d/2 b/2|
+G/2 E/2 D/2 B,/2 E/2 G/2 B/2 e/2 G/2 E/2 D/2 B,/2 B/2 e/2 g/2 e/2|
+G/2 E/2 D/2 B,/2 C/2 E/2 G/2 c/2 e/2 c/2 G/2 E/2 C/2 E/2 G/2 c/2|
+G/2 E/2 D/2 B,/2 D/2 F/2 A/2 d/2 f/2 d/2 A/2 F/2 G/2 B/2 d/2 G/2|]
+
+X:2
+T:Detroit Mugetsu - Outro (The Invocation)
+C:Desk composition for the chant (draft)
+M:4/4
+L:1/8
+Q:1/4=60
+K:G#m
+%% SHION alone, slow chant over silence: the four invocation
+%% lines of the trance-aid brief, one bar each, long tones in
+%% the moonless key. Drums out under the last line; one 808
+%% hit; hard stop.
+%% Chant: "Akuma no mai, Mugetsu. / Bitto Bankai wa sanmai
+%% nari. / Murasaki no honoo wa moyasazu, iyasu. / Tsuki
+%% naki sora ni mau."
+"G#m"G4 B4|"G#m"d4 B4|"E"e4 d4|"G#m"B4 G4|]
