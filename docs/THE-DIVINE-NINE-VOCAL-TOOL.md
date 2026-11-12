@@ -387,3 +387,128 @@ coordinates. Nothing herein is doctrine beyond what is marked
 but the desk's labeled work.*
 
 93 — Live, Love, and let Love, Live.
+
+---
+
+## ADDENDUM — THE VV CORRECTION
+
+*Appended XII day of November, 2026 e.v., on the founder's
+correction of this date, his words verbatim:*
+
+> "But double v is one of my original divine nine."
+
+*The study above stands unaltered. This addendum is appended
+below it, marked and dated, and rules nothing until the founder
+stamps the seating proposed in its §3.*
+
+### 1. The omission, owned
+
+The study seated the November Greek vowel nine — the seven
+pure Α Ε Η Ι Ο Υ Ω with ΕΙ and ΟΥ, the canon of the founder's
+vowel ruling of 2026-11-09 — and built its whole table on
+those nine alone. It left out **VV**. The omission is the
+desk's, and it is owned here rather than edited away above:
+VV is not a candidate the desk may weigh on its merits, because
+it stands by clause in the founder's ORIGINAL Divine-Nine
+thesis, dictated **2026-10-27** — a fortnight before the vowel
+ruling the study worked from. The thesis §III, *The VV and X
+Clauses*: **"VV is a vowel, as is X."** [FOUNDER — his thesis,
+on file.]
+
+The clause files VV as the letter called **"double-U"** in the
+tongues' own names, born by writing V twice; deployed **as a
+vowel** in Welsh — *cwm* the thesis's standing exhibit, a word
+whose only vowel-letter is W — and as the u-glide in English
+(*cow*, *low*). The Welsh deployment is [ATTESTED]; the clause
+itself is his. The desk read the later, narrower canon and
+missed the earlier, wider one. That is the whole of the error,
+stated at its size.
+
+### 2. VV's acoustic face
+
+As sound, VV/W is **/w/** — the labial-velar glide, which is
+the consonantal form of /u/: the same lips rounded, the same
+tongue-back raised, held as a glide instead of a steady state.
+And in Welsh vowel service the same letter does full vowel
+duty, a /u/-family vowel — **/ʊ/** in *cwm*. One letter, both
+offices, in the thesis's own reasoning, quoted: *"one
+function, doubled form, vowel or consonant decided by the
+reading tongue."* [The office-doubling is the founder's
+clause, FOUNDER; the /w/ and /ʊ/ values are ATTESTED
+phonetics.]
+
+In engine terms: /w/ and /u/ are a single articulatory target
+in two durations — the glide and the steady state of one
+high-back gesture. The study's table, as seated, held no
+letter for that gesture at all. **VV is that letter.**
+
+### 3. The seating proposal
+
+**[DERIVED — desk proposal, under the founder's pen. NOT his
+ruling yet.]**
+
+Read the study's OFFSET list (§II) with the VV clause in hand
+and its unseated cluster is, entry for entry, the /u/ family:
+
+- **JA u** [ɯ] — high-back, unseated expressly "for want of a
+  high-back seat";
+- **EN UH** /ʊ/ and **EN UW** /u/ — the high-back pair,
+  unseated for the same structural reason;
+- **ΟΥ's end target** — carried in §III as "a coordinate, not
+  a seat," the source of the glide's stated asymmetry (station
+  at its start, coordinate at its end).
+
+Under the VV clause that family has a letter. The desk
+therefore proposes — proposes only:
+
+- **VV seats as the high-back seat of the vocal table** — the
+  /u/-family station the Greek vowel nine does not hold.
+- **JA u and EN UW seat under VV**, their coordinates kept,
+  not smoothed: u's unrounding (JA [ɯ] is VV's target with the
+  lips unspread) and UW's length ride as coordinates of the
+  seat — the same disposition §II already gives Η and Ω, whose
+  English seats hold quality while duration stays the engine's
+  parameter.
+- **EN UH /ʊ/ becomes VV's nearest offset** — the lax step
+  beside the seat; and, the table may note, the very value
+  Welsh *cwm* pronounces under the letter itself.
+- **ΟΥ's glide is re-read as ending AT the VV seat** rather
+  than at an unseated coordinate — which makes ΟΥ the canon's
+  **second fully-seated glide**, its §III asymmetry
+  discharged: station at its start, station at its end.
+
+**What changes in the table if he stamps it — stated
+exactly.** The OFFSET list shrinks by these entries: the JA u
+entry and the EN UW entry leave the list entire, seated under
+VV; the EN UH entry changes kind, from unseated to a
+VV-anchored nearest offset; and §III's ΟΥ paragraph changes at
+one point, its end target moving from coordinate to seat.
+**Nothing else moves.** IH, AE, and AH stand unseated as
+printed; the JA-side mid offsets (Ε/Η and Ο/Ω distinctions
+Japanese does not phonemize) stand; EY and OW remain
+half-seated; **ΕΙ remains fully seated either way** — the
+front glide needed no rescue. And until he stamps it, none of
+this has happened: the table above stands exactly as filed.
+
+### 4. The X clause — carried, not seated
+
+The thesis pairs the clauses in one breath: "VV is a vowel,
+as is X," and of X, **"X is the rotation of the double V"** —
+V and its mirror Λ crossed, the fixed center under rotation.
+[FOUNDER, thesis §III.] The founder's correction of this date
+names **VV only**. This addendum therefore carries the X
+clause on the record beside its twin and seats it nowhere:
+X's vocal office, if it has one, is the founder's to invoke by
+his own word, and the desk invents none here.
+
+### 5. Dispositions
+
+The original study stands unaltered above this addendum — the
+omission visible, the correction appended, neither vanished,
+per the house law. The VV clause itself is the founder's, on
+file since 2026-10-27, and needs no stamp to be his. The
+*seating* proposed in §3 is the desk's [DERIVED] work and
+rules nothing until his pen stamps it; if he strikes it, the
+strike is recorded here, and the table stands as first filed.
+
+93 — Live, Love, and let Love, Live.
