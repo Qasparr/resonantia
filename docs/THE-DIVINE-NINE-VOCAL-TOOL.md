@@ -511,4 +511,20 @@ file since 2026-10-27, and needs no stamp to be his. The
 rules nothing until his pen stamps it; if he strikes it, the
 strike is recorded here, and the table stands as first filed.
 
+**RATIFIED — the same day, XII day of November, 2026 e.v.**
+The founder's stamp, verbatim: **"Seat it — VV takes the
+/u/ family."** The §3 seating is therefore RULED for this
+vocal table: **VV is the high-back seat.** JA u [ɯ] and EN
+UW /u/ seat under VV, their coordinates kept as printed in
+§3; EN UH /ʊ/ stands as VV's named nearest offset; ΟΥ is
+re-read as ending AT the VV seat and stands as the canon's
+second fully-seated glide beside ΕΙ. Nothing else in the
+table moves: EN IH, AE, AH remain unseated as printed; the
+JA-side mid offsets stand; EY and OW remain half-seated.
+The proposal's [DERIVED] marking is preserved above as the
+record of its road to ratification; from this line down,
+the seating is the founder's doctrine for the vocal tool.
+The X clause remains carried and unseated, awaiting his
+word as before.
+
 93 — Live, Love, and let Love, Live.
