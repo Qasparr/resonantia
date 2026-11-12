@@ -527,4 +527,32 @@ the seating is the founder's doctrine for the vocal tool.
 The X clause remains carried and unseated, awaiting his
 word as before.
 
+**PROPRIETY AUDIT — the founder's condition, checked the
+same day.** His stamp carried a condition, verbatim:
+"Unless that is improper to the divine nine study
+conclusion." The desk audited the seating against the
+Nine Vowels essay's Gate (§XI) and the thesis (§III).
+Verdict: **NOT IMPROPER — the stamp stands.** Coordinates:
+(1) The Gate's canon is untouched — the seven weigh 1,294
+and the founder's two hybrids complete the nine at 1,779
+in Greek isopsephy; VV carries no value in that table, is
+not counted in the 1,779, and is not seated as a tenth
+vowel of the canon. The vocal table is an acoustic
+interlingua in the [CONSTRUCTED] register, a different
+table by the house's own fencing. (2) The Gate's fencing
+(item 2) forbids seating the founder's extensions as an
+ancient canon; VV is seated under no such claim — its
+warrant is the founder's own clause of 2026-10-27
+[FOUNDER], with the Welsh deployment [ATTESTED] as a
+modern tongue's exhibit, never a Greek seat. (3) The
+thesis §III left the VV clause as "the author's to
+stamp"; the founder's stamp of this day is that stamp,
+exercised and scoped to this vocal table — it canonizes
+nothing beyond this register. The seating would become
+improper only if a downstream printing counted VV into
+the 1,779, called it a Greek seat, or read this
+ratification as canonizing the clause beyond the vocal
+register; none of the three occurs in the filed texts,
+and any future printing that does so misprints it.
+
 93 — Live, Love, and let Love, Live.
