@@ -282,3 +282,48 @@ All Rights Reserved, Without Prejudice.
 93 — Live, Love, and let Love, Live.
 
 ADDENDUM — 2026-11-10 21:12 EST: GROK TESTED. The founder struck the same explicit brief in Grok (share link inspected by the desk in a live browser). Grok produced TEXT ONLY: its own 93-bar lyric draft + production notes. On "Generate the song" it answered in its own words that no music-generation capability is available in that conversation. No audio, no video, no media element on the page; nothing downloadable but the brief itself. Desk conclusion: Grok is a drafting desk, not a studio. Road state: Gemini remains the only proven external singing engine (quota exhausted for the week of 2026-11-10); Meta AI's share path yields dead artifacts; the house MusicGen bench stands as the other road.
+
+## VOCAL-BENCH CANDIDATES — THE ROADMAP (entered 2026-11-12)
+
+Two engines stand filed as candidates for a house vocal bench.
+Neither is adopted; both wait on gates the founder alone opens.
+Order is the founder's, accepted 2026-11-12.
+
+**FIRST CANDIDATE — ACE STUDIO (Timedomain).** A desktop
+application, Windows and macOS ONLY — no Linux build, no phone
+road, and this box cannot host it. It consumes finished MIDI +
+lyrics and renders expressive sung vocals from 140+ royalty-free
+AI voices in 8 languages, Japanese among them, with note-level
+performance editing; rendering is cloud-side and credit-metered
+(Artist 2,500 credits/month, Pro 5,000). Pricing, checked
+2026-11-12 against vendor listings and reviews: Artist
+≈ $16.58/month billed annually (≈ $199/year), Pro ≈ $22/month
+(≈ $264/year); rent-to-own converts to a lifetime licence after
+two years; lifetime one-time $398/$528 list. A reported
+Trustpilot pattern stands against its storefront: the advertised
+"free start" funnels to an upfront annual payment, and no free
+tier is confirmed. House assessment: ACE files FIRST because it
+performs the house's own finished notation — the sheet is the
+input, so the drift this finding measures has no door: no clock
+to settle, no crown to move, no refrain to invent. Gates, all
+three standing: (a) a Windows or Mac machine in the house;
+(b) the annual fee — a founder money decision, the same shape
+as the Lyria billing gate; (c) the output-licensing terms read
+in full before anything rendered on it is offered for sale.
+Voice cloning exists on its plans; house law stays register-only
+regardless — a register is a spec, a likeness is a person. First
+test, when a machine exists: the DETROIT MUGETSU hook MIDI
+(studio-runs/gemini-mugetsu-japanese/DETROIT-MUGETSU-HOOK-TEST.mid),
+Kurogane's seat.
+
+**SECOND CANDIDATE — YuE / YuE2 (the Lyra acoustic stage).**
+An open-source lyrics-to-song engine: style + lyrics in, a whole
+song with vocals out. Entered 2026-11-10 as the next house-bench
+candidate for the day there is a GPU under it — the main road
+wants CUDA and 7B-class weights, YuE2-3B ships as an
+Apple-Silicon MLX app, and this box (6 GB RAM, no GPU) cannot
+carry either. It stands second, not struck: where ACE performs
+a written line, YuE generates the whole performance — the
+supplier's road again, with drift's door open — but it is open
+source, it is ours to keep, and the day a GPU enters the house
+it is the first thing the bench tries.
