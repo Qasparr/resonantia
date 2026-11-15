@@ -753,3 +753,134 @@ fence; the hardware is the gate; the gaps are printed at the
 same size as the findings.*
 
 93 — Live, Love, and let Love, Live.
+
+---
+
+## APPENDIX — ABC & LICENCE CONFORMANCE CHECK
+### XV day of November 2026 e.v. (Dies Solis) — desk verification under the founder's delegation of 2026-11-15
+
+**Commission.** The study above (§II, §III) was filed
+2026-11-12 as a read of pinned sources. This appendix re-checks
+its load-bearing claims against the *current* primary sources,
+fetched live on 2026-11-15: the repository
+`multimodal-art-projection/YuE` (`README.md`,
+`docs/generation.md`, `LICENSE`, `MODEL_LICENSE`, all read at
+`main`), and the GitHub API record of `main`'s HEAD. Verdicts
+are PASS / FAIL per claim, each with its source; anything not
+re-checked is marked NOT VERIFIED with the coordinates that
+would settle it. No weights were downloaded and nothing was
+installed for this check; it is a documentary conformance pass,
+not a runtime probe (the study's §IV.5 hardware gate stands:
+YuE2 does not run on this box).
+
+**Claim 0 — No upstream drift since the study. PASS.**
+The GitHub API reports `main` HEAD at
+`1116bea76032bee5668e5f097294d082fa0b84f0` (2026-11-01) —
+*identical* to the commit the study pinned. The sources below
+are therefore not merely consistent with the study's read;
+they are the same revision the study read.
+
+**Claim 1 — User-supplied ABC is a documented, first-class
+request input. PASS.**
+README quick-start table: "`abc=...` | Supply your own score
+in `full` or `melody` mode." `docs/generation.md`: "Supplying
+`abc` uses that composition directly; it requires `full` or
+`melody`." The README's cover and edit workflows pass a score
+file through the same field (and the CLI's `--abc-file`).
+Source: `README.md`; `docs/generation.md`, "Style, lyrics,
+and planning."
+
+**Claim 2 — What the ABC constrains is the composition:
+melody, harmony, structure. PASS, with the study's dialect
+caveat confirmed.**
+`docs/generation.md`, "What the score controls": the native
+score carries the two melody parts `Vocal` and `Ins`, with
+chord symbols in `full` mode; a third ABC voice "does not
+provide an independently controlled part"; "Arbitrary ABC
+dialects may need conversion" to the native dialect. A
+supplied score is used *directly* as the composition
+(Claim 1) — pitches, harmony, and form are the input's, not
+the model's invention. Source: `docs/generation.md`.
+
+**Claim 3 — The ABC does NOT hard-constrain waveform timing.
+PASS — the study's central softening is verbatim in the
+current source.**
+`docs/generation.md`: "Meter, tempo and note durations
+condition generation; they are not hard timing constraints on
+the waveform." The filed formulation — composition-hard,
+timing-soft — stands exactly as printed at §II.
+
+**Claim 4 — No phoneme, reference-singer, or per-section
+singer-identity channel exists in the documented surface.
+PASS.**
+`docs/generation.md`: "The request has no phoneme override,
+reference-speaker input, or per-section singer identity
+field." Language remains a free-text element of `style`,
+with no phonetic channel behind it, as filed at §I.2/§V.
+
+**Claim 5 — Code licence: Apache 2.0. PASS.**
+`LICENSE` at `main` is the standard Apache License, Version
+2.0, January 2004, read in full for this check — the same
+instrument the study read at §III.1. Source: `LICENSE`.
+
+**Claim 6 — Weights licence: CC BY-NC 4.0. PASS.**
+`MODEL_LICENSE` at `main` opens: "The YuE2-3B, YuE2-Vae and
+YuE2-Vae-legacy checkpoint weights are licensed under
+Creative Commons Attribution-NonCommercial 4.0 International
+(CC BY-NC 4.0)." Source: `MODEL_LICENSE`.
+
+**Claim 7 — The dated individual-creator permission exists
+as filed, and covers output monetization. PASS.**
+`MODEL_LICENSE`, section headed "Individual creator
+permission and academic use (2026-09-16)": licensors "grant
+personal users, content creators and musicians acting in an
+individual capacity permission to use the model weights free
+of charge to generate outputs, and to publish, distribute,
+sell, license or otherwise monetize those outputs"; the
+NonCommercial restriction is waived "to the extent
+necessary" for those users; "Generated outputs are not
+subject to the model weights' NonCommercial restriction
+solely because they were generated with YuE2." Source:
+`MODEL_LICENSE`.
+
+**Claim 8 — The permission's fences stand as filed: no
+company use, no commercial redistribution of the weights,
+responsible use as a condition. PASS.**
+Same instrument: "The individual creator permission does
+not authorize commercial use of the model weights by
+companies"; "This permission concerns generating and using
+outputs; it does not extend to commercial redistribution or
+sale of the model weights"; "Responsible use is a condition
+of this additional permission." Attribution for shared
+weights remains a CC BY-NC duty; credit on outputs is
+encouraged, not required. Source: `MODEL_LICENSE`.
+
+**Claim 9 — The demonstrated language world is English and
+Mandarin only (§V). NOT RE-VERIFIED in this pass.**
+The repository documents re-read above do not speak to demo
+languages either way; the study's claim rested on the model
+card's demo list. It stands as filed, neither confirmed nor
+disturbed here. *Coordinates that would settle it:* the
+Hugging Face model card `m-a-p/YuE2-3B` and the project demo
+page `map-yue2.github.io`, re-read in full.
+
+**Claim 10 — Runtime behaviour (speeds, quality, CPU
+feasibility). NOT VERIFIED — and not verifiable from here.**
+No runtime probe was performed; this box has no GPU and
+~6–8 GB RAM, below every documented-useful configuration
+(§IV). The study's hardware figures remain source-reported
+measurements by the upstream project, exactly as filed.
+
+**Appendix verdict.** Every ABC-conformance and licence
+claim this appendix set out to test — Claims 0–8 — **PASSES**
+against the current primary sources, which are the identical
+revision the study read. The filed study's answer therefore
+stands unamended: a house ABC score goes into YuE2 through
+the front door as a first-class input; it hard-constrains
+the composition and does not hard-constrain the waveform's
+timing; the code is Apache 2.0; the weights are CC BY-NC 4.0
+under a dated individual-creator permission that frees an
+individual's outputs — his named case — and no one else's
+weights, company, or product.
+
+93 — Live, Love, and let Love, Live.
