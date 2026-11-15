@@ -1,0 +1,127 @@
+{
+  "spec": {
+    "key": "G minor",
+    "bpm": 92.0,
+    "bars": 26,
+    "loop": [
+      "Gm",
+      "Gm",
+      "Eb",
+      "F"
+    ],
+    "swing": 0.14
+  },
+  "vocal_notes": {
+    "missing": [],
+    "overhang_s": {}
+  },
+  "lines_rendered": 28,
+  "staging": {
+    "backing_gain_db": -11.96,
+    "vocal_gain_db": 14.76,
+    "backing_rms_dbfs": -21.0,
+    "vocal_rms_dbfs": -18.0
+  },
+  "stem_print_gain_db": {
+    "backing-stem.wav": 0.0,
+    "vocal-stem.wav": -3.27
+  },
+  "premix": {
+    "rms_dbfs": -16.24,
+    "peak_dbfs": 3.18
+  },
+  "four_powers": {
+    "scire": {
+      "stage": "metering / measurement (BS.1770)",
+      "lufs_integrated": -14.45,
+      "true_peak_dbtp": 3.18,
+      "sample_peak_dbfs": 3.18,
+      "rms_dbfs": -16.24,
+      "crest_db": 19.42
+    },
+    "velle": {
+      "engaged": true,
+      "eq": [
+        {
+          "type": "peak",
+          "freq_hz": 3000.0,
+          "gain_db": 1.5,
+          "q": 1.0
+        },
+        {
+          "type": "highshelf",
+          "freq_hz": 8000.0,
+          "gain_db": 1.0,
+          "q": 1.0
+        }
+      ],
+      "comp": {
+        "threshold_db": -18.0,
+        "ratio": 2.0,
+        "knee_db": 6.0,
+        "attack_ms": 10.0,
+        "release_ms": 120.0,
+        "makeup_db": 0.0,
+        "max_gain_reduction_db": 10.5,
+        "mean_gain_reduction_db": 4.15
+      },
+      "rms_delta_db": -5.69,
+      "peak_delta_db": -9.65
+    },
+    "audere": {
+      "stage": "limiting (soft limit + true-peak ceiling trim; the ceiling outranks the loudness)",
+      "target_lufs": -14.0,
+      "ceiling_dbtp": -1.0,
+      "gain_applied_db": 6.36,
+      "trim_db": 0.0,
+      "lufs_after": -14.0,
+      "true_peak_dbtp": -1.08,
+      "ceiling_overrode_loudness": false
+    },
+    "tacere": {
+      "stage": "headroom accounting + dither on export",
+      "ceiling_dbtp": -1.0,
+      "delivered_true_peak_dbtp": -1.08,
+      "headroom_dbtp": 0.08,
+      "dither": {
+        "applied": true,
+        "type": "TPDF",
+        "bits": 24
+      }
+    },
+    "vapour": {
+      "engaged": false,
+      "drive_db": 0.0,
+      "crest_before_db": 15.46,
+      "crest_after_db": 15.46,
+      "rms_delta_db": 0.0
+    },
+    "rgba8888": {
+      "R_know_scire": 178,
+      "G_dare_audere": 244,
+      "B_will_velle": 206,
+      "A_silent_vapour_tacere": 2,
+      "hex": "#B2F4CE02",
+      "mapping": "R = integrated LUFS (-48..0), G = delivered true peak dBTP (-24..0), B = crest dB (0..24), A = headroom dBTP (0..12); linear, clamped -- a display convention over measured values"
+    }
+  },
+  "final": {
+    "file": "spear-and-magickal-helm-resonantia.wav",
+    "sr": 48000,
+    "duration_s": 68.326,
+    "lufs_integrated": -14.0,
+    "true_peak_dbtp": -1.08,
+    "sample_peak_dbfs": -1.08,
+    "bits": 24
+  },
+  "vocal-stem.wav": {
+    "duration_s": 68.326,
+    "rms_dbfs": -18.0,
+    "peak_dbfs": 2.27
+  },
+  "backing-stem.wav": {
+    "duration_s": 68.326,
+    "rms_dbfs": -21.0,
+    "peak_dbfs": -9.19
+  }
+}
