@@ -13,3 +13,7 @@ android/app/src/main/assets/www/logo.webp
 android/app/build/
 android/.gradle/
 android/local.properties
+
+# diffsinger-lab: experiment sandbox - venv, cloned engine, voicebanks,
+# vocoder weights and downloads are local assets, never repo content
+diffsinger-lab/
