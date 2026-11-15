@@ -137,7 +137,7 @@ def figure_cell():
 # Spec handling.
 # ---------------------------------------------------------------------
 
-def normalize_arpeggio_spec(raw, default_seed=93):
+def normalize_arpeggio_spec(raw, default_seed=93, tuning_hz=440.0):
     """Validate a spec's "arpeggio" block; return the normalized copy.
 
     MECHANISM: same contract style as the rest of the studio --
@@ -146,10 +146,16 @@ def normalize_arpeggio_spec(raw, default_seed=93):
     range stops at parity); orbit_hz is the spatial lap rate;
     strength scales the humanizer; mode_overrides maps a spine
     section INDEX (as a string, JSON's way) to a mode, outranking
-    the density map for that section.
+    the density map for that section. tuning_hz is the spec's
+    tuning reference (the pipeline validates it, 400..480, house
+    default 440): the staff pitches are realized against it, so
+    the founder's 432 lock flattens the dancer by exactly
+    1200*log2(432/440) cents -- and at 440 the render is the
+    house's standing render, to the bit.
     """
     if not isinstance(raw, dict):
         raise ValueError("arpeggio: must be an object")
+    tuning_hz = float(tuning_hz)
     level_db = float(raw.get("level_db", DEFAULT_LEVEL_DB))
     if not -30.0 <= level_db <= 0.0:
         raise ValueError(
@@ -182,7 +188,10 @@ def normalize_arpeggio_spec(raw, default_seed=93):
         overrides[idx] = str(mode)
     return {"level_db": level_db, "orbit_hz": orbit_hz,
             "strength": strength, "seed": seed,
-            "mode_overrides": overrides}
+            "mode_overrides": overrides,
+            "tuning_hz": tuning_hz,
+            "tuning_cents": round(
+                1200.0 * math.log2(tuning_hz / 440.0), 1)}
 
 
 def mode_for_section(index, section, overrides=None):
@@ -417,7 +426,13 @@ def render_arpeggio(arp, spine, sr=48000):
         end = min(n, at + dur)
         if at >= n or end <= at:
             continue
-        f0 = midi_to_freq(ev["midi"])
+        # The staff pitch, realized against the spec's tuning
+        # reference: midi_to_freq speaks A4=440, and the ratio
+        # carries the whole line to the ordered reference (at the
+        # house default the ratio is exactly 1.0 -- the standing
+        # render, unchanged to the bit).
+        f0 = midi_to_freq(ev["midi"]) \
+            * (arp.get("tuning_hz", 440.0) / 440.0)
         contour[at // hop:(end - 1) // hop + 1] = f0
         spans.append((at, end, ev))
     human = humanize_contour(contour, hop / sr,
@@ -451,6 +466,8 @@ def render_arpeggio(arp, spine, sr=48000):
         "orbit_hz": arp["orbit_hz"],
         "strength": arp["strength"],
         "seed": arp["seed"],
+        "tuning_hz": arp.get("tuning_hz", 440.0),
+        "tuning_cents": arp.get("tuning_cents", 0.0),
         "total_notes": len(spans),
         "sections": [
             {"name": sec["name"], "bars": int(sec["bars"]),

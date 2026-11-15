@@ -98,7 +98,8 @@ median, 50–1000 Hz) — `carriers_hz: [left, right]`.
      "seconds": "number, REQUIRED in effect, 3..30"}
   ],
   "seed": "int, default 93 — section i renders with seed + i",
-  "performance": "object, optional — Proof No. 4's road (see 'The performance' below): {takes: int 2..16 (default 7), take_seconds: 3..30 (default 30), continue_seconds: 2..10 (default 5.0), warmup_takes: int 0..4 (default 0; at least 2 kept takes must remain), single_session: bool (default false)}. Present, it replaces sections wholesale, forbids spine and per-section prompts, and excludes the Sigma layer by design",
+  "performance": "object, optional — Proof No. 4's road (see 'The performance' below): {takes: int 2..16 (default 7), take_seconds: 3..30 (default 30), continue_seconds: 2..10 (default 5.0), warmup_takes: int 0..4 (default 0; at least 2 kept takes must remain), single_session: bool (default false), aim_seconds: [min, max] optional — the brief's program-length aim the manifest note weighs against (default the proofs' 180..210), sigma: object optional — the Caprice clause (see below)}. Present, it replaces sections wholesale, forbids spine and per-section prompts, and excludes the Sigma layer unless the clause orders one in",
+  "production_notes": "array of 1..20 non-empty strings, optional — the founder's production spec for the track (front line, arrangement rulings, the lyric sheet served), carried onto a performance run's composition.abc as its PRODUCTION block",
   "chained": "bool, optional — render each section CONTINUED from its predecessor's audio tail (see 'The chain' below)",
   "continue_seconds": "number 2..10, default 5.0 — how much of the predecessor's tail conditions a chained section",
   "crossfade_bars": "int 1..8, optional — stitch overlaps in whole bars at the spine's tempo instead of the legacy 2 s (spine specs only in effect)",
@@ -109,8 +110,12 @@ median, 50–1000 Hz) — `carriers_hz: [left, right]`.
   },
   "master": {
     "target_lufs":   "number, default -14.0, range -30..-6",
-    "ceiling_dbtp":  "number, default -1.0, range -3..-0.1"
+    "ceiling_dbtp":  "number, default -1.0, range -3..-0.1",
+    "dither":        "bool, default true — Tacere's TPDF dither at the 24-bit export word, seeded from the spec's seed; false is the recorded opt-out"
   },
+  "velle": "object, optional — the Will (Four Powers): EQ + compression, engaged only when ordered. {eq: [{type: lowshelf | peak | highshelf, freq_hz: 20..18000, gain_db: -12..12, q: 0.3..6}], comp: {threshold_db: -48..0, ratio: 1..10, knee_db: 0..24, attack_ms: 0.1..250, release_ms: 10..1000, makeup_db: 0..12}}. Absent, the chain is flat and the manifest says so",
+  "vapour": "object, optional — saturation (the audio vapour): {drive_db: 0..24, default 0}. Drive 0 or absent is OFF; the stage is confessed in the manifest either way",
+  "tuning_hz": "number, default 440.0, range 400..480 — the tuning reference for the synthesis paths that consume one (today: the arpeggio's staff realization; 432.0 is the founder's lock). Never retunes existing masters",
   "spine": {
     "bpm":       "number, REQUIRED inside spine, range 40..240",
     "swing":     "number, default 0.0, range 0..0.6 (off-step delay)",
@@ -132,6 +137,33 @@ median, 50–1000 Hz) — `carriers_hz: [left, right]`.
   "out_dir": "string, REQUIRED — created if missing"
 }
 ```
+
+**The Four Powers mastering chain.** Every run — section road and
+performance road alike — walks the chain the founder named
+(2026-11-15), implemented in `resonance.studio.four_powers` and
+recorded in the manifest's `four_powers` section with each stage's
+measured values. **Scire (Know)** is metering: BS.1770 integrated
+loudness, true peak, sample peak, RMS and crest of the mix as it
+stands, before anything touches it. **Velle (Will)** is EQ +
+compression (the `velle` block): a zero-phase FFT EQ over smooth
+shelf/peak curves and a stereo-linked block compressor — engaged
+only when a spec orders it; unordered, the report reads
+`"engaged": false` and the signal is bit-identical. **Audere
+(Dare)** is limiting: the standing `master_signal` law — gain to
+target, soft limit, true-peak ceiling enforced by trim, the
+ceiling outranking the loudness. **Tacere (Silent)** is the
+headroom accounting (ceiling minus delivered true peak, measured)
+plus the export dither: TPDF at the 24-bit word, seeded from the
+spec's seed (`master.dither`, default on). Beside the four stands
+**Vapour** — saturation, the founder's audio vapour: a tanh stage
+normalized so full scale stays full scale, ordered by
+`vapour.drive_db`, off unless ordered, its crest before/after
+measured into the manifest. The section also carries the
+**RGBA8888 metering map** (R = Know, G = Dare, B = Will,
+A = Silent/Vapour) — a documented linear display mapping over the
+measured values, for persona/metering faces; it is metadata, not
+a measurement. The `tuning` block records the run's
+`tuning_hz` reference and what it applied to.
 
 **The spine (optional).** MusicGen has no clock: Proof No. 1 asked
 for 93 BPM in prompt prose and the bed realized ~62. When a spec
@@ -240,6 +272,30 @@ performance's own sheet: it notates nothing, states the invariant
 prompt and the measured record, and marks the performance's
 transcription **owed** — never fabricated.
 
+**The Caprice clause (`"sigma"` inside `"performance"`, plus
+`"production_notes"`).** The proofs' exclusion of Sigma was a
+test's hygiene, not a production law. A production performance
+may be ordered WITH its ground: `"sigma": {"mode": "fixed" |
+"drift", "left_hz": 200.0, "right_hz": 213.0, "beat_min_hz":
+13.0, "beat_max_hz": 31.0, "period_s": 60.0, "gain_db": -28.0}`.
+`fixed` strikes the pair exactly as the section road does;
+`drift` holds the pair's mean carrier and lets the beat
+oscillate sinusoidally across `[beat_min_hz, beat_max_hz]`, one
+full dance per `period_s` (the carriers are phase integrals of
+the instantaneous frequencies — continuous everywhere). The
+layer is mixed after the widening (the Stereo Law never
+processes Sigma) at `gain_db` under the bed's RMS, struck to
+`sigma.wav` at mix level, and **measured from the stem as
+rendered**: whole-stem per-channel FFT peaks plus, for drift,
+the weighed beat trajectory (4 s windows, 2 s hop) — the
+manifest's `sigma` block carries design and measurements, and
+the run's notes quote them. `"production_notes"` (top level)
+lists the founder's production spec for the track; the sheet
+carries it as a PRODUCTION block beside the Sigma design and
+its measurements. Absent the clause, a performance still
+excludes Sigma and the manifest confesses the absence, exactly
+as the proofs did.
+
 **The motif (optional).** A bed stitched from independently
 generated sections has no memory: Proof No. 2's founder verdict
 named it a *Frankenstein beat* — parts that groove, a whole that
@@ -336,6 +392,17 @@ Progress and logs go to stderr only. Key fields:
              "sample_peak_db": -1.02, "true_peak_dbtp": -1.02,
              "ceiling_overrode_loudness": false,
              "target_lufs": -14.0, "ceiling_dbtp": -1.0},
+  "four_powers": {"scire": {"lufs_integrated": 0.0,
+             "true_peak_dbtp": 0.0, "crest_db": 0.0},
+             "velle": {"engaged": false, "eq": [], "comp": null},
+             "audere": {"trim_db": 0.0, "ceiling_dbtp": -1.0,
+             "ceiling_overrode_loudness": false},
+             "tacere": {"headroom_dbtp": 0.0,
+             "dither": {"applied": true, "type": "TPDF", "bits": 24}},
+             "vapour": {"engaged": false, "drive_db": 0.0},
+             "rgba8888": {"hex": "#00000000"}},
+  "tuning": {"reference_hz": 440.0, "house_default_hz": 440.0,
+             "existing_masters_retuned": false},
   "files": {"master_wav": {"path": "...", "bytes": 0},
             "preview_mp3": {"path": "...", "bytes": 0},
             "sigma_wav": {"path": "...", "bytes": 0},

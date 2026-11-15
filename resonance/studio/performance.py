@@ -62,6 +62,20 @@
 # program opens where the performance's clock has locked. The
 # warm-up's own tempo is measured and confessed, so the discard
 # stands on evidence, not on hope.
+#
+# THE CAPRICE CLAUSE (IX day of November, the road's third
+# ruling): the proofs' purity was a TEST's hygiene, not a law of
+# production. When the founder orders a track WITH its Sigma --
+# a named design in the spec's performance block, its beat
+# living in his ordered band, its level at the house's
+# subliminal discipline -- the performance strikes it, and the
+# manifest measures it from the stem as rendered (per-channel
+# FFT peaks and, for a drifting beat, the weighed trajectory),
+# exactly as the section road always has. What is NOT admitted
+# is anything else riding: the clause opens the road to the one
+# ground the founder names, and to nothing else. Absent the
+# clause, a performance still means the proofs' shape, word for
+# word.
 # ---------------------------------------------------------------------
 
 import json
@@ -75,6 +89,7 @@ from pathlib import Path
 import numpy as np
 
 from resonance.studio import arpeggio as arpeggio_mod
+from resonance.studio import four_powers as four_powers_mod
 from resonance.studio import pipeline as pipe
 
 # The tempo search band. Detroit bounce lives in it whole: the
@@ -628,7 +643,8 @@ def write_composition_abc(path, spec, schedule, tempo, joins,
 
 def write_performance_sheet_abc(path, spec, tempo, joins,
                                 join_summary, program_seconds,
-                                warmup=None, session=None):
+                                warmup=None, session=None,
+                                production=None):
     """Write composition.abc for a performance NOTHING rides.
 
     MECHANISM: Proof No. 5's sheet. There is no house layer to
@@ -643,9 +659,20 @@ def write_performance_sheet_abc(path, spec, tempo, joins,
     transcription of the performance itself (its violin line
     included, being part of the body) marked OWED: a separate
     production, never fabricated on this sheet.
+
+    A PRODUCTION performance (the Caprice clause) passes
+    `production`: the founder's production notes for the track
+    and, when Sigma was ordered and struck, its design and its
+    measured stem. The sheet then carries a PRODUCTION block --
+    the spec the track was built to, in the open -- and its
+    absence claims narrow to the truth: no arpeggio layer, no
+    spine, no kit rides; the ONE ground under the performance
+    is the ordered Sigma, named in the block. With production
+    None the sheet is the proofs' sheet, unchanged.
     """
     perf = spec["performance"]
     bpm = tempo["global_bpm"]
+    sigma_design = (production or {}).get("sigma")
     lines = []
     lines.append("X:1")
     lines.append(f"T:{spec['title']}: the performance, unaccompanied")
@@ -663,14 +690,31 @@ def write_performance_sheet_abc(path, spec, tempo, joins,
                  "the honest state")
     lines.append("% of the record. Nothing was composed over this "
                  "performance:")
-    lines.append("% no arpeggio layer, no Sigma, no spine, no kit "
-                 "-- the founder's")
-    lines.append("% ruling after Proof No. 4: IF IT ISN'T IN THE "
-                 "PERFORMANCE, IT")
-    lines.append("% ISN'T IN THE TRACK. The Paganini line stands "
-                 "in the prompt")
-    lines.append("% below, and the performance played it as part "
-                 "of its own body.")
+    if sigma_design:
+        lines.append("% no arpeggio layer, no spine, no kit rides "
+                     "on it -- the founder's")
+        lines.append("% ruling after Proof No. 4: IF IT ISN'T IN "
+                     "THE PERFORMANCE, IT")
+        lines.append("% ISN'T IN THE TRACK. The ONE ground under "
+                     "it is the Sigma the")
+        lines.append("% founder ORDERED into this track's spec -- "
+                     "named, designed and")
+        lines.append("% measured in THE PRODUCTION block below, "
+                     "not hidden in the mix.")
+    else:
+        lines.append("% no arpeggio layer, no Sigma, no spine, no kit "
+                     "-- the founder's")
+        lines.append("% ruling after Proof No. 4: IF IT ISN'T IN THE "
+                     "PERFORMANCE, IT")
+        lines.append("% ISN'T IN THE TRACK. The Paganini line stands "
+                     "in the prompt")
+    if not sigma_design:
+        lines.append("% below, and the performance played it as part "
+                     "of its own body.")
+    else:
+        lines.append("% The Paganini line stands in the prompt "
+                     "below, and the performance")
+        lines.append("% played it as part of its own body.")
     lines.append("% The transcription of the performance itself "
                  "-- violin line")
     lines.append("% included -- is a SEPARATE PRODUCTION, still "
@@ -754,16 +798,179 @@ def write_performance_sheet_abc(path, spec, tempo, joins,
                  f"this is")
     lines.append("% the number this proof is weighed against.")
     lines.append("%")
-    lines.append("% THE STEREO LAW (part 2 only -- there is no "
-                 "spine to pan, and no")
-    lines.append("% Sigma to spare): the bed is widened by band "
-                 "above 180 Hz with the")
-    lines.append("% mid preserved exactly and the lows fully "
-                 "mono. Correlations stand")
-    lines.append("% measured in the manifest.")
+    if sigma_design:
+        lines.append("% THE STEREO LAW (part 2 only -- there is no "
+                     "spine to pan): the")
+        lines.append("% bed is widened by band above 180 Hz with "
+                     "the mid preserved exactly")
+        lines.append("% and the lows fully mono; the Sigma ground "
+                     "was mixed AFTER the")
+        lines.append("% widening and never passed through it. "
+                     "Correlations stand measured")
+        lines.append("% in the manifest.")
+    else:
+        lines.append("% THE STEREO LAW (part 2 only -- there is no "
+                     "spine to pan, and no")
+        lines.append("% Sigma to spare): the bed is widened by band "
+                     "above 180 Hz with the")
+        lines.append("% mid preserved exactly and the lows fully "
+                     "mono. Correlations stand")
+        lines.append("% measured in the manifest.")
     lines.append("%")
+    if production:
+        lines.append("% THE PRODUCTION (the founder's spec for "
+                     "this track, in the open):")
+        for note in production.get("notes") or []:
+            lines.append(f"%   {note}")
+        if sigma_design:
+            measured = production.get("sigma_measured") or {}
+            if sigma_design["mode"] == "drift":
+                lines.append(
+                    f"%   SIGMA, as ordered and as measured: mode "
+                    f"DRIFT -- the beat dances")
+                lines.append(
+                    f"%   sinusoidally between "
+                    f"{sigma_design['beat_min_hz']} and "
+                    f"{sigma_design['beat_max_hz']} Hz around the "
+                    f"{sigma_design['carrier_hz']} Hz mean carrier "
+                    f"(the doctrine")
+                lines.append(
+                    f"%   pair {sigma_design['left_hz']}/"
+                    f"{sigma_design['right_hz']}), one full dance "
+                    f"per {sigma_design['period_s']} s, at "
+                    f"{sigma_design['gain_db']} dB under the bed's "
+                    f"RMS. Measured on the")
+                lines.append(
+                    f"%   stem: beat trajectory "
+                    f"{measured.get('measured_beat_min_hz')}.."
+                    f"{measured.get('measured_beat_max_hz')} Hz "
+                    f"(mean {measured.get('measured_beat_mean_hz')}), "
+                    f"stem level {measured.get('stem_rms_dbfs')} "
+                    f"dBFS.")
+            else:
+                lines.append(
+                    f"%   SIGMA, as ordered and as measured: mode "
+                    f"FIXED -- the doctrine pair")
+                lines.append(
+                    f"%   {sigma_design['left_hz']}/"
+                    f"{sigma_design['right_hz']} Hz (beat "
+                    f"{sigma_design['base_beat_hz']} Hz) at "
+                    f"{sigma_design['gain_db']} dB under the bed's "
+                    f"RMS. Measured on the stem:")
+                lines.append(
+                    f"%   {measured.get('measured_left_hz')} / "
+                    f"{measured.get('measured_right_hz')} Hz, stem "
+                    f"level {measured.get('stem_rms_dbfs')} dBFS.")
+        lines.append("%")
     lines.append("% 93 -- Live, Love, and let Love, Live.")
     Path(path).write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+# ---------------------------------------------------------------------
+# The ordered ground: Sigma inside a performance (Caprice clause).
+# ---------------------------------------------------------------------
+
+def sigma_design_layer(design, seconds, sr):
+    """Strike the Sigma layer a performance's spec designs.
+
+    MECHANISM: "fixed" is the house's own road -- the section
+    pipeline's sigma_layer over the doctrine pair, unchanged.
+    "drift" keeps the pair's MEAN carrier (their center never
+    wanders) and lets their SEPARATION breathe: the beat follows
+    beat(t) = mid + amp * sin(2*pi*t/period), mid and amp the
+    band's center and half-width. The carriers are phase
+    INTEGRALS of the instantaneous frequencies (left = carrier -
+    beat/2, right = carrier + beat/2, the binaural engine's own
+    convention), so the tones are continuous everywhere -- a
+    frequency that jumps would click; a phase that accumulates
+    cannot. Amplitude 0.5 per channel, the engine's working
+    level; the caller scales the layer against the bed's RMS,
+    because "under the bed" is a relation, not an absolute.
+    """
+    if design["mode"] == "fixed":
+        layer = pipe.sigma_layer(
+            {"sigma": {"left_hz": design["left_hz"],
+                       "right_hz": design["right_hz"]}},
+            seconds, sr)
+        return np.asarray(layer, dtype=np.float64)
+    n = int(round(seconds * sr))
+    t = np.arange(n, dtype=np.float64) / sr
+    mid = 0.5 * (design["beat_min_hz"] + design["beat_max_hz"])
+    amp = 0.5 * (design["beat_max_hz"] - design["beat_min_hz"])
+    period = design["period_s"]
+    # Integral of beat(t): mid*t + amp*period/(2*pi)*(1 - cos).
+    beat_phase = 2.0 * math.pi * (
+        mid * t
+        + (amp * period / (2.0 * math.pi))
+        * (1.0 - np.cos(2.0 * math.pi * t / period)))
+    carrier_phase = 2.0 * math.pi * design["carrier_hz"] * t
+    left = 0.5 * np.sin(carrier_phase - beat_phase / 2.0)
+    right = 0.5 * np.sin(carrier_phase + beat_phase / 2.0)
+    return np.stack([left, right])
+
+
+def measure_sigma_stem(layer, sr, design, window_s=4.0, hop_s=2.0):
+    """Weigh a struck Sigma stem: FFT peaks, trajectory, level.
+
+    MECHANISM: the house standard first -- one whole-stem rfft
+    per channel, peak-picked in the bracket around the design
+    carrier (pipe.measure_carrier); for a fixed pair those two
+    numbers ARE the verdict. A drifting beat smears its energy
+    across the bracket, so the whole-file peaks alone would
+    under-report the dance: the trajectory is weighed too, in
+    window_s windows every hop_s, each window's per-channel
+    peaks differenced into that window's beat. The report
+    carries the trajectory's min/max/mean and the fraction of
+    windows whose beat sits inside the designed band (a 1 Hz
+    grace at the edges, confessed in the field name) -- measured
+    on the stem AS STRUCK (post-scaling), never on the design.
+    """
+    x = np.asarray(layer, dtype=np.float64)
+    carrier = design["carrier_hz"]
+    lo, hi = carrier - 45.0, carrier + 45.0
+    whole_left = pipe.measure_carrier(x[0], sr, lo, hi)
+    whole_right = pipe.measure_carrier(x[1], sr, lo, hi)
+    win = int(window_s * sr)
+    hop = int(hop_s * sr)
+    beats, lefts, rights = [], [], []
+    start = 0
+    while start + win <= x.shape[1]:
+        seg = x[:, start:start + win]
+        lft = pipe.measure_carrier(seg[0], sr, lo, hi)
+        rgt = pipe.measure_carrier(seg[1], sr, lo, hi)
+        lefts.append(lft)
+        rights.append(rgt)
+        beats.append(rgt - lft)
+        start += hop
+    stem_rms = float(np.sqrt(np.mean(x ** 2))) if x.size else 0.0
+    report = {
+        "measured_left_hz": round(whole_left, 2),
+        "measured_right_hz": round(whole_right, 2),
+        "measured_separation_hz": round(abs(whole_right
+                                            - whole_left), 2),
+        "stem_rms_dbfs": round(20.0 * math.log10(stem_rms), 2)
+        if stem_rms > 0 else -120.0,
+        "trajectory_windows": len(beats),
+        "trajectory_window_s": window_s,
+        "trajectory_hop_s": hop_s,
+    }
+    if beats:
+        band_lo = design["beat_min_hz"] - 1.0
+        band_hi = design["beat_max_hz"] + 1.0
+        in_band = sum(1 for b in beats if band_lo <= b <= band_hi)
+        report.update({
+            "measured_beat_min_hz": round(min(beats), 2),
+            "measured_beat_max_hz": round(max(beats), 2),
+            "measured_beat_mean_hz": round(
+                float(np.mean(beats)), 2),
+            "measured_carrier_min_hz": round(
+                min(min(lefts), min(rights)), 2),
+            "measured_carrier_max_hz": round(
+                max(max(lefts), max(rights)), 2),
+            "windows_in_designed_band_frac": round(
+                in_band / len(beats), 3),
+        })
+    return report
 
 
 # ---------------------------------------------------------------------
@@ -794,7 +1001,10 @@ def _planned_manifest(spec):
                          if perf["warmup_takes"] else "")
                       + ("; single session -- one bridge process, "
                          "no resume, an interrupted chain is void"
-                         if perf["single_session"] else ""),
+                         if perf["single_session"] else "")
+                      + ("; Sigma ordered in -- the designed "
+                         "ground is struck and measured"
+                         if perf.get("sigma") else ""),
         },
         "arpeggio": ({
             "level_db": spec["arpeggio"]["level_db"],
@@ -803,7 +1013,12 @@ def _planned_manifest(spec):
                     "after the render; its events cannot be "
                     "counted before the performance exists"}
             if spec.get("arpeggio") else None),
-        "sigma": "absent by design (test purity)",
+        "sigma": ({"design": perf["sigma"],
+                   "note": "ordered into this production by the "
+                           "founder's spec (the Caprice clause); "
+                           "measured on the stem after the render"}
+                  if perf.get("sigma") else
+                  "absent by design (test purity)"),
         "master": spec["master"],
         "sample_rate": pipe.TARGET_SR,
     }
@@ -850,6 +1065,13 @@ def produce_performance(spec, dry_run=False, log=None):
     the audit record, the kept program is spliced from the takes
     after the warm-up, and the warm-up's own tempo is measured as
     the discard's evidence.
+
+    A third clause admits the ground a production orders: when
+    the performance block carries `sigma` (the Caprice clause),
+    the designed Sigma is struck after the widening -- fixed as
+    the doctrine pair, or drifting across its ordered beat band
+    -- and measured from the stem as rendered; the sheet gains
+    the production block the spec's production_notes dictate.
     """
     log = log or (lambda msg: print(f"[studio] {msg}",
                                     file=sys.stderr, flush=True))
@@ -1163,6 +1385,56 @@ def produce_performance(spec, dry_run=False, log=None):
             "program_samples": target,
             "layer_fit": fit,
         }
+
+    # -- (f2) the ordered ground: Sigma, when the spec designs one -
+    # The Caprice clause: a production performance may be ordered
+    # WITH its ground. It is struck here -- after the widening
+    # (the Stereo Law never processes Sigma) and after any
+    # arpeggio, before the fades, exactly where the section road
+    # lays its ground -- scaled to the design's gain against the
+    # standing bed's RMS, and measured from the stem AS STRUCK.
+    # Absent the clause, nothing in this run changes: the proofs'
+    # shape stands.
+    sigma_report = None
+    sigma_stem = None
+    sigma_design = perf.get("sigma")
+    if sigma_design:
+        log(f"striking the ordered Sigma (mode "
+            f"{sigma_design['mode']}, gain "
+            f"{sigma_design['gain_db']} dB under the bed)...")
+        layer = sigma_design_layer(sigma_design, total_seconds,
+                                   pipe.TARGET_SR)
+        if layer.shape[1] > bed.shape[1]:
+            layer = layer[:, :bed.shape[1]]
+        elif layer.shape[1] < bed.shape[1]:
+            layer = np.pad(layer, ((0, 0), (0, bed.shape[1]
+                                            - layer.shape[1])))
+        bed_rms = float(np.sqrt(np.mean(bed ** 2)))
+        layer_rms = float(np.sqrt(np.mean(layer ** 2)))
+        scale = (bed_rms
+                 * 10 ** (sigma_design["gain_db"] / 20.0)
+                 / layer_rms)
+        sigma_stem = layer * scale
+        measured = measure_sigma_stem(sigma_stem, pipe.TARGET_SR,
+                                      sigma_design)
+        sigma_report = {
+            "absent": False,
+            "design": sigma_design,
+            **measured,
+            "gain_db": sigma_design["gain_db"],
+            "gain_reference": "relative to the bed's RMS (the "
+                              "performance bed, post-widening, "
+                              "pre-master)",
+            "engine": "resonance.studio.performance."
+                      "sigma_design_layer (fixed mode: the "
+                      "house binaural pair via pipeline."
+                      "sigma_layer; drift mode: the "
+                      "phase-integrated pair, this module)",
+        }
+        bed = bed + sigma_stem
+
+    # -- (f3) the sheet ---------------------------------------------
+    if spec.get("arpeggio"):
         write_composition_abc(
             out_dir / "composition.abc", spec, schedule,
             tempo_block, joins, join_summary, total_seconds)
@@ -1170,11 +1442,35 @@ def produce_performance(spec, dry_run=False, log=None):
         # Nothing rides (Proof No. 5's shape): the sheet carries
         # no notation -- the performance's transcription, its
         # in-performance violin line included, is owed, and the
-        # sheet says so instead of fabricating one.
+        # sheet says so instead of fabricating one. A production
+        # run adds its production block: the founder's notes and,
+        # when Sigma was struck, its design and measured stem.
+        production = None
+        if spec.get("production_notes") or sigma_design:
+            production = {
+                "notes": spec.get("production_notes") or [],
+                "sigma": sigma_design,
+                "sigma_measured": sigma_report or {},
+            }
         write_performance_sheet_abc(
             out_dir / "composition.abc", spec, tempo_block, joins,
             join_summary, total_seconds, warmup=warmup_block,
-            session=session_block)
+            session=session_block, production=production)
+
+    # -- (g0) the Four Powers, first half: Scire, Velle, Vapour -----
+    # The same chain the section road walks (founder's map, 2026-
+    # 11-15), on the performance's bed: Scire measures it as it
+    # stands; Velle and Vapour run only when the spec ordered
+    # them. The performance's own law is untouched -- this is the
+    # mastering chain, downstream of the last join, and it neither
+    # splices nor re-times anything.
+    scire_report = four_powers_mod.scire_measure(
+        bed, pipe.TARGET_SR, pipe.measure_loudness_lufs,
+        pipe.true_peak_dbtp)
+    bed, velle_report = four_powers_mod.velle_stage(
+        bed, pipe.TARGET_SR, spec.get("velle"))
+    bed, vapour_report = four_powers_mod.vapour_stage(
+        bed, spec["vapour"])
 
     # -- (g) fades: a record ends; it does not stop -----------------
     head = int(pipe.HEAD_FADE_S * pipe.TARGET_SR)
@@ -1183,10 +1479,20 @@ def produce_performance(spec, dry_run=False, log=None):
     bed[:, -tail:] *= np.linspace(1.0, 0.0, tail)
 
     # -- (h) master: loudness first, ceiling is law -----------------
+    # AUDERE, the limiting power: pipeline.master_signal, unchanged.
     log("mastering...")
     mastered, master_report = pipe.master_signal(
         bed, pipe.TARGET_SR, spec["master"]["target_lufs"],
         spec["master"]["ceiling_dbtp"])
+    # -- (h1) TACERE: headroom accounted, dither on export -----------
+    dither_applied = bool(spec["master"].get("dither", True))
+    if dither_applied:
+        mastered = four_powers_mod.tpdf_dither(mastered, spec["seed"])
+    tacere_rep = four_powers_mod.tacere_report(
+        master_report, dither_applied)
+    four_powers_report = four_powers_mod.assemble(
+        scire_report, velle_report, vapour_report, master_report,
+        tacere_rep)
     if stereo_report is not None:
         stereo_report.update({
             "master_correlation":
@@ -1200,15 +1506,47 @@ def produce_performance(spec, dry_run=False, log=None):
     np.save(master_npy,
             np.asarray(mastered, dtype=np.float32).T.copy())
     master_wav = out_dir / "master.wav"
-    pipe._run_bridge({"finalize": [
+    finalize = [
         {"npy": str(master_npy), "out": str(master_wav),
          "sample_rate": pipe.TARGET_SR, "subtype": "PCM_24"},
-    ]}, out_dir, log)
+    ]
+    sigma_npy = None
+    sigma_wav = None
+    if sigma_stem is not None:
+        # The stem at mix level, unfaded -- the section road's
+        # own convention for sigma.wav, kept so the measurement
+        # in the manifest can be re-weighed from the file.
+        sigma_npy = out_dir / "_sigma_float.npy"
+        np.save(sigma_npy,
+                np.asarray(sigma_stem, dtype=np.float32).T.copy())
+        sigma_wav = out_dir / "sigma.wav"
+        finalize.append(
+            {"npy": str(sigma_npy), "out": str(sigma_wav),
+             "sample_rate": pipe.TARGET_SR, "subtype": "PCM_24"})
+    pipe._run_bridge({"finalize": finalize}, out_dir, log)
     master_npy.unlink()
+    if sigma_npy is not None:
+        sigma_npy.unlink()
     preview = out_dir / "preview.mp3"
     pipe._ffmpeg(["-i", str(master_wav), "-codec:a", "libmp3lame",
                   "-b:a", "320k", str(preview)], "preview mp3")
 
+    if sigma_design:
+        absent_note = (
+            "absent by design: any spine, any kit or sample, "
+            "any synthesized voice, any second prompt, and any "
+            "composed arpeggio layer. The Sigma ground is NOT "
+            "absent in this run: the founder ordered it into "
+            "the track's spec (the Caprice clause) and it "
+            "stands measured in the sigma block from the stem "
+            "as struck.")
+    else:
+        absent_note = (
+            "absent by design: the Sigma binaural layer "
+            "(excluded for test purity at the founder's order "
+            "-- the v4b A/B acquitted it; its absence here is "
+            "hygiene, not suspicion), any spine, any kit or "
+            "sample, any synthesized voice, any second prompt.")
     notes = [
         "performance: ONE invariant prompt, struck once as a seed "
         "take and extended only by audio continuation -- the model "
@@ -1216,11 +1554,7 @@ def produce_performance(spec, dry_run=False, log=None):
         "no crossfade, no per-take RMS matching (there are no "
         "sections to match), no grid, no trim, no tempo surgery "
         "of any kind.",
-        "absent by design: the Sigma binaural layer (excluded for "
-        "test purity at the founder's order -- the v4b A/B "
-        "acquitted it; its absence here is hygiene, not "
-        "suspicion), any spine, any kit or sample, any "
-        "synthesized voice, any second prompt.",
+        absent_note,
         "tempo: the performance chose its own clock. The prompt "
         "asked for energy and bounce, never a number; realized "
         "tempo stands measured -- globally and per 30 s window -- "
@@ -1271,12 +1605,49 @@ def produce_performance(spec, dry_run=False, log=None):
             f"{warmup_block['tempo']['global_bpm']} BPM; the kept "
             f"program's windows stand in the performance block "
             f"for the lock-in question.")
-    if not 180.0 <= total_seconds <= 210.0:
+    aim = perf.get("aim_seconds") or [180.0, 210.0]
+    if not aim[0] <= total_seconds <= aim[1]:
         notes.append(
             f"program length {total_seconds:.1f} s stands outside "
-            f"the 3:00-3:30 aim of the brief -- the performance is "
-            f"delivered at the length it honestly reached, as the "
-            f"brief orders, not padded or cut to fit the aim.")
+            f"the {aim[0]:.0f}-{aim[1]:.0f} s aim of the brief "
+            f"-- the performance is delivered at the length it "
+            f"honestly reached, as the brief orders, not padded "
+            f"or cut to fit the aim.")
+    if sigma_design:
+        if sigma_design["mode"] == "drift":
+            notes.append(
+                f"sigma: mode DRIFT, as ordered -- the beat "
+                f"dances sinusoidally between "
+                f"{sigma_design['beat_min_hz']} and "
+                f"{sigma_design['beat_max_hz']} Hz around the "
+                f"{sigma_design['carrier_hz']} Hz mean carrier "
+                f"of the doctrine pair "
+                f"({sigma_design['left_hz']}/"
+                f"{sigma_design['right_hz']}), one full dance "
+                f"per {sigma_design['period_s']} s, at "
+                f"{sigma_design['gain_db']} dB under the bed's "
+                f"RMS. Measured trajectory on the struck stem: "
+                f"{sigma_report['measured_beat_min_hz']}.."
+                f"{sigma_report['measured_beat_max_hz']} Hz, "
+                f"mean {sigma_report['measured_beat_mean_hz']} "
+                f"Hz; whole-stem FFT peaks "
+                f"{sigma_report['measured_left_hz']}/"
+                f"{sigma_report['measured_right_hz']} Hz (a "
+                f"drifting pair smears its whole-file peaks "
+                f"toward the carrier -- the trajectory is the "
+                f"verdict, the peaks are the bracket).")
+        else:
+            notes.append(
+                f"sigma: mode FIXED, as ordered -- the doctrine "
+                f"pair {sigma_design['left_hz']}/"
+                f"{sigma_design['right_hz']} Hz (beat "
+                f"{sigma_design['base_beat_hz']} Hz) at "
+                f"{sigma_design['gain_db']} dB under the bed's "
+                f"RMS. Measured on the struck stem: "
+                f"{sigma_report['measured_left_hz']}/"
+                f"{sigma_report['measured_right_hz']} Hz, "
+                f"separation "
+                f"{sigma_report['measured_separation_hz']} Hz.")
     if any(r.get("resumed") for r in render_by_index.values()):
         notes.append(
             "takes resumed from disk carry continued_from: null in "
@@ -1322,8 +1693,6 @@ def produce_performance(spec, dry_run=False, log=None):
             "realized_tempo": tempo_block,
             "arpeggio_schedule": schedule_block,
             "absent_by_design": [
-                "sigma layer (test purity; acquitted by the v4b "
-                "A/B)",
                 "spine (synth or sampled)",
                 "kit / one-shot samples of any kind",
                 "synthesized voices",
@@ -1332,7 +1701,9 @@ def produce_performance(spec, dry_run=False, log=None):
                 "crossfade stitching of independent takes",
                 "per-section RMS matching",
                 "tempo forcing, grid trimming, time-stretching",
-            ] + ([] if spec.get("arpeggio") else [
+            ] + (["sigma layer (test purity; acquitted by the "
+                  "v4b A/B)"] if not sigma_design else []) + (
+                [] if spec.get("arpeggio") else [
                 "composed arpeggio layer (the Paganini line is "
                 "generated INSIDE the performance, per the "
                 "founder's ruling: if it isn't in the performance, "
@@ -1342,7 +1713,7 @@ def produce_performance(spec, dry_run=False, log=None):
         "spine": None,
         "arpeggio": arpeggio_report,
         "stereo": stereo_report,
-        "sigma": {
+        "sigma": sigma_report if sigma_report is not None else {
             "absent": True,
             "intended_left_hz": None,
             "intended_right_hz": None,
@@ -1355,11 +1726,22 @@ def produce_performance(spec, dry_run=False, log=None):
                       "order); acquitted by the v4b A/B",
         },
         "master": master_report,
+        "four_powers": four_powers_report,
+        "tuning": {
+            "reference_hz": spec["tuning_hz"],
+            "house_default_hz": four_powers_mod.HOUSE_TUNING_HZ,
+            "applies_to": ["the arpeggio's staff realization "
+                           "(resonance.studio.arpeggio)"],
+            "existing_masters_retuned": False,
+        },
         "files": {
             "master_wav": {"path": str(master_wav),
                            "bytes": master_wav.stat().st_size},
             "preview_mp3": {"path": str(preview),
                             "bytes": preview.stat().st_size},
+            "sigma_wav": {"path": str(sigma_wav),
+                          "bytes": sigma_wav.stat().st_size}
+            if sigma_wav is not None else None,
             "performance_32k_wav": {"path": str(native_path),
                                     "bytes": native_path.stat()
                                     .st_size},

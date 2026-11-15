@@ -42,6 +42,7 @@ import numpy as np
 from resonance import grid
 from resonance.binaural.generator import binaural_beat
 from resonance.studio import arpeggio as arpeggio_mod
+from resonance.studio import four_powers as four_powers_mod
 from resonance.studio import spine as spine_mod
 
 TARGET_SR = 48000            # The master's sample rate, full stop.
@@ -149,9 +150,83 @@ def _normalize_performance(raw):
         raise ValueError(
             f"performance.single_session: {single!r} must be a "
             f"boolean")
+    aim = raw.get("aim_seconds")
+    if aim is not None:
+        if not isinstance(aim, (list, tuple)) or len(aim) != 2 \
+                or any(isinstance(a, bool)
+                       or not isinstance(a, (int, float))
+                       for a in aim) \
+                or not 30.0 <= float(aim[0]) < float(aim[1]) \
+                <= 3600.0:
+            raise ValueError(
+                f"performance.aim_seconds: {aim!r} must be "
+                f"[min, max] with 30 <= min < max <= 3600")
+        aim = [float(aim[0]), float(aim[1])]
+    sigma = _normalize_performance_sigma(raw.get("sigma"))
     return {"takes": takes, "take_seconds": float(take_seconds),
             "continue_seconds": float(cont),
-            "warmup_takes": warmup, "single_session": single}
+            "warmup_takes": warmup, "single_session": single,
+            "sigma": sigma, "aim_seconds": aim}
+
+
+def _normalize_performance_sigma(raw):
+    """Validate a performance's optional "sigma" clause.
+
+    MECHANISM: Proofs No. 4 and 5 excluded the Sigma layer for
+    test purity, and the exclusion was hardcoded into the road.
+    A PRODUCTION performance may instead be ordered WITH its
+    ground (the founder's spec for the Caprice, 2026-11-09: Sigma
+    in the pocket, the beat living in his ordered 13-31 Hz band).
+    The clause therefore names a DESIGN, not a wish: the house's
+    doctrine pair (left_hz/right_hz -- 200/213, the 13 Hz beat at
+    the band's floor), a mode, and a level. "fixed" strikes the
+    pair exactly as the section road always has; "drift" lets the
+    BEAT oscillate sinusoidally between beat_min_hz and
+    beat_max_hz around the pair's mean carrier, one full dance
+    per period_s -- the carriers move in tandem, so the pair's
+    center never wanders, only their separation breathes. Absent
+    (None), a performance means exactly what it meant in the
+    proofs: no Sigma, confessed as absent. Every refusal names
+    its field, as everywhere in this studio.
+    """
+    if raw is None:
+        return None
+    if not isinstance(raw, dict):
+        raise ValueError("performance.sigma: must be an object")
+    mode = raw.get("mode", "fixed")
+    if mode not in ("fixed", "drift"):
+        raise ValueError(
+            f"performance.sigma.mode: {mode!r} must be 'fixed' "
+            f"or 'drift'")
+    left = float(raw.get("left_hz", 200.0))
+    right = float(raw.get("right_hz", 213.0))
+    if not (20.0 <= left < right <= 1000.0):
+        raise ValueError(
+            f"performance.sigma: need 20 <= left_hz < right_hz "
+            f"<= 1000, got {left}/{right}")
+    gain = float(raw.get("gain_db", -28.0))
+    if not -60.0 <= gain <= 0.0:
+        raise ValueError(
+            f"performance.sigma.gain_db: {gain} outside -60..0")
+    base_beat = right - left
+    beat_min = float(raw.get("beat_min_hz", base_beat))
+    beat_max = float(raw.get("beat_max_hz", base_beat))
+    if mode == "drift":
+        if not (0.5 <= beat_min < beat_max <= 60.0):
+            raise ValueError(
+                f"performance.sigma: drift needs 0.5 <= "
+                f"beat_min_hz < beat_max_hz <= 60, got "
+                f"{beat_min}/{beat_max}")
+    period = float(raw.get("period_s", 60.0))
+    if mode == "drift" and not 10.0 <= period <= 600.0:
+        raise ValueError(
+            f"performance.sigma.period_s: {period} outside "
+            f"10..600")
+    return {"mode": mode, "left_hz": left, "right_hz": right,
+            "carrier_hz": (left + right) / 2.0,
+            "base_beat_hz": base_beat,
+            "beat_min_hz": beat_min, "beat_max_hz": beat_max,
+            "period_s": period, "gain_db": gain}
 
 
 def validate_spec(spec):
@@ -185,6 +260,24 @@ def validate_spec(spec):
         out["motif"] = motif.strip()
     else:
         out.pop("motif", None)
+    # Production notes: the founder's production spec for THIS
+    # track (front line, arrangement rulings, the lyric sheet it
+    # serves), carried onto the run's sheet as its production
+    # block. Free text, but bounded: a spec is an order, not an
+    # essay. Absent, sheets carry no production block, exactly
+    # as the proofs' sheets did not.
+    pnotes = spec.get("production_notes")
+    if pnotes is not None:
+        if not isinstance(pnotes, list) \
+                or not 1 <= len(pnotes) <= 20 \
+                or any(not isinstance(p, str) or not p.strip()
+                       for p in pnotes):
+            raise ValueError(
+                "production_notes: must be a list of 1..20 "
+                "non-empty strings")
+        out["production_notes"] = [p.strip() for p in pnotes]
+    else:
+        out.pop("production_notes", None)
     # Proof No. 4's road, parsed before the sections because it
     # REDEFINES them: a performance has no sections, only takes of
     # one invariant prompt. A spec that asks for a performance AND
@@ -247,7 +340,34 @@ def validate_spec(spec):
             f"master.ceiling_dbtp: {master['ceiling_dbtp']} outside -3..-0.1")
     master.update(target_lufs=float(master["target_lufs"]),
                   ceiling_dbtp=float(master["ceiling_dbtp"]))
+    # Tacere's dither on export (the Four Powers chain, four_
+    # powers.py): TPDF at the 24-bit word, seeded from the spec's
+    # seed. Default ON -- the chain the founder named includes it;
+    # "dither": false is the recorded opt-out, and either way the
+    # manifest's four_powers.tacere confesses what was done.
+    dither = master.get("dither", True)
+    if not isinstance(dither, bool):
+        raise ValueError(
+            f"master.dither: {dither!r} must be a boolean")
+    master["dither"] = dither
     out["master"] = master
+    # The Four Powers' separable stages (founder's order, 2026-11-
+    # 15): Velle (EQ + compression) and Vapour (saturation) are
+    # ordered here and normalized by their own module, whose
+    # refusals name their fields the same way. Absent Velle is
+    # None (flat, confessed); absent Vapour is drive 0 (off).
+    out["velle"] = four_powers_mod.normalize_velle(spec.get("velle"))
+    if out["velle"] is None:
+        out.pop("velle")
+    out["vapour"] = four_powers_mod.normalize_vapour(
+        spec.get("vapour"))
+    # The tuning reference for the synthesis paths that consume
+    # one (today: the arpeggio's staff realization). Default the
+    # house's standing 440; the founder's 432 lock is a spec
+    # field away. Never retroactive: shipped masters keep the
+    # tuning they were struck at.
+    out["tuning_hz"] = four_powers_mod.normalize_tuning_hz(
+        spec.get("tuning_hz"))
     # The optional rhythmic spine: absent is the Proof No. 1 road,
     # unchanged. Present, it is normalized by its own validator,
     # whose refusals name their fields the same way.
@@ -282,7 +402,8 @@ def validate_spec(spec):
                 "arpeggio: requires a spine or a performance "
                 "(the composition is written in bars)")
         out["arpeggio"] = arpeggio_mod.normalize_arpeggio_spec(
-            spec["arpeggio"], default_seed=out["seed"])
+            spec["arpeggio"], default_seed=out["seed"],
+            tuning_hz=out["tuning_hz"])
     else:
         out.pop("arpeggio", None)
     # Chained bed rendering: each section after the first is
@@ -825,6 +946,14 @@ def _dry_run_manifest(spec):
         "sample_rate": TARGET_SR,
         "sigma": spec["sigma"],
         "master": spec["master"],
+        "four_powers": {
+            "velle_engaged": spec.get("velle") is not None,
+            "velle": spec.get("velle"),
+            "vapour_drive_db": spec["vapour"]["drive_db"],
+            "dither_on_export": bool(spec["master"].get(
+                "dither", True)),
+        },
+        "tuning_hz": spec["tuning_hz"],
         "chained": bool(spec.get("chained")),
         "continue_seconds": spec.get("continue_seconds"),
     }
@@ -1139,6 +1268,26 @@ def produce(spec, dry_run=False, log=None):
         sigma[1], TARGET_SR,
         spec["sigma"]["right_hz"] - 30.0, spec["sigma"]["right_hz"] + 30.0)
 
+    # -- (e0) the Four Powers, first half: Scire, Velle, Vapour ------
+    # The founder's mastering map (2026-11-15) names the chain this
+    # road already walked and adds its two separable stages. SCIRE
+    # measures the mix as it stands, before anything touches it.
+    # VELLE (EQ + compression) and VAPOUR (saturation) run only
+    # when the spec ordered them -- an unordered run is flat and
+    # undriven, and the manifest's four_powers section prints the
+    # measured values either way, "not engaged" included.
+    scire_report = four_powers_mod.scire_measure(
+        mix, TARGET_SR, measure_loudness_lufs, true_peak_dbtp)
+    mix, velle_report = four_powers_mod.velle_stage(
+        mix, TARGET_SR, spec.get("velle"))
+    if velle_report["engaged"]:
+        log("velle: EQ + compression applied (Four Powers)...")
+    mix, vapour_report = four_powers_mod.vapour_stage(
+        mix, spec["vapour"])
+    if vapour_report["engaged"]:
+        log(f"vapour: saturation at {vapour_report['drive_db']} dB "
+            f"drive (Four Powers)...")
+
     # -- fades: a record ends; it does not stop ------------------------
     head = int(HEAD_FADE_S * TARGET_SR)
     tail = int(END_FADE_S * TARGET_SR)
@@ -1146,10 +1295,25 @@ def produce(spec, dry_run=False, log=None):
     mix[:, -tail:] *= np.linspace(1.0, 0.0, tail)
 
     # -- (e) master: loudness first, ceiling is law --------------------
+    # AUDERE, the limiting power: master_signal's law, unchanged --
+    # gained to target, soft-limited, ceiling enforced by trim.
     log("mastering...")
     mastered, master_report = master_signal(
         mix, TARGET_SR, spec["master"]["target_lufs"],
         spec["master"]["ceiling_dbtp"])
+    # -- (e1) TACERE: headroom accounted, dither on export ------------
+    # The dither rides the float master just before the 24-bit
+    # strike (seeded from the spec's seed, so the same spec strikes
+    # the same master twice). Tacere's headroom is Audere's own
+    # accounting: ceiling minus delivered true peak, measured.
+    dither_applied = bool(spec["master"].get("dither", True))
+    if dither_applied:
+        mastered = four_powers_mod.tpdf_dither(mastered, spec["seed"])
+    tacere_rep = four_powers_mod.tacere_report(
+        master_report, dither_applied)
+    four_powers_report = four_powers_mod.assemble(
+        scire_report, velle_report, vapour_report, master_report,
+        tacere_rep)
     if stereo_report is not None:
         stereo_report.update({
             "master_correlation": round(channel_correlation(mastered), 4),
@@ -1210,6 +1374,14 @@ def produce(spec, dry_run=False, log=None):
             "engine": "resonance.binaural.generator.binaural_beat",
         },
         "master": master_report,
+        "four_powers": four_powers_report,
+        "tuning": {
+            "reference_hz": spec["tuning_hz"],
+            "house_default_hz": four_powers_mod.HOUSE_TUNING_HZ,
+            "applies_to": ["the arpeggio's staff realization "
+                           "(resonance.studio.arpeggio)"],
+            "existing_masters_retuned": False,
+        },
         "files": {
             "master_wav": {"path": str(master_wav),
                            "bytes": master_wav.stat().st_size},
