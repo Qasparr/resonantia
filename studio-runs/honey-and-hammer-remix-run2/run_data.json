@@ -1,0 +1,171 @@
+{
+  "spec": {
+    "key": "G minor",
+    "bpm": 96.0,
+    "bars": 70,
+    "loop": [
+      "Gm",
+      "Eb",
+      "Bb",
+      "F"
+    ],
+    "swing": 0.14,
+    "duration_cal": 1.15
+  },
+  "vocal_notes": {
+    "missing": [],
+    "overhang_s": {
+      "hook2/Phascogale@bar1": 0.031,
+      "hook4/Phascogale@bar3": 0.031,
+      "sol10/Civet@bar17": 0.019,
+      "sol11/Civet@bar18": 0.019,
+      "ari3/Civet@bar22": 0.054,
+      "ari6/Civet@bar25": 0.019,
+      "qas1/Phascogale@bar32": 0.054,
+      "qas3/Phascogale@bar34": 0.077,
+      "qas4/Phascogale@bar35": 0.031,
+      "qas5/Phascogale@bar36": 0.043,
+      "qas6/Phascogale@bar37": 0.054,
+      "qas7/Phascogale@bar38": 0.054,
+      "qas8/Phascogale@bar39": 0.054,
+      "qas9/Phascogale@bar40": 0.019,
+      "qas12/Phascogale@bar43": 0.031,
+      "sage3/Phascogale@bar46": 0.019,
+      "sage4/Phascogale@bar47": 0.031,
+      "sage6/Phascogale@bar49": 0.043,
+      "sage11/Phascogale@bar54": 0.019,
+      "sage12/Phascogale@bar55": 0.019,
+      "hook2/Phascogale@bar69": 0.031
+    },
+    "duration": {
+      "renders": 74,
+      "rendered_frames": 15878,
+      "handed_frames_cal": 18332,
+      "nominal_frames_uncal": 15901,
+      "ratio_vs_handed_cal": 0.8661,
+      "ratio_vs_nominal_uncal": 0.9986,
+      "bar_frames_at_44k": 215.33
+    }
+  },
+  "lines_rendered": 74,
+  "staging": {
+    "backing_gain_db": -12.04,
+    "vocal_gain_db": 10.92,
+    "backing_rms_dbfs": -21.0,
+    "vocal_rms_dbfs": -20.5
+  },
+  "stem_print_gain_db": {
+    "backing-stem.wav": 0.0,
+    "vocal-stem.wav": -2.52
+  },
+  "premix": {
+    "rms_dbfs": -19.94,
+    "peak_dbfs_before_trim": 2.7,
+    "trim_db": -2.2,
+    "peak_dbfs": 0.5
+  },
+  "four_powers": {
+    "scire": {
+      "stage": "metering / measurement (BS.1770)",
+      "lufs_integrated": -18.4,
+      "true_peak_dbtp": 0.54,
+      "sample_peak_dbfs": 0.5,
+      "rms_dbfs": -19.94,
+      "crest_db": 20.44
+    },
+    "velle": {
+      "engaged": true,
+      "eq": [
+        {
+          "type": "peak",
+          "freq_hz": 3000.0,
+          "gain_db": 1.5,
+          "q": 1.0
+        },
+        {
+          "type": "highshelf",
+          "freq_hz": 8000.0,
+          "gain_db": 1.0,
+          "q": 1.0
+        }
+      ],
+      "comp": {
+        "threshold_db": -18.0,
+        "ratio": 2.0,
+        "knee_db": 6.0,
+        "attack_ms": 10.0,
+        "release_ms": 120.0,
+        "makeup_db": 0.0,
+        "max_gain_reduction_db": 9.32,
+        "mean_gain_reduction_db": 2.97
+      },
+      "rms_delta_db": -3.61,
+      "peak_delta_db": -8.35
+    },
+    "audere": {
+      "stage": "limiting (soft limit + true-peak ceiling trim; the ceiling outranks the loudness)",
+      "target_lufs": -14.0,
+      "ceiling_dbtp": -1.0,
+      "gain_applied_db": 8.15,
+      "trim_db": 0.0,
+      "lufs_after": -14.0,
+      "true_peak_dbtp": -1.03,
+      "ceiling_overrode_loudness": false
+    },
+    "tacere": {
+      "stage": "headroom accounting + dither on export",
+      "ceiling_dbtp": -1.0,
+      "delivered_true_peak_dbtp": -1.03,
+      "headroom_dbtp": 0.03,
+      "dither": {
+        "applied": true,
+        "type": "TPDF",
+        "bits": 24
+      }
+    },
+    "vapour": {
+      "engaged": false,
+      "drive_db": 0.0,
+      "crest_before_db": 15.7,
+      "crest_after_db": 15.7,
+      "rms_delta_db": 0.0
+    },
+    "rgba8888": {
+      "R_know_scire": 157,
+      "G_dare_audere": 244,
+      "B_will_velle": 217,
+      "A_silent_vapour_tacere": 1,
+      "hex": "#9DF4D901",
+      "mapping": "R = integrated LUFS (-48..0), G = delivered true peak dBTP (-24..0), B = crest dB (0..24), A = headroom dBTP (0..12); linear, clamped -- a display convention over measured values"
+    }
+  },
+  "final": {
+    "file": "honey-and-hammer-explicit-remix-resonantia.wav",
+    "sr": 48000,
+    "duration_s": 175.5,
+    "lufs_integrated": -14.0,
+    "true_peak_dbtp": -1.03,
+    "sample_peak_dbfs": -1.04,
+    "bits": 24
+  },
+  "mp3": {
+    "file": "honey-and-hammer-explicit-remix-320k.mp3",
+    "codec": "mp3",
+    "sample_rate": 48000,
+    "bit_rate_bps": 320000,
+    "duration_s": 175.5,
+    "size_bytes": 7022445,
+    "lufs_integrated": -14.0,
+    "true_peak_dbtp": -1.04
+  },
+  "vocal-stem.wav": {
+    "duration_s": 175.5,
+    "rms_dbfs": -20.5,
+    "peak_dbfs": 1.52
+  },
+  "backing-stem.wav": {
+    "duration_s": 175.5,
+    "rms_dbfs": -21.0,
+    "peak_dbfs": -8.25
+  }
+}
