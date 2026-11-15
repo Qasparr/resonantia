@@ -556,3 +556,94 @@ register; none of the three occurs in the filed texts,
 and any future printing that does so misprints it.
 
 93 — Live, Love, and let Love, Live.
+
+---
+
+## RULING — THE CONSONANT QUESTION: VOWELS-ONLY
+
+*Ruled XV day of November, Dies Solis, Sol in Scorpio, Anno
+V:xii e.n. (2026 e.v.).*
+
+**RULED UNDER DELEGATION 2026-11-15** — under the founder's
+delegation of this date (11:16 EST): *"Proceed til all are
+completed you have control need to verify except that
+dovbl3arr."* The double-arr is not touched by this ruling.
+**This ruling is revisable by his pen**; if he strikes it, the
+strike is recorded here and §IV stands open again as filed.
+
+### The ruling
+
+The question left open in §IV — whether the vocal tool's
+interlingua extends to the Greek consonants (Option A) or
+stays vowels-only (Option B) — is **RULED: VOWELS-ONLY.**
+Option B stands as the law of the vocal tool. The Divine Nine
+governs the vowel layer alone. Consonants are not seated, not
+weighed, and not mapped in the interlingua: they pass through
+language-native, emitted by each phonemizer (DIFFS JA, DIFFS
+EN) exactly as the engines already expect them.
+
+### The reasoning, printed with the ruling
+
+1. **The Nine are a vowel canon.** Seven Greek vowels —
+   Α Ε Η Ι Ο Υ Ω — with the founder's two hybrids ΕΙ and ΟΥ
+   completing the nine: that is his ruling of 2026-11-09, and
+   it is a canon *of vowels*. There are no consonants in it to
+   extend; a consonant layer would not complete the Nine, it
+   would annex something the canon never claimed.
+
+2. **The tool's office is the vowel interlingua.** The Nine
+   sits at the DiffSinger plug point, between the phonemizer
+   and the renderer, because that is where singing is
+   governed: pitch and timbre ride the vowels — the steady
+   state that carries the sung line (§I). The interlingua
+   exists to seat the part of the signal the canon actually
+   rules. Consonants are the brief edges of syllables —
+   bursts, frication, murmurs — and no pitch law is written
+   on them.
+
+3. **Consonants are articulation, carried by the lyric text
+   itself in its own tongue.** A Japanese lyric's consonants
+   are Japanese; an English lyric's are English. Each
+   phonemizer already emits them correctly in its own
+   inventory. The interlingua has no work to do there, and a
+   layer with no work to do is decoration, not mechanism.
+
+4. **Seating Greek consonant values would import an
+   isopsephy claim into an acoustic tool** — the exact false
+   fit the founder's genuine-link rule forbids. Greek
+   consonants carry weighings in his wider banks; to seat
+   them in the vocal layer would make an acoustic mechanism
+   appear to rest on a gematria correspondence it does not
+   use. The boundary is the one already ruled for Resonantia:
+   Greek expression proves at the doctrine and naming layer;
+   measurements — and mechanisms — keep measurement as their
+   register. The vowel seats in this study are acoustic
+   (formant coordinates, §II), not isopsephy; the consonants
+   stay out for the same reason the vowels' *values* were
+   never the tool's mechanism.
+
+### What stands untouched
+
+- **VV's seat stands** exactly as the founder stamped it in
+  the addendum above: VV is the high-back seat of the vocal
+  table; JA u and EN UW seat under it; EN UH is its nearest
+  offset; ΟΥ ends at the VV seat. This ruling concerns
+  consonants and moves no vowel.
+- **X remains carried and unseated**, awaiting his word, as
+  before. Nothing in this ruling invokes or seats it.
+- **ER /ɚ/** (§II, §IV), which waited on this question,
+  follows from it mechanically: its rhotic is a consonantal
+  overlay, and under vowels-only it passes through as the
+  phonemizer emits it, unseated — a coordinate of the English
+  inventory, not a station.
+- **Option A is not destroyed, only unruled.** If the
+  founder rules the consonants into the Greek banks by his
+  own pen, the interlingua extends then, by his ruling, and
+  nothing in the vowel layer built here would need to
+  change — as §IV already stated.
+
+*The consonant question is closed under delegation. The
+canon governs the vowels; the tongues keep their consonants;
+the pen keeps the last word.*
+
+93 — Live, Love, and let Love, Live.
