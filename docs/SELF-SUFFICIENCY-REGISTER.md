@@ -122,3 +122,47 @@ own and calibration, both named, neither hidden.
 **Flagpole of Claim and Coinage: Johnathan 'Qasparr' Monroe, ARR, All Rights Reserved, Without Prejudice. Right of claim hereby reserved and coined under the authority of the Living Man.**
 
 93 — Live, Love, and let Love, Live.
+
+---
+
+## ADDENDUM 2 — XV day of November, 2026 e.v. (the second addendum of the day; appended after Addendum 1, the register and Addendum 1 unaltered)
+
+**THE FIRST SELF-SUFFICIENT RUN.** "SPEAR AND MAGICKAL HELM" —
+the founder's track of this morning (the Pyramid's crown, E31) —
+was produced **end-to-end on the house road**: no adopted outside
+engine sang, struck, or mastered any part of it. Run report:
+`resonance/studio-runs/spear-and-magickal-helm-run1/RUN-REPORT.md`,
+resonantia `d412ee2`.
+
+**What the run carried, measured:**
+
+- **Vocal:** DiffSinger with the licence-clean Lem bank (Addendum
+  1's stack), **28 of 28 lines rendered** — the hook and Verse 1
+  (Qasparr's seat) as a rhythmic chant. **Rap-credibility is the
+  founder's ear call, and it stands OPEN** — the desk does not
+  grade its own singer.
+- **Backing, confessed at full size:** a struck kit, a bass808,
+  and a synthesized pad — house-built, and named as synthesized,
+  not dressed as anything else.
+- **Master:** the Four Powers chain — **−14.0 LUFS / −1.08 dBTP**,
+  the house ceiling held. **68.326 s · 48 kHz / 24-bit.**
+
+**The Perform line, updated by this run:** Perform is now
+**self-sufficient for a full sung master of hook + one verse** —
+the register's §V verdict ("self-sufficient for instrumentals;
+the sung voice still rides an adopted outside engine") is
+superseded for that span by this addendum, marked not vanished.
+The run narrows the line; it does not erase it.
+
+**Open items for a full-track run, named, none hidden:** Verses
+2–3 (Qveen Bee's and Lady Lilith's seats) and the outro chant are
+not yet rendered · sheet-MIDI conformance of the run against the
+track's notation is unchecked · duration calibration stands at
+×~1.15 and wants its pass · a real piano is not yet in the
+backing · and there is still **no house voice** — Lem sings this
+run under generous terms, a borrowed singer, as Addendum 1
+recorded.
+
+**Flagpole of Claim and Coinage: Johnathan 'Qasparr' Monroe, ARR, All Rights Reserved, Without Prejudice. Right of claim hereby reserved and coined under the authority of the Living Man.**
+
+93 — Live, Love, and let Love, Live.
