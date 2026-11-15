@@ -1,0 +1,179 @@
+{
+  "run": 3,
+  "change": "stereo stage picture only; lines, kit, 808, pad synthesis, chain settings and staging as run 2",
+  "before": {
+    "master": {
+      "corr": 0.9985,
+      "rms_l_dbfs": -15.4,
+      "rms_r_dbfs": -15.41,
+      "side_minus_mid_db": -31.13,
+      "side_energy_pct": 0.08
+    },
+    "vocal_stem": {
+      "corr": 0.9962,
+      "rms_l_dbfs": -23.04,
+      "rms_r_dbfs": -23.0,
+      "side_minus_mid_db": -27.22,
+      "side_energy_pct": 0.19
+    },
+    "backing_stem": {
+      "corr": 1.0,
+      "rms_l_dbfs": -21.0,
+      "rms_r_dbfs": -21.0,
+      "side_minus_mid_db": -219.0,
+      "side_energy_pct": 0.0
+    }
+  },
+  "vocal_notes": {
+    "missing": []
+  },
+  "backing_image_pre_stage": {
+    "corr": 0.9529,
+    "rms_l_dbfs": -8.77,
+    "rms_r_dbfs": -8.9,
+    "side_minus_mid_db": -16.17,
+    "side_energy_pct": 2.36
+  },
+  "vocal_image_pre_stage": {
+    "corr": 0.0453,
+    "rms_l_dbfs": 9.87,
+    "rms_r_dbfs": 10.44,
+    "side_minus_mid_db": -0.39,
+    "side_energy_pct": 47.74
+  },
+  "staging": {
+    "backing_gain_db": -12.16,
+    "vocal_gain_db": -30.67,
+    "backing_rms_dbfs": -21.0,
+    "vocal_rms_dbfs": -20.5
+  },
+  "premix": {
+    "rms_dbfs": -17.73,
+    "peak_dbfs_before_trim": 0.26,
+    "trim_db": 0.0,
+    "peak_dbfs": 0.26
+  },
+  "four_powers": {
+    "scire": {
+      "stage": "metering / measurement (BS.1770)",
+      "lufs_integrated": -16.28,
+      "true_peak_dbtp": 0.27,
+      "sample_peak_dbfs": 0.26,
+      "rms_dbfs": -17.73,
+      "crest_db": 17.99
+    },
+    "velle": {
+      "engaged": true,
+      "eq": [
+        {
+          "type": "peak",
+          "freq_hz": 3000.0,
+          "gain_db": 1.5,
+          "q": 1.0
+        },
+        {
+          "type": "highshelf",
+          "freq_hz": 8000.0,
+          "gain_db": 1.0,
+          "q": 1.0
+        }
+      ],
+      "comp": {
+        "threshold_db": -18.0,
+        "ratio": 2.0,
+        "knee_db": 6.0,
+        "attack_ms": 10.0,
+        "release_ms": 120.0,
+        "makeup_db": 0.0,
+        "max_gain_reduction_db": 9.18,
+        "mean_gain_reduction_db": 4.24
+      },
+      "rms_delta_db": -4.61,
+      "peak_delta_db": -8.68
+    },
+    "audere": {
+      "stage": "limiting (soft limit + true-peak ceiling trim; the ceiling outranks the loudness)",
+      "target_lufs": -14.0,
+      "ceiling_dbtp": -1.0,
+      "gain_applied_db": 6.9,
+      "trim_db": 0.0,
+      "lufs_after": -14.0,
+      "true_peak_dbtp": -1.61,
+      "ceiling_overrode_loudness": false
+    },
+    "tacere": {
+      "stage": "headroom accounting + dither on export",
+      "ceiling_dbtp": -1.0,
+      "delivered_true_peak_dbtp": -1.61,
+      "headroom_dbtp": 0.61,
+      "dither": {
+        "applied": true,
+        "type": "TPDF",
+        "bits": 24
+      }
+    },
+    "vapour": {
+      "engaged": false,
+      "drive_db": 0.0,
+      "crest_before_db": 13.92,
+      "crest_after_db": 13.92,
+      "rms_delta_db": 0.0
+    },
+    "rgba8888": {
+      "R_know_scire": 169,
+      "G_dare_audere": 238,
+      "B_will_velle": 191,
+      "A_silent_vapour_tacere": 13,
+      "hex": "#A9EEBF0D",
+      "mapping": "R = integrated LUFS (-48..0), G = delivered true peak dBTP (-24..0), B = crest dB (0..24), A = headroom dBTP (0..12); linear, clamped -- a display convention over measured values"
+    }
+  },
+  "final": {
+    "file": "honey-and-hammer-explicit-remix-stereo-resonantia.wav",
+    "sr": 48000,
+    "duration_s": 175.5,
+    "lufs_integrated": -14.0,
+    "true_peak_dbtp": -1.61,
+    "sample_peak_dbfs": -1.61,
+    "bits": 24,
+    "corr": 0.4903,
+    "rms_l_dbfs": -15.53,
+    "rms_r_dbfs": -15.36,
+    "side_minus_mid_db": -4.66,
+    "side_energy_pct": 25.49
+  },
+  "mp3": {
+    "file": "honey-and-hammer-explicit-remix-stereo-320k.mp3",
+    "codec": "mp3",
+    "sample_rate": 48000,
+    "bit_rate_bps": 320000,
+    "duration_s": 175.5,
+    "size_bytes": 7022445,
+    "lufs_integrated": -14.0,
+    "true_peak_dbtp": -1.6,
+    "corr": 0.4902,
+    "rms_l_dbfs": -15.53,
+    "rms_r_dbfs": -15.36,
+    "side_minus_mid_db": -4.66,
+    "side_energy_pct": 25.49
+  },
+  "binaural": {
+    "raw_lufs": -19.44,
+    "raw_dbtp": -2.72,
+    "gain_applied_db": 1.67,
+    "sofa_native_sr": 44100,
+    "file": "honey-and-hammer-explicit-remix-binaural.wav",
+    "sr": 48000,
+    "duration_s": 175.5,
+    "lufs_integrated": -17.77,
+    "true_peak_dbtp": -1.05,
+    "mp3": {
+      "file": "honey-and-hammer-explicit-remix-binaural-320k.mp3",
+      "bit_rate_bps": 320000,
+      "sample_rate": 48000,
+      "size_bytes": 7022445,
+      "lufs_integrated": -17.77,
+      "true_peak_dbtp": -1.04
+    }
+  }
+}
