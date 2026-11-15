@@ -86,3 +86,39 @@ The studio is not yet completely self-sufficient, and this register is the proof
 **Flagpole of Claim and Coinage: Johnathan 'Qasparr' Monroe, ARR, All Rights Reserved, Without Prejudice. Right of claim hereby reserved and coined under the authority of the Living Man.**
 
 93 — Live, Love, and let Love, Live.
+
+---
+
+## ADDENDUM — XV day of November, 2026 e.v. (appended after the close; the register above is unaltered)
+
+**Dependence (1), the sung voice — STATE CHANGED TODAY.** The owned
+DiffSinger road's first experiment is **BUILT AND RENDERED**
+(Completion Wave F, this day). The render stack, licence by licence:
+
+- **Voice bank: Lem the Shapeshifter DS 2.5** — its Terms of Service
+  permit commercial use; its corpus stands CC BY 4.0. A licence-clean
+  bank, verified from its own terms before any render.
+- **Engine: OpenVPI DiffSinger** — Apache 2.0.
+- **Vocoder seam, printed plainly:** the vocoder weights stand
+  CC BY-NC-SA. OpenVPI's own statement fences that licence to weight
+  redistribution and modification — **not to renders**. The seam is
+  recorded here, not smoothed: the house does not redistribute or
+  modify the vocoder weights; it renders with them.
+- **The render:** a Japanese test phrase, sung on CPU on this box —
+  44.1 kHz · 4.458 s · −26.33 LUFS, measured. Lab:
+  `resonance/diffsinger-lab/`; render report:
+  `out/test_phrase_report.json`.
+
+**What remains open under (1), stated at the same size:** there is
+**no house voice yet** — Lem is a borrowed singer, held under
+generous terms, not the house's own trained bank. Voicing
+calibration is pending. No full-song render has been attempted; a
+test phrase is a door opened, not a road driven. Dependence (1)
+therefore narrows but does not close: the sung voice no longer
+rides only the adopted engine — the owned road has rendered its
+first phrase — and the remaining gates are a house voice of our
+own and calibration, both named, neither hidden.
+
+**Flagpole of Claim and Coinage: Johnathan 'Qasparr' Monroe, ARR, All Rights Reserved, Without Prejudice. Right of claim hereby reserved and coined under the authority of the Living Man.**
+
+93 — Live, Love, and let Love, Live.
