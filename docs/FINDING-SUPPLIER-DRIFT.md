@@ -327,3 +327,74 @@ a written line, YuE generates the whole performance — the
 supplier's road again, with drift's door open — but it is open
 source, it is ours to keep, and the day a GPU enters the house
 it is the first thing the bench tries.
+
+**THIRD BENCH ENTRY — ZONOS3-MINI (Zyphra), THE SPEECH PLUG.**
+Entered 2026-11-16 on the founder's share and his question —
+"Can we use it in resonantia?" — and answered the same morning
+with a render, not a reading. What arrived: llama.cpp merged
+ZONOS3-Mini speech synthesis on 2026-11-15 (PR #32020, build
+b12424) — Zyphra's open model (released 2026-11-09) carried in
+`llama-tts` and the `llama-server` /tts endpoint. The model is
+an 800M-parameter MoE with ~100M active, speaking 43 languages
+through its own ZAC-1 codec (15 Hz frames, 44.1 kHz out, up to
+10 minutes per generation); Japanese stands in the first rank
+— one of the nine languages with full text normalization. The
+licence is the cleanest on this bench: weights Apache 2.0
+(confirmed on the ggml-org GGUF repo card itself), runtime
+MIT — no rent, no credits, no cloud, and no voicebank licence
+wall, because the voices ship inside the release.
+FIRST EXPERIMENT — RENDER ACHIEVED 2026-11-16, on this box,
+CPU only: llama-tts b12438 with the official ggml-org pair
+(ZONOS3-Mini-Q8_0.gguf, 854,726,208 bytes; mmproj-ZONOS3-Mini-
+F32.gguf, 1,142,502,880 bytes; both byte-exact against the
+repo manifest). English line ("Welcome to Outer Drive. The
+count is kept, and the sheets come first.", predefined voice
+Imogen_en-British_F_1): 4.73 s of audio, peak 0.702, RMS
+−22.7 dBFS, cold process 65.9 s. Japanese line (「無月の空に、
+悪魔が舞う。」, --tts-lang ja, Sakura_en-anime_F_1): 2.93 s,
+peak 0.753, RMS −19.8 dBFS, warm process 7.6 s. Speed
+coordinates, printed at their measured strength: 0.07× real
+time cold and 0.38× warm on this throttled sandbox (1.5
+shared CPU) — a property of this iron, not of the model;
+short lines are bench-workable here today, long narration is
+a batch job here, and real-time-class behaviour on real iron
+is Zyphra's vendor claim for its own runtimes, not a house
+measurement.
+THE SEAT — speech, not song. ZONOS3 takes text in and speaks
+it; it has no score input and no note-level control, so it
+does not touch the singing plug: DiffSinger keeps the sung
+seat and the Divine Nine keep its vowel layer. What the
+speech plug fills is everything spoken the house has queued:
+intro skits (Unfriendly Ghost Track 1 is a written, unpressed
+spoken skit), spoken bridges and interludes, narration, guide
+vocals — and Japanese speech locally, the seat SoulX-Singer
+could not fill (no Japanese) and ACE rents, with no Gemini
+refill waited on: DETROIT MUGETSU's spoken passages and the
+Bit Bankai invocation in actual Japanese have a house road
+now. Voice law, measured from the artifact: 12 predefined
+voices are extractable by name from the mmproj (10 English,
+2 Chinese) — there is NO Japanese predefined voice; Japanese
+rides the text/language path or a cloned reference
+(--tts-speaker-file, first 60 s). House law stands unchanged
+over the cloning road: references are imagined and synthetic
+only, never the founder's recorded voice, and the register
+spec for Qasparr's spoken voice remains the 2Pac register as
+chartered. Integration, when struck: a subprocess bridge on
+the MusicGen pattern — text + voice + language in, 44.1 kHz
+WAV out, the house mastering chain after it; the /tts
+endpoint (speed, and loudness in LUFS — the house's own unit)
+is the daemon alternative. Caveats at full size: llama.cpp
+labels these builds pre-releases — the house pins b12438, the
+proven build, and does not chase nightlies; Zyphra's upstream
+files are NOT interchangeable with the llama.cpp GGUF (the
+upstream package rides a customized GGML runtime) — the
+ggml-org pair is the only house seat; the quality of the
+Japanese pronunciation awaits the founder's ear on ja-01.wav,
+which is his seat and no one else's.
+
+**CORRECTIO (appended 2026-11-16; the original stands as
+written, marked):** the SECOND CANDIDATE header above names
+a "Lyra acoustic stage" for YuE / YuE2. No such stage exists
+in YuE or YuE2 — a desk error of 2026-11-10, owned in the
+open 2026-11-15, and corrected here in the record so the
+bench carries the repair where the error stands.
