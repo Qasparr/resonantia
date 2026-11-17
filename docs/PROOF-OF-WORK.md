@@ -99,6 +99,31 @@ measurements printed in its gate — because a failed master is
 a fact of the house's history, not an embarrassment to be
 struck.
 
+## The stamp — the delivered file's face
+
+A master proof lives in the ledger, but the MP3 a listener
+receives carries its own face: at `produce()`'s emission the
+delivered file is stamped in its ID3 tag
+(`resonance/studio/mp3tags.py`) with the proof's ID, its
+SEALED or FAILED verdict, the authorship, and the Flagpole —
+and, for a FAILED master, every failing check with its
+measured value against its law. Fail-closed reaches the
+metadata: a failed master gets no stamp of pride, it gets
+its failure printed on its face.
+
+The order of operations is the chain's law, not a preference.
+A record attests its artifact by the hash of the artifact's
+whole bytes, so a proof's ID can never be written into the
+very body that record attests — the circle does not close.
+The pristine encode is therefore preserved untouched as the
+**attested twin** (`<name>.attested.mp3` beside the delivery);
+the master proof attests the twin, the delivered file is
+stamped once the record stands, and the run manifest's proof
+section proves the two bodies' audio byte-identical. A spec
+may stay the stamp (`"proof": {"tags": false}`), in which
+case the proof attests the delivered file directly, as
+before the stamp existed.
+
 ## The doors
 
 **Native emission** — the renders strike their own proofs:

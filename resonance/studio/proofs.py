@@ -465,6 +465,24 @@ def emit_produce_proof(manifest, out_dir, spec, log=print):
     stand, but no one is told a proof exists when none was
     struck. Nothing is swallowed; the failure is printed in the
     run's own manifest, where the founder reads his runs.
+
+    THE STAMP (mp3tags, XVI November 2026): unless the spec
+    stays it (spec['proof']['tags'] is False), the delivered
+    MP3 leaves the emission carrying its proof's face -- the
+    proof ID, the SEALED/FAILED verdict, the failing checks
+    when it failed, the authorship and the Flagpole, in its
+    ID3 tag. The order of operations is the law's, not a
+    preference: a record attests its artifact by the hash of
+    the artifact's whole bytes, so the proof's ID can never
+    be written into the body that same record attests. The
+    pristine encode is therefore preserved first as the
+    attested twin (mp3tags.preserve_attested_copy), the proof
+    attests the twin -- a byte copy of the very body
+    measure_master weighed -- and the delivered file is
+    stamped once the record stands, its audio proven
+    byte-identical to the twin's in the returned section.
+    A stamp failure unmakes nothing: the proof stands, and
+    the section confesses the failure at full size.
     """
     out_dir = Path(out_dir)
     try:
@@ -481,15 +499,52 @@ def emit_produce_proof(manifest, out_dir, spec, log=print):
         }
         parents = (spec.get("proof") or {}).get("parents", [])
         ledger = (spec.get("proof") or {}).get("ledger")
+        stamp_tags = (spec.get("proof") or {}).get("tags", True)
+        artifact = mp3
+        twin = None
+        if stamp_tags:
+            from resonance.studio import mp3tags  # lazy, as below
+            twin = mp3tags.preserve_attested_copy(mp3)
+            artifact = twin
+            body["delivered_mp3"] = str(mp3)
+            body["tag_stamp"] = (
+                "the delivered MP3 carries this proof's ID in "
+                "its ID3 stamp (resonance.studio.mp3tags); the "
+                "attested body is the pristine twin at "
+                "artifact.path, a byte copy of the encode the "
+                "gate weighed")
         rec = append_master_proof(
-            mp3, body, measured, parents=parents,
+            artifact, body, measured, parents=parents,
             ledger_path=ledger)
         log(f"proof of mastering: {rec['id']} "
             f"({rec['status']}) appended to the ledger")
-        return {"id": rec["id"], "kind": "master",
-                "status": rec["status"], "gate": rec["gate"],
-                "ledger": str(Path(ledger)
-                              if ledger else default_ledger_path())}
+        section = {"id": rec["id"], "kind": "master",
+                   "status": rec["status"], "gate": rec["gate"],
+                   "ledger": str(Path(ledger)
+                                 if ledger else default_ledger_path())}
+        if stamp_tags:
+            try:
+                mp3tags.stamp_master_tags(
+                    mp3, proof_id=rec["id"],
+                    status=rec["status"], gate=rec["gate"],
+                    title=manifest.get("title"))
+                identical = mp3tags.audio_bytes(mp3) \
+                    == mp3tags.audio_bytes(twin)
+                section["tags"] = {
+                    "stamped": True,
+                    "attested_artifact": str(twin),
+                    "delivered_artifact": str(mp3),
+                    "audio_identical": identical}
+                log(f"proof stamp: {rec['id']} written to "
+                    f"{mp3.name} (audio identical to the "
+                    f"attested twin: {identical})")
+            except Exception as stamp_exc:  # confessed, not hidden
+                section["tags"] = {
+                    "stamped": False,
+                    "error": f"{type(stamp_exc).__name__}: "
+                             f"{stamp_exc}"}
+                log(f"proof stamp FAILED: {stamp_exc}")
+        return section
     except Exception as exc:  # confessed in the manifest, never hidden
         log(f"proof of mastering: EMISSION FAILED: {exc}")
         return {"status": "EMISSION FAILED",
