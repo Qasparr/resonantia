@@ -1,0 +1,76 @@
+{"chunk": "02-s1-frame", "piece": 0, "words": 174, "frames": 1051, "seconds": 69.4, "wall_s": 221.1, "rc": 0, "flag": null}
+{"chunk": "02-s1-frame", "piece": 0, "words": 174, "frames": 1053, "seconds": 69.533333, "wall_s": 141.5, "rc": 0, "flag": null}
+{"chunk": "02-s1-frame", "piece": 1, "words": 170, "frames": 1040, "seconds": 68.666667, "wall_s": 121.9, "rc": 0, "flag": null}
+{"chunk": "02-s1-frame", "piece": 2, "words": 189, "frames": 1332, "seconds": 88.133333, "wall_s": 146.5, "rc": 0, "flag": null}
+{"chunk": "02-s1-frame", "piece": 3, "words": 181, "frames": 1173, "seconds": 77.533333, "wall_s": 124.9, "rc": 0, "flag": null}
+{"chunk": "02-s1-frame", "piece": 4, "words": 46, "frames": 303, "seconds": 19.533333, "wall_s": 40.0, "rc": 0, "flag": null}
+{"chunk": "02-s1-frame", "joined_seconds": 324.8, "pieces": 5, "status": "CHUNK DONE"}
+{"chunk": "04-s2-take", "piece": 0, "words": 170, "frames": 1091, "seconds": 72.066667, "wall_s": 114.8, "rc": 0, "flag": null}
+{"chunk": "04-s2-take", "piece": 1, "words": 187, "frames": 1151, "seconds": 76.066667, "wall_s": 120.3, "rc": 0, "flag": null}
+{"chunk": "04-s2-take", "piece": 2, "words": 144, "frames": 859, "seconds": 56.6, "wall_s": 92.3, "rc": 0, "flag": null}
+{"chunk": "04-s2-take", "joined_seconds": 205.433333, "pieces": 3, "status": "CHUNK DONE"}
+{"chunk": "06-s3-ship", "piece": 0, "words": 176, "frames": 1100, "seconds": 72.666667, "wall_s": 122.1, "rc": 0, "flag": null}
+{"chunk": "06-s3-ship", "piece": 1, "words": 178, "frames": 1166, "seconds": 77.066667, "wall_s": 127.6, "rc": 0, "flag": null}
+{"chunk": "06-s3-ship", "piece": 2, "words": 180, "frames": 1136, "seconds": 75.066667, "wall_s": 127.2, "rc": 0, "flag": null}
+{"chunk": "06-s3-ship", "piece": 3, "words": 121, "frames": 716, "seconds": 47.066667, "wall_s": 77.1, "rc": 0, "flag": null}
+{"chunk": "06-s3-ship", "joined_seconds": 272.916667, "pieces": 4, "status": "CHUNK DONE"}
+{"chunk": "07-s3-footnotes", "piece": 0, "words": 182, "frames": 1161, "seconds": 76.733333, "wall_s": 119.2, "rc": 0, "flag": null}
+{"chunk": "07-s3-footnotes", "piece": 1, "words": 18, "frames": 113, "seconds": 6.866667, "wall_s": 16.2, "rc": 0, "flag": null}
+{"chunk": "07-s3-footnotes", "joined_seconds": 83.95, "pieces": 2, "status": "CHUNK DONE"}
+{"chunk": "08-s4-code", "piece": 0, "words": 125, "frames": 762, "seconds": 50.133333, "wall_s": 81.9, "rc": 0, "flag": null}
+{"chunk": "08-s4-code", "piece": 1, "words": 176, "frames": 965, "seconds": 63.666667, "wall_s": 102.6, "rc": 0, "flag": null}
+{"chunk": "08-s4-code", "piece": 2, "words": 159, "frames": 934, "seconds": 61.6, "wall_s": 109.3, "rc": 0, "flag": null}
+{"chunk": "08-s4-code", "piece": 3, "words": 175, "frames": 1057, "seconds": 69.8, "wall_s": 131.7, "rc": 0, "flag": null}
+{"chunk": "08-s4-code", "piece": 4, "words": 165, "frames": 935, "seconds": 61.666667, "wall_s": 99.2, "rc": 0, "flag": null}
+{"chunk": "08-s4-code", "piece": 5, "words": 177, "frames": 1140, "seconds": 75.333333, "wall_s": 117.4, "rc": 0, "flag": null}
+{"chunk": "08-s4-code", "piece": 6, "words": 36, "frames": 196, "seconds": 12.4, "wall_s": 29.1, "rc": 0, "flag": null}
+{"chunk": "08-s4-code", "joined_seconds": 396.7, "pieces": 7, "status": "CHUNK DONE"}
+{"chunk": "09-s4-footnotes", "piece": 0, "words": 182, "frames": 1288, "seconds": 85.2, "wall_s": 144.8, "rc": 0, "flag": null}
+{"chunk": "09-s4-footnotes", "piece": 1, "words": 48, "frames": 322, "seconds": 20.8, "wall_s": 36.6, "rc": 0, "flag": null}
+{"chunk": "09-s4-footnotes", "joined_seconds": 106.35, "pieces": 2, "status": "CHUNK DONE"}
+{"chunk": "10-s5-license", "piece": 0, "words": 170, "frames": 1011, "seconds": 66.733333, "wall_s": 104.6, "rc": 0, "flag": null}
+{"chunk": "10-s5-license", "piece": 1, "words": 179, "frames": 964, "seconds": 63.6, "wall_s": 102.8, "rc": 0, "flag": null}
+{"chunk": "10-s5-license", "piece": 2, "words": 185, "frames": 1186, "seconds": 78.4, "wall_s": 118.3, "rc": 0, "flag": null}
+{"chunk": "10-s5-license", "piece": 3, "words": 186, "frames": 1101, "seconds": 72.733333, "wall_s": 119.6, "rc": 0, "flag": null}
+{"chunk": "10-s5-license", "piece": 4, "words": 67, "frames": 349, "seconds": 22.6, "wall_s": 41.4, "rc": 0, "flag": null}
+{"chunk": "10-s5-license", "joined_seconds": 305.466667, "pieces": 5, "status": "CHUNK DONE"}
+{"chunk": "11-s5-footnotes", "piece": 0, "words": 145, "frames": 1089, "seconds": 71.933333, "wall_s": 109.5, "rc": 0, "flag": null}
+{"chunk": "11-s5-footnotes", "piece": 1, "words": 50, "frames": 324, "seconds": 20.933333, "wall_s": 36.9, "rc": 0, "flag": null}
+{"chunk": "11-s5-footnotes", "joined_seconds": 93.216667, "pieces": 2, "status": "CHUNK DONE"}
+{"chunk": "12-s6-bottom", "piece": 0, "words": 183, "frames": 1102, "seconds": 72.8, "wall_s": 117.1, "rc": 0, "flag": null}
+{"chunk": "12-s6-bottom", "piece": 1, "words": 182, "frames": 1029, "seconds": 67.933333, "wall_s": 117.4, "rc": 0, "flag": null}
+{"chunk": "12-s6-bottom", "piece": 2, "words": 175, "frames": 910, "seconds": 60.0, "wall_s": 95.7, "rc": 0, "flag": null}
+{"chunk": "12-s6-bottom", "joined_seconds": 201.433333, "pieces": 3, "status": "CHUNK DONE"}
+{"chunk": "13-s6-footnotes", "piece": 0, "words": 163, "frames": 1076, "seconds": 71.066667, "wall_s": 114.1, "rc": 0, "flag": null}
+{"chunk": "13-s6-footnotes", "piece": 1, "words": 46, "frames": 331, "seconds": 21.4, "wall_s": 36.9, "rc": 0, "flag": null}
+{"chunk": "13-s6-footnotes", "joined_seconds": 92.816667, "pieces": 2, "status": "CHUNK DONE"}
+{"chunk": "14-s7-test", "piece": 0, "words": 188, "frames": 1475, "seconds": 97.666667, "wall_s": 154.6, "rc": 0, "flag": null}
+{"chunk": "14-s7-test", "piece": 1, "words": 183, "frames": 1132, "seconds": 74.8, "wall_s": 123.4, "rc": 0, "flag": null}
+{"chunk": "14-s7-test", "piece": 2, "words": 64, "frames": 472, "seconds": 30.8, "wall_s": 54.4, "rc": 0, "flag": null}
+{"chunk": "14-s7-test", "joined_seconds": 203.966667, "pieces": 3, "status": "CHUNK DONE"}
+{"chunk": "15-s8-ledger", "piece": 0, "words": 182, "frames": 1189, "seconds": 78.6, "wall_s": 122.5, "rc": 0, "flag": null}
+{"chunk": "15-s8-ledger", "piece": 1, "words": 64, "frames": 467, "seconds": 30.466667, "wall_s": 53.5, "rc": 0, "flag": null}
+{"chunk": "15-s8-ledger", "joined_seconds": 109.416667, "pieces": 2, "status": "CHUNK DONE"}
+{"chunk": "16-s9-audit", "piece": 0, "words": 180, "frames": 1248, "seconds": 82.533333, "wall_s": 132.4, "rc": 0, "flag": null}
+{"chunk": "16-s9-audit", "piece": 1, "words": 177, "frames": 1327, "seconds": 87.8, "wall_s": 144.3, "rc": 0, "flag": null}
+{"chunk": "16-s9-audit", "piece": 2, "words": 169, "frames": 1261, "seconds": 83.4, "wall_s": 131.6, "rc": 0, "flag": null}
+{"chunk": "16-s9-audit", "piece": 3, "words": 182, "frames": 1199, "seconds": 79.266667, "wall_s": 122.2, "rc": 0, "flag": null}
+{"chunk": "16-s9-audit", "joined_seconds": 334.05, "pieces": 4, "status": "CHUNK DONE"}
+{"chunk": "17-s10-authorities", "piece": 0, "words": 181, "frames": 1019, "seconds": 67.266667, "wall_s": 111.3, "rc": 0, "flag": null}
+{"chunk": "17-s10-authorities", "piece": 1, "words": 81, "frames": 716, "seconds": 47.066667, "wall_s": 78.3, "rc": 0, "flag": null}
+{"chunk": "17-s10-authorities", "joined_seconds": 114.683333, "pieces": 2, "status": "CHUNK DONE"}
+{"chunk": "18-annex-1", "piece": 0, "words": 157, "frames": 977, "seconds": 64.466667, "wall_s": 105.2, "rc": 0, "flag": null}
+{"chunk": "18-annex-1", "piece": 1, "words": 178, "frames": 1114, "seconds": 73.6, "wall_s": 119.3, "rc": 0, "flag": null}
+{"chunk": "18-annex-1", "piece": 2, "words": 159, "frames": 956, "seconds": 63.066667, "wall_s": 102.3, "rc": 0, "flag": null}
+{"chunk": "18-annex-1", "joined_seconds": 201.833333, "pieces": 3, "status": "CHUNK DONE"}
+{"chunk": "19-annex-2", "piece": 0, "words": 188, "frames": 1278, "seconds": 84.533333, "wall_s": 151.5, "rc": 0, "flag": null}
+{"chunk": "19-annex-2", "piece": 1, "words": 160, "frames": 1005, "seconds": 66.333333, "wall_s": 110.1, "rc": 0, "flag": null}
+{"chunk": "19-annex-2", "piece": 2, "words": 114, "frames": 740, "seconds": 48.666667, "wall_s": 76.9, "rc": 0, "flag": null}
+{"chunk": "19-annex-2", "joined_seconds": 200.233333, "pieces": 3, "status": "CHUNK DONE"}
+{"chunk": "20-annex-3-defect", "piece": 0, "words": 168, "frames": 998, "seconds": 65.866667, "wall_s": 105.0, "rc": 0, "flag": null}
+{"chunk": "20-annex-3-defect", "piece": 1, "words": 187, "frames": 1233, "seconds": 81.533333, "wall_s": 130.0, "rc": 0, "flag": null}
+{"chunk": "20-annex-3-defect", "piece": 2, "words": 120, "frames": 743, "seconds": 48.866667, "wall_s": 78.7, "rc": 0, "flag": null}
+{"chunk": "20-annex-3-defect", "joined_seconds": 196.966667, "pieces": 3, "status": "CHUNK DONE"}
+{"chunk": "21-colophon", "piece": 0, "words": 183, "frames": 1280, "seconds": 84.666667, "wall_s": 136.0, "rc": 0, "flag": null}
+{"chunk": "21-colophon", "piece": 1, "words": 139, "frames": 1038, "seconds": 68.533333, "wall_s": 113.2, "rc": 0, "flag": null}
+{"chunk": "21-colophon", "joined_seconds": 153.55, "pieces": 2, "status": "CHUNK DONE"}

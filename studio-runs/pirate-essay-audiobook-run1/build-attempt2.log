@@ -1,0 +1,15 @@
+master: scire {'stage': 'metering / measurement (BS.1770)', 'lufs_integrated': -22.37, 'true_peak_dbtp': -2.76, 'sample_peak_dbfs': -2.79, 'rms_dbfs': -25.4, 'crest_db': 22.61}
+master: report {'lufs_before': -22.37, 'gain_applied_db': 8.75, 'trim_db': -0.32, 'lufs_after': -14.03, 'sample_peak_db': -1.62, 'true_peak_dbtp': -1.32, 'ceiling_overrode_loudness': True, 'target_lufs': -14.0, 'ceiling_dbtp': -1.0, 'attempt': 2, 'steering_ceiling_dbtp': -1.3, 'decode_overshoot_budget_db': 0.3, 'gain_precompensation_db': 0.38, 'prior_attempt': "master proof pow-875cbecbf6a46800a2ec84e4ee69200607ff96224a5c5eedb7772824c63c966d FAILED at the gate: decoded true peak -0.88 dBTP vs the WAV's steered -1.02 (MP3 decode overshoot +0.14 dB); loudness and bitrate passed. That record stands; this attempt answers it.", 'longform_note': "master_signal's law applied in blocks: gain and soft-limit are sample-local; loudness on the pipeline's own scale (its ungated K-weighted figure, its own biquad coefficients) computed in the time domain in blocks -- the whole-signal FFT form and four_powers' whole-body RMS witness OOM-kill on the 64-minute form in this box, and the blocked form was validated against the whole-signal scale at delta 0.0000 LU on two 90 s slices of this program; true peak by the pipeline's oversampling in 120 s windows with 5 s overlaps."}
+master: -> /home/hatch/workspace/resonance/studio-runs/pirate-essay-audiobook-run1/master.wav + /home/hatch/workspace/your_files/pirate-essay/THE-PIRATE-ESSAY-AUDIOBOOK.mp3
+phase master done in 422.9s
+proof of work (vocal): pow-683111a6845eff2cc9233c492ceb1f4f7ae39308aadf5443cfe5fa5128b86936 (SEALED) -- standing record reused; the narration was not re-rendered
+measure_master subprocess failed: @ 0x5ac112027280] Error submitting a packet to the muxer: No space left on device
+    Last message repeated 1 times
+[out#0/wav @ 0x5ac112048480] Error muxing a packet
+[out#0/wav @ 0x5ac112048480] Task finished with error code: -28 (No space left on device)
+[out#0/wav @ 0x5ac112048480] Terminating thread with return code -28 (No space left on device)
+[out#0/wav @ 0x5ac112048480] Error writing trailer: No space left on device
+[out#0/wav @ 0x5ac112048480] Error closing file: No space left on device
+proof of mastering: pow-8245e4c5bb9aaef6a01f6b09f5da133286bdaab4329b2b863c1753242a1c26f6 (SEALED)
+ledger verify: {"ok": false, "records": 20, "ledger": "/home/hatch/workspace/resonance/proofs/ledger.jsonl", "breaks": [{"index": 18, "id": "pow-875cbecbf6a46800a2ec84e4ee69200607ff96224a5c5eedb7772824c63c966d", "problem": "TAMPERED ARTIFACT: /home/hatch/workspace/your_files/pirate-essay/THE-PIRATE-ESSAY-AUDIOBOOK.mp3 hashes to a different body than the record attests"}]}
+phase proofs done in 123.3s

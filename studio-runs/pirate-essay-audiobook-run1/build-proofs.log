@@ -1,0 +1,11 @@
+proof of work (vocal): pow-683111a6845eff2cc9233c492ceb1f4f7ae39308aadf5443cfe5fa5128b86936 (SEALED)
+measure_master subprocess failed: @ 0x63be71899280] Error submitting a packet to the muxer: No space left on device
+    Last message repeated 1 times
+[out#0/wav @ 0x63be718ba480] Error muxing a packet
+[out#0/wav @ 0x63be718ba480] Task finished with error code: -28 (No space left on device)
+[out#0/wav @ 0x63be718ba480] Terminating thread with return code -28 (No space left on device)
+[out#0/wav @ 0x63be718ba480] Error writing trailer: No space left on device
+[out#0/wav @ 0x63be718ba480] Error closing file: No space left on device
+proof of mastering: pow-875cbecbf6a46800a2ec84e4ee69200607ff96224a5c5eedb7772824c63c966d (FAILED)
+ledger verify: {"ok": true, "records": 19, "ledger": "/home/hatch/workspace/resonance/proofs/ledger.jsonl", "breaks": []}
+phase proofs done in 126.6s

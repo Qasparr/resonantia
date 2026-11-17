@@ -1,0 +1,7 @@
+Section Eight. The Pontifex Audit Ledger.
+
+Every weighing admitted to this essay was re-run on the house engine, Pontifex, by script on the night of the build, before the text was typeset. In the written essay the ledger stands as the engine's own output, row upon row of letter-by-letter arithmetic, transcribed without alteration, so that any reader can re-add every line by hand. For the ear, the ledger is read as its verdict, and the verdict is read whole:
+
+Verdict of the ledger: every weighing in the essay reproduces on the engine in its stated bank. Failures of equality, Master at seventy-six against the seventy-seven seat, delta one; Hull at fifty-three against the V-spelling at fifty-four, delta one; Registry at one hundred twenty-one against Footlocker and Undertow at one hundred twenty, delta one; Treasure at one hundred seven against the seventy-seven seat, delta thirty, are printed in the text as deltas and stand here as data, not defects: a delta is a boundary coordinate, and the zero-point method reports boundaries rather than verdict blobs. No weighing failed to reproduce. None was smoothed.
+
+The ledger's method, from its footnotes: Scripted recomputation before striking is standing house law; the ledger is generated from the engine run, not copied from the evening's chat record, so the essay's numbers answer to the bank and not to memory. The engine: Pontifex, the Universal Correspondence Framework: Hebrew mispar hechrechi, Latin ordinal, and Agrippa banks attested; provenance labels are the engine's own returns.
