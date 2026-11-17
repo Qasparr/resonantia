@@ -1,0 +1,221 @@
+{
+  "tool": "resonance.studio.eightoeight",
+  "label": "'808' names the TR-808 sound family. Every voice here is synthesized in-house from oscillators, noise, and envelopes; nothing samples Roland's machine or plays its recordings.",
+  "sr": 48000,
+  "dial_source": "/home/hatch/workspace/resonance/resonance/studio/data/dial-table.json",
+  "entries": [
+    {
+      "file": "kick.wav",
+      "voice": "kick",
+      "params": {},
+      "peak_factor_applied": 0.9237,
+      "measured": {
+        "duration_s": 1.0,
+        "peak_dbfs": -1.01,
+        "rms_dbfs": -14.03
+      },
+      "realized_track": {
+        "attack_hz_window_20ms": 118.1,
+        "tail_hz_last_250ms": 50.3
+      }
+    },
+    {
+      "file": "snare.wav",
+      "voice": "snare",
+      "params": {},
+      "peak_factor_applied": 1.0025,
+      "measured": {
+        "duration_s": 0.35,
+        "peak_dbfs": -1.01,
+        "rms_dbfs": -19.33
+      }
+    },
+    {
+      "file": "clap.wav",
+      "voice": "clap",
+      "params": {},
+      "peak_factor_applied": 1.7871,
+      "measured": {
+        "duration_s": 0.8,
+        "peak_dbfs": -1.01,
+        "rms_dbfs": -23.35
+      }
+    },
+    {
+      "file": "hihat-closed.wav",
+      "voice": "hihat-closed",
+      "params": {
+        "open_": false
+      },
+      "peak_factor_applied": 4.6672,
+      "measured": {
+        "duration_s": 0.25,
+        "peak_dbfs": -1.01,
+        "rms_dbfs": -23.14
+      }
+    },
+    {
+      "file": "hihat-open.wav",
+      "voice": "hihat-open",
+      "params": {
+        "open_": true
+      },
+      "peak_factor_applied": 3.4499,
+      "measured": {
+        "duration_s": 1.2,
+        "peak_dbfs": -1.01,
+        "rms_dbfs": -21.3
+      }
+    },
+    {
+      "file": "cowbell.wav",
+      "voice": "cowbell",
+      "params": {},
+      "peak_factor_applied": 0.6205,
+      "measured": {
+        "duration_s": 0.7,
+        "peak_dbfs": -1.01,
+        "rms_dbfs": -17.08
+      }
+    },
+    {
+      "file": "tom-low.wav",
+      "voice": "tom-low",
+      "params": {
+        "seat": "low"
+      },
+      "peak_factor_applied": 0.9313,
+      "measured": {
+        "duration_s": 0.6,
+        "peak_dbfs": -1.01,
+        "rms_dbfs": -13.37
+      }
+    },
+    {
+      "file": "tom-mid.wav",
+      "voice": "tom-mid",
+      "params": {
+        "seat": "mid"
+      },
+      "peak_factor_applied": 0.9303,
+      "measured": {
+        "duration_s": 0.6,
+        "peak_dbfs": -1.01,
+        "rms_dbfs": -13.38
+      }
+    },
+    {
+      "file": "tom-high.wav",
+      "voice": "tom-high",
+      "params": {
+        "seat": "high"
+      },
+      "peak_factor_applied": 0.9263,
+      "measured": {
+        "duration_s": 0.6,
+        "peak_dbfs": -1.01,
+        "rms_dbfs": -13.43
+      }
+    },
+    {
+      "file": "rimshot.wav",
+      "voice": "rimshot",
+      "params": {},
+      "peak_factor_applied": 1.0285,
+      "measured": {
+        "duration_s": 0.07,
+        "peak_dbfs": -1.01,
+        "rms_dbfs": -16.13
+      }
+    },
+    {
+      "file": "cymbal.wav",
+      "voice": "cymbal",
+      "params": {},
+      "peak_factor_applied": 2.1582,
+      "measured": {
+        "duration_s": 3.5,
+        "peak_dbfs": -1.01,
+        "rms_dbfs": -21.09
+      }
+    },
+    {
+      "file": "kick-dial-vv.wav",
+      "voice": "kick",
+      "params": {
+        "tune": "VV"
+      },
+      "peak_factor_applied": 0.9236,
+      "measured": {
+        "duration_s": 1.0,
+        "peak_dbfs": -1.01,
+        "rms_dbfs": -14.03
+      },
+      "dial_derivation": {
+        "pair": "VV",
+        "seat_hz": 176.0,
+        "placed_hz": 44.0,
+        "octave_shifts": -2,
+        "ordinal": 44,
+        "agrippa": 400
+      },
+      "realized_track": {
+        "attack_hz_window_20ms": 116.4,
+        "tail_hz_last_250ms": 44.3
+      },
+      "tail_vs_placed_hz": 0.3
+    },
+    {
+      "file": "kick-dial-ll.wav",
+      "voice": "kick",
+      "params": {
+        "tune": "LL"
+      },
+      "peak_factor_applied": 0.9236,
+      "measured": {
+        "duration_s": 1.0,
+        "peak_dbfs": -1.01,
+        "rms_dbfs": -14.03
+      },
+      "dial_derivation": {
+        "pair": "LL",
+        "seat_hz": 192.0,
+        "placed_hz": 48.0,
+        "octave_shifts": -2,
+        "ordinal": 24,
+        "agrippa": 40
+      },
+      "realized_track": {
+        "attack_hz_window_20ms": 117.5,
+        "tail_hz_last_250ms": 48.3
+      },
+      "tail_vs_placed_hz": 0.3
+    },
+    {
+      "file": "kick-dial-oo.wav",
+      "voice": "kick",
+      "params": {
+        "tune": "OO"
+      },
+      "peak_factor_applied": 0.9239,
+      "measured": {
+        "duration_s": 1.0,
+        "peak_dbfs": -1.01,
+        "rms_dbfs": -14.03
+      },
+      "dial_derivation": {
+        "pair": "OO",
+        "seat_hz": 120.0,
+        "placed_hz": 60.0,
+        "octave_shifts": -1,
+        "ordinal": 30,
+        "agrippa": 100
+      },
+      "realized_track": {
+        "attack_hz_window_20ms": 121.9,
+        "tail_hz_last_250ms": 60.0
+      },
+      "tail_vs_placed_hz": 0.0
+    }
+  ]
+}
