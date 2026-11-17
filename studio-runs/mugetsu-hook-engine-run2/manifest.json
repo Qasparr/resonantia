@@ -1,0 +1,662 @@
+{
+  "title": "DETROIT MUGETSU -- hook, engine run 2 (calibration circuit 1; YAMI seat: Civet)",
+  "engine": "DiffSinger (OpenVPI, Apache 2.0) via resonance.studio.diffsinger",
+  "bank": {
+    "name": "Lem the Shapeshifter DS 2.5",
+    "dir": "/home/hatch/workspace/resonance/diffsinger-lab/banks/Lem-the-Shapeshifter-DS-2.5-dur26/lem_v2_5",
+    "vocoder": "/home/hatch/workspace/resonance/diffsinger-lab/DiffSinger/checkpoints/pc_nsf_hifigan_44.1k_hop512_128bin_2025.02"
+  },
+  "sample_rate": 44100,
+  "hop": 512,
+  "lines": [
+    {
+      "id": "hook-l1",
+      "text": "デトロイト生まれ、ブライトムーア育ち",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 0.0,
+      "morae": 18,
+      "phonemes": 31,
+      "notes": 7,
+      "asked_s": 1.6667,
+      "rendered_s": 1.6951,
+      "frames": 146,
+      "seats": {
+        "VV": {
+          "asked_s": 0.3135,
+          "realized_s": 0.2825,
+          "phonemes": 4
+        },
+        "Α": {
+          "asked_s": 0.2902,
+          "realized_s": 0.2616,
+          "phonemes": 4
+        },
+        "Ε": {
+          "asked_s": 0.0987,
+          "realized_s": 0.0889,
+          "phonemes": 2
+        },
+        "Ι": {
+          "asked_s": 0.2554,
+          "realized_s": 0.2302,
+          "phonemes": 3
+        },
+        "Ο": {
+          "asked_s": 0.238,
+          "realized_s": 0.2145,
+          "phonemes": 5
+        }
+      },
+      "file": "lines/hook-l1.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/mugetsu-hook-engine-run2/lines/hook-l1.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 74752,
+        "duration_s": 1.6951,
+        "peak": 0.1455,
+        "peak_dbfs": -16.74,
+        "rms": 0.0395,
+        "rms_dbfs": -28.06
+      }
+    },
+    {
+      "id": "hook-l2",
+      "text": "縁石の上から、全部見渡し",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 1.6666666666666667,
+      "morae": 16,
+      "phonemes": 27,
+      "notes": 6,
+      "asked_s": 1.6667,
+      "rendered_s": 1.6486,
+      "frames": 142,
+      "seats": {
+        "VV": {
+          "asked_s": 0.1741,
+          "realized_s": 0.1565,
+          "phonemes": 2
+        },
+        "Α": {
+          "asked_s": 0.2322,
+          "realized_s": 0.2087,
+          "phonemes": 4
+        },
+        "Ε": {
+          "asked_s": 0.3483,
+          "realized_s": 0.313,
+          "phonemes": 4
+        },
+        "Ι": {
+          "asked_s": 0.1741,
+          "realized_s": 0.1565,
+          "phonemes": 3
+        },
+        "Ο": {
+          "asked_s": 0.058,
+          "realized_s": 0.0522,
+          "phonemes": 1
+        }
+      },
+      "file": "lines/hook-l2.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/mugetsu-hook-engine-run2/lines/hook-l2.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 72704,
+        "duration_s": 1.6486,
+        "peak": 0.2107,
+        "peak_dbfs": -13.53,
+        "rms": 0.043,
+        "rms_dbfs": -27.34
+      }
+    },
+    {
+      "id": "hook-l3",
+      "text": "誰にも頭下げねえ、俺は俺",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 3.3333333333333335,
+      "morae": 16,
+      "phonemes": 28,
+      "notes": 7,
+      "asked_s": 1.6667,
+      "rendered_s": 1.6834,
+      "frames": 145,
+      "seats": {
+        "Α": {
+          "asked_s": 0.4063,
+          "realized_s": 0.3683,
+          "phonemes": 6
+        },
+        "Ε": {
+          "asked_s": 0.4063,
+          "realized_s": 0.3683,
+          "phonemes": 6
+        },
+        "Ι": {
+          "asked_s": 0.058,
+          "realized_s": 0.0526,
+          "phonemes": 1
+        },
+        "Ο": {
+          "asked_s": 0.2902,
+          "realized_s": 0.263,
+          "phonemes": 3
+        }
+      },
+      "file": "lines/hook-l3.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/mugetsu-hook-engine-run2/lines/hook-l3.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 74240,
+        "duration_s": 1.6834,
+        "peak": 0.1858,
+        "peak_dbfs": -14.62,
+        "rms": 0.0534,
+        "rms_dbfs": -25.45
+      }
+    },
+    {
+      "id": "hook-l4",
+      "text": "月無き空でも、目を開け",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 5.0,
+      "morae": 12,
+      "phonemes": 23,
+      "notes": 7,
+      "asked_s": 1.6667,
+      "rendered_s": 1.637,
+      "frames": 141,
+      "seats": {
+        "VV": {
+          "asked_s": 0.058,
+          "realized_s": 0.0512,
+          "phonemes": 1
+        },
+        "Α": {
+          "asked_s": 0.3483,
+          "realized_s": 0.3069,
+          "phonemes": 3
+        },
+        "Ε": {
+          "asked_s": 0.2902,
+          "realized_s": 0.2558,
+          "phonemes": 3
+        },
+        "Ι": {
+          "asked_s": 0.1161,
+          "realized_s": 0.1023,
+          "phonemes": 2
+        },
+        "Ο": {
+          "asked_s": 0.2322,
+          "realized_s": 0.2046,
+          "phonemes": 3
+        }
+      },
+      "file": "lines/hook-l4.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/mugetsu-hook-engine-run2/lines/hook-l4.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 72192,
+        "duration_s": 1.637,
+        "peak": 0.2225,
+        "peak_dbfs": -13.05,
+        "rms": 0.0592,
+        "rms_dbfs": -24.56
+      }
+    },
+    {
+      "id": "hook-l5",
+      "text": "金じゃ買えねえ、この魂",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 6.666666666666667,
+      "morae": 13,
+      "phonemes": 22,
+      "notes": 7,
+      "asked_s": 1.6667,
+      "rendered_s": 1.6138,
+      "frames": 139,
+      "seats": {
+        "Α": {
+          "asked_s": 0.2902,
+          "realized_s": 0.2537,
+          "phonemes": 4
+        },
+        "Ε": {
+          "asked_s": 0.2902,
+          "realized_s": 0.2537,
+          "phonemes": 3
+        },
+        "Ι": {
+          "asked_s": 0.4063,
+          "realized_s": 0.3552,
+          "phonemes": 3
+        },
+        "Ο": {
+          "asked_s": 0.1161,
+          "realized_s": 0.1015,
+          "phonemes": 2
+        }
+      },
+      "file": "lines/hook-l5.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/mugetsu-hook-engine-run2/lines/hook-l5.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 71168,
+        "duration_s": 1.6138,
+        "peak": 0.1667,
+        "peak_dbfs": -15.56,
+        "rms": 0.0397,
+        "rms_dbfs": -28.03
+      }
+    },
+    {
+      "id": "hook-l6",
+      "text": "嘘は通らねえ、通すのは真実",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 8.333333333333334,
+      "morae": 17,
+      "phonemes": 29,
+      "notes": 7,
+      "asked_s": 1.6667,
+      "rendered_s": 1.6486,
+      "frames": 142,
+      "seats": {
+        "VV": {
+          "asked_s": 0.1974,
+          "realized_s": 0.1752,
+          "phonemes": 3
+        },
+        "Α": {
+          "asked_s": 0.1567,
+          "realized_s": 0.1391,
+          "phonemes": 3
+        },
+        "Ε": {
+          "asked_s": 0.1741,
+          "realized_s": 0.1546,
+          "phonemes": 2
+        },
+        "Ι": {
+          "asked_s": 0.1161,
+          "realized_s": 0.103,
+          "phonemes": 2
+        },
+        "Ο": {
+          "asked_s": 0.447,
+          "realized_s": 0.3967,
+          "phonemes": 6
+        }
+      },
+      "file": "lines/hook-l6.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/mugetsu-hook-engine-run2/lines/hook-l6.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 72704,
+        "duration_s": 1.6486,
+        "peak": 0.1782,
+        "peak_dbfs": -14.98,
+        "rms": 0.0427,
+        "rms_dbfs": -27.39
+      }
+    },
+    {
+      "id": "hook-l7",
+      "text": "地べたから天まで、自分の足で",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 10.0,
+      "morae": 16,
+      "phonemes": 29,
+      "notes": 7,
+      "asked_s": 1.6667,
+      "rendered_s": 1.6254,
+      "frames": 140,
+      "seats": {
+        "VV": {
+          "asked_s": 0.058,
+          "realized_s": 0.0514,
+          "phonemes": 1
+        },
+        "Α": {
+          "asked_s": 0.3483,
+          "realized_s": 0.3086,
+          "phonemes": 5
+        },
+        "Ε": {
+          "asked_s": 0.2322,
+          "realized_s": 0.2057,
+          "phonemes": 4
+        },
+        "Ι": {
+          "asked_s": 0.1741,
+          "realized_s": 0.1543,
+          "phonemes": 3
+        },
+        "Ο": {
+          "asked_s": 0.058,
+          "realized_s": 0.0514,
+          "phonemes": 1
+        }
+      },
+      "file": "lines/hook-l7.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/mugetsu-hook-engine-run2/lines/hook-l7.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 71680,
+        "duration_s": 1.6254,
+        "peak": 0.1831,
+        "peak_dbfs": -14.75,
+        "rms": 0.0328,
+        "rms_dbfs": -29.68
+      }
+    },
+    {
+      "id": "hook-l8",
+      "text": "王冠は奪うもんじゃねえ、被るもんだ",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 11.666666666666668,
+      "morae": 19,
+      "phonemes": 30,
+      "notes": 6,
+      "asked_s": 1.6667,
+      "rendered_s": 1.7183,
+      "frames": 148,
+      "seats": {
+        "VV": {
+          "asked_s": 0.2786,
+          "realized_s": 0.2577,
+          "phonemes": 4
+        },
+        "Α": {
+          "asked_s": 0.2961,
+          "realized_s": 0.2739,
+          "phonemes": 6
+        },
+        "Ε": {
+          "asked_s": 0.1741,
+          "realized_s": 0.1611,
+          "phonemes": 2
+        },
+        "Ο": {
+          "asked_s": 0.2612,
+          "realized_s": 0.2416,
+          "phonemes": 4
+        }
+      },
+      "file": "lines/hook-l8.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/mugetsu-hook-engine-run2/lines/hook-l8.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 75776,
+        "duration_s": 1.7183,
+        "peak": 0.1741,
+        "peak_dbfs": -15.18,
+        "rms": 0.0386,
+        "rms_dbfs": -28.27
+      }
+    }
+  ],
+  "assembly": {
+    "file": "mugetsu-hook.wav",
+    "measured": {
+      "file": "/home/hatch/workspace/resonance/studio-runs/mugetsu-hook-engine-run2/mugetsu-hook.wav",
+      "sample_rate": 44100,
+      "channels": 1,
+      "samples": 590276,
+      "duration_s": 13.3849,
+      "peak": 0.2225,
+      "peak_dbfs": -13.05,
+      "rms": 0.0441,
+      "rms_dbfs": -27.1
+    }
+  },
+  "nine": {
+    "stations": {
+      "Ε": 26,
+      "Ο": 25,
+      "Ι": 17,
+      "VV": 15,
+      "Α": 35
+    },
+    "dispositions": {
+      "PASS_NATIVE": 101,
+      "SEATED": 118
+    }
+  },
+  "seat_totals": {
+    "VV": {
+      "asked_s": 1.0797,
+      "realized_s": 0.9745,
+      "phonemes": 15
+    },
+    "Α": {
+      "asked_s": 2.3684,
+      "realized_s": 2.1208,
+      "phonemes": 35
+    },
+    "Ε": {
+      "asked_s": 2.0143,
+      "realized_s": 1.8011,
+      "phonemes": 26
+    },
+    "Ι": {
+      "asked_s": 1.3003,
+      "realized_s": 1.1542,
+      "phonemes": 17
+    },
+    "Ο": {
+      "asked_s": 1.7009,
+      "realized_s": 1.5256,
+      "phonemes": 25
+    }
+  },
+  "calibration": {
+    "applied": true,
+    "factors": {
+      "VV": 1.1024,
+      "Α": 1.1111,
+      "Ε": 1.1129,
+      "Ι": 1.1135,
+      "Ο": 1.1075
+    },
+    "trained_by": [
+      "pow-7a6472d2da0abf4b1d151b67b2fb21e35f5f6e6e33e428a5c646427a3531ff55"
+    ],
+    "per_line": {
+      "hook-l1": {
+        "Ε": {
+          "factor": 1.1129,
+          "morae": 2
+        },
+        "Ο": {
+          "factor": 1.1075,
+          "morae": 5
+        },
+        "Ι": {
+          "factor": 1.1135,
+          "morae": 3
+        },
+        "VV": {
+          "factor": 1.1024,
+          "morae": 4
+        },
+        "Α": {
+          "factor": 1.1111,
+          "morae": 4
+        }
+      },
+      "hook-l2": {
+        "Ε": {
+          "factor": 1.1129,
+          "morae": 4
+        },
+        "Ι": {
+          "factor": 1.1135,
+          "morae": 3
+        },
+        "Ο": {
+          "factor": 1.1075,
+          "morae": 1
+        },
+        "VV": {
+          "factor": 1.1024,
+          "morae": 2
+        },
+        "Α": {
+          "factor": 1.1111,
+          "morae": 4
+        }
+      },
+      "hook-l3": {
+        "Α": {
+          "factor": 1.1111,
+          "morae": 6
+        },
+        "Ε": {
+          "factor": 1.1129,
+          "morae": 6
+        },
+        "Ι": {
+          "factor": 1.1135,
+          "morae": 1
+        },
+        "Ο": {
+          "factor": 1.1075,
+          "morae": 3
+        }
+      },
+      "hook-l4": {
+        "VV": {
+          "factor": 1.1024,
+          "morae": 1
+        },
+        "Ι": {
+          "factor": 1.1135,
+          "morae": 2
+        },
+        "Α": {
+          "factor": 1.1111,
+          "morae": 3
+        },
+        "Ο": {
+          "factor": 1.1075,
+          "morae": 3
+        },
+        "Ε": {
+          "factor": 1.1129,
+          "morae": 3
+        }
+      },
+      "hook-l5": {
+        "Ι": {
+          "factor": 1.1135,
+          "morae": 3
+        },
+        "Α": {
+          "factor": 1.1111,
+          "morae": 4
+        },
+        "Ε": {
+          "factor": 1.1129,
+          "morae": 3
+        },
+        "Ο": {
+          "factor": 1.1075,
+          "morae": 2
+        }
+      },
+      "hook-l6": {
+        "VV": {
+          "factor": 1.1024,
+          "morae": 3
+        },
+        "Ο": {
+          "factor": 1.1075,
+          "morae": 6
+        },
+        "Α": {
+          "factor": 1.1111,
+          "morae": 3
+        },
+        "Ε": {
+          "factor": 1.1129,
+          "morae": 2
+        },
+        "Ι": {
+          "factor": 1.1135,
+          "morae": 2
+        }
+      },
+      "hook-l7": {
+        "Ι": {
+          "factor": 1.1135,
+          "morae": 3
+        },
+        "Ε": {
+          "factor": 1.1129,
+          "morae": 4
+        },
+        "Α": {
+          "factor": 1.1111,
+          "morae": 5
+        },
+        "VV": {
+          "factor": 1.1024,
+          "morae": 1
+        },
+        "Ο": {
+          "factor": 1.1075,
+          "morae": 1
+        }
+      },
+      "hook-l8": {
+        "Ο": {
+          "factor": 1.1075,
+          "morae": 4
+        },
+        "Α": {
+          "factor": 1.1111,
+          "morae": 6
+        },
+        "VV": {
+          "factor": 1.1024,
+          "morae": 4
+        },
+        "Ε": {
+          "factor": 1.1129,
+          "morae": 2
+        }
+      }
+    }
+  },
+  "walls": [
+    "line hook-l1: rendered 1.695s against a 1.667s slot -- overhang 0.028s past its bar line, summed into the assembly, not trimmed",
+    "line hook-l3: rendered 1.683s against a 1.667s slot -- overhang 0.017s past its bar line, summed into the assembly, not trimmed",
+    "line hook-l8: rendered 1.718s against a 1.667s slot -- overhang 0.052s past its bar line, summed into the assembly, not trimmed"
+  ],
+  "bridge_wall_seconds": 83.77,
+  "wall_seconds": 87.75,
+  "proof": {
+    "id": "pow-de96414a282efe2f157f23e0f6c2b46184e84550317c242de49fcecd1585a151",
+    "kind": "vocal",
+    "parents": [
+      "pow-7a6472d2da0abf4b1d151b67b2fb21e35f5f6e6e33e428a5c646427a3531ff55"
+    ],
+    "ledger": "/home/hatch/workspace/resonance/proofs/ledger.jsonl"
+  }
+}

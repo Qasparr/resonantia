@@ -72,6 +72,31 @@
 # proven pipeline has always done. The grouping is CONSTRUCTED
 # (the desk's alignment), labeled as such wherever it is used.
 #
+# DOCTRINE -- THE CALIBRATION LOOP (the founder's order of
+# 2026-11-16: the vocals use the Divine Nine Vowel Engine so
+# each render, treated as training, makes the next better): a
+# spec may carry a calibration -- per-seat duration factors
+# learned by resonance.studio.proofs from earlier vocal proofs'
+# asked-vs-realized totals, and the proof IDs that trained them.
+# At sequence build, each mora's frame budget is pre-corrected
+# by the factor of the seat its vowel holds (the seat of the
+# mora's first seated vowel phoneme; a mora with no seated vowel
+# is uncorrected, and the build says so in its tally). The
+# SCORE's asked seconds never move -- notes are the score, and
+# the score is the score -- so a render's realization is still
+# weighed against the filed melody, and the correction's effect
+# is measured, not assumed. Every application is printed in the
+# manifest's calibration section, with its training provenance.
+#
+# DOCTRINE -- PROOF EMISSION: a spec may carry a proof block
+# ({parents: [...], ledger: optional path}); a render so ordered
+# appends its vocal proof to the hash-chained ledger
+# (resonance.studio.proofs) when it completes -- artifact hash,
+# per-seat asked-vs-realized totals, the chain of parents it
+# consumed -- and the manifest carries the proof's ID. A render
+# without the block strikes no proof and says nothing: emission
+# is an order, not a habit snuck into every run.
+#
 # Tolerances (the fourth element, stated here and in the run
 # report): word budgets are handed in whole frames (rounding
 # <= 0.5 frame per mora); the duration model's returned frames
@@ -90,6 +115,8 @@ import wave
 from pathlib import Path
 
 import numpy as np
+
+from resonance.studio import proofs as proofs_mod
 
 SR = 44100                 # The bank/vocoder native rate, full stop.
 HOP = 512                  # NSF-HiFiGAN hop in the lab checkpoint.
@@ -316,7 +343,24 @@ def _load_bank_tables(bank):
     return ph, langs
 
 
-def build_line(line, ph, langs):
+def _mora_seat(lang, mora):
+    """The seat a mora trains under: its first seated vowel's.
+
+    MECHANISM: a mora's phonemes are seated in order; the first
+    whose disposition carries a station (SEATED, or a glide's
+    onset / an offset's named seat) is the mora's seat for
+    calibration. A mora of pure consonants and rests has none --
+    the vowels-only ruling again: what the Nine do not govern,
+    the loop does not correct.
+    """
+    for name in mora:
+        entry = seat_vowel(lang, name)
+        if entry["station"]:
+            return entry["station"]
+    return None
+
+
+def build_line(line, ph, langs, seat_factors=None):
     """Build one line's DiffSinger sequence from its spec.
 
     The spec line: {id, lang, speaker, text, morae, notes, offset}
@@ -327,6 +371,13 @@ def build_line(line, ph, langs):
     ph_midi, word_div, word_dur) plus the record fields the .ds
     and the manifest carry (ph_seq names, note table, per-note
     ph_num, the seating ledger, asked seconds).
+
+    seat_factors, when given, is the calibration: {seat: factor}.
+    Each mora's frame budget is scaled by its seat's factor
+    BEFORE the bridge ever sees it; the note durations -- the
+    score -- are never scaled, so 'asked_s' remains the filed
+    melody's seconds and the render's realization is weighed
+    against the score, not against the correction.
     """
     lang = line["lang"]
     if lang not in langs:
@@ -350,13 +401,22 @@ def build_line(line, ph, langs):
     tokens, languages, ph_midi, word_div, word_dur = [], [], [], [], []
     ph_names, ledger = [], []
     note_rows, mi = [], 0
+    calib_applied = {}
     for note, k in zip(notes, counts):
         group = morae[mi:mi + k]
         mi += k
         per_mora = note["dur"] / k
         ph_num = 0
         for mora in group:
-            frames = max(1, int(round(per_mora * FPS)))
+            factor = 1.0
+            if seat_factors:
+                seat = _mora_seat(lang, mora)
+                if seat and seat in seat_factors:
+                    factor = float(seat_factors[seat])
+                    tally = calib_applied.setdefault(
+                        seat, {"factor": factor, "morae": 0})
+                    tally["morae"] += 1
+            frames = max(1, int(round(per_mora * factor * FPS)))
             word_dur.append(frames)
             word_div.append(len(mora))
             # A rest mora (SP/AP alone) rides the same word
@@ -380,7 +440,60 @@ def build_line(line, ph, langs):
             "ph_midi": ph_midi, "word_div": word_div,
             "word_dur": word_dur, "ph_names": ph_names,
             "notes": note_rows, "ledger": ledger,
+            "calibration_applied": calib_applied,
             "asked_s": asked}
+
+
+def seat_durations(built_lines, result_rows):
+    """Per-seat asked-vs-realized durations, from built + struck.
+
+    MECHANISM: the asked side is the built word budgets (each
+    mora's frames split equally among its phonemes -- the same
+    split line_to_ds prints); the realized side is the bridge's
+    frame counts carried through _frames_of's reconstruction
+    (the line total is the model's own; the within-line split is
+    the asked proportion, the seam _frames_of already names).
+    Phonemes aggregate under the station their seating ledger
+    entry carries; PASS_NATIVE consonants and rests aggregate
+    nowhere -- the loop trains vowels, per the ruling. Returns
+    {"per_line": {line_id: {seat: totals}}, "totals": {seat:
+    totals}} with totals = {asked_s, realized_s, phonemes}.
+    """
+    by_id = {r["id"]: r for r in result_rows}
+    per_line, totals = {}, {}
+
+    def acc(store, seat, asked, realized):
+        row = store.setdefault(seat, {"asked_s": 0.0,
+                                      "realized_s": 0.0,
+                                      "phonemes": 0})
+        row["asked_s"] += asked
+        row["realized_s"] += realized
+        row["phonemes"] += 1
+
+    for b in built_lines:
+        line_acc = {}
+        realized_frames = _frames_of(by_id[b["id"]], b)
+        i = 0
+        for frames_w, div in zip(b["word_dur"], b["word_div"]):
+            asked_ph = frames_w / FPS / div
+            for _ in range(div):
+                station = b["ledger"][i]["station"]
+                if station:
+                    acc(line_acc, station, asked_ph,
+                        realized_frames[i] / FPS)
+                    acc(totals, station, asked_ph,
+                        realized_frames[i] / FPS)
+                i += 1
+        per_line[b["id"]] = {
+            s: {"asked_s": round(v["asked_s"], 4),
+                "realized_s": round(v["realized_s"], 4),
+                "phonemes": v["phonemes"]}
+            for s, v in sorted(line_acc.items())}
+    totals = {s: {"asked_s": round(v["asked_s"], 4),
+                  "realized_s": round(v["realized_s"], 4),
+                  "phonemes": v["phonemes"]}
+              for s, v in sorted(totals.items())}
+    return {"per_line": per_line, "totals": totals}
 
 
 _NOTE_NAMES = ("C", "C#", "D", "D#", "E", "F",
@@ -664,13 +777,16 @@ def render(spec, out_dir, log=print):
     bank = Path(spec.get("bank", BANK))
     ph, langs = _load_bank_tables(bank)
     speakers = {p.stem for p in bank.glob("*.emb")}
+    calib = spec.get("calibration") or {}
+    seat_factors = calib.get("factors") or None
     built = []
     for line in spec["lines"]:
         if line["speaker"] not in speakers:
             raise ValueError(
                 f"line {line['id']}: speaker {line['speaker']!r} "
                 f"has no embedding in the bank ({sorted(speakers)})")
-        built.append(build_line(line, ph, langs))
+        built.append(build_line(line, ph, langs,
+                                seat_factors=seat_factors))
     write_ds(built, out_dir / "sequence.ds")
 
     total_s = max(b["offset"] + b["asked_s"] for b in built)
@@ -693,6 +809,7 @@ def render(spec, out_dir, log=print):
     wall = time.time() - t0
 
     by_id = {r["id"]: r for r in result["lines"]}
+    seats = seat_durations(built, result["lines"])
     ph_dur_map = {}
     walls = []
     line_rows = []
@@ -724,6 +841,7 @@ def render(spec, out_dir, log=print):
             "asked_s": round(b["asked_s"], 4),
             "rendered_s": r["seconds"],
             "frames": r["frames"],
+            "seats": seats["per_line"][b["id"]],
             "file": r["file"], "measured": m})
     write_ds(built, out_dir / "sequence-realized.ds", ph_dur_map)
 
@@ -746,10 +864,43 @@ def render(spec, out_dir, log=print):
         "assembly": {"file": result["assembly"]["file"],
                      "measured": asm},
         "nine": totals,
+        "seat_totals": seats["totals"],
+        "calibration": {
+            "applied": bool(seat_factors),
+            "factors": seat_factors or {},
+            "trained_by": calib.get("trained_by", []),
+            "per_line": {b["id"]: b["calibration_applied"]
+                         for b in built},
+        },
         "walls": walls,
         "bridge_wall_seconds": result["wall_seconds"],
         "wall_seconds": round(wall, 2),
     }
+    proof_spec = spec.get("proof")
+    if proof_spec:
+        rec = proofs_mod.append_proof(
+            "vocal", out_dir / result["assembly"]["file"],
+            {"title": manifest["title"],
+             "engine": manifest["engine"],
+             "bank": BANK_NAME,
+             "seat_totals": seats["totals"],
+             "nine": totals,
+             "lines": [{"id": r["id"], "asked_s": r["asked_s"],
+                        "rendered_s": r["rendered_s"]}
+                       for r in line_rows],
+             "assembly": {"file": result["assembly"]["file"],
+                          "duration_s": asm["duration_s"],
+                          "peak_dbfs": asm["peak_dbfs"],
+                          "rms_dbfs": asm["rms_dbfs"]},
+             "calibration": manifest["calibration"]},
+            parents=proof_spec.get("parents", []),
+            ledger_path=proof_spec.get("ledger"))
+        manifest["proof"] = {
+            "id": rec["id"], "kind": "vocal",
+            "parents": rec["parents"],
+            "ledger": str(proof_spec.get("ledger")
+                          or proofs_mod.default_ledger_path())}
+        log(f"proof of work (vocal): {rec['id']} appended")
     (out_dir / "manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2),
         encoding="utf-8")

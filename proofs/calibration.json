@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "seats": {
+    "VV": {
+      "asked_s": 2.0375,
+      "realized_s": 1.8433,
+      "phonemes": 30,
+      "trained_by": [
+        "pow-7a6472d2da0abf4b1d151b67b2fb21e35f5f6e6e33e428a5c646427a3531ff55",
+        "pow-de96414a282efe2f157f23e0f6c2b46184e84550317c242de49fcecd1585a151"
+      ]
+    },
+    "Α": {
+      "asked_s": 4.493,
+      "realized_s": 4.0329,
+      "phonemes": 70,
+      "trained_by": [
+        "pow-7a6472d2da0abf4b1d151b67b2fb21e35f5f6e6e33e428a5c646427a3531ff55",
+        "pow-de96414a282efe2f157f23e0f6c2b46184e84550317c242de49fcecd1585a151"
+      ]
+    },
+    "Ε": {
+      "asked_s": 3.8255,
+      "realized_s": 3.4286,
+      "phonemes": 52,
+      "trained_by": [
+        "pow-7a6472d2da0abf4b1d151b67b2fb21e35f5f6e6e33e428a5c646427a3531ff55",
+        "pow-de96414a282efe2f157f23e0f6c2b46184e84550317c242de49fcecd1585a151"
+      ]
+    },
+    "Ι": {
+      "asked_s": 2.4671,
+      "realized_s": 2.2021,
+      "phonemes": 34,
+      "trained_by": [
+        "pow-7a6472d2da0abf4b1d151b67b2fb21e35f5f6e6e33e428a5c646427a3531ff55",
+        "pow-de96414a282efe2f157f23e0f6c2b46184e84550317c242de49fcecd1585a151"
+      ]
+    },
+    "Ο": {
+      "asked_s": 3.216,
+      "realized_s": 2.8936,
+      "phonemes": 50,
+      "trained_by": [
+        "pow-7a6472d2da0abf4b1d151b67b2fb21e35f5f6e6e33e428a5c646427a3531ff55",
+        "pow-de96414a282efe2f157f23e0f6c2b46184e84550317c242de49fcecd1585a151"
+      ]
+    }
+  }
+}

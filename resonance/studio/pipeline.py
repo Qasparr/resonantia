@@ -43,6 +43,7 @@ from resonance import grid
 from resonance.binaural.generator import binaural_beat
 from resonance.studio import arpeggio as arpeggio_mod
 from resonance.studio import four_powers as four_powers_mod
+from resonance.studio import proofs as proofs_mod
 from resonance.studio import spine as spine_mod
 
 TARGET_SR = 48000            # The master's sample rate, full stop.
@@ -1448,6 +1449,18 @@ def produce(spec, dry_run=False, log=None):
             "in the arpeggio block, its notation in composition.abc.",
         ] if arpeggio_report else []),
     }
+    # -- (g) Proof of Work / Proof of Mastering emission --------------
+    # The founder's order of 2026-11-16: every render is a unit of
+    # Proof of Work, and a master carries its Proof of Mastering.
+    # The delivered preview MP3 is decoded and re-weighed by the
+    # gate (resonance.studio.proofs); the verdict -- SEALED, FAILED,
+    # or a confessed EMISSION FAILED -- is written into this
+    # manifest's proof section, at full size, before the manifest
+    # is struck. A spec may refuse the emission with
+    # "proof": {"emit": false}; silence is consent to be recorded.
+    if (spec.get("proof") or {}).get("emit", True):
+        manifest["proof"] = proofs_mod.emit_produce_proof(
+            manifest, out_dir, spec, log)
     (out_dir / "manifest.json").write_text(
         json.dumps(manifest, indent=2), encoding="utf-8")
     log(f"done in {manifest['wall_seconds_total']}s -> {master_wav}")

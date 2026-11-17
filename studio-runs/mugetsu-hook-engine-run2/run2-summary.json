@@ -1,0 +1,177 @@
+{
+  "genesis_proof": "pow-7a6472d2da0abf4b1d151b67b2fb21e35f5f6e6e33e428a5c646427a3531ff55",
+  "run2_vocal_proof": "pow-de96414a282efe2f157f23e0f6c2b46184e84550317c242de49fcecd1585a151",
+  "master_proof": "pow-3015495cb863e11452b4eb9dbc31573984920a3996cf083cfc6e07793fc7c68a",
+  "master_status": "SEALED",
+  "master_gate": {
+    "sealed": true,
+    "checks": [
+      {
+        "check": "integrated loudness",
+        "value": -14.0,
+        "law": "-14.0 +/- 0.5 LUFS",
+        "ok": true
+      },
+      {
+        "check": "decoded true peak",
+        "value": -2.82,
+        "law": "<= -1.0 dBTP",
+        "ok": true
+      },
+      {
+        "check": "bitrate (sworn)",
+        "value": 320000,
+        "law": "exactly 320000 bps",
+        "ok": true
+      }
+    ],
+    "failures": []
+  },
+  "master_measured": {
+    "bitrate_bps": 320000,
+    "sworn_bitrate_bps": 320000,
+    "files": {
+      "delivered_mp3": {
+        "path": "/home/hatch/workspace/resonance/studio-runs/mugetsu-hook-engine-run2/master.mp3",
+        "decoded_sr": 48000,
+        "lufs_integrated": -14.0,
+        "true_peak_dbtp": -2.82,
+        "bitrate_bps": 320000
+      },
+      "master_wav": {
+        "path": "/home/hatch/workspace/resonance/studio-runs/mugetsu-hook-engine-run2/master.wav",
+        "sample_rate": 48000,
+        "lufs_integrated": -14.0,
+        "true_peak_dbtp": -2.81
+      }
+    },
+    "lufs_integrated": -14.0,
+    "true_peak_dbtp": -2.82
+  },
+  "calibration_factors": {
+    "VV": 1.1024,
+    "Α": 1.1111,
+    "Ε": 1.1129,
+    "Ι": 1.1135,
+    "Ο": 1.1075
+  },
+  "calibration_trained_by": [
+    "pow-7a6472d2da0abf4b1d151b67b2fb21e35f5f6e6e33e428a5c646427a3531ff55"
+  ],
+  "run2_seat_totals": {
+    "VV": {
+      "asked_s": 1.0797,
+      "realized_s": 0.9745,
+      "phonemes": 15
+    },
+    "Α": {
+      "asked_s": 2.3684,
+      "realized_s": 2.1208,
+      "phonemes": 35
+    },
+    "Ε": {
+      "asked_s": 2.0143,
+      "realized_s": 1.8011,
+      "phonemes": 26
+    },
+    "Ι": {
+      "asked_s": 1.3003,
+      "realized_s": 1.1542,
+      "phonemes": 17
+    },
+    "Ο": {
+      "asked_s": 1.7009,
+      "realized_s": 1.5256,
+      "phonemes": 25
+    }
+  },
+  "comparison": [
+    {
+      "id": "hook-l1",
+      "asked_s": 1.6667,
+      "run1_rendered_s": 1.5093,
+      "run1_realization_pct": 90.56,
+      "run2_rendered_s": 1.6951,
+      "run2_realization_pct": 101.7
+    },
+    {
+      "id": "hook-l2",
+      "asked_s": 1.6667,
+      "run1_rendered_s": 1.4977,
+      "run1_realization_pct": 89.86,
+      "run2_rendered_s": 1.6486,
+      "run2_realization_pct": 98.91
+    },
+    {
+      "id": "hook-l3",
+      "asked_s": 1.6667,
+      "run1_rendered_s": 1.4977,
+      "run1_realization_pct": 89.86,
+      "run2_rendered_s": 1.6834,
+      "run2_realization_pct": 101.0
+    },
+    {
+      "id": "hook-l4",
+      "asked_s": 1.6667,
+      "run1_rendered_s": 1.4745,
+      "run1_realization_pct": 88.47,
+      "run2_rendered_s": 1.637,
+      "run2_realization_pct": 98.22
+    },
+    {
+      "id": "hook-l5",
+      "asked_s": 1.6667,
+      "run1_rendered_s": 1.4977,
+      "run1_realization_pct": 89.86,
+      "run2_rendered_s": 1.6138,
+      "run2_realization_pct": 96.83
+    },
+    {
+      "id": "hook-l6",
+      "asked_s": 1.6667,
+      "run1_rendered_s": 1.5209,
+      "run1_realization_pct": 91.25,
+      "run2_rendered_s": 1.6486,
+      "run2_realization_pct": 98.91
+    },
+    {
+      "id": "hook-l7",
+      "asked_s": 1.6667,
+      "run1_rendered_s": 1.5093,
+      "run1_realization_pct": 90.56,
+      "run2_rendered_s": 1.6254,
+      "run2_realization_pct": 97.52
+    },
+    {
+      "id": "hook-l8",
+      "asked_s": 1.6667,
+      "run1_rendered_s": 1.5441,
+      "run1_realization_pct": 92.64,
+      "run2_rendered_s": 1.7183,
+      "run2_realization_pct": 103.1
+    }
+  ],
+  "totals": {
+    "asked_s": 13.3336,
+    "run1_rendered_s": 12.0512,
+    "run1_realization_pct": 90.38,
+    "run2_rendered_s": 13.2702,
+    "run2_realization_pct": 99.52
+  },
+  "run2_assembly": {
+    "file": "/home/hatch/workspace/resonance/studio-runs/mugetsu-hook-engine-run2/mugetsu-hook.wav",
+    "sample_rate": 44100,
+    "channels": 1,
+    "samples": 590276,
+    "duration_s": 13.3849,
+    "peak": 0.2225,
+    "peak_dbfs": -13.05,
+    "rms": 0.0441,
+    "rms_dbfs": -27.1
+  },
+  "run2_walls": [
+    "line hook-l1: rendered 1.695s against a 1.667s slot -- overhang 0.028s past its bar line, summed into the assembly, not trimmed",
+    "line hook-l3: rendered 1.683s against a 1.667s slot -- overhang 0.017s past its bar line, summed into the assembly, not trimmed",
+    "line hook-l8: rendered 1.718s against a 1.667s slot -- overhang 0.052s past its bar line, summed into the assembly, not trimmed"
+  ]
+}
