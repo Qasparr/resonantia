@@ -1,0 +1,243 @@
+{
+  "title": "DETROIT MUGETSU -- hook, engine run 1 (YAMI seat: Civet)",
+  "engine": "DiffSinger (OpenVPI, Apache 2.0) via resonance.studio.diffsinger",
+  "bank": {
+    "name": "Lem the Shapeshifter DS 2.5",
+    "dir": "/home/hatch/workspace/resonance/diffsinger-lab/banks/Lem-the-Shapeshifter-DS-2.5-dur26/lem_v2_5",
+    "vocoder": "/home/hatch/workspace/resonance/diffsinger-lab/DiffSinger/checkpoints/pc_nsf_hifigan_44.1k_hop512_128bin_2025.02"
+  },
+  "sample_rate": 44100,
+  "hop": 512,
+  "lines": [
+    {
+      "id": "hook-l1",
+      "text": "デトロイト生まれ、ブライトムーア育ち",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 0.0,
+      "morae": 18,
+      "phonemes": 31,
+      "notes": 7,
+      "asked_s": 1.6667,
+      "rendered_s": 1.5093,
+      "frames": 130,
+      "file": "lines/hook-l1.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/mugetsu-hook-engine-run1/lines/hook-l1.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 66560,
+        "duration_s": 1.5093,
+        "peak": 0.2229,
+        "peak_dbfs": -13.04,
+        "rms": 0.0378,
+        "rms_dbfs": -28.45
+      }
+    },
+    {
+      "id": "hook-l2",
+      "text": "縁石の上から、全部見渡し",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 1.6666666666666667,
+      "morae": 16,
+      "phonemes": 27,
+      "notes": 6,
+      "asked_s": 1.6667,
+      "rendered_s": 1.4977,
+      "frames": 129,
+      "file": "lines/hook-l2.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/mugetsu-hook-engine-run1/lines/hook-l2.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 66048,
+        "duration_s": 1.4977,
+        "peak": 0.192,
+        "peak_dbfs": -14.33,
+        "rms": 0.038,
+        "rms_dbfs": -28.41
+      }
+    },
+    {
+      "id": "hook-l3",
+      "text": "誰にも頭下げねえ、俺は俺",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 3.3333333333333335,
+      "morae": 16,
+      "phonemes": 28,
+      "notes": 7,
+      "asked_s": 1.6667,
+      "rendered_s": 1.4977,
+      "frames": 129,
+      "file": "lines/hook-l3.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/mugetsu-hook-engine-run1/lines/hook-l3.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 66048,
+        "duration_s": 1.4977,
+        "peak": 0.1512,
+        "peak_dbfs": -16.41,
+        "rms": 0.0461,
+        "rms_dbfs": -26.73
+      }
+    },
+    {
+      "id": "hook-l4",
+      "text": "月無き空でも、目を開け",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 5.0,
+      "morae": 12,
+      "phonemes": 23,
+      "notes": 7,
+      "asked_s": 1.6667,
+      "rendered_s": 1.4745,
+      "frames": 127,
+      "file": "lines/hook-l4.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/mugetsu-hook-engine-run1/lines/hook-l4.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 65024,
+        "duration_s": 1.4745,
+        "peak": 0.1862,
+        "peak_dbfs": -14.6,
+        "rms": 0.0489,
+        "rms_dbfs": -26.21
+      }
+    },
+    {
+      "id": "hook-l5",
+      "text": "金じゃ買えねえ、この魂",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 6.666666666666667,
+      "morae": 13,
+      "phonemes": 22,
+      "notes": 7,
+      "asked_s": 1.6667,
+      "rendered_s": 1.4977,
+      "frames": 129,
+      "file": "lines/hook-l5.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/mugetsu-hook-engine-run1/lines/hook-l5.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 66048,
+        "duration_s": 1.4977,
+        "peak": 0.2083,
+        "peak_dbfs": -13.63,
+        "rms": 0.0363,
+        "rms_dbfs": -28.8
+      }
+    },
+    {
+      "id": "hook-l6",
+      "text": "嘘は通らねえ、通すのは真実",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 8.333333333333334,
+      "morae": 17,
+      "phonemes": 29,
+      "notes": 7,
+      "asked_s": 1.6667,
+      "rendered_s": 1.5209,
+      "frames": 131,
+      "file": "lines/hook-l6.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/mugetsu-hook-engine-run1/lines/hook-l6.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 67072,
+        "duration_s": 1.5209,
+        "peak": 0.2019,
+        "peak_dbfs": -13.9,
+        "rms": 0.0445,
+        "rms_dbfs": -27.03
+      }
+    },
+    {
+      "id": "hook-l7",
+      "text": "地べたから天まで、自分の足で",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 10.0,
+      "morae": 16,
+      "phonemes": 29,
+      "notes": 7,
+      "asked_s": 1.6667,
+      "rendered_s": 1.5093,
+      "frames": 130,
+      "file": "lines/hook-l7.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/mugetsu-hook-engine-run1/lines/hook-l7.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 66560,
+        "duration_s": 1.5093,
+        "peak": 0.1431,
+        "peak_dbfs": -16.89,
+        "rms": 0.03,
+        "rms_dbfs": -30.45
+      }
+    },
+    {
+      "id": "hook-l8",
+      "text": "王冠は奪うもんじゃねえ、被るもんだ",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 11.666666666666668,
+      "morae": 19,
+      "phonemes": 30,
+      "notes": 6,
+      "asked_s": 1.6667,
+      "rendered_s": 1.5441,
+      "frames": 133,
+      "file": "lines/hook-l8.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/mugetsu-hook-engine-run1/lines/hook-l8.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 68096,
+        "duration_s": 1.5441,
+        "peak": 0.189,
+        "peak_dbfs": -14.47,
+        "rms": 0.0367,
+        "rms_dbfs": -28.7
+      }
+    }
+  ],
+  "assembly": {
+    "file": "mugetsu-hook.wav",
+    "measured": {
+      "file": "/home/hatch/workspace/resonance/studio-runs/mugetsu-hook-engine-run1/mugetsu-hook.wav",
+      "sample_rate": 44100,
+      "channels": 1,
+      "samples": 588000,
+      "duration_s": 13.3333,
+      "peak": 0.2229,
+      "peak_dbfs": -13.04,
+      "rms": 0.0382,
+      "rms_dbfs": -28.36
+    }
+  },
+  "nine": {
+    "stations": {
+      "Ε": 26,
+      "Ο": 25,
+      "Ι": 17,
+      "VV": 15,
+      "Α": 35
+    },
+    "dispositions": {
+      "PASS_NATIVE": 101,
+      "SEATED": 118
+    }
+  },
+  "walls": [],
+  "bridge_wall_seconds": 81.71,
+  "wall_seconds": 84.25
+}
