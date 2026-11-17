@@ -1,0 +1,104 @@
+{
+  "scene": "pyramidasphere",
+  "title": "LEX STELLARRVM PYRAMIDASPERE TRIBUNAL TESTIMONY VISUALIZATION",
+  "inscription": "31^3 = 93",
+  "inscription_kind": "the founder's declared equation",
+  "arithmetic_beside_it": {
+    "31^3_by_multiplication": 29791,
+    "31+31+31_by_threefold_sum": 93
+  },
+  "source": "/home/hatch/workspace/your_files/pirate-essay/THE-PIRATE-ESSAY-AUDIOBOOK.mp3",
+  "window": {
+    "seek_s": 2629.800002,
+    "duration_s": 60.0
+  },
+  "weighed_duration_s": 60.0,
+  "frames": 1800,
+  "card_frames": 60,
+  "fps": 30,
+  "size": [
+    1280,
+    720
+  ],
+  "node_count_drawn": 31,
+  "node_tiers": [
+    1,
+    1,
+    4,
+    9,
+    16
+  ],
+  "sphere_seats": [
+    {
+      "name": "APEX",
+      "fold": "HIGH"
+    },
+    {
+      "name": "BASE LEFT",
+      "fold": "LOW"
+    },
+    {
+      "name": "BASE RIGHT",
+      "fold": "MID"
+    }
+  ],
+  "fold_bands_hz": {
+    "LOW": [
+      30.0,
+      240.0
+    ],
+    "MID": [
+      240.0,
+      1920.0
+    ],
+    "HIGH": [
+      1920.0,
+      15360.0
+    ]
+  },
+  "fold_reference_energy": 64.2576258003898,
+  "program_reference_energy": 10.050399957161765,
+  "fold_gain_peaks": {
+    "LOW": 0.9534,
+    "MID": 0.8866,
+    "HIGH": 0.2917
+  },
+  "abc_face_used": true,
+  "audio_mux": "copy",
+  "mp4_profile": "resonance/studio/mp4profile.py output_args (libx264, yuv420p, CRF 18, +faststart)",
+  "proof": "UNSTAMPED -- no ledger kind covers a visualizer render; the ledger is untouched",
+  "wall_time_s": 57.12,
+  "media_road": {
+    "dedicated_tribunal_testimony_audio": "none found -- find over ~/workspace for *tribunal* in mp3/wav/m4a/flac/ogg returned nothing; every *tribunal* hit is a document",
+    "road_taken": "excerpt of the sealed Pirate Essay audiobook master, section IX (the Truth Audit)",
+    "section_ix_offset_s": 2629.8,
+    "section_ix_duration_s": 334.05,
+    "offset_derivation": "sum of run-1 chunks 01-15 measured by ffprobe at strike time + 15 joins x 1.2 s",
+    "program_reconstruction_s": 3839.7167,
+    "master_duration_s": 3839.7167,
+    "reconstruction_delta_s": 0.0
+  },
+  "output_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "codec_name": "mp3"
+      }
+    ],
+    "format": {
+      "duration": "60.000000",
+      "size": "11430363"
+    }
+  },
+  "output_duration_delta_vs_window_s": 0.0,
+  "frame_variance_12s_vs_47s": {
+    "mean_abs_diff_per_channel": 1.4734,
+    "pct_pixels_materially_changed": 7.367
+  }
+}
