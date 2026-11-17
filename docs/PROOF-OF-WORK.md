@@ -179,6 +179,14 @@ store's factor is an average over everything ever asked, so
 it converges toward the model's squeeze rather than
 compounding; later circuits will test that reading.
 
+**The tuning face.** The seats this loop trains are seats on a
+dial: the double-letter dial (`docs/THE-DOUBLE-LETTER-DIAL.md`)
+weighs the twenty-six pairs in both Latin banks and seats them
+by pitch by three methods in the founder's order, its table
+held as engine data at `resonance/studio/data/dial-table.json`.
+The loop's vowel seats and the dial's pair seats are two faces
+of the one tuning instrument.
+
 ## The four-element content test
 
 - **Inputs:** struck artifacts and their measured manifests;

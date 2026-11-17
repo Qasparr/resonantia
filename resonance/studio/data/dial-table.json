@@ -1,0 +1,388 @@
+{
+ "instrument": "THE DOUBLE-LETTER DIAL",
+ "authorship": "Johnathan 'Qasparr' Monroe, ARR, All Rights Reserved, Without Prejudice",
+ "date": "XVI November 2026 e.v.",
+ "banks": {
+  "ordinal": "Latin ordinal (PONTIFEX latin_ordinal)",
+  "agrippa": "Agrippa (PONTIFEX agrippa)"
+ },
+ "method1": {
+  "name": "THE WEIGHT LIFTED",
+  "rule": "ordinal pair weight read as Hz, lifted by octaves (x2) the fewest times that lands it in [100, 1000) Hz",
+  "tier": "CONSTRUCTED (desk convention)"
+ },
+ "method2": {
+  "name": "THE ABC BRIDGE",
+  "rule": "note-name doubles seated at their note in the fourth octave under the house 432 field (A4 = 432 Hz, equal temperament, f = 432 x 2^(n/12)); domain exactly AA BB CC DD EE FF GG",
+  "tier": "values ATTESTED (Latin ordinal on letter names); extraction and octave seat CONSTRUCTED"
+ },
+ "method3": {
+  "name": "THE FOUNDER'S STRING",
+  "string": "XXZZPPLLKKVVEEOOVVAIE31E13",
+  "poles": {
+   "north": 13,
+   "south": 31
+  },
+  "tier": "the founder's dictation (2026-11-16 23:16 EST); measurements by the engine",
+  "letters": 22,
+  "ordinal": 326,
+  "agrippa": 2710,
+  "pairs_in_string": [
+   "XX",
+   "ZZ",
+   "PP",
+   "LL",
+   "KK",
+   "VV",
+   "EE",
+   "OO",
+   "VV"
+  ],
+  "pair_ordinal_sum": 306,
+  "pair_agrippa_sum": 2690,
+  "singles": [
+   "A",
+   "I",
+   "E",
+   "E"
+  ],
+  "single_ordinal_sum": 20,
+  "digits": {
+   "31_plus_13": 44,
+   "31_minus_13": 18
+  },
+  "waters": {
+   "WATER_ordinal": 67,
+   "WATER_agrippa": 186,
+   "hydor_greek": 1304,
+   "mayim_hebrew": 90
+  }
+ },
+ "pairs": {
+  "AA": {
+   "ordinal": 2,
+   "agrippa": 2,
+   "method1": {
+    "raw_hz": 2,
+    "lifts": 6,
+    "hz": 128.0
+   },
+   "method2": {
+    "note": "A4",
+    "semitones_from_A4": 0,
+    "hz": 432.0,
+    "abc_notes_weight": 2
+   },
+   "method3_string_occurrences": 0
+  },
+  "BB": {
+   "ordinal": 4,
+   "agrippa": 4,
+   "method1": {
+    "raw_hz": 4,
+    "lifts": 5,
+    "hz": 128.0
+   },
+   "method2": {
+    "note": "B4",
+    "semitones_from_A4": 2,
+    "hz": 484.9,
+    "abc_notes_weight": 4
+   },
+   "method3_string_occurrences": 0
+  },
+  "CC": {
+   "ordinal": 6,
+   "agrippa": 6,
+   "method1": {
+    "raw_hz": 6,
+    "lifts": 5,
+    "hz": 192.0
+   },
+   "method2": {
+    "note": "C4",
+    "semitones_from_A4": -9,
+    "hz": 256.87,
+    "abc_notes_weight": 6
+   },
+   "method3_string_occurrences": 0
+  },
+  "DD": {
+   "ordinal": 8,
+   "agrippa": 8,
+   "method1": {
+    "raw_hz": 8,
+    "lifts": 4,
+    "hz": 128.0
+   },
+   "method2": {
+    "note": "D4",
+    "semitones_from_A4": -7,
+    "hz": 288.33,
+    "abc_notes_weight": 8
+   },
+   "method3_string_occurrences": 0
+  },
+  "EE": {
+   "ordinal": 10,
+   "agrippa": 10,
+   "method1": {
+    "raw_hz": 10,
+    "lifts": 4,
+    "hz": 160.0
+   },
+   "method2": {
+    "note": "E4",
+    "semitones_from_A4": -5,
+    "hz": 323.63,
+    "abc_notes_weight": 10
+   },
+   "method3_string_occurrences": 1
+  },
+  "FF": {
+   "ordinal": 12,
+   "agrippa": 12,
+   "method1": {
+    "raw_hz": 12,
+    "lifts": 4,
+    "hz": 192.0
+   },
+   "method2": {
+    "note": "F4",
+    "semitones_from_A4": -4,
+    "hz": 342.88,
+    "abc_notes_weight": 12
+   },
+   "method3_string_occurrences": 0
+  },
+  "GG": {
+   "ordinal": 14,
+   "agrippa": 14,
+   "method1": {
+    "raw_hz": 14,
+    "lifts": 3,
+    "hz": 112.0
+   },
+   "method2": {
+    "note": "G4",
+    "semitones_from_A4": -2,
+    "hz": 384.87,
+    "abc_notes_weight": 14
+   },
+   "method3_string_occurrences": 0
+  },
+  "HH": {
+   "ordinal": 16,
+   "agrippa": 16,
+   "method1": {
+    "raw_hz": 16,
+    "lifts": 3,
+    "hz": 128.0
+   },
+   "method2": null,
+   "method3_string_occurrences": 0
+  },
+  "II": {
+   "ordinal": 18,
+   "agrippa": 18,
+   "method1": {
+    "raw_hz": 18,
+    "lifts": 3,
+    "hz": 144.0
+   },
+   "method2": null,
+   "method3_string_occurrences": 0
+  },
+  "JJ": {
+   "ordinal": 20,
+   "agrippa": 18,
+   "method1": {
+    "raw_hz": 20,
+    "lifts": 3,
+    "hz": 160.0
+   },
+   "method2": null,
+   "method3_string_occurrences": 0
+  },
+  "KK": {
+   "ordinal": 22,
+   "agrippa": 20,
+   "method1": {
+    "raw_hz": 22,
+    "lifts": 3,
+    "hz": 176.0
+   },
+   "method2": null,
+   "method3_string_occurrences": 1
+  },
+  "LL": {
+   "ordinal": 24,
+   "agrippa": 40,
+   "method1": {
+    "raw_hz": 24,
+    "lifts": 3,
+    "hz": 192.0
+   },
+   "method2": null,
+   "method3_string_occurrences": 1
+  },
+  "MM": {
+   "ordinal": 26,
+   "agrippa": 60,
+   "method1": {
+    "raw_hz": 26,
+    "lifts": 2,
+    "hz": 104.0
+   },
+   "method2": null,
+   "method3_string_occurrences": 0
+  },
+  "NN": {
+   "ordinal": 28,
+   "agrippa": 80,
+   "method1": {
+    "raw_hz": 28,
+    "lifts": 2,
+    "hz": 112.0
+   },
+   "method2": null,
+   "method3_string_occurrences": 0
+  },
+  "OO": {
+   "ordinal": 30,
+   "agrippa": 100,
+   "method1": {
+    "raw_hz": 30,
+    "lifts": 2,
+    "hz": 120.0
+   },
+   "method2": null,
+   "method3_string_occurrences": 1
+  },
+  "PP": {
+   "ordinal": 32,
+   "agrippa": 120,
+   "method1": {
+    "raw_hz": 32,
+    "lifts": 2,
+    "hz": 128.0
+   },
+   "method2": null,
+   "method3_string_occurrences": 1
+  },
+  "QQ": {
+   "ordinal": 34,
+   "agrippa": 140,
+   "method1": {
+    "raw_hz": 34,
+    "lifts": 2,
+    "hz": 136.0
+   },
+   "method2": null,
+   "method3_string_occurrences": 0
+  },
+  "RR": {
+   "ordinal": 36,
+   "agrippa": 160,
+   "method1": {
+    "raw_hz": 36,
+    "lifts": 2,
+    "hz": 144.0
+   },
+   "method2": null,
+   "method3_string_occurrences": 0
+  },
+  "SS": {
+   "ordinal": 38,
+   "agrippa": 180,
+   "method1": {
+    "raw_hz": 38,
+    "lifts": 2,
+    "hz": 152.0
+   },
+   "method2": null,
+   "method3_string_occurrences": 0
+  },
+  "TT": {
+   "ordinal": 40,
+   "agrippa": 200,
+   "method1": {
+    "raw_hz": 40,
+    "lifts": 2,
+    "hz": 160.0
+   },
+   "method2": null,
+   "method3_string_occurrences": 0
+  },
+  "UU": {
+   "ordinal": 42,
+   "agrippa": 400,
+   "method1": {
+    "raw_hz": 42,
+    "lifts": 2,
+    "hz": 168.0
+   },
+   "method2": null,
+   "method3_string_occurrences": 0
+  },
+  "VV": {
+   "ordinal": 44,
+   "agrippa": 400,
+   "method1": {
+    "raw_hz": 44,
+    "lifts": 2,
+    "hz": 176.0
+   },
+   "method2": null,
+   "method3_string_occurrences": 2
+  },
+  "WW": {
+   "ordinal": 46,
+   "agrippa": 0,
+   "method1": {
+    "raw_hz": 46,
+    "lifts": 2,
+    "hz": 184.0
+   },
+   "method2": null,
+   "method3_string_occurrences": 0
+  },
+  "XX": {
+   "ordinal": 48,
+   "agrippa": 600,
+   "method1": {
+    "raw_hz": 48,
+    "lifts": 2,
+    "hz": 192.0
+   },
+   "method2": null,
+   "method3_string_occurrences": 1
+  },
+  "YY": {
+   "ordinal": 50,
+   "agrippa": 800,
+   "method1": {
+    "raw_hz": 50,
+    "lifts": 1,
+    "hz": 100.0
+   },
+   "method2": null,
+   "method3_string_occurrences": 0
+  },
+  "ZZ": {
+   "ordinal": 52,
+   "agrippa": 1000,
+   "method1": {
+    "raw_hz": 52,
+    "lifts": 1,
+    "hz": 104.0
+   },
+   "method2": null,
+   "method3_string_occurrences": 1
+  }
+ },
+ "presiding": {
+  "digit_double": 77,
+  "77_cubed": 456533
+ }
+}
