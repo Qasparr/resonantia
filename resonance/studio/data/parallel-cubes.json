@@ -1,0 +1,70 @@
+{
+ "instrument": "THE PARALLEL CUBES",
+ "authorship": "Johnathan 'Qasparr' Monroe, ARR, All Rights Reserved, Without Prejudice",
+ "date": "XVII November 2026 e.v.",
+ "source": "PONTIFEX cubes record (pontifex/cubes.py, cubes_checks 7/7) and the founder's plates of 2026-11-17; every number in this file was recomputed by script from its base before striking, and resonance/studio/cubes.py re-derives them at check time so this file cannot drift from the arithmetic.",
+ "cubes": {
+  "77": {
+   "base": 77,
+   "square": 5929,
+   "cube": 456533,
+   "factorization": {
+    "7": 3,
+    "11": 3
+   },
+   "threefold": 1369599,
+   "reasoning": "the Enclave Sphere of the stamped Pyramidasphere instrument: 77 is AXONEME in the English ordinal bank and oz in the Hebrew bank, the house's proven bridge; its cube is the Trinity's field size of record"
+  },
+  "93": {
+   "base": 93,
+   "square": 8649,
+   "cube": 804357,
+   "factorization": {
+    "3": 3,
+    "31": 3
+   },
+   "threefold": 2413071,
+   "reasoning": "the Will's cube, ordered in parallel by the founder 2026-11-17: 93 is thelema in the attested Greek bank; 93 = 3 x 31 seats the pyramid's own 31 (the 31-node frame of the pyramidasphere scene) under the Cube 27"
+  }
+ },
+ "greek_seats": {
+  "KY": {
+   "value": 420,
+   "reasoning": "kappa 20 + upsilon 400 in the attested Greek bank, proven in the Pyramidasphere instrument; KY's expansion is the founder's alone and is not recorded here"
+  },
+  "thelema": {
+   "value": 93,
+   "reasoning": "the Will in the attested Greek bank — the register's control and the 93-cube's base in its own tongue"
+  }
+ },
+ "declared_equation": {
+  "inscription": "31^3 = 93",
+  "kind": "the founder's declared equation (the pyramidasphere scene's card)",
+  "by_multiplication": 29791,
+  "by_threefold_sum": 93,
+  "reasoning": "both figures printed, neither smoothed — the house law for declared equations; the scene's own ARITHMETIC carries the same pair"
+ },
+ "synergy_circuit": [
+  {
+   "seat": "Seal of the Sheet Music",
+   "verb": "resonates",
+   "reasoning": "Plate II's first term: the house is score-first — sheet music ships with every track — so the circuit begins at the written note"
+  },
+  {
+   "seat": "77 Lex Stellarrvm Enclave Sphere",
+   "verb": "amplifies",
+   "reasoning": "Plate II's center: the 77-cube itself, 456,533 printed on the plate — what resonates in the score is amplified in the field"
+  },
+  {
+   "seat": "XXX Pyramid",
+   "verb": "harmonizes (the arc beneath)",
+   "reasoning": "Plate II's third term: three X pyramids stacked, the 3 Fold given a silhouette; the great arc beneath harmonizes the circuit closed"
+  }
+ ],
+ "palette": {
+  "purple": "#6A0DAD",
+  "gold": "#FFD700",
+  "green": "#127A3F",
+  "reasoning": "Plate II's printed spec, captioned by the founder 'Purple, Gold, and Green.' — the Lex Stellarrvm register; distinct from Bleat's purple #4B0082, and the two registers are never conflated"
+ }
+}

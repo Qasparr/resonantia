@@ -114,6 +114,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image, ImageDraw, ImageEnhance, ImageFont
 
+from . import cubes as cubemod
 from . import mp4profile
 from . import visualize as viz
 
@@ -722,6 +723,12 @@ def render(audio_path, out_path, width=1280, height=720, fps=30,
         "inscription": INSCRIPTION,
         "inscription_kind": "the founder's declared equation",
         "arithmetic_beside_it": ARITHMETIC,
+        # The parallel the founder ordered (2026-11-17): this frame's
+        # own 31, cubed, stands inside the 93-cube (3^3 x 31^3), which
+        # stands beside the 77-cube of the instrument — read from the
+        # studio's single shared record (studio/cubes.py), never from
+        # a copy carried in this module.
+        "parallel_cubes": cubemod.parallel_summary(),
         "source": str(audio_path),
         "window": {"seek_s": seek, "duration_s": duration},
         "weighed_duration_s": round(weighed, 4),
