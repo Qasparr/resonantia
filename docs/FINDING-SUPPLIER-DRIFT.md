@@ -398,3 +398,57 @@ a "Lyra acoustic stage" for YuE / YuE2. No such stage exists
 in YuE or YuE2 — a desk error of 2026-11-10, owned in the
 open 2026-11-15, and corrected here in the record so the
 bench carries the repair where the error stands.
+
+**FOURTH BENCH ENTRY — VOCALOID7 (Yamaha), THE BOUGHT
+SCORE-FIRST SEAT.** Entered 2026-11-16 on the founder's
+share and his question — "Can we use these to make
+resonantia better?" Facts, from Yamaha's own release and
+the trade reports of the launch: released 2026-11-11,
+built on the second-generation VOCALOID:AI engine, with
+new ATTACK articulation control and VOICE TYPE switching
+on the exclusive banks. The Editor is USD 129, one-time,
+download, and includes the asa voicebank (Japanese,
+English, Chinese); five exclusive banks launched with it
+at USD 90–92 — AI Megpoid (eight voice types), GekiyakuV,
+KazehikiV, NurseRobot_TypeT, LUCI — each carrying Editor
+Lite, so a single bank alone starts the road; every
+VOCALOID3–6 bank remains compatible; a 31-day trial runs
+the full editor with asa. Windows 11 and macOS ONLY — no
+Linux build exists, and this box cannot host it. The shape
+is the singing plug's own: notation + lyrics in, a sung
+vocal out, rendered on the owner's machine — no cloud, no
+credits, no per-render meter; what is bought is kept.
+Against the bench's first candidate the contrast is the
+ownership term: ACE rents (≈ $199/yr, cloud-rendered,
+credit-metered), VOCALOID sells. And Japanese is this
+family's home ground — the Gumi's tongue is its first
+language, not an import; asa alone sings Japanese out of
+the box. Gates, all three standing, the same shape as
+ACE's: (a) a Windows or Mac machine in the house — cleared
+by the same iron as ACE's gate (the workstation decision;
+the Enclave host draft already seats Windows 11 Pro for
+Workstations); (b) the purchase — a founder money call,
+$129 at the door and $90–92 a bank after; (c) each bank's
+output licence read in full before anything rendered on
+it is offered for sale — a voice's licence and a
+character's likeness are separate questions, as with every
+bank on this bench. It does not displace the owned road:
+DiffSinger remains the only in-house, licence-clean, CPU
+road, and the Divine Nine still ride at its plug point.
+Filed as the first of the commercial seats on ownership
+terms. First test, when a machine exists: the 31-day trial
+against the DETROIT MUGETSU hook score — already written,
+already verified note-for-note, and waiting for exactly
+such a bench.
+
+**NOT A BENCH ITEM — GEMINI'S 66 REGIONAL VOICES.** Filed
+for the record from the same share: Google's rollout of
+2026-11-16 is Gemini Live's conversational voice inside
+the app — the assistant's spoken accent across seven
+locales (Japanese not among them), picked in the app's
+settings. It is speech for talking to Gemini: not a
+singing engine, not Lyria, not exportable, and nothing in
+it wires into this engine. The house's speech seat is
+already filled locally by ZONOS3-Mini, with Japanese in
+its first rank. No action; the adopted road is unchanged
+by it.
