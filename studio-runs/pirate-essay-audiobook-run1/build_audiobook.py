@@ -754,9 +754,17 @@ def video():
     frame_path = HERE / "video-frame.png"
     frame.save(frame_path)
     audio_note = "stream-copied from the sealed master"
+    # CORRECTIO (during the run): the frame rate is 1 fps, not
+    # 30. The visual is a still cover; thirty frames a second of
+    # it bought nothing and cost a ~100-minute encode at 1080p on
+    # this throttled box -- and the exposure killed the edition
+    # twice (a service restart at minute ~1; a second death at
+    # minute ~100 leaving 222 MB with no moov atom, unplayable).
+    # One frame per second carries the same still honestly and
+    # lands the encode inside one short, survivable window.
     proc = subprocess.run(
         ["ffmpeg", "-y", "-v", "error", "-loop", "1", "-framerate",
-         "30", "-i", str(frame_path), "-i", str(MP3_OUT),
+         "1", "-i", str(frame_path), "-i", str(MP3_OUT),
          "-c:v", "libx264", "-tune", "stillimage", "-pix_fmt",
          "yuv420p", "-c:a", "copy", "-shortest", str(VIDEO_OUT)],
         capture_output=True, text=True)
@@ -765,7 +773,7 @@ def video():
                       "stream could not be copied into the MP4 "
                       "container on this ffmpeg); the video is an "
                       "edition of the master, not a new master")
-        _ffmpeg(["-loop", "1", "-framerate", "30", "-i",
+        _ffmpeg(["-loop", "1", "-framerate", "1", "-i",
                  str(frame_path), "-i", str(MP3_OUT), "-c:v",
                  "libx264", "-tune", "stillimage", "-pix_fmt",
                  "yuv420p", "-c:a", "aac", "-b:a", "320k",

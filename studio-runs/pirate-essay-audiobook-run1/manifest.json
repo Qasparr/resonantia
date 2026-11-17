@@ -1,0 +1,323 @@
+{
+  "assemble": {
+    "chunks": [
+      {
+        "chunk": "01-title",
+        "script_file": "01-title.txt",
+        "words": 98,
+        "rendered_seconds": 58.667,
+        "assembled_seconds": 58.667,
+        "gap_before_seconds": 0.0
+      },
+      {
+        "chunk": "02-s1-frame",
+        "script_file": "02-s1-frame.txt",
+        "words": 760,
+        "rendered_seconds": 324.8,
+        "assembled_seconds": 324.8,
+        "gap_before_seconds": 1.2
+      },
+      {
+        "chunk": "03-s1-footnotes",
+        "script_file": "03-s1-footnotes.txt",
+        "words": 172,
+        "rendered_seconds": 81.467,
+        "assembled_seconds": 81.467,
+        "gap_before_seconds": 1.2
+      },
+      {
+        "chunk": "04-s2-take",
+        "script_file": "04-s2-take.txt",
+        "words": 501,
+        "rendered_seconds": 205.433,
+        "assembled_seconds": 205.433,
+        "gap_before_seconds": 1.2
+      },
+      {
+        "chunk": "05-s2-footnotes",
+        "script_file": "05-s2-footnotes.txt",
+        "words": 171,
+        "rendered_seconds": 75.2,
+        "assembled_seconds": 75.2,
+        "gap_before_seconds": 1.2
+      },
+      {
+        "chunk": "06-s3-ship",
+        "script_file": "06-s3-ship.txt",
+        "words": 655,
+        "rendered_seconds": 272.917,
+        "assembled_seconds": 272.917,
+        "gap_before_seconds": 1.2
+      },
+      {
+        "chunk": "07-s3-footnotes",
+        "script_file": "07-s3-footnotes.txt",
+        "words": 200,
+        "rendered_seconds": 83.95,
+        "assembled_seconds": 83.95,
+        "gap_before_seconds": 1.2
+      },
+      {
+        "chunk": "08-s4-code",
+        "script_file": "08-s4-code.txt",
+        "words": 1013,
+        "rendered_seconds": 396.7,
+        "assembled_seconds": 396.7,
+        "gap_before_seconds": 1.2
+      },
+      {
+        "chunk": "09-s4-footnotes",
+        "script_file": "09-s4-footnotes.txt",
+        "words": 230,
+        "rendered_seconds": 106.35,
+        "assembled_seconds": 106.35,
+        "gap_before_seconds": 1.2
+      },
+      {
+        "chunk": "10-s5-license",
+        "script_file": "10-s5-license.txt",
+        "words": 787,
+        "rendered_seconds": 305.467,
+        "assembled_seconds": 305.467,
+        "gap_before_seconds": 1.2
+      },
+      {
+        "chunk": "11-s5-footnotes",
+        "script_file": "11-s5-footnotes.txt",
+        "words": 195,
+        "rendered_seconds": 93.217,
+        "assembled_seconds": 93.217,
+        "gap_before_seconds": 1.2
+      },
+      {
+        "chunk": "12-s6-bottom",
+        "script_file": "12-s6-bottom.txt",
+        "words": 540,
+        "rendered_seconds": 201.433,
+        "assembled_seconds": 201.433,
+        "gap_before_seconds": 1.2
+      },
+      {
+        "chunk": "13-s6-footnotes",
+        "script_file": "13-s6-footnotes.txt",
+        "words": 209,
+        "rendered_seconds": 92.817,
+        "assembled_seconds": 92.817,
+        "gap_before_seconds": 1.2
+      },
+      {
+        "chunk": "14-s7-test",
+        "script_file": "14-s7-test.txt",
+        "words": 435,
+        "rendered_seconds": 203.967,
+        "assembled_seconds": 203.967,
+        "gap_before_seconds": 1.2
+      },
+      {
+        "chunk": "15-s8-ledger",
+        "script_file": "15-s8-ledger.txt",
+        "words": 246,
+        "rendered_seconds": 109.417,
+        "assembled_seconds": 109.417,
+        "gap_before_seconds": 1.2
+      },
+      {
+        "chunk": "16-s9-audit",
+        "script_file": "16-s9-audit.txt",
+        "words": 708,
+        "rendered_seconds": 334.05,
+        "assembled_seconds": 334.05,
+        "gap_before_seconds": 1.2
+      },
+      {
+        "chunk": "17-s10-authorities",
+        "script_file": "17-s10-authorities.txt",
+        "words": 262,
+        "rendered_seconds": 114.683,
+        "assembled_seconds": 114.683,
+        "gap_before_seconds": 1.2
+      },
+      {
+        "chunk": "18-annex-1",
+        "script_file": "18-annex-1.txt",
+        "words": 494,
+        "rendered_seconds": 201.833,
+        "assembled_seconds": 201.833,
+        "gap_before_seconds": 2.5
+      },
+      {
+        "chunk": "19-annex-2",
+        "script_file": "19-annex-2.txt",
+        "words": 462,
+        "rendered_seconds": 200.233,
+        "assembled_seconds": 200.233,
+        "gap_before_seconds": 1.2
+      },
+      {
+        "chunk": "20-annex-3-defect",
+        "script_file": "20-annex-3-defect.txt",
+        "words": 475,
+        "rendered_seconds": 196.967,
+        "assembled_seconds": 196.967,
+        "gap_before_seconds": 1.2
+      },
+      {
+        "chunk": "21-colophon",
+        "script_file": "21-colophon.txt",
+        "words": 322,
+        "rendered_seconds": 153.55,
+        "assembled_seconds": 153.55,
+        "gap_before_seconds": 2.5
+      }
+    ],
+    "total_seconds": 3839.717,
+    "sample_rate": 48000
+  },
+  "master": {
+    "report": {
+      "lufs_before": -22.37,
+      "gain_applied_db": 8.75,
+      "trim_db": -0.32,
+      "lufs_after": -14.03,
+      "sample_peak_db": -1.62,
+      "true_peak_dbtp": -1.32,
+      "ceiling_overrode_loudness": true,
+      "target_lufs": -14.0,
+      "ceiling_dbtp": -1.0,
+      "attempt": 2,
+      "steering_ceiling_dbtp": -1.3,
+      "decode_overshoot_budget_db": 0.3,
+      "gain_precompensation_db": 0.38,
+      "prior_attempt": "master proof pow-875cbecbf6a46800a2ec84e4ee69200607ff96224a5c5eedb7772824c63c966d FAILED at the gate: decoded true peak -0.88 dBTP vs the WAV's steered -1.02 (MP3 decode overshoot +0.14 dB); loudness and bitrate passed. That record stands; this attempt answers it.",
+      "longform_note": "master_signal's law applied in blocks: gain and soft-limit are sample-local; loudness on the pipeline's own scale (its ungated K-weighted figure, its own biquad coefficients) computed in the time domain in blocks -- the whole-signal FFT form and four_powers' whole-body RMS witness OOM-kill on the 64-minute form in this box, and the blocked form was validated against the whole-signal scale at delta 0.0000 LU on two 90 s slices of this program; true peak by the pipeline's oversampling in 120 s windows with 5 s overlaps."
+    },
+    "four_powers": {
+      "scire": {
+        "stage": "metering / measurement (BS.1770)",
+        "lufs_integrated": -22.37,
+        "true_peak_dbtp": -2.76,
+        "sample_peak_dbfs": -2.79,
+        "rms_dbfs": -25.4,
+        "crest_db": 22.61
+      },
+      "velle": {
+        "engaged": false,
+        "eq": [],
+        "comp": null,
+        "rms_delta_db": 0.0,
+        "peak_delta_db": 0.0
+      },
+      "audere": {
+        "stage": "limiting (soft limit + true-peak ceiling trim; the ceiling outranks the loudness)",
+        "target_lufs": -14.0,
+        "ceiling_dbtp": -1.0,
+        "gain_applied_db": 8.75,
+        "trim_db": -0.32,
+        "lufs_after": -14.03,
+        "true_peak_dbtp": -1.32,
+        "ceiling_overrode_loudness": true
+      },
+      "tacere": {
+        "stage": "headroom accounting + dither on export",
+        "ceiling_dbtp": -1.0,
+        "delivered_true_peak_dbtp": -1.32,
+        "headroom_dbtp": 0.32,
+        "dither": {
+          "applied": true,
+          "type": "TPDF",
+          "bits": 24
+        }
+      },
+      "vapour": {
+        "engaged": false,
+        "drive_db": 0.0,
+        "crest_before_db": 22.61,
+        "crest_after_db": 22.61,
+        "rms_delta_db": 0.0
+      },
+      "rgba8888": {
+        "R_know_scire": 136,
+        "G_dare_audere": 241,
+        "B_will_velle": 240,
+        "A_silent_vapour_tacere": 7,
+        "hex": "#88F1F007",
+        "mapping": "R = integrated LUFS (-48..0), G = delivered true peak dBTP (-24..0), B = crest dB (0..24), A = headroom dBTP (0..12); linear, clamped -- a display convention over measured values"
+      }
+    },
+    "scire": {
+      "stage": "metering / measurement (BS.1770)",
+      "lufs_integrated": -22.37,
+      "true_peak_dbtp": -2.76,
+      "sample_peak_dbfs": -2.79,
+      "rms_dbfs": -25.4,
+      "crest_db": 22.61
+    }
+  },
+  "proofs": {
+    "vocal_proof_id": "pow-683111a6845eff2cc9233c492ceb1f4f7ae39308aadf5443cfe5fa5128b86936",
+    "master_proof_id": "pow-8245e4c5bb9aaef6a01f6b09f5da133286bdaab4329b2b863c1753242a1c26f6",
+    "master_status": "SEALED",
+    "master_gate": {
+      "sealed": true,
+      "checks": [
+        {
+          "check": "integrated loudness",
+          "value": -14.03,
+          "law": "-14.0 +/- 0.5 LUFS",
+          "ok": true
+        },
+        {
+          "check": "decoded true peak",
+          "value": -1.26,
+          "law": "<= -1.0 dBTP",
+          "ok": true
+        },
+        {
+          "check": "bitrate (sworn)",
+          "value": 320000,
+          "law": "exactly 320000 bps",
+          "ok": true
+        }
+      ],
+      "failures": []
+    },
+    "measured": {
+      "bitrate_bps": 320000,
+      "sworn_bitrate_bps": 320000,
+      "lufs_integrated": -14.03,
+      "true_peak_dbtp": -1.26,
+      "measurement_note": "proofs.measure_master could not carry the long form in this box's memory; the measured body was computed by the same scales in blocks (the pipeline's ungated K-weighted loudness, its own biquad coefficients, applied in the time domain over the decoded MP3 -- validated at delta 0.0000 LU against the whole-signal scale; the pipeline's oversampled true peak in 120 s windows, 5 s overlaps).",
+      "files": {
+        "delivered_mp3": {
+          "path": "/home/hatch/workspace/your_files/pirate-essay/THE-PIRATE-ESSAY-AUDIOBOOK.mp3",
+          "decoded_sr": 48000,
+          "lufs_integrated": -14.03,
+          "true_peak_dbtp": -1.26,
+          "bitrate_bps": 320000
+        }
+      }
+    },
+    "measurement_path": "blocked scales (confessed in manifest)",
+    "ledger_verify": {
+      "ok": false,
+      "records": 20,
+      "ledger": "/home/hatch/workspace/resonance/proofs/ledger.jsonl",
+      "breaks": [
+        {
+          "index": 18,
+          "id": "pow-875cbecbf6a46800a2ec84e4ee69200607ff96224a5c5eedb7772824c63c966d",
+          "problem": "TAMPERED ARTIFACT: /home/hatch/workspace/your_files/pirate-essay/THE-PIRATE-ESSAY-AUDIOBOOK.mp3 hashes to a different body than the record attests"
+        }
+      ]
+    }
+  },
+  "video": {
+    "video": "/home/hatch/workspace/your_files/pirate-essay/THE-PIRATE-ESSAY-VIDEO.mp4",
+    "bytes": 166577788,
+    "duration_seconds": 3839.736,
+    "master_duration_seconds": 3839.717,
+    "duration_delta_seconds": 0.019,
+    "audio": "stream-copied from the sealed master",
+    "frame": "1920x1080: bookshop front cover on doctrine purple #4B0082, TVRRIS VERITATIS seal, title"
+  }
+}
