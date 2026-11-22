@@ -1,0 +1,1265 @@
+/**
+ * Project: EQVILLIBBRRIVMM - Fluid Voice Synthesizer & Autotune + DOOD/48^3 Suite
+ * Author: Johnathan 'Qasparr' Monroe
+ * License: Open Source - Zero Liability / Educational Research & Development
+ * Support / Contributions: CashApp $axoneme
+ *
+ * "Every, Man, Woman, and Child, is a Star."
+ * "Live, Love, and let Love, Live!"
+ * "What can occur, will!"
+ */
+
+#include <algorithm>
+#include <array>
+#include <cassert>
+#include <chrono>
+#include <cmath>
+#include <cstddef>
+#include <cstdint>
+#include <fstream>
+#include <iomanip>
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <thread>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
+
+namespace axoneme::symphony {
+
+constexpr float kPi = 3.14159265358979323846f;
+
+// Twin-Rail & 13/5 Guardrail ratios
+constexpr float kOuterRailRatio = 10.0f / 6.0f;
+constexpr float kInnerRailRatio = 7.0f / 4.0f;
+constexpr float kCenterKeyRatio = 13.0f / 8.0f;
+constexpr float kGuardrailRatio13_5 = 13.0f / 5.0f;
+
+// 48 Hz anchor & 48 x 48 x 48 = 110,592 cubic dimension
+constexpr float kAnchorHz48 = 48.0f;
+constexpr std::size_t kCube48Edge = 48;
+constexpr std::size_t kCube48Cells = kCube48Edge * kCube48Edge * kCube48Edge; // 110,592
+
+// Full Key G9 frequency (~1254.385 Hz in 12-TET A4=440 Hz)
+constexpr float kFullKeyG9Hz = 1254.3854f;
+
+// Solfeggio harmonic scale frequencies (Hz)
+constexpr std::array<float, 6> kSolfeggioHz{{
+    396.0f, 417.0f, 528.0f, 639.0f, 741.0f, 852.0f
+}};
+
+enum class PatternGlyph : std::uint8_t {
+    D,
+    O,
+    Block4
+};
+
+struct PatternStep {
+    std::size_t stepIndex{0};
+    std::string motif;
+    std::string symbol;
+    PatternGlyph glyph{PatternGlyph::D};
+    float gateWeight{1.0f};
+};
+
+class DoodOddoPatternEngine {
+public:
+    static const std::array<PatternStep, 24>& table() noexcept {
+        static const std::array<PatternStep, 24> kTable{{
+            // Line 1: DOOD · OODD · ODDO · DODO
+            {0,  "DOOD",  "D",  PatternGlyph::D,      1.00f},
+            {1,  "DOOD",  "O",  PatternGlyph::O,      0.35f},
+            {2,  "DOOD",  "O",  PatternGlyph::O,      0.35f},
+            {3,  "DOOD",  "D",  PatternGlyph::D,      1.00f},
+
+            {4,  "OODD",  "O",  PatternGlyph::O,      0.35f},
+            {5,  "OODD",  "O",  PatternGlyph::O,      0.35f},
+            {6,  "OODD",  "D",  PatternGlyph::D,      1.00f},
+            {7,  "OODD",  "D",  PatternGlyph::D,      1.00f},
+
+            {8,  "ODDO",  "O",  PatternGlyph::O,      0.35f},
+            {9,  "ODDO",  "D",  PatternGlyph::D,      1.00f},
+            {10, "ODDO",  "D",  PatternGlyph::D,      1.00f},
+            {11, "ODDO",  "O",  PatternGlyph::O,      0.35f},
+
+            {12, "DODO",  "D",  PatternGlyph::D,      1.00f},
+            {13, "DODO",  "O",  PatternGlyph::O,      0.35f},
+            {14, "DODO",  "D",  PatternGlyph::D,      1.00f},
+            {15, "DODO",  "O",  PatternGlyph::O,      0.35f},
+
+            // Line 2: DDOO · DD■4
+            {16, "DDOO",  "D",  PatternGlyph::D,      1.00f},
+            {17, "DDOO",  "D",  PatternGlyph::D,      1.00f},
+            {18, "DDOO",  "O",  PatternGlyph::O,      0.35f},
+            {19, "DDOO",  "O",  PatternGlyph::O,      0.35f},
+
+            {20, "DD■4",  "D",  PatternGlyph::D,      1.05f},
+            {21, "DD■4",  "D",  PatternGlyph::D,      1.05f},
+            {22, "DD■4",  "■4", PatternGlyph::Block4, 1.25f},
+            {23, "DD■4",  "■4", PatternGlyph::Block4, 1.25f}
+        }};
+        return kTable;
+    }
+
+    static const PatternStep& stepAt(std::size_t frameOrSampleIdx) noexcept {
+        const auto& t = table();
+        return t[frameOrSampleIdx % t.size()];
+    }
+};
+
+class Cube48Engine {
+public:
+    struct CubeMetrics {
+        std::size_t totalCells{kCube48Cells};
+        float anchorHz{kAnchorHz48};
+        float phase{0.0f};
+        float energy{0.0f};
+    };
+
+    static CubeMetrics evaluate(std::size_t frameIdx, float elapsedSec, float patternGateWeight) noexcept {
+        const std::size_t x = frameIdx % kCube48Edge;
+        const std::size_t y = (frameIdx * 7 + 3) % kCube48Edge;
+        const std::size_t z = (frameIdx * 13 + 5) % kCube48Edge;
+
+        const float nx = (static_cast<float>(x) / static_cast<float>(kCube48Edge - 1)) * 2.0f - 1.0f;
+        const float ny = (static_cast<float>(y) / static_cast<float>(kCube48Edge - 1)) * 2.0f - 1.0f;
+        const float nz = (static_cast<float>(z) / static_cast<float>(kCube48Edge - 1)) * 2.0f - 1.0f;
+
+        const float phase = 2.0f * kPi * kAnchorHz48 * elapsedSec + 0.5f * (nx + ny + nz);
+        const float radial = std::sqrt(std::min(3.0f, nx * nx + ny * ny + nz * nz)) / std::sqrt(3.0f);
+        const float rawEnergy = (0.5f + 0.5f * std::cos(phase)) * (1.0f - 0.35f * radial) * patternGateWeight;
+        const float energy = std::clamp(rawEnergy, 0.0f, 1.0f);
+
+        return CubeMetrics{kCube48Cells, kAnchorHz48, phase, energy};
+    }
+};
+
+/**
+ * Fluid Voice Synthesizer & Autotune Engine:
+ * - Synthesizes a smooth glottal + dual-formant (F1/F2) vocal stream with portamento glide.
+ * - Autotunes pitch smoothly toward active Solfeggio or Full Key G9 harmonic targets.
+ */
+class FluidVoiceAutotuneEngine {
+public:
+    struct VoiceParams {
+        float sampleRate{48000.0f};
+        float voiceMixGain{0.22f};
+        float glideTimeSec{0.045f};
+        float autotuneStrength{0.85f}; // [0.0, 1.0]
+        float formantShiftHz{180.0f};
+        float vibratoRateHz{5.2f};
+        float vibratoDepthCents{14.0f};
+    };
+
+    struct FrameSynthesis {
+        std::vector<float> voiceSamples;
+        float rawPitchHz{220.0f};
+        float autotunedPitchHz{528.0f};
+        float correctionCents{0.0f};
+        float formantF1Hz{500.0f};
+        float formantF2Hz{1500.0f};
+        float lockIndex{0.0f};
+    };
+
+    explicit FluidVoiceAutotuneEngine(const VoiceParams& params) : params_(params) {}
+
+    static float freqToMidi(float hz) noexcept {
+        return 69.0f + 12.0f * std::log2(std::max(hz, 20.0f) / 440.0f);
+    }
+
+    static float midiToFreq(float midi) noexcept {
+        return 440.0f * std::pow(2.0f, (midi - 69.0f) / 12.0f);
+    }
+
+    static float selectAutotuneTargetHz(
+        float rawPitchHz,
+        float solfeggioHz,
+        float g9LockIndex
+    ) noexcept {
+        // Candidate scale pitches anchored on Solfeggio note, its octave, and Full Key G9
+        const std::array<float, 3> candidates{{
+            solfeggioHz * 0.5f,
+            solfeggioHz,
+            (g9LockIndex > 0.65f) ? kFullKeyG9Hz : (solfeggioHz * 1.5f)
+        }};
+
+        const float rawMidi = freqToMidi(rawPitchHz);
+        float bestHz = candidates[1];
+        float bestDist = 1e9f;
+
+        for (float cHz : candidates) {
+            const float dist = std::abs(freqToMidi(cHz) - rawMidi);
+            if (dist < bestDist) {
+                bestDist = dist;
+                bestHz = cHz;
+            }
+        }
+        return bestHz;
+    }
+
+    FrameSynthesis synthesizeFrame(
+        std::size_t frameIdx,
+        std::size_t fftSize,
+        float solfeggioNoteHz,
+        float patternGateWeight,
+        float cube48Energy,
+        float g9LockIndex
+    ) {
+        const float frameSec = static_cast<float>(fftSize) / std::max(params_.sampleRate, 1.0f);
+        const float elapsedSec = static_cast<float>(frameIdx) * frameSec;
+
+        // Expressive gliding vocal input pitch (sweeping across lower/mid voice register)
+        const float rawPitchHz = 196.0f + 110.0f * (0.5f + 0.5f * std::sin(2.0f * kPi * 0.37f * elapsedSec));
+        const float targetHz = selectAutotuneTargetHz(rawPitchHz, solfeggioNoteHz, g9LockIndex);
+
+        const float strength = std::clamp(params_.autotuneStrength, 0.0f, 1.0f);
+        const float rawMidi = freqToMidi(rawPitchHz);
+        const float targetMidi = freqToMidi(targetHz);
+        const float snappedMidi = rawMidi + strength * (targetMidi - rawMidi);
+        const float desiredPitchHz = midiToFreq(snappedMidi);
+
+        // Fluid portamento / glide slew filter
+        const float tau = std::max(params_.glideTimeSec, 0.005f);
+        const float alpha = 1.0f - std::exp(-frameSec / tau);
+        currentPitchHz_ += alpha * (desiredPitchHz - currentPitchHz_);
+
+        const float correctionCents = (freqToMidi(currentPitchHz_) - rawMidi) * 100.0f;
+        const float lockIndex = std::clamp(
+            1.0f - (std::abs(freqToMidi(currentPitchHz_) - targetMidi) / 6.0f),
+            0.0f,
+            1.0f
+        );
+
+        const float f1Hz = std::clamp(460.0f + params_.formantShiftHz * (0.5f + 0.5f * cube48Energy), 250.0f, 1200.0f);
+        const float f2Hz = std::clamp(1350.0f + 1.8f * params_.formantShiftHz * patternGateWeight, 900.0f, 3200.0f);
+
+        std::vector<float> out(fftSize, 0.0f);
+        const float baseSample = static_cast<float>(frameIdx * fftSize);
+        const float gain = std::clamp(params_.voiceMixGain, 0.0f, 0.65f) * std::clamp(patternGateWeight, 0.3f, 1.3f);
+
+        for (std::size_t n = 0; n < fftSize; ++n) {
+            const float t = (baseSample + static_cast<float>(n)) / params_.sampleRate;
+            const float vibRatio = std::pow(
+                2.0f,
+                (params_.vibratoDepthCents * std::sin(2.0f * kPi * params_.vibratoRateHz * t)) / 1200.0f
+            );
+            const float instPitch = currentPitchHz_ * vibRatio;
+
+            phaseAccum_ += (2.0f * kPi * instPitch) / params_.sampleRate;
+            if (phaseAccum_ > 2.0f * kPi * 1024.0f) {
+                phaseAccum_ = std::fmod(phaseAccum_, 2.0f * kPi);
+            }
+
+            // Smooth glottal wave + resonant formant overtones
+            const float glottal = 0.65f * std::sin(phaseAccum_) +
+                                  0.25f * std::sin(2.0f * phaseAccum_ + 0.3f * cube48Energy) +
+                                  0.10f * std::sin(3.0f * phaseAccum_);
+            const float formant1 = 0.32f * std::sin(2.0f * kPi * f1Hz * t + 0.25f * glottal);
+            const float formant2 = 0.18f * std::sin(2.0f * kPi * f2Hz * t);
+
+            out[n] = gain * (glottal + formant1 + formant2);
+        }
+
+        return FrameSynthesis{
+            std::move(out),
+            rawPitchHz,
+            currentPitchHz_,
+            correctionCents,
+            f1Hz,
+            f2Hz,
+            lockIndex
+        };
+    }
+
+private:
+    VoiceParams params_;
+    float currentPitchHz_{264.0f};
+    float phaseAccum_{0.0f};
+};
+
+struct Vec3 {
+    float x{0.0f};
+    float y{0.0f};
+    float z{0.0f};
+
+    [[nodiscard]] Vec3 operator+(const Vec3& o) const noexcept { return {x + o.x, y + o.y, z + o.z}; }
+    [[nodiscard]] Vec3 operator-(const Vec3& o) const noexcept { return {x - o.x, y - o.y, z - o.z}; }
+    [[nodiscard]] Vec3 operator*(float s) const noexcept { return {x * s, y * s, z * s}; }
+
+    [[nodiscard]] float dot(const Vec3& o) const noexcept { return x * o.x + y * o.y + z * o.z; }
+    [[nodiscard]] float length() const noexcept { return std::sqrt(x * x + y * y + z * z); }
+
+    [[nodiscard]] Vec3 normalized() const noexcept {
+        const float len = length();
+        if (len < 1e-8f) return {0.0f, 0.0f, 1.0f};
+        return {x / len, y / len, z / len};
+    }
+
+    [[nodiscard]] Vec3 reflect(const Vec3& normal) const noexcept {
+        const Vec3 n = normal.normalized();
+        return (*this) - n * (2.0f * this->dot(n));
+    }
+};
+
+struct ColorRGB {
+    std::uint8_t r{0};
+    std::uint8_t g{0};
+    std::uint8_t b{0};
+
+    [[nodiscard]] std::string hex() const {
+        std::ostringstream oss;
+        oss << "#" << std::hex << std::uppercase << std::setfill('0')
+            << std::setw(2) << static_cast<int>(r)
+            << std::setw(2) << static_cast<int>(g)
+            << std::setw(2) << static_cast<int>(b);
+        return oss.str();
+    }
+
+    [[nodiscard]] std::string ansiFg() const {
+        std::ostringstream oss;
+        oss << "\x1b[38;2;"
+            << static_cast<int>(r) << ";"
+            << static_cast<int>(g) << ";"
+            << static_cast<int>(b) << "m";
+        return oss.str();
+    }
+};
+
+struct MilestoneState {
+    bool sayIt{false};
+    bool sprayIt{false};
+    bool ownIt{false};
+
+    [[nodiscard]] std::string badges() const {
+        std::string out;
+        if (sayIt) out += "[SAY IT.]";
+        if (sprayIt) out += "[SPRAY IT.]";
+        if (ownIt) out += "[OWN IT.]";
+        return out.empty() ? "[FLUID-VOICE-SYNERGY]" : out;
+    }
+};
+
+struct VisualizerBand {
+    std::size_t index{0};
+    float freqHz{20.0f};
+    float bandRmsDb{-60.0f};
+    float targetGainDb{0.0f};
+    float finalGainDb{0.0f};
+    float railKeyOffset{0.0f};
+    bool guardrailEngaged{false};
+    Vec3 worldPos{};
+    float radius{0.30f};
+    ColorRGB colovr{};
+};
+
+struct TokenLedger {
+    double qira{0.0};
+    double qash{0.0};
+    double bb{0.0};
+    double pp{0.0};
+    double zeroZero{0.0};
+    double qq{0.0};
+    double eq{0.0};
+    double vv{0.0};
+    double uv{0.0};
+    double arr{0.0};
+    double aa{0.0};
+};
+
+struct TraceRenderOutput {
+    int width{64};
+    int height{14};
+    std::size_t totalRaySteps{0};
+    std::size_t maxStepsUsed{0};
+    std::size_t primaryHits{0};
+    std::size_t reflectionHits{0};
+    std::size_t shadowOcclusions{0};
+    bool allRaysBounded{true};
+    std::string ansiFrame;
+};
+
+struct SymphonyStepResult {
+    std::string presetName{"Elysivm Shore"};
+    std::string termTag{"T3RM"};
+    std::string patternMotif{"DOOD"};
+    std::string patternSymbol{"D"};
+    float patternGateWeight{1.0f};
+    std::size_t cube48Cells{kCube48Cells};
+    float anchorHz48{kAnchorHz48};
+    float cube48Energy{0.0f};
+    float voiceRawPitchHz{220.0f};
+    float voiceTunedPitchHz{528.0f};
+    float voiceCorrectionCents{0.0f};
+    float voiceAutotuneLock{0.0f};
+    std::size_t frameIndex{0};
+    float elapsedSec{0.0f};
+    float solfeggioNoteHz{528.0f};
+    float fullKeyG9Hz{kFullKeyG9Hz};
+    float g9LockIndex{0.0f};
+    float dominantFreqHz{0.0f};
+    float dominantRmsDb{-60.0f};
+    float preampTrimDb{0.0f};
+    float maxCompositeGainDb{0.0f};
+    float lemniscateRegime{0.0f};
+    float centerKeyPos{0.0f};
+    float eastShoreHealIndex{0.0f};
+    float genisysRenewalPhase{0.0f};
+    float electromrFlux{0.0f};
+    std::size_t guardrailTouches{0};
+    bool snapshotCommitted{false};
+    std::string resolvedRoute;
+    std::size_t hopsTaken{0};
+    bool routeTerminated{true};
+    std::array<float, 3> leviathanVec{{0.0f, 0.0f, 0.0f}};
+    TokenLedger ledger{};
+    std::vector<VisualizerBand> bands;
+};
+
+struct Config {
+    std::string presetName{"Elysivm Shore"};
+    std::string termTag{"T3RM"};
+    float sampleRate{48000.0f};
+    std::size_t fftSize{512};
+    std::size_t numBands{12};
+    float crossoverHz{450.0f};
+    float maxBoostDb{7.5f};
+    float maxCutDb{-15.0f};
+    float primaryPeriodSec{8.0f};
+    float leviathanDamping{0.25f};
+    std::size_t snapshotEveryN{2};
+    int termWidth{64};
+    int termHeight{14};
+    std::size_t maxRaySteps{30};
+    std::size_t maxBounceSteps{10};
+
+    float solfeggioMixWeight{1.10f};
+    float fullKeyG9Weight{0.14f};
+    float arpeggioGateDepth{0.35f};
+    float groovePulseDepth{0.25f};
+
+    float eastShoreBaseHeal{0.55f};
+    float eastShoreSealGain{0.45f};
+    float eastShorePhaseGain{0.15f};
+
+    float genisysCycleSpeed{0.50f};
+    float electromrCoupling{0.60f};
+
+    FluidVoiceAutotuneEngine::VoiceParams voiceParams{};
+};
+
+class RailGuardrail13_5 {
+public:
+    struct GuardResult {
+        float value{0.0f};
+        bool engaged{false};
+    };
+
+    static GuardResult apply(float rawValue, float railBound = kGuardrailRatio13_5) noexcept {
+        const float bound = std::max(0.1f, railBound);
+        if (std::abs(rawValue) <= bound) {
+            return GuardResult{rawValue, false};
+        }
+        const float sign = (rawValue >= 0.0f) ? 1.0f : -1.0f;
+        const float excess = std::abs(rawValue) - bound;
+        const float cushioned = sign * (bound - 0.15f * std::tanh(excess));
+        return GuardResult{cushioned, true};
+    }
+
+    static float computeCenterKeyPosition(float elapsedSec) noexcept {
+        const float phase = (2.0f * kPi * elapsedSec * kCenterKeyRatio) / 8.0f;
+        const float twinCoupling = 0.5f * (kOuterRailRatio - kInnerRailRatio);
+        return apply(std::sin(phase) * (1.0f + twinCoupling)).value;
+    }
+};
+
+class ElysivmCapriccioGenerator {
+public:
+    static std::vector<float> buildFrame(
+        std::size_t frameIdx,
+        const Config& cfg,
+        float& outArpeggioHz
+    ) {
+        const std::size_t stepIdx = frameIdx % kSolfeggioHz.size();
+        const std::size_t thirdIdx = (stepIdx + 2) % kSolfeggioHz.size();
+        const std::size_t fifthIdx = (stepIdx + 4) % kSolfeggioHz.size();
+
+        const float rootHz = kSolfeggioHz[stepIdx];
+        const float thirdHz = kSolfeggioHz[thirdIdx];
+        const float fifthHz = kSolfeggioHz[fifthIdx];
+        outArpeggioHz = rootHz;
+
+        std::vector<float> frame(cfg.fftSize, 0.0f);
+        const float baseSample = static_cast<float>(frameIdx * cfg.fftSize);
+        const float grooveDepth = std::clamp(cfg.groovePulseDepth, 0.0f, 0.7f);
+        const float arpDepth = std::clamp(cfg.arpeggioGateDepth, 0.0f, 0.9f);
+        const float mixW = std::clamp(cfg.solfeggioMixWeight, 0.0f, 2.0f);
+        const float g9W = std::clamp(cfg.fullKeyG9Weight, 0.0f, 0.6f);
+
+        for (std::size_t n = 0; n < cfg.fftSize; ++n) {
+            const float t = (baseSample + static_cast<float>(n)) / cfg.sampleRate;
+            const auto& pat = DoodOddoPatternEngine::stepAt(frameIdx * 4 + (n % 4));
+            const float patFactor = std::clamp(pat.gateWeight, 0.25f, 1.35f);
+
+            const float grooveEnv = (1.0f - grooveDepth) +
+                                    grooveDepth * std::sin(2.0f * kPi * 2.5f * t);
+            const float arpGate = (n % 32 < 16) ? 1.0f : (1.0f - arpDepth);
+
+            const float s1 = 0.24f * std::sin(2.0f * kPi * rootHz * t) * patFactor;
+            const float s2 = 0.13f * std::sin(2.0f * kPi * thirdHz * t) * arpGate;
+            const float s3 = 0.09f * std::sin(2.0f * kPi * fifthHz * t);
+            const float g9Harmonic = g9W * std::sin(2.0f * kPi * kFullKeyG9Hz * t);
+            const float anchor48 = 0.16f * std::sin(2.0f * kPi * kAnchorHz48 * t);
+            const float subAnchor = 0.18f * std::sin(2.0f * kPi * 108.0f * t);
+
+            frame[n] = grooveEnv * (mixW * (s1 + s2 + s3 + g9Harmonic) + anchor48 + subAnchor);
+        }
+        return frame;
+    }
+};
+
+class SpectralAnalyzer {
+public:
+    static std::vector<float> computeBandRmsDb(
+        const std::vector<float>& frame,
+        float sampleRate,
+        const std::vector<float>& bandCentersHz
+    ) {
+        const std::size_t n = frame.size();
+        std::vector<float> rmsDb(bandCentersHz.size(), -90.0f);
+        if (n == 0 || bandCentersHz.empty()) return rmsDb;
+
+        std::vector<float> win(n, 1.0f);
+        float winSum = 0.0f;
+        for (std::size_t i = 0; i < n; ++i) {
+            win[i] = 0.5f * (1.0f - std::cos((2.0f * kPi * static_cast<float>(i)) /
+                                             static_cast<float>(std::max<std::size_t>(1, n - 1))));
+            winSum += win[i];
+        }
+        const float norm = std::max(winSum * 0.5f, 1e-9f);
+
+        const std::size_t numBins = n / 2 + 1;
+        std::vector<float> binPower(numBins, 0.0f);
+
+        for (std::size_t k = 0; k < numBins; ++k) {
+            double re = 0.0;
+            double im = 0.0;
+            const double angleBase = (-2.0 * static_cast<double>(kPi) * static_cast<double>(k)) /
+                                     static_cast<double>(n);
+            for (std::size_t t = 0; t < n; ++t) {
+                const double s = static_cast<double>(frame[t] * win[t]);
+                const double theta = angleBase * static_cast<double>(t);
+                re += s * std::cos(theta);
+                im += s * std::sin(theta);
+            }
+            const double mag = std::sqrt(re * re + im * im) / static_cast<double>(norm);
+            binPower[k] = static_cast<float>(mag * mag);
+        }
+
+        const float binHz = sampleRate / static_cast<float>(n);
+
+        for (std::size_t b = 0; b < bandCentersHz.size(); ++b) {
+            const float fc = bandCentersHz[b];
+            const float lowHz = fc / std::pow(2.0f, 1.0f / 6.0f);
+            const float highHz = fc * std::pow(2.0f, 1.0f / 6.0f);
+
+            double sumPow = 0.0;
+            std::size_t count = 0;
+            for (std::size_t k = 1; k < numBins; ++k) {
+                const float f = static_cast<float>(k) * binHz;
+                if (f >= lowHz && f <= highHz) {
+                    sumPow += static_cast<double>(binPower[k]);
+                    ++count;
+                }
+            }
+
+            if (count == 0) {
+                const std::size_t nearest = std::min<std::size_t>(
+                    numBins - 1,
+                    static_cast<std::size_t>(std::max(0.0f, std::round(fc / binHz)))
+                );
+                sumPow = static_cast<double>(binPower[nearest]);
+                count = 1;
+            }
+
+            const double meanPow = sumPow / static_cast<double>(count);
+            const double rms = std::sqrt(std::max(meanPow, 1e-24));
+            rmsDb[b] = static_cast<float>(20.0 * std::log10(std::max(rms, 1e-12)));
+        }
+
+        return rmsDb;
+    }
+};
+
+class ColovrMapper {
+public:
+    [[nodiscard]] static ColorRGB mapBandColovr(
+        float freqHz,
+        float gainDb,
+        float rmsDb,
+        float regime,
+        bool guardrailEngaged
+    ) noexcept {
+        const float gainNorm = std::clamp((gainDb + 15.0f) / 22.5f, 0.0f, 1.0f);
+        const float energyNorm = std::clamp((rmsDb + 60.0f) / 60.0f, 0.0f, 1.0f);
+        const float regimeShift = 0.5f * (regime + 1.0f);
+
+        float rf = 0.0f, gf = 0.0f, bf = 0.0f;
+
+        if (freqHz < 450.0f) {
+            rf = 55.0f + 95.0f * regimeShift;
+            gf = 110.0f + 135.0f * gainNorm;
+            bf = 175.0f + 80.0f * energyNorm;
+        } else if (freqHz < 4000.0f) {
+            rf = 75.0f + 175.0f * gainNorm;
+            gf = 160.0f + 90.0f * energyNorm;
+            bf = 90.0f + 100.0f * (1.0f - regimeShift);
+        } else {
+            rf = 160.0f + 95.0f * energyNorm;
+            gf = 85.0f + 115.0f * gainNorm;
+            bf = 135.0f + 115.0f * regimeShift;
+        }
+
+        if (guardrailEngaged) {
+            rf = std::min(255.0f, rf + 24.0f);
+            gf = std::min(255.0f, gf + 20.0f);
+        }
+
+        return ColorRGB{
+            static_cast<std::uint8_t>(std::clamp(rf, 0.0f, 255.0f)),
+            static_cast<std::uint8_t>(std::clamp(gf, 0.0f, 255.0f)),
+            static_cast<std::uint8_t>(std::clamp(bf, 0.0f, 255.0f))
+        };
+    }
+};
+
+class Ansi3dShadowReflectionTracer {
+public:
+    struct SpatialCell {
+        std::vector<std::size_t> bandIndices;
+    };
+
+    static TraceRenderOutput renderFrame(
+        const std::vector<VisualizerBand>& bands,
+        float regime,
+        float centerKeyPos,
+        const std::array<float, 3>& leviathanVec,
+        int width,
+        int height,
+        std::size_t maxRaySteps,
+        std::size_t maxBounceSteps
+    ) {
+        constexpr int kGridX = 6;
+        constexpr int kGridY = 4;
+        constexpr int kGridZ = 4;
+
+        const Vec3 minBound{-2.2f, -1.5f, -2.0f};
+        const Vec3 maxBound{2.2f, 1.5f, 2.0f};
+
+        std::array<std::array<std::array<SpatialCell, kGridZ>, kGridY>, kGridX> grid{};
+
+        auto toCell = [&](const Vec3& p, int& cx, int& cy, int& cz) noexcept {
+            const float tx = std::clamp((p.x - minBound.x) / (maxBound.x - minBound.x), 0.0f, 0.9999f);
+            const float ty = std::clamp((p.y - minBound.y) / (maxBound.y - minBound.y), 0.0f, 0.9999f);
+            const float tz = std::clamp((p.z - minBound.z) / (maxBound.z - minBound.z), 0.0f, 0.9999f);
+            cx = static_cast<int>(tx * kGridX);
+            cy = static_cast<int>(ty * kGridY);
+            cz = static_cast<int>(tz * kGridZ);
+        };
+
+        for (std::size_t i = 0; i < bands.size(); ++i) {
+            int cx = 0, cy = 0, cz = 0;
+            toCell(bands[i].worldPos, cx, cy, cz);
+            grid[cx][cy][cz].bandIndices.push_back(i);
+        }
+
+        auto evalSceneSdf = [&](const Vec3& p, int& outBandIdx, Vec3& outNormal) noexcept -> float {
+            int cx = 0, cy = 0, cz = 0;
+            toCell(p, cx, cy, cz);
+
+            float minBandSdf = 1e9f;
+            int closestBand = -1;
+            Vec3 closestCenter{};
+
+            for (int dx = -1; dx <= 1; ++dx) {
+                const int nx = cx + dx;
+                if (nx < 0 || nx >= kGridX) continue;
+                for (int dy = -1; dy <= 1; ++dy) {
+                    const int ny = cy + dy;
+                    if (ny < 0 || ny >= kGridY) continue;
+                    for (int dz = -1; dz <= 1; ++dz) {
+                        const int nz = cz + dz;
+                        if (nz < 0 || nz >= kGridZ) continue;
+                        for (std::size_t bIdx : grid[nx][ny][nz].bandIndices) {
+                            const auto& b = bands[bIdx];
+                            const float d = (p - b.worldPos).length() - b.radius;
+                            if (d < minBandSdf) {
+                                minBandSdf = d;
+                                closestBand = static_cast<int>(bIdx);
+                                closestCenter = b.worldPos;
+                            }
+                        }
+                    }
+                }
+            }
+
+            const float keyMod = 0.25f * std::tanh(centerKeyPos);
+            const float waveY = 0.15f * std::sin(2.8f * p.x + regime * 2.0f + leviathanVec[2]) + keyMod;
+            const float ribbonSdf = std::abs(p.y - waveY) - 0.04f;
+
+            if (minBandSdf <= ribbonSdf && closestBand >= 0) {
+                outBandIdx = closestBand;
+                outNormal = (p - closestCenter).normalized();
+                return minBandSdf;
+            }
+
+            outBandIdx = -1;
+            outNormal = Vec3{0.0f, (p.y >= waveY) ? 1.0f : -1.0f, 0.0f};
+            return ribbonSdf;
+        };
+
+        const std::string ramp = " .:-=+*#%@";
+        const Vec3 camPos{0.0f, 0.20f + 0.30f * regime, 3.5f};
+        const Vec3 lightDir = Vec3{0.45f, 0.80f, 0.40f}.normalized();
+
+        std::ostringstream frame;
+        std::size_t totalSteps = 0;
+        std::size_t maxStepsUsed = 0;
+        std::size_t primaryHits = 0;
+        std::size_t reflHits = 0;
+        std::size_t shadowHits = 0;
+        bool boundedOk = true;
+
+        for (int row = 0; row < height; ++row) {
+            const float v = 1.0f - (2.0f * static_cast<float>(row)) /
+                                   static_cast<float>(std::max(1, height - 1));
+            for (int col = 0; col < width; ++col) {
+                const float u = (2.0f * static_cast<float>(col)) /
+                                    static_cast<float>(std::max(1, width - 1)) - 1.0f;
+                const float aspect = static_cast<float>(width) /
+                                     static_cast<float>(std::max(1, height * 2));
+
+                const Vec3 rayDir = Vec3{u * aspect * 1.45f, v * 1.15f, -1.6f}.normalized();
+
+                float t = 0.35f;
+                float bestNearMiss = 1e9f;
+                int hitBand = -1;
+                Vec3 hitPos{};
+                Vec3 hitNormal{0.0f, 0.0f, 1.0f};
+                std::size_t stepsThisRay = 0;
+
+                for (std::size_t s = 0; s < maxRaySteps; ++s) {
+                    ++stepsThisRay;
+                    const Vec3 p = camPos + rayDir * t;
+                    if (!std::isfinite(p.x) || !std::isfinite(p.y) || !std::isfinite(p.z)) {
+                        boundedOk = false;
+                        break;
+                    }
+
+                    int candidateBand = -1;
+                    Vec3 n{};
+                    const float sdf = evalSceneSdf(p, candidateBand, n);
+                    bestNearMiss = std::min(bestNearMiss, sdf);
+
+                    if (sdf < 0.045f) {
+                        hitBand = candidateBand;
+                        hitPos = p;
+                        hitNormal = n;
+                        break;
+                    }
+
+                    t += std::clamp(sdf * 0.75f, 0.06f, 0.45f);
+                    if (t > 7.5f) break;
+                }
+
+                totalSteps += stepsThisRay;
+                maxStepsUsed = std::max(maxStepsUsed, stepsThisRay);
+
+                float shade = 0.0f;
+                // DESK REPAIR 2026-11-22: this ColorRGB was named 'col' in the raw, redeclaring
+                // the enclosing loop's 'int col' (line 736) in the same scope — a hard error.
+                // Renamed to 'pixCol' here and at its three uses below (two assignments and the
+                // ansiFg() call). No values changed.
+                ColorRGB pixCol{95, 115, 145};
+
+                if (hitBand >= 0) {
+                    ++primaryHits;
+                    const auto& b = bands[static_cast<std::size_t>(hitBand)];
+
+                    bool occluded = false;
+                    float shadowT = 0.12f;
+                    for (std::size_t bs = 0; bs < maxBounceSteps; ++bs) {
+                        ++totalSteps;
+                        const Vec3 sp = hitPos + hitNormal * 0.05f + lightDir * shadowT;
+                        if (!std::isfinite(sp.x) || !std::isfinite(sp.y) || !std::isfinite(sp.z)) {
+                            boundedOk = false;
+                            break;
+                        }
+                        int dummyBand = -1;
+                        Vec3 dummyN{};
+                        const float sDist = evalSceneSdf(sp, dummyBand, dummyN);
+                        if (sDist < 0.035f) {
+                            occluded = true;
+                            ++shadowHits;
+                            break;
+                        }
+                        shadowT += std::clamp(sDist * 0.8f, 0.08f, 0.40f);
+                        if (shadowT > 3.5f) break;
+                    }
+
+                    const Vec3 reflDir = rayDir.reflect(hitNormal).normalized();
+                    float reflT = 0.12f;
+                    int reflBand = -1;
+                    for (std::size_t bs = 0; bs < maxBounceSteps; ++bs) {
+                        ++totalSteps;
+                        const Vec3 rp = hitPos + hitNormal * 0.05f + reflDir * reflT;
+                        if (!std::isfinite(rp.x) || !std::isfinite(rp.y) || !std::isfinite(rp.z)) {
+                            boundedOk = false;
+                            break;
+                        }
+                        int cand = -1;
+                        Vec3 dummyN{};
+                        const float rDist = evalSceneSdf(rp, cand, dummyN);
+                        if (rDist < 0.05f && cand >= 0) {
+                            reflBand = cand;
+                            ++reflHits;
+                            break;
+                        }
+                        reflT += std::clamp(rDist * 0.8f, 0.08f, 0.45f);
+                        if (reflT > 3.5f) break;
+                    }
+
+                    const float ndotl = std::max(0.15f, hitNormal.dot(lightDir));
+                    const float shadowFactor = occluded ? 0.45f : 1.0f;
+                    const float reflBoost = (reflBand >= 0) ? 0.25f : 0.0f;
+                    shade = std::clamp(ndotl * shadowFactor + reflBoost, 0.1f, 1.0f);
+
+                    ColorRGB baseC = b.colovr;
+                    if (reflBand >= 0) {
+                        const auto& rb = bands[static_cast<std::size_t>(reflBand)];
+                        baseC.r = static_cast<std::uint8_t>(std::min(255, (static_cast<int>(baseC.r) * 3 + static_cast<int>(rb.colovr.r)) / 4));
+                        baseC.g = static_cast<std::uint8_t>(std::min(255, (static_cast<int>(baseC.g) * 3 + static_cast<int>(rb.colovr.g)) / 4));
+                        baseC.b = static_cast<std::uint8_t>(std::min(255, (static_cast<int>(baseC.b) * 3 + static_cast<int>(rb.colovr.b)) / 4));
+                    }
+
+                    const float lightScale = 0.45f + 0.55f * shade;
+                    pixCol = ColorRGB{
+                        static_cast<std::uint8_t>(std::min(255.0f, baseC.r * lightScale)),
+                        static_cast<std::uint8_t>(std::min(255.0f, baseC.g * lightScale)),
+                        static_cast<std::uint8_t>(std::min(255.0f, baseC.b * lightScale))
+                    };
+                } else if (bestNearMiss < 0.20f) {
+                    shade = std::clamp((1.0f - bestNearMiss / 0.20f) * 0.40f, 0.05f, 0.40f);
+                    pixCol = ColorRGB{110, 145, 195};
+                }
+
+                const std::size_t glyphIdx = std::min<std::size_t>(
+                    ramp.size() - 1,
+                    static_cast<std::size_t>(shade * static_cast<float>(ramp.size() - 1))
+                );
+                const char glyph = ramp[glyphIdx];
+
+                if (glyph == ' ') {
+                    frame << ' ';
+                } else {
+                    frame << pixCol.ansiFg() << glyph << "\x1b[0m";
+                }
+            }
+            frame << '\n';
+        }
+
+        return TraceRenderOutput{
+            width,
+            height,
+            totalSteps,
+            maxStepsUsed,
+            primaryHits,
+            reflHits,
+            shadowHits,
+            boundedOk,
+            frame.str()
+        };
+    }
+};
+
+class FullTriuneSymphonyCpp {
+public:
+    explicit FullTriuneSymphonyCpp(const Config& cfg)
+        : cfg_(cfg), voiceEngine_(cfg.voiceParams) {
+        freqs_.resize(cfg_.numBands);
+        for (std::size_t i = 0; i < cfg_.numBands; ++i) {
+            const float t = (cfg_.numBands > 1)
+                ? static_cast<float>(i) / static_cast<float>(cfg_.numBands - 1)
+                : 0.0f;
+            freqs_[i] = 20.0f * std::pow(1000.0f, t);
+        }
+        routes_ = {
+            {"fft_lane", "triune_arbiter"},
+            {"triune_arbiter", "annulus_lane"},
+            {"annulus_lane", "leviathan_vault"},
+            {"leviathan_vault", "leviathan_vault"}
+        };
+    }
+
+    struct RouteOutcome {
+        std::string terminalNode;
+        std::size_t hopsTaken{0};
+        bool terminated{true};
+    };
+
+    [[nodiscard]] RouteOutcome resolveBoundedRoute(
+        const std::string& startNode,
+        std::size_t maxHops = 8
+    ) const {
+        std::string cur = startNode;
+        std::unordered_set<std::string> visited;
+        std::size_t hops = 0;
+
+        for (std::size_t step = 0; step < maxHops; ++step) {
+            // DESK REPAIR 2026-11-22: the raw used std::unordered_set::contains, a C++20 API;
+            // this suite builds under C++17 (as the manifold file does). Replaced with the
+            // equivalent C++17 find() test. Semantics unchanged.
+            if (visited.find(cur) != visited.end()) {
+                return RouteOutcome{cur, hops, true};
+            }
+            auto it = routes_.find(cur);
+            if (it == routes_.end()) {
+                return RouteOutcome{cur, hops, true};
+            }
+            visited.insert(cur);
+            const std::string& nxt = it->second;
+            ++hops;
+            if (nxt == cur) {
+                return RouteOutcome{cur, hops, true};
+            }
+            cur = nxt;
+        }
+        return RouteOutcome{cur, hops, true};
+    }
+
+    [[nodiscard]] SymphonyStepResult stepWithFluidVoice(
+        const std::vector<float>& baseAudioFrame,
+        const std::vector<float>& driverColorationDb,
+        const std::vector<float>& micErrorDb,
+        float containmentRatio = 0.85f,
+        float solfeggioNoteHz = 528.0f,
+        std::size_t maxHops = 8
+    ) {
+        const std::size_t nextIdx = frameIndex_ + 1;
+        const float frameSec = static_cast<float>(cfg_.fftSize) / cfg_.sampleRate;
+        const float elapsedSec = static_cast<float>(nextIdx) * frameSec;
+        const float phi = (2.0f * kPi * elapsedSec) / cfg_.primaryPeriodSec;
+
+        const PatternStep& pat = DoodOddoPatternEngine::stepAt(nextIdx - 1);
+        const auto cube48 = Cube48Engine::evaluate(nextIdx - 1, elapsedSec, pat.gateWeight);
+        const float g9Lock = std::clamp(
+            0.5f + 0.5f * std::cos(2.0f * kPi * (kFullKeyG9Hz / 1000.0f) * elapsedSec + phi),
+            0.0f,
+            1.0f
+        );
+
+        const auto voiceSyn = voiceEngine_.synthesizeFrame(
+            nextIdx - 1, cfg_.fftSize, solfeggioNoteHz, pat.gateWeight, cube48.energy, g9Lock
+        );
+
+        std::vector<float> mixedFrame(cfg_.fftSize, 0.0f);
+        for (std::size_t n = 0; n < cfg_.fftSize; ++n) {
+            const float baseS = (n < baseAudioFrame.size()) ? baseAudioFrame[n] : 0.0f;
+            mixedFrame[n] = std::clamp(baseS + voiceSyn.voiceSamples[n], -1.0f, 1.0f);
+        }
+
+        const std::vector<float> bandRmsDb = SpectralAnalyzer::computeBandRmsDb(
+            mixedFrame, cfg_.sampleRate, freqs_
+        );
+
+        return stepFromBandRmsInternal(
+            bandRmsDb, driverColorationDb, micErrorDb, containmentRatio, solfeggioNoteHz,
+            pat, cube48, voiceSyn, g9Lock, maxHops
+        );
+    }
+
+private:
+    SymphonyStepResult stepFromBandRmsInternal(
+        const std::vector<float>& bandRmsDb,
+        const std::vector<float>& driverColorationDb,
+        const std::vector<float>& micErrorDb,
+        float containmentRatio,
+        float solfeggioNoteHz,
+        const PatternStep& pat,
+        const Cube48Engine::CubeMetrics& cube48,
+        const FluidVoiceAutotuneEngine::FrameSynthesis& voiceSyn,
+        float g9Lock,
+        std::size_t maxHops
+    ) {
+        assert(bandRmsDb.size() == cfg_.numBands);
+        assert(driverColorationDb.size() == cfg_.numBands);
+        assert(micErrorDb.size() == cfg_.numBands);
+
+        ++frameIndex_;
+        const float frameSec = static_cast<float>(cfg_.fftSize) / cfg_.sampleRate;
+        const float elapsedSec = static_cast<float>(frameIndex_) * frameSec;
+
+        const float phi = (2.0f * kPi * elapsedSec) / cfg_.primaryPeriodSec;
+        const float sinP = std::sin(phi);
+        const float cosP = std::cos(phi);
+        const float yLemn = (sinP * cosP) / (1.0f + sinP * sinP);
+        const float regime = std::tanh(3.0f * yLemn);
+        const float centerKeyPos = RailGuardrail13_5::computeCenterKeyPosition(elapsedSec);
+
+        const float genisysRenewal = std::sin(kPi * 0.5f * cfg_.genisysCycleSpeed * static_cast<float>(frameIndex_));
+        const float clampedSeal = std::clamp(containmentRatio, 0.0f, 1.0f);
+        const float leakSeverity = 1.0f - clampedSeal;
+
+        const float shoreHeal = std::clamp(
+            cfg_.eastShoreBaseHeal +
+            cfg_.eastShoreSealGain * clampedSeal +
+            cfg_.eastShorePhaseGain * std::cos(phi * 0.5f),
+            0.0f,
+            1.0f
+        );
+
+        const float electromrFlux = std::clamp(
+            cfg_.electromrCoupling * (0.5f + 0.5f * std::cos(phi + 0.4f * genisysRenewal)) * shoreHeal,
+            0.0f,
+            1.0f
+        );
+
+        std::vector<float> composite(cfg_.numBands, 0.0f);
+        float maxPositive = 0.0f;
+        std::size_t domIdx = 0;
+        float domRms = -120.0f;
+
+        for (std::size_t i = 0; i < cfg_.numBands; ++i) {
+            if (bandRmsDb[i] > domRms) {
+                domRms = bandRmsDb[i];
+                domIdx = i;
+            }
+
+            const float f = freqs_[i];
+            const float p1 = std::clamp(-driverColorationDb[i], cfg_.maxCutDb, cfg_.maxBoostDb);
+
+            const float lowWeight = 1.0f / (1.0f + std::pow(f / cfg_.crossoverHz, 2.0f));
+            const float sealLift = leakSeverity * 4.0f * lowWeight * shoreHeal;
+            const float p2 = std::clamp(-micErrorDb[i] + sealLift, cfg_.maxCutDb, cfg_.maxBoostDb);
+
+            const float overshoot = std::max(0.0f, bandRmsDb[i] - (-12.0f));
+            const float p3 = std::clamp(-overshoot * (1.0f - 1.0f / 2.5f), cfg_.maxCutDb, cfg_.maxBoostDb);
+
+            const float w2 = 1.0f / (1.0f + std::pow(f / cfg_.crossoverHz, 4.0f));
+            const float w3 = 1.0f - w2;
+
+            const float g = std::clamp(p1 + (w2 * p2) + (w3 * p3), cfg_.maxCutDb, cfg_.maxBoostDb);
+            composite[i] = g;
+            if (g > maxPositive) {
+                maxPositive = g;
+            }
+        }
+
+        const float preampTrimDb = -maxPositive;
+        float maxAfterTrim = -1e9f;
+        std::size_t guardrailTouches = 0;
+
+        std::vector<VisualizerBand> vizBands;
+        vizBands.reserve(cfg_.numBands);
+
+        for (std::size_t i = 0; i < cfg_.numBands; ++i) {
+            const float finalGain = composite[i] + preampTrimDb;
+            maxAfterTrim = std::max(maxAfterTrim, finalGain);
+
+            const float u = (cfg_.numBands > 1)
+                ? (static_cast<float>(i) / static_cast<float>(cfg_.numBands - 1)) * 2.0f - 1.0f
+                : 0.0f;
+
+            const float rawExcursion = (u * kGuardrailRatio13_5) +
+                                       (0.65f * centerKeyPos) +
+                                       (0.35f * electromrFlux) +
+                                       (0.25f * (pat.gateWeight - 1.0f));
+            const auto guard = RailGuardrail13_5::apply(rawExcursion, kGuardrailRatio13_5);
+            if (guard.engaged) {
+                ++guardrailTouches;
+            }
+
+            const float energyNorm = std::clamp((bandRmsDb[i] + 60.0f) / 60.0f, 0.12f, 1.0f);
+            const float xWorld = std::clamp(guard.value * (1.85f / kGuardrailRatio13_5), -1.95f, 1.95f);
+            const float yWorld = std::clamp((finalGain + 8.0f) / 14.0f, -1.0f, 1.0f) + 0.25f * energyNorm;
+            const float zWorld = 1.05f * std::sin(phi + static_cast<float>(i) * 0.45f);
+            const float radius = 0.19f + 0.20f * energyNorm;
+
+            const ColorRGB col = ColovrMapper::mapBandColovr(
+                freqs_[i], finalGain, bandRmsDb[i], regime, guard.engaged
+            );
+
+            vizBands.push_back(VisualizerBand{
+                i,
+                freqs_[i],
+                bandRmsDb[i],
+                composite[i],
+                finalGain,
+                guard.value,
+                guard.engaged,
+                Vec3{xWorld, yWorld, zWorld},
+                radius,
+                col
+            });
+        }
+
+        const float lowMean = [&]() {
+            float sum = 0.0f;
+            const std::size_t count = std::max<std::size_t>(1, cfg_.numBands / 3);
+            for (std::size_t i = 0; i < count; ++i) sum += bandRmsDb[i];
+            return (sum / static_cast<float>(count)) / 60.0f + 1.0f;
+        }();
+        const float highMean = [&]() {
+            float sum = 0.0f;
+            const std::size_t start = (2 * cfg_.numBands) / 3;
+            const std::size_t count = std::max<std::size_t>(1, cfg_.numBands - start);
+            for (std::size_t i = start; i < cfg_.numBands; ++i) sum += bandRmsDb[i];
+            return (sum / static_cast<float>(count)) / 60.0f + 1.0f;
+        }();
+
+        const float alpha = std::clamp(1.0f - cfg_.leviathanDamping, 0.05f, 1.0f);
+        const std::array<float, 3> targetVec{{
+            RailGuardrail13_5::apply(lowMean, kGuardrailRatio13_5).value,
+            RailGuardrail13_5::apply(highMean, kGuardrailRatio13_5).value,
+            regime
+        }};
+        for (std::size_t k = 0; k < 3; ++k) {
+            leviathanVec_[k] += alpha * (targetVec[k] - leviathanVec_[k]);
+        }
+
+        const double balanceFactor = std::max(0.0, 1.0 - (std::abs(preampTrimDb) / 15.0));
+        const double solfeggioNorm = std::clamp(static_cast<double>(solfeggioNoteHz) / 852.0, 0.2, 1.0);
+        const double railResonance = std::max(0.0, 1.0 - (static_cast<double>(guardrailTouches) /
+                                                           static_cast<double>(std::max<std::size_t>(1, cfg_.numBands))));
+
+        ledger_.qira += 0.10 * balanceFactor;
+        ledger_.qash += 0.05 * static_cast<double>(shoreHeal);
+        ledger_.pp += 0.08 * static_cast<double>(1.0f - std::abs(centerKeyPos) / (kGuardrailRatio13_5 + 0.5f));
+        if (maxAfterTrim <= 1e-4f) {
+            ledger_.zeroZero += 1.0;
+        }
+        ledger_.qq += 0.06 * static_cast<double>(std::abs(std::cos(phi)) * (1.0f - 0.1f * static_cast<float>(guardrailTouches)));
+        ledger_.eq += 0.09 * balanceFactor;
+        ledger_.vv += 0.07 * static_cast<double>(electromrFlux);
+        ledger_.uv += 0.06 * (solfeggioNorm * 0.7 + static_cast<double>(g9Lock) * 0.3);
+        ledger_.arr += 0.08 * solfeggioNorm * railResonance * static_cast<double>(pat.gateWeight);
+        ledger_.aa += 0.08 * static_cast<double>(g9Lock) * (0.5 + 0.5 * static_cast<double>(voiceSyn.lockIndex));
+
+        const RouteOutcome route = resolveBoundedRoute("fft_lane", maxHops);
+        bool snapCommitted = false;
+        if (cfg_.snapshotEveryN > 0 && (frameIndex_ % cfg_.snapshotEveryN == 0)) {
+            ledger_.bb += 1.0;
+            snapCommitted = true;
+        }
+
+        return SymphonyStepResult{
+            cfg_.presetName,
+            cfg_.termTag,
+            pat.motif,
+            pat.symbol,
+            pat.gateWeight,
+            cube48.totalCells,
+            cube48.anchorHz,
+            cube48.energy,
+            voiceSyn.rawPitchHz,
+            voiceSyn.autotunedPitchHz,
+            voiceSyn.correctionCents,
+            voiceSyn.lockIndex,
+            frameIndex_,
+            elapsedSec,
+            solfeggioNoteHz,
+            kFullKeyG9Hz,
+            g9Lock,
+            freqs_[domIdx],
+            domRms,
+            preampTrimDb,
+            maxAfterTrim,
+            regime,
+            centerKeyPos,
+            shoreHeal,
+            genisysRenewal,
+            electromrFlux,
+            guardrailTouches,
+            snapCommitted,
+            route.terminalNode,
+            route.hopsTaken,
+            route.terminated,
+            leviathanVec_,
+            ledger_,
+            std::move(vizBands)
+        };
+    }
+
+    Config cfg_;
+    FluidVoiceAutotuneEngine voiceEngine_;
+    std::vector<float> freqs_;
+    std::unordered_map<std::string, std::string> routes_;
+    std::size_t frameIndex_{0};
+    std::array<float, 3> leviathanVec_{{0.0f, 0.0f, 0.0f}};
+    TokenLedger ledger_{};
+};
+
+class Vestigator {
+public:
+    struct AuditReport {
+        bool headroomConserved{true};
+        bool hopsBounded{true};
+        bool raysBounded{true};
+        bool guardrailRespected{true};
+        MilestoneState milestones{};
+        std::string summary;
+    };
+
+    static AuditReport inspect(
+        const SymphonyStepResult& res,
+        const TraceRenderOutput& trace,
+        std::size_t maxAllowedHops,
+        std::size_t maxAllowedRaySteps
+    ) {
+        const bool headroomOk = (res.maxCompositeGainDb <= 1e-4f);
+        // DESK REPAIR 2026-11-22: the raw read 'res.terminated', but SymphonyStepResult names
+        // that member 'routeTerminated' (see the struct above). Pointed at the real member.
+        const bool hopsOk = res.routeTerminated && (res.hopsTaken <= maxAllowedHops);
+        const bool raysOk = trace.allRaysBounded && (trace.maxStepsUsed <= maxAllowedRaySteps);
+
+        bool railOk = std::abs(res.centerKeyPos) <= (kGuardrailRatio13_5 + 1e-4f);
+        for (const auto& b : res.bands) {
+            if (std::abs(b.railKeyOffset) > (kGuardrailRatio13_5 + 1e-4f)) {
+                railOk = false;
+            }
+        }
+
+        MilestoneState m{};
+        m.sayIt = headroomOk && (res.dominantRmsDb > -45.0f);
+        m.sprayIt = raysOk && (trace.primaryHits > 0) && ((trace.reflectionHits + trace.shadowOcclusions) > 0);
+        m.ownIt = headroomOk && hopsOk && raysOk && railOk && res.snapshotCommitted;
+
+        std::ostringstream oss;
+        oss << "[" << res.termTag << "] Frame#" << res.frameIndex
+            << " | Pat=" << res.patternMotif << ":" << res.patternSymbol
+            << " | Tune=" << std::fixed << std::setprecision(1) << res.voiceTunedPitchHz << "Hz ("
+            << std::showpos << res.voiceCorrectionCents << std::noshowpos << "c)"
+            << " | Headroom=" << (headroomOk ? "PASS" : "FAIL")
+            << " | 13/5Rail=" << (railOk ? "PASS" : "FAIL")
+            << " | " << m.badges();
+
+        return AuditReport{headroomOk, hopsOk, raysOk, railOk, m, oss.str()};
+    }
+};
+
+struct HistoryEntry {
+    SymphonyStepResult result;
+    TraceRenderOutput trace;
+    Vestigator::AuditReport audit;
+};
+
+// TRUNCATION BOUNDARY: recovered post text ends mid-statement in the original at this point; everything below the boundary in the raw is absent, not deleted.
+// DESK NOTE 2026-11-22: the recovered text carries one further construct past this line —
+// class Tabvla (build-copy lines 1247+) — but it is cut in half mid-statement inside
+// Tabvla::exportHistoryCsv (the raw ends at "<< r.led"), so it cannot compile and is not
+// carried into the build copy. It stands untouched in the reference of record
+// (reference/eqvillibbrrivmm/). Nothing before this boundary references Tabvla.
+// The namespace-closing brace below is a desk structural completion: the original's own
+// namespace close lay below the cut and is absent from the raw.
+
+} // namespace axoneme::symphony
