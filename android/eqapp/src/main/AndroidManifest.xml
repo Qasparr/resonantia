@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- RESONANTIA — eqapp AndroidManifest.xml — the EQVILLIBBRRIVMM APK's
+     own manifest, deliberately separate from the Chaquopy shell's
+     manifest under android/app (a different product; untouched).
+     Package id kept from the house's declared applicationId:
+     com.qasparr.resonantia. No permissions are requested at all —
+     the suite computes and reports; it needs nothing from the
+     device. extractNativeLibs stays true: the hand-built APK stores
+     the .so uncompressed and the platform extracts it at install,
+     the classic sideload path.
+
+     93 · 22 November 2026
+     Authorship attributed exclusively to Johnathan 'Qasparr' Monroe,
+     ARR — All Rights Reserved, Without Prejudice.
+     "Live, Love, and let Love, Live." -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.qasparr.resonantia"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-sdk
+        android:minSdkVersion="26"
+        android:targetSdkVersion="34" />
+
+    <application
+        android:label="Resonantia EQVILLIBBRRIVMM"
+        android:extractNativeLibs="true"
+        android:allowBackup="false"
+        android:theme="@android:style/Theme.Material.NoActionBar">
+
+        <activity
+            android:name=".EqMainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
