@@ -57,3 +57,34 @@ Auto-generated at the third lock, full scale, every time:
 
 An album deliverable that reaches the sheets stage with any lock open is
 not a house master. The order is the process.
+
+## Enforcement
+
+Cut in 2026-11-22, under the founder's ruling of the same day —
+"whatever is waiting on me, just do it if its ready."
+
+- **Declaration.** A spec puts its album under the rule with
+  `"mastering_rule": "krs-blueprint"` and declares the earned
+  locks as `"locks": {"instrumental": true, "lyrics": true}`.
+  `pipeline.validate_spec` normalizes the declaration for both
+  roads: an unknown rule or lock name, or a non-boolean lock, is
+  refused by name; a lock not declared normalizes to open. The
+  locks are earned by the work, so validation never refuses an
+  incomplete pair — the seal, not the contract, is what bites.
+  A spec that declares nothing carries neither key and behaves
+  exactly as it did before the cut-in.
+- **The seal.** The pipeline's only sheets stage is the
+  performance road's stage (f3) in `resonance/studio/
+  performance.py` — the section road strikes no sheets, so there
+  is no second place for the seal to bite, and on that road the
+  declaration is validated and carried but seals nothing. At
+  (f3), before either sheet writer is reached,
+  `pipeline.enforce_mastering_rule` weighs the locks in the
+  rule's own order and refuses with a RuntimeError naming the
+  first open lock: no composition.abc is written, and the run
+  stops before mastering. Both locks closed, the sheet is
+  struck as it always was.
+- **Weighed in** tests/test_studio_pipeline_cutins.py: both
+  locks closed renders the sheet; either lock open refuses and
+  names it; no locks at all refuses at the instrumental lock;
+  an undeclared spec is untouched.

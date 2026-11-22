@@ -47,6 +47,36 @@ Until that ruling, the module stands exposed and tested, callable
 from any studio code that imports it — the pyramidasphere/cubes
 precedent of a module seated and proven before a scene cites it.
 
+## Cut in (2026-11-22)
+
+*Under the founder's ruling of 2026-11-22 — "whatever is waiting
+on me, just do it if its ready" — the seam above was cut in. The
+"deliberately untouched" state recorded above stands as the
+pre-ruling record; what follows is the landed wiring.*
+
+- `validate_spec` carries the optional `eq_pole_hz` key (a number
+  in 20..20000), validated beside the other mastering keys.
+  Absent, the key is struck from the normalized spec entirely —
+  an EQ-less spec means exactly what it meant before the cut.
+- In `produce()`'s section road, each stem passes through
+  `eqvillibbrrivmm.apply_eq` at the pole, per channel, as its
+  samples are read (step (b), after the resample read, before
+  the stitch) — hence before the spine, the Sigma ground, and
+  `master_signal()`, as the seam prescribed.
+- The run manifest gains an `eq` block only when the key was
+  ordered: the pole, the bus's measured transfer magnitude
+  (first stem, first channel at top line; every stem's
+  per-channel measurement in `stems`), and the application
+  point. An absent key strikes no eq block and changes no
+  sample — weighed in tests/test_studio_pipeline_cutins.py by
+  rendering one fixed two-tone spec both ways: identical master
+  bytes without the key; with the key, the high band's share of
+  the program falls, as the bus's probed direction said it must.
+- The performance road refuses `eq_pole_hz` by name in
+  `validate_spec` rather than carrying it silently: its takes
+  are one invariant performance under Proofs No. 4/5, and the
+  bus does not ride that road in this cut-in.
+
 ## Divergences on the record
 
 Printed in the module itself, never smoothed: Python computes in

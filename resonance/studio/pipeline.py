@@ -42,6 +42,7 @@ import numpy as np
 from resonance import grid
 from resonance.binaural.generator import binaural_beat
 from resonance.studio import arpeggio as arpeggio_mod
+from resonance.studio import eqvillibbrrivmm as eq_mod
 from resonance.studio import four_powers as four_powers_mod
 from resonance.studio import proofs as proofs_mod
 from resonance.studio import spine as spine_mod
@@ -73,6 +74,14 @@ DEFAULTS = {
     "sigma": {"left_hz": 200.0, "right_hz": 213.0, "gain_db": -28.0},
     "master": {"target_lufs": -14.0, "ceiling_dbtp": -1.0},
 }
+
+# The Mastering Rule's name and locks, in the rule's own order
+# (the KRS Blueprint, docs/KRS-BLUEPRINT-MASTERING-PROCESS.md):
+# instrumental first, lyrics second, sheets last. The order of
+# MASTERING_LOCKS is load-bearing -- the seal names the FIRST
+# open lock, and Resonantia never starts with a verse.
+MASTERING_RULE_KRS = "krs-blueprint"
+MASTERING_LOCKS = ("instrumental", "lyrics")
 
 # The Stereo Law's bed constants (part 2; part 1 is the spine's
 # pans, part 3 is Sigma left untouched). Below STEREO_LOW_CUT_HZ the
@@ -230,6 +239,37 @@ def _normalize_performance_sigma(raw):
             "period_s": period, "gain_db": gain}
 
 
+def _normalize_locks(raw):
+    """Validate a spec's "locks" block; return the normal form.
+
+    MECHANISM: the KRS Blueprint's two locks, in the order the
+    rule names them. Each lock present must be a boolean; a lock
+    absent from the block normalizes to False -- an undeclared
+    lock is an OPEN lock, because the seal is fail-closed or it
+    is a decoration. A name the rule does not know is refused by
+    name, as everywhere in this studio. An absent block (None)
+    is both locks open.
+    """
+    if raw is None:
+        return {name: False for name in MASTERING_LOCKS}
+    if not isinstance(raw, dict):
+        raise ValueError(
+            "locks: must be an object naming the rule's locks")
+    for name in raw:
+        if name not in MASTERING_LOCKS:
+            raise ValueError(
+                f"locks.{name}: not a lock the Mastering Rule "
+                f"knows -- the locks are {list(MASTERING_LOCKS)}")
+    out = {}
+    for name in MASTERING_LOCKS:
+        val = raw.get(name, False)
+        if not isinstance(val, bool):
+            raise ValueError(
+                f"locks.{name}: {val!r} must be a boolean")
+        out[name] = val
+    return out
+
+
 def validate_spec(spec):
     """Validate a produce() spec and return a normalized copy.
 
@@ -352,6 +392,60 @@ def validate_spec(spec):
             f"master.dither: {dither!r} must be a boolean")
     master["dither"] = dither
     out["master"] = master
+    # The EQVILLIBBRRIVMM equalizer, cut in 2026-11-22 under the
+    # founder's ruling ("whatever is waiting on me, just do it if
+    # its ready"): the documented seam in docs/EQVILLIBBRRIVMM-
+    # STUDIO.md. An optional pole for the Laplace convolution
+    # bus; absent, the key is struck from the normal form
+    # entirely, so an EQ-less spec means exactly what it meant
+    # before the cut. The bus is wired into the SECTION road's
+    # stems; the performance road keeps its own purity (Proofs
+    # No. 4/5) and refuses the key by name rather than carrying
+    # it silently into a road where it would never be applied.
+    eq_pole = spec.get("eq_pole_hz")
+    if eq_pole is not None:
+        if isinstance(eq_pole, bool) \
+                or not isinstance(eq_pole, (int, float)) \
+                or not math.isfinite(float(eq_pole)) \
+                or not 20.0 <= float(eq_pole) <= 20000.0:
+            raise ValueError(
+                f"eq_pole_hz: {eq_pole!r} must be a number in "
+                f"20..20000 (the bus floors its pole at 20 Hz; "
+                f"the master's Nyquist is 24000)")
+        if perf is not None:
+            raise ValueError(
+                "eq_pole_hz: the performance road does not carry "
+                "the bus in this cut-in -- the equalizer is wired "
+                "into the section road's stems (docs/"
+                "EQVILLIBBRRIVMM-STUDIO.md), and a performance "
+                "keeps its one invariant road, or the proofs "
+                "mean nothing")
+        out["eq_pole_hz"] = float(eq_pole)
+    else:
+        out.pop("eq_pole_hz", None)
+    # The Mastering Rule (the KRS Blueprint, docs/KRS-BLUEPRINT-
+    # MASTERING-PROCESS.md), declared from 2026-11-22: a spec may
+    # put its album under the locked order -- instrumental, then
+    # lyrics, then sheets. Validation weighs the DECLARATION
+    # only: the locks are earned by the work, so an incomplete
+    # pair is not refused here; the seal bites at the sheets
+    # stage (enforce_mastering_rule, called from the performance
+    # road's stage (f3) -- the pipeline's only sheets stage).
+    # Absent, both keys are struck from the normal form: a spec
+    # that never heard of the rule means exactly what it meant.
+    rule = spec.get("mastering_rule")
+    if rule is not None:
+        if rule != MASTERING_RULE_KRS:
+            raise ValueError(
+                f"mastering_rule: {rule!r} -- the only rule "
+                f"seated is {MASTERING_RULE_KRS!r} (the KRS "
+                f"Blueprint, docs/KRS-BLUEPRINT-MASTERING-"
+                f"PROCESS.md)")
+        out["mastering_rule"] = rule
+        out["locks"] = _normalize_locks(spec.get("locks"))
+    else:
+        out.pop("mastering_rule", None)
+        out.pop("locks", None)
     # The Four Powers' separable stages (founder's order, 2026-11-
     # 15): Velle (EQ + compression) and Vapour (saturation) are
     # ordered here and normalized by their own module, whose
@@ -451,6 +545,84 @@ def validate_spec(spec):
         raise ValueError("out_dir: required")
     out["out_dir"] = str(spec["out_dir"])
     return out
+
+
+# ---------------------------------------------------------------------
+# The Mastering Rule's seal: the gate the sheets stage answers to.
+# ---------------------------------------------------------------------
+
+def mastering_rule_open_lock(spec):
+    """The first open lock under the Mastering Rule, or None.
+
+    MECHANISM: the reading is defensive -- normalized spec or
+    raw, the seal fails closed however it is reached. No rule
+    declared, no seal: None. Rule declared: the locks are
+    weighed in the rule's own order (instrumental before lyrics,
+    because Resonantia never starts with a verse) and the first
+    lock that is not exactly True is the open one, named.
+    """
+    if spec.get("mastering_rule") != MASTERING_RULE_KRS:
+        return None
+    locks = spec.get("locks") or {}
+    for name in MASTERING_LOCKS:
+        if locks.get(name) is not True:
+            return name
+    return None
+
+
+def enforce_mastering_rule(spec):
+    """Refuse, naming the open lock, when the seal is unmet.
+
+    MECHANISM: the enforcement half of the Mastering Rule,
+    called at the pipeline's sheets stage -- the performance
+    road's stage (f3) in performance.py, the only sheets stage
+    produce() has. A spec under the rule whose locks are not
+    both closed gets no sheets, and the error names the first
+    open lock in the rule's order, so the operator learns which
+    stage of the work is still ahead of the sheets, not merely
+    that something is. A spec that never declared the rule is
+    passed in silence, exactly as before the cut-in.
+    """
+    open_lock = mastering_rule_open_lock(spec)
+    if open_lock is not None:
+        raise RuntimeError(
+            f"mastering_rule ({MASTERING_RULE_KRS}): the sheets "
+            f"stay sealed -- the {open_lock} lock is open "
+            f"(locks.{open_lock} is not true). The locked order "
+            f"is instrumental, then lyrics, then sheets: sheets "
+            f"are generated only after both locks are ahead "
+            f"(docs/KRS-BLUEPRINT-MASTERING-PROCESS.md)")
+
+
+# ---------------------------------------------------------------------
+# The EQVILLIBBRRIVMM bus on the stems (the cut-in of 2026-11-22).
+# ---------------------------------------------------------------------
+
+def _eq_stem(arr, pole_hz):
+    """Pass one stem (2, N) through the bus, per channel.
+
+    MECHANISM: the documented seam (docs/EQVILLIBBRRIVMM-
+    STUDIO.md): apply_eq at the spec's pole, channel by channel,
+    on the stem as read -- before the stitch, the spine, the
+    Sigma ground, and long before master_signal. The samples
+    come from apply_eq itself; the transfer magnitude is the
+    bus's own measured |H(s)|, taken from evaluate_laplace_
+    domain under apply_eq's documented defaults (damping 0.25,
+    omega at the pole's own angular frequency) -- the same
+    evaluation apply_eq performs, run a second time so the
+    manifest carries the measured figure, not a formula's
+    promise. Returns (eq_samples, [magnitude per channel]).
+    """
+    x = np.asarray(arr, dtype=np.float64)
+    out = np.empty_like(x)
+    mags = []
+    for ch in range(x.shape[0]):
+        out[ch] = eq_mod.apply_eq(x[ch], pole_hz)
+        res = eq_mod.evaluate_laplace_domain(
+            x[ch], 0.25, 2.0 * math.pi * float(pole_hz),
+            float(pole_hz))
+        mags.append(float(res.transfer_magnitude))
+    return out, mags
 
 
 def _full_prompt(spec, section):
@@ -958,6 +1130,24 @@ def _dry_run_manifest(spec):
         "chained": bool(spec.get("chained")),
         "continue_seconds": spec.get("continue_seconds"),
     }
+    if spec.get("eq_pole_hz") is not None:
+        planned["eq"] = {
+            "pole_hz": spec["eq_pole_hz"],
+            "engine": "resonance.studio.eqvillibbrrivmm "
+                      "(the LaplaceConvolutionBus, mirrored)",
+            "applied_to": "each section stem, per channel, "
+                          "after its samples are read, before "
+                          "the stitch",
+            "transfer_magnitude": "measured at the run, not "
+                                  "planned -- it stands in the "
+                                  "struck manifest's eq block",
+        }
+    if spec.get("mastering_rule") is not None:
+        planned["mastering_rule"] = {
+            "rule": spec["mastering_rule"],
+            "locks": spec["locks"],
+            "sheets_sealed_until_both_locks": True,
+        }
     if spec.get("spine"):
         sp = spec["spine"]
         planned["spine"] = {
@@ -1081,6 +1271,13 @@ def produce(spec, dry_run=False, log=None):
     seg_reports = []
     seg_rms = []
     arrays = []
+    # The EQVILLIBBRRIVMM bus, when the spec ordered it (the
+    # cut-in of 2026-11-22): each stem passes through the bus as
+    # its samples are read below, before the stitch -- the seam
+    # docs/EQVILLIBBRRIVMM-STUDIO.md named. eq_pole None is the
+    # road exactly as it always was, sample for sample.
+    eq_pole = spec.get("eq_pole_hz")
+    eq_stems = []
     for i, s in enumerate(sections):
         src = out_dir / f"seg{i:02d}.wav"
         dst = out_dir / f"seg{i:02d}_48k.wav"
@@ -1090,6 +1287,15 @@ def produce(spec, dry_run=False, log=None):
         assert sr == TARGET_SR
         if arr.ndim == 1:  # MusicGen-small is mono: dual it, honestly.
             arr = np.stack([arr, arr])
+        if eq_pole is not None:
+            arr, stem_mags = _eq_stem(arr, eq_pole)
+            eq_stems.append({
+                "index": i, "name": s["name"],
+                "transfer_magnitude_per_channel":
+                    [round(m, 6) for m in stem_mags]})
+            log(f"stem {i} ({s['name']}) through the bus at "
+                f"{eq_pole} Hz (|H| "
+                f"{stem_mags[0]:.4f} measured)...")
         arrays.append(np.asarray(arr, dtype=np.float64))
         seg_rms.append(float(np.sqrt(np.mean(arrays[-1] ** 2))))
     median_rms = float(np.median(seg_rms))
@@ -1447,8 +1653,33 @@ def produce(spec, dry_run=False, log=None):
             "own composition -- the solfeggio ladder in Fibonacci "
             "phrases, humanized and orbited; its inventory stands "
             "in the arpeggio block, its notation in composition.abc.",
-        ] if arpeggio_report else []),
+        ] if arpeggio_report else []) + ([
+            f"eqvillibbrrivmm: every stem passed through the "
+            f"Laplace convolution bus at a {eq_pole} Hz pole as "
+            f"its samples were read, before the stitch; the "
+            f"pole and the bus's measured transfer magnitude "
+            f"stand in the eq block.",
+        ] if eq_pole is not None else []),
     }
+    if eq_pole is not None:
+        # The bus's record, measured at the stems as they were
+        # read (see _eq_stem): the pole the spec ordered and the
+        # transfer magnitude the bus answered with. The top-line
+        # figure is the first stem's first channel; every stem's
+        # per-channel measurement stands below it -- the same
+        # evaluation at the same pole, weighed stem by stem.
+        manifest["eq"] = {
+            "engine": "resonance.studio.eqvillibbrrivmm "
+                      "(the LaplaceConvolutionBus, mirrored)",
+            "pole_hz": eq_pole,
+            "transfer_magnitude": eq_stems[0][
+                "transfer_magnitude_per_channel"][0],
+            "applied_to": "each section stem, per channel, "
+                          "after its samples were read, before "
+                          "the stitch (docs/EQVILLIBBRRIVMM-"
+                          "STUDIO.md)",
+            "stems": eq_stems,
+        }
     # -- (g) Proof of Work / Proof of Mastering emission --------------
     # The founder's order of 2026-11-16: every render is a unit of
     # Proof of Work, and a master carries its Proof of Mastering.

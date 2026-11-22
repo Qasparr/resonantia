@@ -1434,6 +1434,14 @@ def produce_performance(spec, dry_run=False, log=None):
         bed = bed + sigma_stem
 
     # -- (f3) the sheet ---------------------------------------------
+    # The Mastering Rule's seal (the KRS Blueprint, cut in
+    # 2026-11-22): this stage is the pipeline's only sheets
+    # stage, so it is where the locked order bites. A spec under
+    # the rule with a lock still open gets no sheet -- the
+    # refusal names the lock (pipeline.enforce_mastering_rule).
+    # A spec that never declared the rule passes in silence,
+    # exactly as it always has.
+    pipe.enforce_mastering_rule(spec)
     if spec.get("arpeggio"):
         write_composition_abc(
             out_dir / "composition.abc", spec, schedule,

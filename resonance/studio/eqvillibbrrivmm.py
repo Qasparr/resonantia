@@ -70,10 +70,16 @@ WHAT THE MIRROR DOES AND DOES NOT CLAIM:
   * EnclaveSphere77 stands here as constants only (77^3, the Sigma
     band); its evaluate() is not mirrored in this stage.
 
-WIRING: pipeline.py is NOT modified. Its produce() drives a spec
-schema with no EQ key, and master_signal() masters finished
-samples; the clean seam is to run apply_eq() on a stem's samples
-before they reach master_signal(). See docs/EQVILLIBBRRIVMM-STUDIO.md.
+WIRING: cut in 2026-11-22, under the founder's ruling ("whatever
+is waiting on me, just do it if its ready"). pipeline.produce()'s
+section road runs apply_eq() on each stem, per channel, as the
+stem's samples are read and before the stitch, when the spec
+carries eq_pole_hz; the run manifest records the pole and the
+bus's measured transfer magnitude in its eq block. Absent the
+key, no stem is touched and no eq block is struck. The
+performance road refuses the key by name in validate_spec — its
+purity is the proofs', and the bus does not ride it in this
+cut-in. See docs/EQVILLIBBRRIVMM-STUDIO.md.
 """
 
 import cmath
