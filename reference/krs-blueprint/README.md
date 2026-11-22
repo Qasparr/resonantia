@@ -24,8 +24,9 @@ profile. The house process document derived from it is
   SIGMA MEGA where the caption's own session text supports it, and marks
   every such reading.
 - The plate's first rendering reads "First 18 Bars"; its repeats read
-  "First Bars." The variant is marked in the derived document, not resolved
-  by the desk. The caption's own bar count for the battle verse is 16.
+  "First Bars." **Ruled by the founder 2026-11-22: the seat holds 16** —
+  "16 is all that is needed" — and the 18 is read as the 16 plus 2 for the
+  hook, his reasoning. The variant itself stands marked in the record.
 - The caption is a narration of building the process artifact, not the
   artifact itself; what the house document states is what the caption and
   the plate together attest, no more.

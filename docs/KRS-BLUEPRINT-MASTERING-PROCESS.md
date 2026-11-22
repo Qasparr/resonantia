@@ -41,9 +41,11 @@ proves every bar.**
 - Notation is layered with **syllable breakdowns**, and the sheets carry
   **KRS blueprint proofs**.
 - The **Triplet Lab** works the triplet bar against the 13/8 foundation.
-- [Plate variant, marked not resolved: the plate's first rendering reads
-  "First 18 Bars"; its repeats read "First Bars." The caption's battle-verse
-  count is 16. The founder's pen rules which number the seat holds.]
+- **The count is ruled: 16.** (Founder's ruling, 2026-11-22: "16 is all
+  that is needed.") The plate's first rendering reads "First 18 Bars" and
+  its repeats read "First Bars"; under his ruling the 18 is read as the
+  16 of the verse **plus 2 for the hook** — his reasoning, recorded as he
+  gave it. The variant stands marked in the record; the seat holds 16.
 
 ## The Sheets
 
