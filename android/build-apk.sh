@@ -31,6 +31,16 @@
 #      (the app builds its views in code; there are no resources).
 #   5. zip seats classes.dex at the root and the .so at
 #      lib/arm64-v8a/, stored uncompressed.
+#
+# v2 — 23 November 2026: step 1 also compiles toolkit_jni.cpp —
+# the JNI bridge for the toolkit's two C++ seats (nabla.hpp,
+# upscale.hpp) — into the same library, so the .so carries three
+# JNI entries: the suite's runSuite and the seats' runNablaChecks
+# and runUpscaleDemo. Nothing else in the chain changes: same
+# tools, same keystore, same battery. (This file's first v2
+# draft seated a bundled text record at this step instead; the
+# founder's redirect — real compute, in C++ — replaced it before
+# any v2 strike, and the step went back to its v1 shape.)
 #   6. zipalign aligns (-p: native libraries page-aligned).
 #   7. apksigner signs with android/debug.keystore — the house
 #      debug strike. DOCTRINE: no release keystore is invented
@@ -71,10 +81,14 @@ echo "== 1/8 NDK cross-compile: libeqvillibbrrivmm.so (arm64-v8a) =="
 # #include "eqvillibbrrivmm/eqvillibbrrivmm_manifold.cpp" — the
 # founder's file is consumed as it stands, never copied, never edited.
 # No -DNDEBUG: the suite's asserts stay armed on the device.
+# v2: toolkit_jni.cpp rides in the same invocation — the toolkit
+# seats' bridge, including nabla.hpp and upscale.hpp from its own
+# directory (the "" include seats beside the including file).
 "$CXX" -std=c++17 -O2 -fPIC -shared -static-libstdc++ \
     -I"$JDK/include" -I"$JDK/include/linux" -I"$REPO_ROOT" \
     -o "$BUILD/lib/arm64-v8a/libeqvillibbrrivmm.so" \
-    "$EQAPP/src/main/jni/eq_jni.cpp"
+    "$EQAPP/src/main/jni/eq_jni.cpp" \
+    "$EQAPP/src/main/jni/toolkit_jni.cpp"
 
 echo "== 2/8 javac: EqMainActivity.java =="
 # MECHANISM: -encoding UTF-8 is load-bearing — this host's locale is
