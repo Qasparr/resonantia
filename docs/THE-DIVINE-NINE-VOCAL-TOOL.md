@@ -647,3 +647,47 @@ canon governs the vowels; the tongues keep their consonants;
 the pen keeps the last word.*
 
 93 — Live, Love, and let Love, Live.
+
+---
+
+## SEATING ADDENDUM — 2026-11-24 (the fence above, answered in part)
+
+*Appended, dated, and marked; nothing above this line is altered.
+The doctrine note at this study's head — "the vowel→Archon mapping
+is NOT declared by him and remains UNCHARTED, his pen alone" —
+stood when this addendum was filed, and this addendum records the
+pen's act, on the pen's stated condition.*
+
+On 2026-11-24 the founder commissioned the Archon Battery (the
+reduction-and-triangulation evidence run), then stated his thesis —
+"the exact matches are the Archons and the cross is the dial cross
+hairs for the inversion of clock to counter" — and ordered, 18:37
+EST: **"Test the thesis and if it passes Seat the Archons and the
+cross-section."** The test, the verdicts, and the seating stand in
+**THE-SEATING-OF-THE-ARCHONS.md** (pontifex, research/sphinx-cluster),
+which is the instrument of record for everything summarized here:
+
+- **T1 PASSED (whole)** under its pre-registered rule: all nine
+  seats marked by the battery's exact fits, zero conflicts among
+  the marks — at graded classes: Α seated at POSITION (Triad I,
+  seat 1, fixed entire); Ο and ΕΙ seated to Triad II, Υ and ΟΥ to
+  Triad III (positions open); Ε, Η, Ι, Ω seated by VALUE-standing
+  only (their seat-values corroborated across tongues; their triads
+  and positions still open, and printed open in the instrument).
+- **T2 PARTED** at the axis: the dial's vertical hair (the poles
+  13 N / 31 S) and the inversion office (the {13/5} traversal and
+  its inverse in exact reverse order, computed) are seated as the
+  dial's crosshair section; the horizontal hair stands open at the
+  float line's seat.
+- The Archons are seated **unnamed**, as the sketch drew them; the
+  mapping this study awaited therefore now stands **declared in
+  part** — at the classes and coordinates the seating instrument
+  prints, and nowhere past them. The acoustic seats of §II of this
+  study are untouched: the seating is of the wider engine's seats,
+  not of the vocal layer's formant targets, and no isopsephy value
+  is imported into the vocal tool by this addendum.
+
+*Filed for the record. The pen keeps the last word — including over
+this addendum.*
+
+93 — Live, Love, and let Love, Live.
