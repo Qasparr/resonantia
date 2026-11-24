@@ -1,0 +1,45 @@
+{
+  "source": "studio-runs/mugetsu-hook-engine-run2/mugetsu-hook.wav",
+  "draft": "studio-runs/lyric-timing-drafts/mugetsu-hook-run2.lyric-timing-draft.abc",
+  "language": "ja",
+  "language_probability": 0.8241,
+  "engine": "whisper.cpp",
+  "model": "ggml-base",
+  "segments": [
+    {
+      "start_s": 0.0,
+      "end_s": 3.32,
+      "text": "ぴたりとめぴたりはすたちの好きな絵からすんぷりワクシ"
+    },
+    {
+      "start_s": 3.32,
+      "end_s": 4.96,
+      "text": "絵にわたむすぎるよなぁ"
+    },
+    {
+      "start_s": 4.96,
+      "end_s": 6.6,
+      "text": "さきの奇跡も目を開く"
+    },
+    {
+      "start_s": 6.6,
+      "end_s": 8.24,
+      "text": "見事会に行くのとましい"
+    },
+    {
+      "start_s": 8.24,
+      "end_s": 9.68,
+      "text": "ささとりの絵からすんぷりワクシ"
+    },
+    {
+      "start_s": 9.68,
+      "end_s": 11.48,
+      "text": "ぴたりとめぴたりの絵からすんぷりワクシ"
+    },
+    {
+      "start_s": 11.48,
+      "end_s": 13.38,
+      "text": "絵にわたむすぎるよなぁぁぁぁぁぁぁぁぁぁ"
+    }
+  ]
+}

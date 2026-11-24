@@ -1,0 +1,22 @@
+X:1
+T:The Pirate Essay — opening (audiobook run 1) — LYRIC TIMING DRAFT
+% DRAFT — machine transcription by the Resonantia detection seat
+% (whisper.cpp, ggml-base, fully offline). NOT a finished sheet:
+% the words are ASR output, unverified against any lyric of record;
+% pitches are a neutral placeholder; note lengths are segment
+% durations rounded to the second at Q:1/4=60 (one quarter = 1 s);
+% exact offsets stand in the %%text line over each bar and in the
+% JSON sidecar. Language read: en (p = 0.9848).
+M:4/4
+L:1/4
+Q:1/4=60
+K:C
+%%text [00:00.00 --> 00:10.00]
+B10 |
+w: The Pirate Essay, the 77 Trinities, a scientific luminous treatment of the 77 Trinities, and the synergy of piracy proofs,
+%%text [00:10.00 --> 00:19.00]
+B9 |
+w: authorship attributed exclusively to Jonathan Caspar Monroe, Greek ARR, all rights reserved, without prejudice.
+%%text [00:19.00 --> 00:30.00]
+B11 |
+w: 16th day of November, D'Slune, Sol in Scorpio, ANO for 12 EN 2026E, V Classification, Enterprise.

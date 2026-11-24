@@ -1,0 +1,25 @@
+{
+  "source": "/tmp/tmpcz71b0iy/en-opening-30s.wav",
+  "draft": "studio-runs/lyric-timing-drafts/pirate-essay-opening.lyric-timing-draft.abc",
+  "language": "en",
+  "language_probability": 0.9848,
+  "engine": "whisper.cpp",
+  "model": "ggml-base",
+  "segments": [
+    {
+      "start_s": 0.0,
+      "end_s": 10.0,
+      "text": "The Pirate Essay, the 77 Trinities, a scientific luminous treatment of the 77 Trinities, and the synergy of piracy proofs,"
+    },
+    {
+      "start_s": 10.0,
+      "end_s": 19.0,
+      "text": "authorship attributed exclusively to Jonathan Caspar Monroe, Greek ARR, all rights reserved, without prejudice."
+    },
+    {
+      "start_s": 19.0,
+      "end_s": 30.0,
+      "text": "16th day of November, D'Slune, Sol in Scorpio, ANO for 12 EN 2026E, V Classification, Enterprise."
+    }
+  ]
+}
