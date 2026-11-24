@@ -1,0 +1,229 @@
+X:1
+T:KAGAMI KETTOU -- 鏡決闘 — the mirrored duel that ends in a draw
+C:Mugetsu-Gumi, for Johnathan 'Qasparr' Monroe
+M:13/8
+L:1/8
+Q:1/4=144
+K:Fmin
+% KRS-One Method: 93 bars, 144 BPM, 13/8 Sigma Mega grid.
+% Capriccio derivation (house construction, printed): the
+% digits of 1776 read as solfeggio degrees [1,7,7,6]; head
+% = cell x4 + crown degree 9 (17 attacks); body = the cell
+% retrograded [6,7,7,1] x19 (76 attacks); 17+76 = 93.
+% Capriccio II is Capriccio I in exact retrograde.
+% Mirror map: B_j answers A_(17-j); B's notes are A's
+% reversed (pitch and duration); B's ending vowels are
+% A's reversed. The full map is filed in LYRICS.md.
+% Kit legend: F, = kick (VV seat, 44 Hz), c = snare,
+% ^g = closed hat, ^a = open hat.
+% Detroit Bounce: odd eighth steps are played 0.12 of an
+% eighth late (swing), disclosed here; the written grid
+% above is straight, as written.
+V:VLN name="Violin"
+"_capriccio_i bar 1" F _g _g _e F _g _g _e F _g _g _e F | _g _g _e b4 _e _g _g F _e _g | _g F2 _e _g _g F _e _g _g F2 _e | _g _g F _e _g _g F2 _e _g _g F _e |
+_g _g F2 _e _g _g F _e _g _g F2 | _e' _g' _g' F _e' _g' _g' F2 _e' _g' _g' F | _e' _g' _g' F2 _e' _g' _g' F _e' _g' _g' F- | F _e' _g' _g' F _e' _g' _g' F _e' _g' _g' F |
+"_verse_a bar 9" z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+"_verse_b bar 25" z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+"_shion bar 41" z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+"_capriccio_ii bar 49" F _g' _g' _e' F _g' _g' _e' F _g' _g' _e' F- | F _g' _g' _e' F _g' _g' _e' F2 _g' _g' _e' | F _g' _g' _e' F2 _g' _g' _e' F _g' _g' _e' | F2 _g _g _e F _g _g _e F2 _g _g |
+_e F _g _g _e F2 _g _g _e F _g _g | _e F2 _g _g _e F _g _g _e F2 _g | _g _e F _g _g _e b4 _e _g _g | F _e _g _g F _e _g _g F _e _g _g F |
+"_duel bar 57" f3 _a3 c3 _a4 | z13 | f3 _a3 c3 _a4 | z13 |
+f3 _a3 c3 _a4 | z13 | f3 _a3 c3 _a4 | z13 |
+c13 | c13 | _e13 | _e13 |
+c13 | c13 | _e13 | _e13 |
+"_reprise bar 73" f13- | f13- | f13- | f13 |
+_a13- | _a13- | _a13- | _a13 |
+c13- | c13- | c13- | c13 |
+_a13- | _a13- | _a13- | _a13 |
+"_close bar 89" c13 | z13 | z13 | z13 |
+f13 |
+|]
+V:RH name="Grand Piano RH"
+"_capriccio_i bar 1" F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 |
+F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 |
+"_verse_a bar 9" F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 |
+F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 |
+F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 |
+F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 |
+"_verse_b bar 25" F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 |
+F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 |
+F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 |
+F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 |
+"_shion bar 41" F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 |
+F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 |
+"_capriccio_ii bar 49" F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 |
+F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 |
+"_duel bar 57" z13 | _A3 c3 _A3 F4 | z13 | _A3 c3 _A3 F4 |
+z13 | _A3 c3 _A3 F4 | z13 | _A3 c3 _A3 F4 |
+z13 | _A3 c3 _A3 F4 | z13 | _A3 c3 _A3 F4 |
+z13 | _A3 c3 _A3 F4 | z13 | _A3 c3 _A3 F4 |
+"_reprise bar 73" F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 |
+F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 |
+F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 |
+F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 |
+"_close bar 89" F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 | F3 _A3 c3 _A4 |
+F3 _A3 c3 _A4 |
+|]
+V:LH name="Grand Piano LH"
+"_capriccio_i bar 1" F,6 C7 | F,6 C7 | F,6 C7 | F,6 C7 |
+F,6 C7 | F,6 C7 | F,6 C7 | F,6 C7 |
+"_verse_a bar 9" F,6 C7 | _D,6 _A,7 | _A,6 _E7 | _E,6 _B,7 |
+F,6 C7 | _D,6 _A,7 | _A,6 _E7 | _E,6 _B,7 |
+F,6 C7 | _D,6 _A,7 | _A,6 _E7 | _E,6 _B,7 |
+F,6 C7 | _D,6 _A,7 | _A,6 _E7 | _E,6 _B,7 |
+"_verse_b bar 25" _E,6 _B,7 | _A,6 _E7 | _D,6 _A,7 | F,6 C7 |
+_E,6 _B,7 | _A,6 _E7 | _D,6 _A,7 | F,6 C7 |
+_E,6 _B,7 | _A,6 _E7 | _D,6 _A,7 | F,6 C7 |
+_E,6 _B,7 | _A,6 _E7 | _D,6 _A,7 | F,6 C7 |
+"_shion bar 41" F,13 | F,13 | F,13 | F,13 |
+F,13 | F,13 | F,13 | F,13 |
+"_capriccio_ii bar 49" F,6 C7 | F,6 C7 | F,6 C7 | F,6 C7 |
+F,6 C7 | F,6 C7 | F,6 C7 | F,6 C7 |
+"_duel bar 57" F,6 C7 | _E,6 _B,7 | F,6 C7 | _E,6 _B,7 |
+F,6 C7 | _E,6 _B,7 | F,6 C7 | _E,6 _B,7 |
+F,6 C7 | _E,6 _B,7 | F,6 C7 | _E,6 _B,7 |
+F,6 C7 | _E,6 _B,7 | F,6 C7 | _E,6 _B,7 |
+"_reprise bar 73" F,6 C7 | _D,6 _A,7 | _A,6 _E7 | _E,6 _B,7 |
+F,6 C7 | _D,6 _A,7 | _A,6 _E7 | _E,6 _B,7 |
+F,6 C7 | _D,6 _A,7 | _A,6 _E7 | _E,6 _B,7 |
+F,6 C7 | _D,6 _A,7 | _A,6 _E7 | _E,6 _B,7 |
+"_close bar 89" F,13 | F,13 | F,13 | F,13 |
+F,13 |
+|]
+V:B808 name="Super 808 Bass"
+"_capriccio_i bar 1" F,,6 F,,7 | F,,6 F,,7 | F,,6 F,,7 | F,,6 F,,7 |
+F,,6 F,,7 | F,,6 F,,7 | F,,6 F,,7 | F,,6 F,,7 |
+"_verse_a bar 9" F,,6 F,,7 | _D,,6 _D,,7 | _A,,6 _A,,7 | _E,,6 _E,,7 |
+F,,6 F,,7 | _D,,6 _D,,7 | _A,,6 _A,,7 | _E,,6 _E,,7 |
+F,,6 F,,7 | _D,,6 _D,,7 | _A,,6 _A,,7 | _E,,6 _E,,7 |
+F,,6 F,,7 | _D,,6 _D,,7 | _A,,6 _A,,7 | _E,,6 _E,,7 |
+"_verse_b bar 25" _E,,6 _E,,7 | _A,,6 _A,,7 | _D,,6 _D,,7 | F,,6 F,,7 |
+_E,,6 _E,,7 | _A,,6 _A,,7 | _D,,6 _D,,7 | F,,6 F,,7 |
+_E,,6 _E,,7 | _A,,6 _A,,7 | _D,,6 _D,,7 | F,,6 F,,7 |
+_E,,6 _E,,7 | _A,,6 _A,,7 | _D,,6 _D,,7 | F,,6 F,,7 |
+"_shion bar 41" F,,13 | F,,13 | F,,13 | F,,13 |
+F,,13 | F,,13 | F,,13 | F,,13 |
+"_capriccio_ii bar 49" F,,6 F,,7 | F,,6 F,,7 | F,,6 F,,7 | F,,6 F,,7 |
+F,,6 F,,7 | F,,6 F,,7 | F,,6 F,,7 | F,,6 F,,7 |
+"_duel bar 57" F,,6 F,,7 | _E,,6 _E,,7 | F,,6 F,,7 | _E,,6 _E,,7 |
+F,,6 F,,7 | _E,,6 _E,,7 | F,,6 F,,7 | _E,,6 _E,,7 |
+F,,6 F,,7 | _E,,6 _E,,7 | F,,6 F,,7 | _E,,6 _E,,7 |
+F,,6 F,,7 | _E,,6 _E,,7 | F,,6 F,,7 | _E,,6 _E,,7 |
+"_reprise bar 73" F,,6 F,,7 | _D,,6 _D,,7 | _A,,6 _A,,7 | _E,,6 _E,,7 |
+F,,6 F,,7 | _D,,6 _D,,7 | _A,,6 _A,,7 | _E,,6 _E,,7 |
+F,,6 F,,7 | _D,,6 _D,,7 | _A,,6 _A,,7 | _E,,6 _E,,7 |
+F,,6 F,,7 | _D,,6 _D,,7 | _A,,6 _A,,7 | _E,,6 _E,,7 |
+"_close bar 89" F,,13 | F,,13 | F,,13 | F,,13 |
+F,,13 |
+|]
+V:KIT name="808 Kit"
+"_capriccio_i bar 1" F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a |
+F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a |
+"_verse_a bar 9" F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a |
+F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a |
+F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a |
+F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a |
+"_verse_b bar 25" F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a |
+F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a |
+F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a |
+F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a |
+"_shion bar 41" F, ^g z ^g z ^g F, ^g z ^g z ^g z | F, ^g z ^g z ^g F, ^g z ^g z ^g z | F, ^g z ^g z ^g F, ^g z ^g z ^g z | F, ^g z ^g z ^g F, ^g z ^g z ^g z |
+F, ^g z ^g z ^g F, ^g z ^g z ^g z | F, ^g z ^g z ^g F, ^g z ^g z ^g z | F, ^g z ^g z ^g F, ^g z ^g z ^g z | F, ^g z ^g z ^g F, ^g z ^g z ^g z |
+"_capriccio_ii bar 49" F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a |
+F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a |
+"_duel bar 57" F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a |
+F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a |
+F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a |
+F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a |
+"_reprise bar 73" F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a |
+F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a |
+F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a |
+F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a | F, ^g z [F,^g] c ^g F, ^g z ^g F, [c^g] ^a |
+"_close bar 89" F, z z z z z z z z z z z z | F, z z z z z z z z z z z z | F, z z z z z z z z z z z z | F, z z z z z z z z z z z z |
+F, z z z c z z z z z z c z |
+|]
+V:KUR name="KUROGANE"
+"_capriccio_i bar 1" z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+"_verse_a bar 9" _A2 F F F _A F F F _A F c F | _A2 F F F _A F F F _A F c F | _A2 F F F _A F F F _A F c F | _A F/2 F/2 F _A F F F _A F F F c F |
+_A F/2 F/2 F _A F/2 F/2 F _A F F F _A c F | _A2 F F F _A F F F _A F c F | _A F F F _A F F F _A F F c F | _A F F F _A F F F _A F F c F |
+_A F F F _A F F F _A F F c F | _A F F F _A F F F _A F F c F | _A F F F _A F F F _A F F c F | _A F F F _A F F F _A F F c F |
+_A2 F F F _A F F F _A F c F | _A F F F _A F F F _A F F c F | _A F/2 F/2 F _A F/2 F/2 F _A F F F _A c F | _A F/2 F/2 F _A F/2 F/2 F _A F F F _A c F |
+"_verse_b bar 25" z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+"_shion bar 41" z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+"_capriccio_ii bar 49" z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+"_duel bar 57" z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+"_reprise bar 73" z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+"_close bar 89" _A4 F3 F F _A F F F- | F2 _A F F F c3 F4 | z13 | _A2 F3/2 F/2 F/2 _A/2 F/2 F/2 F3/2 _A/2 F/2 F/2 F/2 c3/2 F2 |
+_A F/2 F/2 F _A F F F _A F F F c F |
+|]
+V:MIR name="THE MIRROR"
+"_capriccio_i bar 1" z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+"_verse_a bar 9" z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+"_verse_b bar 25" F c _A F F F _A F F/2 F/2 _A F F/2 F/2 _A | F c _A F F F _A F F/2 F/2 _A F F/2 F/2 _A | F c F F _A F F F _A F F F _A | F c F _A F F F _A F F F _A2 |
+F c F F _A F F F _A F F F _A | F c F F _A F F F _A F F F _A | F c F F _A F F F _A F F F _A | F c F F _A F F F _A F F F _A |
+F c F F _A F F F _A F F F _A | F c F F _A F F F _A F F F _A | F c F _A F F F _A F F F _A2 | F c _A F F F _A F F/2 F/2 _A F F/2 F/2 _A |
+F c F F F _A F F F _A F F/2 F/2 _A | F c F _A F F F _A F F F _A2 | F c F _A F F F _A F F F _A2 | F c F _A F F F _A F F F _A2 |
+"_shion bar 41" z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+"_capriccio_ii bar 49" z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+"_duel bar 57" z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+"_reprise bar 73" z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+"_close bar 89" _A4 F3 F F _A F F F- | F2 _A F F F c3 F4 | z13 | z13 |
+_A F/2 F/2 F _A F F F _A F F F c F |
+|]
+V:SHI name="SHION"
+"_capriccio_i bar 1" z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+"_verse_a bar 9" z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+"_verse_b bar 25" z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+"_shion bar 41" f _a/2 _b/2 c _b _a f _a c _e c f3 | _a _b/2 c/2 _b _a f/2 _a/2 c2 _e c/2 _a/2 _b _a f f | _b2 c/2 _b/2 _a f _a c2 _e2 c _a/2 _b/2 _a- | _a c _b/2 _a/2 f _a c _e2 c _a2 _b2 _a |
+f f2 _a/2 _b/2 _a c _b _a2 f _a c _e/2 c/2 _a f2 | _a _b/2 c/2 _b _a f _a c _e c _a f3 | _b c2 _b _a f _a/2 c/2 _e c _a/2 _b/2 _a f2 | c2 _b _a2 f _a c/2 _e/2 c2 _a _b/2 _a/2 f |
+"_capriccio_ii bar 49" z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+"_duel bar 57" z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+"_reprise bar 73" z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+z13 | z13 | z13 | z13 |
+"_close bar 89" z13 | z13 | _a f/2 f/2 f _a f/2 f/2 f _a f/2 f/2 f c f3 | _a2 f3/2 f/2 f/2 _a/2 f/2 f/2 f3/2 _a/2 f/2 f/2 f/2 c3/2 f2 |
+_a f/2 f/2 f _a f f f _a f f f c f |
+|]

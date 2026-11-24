@@ -1,0 +1,101 @@
+== verify ==
+verification: 125/125 checks passed
+== sheets first ==
+== lyrics ==
+== instrumental ==
+instrumental master: {'judge': 'masterlaw', 'path': '/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/instrumental-master.mp3', 'sample_rate_hz': 48000, 'checks': [{'check': 'integrated loudness', 'value': -14.02, 'unit': 'LUFS', 'law': '-14.0 +/- 0.5 LUFS', 'ok': True}, {'check': 'decoded true peak', 'value': -1.34, 'unit': 'dBTP', 'law': '<= -1.0 dBTP', 'ok': True}, {'check': 'bitrate (sworn)', 'value': 320000, 'unit': 'bps', 'law': 'exactly 320000 bps', 'ok': True}], 'compliant': True}
+== vocal run ==
+bridge result: vocal-stem.wav (342.03s wall)
+manifest: 47 lines, assembly 251.875s, peak -4.08 dBFS, RMS -29.08 dBFS; walls: 2
+vocal assembly: {'file': '/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/vocal-stem.wav', 'sample_rate': 44100, 'channels': 1, 'samples': 11107688, 'duration_s': 251.875, 'peak': 0.6249, 'peak_dbfs': -4.08, 'rms': 0.0352, 'rms_dbfs': -29.08}
+full master: {'judge': 'masterlaw', 'path': '/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/master.mp3', 'sample_rate_hz': 48000, 'checks': [{'check': 'integrated loudness', 'value': -14.02, 'unit': 'LUFS', 'law': '-14.0 +/- 0.5 LUFS', 'ok': True}, {'check': 'decoded true peak', 'value': -1.34, 'unit': 'dBTP', 'law': '<= -1.0 dBTP', 'ok': True}, {'check': 'bitrate (sworn)', 'value': 320000, 'unit': 'bps', 'law': 'exactly 320000 bps', 'ok': True}], 'compliant': True}
+detection: {'detect_language': {'language': 'ja', 'probability': 0.8986, 'engine': 'whisper.cpp', 'model': 'ggml-base'}, 'judge_language': None}
+== gemini prompt ==
+gemini prompt: {'path': 'GEMINI-PROMPT.md', 'bytes': 27478, 'sheet_verbatim': True, 'lyrics_verbatim': True}
+{
+  "verification_checks": 125,
+  "inst_master": {
+    "judge": "masterlaw",
+    "path": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/instrumental-master.mp3",
+    "sample_rate_hz": 48000,
+    "checks": [
+      {
+        "check": "integrated loudness",
+        "value": -14.02,
+        "unit": "LUFS",
+        "law": "-14.0 +/- 0.5 LUFS",
+        "ok": true
+      },
+      {
+        "check": "decoded true peak",
+        "value": -1.34,
+        "unit": "dBTP",
+        "law": "<= -1.0 dBTP",
+        "ok": true
+      },
+      {
+        "check": "bitrate (sworn)",
+        "value": 320000,
+        "unit": "bps",
+        "law": "exactly 320000 bps",
+        "ok": true
+      }
+    ],
+    "compliant": true
+  },
+  "vocal": {
+    "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/vocal-stem.wav",
+    "sample_rate": 44100,
+    "channels": 1,
+    "samples": 11107688,
+    "duration_s": 251.875,
+    "peak": 0.6249,
+    "peak_dbfs": -4.08,
+    "rms": 0.0352,
+    "rms_dbfs": -29.08
+  },
+  "full_master": {
+    "judge": "masterlaw",
+    "path": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/master.mp3",
+    "sample_rate_hz": 48000,
+    "checks": [
+      {
+        "check": "integrated loudness",
+        "value": -14.02,
+        "unit": "LUFS",
+        "law": "-14.0 +/- 0.5 LUFS",
+        "ok": true
+      },
+      {
+        "check": "decoded true peak",
+        "value": -1.34,
+        "unit": "dBTP",
+        "law": "<= -1.0 dBTP",
+        "ok": true
+      },
+      {
+        "check": "bitrate (sworn)",
+        "value": 320000,
+        "unit": "bps",
+        "law": "exactly 320000 bps",
+        "ok": true
+      }
+    ],
+    "compliant": true
+  },
+  "detection": {
+    "detect_language": {
+      "language": "ja",
+      "probability": 0.8986,
+      "engine": "whisper.cpp",
+      "model": "ggml-base"
+    },
+    "judge_language": null
+  },
+  "gemini_prompt": {
+    "path": "GEMINI-PROMPT.md",
+    "bytes": 27478,
+    "sheet_verbatim": true,
+    "lyrics_verbatim": true
+  }
+}

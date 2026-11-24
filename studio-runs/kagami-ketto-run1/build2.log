@@ -1,0 +1,15 @@
+== verify ==
+verification: 125/125 checks passed
+== sheets first ==
+== lyrics ==
+== instrumental ==
+Traceback (most recent call last):
+  File "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/build_kagami_ketto.py", line 1920, in <module>
+    main()
+  File "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/build_kagami_ketto.py", line 1815, in main
+    rec["inst_master"] = master_and_judge(mix,
+                         ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/build_kagami_ketto.py", line 1419, in master_and_judge
+    sf.write(str(wav_path), mastered.T, SR, subtype="PCM_24")
+                            ^^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'T'

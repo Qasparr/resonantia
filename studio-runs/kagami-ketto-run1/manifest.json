@@ -1,0 +1,886 @@
+{
+  "verification": {
+    "checks": [
+      {
+        "check": "A1 kana table == splitter",
+        "ok": true,
+        "detail": "['ka', 'ga', 'mi', 'no', 'ma', 'e', 'ni', 'ta', 'tsu', 'o', 'to', 'ko'] vs ['ka', 'ga', 'mi', 'no', 'ma', 'e', 'ni', 'ta', 'tsu', 'o', 'to', 'ko']"
+      },
+      {
+        "check": "A2 kana table == splitter",
+        "ok": true,
+        "detail": "['o', 'no', 're', 'shi', 'ra', 'nu', 'mo', 'no', 'ha', 'ma', 'ke', 'ru'] vs ['o', 'no', 're', 'shi', 'ra', 'nu', 'mo', 'no', 'wa', 'ma', 'ke', 'ru']"
+      },
+      {
+        "check": "A3 kana table == splitter",
+        "ok": true,
+        "detail": "['ko', 'to', 'ba', 'ha', 'ke', 'n', 'yo', 'ri', 'mo', 'tsu', 'yo', 'ku'] vs ['ko', 'to', 'ba', 'wa', 'ke', 'n', 'yo', 'ri', 'mo', 'tsu', 'yo', 'ku']"
+      },
+      {
+        "check": "A4 kana table == splitter",
+        "ok": true,
+        "detail": "['shi', 'n', 'ji', 'tsu', 'hi', 'to', 'tsu', 'ka', 'ga', 'mi', 'ni', 'u', 'tsu', 'ru'] vs ['shi', 'n', 'ji', 'tsu', 'hi', 'to', 'tsu', 'ka', 'ga', 'mi', 'ni', 'u', 'tsu', 'ru']"
+      },
+      {
+        "check": "A5 kana table == splitter",
+        "ok": true,
+        "detail": "['de', 'to', 'ro', 'i', 'to', 'no', 'ka', 'ze', 'ho', 'ne', 'ma', 'de', 'sa', 'mu', 'i'] vs ['de', 'to', 'ro', 'i', 'to', 'no', 'ka', 'ze', 'ho', 'ne', 'ma', 'de', 'sa', 'mu', 'i']"
+      },
+      {
+        "check": "A6 kana table == splitter",
+        "ok": true,
+        "detail": "['so', 're', 'de', 'mo', 'o', 're', 'ha', 'ko', 'ko', 'ni', 'ta', 'tsu'] vs ['so', 're', 'de', 'mo', 'o', 're', 'wa', 'ko', 'ko', 'ni', 'ta', 'tsu']"
+      },
+      {
+        "check": "A7 kana table == splitter",
+        "ok": true,
+        "detail": "['bi', 'i', 'to', 'ha', 'ju', 'u', 'sa', 'n', 'ha', 'ku', 'no', 'u', 'mi'] vs ['bi', 'i', 'to', 'wa', 'ju', 'u', 'sa', 'n', 'ha', 'ku', 'no', 'u', 'mi']"
+      },
+      {
+        "check": "A8 kana table == splitter",
+        "ok": true,
+        "detail": "['ha', 'chi', 'bu', 'o', 'n', 'pu', 'ni', 'no', 'ru', 'ta', 'ma', 'shi', 'i'] vs ['ha', 'chi', 'bu', 'o', 'n', 'pu', 'ni', 'no', 'ru', 'ta', 'ma', 'shi', 'i']"
+      },
+      {
+        "check": "A9 kana table == splitter",
+        "ok": true,
+        "detail": "['ma', 'na', 'be', 'ma', 'na', 'be', 'ku', 'chi', 'yo', 'ri', 'sa', 'ki', 'ni'] vs ['ma', 'na', 'be', 'ma', 'na', 'be', 'ku', 'chi', 'yo', 'ri', 'sa', 'ki', 'ni']"
+      },
+      {
+        "check": "A10 kana table == splitter",
+        "ok": true,
+        "detail": "['mi', 'mi', 'o', 'su', 'ma', 'se', 'te', 'ko', 'ko', 'ro', 'de', 'ki', 'ke'] vs ['mi', 'mi', 'o', 'su', 'ma', 'se', 'te', 'ko', 'ko', 'ro', 'de', 'ki', 'ke']"
+      },
+      {
+        "check": "A11 kana table == splitter",
+        "ok": true,
+        "detail": "['ka', 'ga', 'mi', 'no', 'o', 'to', 'ko', 'te', 'ki', 'de', 'ha', 'na', 'i'] vs ['ka', 'ga', 'mi', 'no', 'o', 'to', 'ko', 'te', 'ki', 'de', 'wa', 'na', 'i']"
+      },
+      {
+        "check": "A12 kana table == splitter",
+        "ok": true,
+        "detail": "['so', 'i', 'tsu', 'ha', 'se', 'n', 'se', 'i', 'ka', 'o', 'ha', 'o', 're'] vs ['so', 'i', 'tsu', 'wa', 'se', 'n', 'se', 'i', 'ka', 'o', 'wa', 'o', 're']"
+      },
+      {
+        "check": "A13 kana table == splitter",
+        "ok": true,
+        "detail": "['ma', 'ke', 'o', 'shi', 'ru', 'mo', 'no', 'tsu', 'yo', 'ku', 'na', 'ru'] vs ['ma', 'ke', 'o', 'shi', 'ru', 'mo', 'no', 'tsu', 'yo', 'ku', 'na', 'ru']"
+      },
+      {
+        "check": "A14 kana table == splitter",
+        "ok": true,
+        "detail": "['ka', 'chi', 'ni', 'o', 'bo', 're', 'ru', 'mo', 'no', 'ha', 'o', 'chi', 'ru'] vs ['ka', 'chi', 'ni', 'o', 'bo', 're', 'ru', 'mo', 'no', 'wa', 'o', 'chi', 'ru']"
+      },
+      {
+        "check": "A15 kana table == splitter",
+        "ok": true,
+        "detail": "['kyu', 'u', 'ju', 'u', 'sa', 'n', 'no', 'ka', 'zu', 'mu', 'ne', 'ni', 'ki', 'za', 'mu'] vs ['kyu', 'u', 'ju', 'u', 'sa', 'n', 'no', 'ka', 'zu', 'mu', 'ne', 'ni', 'ki', 'za', 'mu']"
+      },
+      {
+        "check": "A16 kana table == splitter",
+        "ok": true,
+        "detail": "['sho', 'u', 'bu', 'ha', 'ko', 'ko', 'ka', 'ra', 'ma', 'da', 'o', 'wa', 'ra', 'na', 'i'] vs ['sho', 'u', 'bu', 'wa', 'ko', 'ko', 'ka', 'ra', 'ma', 'da', 'o', 'wa', 'ra', 'na', 'i']"
+      },
+      {
+        "check": "B1 kana table == splitter",
+        "ok": true,
+        "detail": "['o', 'wa', 'ri', 'de', 'ha', 'na', 'i', 'ko', 'ko', 'ko', 'so', 'ha', 'ji', 'ma', 'ri'] vs ['o', 'wa', 'ri', 'de', 'wa', 'na', 'i', 'ko', 'ko', 'ko', 'so', 'ha', 'ji', 'ma', 'ri']"
+      },
+      {
+        "check": "B2 kana table == splitter",
+        "ok": true,
+        "detail": "['o', 'na', 'ji', 'ka', 'zu', 'o', 'mu', 'ne', 'ni', 'ki', 'za', 'mi', 'mo', 'ya', 'su'] vs ['o', 'na', 'ji', 'ka', 'zu', 'o', 'mu', 'ne', 'ni', 'ki', 'za', 'mi', 'mo', 'ya', 'su']"
+      },
+      {
+        "check": "B3 kana table == splitter",
+        "ok": true,
+        "detail": "['o', 'chi', 'ta', 'to', 'ko', 'ro', 'ka', 'ra', 'ma', 'ta', 'no', 'bo', 'ru'] vs ['o', 'chi', 'ta', 'to', 'ko', 'ro', 'ka', 'ra', 'ma', 'ta', 'no', 'bo', 'ru']"
+      },
+      {
+        "check": "B4 kana table == splitter",
+        "ok": true,
+        "detail": "['tsu', 'yo', 'sa', 'ha', 'ma', 'ke', 'ka', 'ra', 'u', 'ma', 're', 'ru'] vs ['tsu', 'yo', 'sa', 'wa', 'ma', 'ke', 'ka', 'ra', 'u', 'ma', 're', 'ru']"
+      },
+      {
+        "check": "B5 kana table == splitter",
+        "ok": true,
+        "detail": "['se', 'n', 'se', 'i', 'no', 'ko', 'e', 'ha', 'o', 're', 'no', 'ko', 'e'] vs ['se', 'n', 'se', 'i', 'no', 'ko', 'e', 'wa', 'o', 're', 'no', 'ko', 'e']"
+      },
+      {
+        "check": "B6 kana table == splitter",
+        "ok": true,
+        "detail": "['te', 'ki', 'ha', 'i', 'na', 'i', 'ka', 'ga', 'mi', 'no', 'na', 'ka', 'ni'] vs ['te', 'ki', 'wa', 'i', 'na', 'i', 'ka', 'ga', 'mi', 'no', 'na', 'ka', 'ni']"
+      },
+      {
+        "check": "B7 kana table == splitter",
+        "ok": true,
+        "detail": "['ko', 'ko', 'ro', 'no', 'mi', 'mi', 'de', 'ki', 'i', 'ta', 'ko', 'ta', 'e'] vs ['ko', 'ko', 'ro', 'no', 'mi', 'mi', 'de', 'ki', 'i', 'ta', 'ko', 'ta', 'e']"
+      },
+      {
+        "check": "B8 kana table == splitter",
+        "ok": true,
+        "detail": "['ku', 'chi', 'yo', 'ri', 'sa', 'ki', 'ni', 'ma', 'na', 'n', 'da', 'mi', 'chi'] vs ['ku', 'chi', 'yo', 'ri', 'sa', 'ki', 'ni', 'ma', 'na', 'n', 'da', 'mi', 'chi']"
+      },
+      {
+        "check": "B9 kana table == splitter",
+        "ok": true,
+        "detail": "['ta', 'ma', 'shi', 'i', 'no', 'se', 'te', 'ha', 'chi', 'bu', 'no', 'na', 'mi'] vs ['ta', 'ma', 'shi', 'i', 'no', 'se', 'te', 'ha', 'chi', 'bu', 'no', 'na', 'mi']"
+      },
+      {
+        "check": "B10 kana table == splitter",
+        "ok": true,
+        "detail": "['ju', 'u', 'sa', 'n', 'no', 'u', 'mi', 'ha', 'i', 'ma', 'ko', 'ko', 'ni'] vs ['ju', 'u', 'sa', 'n', 'no', 'u', 'mi', 'wa', 'i', 'ma', 'ko', 'ko', 'ni']"
+      },
+      {
+        "check": "B11 kana table == splitter",
+        "ok": true,
+        "detail": "['sa', 'mu', 'sa', 'no', 'na', 'ka', 'de', 'ko', 'ko', 'ni', 'ta', 'tsu'] vs ['sa', 'mu', 'sa', 'no', 'na', 'ka', 'de', 'ko', 'ko', 'ni', 'ta', 'tsu']"
+      },
+      {
+        "check": "B12 kana table == splitter",
+        "ok": true,
+        "detail": "['de', 'to', 'ro', 'i', 'to', 'no', 'ka', 'ze', 'ha', 'i', 'ma', 'mo', 'o', 'na', 'ji'] vs ['de', 'to', 'ro', 'i', 'to', 'no', 'ka', 'ze', 'wa', 'i', 'ma', 'mo', 'o', 'na', 'ji']"
+      },
+      {
+        "check": "B13 kana table == splitter",
+        "ok": true,
+        "detail": "['ka', 'ga', 'mi', 'ni', 'u', 'tsu', 'ru', 'shi', 'n', 'ji', 'tsu', 'hi', 'to', 'tsu'] vs ['ka', 'ga', 'mi', 'ni', 'u', 'tsu', 'ru', 'shi', 'n', 'ji', 'tsu', 'hi', 'to', 'tsu']"
+      },
+      {
+        "check": "B14 kana table == splitter",
+        "ok": true,
+        "detail": "['ke', 'n', 'ni', 'ma', 'sa', 'ru', 'ko', 'to', 'ba', 'hi', 'bi', 'ku'] vs ['ke', 'n', 'ni', 'ma', 'sa', 'ru', 'ko', 'to', 'ba', 'hi', 'bi', 'ku']"
+      },
+      {
+        "check": "B15 kana table == splitter",
+        "ok": true,
+        "detail": "['ma', 'ke', 'ru', 'ha', 'o', 'no', 're', 'shi', 'ra', 'nu', 'ya', 'tsu'] vs ['ma', 'ke', 'ru', 'wa', 'o', 'no', 're', 'shi', 'ra', 'nu', 'ya', 'tsu']"
+      },
+      {
+        "check": "B16 kana table == splitter",
+        "ok": true,
+        "detail": "['ka', 'ga', 'mi', 'ma', 'e', 'ni', 'ta', 'tsu', 'ha', 'o', 'to', 'ko'] vs ['ka', 'ga', 'mi', 'ma', 'e', 'ni', 'ta', 'tsu', 'wa', 'o', 'to', 'ko']"
+      },
+      {
+        "check": "S1 kana table == splitter",
+        "ok": true,
+        "detail": "['mu', 'ge', 'tsu', 'no', 'so', 'ra', 'ni', 'hi', 'ra', 'ku', 'ha', 'na'] vs ['mu', 'ge', 'tsu', 'no', 'so', 'ra', 'ni', 'hi', 'ra', 'ku', 'ha', 'na']"
+      },
+      {
+        "check": "S2 kana table == splitter",
+        "ok": true,
+        "detail": "['mu', 'ra', 'sa', 'ki', 'no', 'ho', 'no', 'o', 'ya', 'ke', 'do', 'ha', 'shi', 'na', 'i'] vs ['mu', 'ra', 'sa', 'ki', 'no', 'ho', 'no', 'o', 'ya', 'ke', 'do', 'wa', 'shi', 'na', 'i']"
+      },
+      {
+        "check": "S3 kana table == splitter",
+        "ok": true,
+        "detail": "['i', 'ya', 'su', 'chi', 'ka', 'ra', 'o', 'u', 'ta', 'ni', 'ka', 'e', 'te'] vs ['i', 'ya', 'su', 'chi', 'ka', 'ra', 'o', 'u', 'ta', 'ni', 'ka', 'e', 'te']"
+      },
+      {
+        "check": "S4 kana table == splitter",
+        "ok": true,
+        "detail": "['ka', 'ga', 'mi', 'no', 'mu', 'ko', 'u', 'de', 'a', 'e', 'ru', 'a', 'shi', 'ta'] vs ['ka', 'ga', 'mi', 'no', 'mu', 'ko', 'o', 'de', 'a', 'e', 'ru', 'a', 'shi', 'ta']"
+      },
+      {
+        "check": "S5 kana table == splitter",
+        "ok": true,
+        "detail": "['fu', 'ta', 'ri', 'no', 'ko', 'e', 'ha', 'hi', 'to', 'tsu', 'ni', 'na', 'ru'] vs ['fu', 'ta', 'ri', 'no', 'ko', 'e', 'wa', 'hi', 'to', 'tsu', 'ni', 'na', 'ru']"
+      },
+      {
+        "check": "S6 kana table == splitter",
+        "ok": true,
+        "detail": "['ka', 'chi', 'mo', 'ma', 'ke', 'mo', 'ko', 'ko', 'ni', 'ha', 'na', 'i'] vs ['ka', 'chi', 'mo', 'ma', 'ke', 'mo', 'ko', 'ko', 'ni', 'wa', 'na', 'i']"
+      },
+      {
+        "check": "S7 kana table == splitter",
+        "ok": true,
+        "detail": "['ju', 'u', 'sa', 'n', 'no', 'so', 'ra', 'ni', 'ka', 'ke', 'ru', 'ha', 'shi'] vs ['ju', 'u', 'sa', 'n', 'no', 'so', 'ra', 'ni', 'ka', 'ke', 'ru', 'ha', 'shi']"
+      },
+      {
+        "check": "S8 kana table == splitter",
+        "ok": true,
+        "detail": "['u', 'ta', 'i', 'tsu', 'zu', 'ke', 'ru', 'a', 'ka', 'tsu', 'ki', 'ma', 'de'] vs ['u', 'ta', 'i', 'tsu', 'zu', 'ke', 'ru', 'a', 'ka', 'tsu', 'ki', 'ma', 'de']"
+      },
+      {
+        "check": "close kana table == splitter",
+        "ok": true,
+        "detail": "かがみはかがみわれらはひとつ"
+      },
+      {
+        "check": "close kana table == splitter",
+        "ok": true,
+        "detail": "しょうぶはひきわけこれがこたえ"
+      },
+      {
+        "check": "pair B1/A16 mora counts equal",
+        "ok": true,
+        "detail": "15 vs 15"
+      },
+      {
+        "check": "pair B2/A15 mora counts equal",
+        "ok": true,
+        "detail": "15 vs 15"
+      },
+      {
+        "check": "pair B3/A14 mora counts equal",
+        "ok": true,
+        "detail": "13 vs 13"
+      },
+      {
+        "check": "pair B4/A13 mora counts equal",
+        "ok": true,
+        "detail": "12 vs 12"
+      },
+      {
+        "check": "pair B5/A12 mora counts equal",
+        "ok": true,
+        "detail": "13 vs 13"
+      },
+      {
+        "check": "pair B6/A11 mora counts equal",
+        "ok": true,
+        "detail": "13 vs 13"
+      },
+      {
+        "check": "pair B7/A10 mora counts equal",
+        "ok": true,
+        "detail": "13 vs 13"
+      },
+      {
+        "check": "pair B8/A9 mora counts equal",
+        "ok": true,
+        "detail": "13 vs 13"
+      },
+      {
+        "check": "pair B9/A8 mora counts equal",
+        "ok": true,
+        "detail": "13 vs 13"
+      },
+      {
+        "check": "pair B10/A7 mora counts equal",
+        "ok": true,
+        "detail": "13 vs 13"
+      },
+      {
+        "check": "pair B11/A6 mora counts equal",
+        "ok": true,
+        "detail": "12 vs 12"
+      },
+      {
+        "check": "pair B12/A5 mora counts equal",
+        "ok": true,
+        "detail": "15 vs 15"
+      },
+      {
+        "check": "pair B13/A4 mora counts equal",
+        "ok": true,
+        "detail": "14 vs 14"
+      },
+      {
+        "check": "pair B14/A3 mora counts equal",
+        "ok": true,
+        "detail": "12 vs 12"
+      },
+      {
+        "check": "pair B15/A2 mora counts equal",
+        "ok": true,
+        "detail": "12 vs 12"
+      },
+      {
+        "check": "pair B16/A1 mora counts equal",
+        "ok": true,
+        "detail": "12 vs 12"
+      },
+      {
+        "check": "B ending vowels == reverse(A ending vowels)",
+        "ok": true,
+        "detail": "A ['o', 'u', 'u', 'u', 'i', 'u', 'i', 'i', 'i', 'e', 'i', 'e', 'u', 'u', 'u', 'i'] / B ['i', 'u', 'u', 'u', 'e', 'i', 'e', 'i', 'i', 'i', 'u', 'i', 'u', 'u', 'u', 'o']"
+      },
+      {
+        "check": "B1 notes == reverse(A16 notes)",
+        "ok": true,
+        "detail": "constructed in code"
+      },
+      {
+        "check": "B2 notes == reverse(A15 notes)",
+        "ok": true,
+        "detail": "constructed in code"
+      },
+      {
+        "check": "B3 notes == reverse(A14 notes)",
+        "ok": true,
+        "detail": "constructed in code"
+      },
+      {
+        "check": "B4 notes == reverse(A13 notes)",
+        "ok": true,
+        "detail": "constructed in code"
+      },
+      {
+        "check": "B5 notes == reverse(A12 notes)",
+        "ok": true,
+        "detail": "constructed in code"
+      },
+      {
+        "check": "B6 notes == reverse(A11 notes)",
+        "ok": true,
+        "detail": "constructed in code"
+      },
+      {
+        "check": "B7 notes == reverse(A10 notes)",
+        "ok": true,
+        "detail": "constructed in code"
+      },
+      {
+        "check": "B8 notes == reverse(A9 notes)",
+        "ok": true,
+        "detail": "constructed in code"
+      },
+      {
+        "check": "B9 notes == reverse(A8 notes)",
+        "ok": true,
+        "detail": "constructed in code"
+      },
+      {
+        "check": "B10 notes == reverse(A7 notes)",
+        "ok": true,
+        "detail": "constructed in code"
+      },
+      {
+        "check": "B11 notes == reverse(A6 notes)",
+        "ok": true,
+        "detail": "constructed in code"
+      },
+      {
+        "check": "B12 notes == reverse(A5 notes)",
+        "ok": true,
+        "detail": "constructed in code"
+      },
+      {
+        "check": "B13 notes == reverse(A4 notes)",
+        "ok": true,
+        "detail": "constructed in code"
+      },
+      {
+        "check": "B14 notes == reverse(A3 notes)",
+        "ok": true,
+        "detail": "constructed in code"
+      },
+      {
+        "check": "B15 notes == reverse(A2 notes)",
+        "ok": true,
+        "detail": "constructed in code"
+      },
+      {
+        "check": "B16 notes == reverse(A1 notes)",
+        "ok": true,
+        "detail": "constructed in code"
+      },
+      {
+        "check": "line a01 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line a02 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line a03 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line a04 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line a05 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line a06 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line a07 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line a08 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line a09 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line a10 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line a11 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line a12 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line a13 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line a14 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line a15 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line a16 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line b01 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line b02 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line b03 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line b04 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line b05 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line b06 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line b07 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line b08 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line b09 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line b10 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line b11 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line b12 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line b13 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line b14 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line b15 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line b16 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line s01 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line s02 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line s03 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line s04 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line s05 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line s06 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line s07 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line s08 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line c-guy tiles its bar(s)",
+        "ok": true,
+        "detail": "5.416667s vs 5.416667s"
+      },
+      {
+        "check": "line c-mirror tiles its bar(s)",
+        "ok": true,
+        "detail": "5.416667s vs 5.416667s"
+      },
+      {
+        "check": "line c-shion-91 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line c-guy-92 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line c-shion-92 tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line f-guy tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "line f-shion tiles its bar(s)",
+        "ok": true,
+        "detail": "2.708333s vs 2.708333s"
+      },
+      {
+        "check": "capriccio I attacks == 93",
+        "ok": true,
+        "detail": "93"
+      },
+      {
+        "check": "capriccio I head == 17 attacks before body",
+        "ok": true,
+        "detail": "attack 17 is the crown degree 9"
+      },
+      {
+        "check": "capriccio II == retrograde of I",
+        "ok": true,
+        "detail": "event-for-event"
+      }
+    ],
+    "phoneme_dictionary_entries": 299,
+    "a_ending_vowels": [
+      "o",
+      "u",
+      "u",
+      "u",
+      "i",
+      "u",
+      "i",
+      "i",
+      "i",
+      "e",
+      "i",
+      "e",
+      "u",
+      "u",
+      "u",
+      "i"
+    ],
+    "b_ending_vowels": [
+      "i",
+      "u",
+      "u",
+      "u",
+      "e",
+      "i",
+      "e",
+      "i",
+      "i",
+      "i",
+      "u",
+      "i",
+      "u",
+      "u",
+      "u",
+      "o"
+    ],
+    "capriccio_attacks": 93,
+    "vocal_lines": 47,
+    "total_morae": 623
+  },
+  "instrumental": {
+    "duration_s": 251.875,
+    "super_808": {
+      "seat": "VV (44 Hz placed fundamental)",
+      "plain_kick": {
+        "duration_s": 1.0,
+        "peak_dbfs": -0.32,
+        "rms_dbfs": -13.34,
+        "attack_hz_window_20ms": 116.4,
+        "tail_hz_last_250ms": 44.3
+      },
+      "super_kick": {
+        "duration_s": 1.5,
+        "peak_dbfs": -0.16,
+        "rms_dbfs": -10.6,
+        "attack_hz_window_20ms": 88.7,
+        "tail_hz_last_250ms": 44.2
+      },
+      "treatment": {
+        "decay_tau": 0.42,
+        "drive": 0.45,
+        "click": 0.15
+      },
+      "recipe_delta": "drive 0.15 -> 0.45; decay_tau 0.16 -> 0.42; click 0.5 -> 0.15; same eightoeight.kick instrument"
+    }
+  },
+  "inst_master": {
+    "wav": "instrumental-master.wav",
+    "mp3": "instrumental-master.mp3",
+    "mastering": {
+      "lufs_before": -9.94,
+      "gain_applied_db": -4.06,
+      "trim_db": 0.0,
+      "lufs_after": -14.02,
+      "sample_peak_db": -1.35,
+      "true_peak_dbtp": -1.35,
+      "ceiling_overrode_loudness": false,
+      "target_lufs": -14.0,
+      "ceiling_dbtp": -1.35
+    },
+    "verdict": {
+      "judge": "masterlaw",
+      "path": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/instrumental-master.mp3",
+      "sample_rate_hz": 48000,
+      "checks": [
+        {
+          "check": "integrated loudness",
+          "value": -14.02,
+          "unit": "LUFS",
+          "law": "-14.0 +/- 0.5 LUFS",
+          "ok": true
+        },
+        {
+          "check": "decoded true peak",
+          "value": -1.34,
+          "unit": "dBTP",
+          "law": "<= -1.0 dBTP",
+          "ok": true
+        },
+        {
+          "check": "bitrate (sworn)",
+          "value": 320000,
+          "unit": "bps",
+          "law": "exactly 320000 bps",
+          "ok": true
+        }
+      ],
+      "compliant": true
+    }
+  },
+  "gaps": [
+    "No engraver stands on this box: the sheets ship as ABC, the layer of record (the standing house position).",
+    "The DiffSinger bank documents no speaker registers: Phascogale is seated for Shion's soprano by the desk and flagged for the founder's ear; Civet is the proven seat of record (the Mugetsu hook).",
+    "The Gemini version is a reserved seat, not a render: it exists when the founder pastes GEMINI-PROMPT.md and the strike returns. Nothing in this report claims it."
+  ],
+  "vocal": {
+    "lines_rendered": 47,
+    "calibration_factors": {
+      "VV": 1.1054,
+      "Α": 1.1141,
+      "Ε": 1.1158,
+      "Ι": 1.1203,
+      "Ο": 1.1114
+    },
+    "calibration_trained_by": [
+      "pow-7a6472d2da0abf4b1d151b67b2fb21e35f5f6e6e33e428a5c646427a3531ff55",
+      "pow-de96414a282efe2f157f23e0f6c2b46184e84550317c242de49fcecd1585a151"
+    ],
+    "assembly": {
+      "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/vocal-stem.wav",
+      "sample_rate": 44100,
+      "channels": 1,
+      "samples": 11107688,
+      "duration_s": 251.875,
+      "peak": 0.6249,
+      "peak_dbfs": -4.08,
+      "rms": 0.0352,
+      "rms_dbfs": -29.08
+    },
+    "asked_span_s": 251.875,
+    "walls": [
+      "line s03: rendered 2.833s against a 2.708s slot -- overhang 0.124s past its bar line, summed into the assembly, not trimmed",
+      "line s04: rendered 3.251s against a 2.708s slot -- overhang 0.542s past its bar line, summed into the assembly, not trimmed"
+    ],
+    "nine": {
+      "stations": {
+        "Α": 195,
+        "Ι": 124,
+        "Ο": 134,
+        "Ε": 68,
+        "VV": 90
+      },
+      "dispositions": {
+        "PASS_NATIVE": 551,
+        "SEATED": 611
+      }
+    }
+  },
+  "full_master": {
+    "wav": "master.wav",
+    "mp3": "master.mp3",
+    "mastering": {
+      "lufs_before": -9.85,
+      "gain_applied_db": -4.15,
+      "trim_db": 0.0,
+      "lufs_after": -14.02,
+      "sample_peak_db": -1.35,
+      "true_peak_dbtp": -1.35,
+      "ceiling_overrode_loudness": false,
+      "target_lufs": -14.0,
+      "ceiling_dbtp": -1.35
+    },
+    "verdict": {
+      "judge": "masterlaw",
+      "path": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/master.mp3",
+      "sample_rate_hz": 48000,
+      "checks": [
+        {
+          "check": "integrated loudness",
+          "value": -14.02,
+          "unit": "LUFS",
+          "law": "-14.0 +/- 0.5 LUFS",
+          "ok": true
+        },
+        {
+          "check": "decoded true peak",
+          "value": -1.34,
+          "unit": "dBTP",
+          "law": "<= -1.0 dBTP",
+          "ok": true
+        },
+        {
+          "check": "bitrate (sworn)",
+          "value": 320000,
+          "unit": "bps",
+          "law": "exactly 320000 bps",
+          "ok": true
+        }
+      ],
+      "compliant": true
+    }
+  },
+  "detection": {
+    "detect_language": {
+      "language": "ja",
+      "probability": 0.8986,
+      "engine": "whisper.cpp",
+      "model": "ggml-base"
+    },
+    "judge_language": {
+      "judge": "language",
+      "detected": "ja",
+      "probability": 0.8986,
+      "expected": "ja",
+      "match": true,
+      "engine": "whisper.cpp",
+      "model": "ggml-base",
+      "note": "read by resonance.studio.vocal_exam.judge_language at the desk's hand after the run (the builder's first call addressed the wrong module and returned None; the value here is the exam's own read)"
+    }
+  },
+  "gemini_prompt": {
+    "path": "GEMINI-PROMPT.md",
+    "bytes": 27478,
+    "sheet_verbatim": true,
+    "lyrics_verbatim": true
+  },
+  "files": [
+    "GEMINI-PROMPT.md",
+    "LYRICS.md",
+    "RUN-REPORT.md",
+    "bridge_job.json",
+    "build.log",
+    "build2.log",
+    "build3.log",
+    "build4.log",
+    "build_kagami_ketto.py",
+    "instrumental-master.mp3",
+    "instrumental-master.wav",
+    "manifest.json",
+    "master.mp3",
+    "master.wav",
+    "render.log",
+    "sequence-realized.ds",
+    "sequence.ds",
+    "sheet.abc",
+    "spec.json",
+    "vocal-stem.wav"
+  ],
+  "vocal_section_energy_dbfs": {
+    "verse_a_bars_9_24": -27.05,
+    "verse_b_bars_25_40": -27.46,
+    "shion_bars_41_48": -25.55,
+    "close_bars_89_93": -21.88,
+    "note": "RMS of the vocal stem per sung section, measured from vocal-stem.wav at the desk's hand -- every sung section carries real energy; the unison close is the loudest, as written"
+  }
+}

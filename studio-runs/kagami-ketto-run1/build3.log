@@ -1,0 +1,51 @@
+== verify ==
+verification: 125/125 checks passed
+== sheets first ==
+== lyrics ==
+== instrumental ==
+instrumental master: {'judge': 'masterlaw', 'path': '/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/instrumental-master.mp3', 'sample_rate_hz': 48000, 'checks': [{'check': 'integrated loudness', 'value': -14.01, 'unit': 'LUFS', 'law': '-14.0 +/- 0.5 LUFS', 'ok': True}, {'check': 'decoded true peak', 'value': -1.0, 'unit': 'dBTP', 'law': '<= -1.0 dBTP', 'ok': False}, {'check': 'bitrate (sworn)', 'value': 320000, 'unit': 'bps', 'law': 'exactly 320000 bps', 'ok': True}], 'compliant': False}
+== vocal run ==
+VOCAL GAP: ValueError: line a01: phoneme 'ja/ja/k' not in the bank's phonemes.json -- a table gap, named
+== gemini prompt ==
+gemini prompt: {'path': 'GEMINI-PROMPT.md', 'bytes': 27478, 'sheet_verbatim': True, 'lyrics_verbatim': True}
+{
+  "verification_checks": 125,
+  "inst_master": {
+    "judge": "masterlaw",
+    "path": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/instrumental-master.mp3",
+    "sample_rate_hz": 48000,
+    "checks": [
+      {
+        "check": "integrated loudness",
+        "value": -14.01,
+        "unit": "LUFS",
+        "law": "-14.0 +/- 0.5 LUFS",
+        "ok": true
+      },
+      {
+        "check": "decoded true peak",
+        "value": -1.0,
+        "unit": "dBTP",
+        "law": "<= -1.0 dBTP",
+        "ok": false
+      },
+      {
+        "check": "bitrate (sworn)",
+        "value": 320000,
+        "unit": "bps",
+        "law": "exactly 320000 bps",
+        "ok": true
+      }
+    ],
+    "compliant": false
+  },
+  "vocal": null,
+  "full_master": null,
+  "detection": null,
+  "gemini_prompt": {
+    "path": "GEMINI-PROMPT.md",
+    "bytes": 27478,
+    "sheet_verbatim": true,
+    "lyrics_verbatim": true
+  }
+}
