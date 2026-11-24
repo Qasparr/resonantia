@@ -1,0 +1,1974 @@
+{
+ "corpus": "RESONANTIA VOCAL EXAM",
+ "version": 1,
+ "stamped": "2026-11-24",
+ "law": "Fixed items, sheets as ground truth. Items marked held_out may be sat for scoring but calibration may never tune on them. The founder's ear is the final gate for 'good'; this exam grades the measurable only.",
+ "items": [
+  {
+   "id": "vowel-Α",
+   "kind": "vowel",
+   "lang": "any",
+   "held_out": false,
+   "title": "Sustained Α (/a/)",
+   "segments": [
+    {
+     "station": "Α",
+     "midi": 57,
+     "dur_s": 1.2
+    }
+   ]
+  },
+  {
+   "id": "vowel-Ε",
+   "kind": "vowel",
+   "lang": "any",
+   "held_out": false,
+   "title": "Sustained Ε (/e/)",
+   "segments": [
+    {
+     "station": "Ε",
+     "midi": 57,
+     "dur_s": 1.2
+    }
+   ]
+  },
+  {
+   "id": "vowel-Η",
+   "kind": "vowel",
+   "lang": "any",
+   "held_out": true,
+   "title": "Sustained Η (/ɛː/)",
+   "segments": [
+    {
+     "station": "Η",
+     "midi": 57,
+     "dur_s": 1.2
+    }
+   ]
+  },
+  {
+   "id": "vowel-Ι",
+   "kind": "vowel",
+   "lang": "any",
+   "held_out": false,
+   "title": "Sustained Ι (/i/)",
+   "segments": [
+    {
+     "station": "Ι",
+     "midi": 57,
+     "dur_s": 1.2
+    }
+   ]
+  },
+  {
+   "id": "vowel-Ο",
+   "kind": "vowel",
+   "lang": "any",
+   "held_out": false,
+   "title": "Sustained Ο (/o/)",
+   "segments": [
+    {
+     "station": "Ο",
+     "midi": 57,
+     "dur_s": 1.2
+    }
+   ]
+  },
+  {
+   "id": "vowel-Υ",
+   "kind": "vowel",
+   "lang": "any",
+   "held_out": false,
+   "title": "Sustained Υ (/y/)",
+   "segments": [
+    {
+     "station": "Υ",
+     "midi": 57,
+     "dur_s": 1.2
+    }
+   ]
+  },
+  {
+   "id": "vowel-Ω",
+   "kind": "vowel",
+   "lang": "any",
+   "held_out": true,
+   "title": "Sustained Ω (/ɔː/)",
+   "segments": [
+    {
+     "station": "Ω",
+     "midi": 57,
+     "dur_s": 1.2
+    }
+   ]
+  },
+  {
+   "id": "vowel-ΕΙ",
+   "kind": "vowel-glide",
+   "lang": "any",
+   "held_out": false,
+   "title": "Glide ΕΙ (/e/ -> /i/)",
+   "segments": [
+    {
+     "station": "Ε",
+     "midi": 57,
+     "dur_s": 0.6
+    },
+    {
+     "station": "Ι",
+     "midi": 57,
+     "dur_s": 0.6
+    }
+   ]
+  },
+  {
+   "id": "vowel-ΟΥ",
+   "kind": "vowel-glide",
+   "lang": "any",
+   "held_out": true,
+   "title": "Glide ΟΥ (/o/ -> VV)",
+   "segments": [
+    {
+     "station": "Ο",
+     "midi": 57,
+     "dur_s": 0.6
+    },
+    {
+     "station": "VV",
+     "midi": 57,
+     "dur_s": 0.6
+    }
+   ]
+  },
+  {
+   "id": "vowel-VV",
+   "kind": "vowel",
+   "lang": "any",
+   "held_out": false,
+   "title": "Sustained VV (/u/ family)",
+   "segments": [
+    {
+     "station": "VV",
+     "midi": 57,
+     "dur_s": 1.2
+    }
+   ]
+  },
+  {
+   "id": "phrase-en-live-love",
+   "kind": "phrase",
+   "lang": "en",
+   "held_out": false,
+   "title": "EN phrase: 'Live, love, and let love live'",
+   "segments": [
+    {
+     "midi": 57,
+     "dur_s": 0.42,
+     "phonemes": [
+      {
+       "name": "l",
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "ih",
+       "station": null,
+       "disposition": "UNSEATED"
+      },
+      {
+       "name": "v",
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      }
+     ]
+    },
+    {
+     "midi": 60,
+     "dur_s": 0.42,
+     "phonemes": [
+      {
+       "name": "l",
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "ah",
+       "station": null,
+       "disposition": "UNSEATED"
+      },
+      {
+       "name": "v",
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      }
+     ]
+    },
+    {
+     "midi": 59,
+     "dur_s": 0.3,
+     "phonemes": [
+      {
+       "name": "ae",
+       "station": null,
+       "disposition": "UNSEATED"
+      },
+      {
+       "name": "n",
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "d",
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      }
+     ]
+    },
+    {
+     "midi": 57,
+     "dur_s": 0.3,
+     "phonemes": [
+      {
+       "name": "l",
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "eh",
+       "station": "Η",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "t",
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      }
+     ]
+    },
+    {
+     "midi": 62,
+     "dur_s": 0.42,
+     "phonemes": [
+      {
+       "name": "l",
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "ah",
+       "station": null,
+       "disposition": "UNSEATED"
+      },
+      {
+       "name": "v",
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      }
+     ]
+    },
+    {
+     "midi": 60,
+     "dur_s": 0.63,
+     "phonemes": [
+      {
+       "name": "l",
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "ih",
+       "station": null,
+       "disposition": "UNSEATED"
+      },
+      {
+       "name": "v",
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phrase-ja-tsuki",
+   "kind": "phrase",
+   "lang": "ja",
+   "held_out": true,
+   "title": "JA phrase: 'tsuki no hikari' (moonlight)",
+   "segments": [
+    {
+     "midi": 57,
+     "dur_s": 0.36,
+     "phonemes": [
+      {
+       "name": "tsu",
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "ki",
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      }
+     ]
+    },
+    {
+     "midi": 59,
+     "dur_s": 0.24,
+     "phonemes": [
+      {
+       "name": "no",
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      }
+     ]
+    },
+    {
+     "midi": 60,
+     "dur_s": 0.24,
+     "phonemes": [
+      {
+       "name": "hi",
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      }
+     ]
+    },
+    {
+     "midi": 62,
+     "dur_s": 0.24,
+     "phonemes": [
+      {
+       "name": "ka",
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      }
+     ]
+    },
+    {
+     "midi": 60,
+     "dur_s": 0.36,
+     "phonemes": [
+      {
+       "name": "ri",
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mugetsu-hook",
+   "kind": "hook",
+   "lang": "ja",
+   "held_out": false,
+   "title": "DETROIT MUGETSU -- hook (house test piece)",
+   "sheet_source": "studio-runs/mugetsu-hook-engine-run1/spec.json + sequence.ds (the asked sheet both engine runs were sung from)",
+   "lines": [
+    {
+     "id": "hook-l1",
+     "text": "デトロイト生まれ、ブライトムーア育ち",
+     "asked_dur_s": 1.666665,
+     "notes": [
+      {
+       "midi": 68,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 71,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 75,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 75,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 71,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 68,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 71,
+       "dur_s": 0.416667
+      }
+     ],
+     "phonemes": [
+      {
+       "name": "d",
+       "dur_s": 0.0348,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "e",
+       "dur_s": 0.0348,
+       "station": "Ε",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "t",
+       "dur_s": 0.0348,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "o",
+       "dur_s": 0.0348,
+       "station": "Ο",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "r",
+       "dur_s": 0.0348,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "o",
+       "dur_s": 0.0348,
+       "station": "Ο",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "i",
+       "dur_s": 0.0697,
+       "station": "Ι",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "t",
+       "dur_s": 0.0348,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "o",
+       "dur_s": 0.0348,
+       "station": "Ο",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "u",
+       "dur_s": 0.0697,
+       "station": "VV",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "m",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.0522,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "r",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "e",
+       "dur_s": 0.0522,
+       "station": "Ε",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "b",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "u",
+       "dur_s": 0.0522,
+       "station": "VV",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "r",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.0522,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "i",
+       "dur_s": 0.1045,
+       "station": "Ι",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "t",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "o",
+       "dur_s": 0.0522,
+       "station": "Ο",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "m",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "u",
+       "dur_s": 0.0522,
+       "station": "VV",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "u",
+       "dur_s": 0.1045,
+       "station": "VV",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.1045,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "s",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "o",
+       "dur_s": 0.0522,
+       "station": "Ο",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "d",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.0522,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "ch",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "i",
+       "dur_s": 0.0522,
+       "station": "Ι",
+       "disposition": "SEATED"
+      }
+     ]
+    },
+    {
+     "id": "hook-l2",
+     "text": "縁石の上から、全部見渡し",
+     "asked_dur_s": 1.666666,
+     "notes": [
+      {
+       "midi": 76,
+       "dur_s": 0.416667
+      },
+      {
+       "midi": 76,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 75,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 71,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 73,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 71,
+       "dur_s": 0.416667
+      }
+     ],
+     "phonemes": [
+      {
+       "name": "e",
+       "dur_s": 0.1045,
+       "station": "Ε",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "N",
+       "dur_s": 0.1045,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "s",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "e",
+       "dur_s": 0.0522,
+       "station": "Ε",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "ky",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "i",
+       "dur_s": 0.0522,
+       "station": "Ι",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "n",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "o",
+       "dur_s": 0.0522,
+       "station": "Ο",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "u",
+       "dur_s": 0.1045,
+       "station": "VV",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "e",
+       "dur_s": 0.1045,
+       "station": "Ε",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "k",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.0522,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "r",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.0522,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "z",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "e",
+       "dur_s": 0.0522,
+       "station": "Ε",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "N",
+       "dur_s": 0.1045,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "b",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "u",
+       "dur_s": 0.0522,
+       "station": "VV",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "my",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "i",
+       "dur_s": 0.0522,
+       "station": "Ι",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "w",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.0522,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "t",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.0522,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "sh",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "i",
+       "dur_s": 0.0522,
+       "station": "Ι",
+       "disposition": "SEATED"
+      }
+     ]
+    },
+    {
+     "id": "hook-l3",
+     "text": "誰にも頭下げねえ、俺は俺",
+     "asked_dur_s": 1.666665,
+     "notes": [
+      {
+       "midi": 73,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 73,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 73,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 71,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 73,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 76,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 73,
+       "dur_s": 0.416667
+      }
+     ],
+     "phonemes": [
+      {
+       "name": "d",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.0522,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "r",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "e",
+       "dur_s": 0.0522,
+       "station": "Ε",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "ny",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "i",
+       "dur_s": 0.0522,
+       "station": "Ι",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "m",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "o",
+       "dur_s": 0.0522,
+       "station": "Ο",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.1045,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "t",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.0522,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "m",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.0522,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "s",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.0522,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "g",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "e",
+       "dur_s": 0.0522,
+       "station": "Ε",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "n",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "e",
+       "dur_s": 0.0522,
+       "station": "Ε",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "e",
+       "dur_s": 0.1045,
+       "station": "Ε",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "o",
+       "dur_s": 0.1045,
+       "station": "Ο",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "r",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "e",
+       "dur_s": 0.0522,
+       "station": "Ε",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "w",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.0522,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "o",
+       "dur_s": 0.1045,
+       "station": "Ο",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "r",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "e",
+       "dur_s": 0.0522,
+       "station": "Ε",
+       "disposition": "SEATED"
+      }
+     ]
+    },
+    {
+     "id": "hook-l4",
+     "text": "月無き空でも、目を開け",
+     "asked_dur_s": 1.666665,
+     "notes": [
+      {
+       "midi": 75,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 75,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 78,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 78,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 80,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 78,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 75,
+       "dur_s": 0.416667
+      }
+     ],
+     "phonemes": [
+      {
+       "name": "ts",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "u",
+       "dur_s": 0.0522,
+       "station": "VV",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "ky",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "i",
+       "dur_s": 0.0522,
+       "station": "Ι",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "n",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.0522,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "ky",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "i",
+       "dur_s": 0.0522,
+       "station": "Ι",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "s",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "o",
+       "dur_s": 0.0522,
+       "station": "Ο",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "r",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.0522,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "d",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "e",
+       "dur_s": 0.0522,
+       "station": "Ε",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "m",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "o",
+       "dur_s": 0.0522,
+       "station": "Ο",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "m",
+       "dur_s": 0.1045,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "e",
+       "dur_s": 0.1045,
+       "station": "Ε",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "w",
+       "dur_s": 0.1045,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "o",
+       "dur_s": 0.1045,
+       "station": "Ο",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.209,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "k",
+       "dur_s": 0.1045,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "e",
+       "dur_s": 0.1045,
+       "station": "Ε",
+       "disposition": "SEATED"
+      }
+     ]
+    },
+    {
+     "id": "hook-l5",
+     "text": "金じゃ買えねえ、この魂",
+     "asked_dur_s": 1.666665,
+     "notes": [
+      {
+       "midi": 80,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 78,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 75,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 71,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 75,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 71,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 68,
+       "dur_s": 0.416667
+      }
+     ],
+     "phonemes": [
+      {
+       "name": "ky",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "i",
+       "dur_s": 0.0522,
+       "station": "Ι",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "N",
+       "dur_s": 0.1045,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "j",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.0522,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "k",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.0522,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "e",
+       "dur_s": 0.1045,
+       "station": "Ε",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "n",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "e",
+       "dur_s": 0.0522,
+       "station": "Ε",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "e",
+       "dur_s": 0.1045,
+       "station": "Ε",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "k",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "o",
+       "dur_s": 0.0522,
+       "station": "Ο",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "n",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "o",
+       "dur_s": 0.0522,
+       "station": "Ο",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "t",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.0522,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "m",
+       "dur_s": 0.1045,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.1045,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "sh",
+       "dur_s": 0.1045,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "i",
+       "dur_s": 0.1045,
+       "station": "Ι",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "i",
+       "dur_s": 0.209,
+       "station": "Ι",
+       "disposition": "SEATED"
+      }
+     ]
+    },
+    {
+     "id": "hook-l6",
+     "text": "嘘は通らねえ、通すのは真実",
+     "asked_dur_s": 1.666665,
+     "notes": [
+      {
+       "midi": 76,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 76,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 76,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 75,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 73,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 75,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 76,
+       "dur_s": 0.416667
+      }
+     ],
+     "phonemes": [
+      {
+       "name": "u",
+       "dur_s": 0.0697,
+       "station": "VV",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "s",
+       "dur_s": 0.0348,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "o",
+       "dur_s": 0.0348,
+       "station": "Ο",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "w",
+       "dur_s": 0.0348,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.0348,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "t",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "o",
+       "dur_s": 0.0522,
+       "station": "Ο",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "o",
+       "dur_s": 0.1045,
+       "station": "Ο",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "r",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.0522,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "n",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "e",
+       "dur_s": 0.0522,
+       "station": "Ε",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "e",
+       "dur_s": 0.1045,
+       "station": "Ε",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "t",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "o",
+       "dur_s": 0.0522,
+       "station": "Ο",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "o",
+       "dur_s": 0.1045,
+       "station": "Ο",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "s",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "u",
+       "dur_s": 0.0522,
+       "station": "VV",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "n",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "o",
+       "dur_s": 0.0522,
+       "station": "Ο",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "w",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.0522,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "sh",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "i",
+       "dur_s": 0.0522,
+       "station": "Ι",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "N",
+       "dur_s": 0.1045,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "j",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "i",
+       "dur_s": 0.0522,
+       "station": "Ι",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "ts",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "u",
+       "dur_s": 0.0522,
+       "station": "VV",
+       "disposition": "SEATED"
+      }
+     ]
+    },
+    {
+     "id": "hook-l7",
+     "text": "地べたから天まで、自分の足で",
+     "asked_dur_s": 1.666665,
+     "notes": [
+      {
+       "midi": 68,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 71,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 73,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 75,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 76,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 75,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 73,
+       "dur_s": 0.416667
+      }
+     ],
+     "phonemes": [
+      {
+       "name": "j",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "i",
+       "dur_s": 0.0522,
+       "station": "Ι",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "b",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "e",
+       "dur_s": 0.0522,
+       "station": "Ε",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "t",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.0522,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "k",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.0522,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "r",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.0522,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "t",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "e",
+       "dur_s": 0.0522,
+       "station": "Ε",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "N",
+       "dur_s": 0.1045,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "m",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.0522,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "d",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "e",
+       "dur_s": 0.0522,
+       "station": "Ε",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "j",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "i",
+       "dur_s": 0.0522,
+       "station": "Ι",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "b",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "u",
+       "dur_s": 0.0522,
+       "station": "VV",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "N",
+       "dur_s": 0.1045,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "n",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "o",
+       "dur_s": 0.0522,
+       "station": "Ο",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.1045,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "sh",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "i",
+       "dur_s": 0.0522,
+       "station": "Ι",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "d",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "e",
+       "dur_s": 0.0522,
+       "station": "Ε",
+       "disposition": "SEATED"
+      }
+     ]
+    },
+    {
+     "id": "hook-l8",
+     "text": "王冠は奪うもんじゃねえ、被るもんだ",
+     "asked_dur_s": 1.666666,
+     "notes": [
+      {
+       "midi": 78,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 78,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 75,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 71,
+       "dur_s": 0.208333
+      },
+      {
+       "midi": 71,
+       "dur_s": 0.416667
+      },
+      {
+       "midi": 68,
+       "dur_s": 0.416667
+      }
+     ],
+     "phonemes": [
+      {
+       "name": "o",
+       "dur_s": 0.0697,
+       "station": "Ο",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "o",
+       "dur_s": 0.0697,
+       "station": "Ο",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "k",
+       "dur_s": 0.0348,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.0348,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "N",
+       "dur_s": 0.0697,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "w",
+       "dur_s": 0.0348,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.0348,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "u",
+       "dur_s": 0.0697,
+       "station": "VV",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "b",
+       "dur_s": 0.0348,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.0348,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "u",
+       "dur_s": 0.0697,
+       "station": "VV",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "m",
+       "dur_s": 0.0348,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "o",
+       "dur_s": 0.0348,
+       "station": "Ο",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "N",
+       "dur_s": 0.1045,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "j",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.0522,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "n",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "e",
+       "dur_s": 0.0522,
+       "station": "Ε",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "e",
+       "dur_s": 0.1045,
+       "station": "Ε",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "k",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.0522,
+       "station": "Α",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "b",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "u",
+       "dur_s": 0.0522,
+       "station": "VV",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "r",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "u",
+       "dur_s": 0.0522,
+       "station": "VV",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "m",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "o",
+       "dur_s": 0.0522,
+       "station": "Ο",
+       "disposition": "SEATED"
+      },
+      {
+       "name": "N",
+       "dur_s": 0.1045,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "d",
+       "dur_s": 0.0522,
+       "station": null,
+       "disposition": "PASS_NATIVE"
+      },
+      {
+       "name": "a",
+       "dur_s": 0.0522,
+       "station": "Α",
+       "disposition": "SEATED"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
