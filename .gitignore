@@ -17,3 +17,7 @@ android/local.properties
 # diffsinger-lab: experiment sandbox - venv, cloned engine, voicebanks,
 # vocoder weights and downloads are local assets, never repo content
 diffsinger-lab/
+
+# local tool seats: runtimes, models, test clips (local assets,
+# never repo content — the diffsinger-lab precedent)
+tools/

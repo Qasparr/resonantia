@@ -153,6 +153,8 @@ __all__ = [
     "judge_onsets",
     "judge_vowel",
     "judge_masterlaw",
+    "judge_language",
+    "judge_coverage",
     "score_hook_run",
 ]
 
@@ -813,6 +815,73 @@ def judge_masterlaw(path, sworn_bps=None):
 
 
 # ---------------------------------------------------------------------
+# Judges 6 and 7 — language and coverage (the detection seat,
+# seated 24 November 2026; additive: Judges 1–5 keep their
+# verdict semantics exactly).
+# ---------------------------------------------------------------------
+
+def judge_language(path, expected_lang=None):
+    """Language identity: what language the render audibly is.
+
+    MECHANISM: the detection seat's dedicated identification
+    pass (studio/detect.py — whisper.cpp, ggml-base, offline)
+    reads the file and returns its language and the model's
+    own probability. Against expected_lang (the corpus item's
+    lang field, when the caller hands one) the verdict is
+    match True/False; without an expectation, match is None
+    and the read stands as a coordinate. A seat that cannot
+    run — binary or model absent — returns UNMEASURABLE with
+    the reason, never a guessed language: this judge exists
+    because the founder's ear once had to carry this question
+    alone ("i heard a couple Japanese words in it"); the
+    exam can now state the read beside the ear — for the
+    record, the Mugetsu hook of record reads ja, p = 0.8241.
+    """
+    from resonance.studio import detect as _detect
+    try:
+        read = _detect.detect_language(path)
+    except _detect.DetectError as e:
+        return {"judge": "language", "state": "UNMEASURABLE",
+                "reason": str(e), "expected": expected_lang}
+    return {"judge": "language",
+            "detected": read["language"],
+            "probability": read["probability"],
+            "expected": expected_lang,
+            "match": (read["language"] == expected_lang)
+            if expected_lang else None,
+            "engine": read["engine"], "model": read["model"]}
+
+
+def judge_coverage(path):
+    """Speech coverage: where the voice is, and where it is not.
+
+    MECHANISM: the detection seat's voice_segments (Silero
+    VAD when seated, the measured energy VAD otherwise — the
+    serving engine is named in the return) weighs speech
+    seconds against the file's duration. The verdict is the
+    coverage fraction with its coordinates (segment count,
+    longest silence): a render that was asked to sing for
+    13.3 s and is silent for 9 of them is caught here in
+    numbers, not impressions. No pass/fail line is drawn by
+    this judge — coverage is a coordinate the loop reads,
+    like the onset judge's gaps.
+    """
+    from resonance.studio import detect as _detect
+    try:
+        read = _detect.voice_segments(path)
+    except _detect.DetectError as e:
+        return {"judge": "coverage", "state": "UNMEASURABLE",
+                "reason": str(e)}
+    return {"judge": "coverage", "engine": read["engine"],
+            "coverage": read["coverage"],
+            "speech_s": read["speech_s"],
+            "duration_s": read["duration_s"],
+            "n_segments": len(read["segments"]),
+            "longest_silence_s": read["longest_silence_s"],
+            "segments": read["segments"]}
+
+
+# ---------------------------------------------------------------------
 # The baseline road: score a Mugetsu engine run of record.
 # ---------------------------------------------------------------------
 
@@ -886,6 +955,9 @@ def score_hook_run(run_dir, corpus, engine_label):
                 if dists else None,
             "n_match": sum(1 for r in reads if r.get("match")),
         }
+    language = judge_language(run_dir / "mugetsu-hook.wav",
+                              expected_lang=item.get("lang"))
+    coverage = judge_coverage(run_dir / "mugetsu-hook.wav")
     return {
         "item_id": "mugetsu-hook",
         "corpus_version": corpus["version"],
@@ -893,5 +965,6 @@ def score_hook_run(run_dir, corpus, engine_label):
         "render": str(run_dir / "mugetsu-hook.wav"),
         "state": "SCORED",
         "judges": {"durations": durations, "pitch": pitch,
-                   "onsets": onsets, "vowels": vowels},
+                   "onsets": onsets, "vowels": vowels,
+                   "language": language, "coverage": coverage},
     }
