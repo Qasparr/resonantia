@@ -1,0 +1,17 @@
+X:1
+T:808 Pattern Demo — the KRS Foundation Grid (drum sheet)
+% Struck with the pattern it notates, 24 November 2026.
+% Grid: 144 BPM, 13/8 Sigma Mega (the KRS foundation).
+% Legend: V:1 C, = the 808 kick, dial-tuned to VV (placed 44 Hz).
+% V:2 c = snare; g = hi-hat (closed; the bar-final g of each bar
+% is the open hat, per the pattern record in manifest.json).
+% '808' names the TR-808 sound family; every voice is synthesized
+% in-house by resonance/studio/eightoeight.py.
+M:13/8
+L:1/8
+Q:1/4=144
+K:C
+V:1 clef=bass
+C, z z C, z z C, z z z C, z z | C, z z C, z z C, z z z C, z z |
+V:2
+z g z g c g z g z g z [cg] g | z g z g c g z g z g z [cg] g |

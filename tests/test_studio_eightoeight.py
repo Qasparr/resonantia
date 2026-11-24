@@ -199,6 +199,87 @@ class TestRegistryAndDeterminism(unittest.TestCase):
         self.assertLess(tails[1], tails[2])
 
 
+class TestKickMeasurements(unittest.TestCase):
+    """Phase 2 (XXIV Nov 2026): the kick as a measured instrument —
+    fundamental accuracy against its argument, decay TIME against
+    its tau, drive as measured harmonic growth, and headroom
+    through the mastering chain. Added under the offline-
+    standalone commission; the Phase-1 classes above are untouched.
+    """
+
+    def test_fundamental_accuracy_at_argument(self):
+        # A clean kick (no click, no drive) settles where it is
+        # told: the tail read must land within 2 Hz of 55.
+        buf = e8.kick(fundamental=55.0, click=0.0, drive=0.0)
+        track = e8.kick_track(buf)
+        self.assertIsNotNone(track["tail_hz_last_250ms"])
+        self.assertAlmostEqual(track["tail_hz_last_250ms"], 55.0,
+                               delta=2.0)
+
+    def test_decay_time_follows_tau(self):
+        # Windowed RMS in the settled region (t >= 0.25 s, past
+        # the sweep): the ratio across one tau must stand near
+        # e^-1, and the crossing time must grow with the argument.
+        sr = e8.SR
+
+        def window_rms(buf, t0, t1):
+            seg = buf[int(t0 * sr):int(t1 * sr)]
+            return float(np.sqrt(np.mean(seg ** 2)))
+
+        measured = []
+        for tau in (0.08, 0.16, 0.32):
+            buf = e8.kick(fundamental=50.0, click=0.0, drive=0.0,
+                          decay_tau=tau, seconds=1.6)
+            r0 = window_rms(buf, 0.25, 0.30)
+            r1 = window_rms(buf, 0.25 + tau, 0.30 + tau)
+            self.assertAlmostEqual(r1 / r0, float(np.exp(-1.0)),
+                                   delta=0.06)
+            # The -20 dB crossing time scales with tau.
+            env_t = np.arange(len(buf)) / sr
+            amp = np.abs(buf)
+            win = sr // 100
+            smooth = np.convolve(amp, np.ones(win) / win,
+                                 mode="same")
+            peak = smooth[int(0.02 * sr):int(0.10 * sr)].max()
+            below = np.where((env_t > 0.1)
+                             & (smooth < peak * 0.1))[0]
+            measured.append(env_t[below[0]] if len(below) else 9.9)
+        self.assertLess(measured[0], measured[1])
+        self.assertLess(measured[1], measured[2])
+
+    def test_drive_grows_the_harmonics(self):
+        # tanh drive is the recipe's soft saturation: driven, the
+        # settled tail must carry measurably more energy in the
+        # harmonic band (2x-6x the fundamental) relative to the
+        # fundamental band than clean.
+        sr = e8.SR
+
+        def harmonic_share(drive):
+            buf = e8.kick(fundamental=50.0, click=0.0, drive=drive)
+            tail = buf[int(0.30 * sr):int(0.55 * sr)]
+            fund = _band_energy(tail, sr, 35.0, 75.0)
+            harm = _band_energy(tail, sr, 90.0, 320.0)
+            return harm / fund if fund else 0.0
+
+        self.assertGreater(harmonic_share(0.6),
+                           harmonic_share(0.0) * 1.5)
+
+    def test_headroom_through_the_mastering_chain(self):
+        # A hot stereo kick sum through pipeline.master_signal
+        # must come out at the law: -14 LUFS within tolerance,
+        # true peak at or under the -1.0 dBTP ceiling.
+        from resonance.studio import pipeline as pipe
+        buf = e8.kick(tune="VV", drive=0.3)
+        stereo = np.stack([buf, buf]) * 1.5  # deliberately hot
+        mastered, report = pipe.master_signal(
+            stereo, e8.SR, -14.0, -1.0)
+        lufs = pipe.measure_loudness_lufs(mastered, e8.SR)
+        self.assertAlmostEqual(lufs, -14.0, delta=0.5)
+        self.assertLessEqual(pipe.true_peak_dbtp(mastered, e8.SR),
+                             -1.0 + 0.05)
+        self.assertIn("lufs_after", report)
+
+
 if __name__ == "__main__":
     unittest.main()
 
