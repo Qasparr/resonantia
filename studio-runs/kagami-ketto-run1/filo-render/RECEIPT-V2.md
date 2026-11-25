@@ -67,3 +67,7 @@ FluidSynth/TiMidity and any sample-library road (no renderer, no library but a G
 The verdict on the new bed's caliber and the front-seated voice belongs to the founder, as it did for v1 — this receipt claims the measurements, not the ear.
 
 93 — Live, Love, and let Love, Live.
+
+---
+
+**ADDENDUM (2026-11-25, marked, the original above unaltered):** this set's **01 is superseded by FILO v3** (RECEIPT-V3.md) — the track re-rendered as its own track under the founder's order of 2026-11-25 08:00 EST, its vocals re-struck and gated, seated on this set's bed (which stands in v3 as 02, byte-identical). This set's 02 otherwise stands as struck. The v2 files are kept, marked superseded in part, never vanished.

@@ -1,0 +1,245 @@
+{
+  "balance_voice_raw_vs_v2_bed": {
+    "per_section": {
+      "verse_a": {
+        "voice_rms": 0.04209846756650443,
+        "bed_rms": 0.1885369043668828,
+        "ratio": 0.22329032985808997,
+        "windows": 43
+      },
+      "verse_b": {
+        "voice_rms": 0.043805149084435745,
+        "bed_rms": 0.18919717029999003,
+        "ratio": 0.23153173493545665,
+        "windows": 43
+      },
+      "shion": {
+        "voice_rms": 0.05246300283076392,
+        "bed_rms": 0.16501005302754865,
+        "ratio": 0.3179382217518902,
+        "windows": 21
+      },
+      "close": {
+        "voice_rms": 0.08084035220638308,
+        "bed_rms": 0.16012558087000128,
+        "ratio": 0.5048559497311907,
+        "windows": 13
+      }
+    },
+    "overall": {
+      "voice_rms": 0.05012294979623374,
+      "bed_rms": 0.18195264571731742,
+      "ratio": 0.2754724977954155,
+      "windows": 120
+    }
+  },
+  "voice_gain": {
+    "linear": 4.6161401232449375,
+    "db": 13.285579667721388,
+    "basis": "verse_a + verse_b pooled",
+    "verse_ratio_raw": 0.2274627658533679,
+    "target_verse_ratio": 1.05
+  },
+  "balance_after_v3_premaster": {
+    "per_section": {
+      "verse_a": {
+        "voice_rms": 0.19433242526086672,
+        "bed_rms": 0.1885369043668828,
+        "ratio": 1.030739450790526,
+        "windows": 43
+      },
+      "verse_b": {
+        "voice_rms": 0.20221070629339005,
+        "bed_rms": 0.18919717029999003,
+        "ratio": 1.068782931440073,
+        "windows": 43
+      },
+      "shion": {
+        "voice_rms": 0.24217657235300205,
+        "bed_rms": 0.16501005302754865,
+        "ratio": 1.4676473821420466,
+        "windows": 21
+      },
+      "close": {
+        "voice_rms": 0.37317039339713737,
+        "bed_rms": 0.16012558087000128,
+        "ratio": 2.330485806013079,
+        "windows": 13
+      }
+    },
+    "overall": {
+      "voice_rms": 0.23137455964978623,
+      "bed_rms": 0.18195264571731742,
+      "ratio": 1.27161964992392,
+      "windows": 120
+    }
+  },
+  "01_full_render_v3": {
+    "wav": "01-full-render-kagami-kettou-v3.wav",
+    "mp3": "01-full-render-kagami-kettou-v3.mp3",
+    "mp3_bytes": 10077165,
+    "mastering": {
+      "lufs_before": -10.29,
+      "gain_applied_db": -3.71,
+      "trim_db": -0.17,
+      "lufs_after": -14.22,
+      "sample_peak_db": -1.52,
+      "true_peak_dbtp": -1.37,
+      "ceiling_overrode_loudness": true,
+      "target_lufs": -14.0,
+      "ceiling_dbtp": -1.35
+    },
+    "verdict": {
+      "judge": "masterlaw",
+      "path": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/filo-render/01-full-render-kagami-kettou-v3.mp3",
+      "sample_rate_hz": 48000,
+      "checks": [
+        {
+          "check": "integrated loudness",
+          "value": -14.22,
+          "unit": "LUFS",
+          "law": "-14.0 +/- 0.5 LUFS",
+          "ok": true
+        },
+        {
+          "check": "decoded true peak",
+          "value": -1.37,
+          "unit": "dBTP",
+          "law": "<= -1.0 dBTP",
+          "ok": true
+        },
+        {
+          "check": "bitrate (sworn)",
+          "value": 320000,
+          "unit": "bps",
+          "law": "exactly 320000 bps",
+          "ok": true
+        }
+      ],
+      "compliant": true
+    }
+  },
+  "02_instrumental_v3": {
+    "wav": "02-instrumental-kagami-kettou-v3.wav",
+    "mp3": "02-instrumental-kagami-kettou-v3.mp3",
+    "byte_identical_to_v2": {
+      "wav_sha256": "ce724682567b92fbe202135173c8c09c4f12759e96493b8fd96fbf7b70812ffd",
+      "mp3_sha256": "8248c22c391da661d5de6de59c743766189bfe2657b1efefec642ee20cc15d58"
+    },
+    "verdict": {
+      "judge": "masterlaw",
+      "path": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/filo-render/02-instrumental-kagami-kettou-v3.mp3",
+      "sample_rate_hz": 48000,
+      "checks": [
+        {
+          "check": "integrated loudness",
+          "value": -14.01,
+          "unit": "LUFS",
+          "law": "-14.0 +/- 0.5 LUFS",
+          "ok": true
+        },
+        {
+          "check": "decoded true peak",
+          "value": -1.32,
+          "unit": "dBTP",
+          "law": "<= -1.0 dBTP",
+          "ok": true
+        },
+        {
+          "check": "bitrate (sworn)",
+          "value": 320000,
+          "unit": "bps",
+          "law": "exactly 320000 bps",
+          "ok": true
+        }
+      ],
+      "compliant": true
+    }
+  },
+  "03_vocals_v3": {
+    "source": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/vocal-stem-v3.wav",
+    "source_bytes": 22215420,
+    "wav": "03-vocals-kagami-kettou-v3.wav",
+    "mp3": "03-vocals-kagami-kettou-v3.mp3",
+    "mp3_bytes": 10077165,
+    "mastering": {
+      "passes": [
+        {
+          "lufs_before": -26.01,
+          "gain_applied_db": 12.01,
+          "trim_db": -0.27,
+          "lufs_after": -14.46,
+          "sample_peak_db": -1.62,
+          "true_peak_dbtp": -1.37,
+          "ceiling_overrode_loudness": true,
+          "target_lufs": -14.0,
+          "ceiling_dbtp": -1.35
+        }
+      ],
+      "lufs_after_final": -14.46
+    },
+    "verdict": {
+      "judge": "masterlaw",
+      "path": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/filo-render/03-vocals-kagami-kettou-v3.mp3",
+      "sample_rate_hz": 48000,
+      "checks": [
+        {
+          "check": "integrated loudness",
+          "value": -14.46,
+          "unit": "LUFS",
+          "law": "-14.0 +/- 0.5 LUFS",
+          "ok": true
+        },
+        {
+          "check": "decoded true peak",
+          "value": -1.36,
+          "unit": "dBTP",
+          "law": "<= -1.0 dBTP",
+          "ok": true
+        },
+        {
+          "check": "bitrate (sworn)",
+          "value": 320000,
+          "unit": "bps",
+          "law": "exactly 320000 bps",
+          "ok": true
+        }
+      ],
+      "compliant": true
+    }
+  },
+  "balance_delivered_diff": {
+    "per_section": {
+      "verse_a": {
+        "voice_rms": 0.141178326363525,
+        "bed_rms": 0.1885369043668828,
+        "ratio": 0.7488100371521932,
+        "windows": 43
+      },
+      "verse_b": {
+        "voice_rms": 0.14553117166304413,
+        "bed_rms": 0.18919717029999003,
+        "ratio": 0.7692037435459034,
+        "windows": 43
+      },
+      "shion": {
+        "voice_rms": 0.16604856842184273,
+        "bed_rms": 0.16501005302754865,
+        "ratio": 1.0062936492367571,
+        "windows": 21
+      },
+      "close": {
+        "voice_rms": 0.23871709775750516,
+        "bed_rms": 0.16012558087000128,
+        "ratio": 1.490811752004252,
+        "windows": 13
+      }
+    },
+    "overall": {
+      "voice_rms": 0.16040543294453957,
+      "bed_rms": 0.18195264571731742,
+      "ratio": 0.8815779089782859,
+      "windows": 120
+    }
+  }
+}

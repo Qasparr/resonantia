@@ -1,0 +1,65 @@
+{
+  "stage": "train",
+  "factors": {
+    "VV": 1.1412,
+    "Α": 1.1443,
+    "Ε": 1.1411,
+    "Ι": 1.1426,
+    "Ο": 1.1415
+  },
+  "trained_by": [
+    "pow-26ef27c5d8490bfc9f03c52186cc7f76af6395aeca91efe464f75d1422401da6"
+  ],
+  "store": {
+    "version": 1,
+    "seats": {
+      "VV": {
+        "asked_s": 12.2253,
+        "realized_s": 10.7127,
+        "phonemes": 90,
+        "trained_by": [
+          "pow-26ef27c5d8490bfc9f03c52186cc7f76af6395aeca91efe464f75d1422401da6"
+        ]
+      },
+      "Α": {
+        "asked_s": 22.1054,
+        "realized_s": 19.3174,
+        "phonemes": 195,
+        "trained_by": [
+          "pow-26ef27c5d8490bfc9f03c52186cc7f76af6395aeca91efe464f75d1422401da6"
+        ]
+      },
+      "Ε": {
+        "asked_s": 8.2663,
+        "realized_s": 7.2439,
+        "phonemes": 68,
+        "trained_by": [
+          "pow-26ef27c5d8490bfc9f03c52186cc7f76af6395aeca91efe464f75d1422401da6"
+        ]
+      },
+      "Ι": {
+        "asked_s": 14.9943,
+        "realized_s": 13.123,
+        "phonemes": 124,
+        "trained_by": [
+          "pow-26ef27c5d8490bfc9f03c52186cc7f76af6395aeca91efe464f75d1422401da6"
+        ]
+      },
+      "Ο": {
+        "asked_s": 17.2408,
+        "realized_s": 15.1034,
+        "phonemes": 134,
+        "trained_by": [
+          "pow-26ef27c5d8490bfc9f03c52186cc7f76af6395aeca91efe464f75d1422401da6"
+        ]
+      }
+    }
+  },
+  "chain_verification": {
+    "ok": true,
+    "records": 1,
+    "ledger": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/ledger-v3.jsonl",
+    "breaks": []
+  },
+  "pass1_realization_pct": 88.3518
+}

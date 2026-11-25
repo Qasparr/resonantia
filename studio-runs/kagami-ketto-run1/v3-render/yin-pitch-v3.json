@@ -1,0 +1,3975 @@
+{
+  "a01": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.6587,
+        "cents": 0.05
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.3547,
+        "cents": -2.57
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6234,
+        "cents": 0.09
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.2078,
+        "cents": -4.03
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.6215,
+        "cents": -0.26
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6929,
+        "cents": 0.78
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.7332,
+        "cents": 1.18
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4823,
+        "cents": -1.31
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.4867,
+        "cents": -1.38
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.7641,
+        "cents": 1.49
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 261.4894,
+        "cents": -0.9
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6625,
+        "cents": 0.48
+      }
+    ]
+  },
+  "a02": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.6374,
+        "cents": -0.12
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4001,
+        "cents": -2.12
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6543,
+        "cents": 0.4
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.9483,
+        "cents": 3.31
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.6939,
+        "cents": 0.35
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5615,
+        "cents": -0.52
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6814,
+        "cents": 0.67
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6655,
+        "cents": 0.51
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.7375,
+        "cents": 0.71
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5474,
+        "cents": -0.66
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 261.6155,
+        "cents": -0.07
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.8665,
+        "cents": 2.5
+      }
+    ]
+  },
+  "a03": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.7261,
+        "cents": 0.61
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5054,
+        "cents": -1.08
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.64,
+        "cents": 0.26
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6547,
+        "cents": 0.4
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.7728,
+        "cents": 1.0
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5145,
+        "cents": -0.99
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.7336,
+        "cents": 1.18
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6506,
+        "cents": 0.36
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.7422,
+        "cents": 0.75
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 175.0559,
+        "cents": 4.37
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 261.4486,
+        "cents": -1.17
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.9187,
+        "cents": 3.02
+      }
+    ]
+  },
+  "a04": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.1744,
+        "cents": -3.99
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.7085,
+        "cents": 0.94
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.3493,
+        "cents": -2.63
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.1539,
+        "cents": -4.57
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 206.8617,
+        "cents": -6.6
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 180.7615,
+        "cents": 59.9
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5456,
+        "cents": -0.68
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 180.5033,
+        "cents": 57.43
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.4381,
+        "cents": -1.79
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5598,
+        "cents": -0.54
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5698,
+        "cents": -0.44
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5349,
+        "cents": -0.79
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 266.9922,
+        "cents": 35.15
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5824,
+        "cents": -0.31
+      }
+    ]
+  },
+  "a05": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.4649,
+        "cents": -1.56
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 175.224,
+        "cents": 6.04
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.8456,
+        "cents": 2.29
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.7316,
+        "cents": 1.16
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.1367,
+        "cents": -4.3
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.7772,
+        "cents": 1.62
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 175.2631,
+        "cents": 6.42
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.7899,
+        "cents": 1.74
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.3833,
+        "cents": -2.24
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5849,
+        "cents": -0.29
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6613,
+        "cents": 0.47
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6352,
+        "cents": 0.21
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.6382,
+        "cents": -0.12
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 261.5613,
+        "cents": -0.43
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 175.0738,
+        "cents": 4.55
+      }
+    ]
+  },
+  "a06": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.6517,
+        "cents": -0.01
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6344,
+        "cents": 0.2
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6158,
+        "cents": 0.02
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4821,
+        "cents": -1.31
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.7579,
+        "cents": 0.88
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6028,
+        "cents": -0.11
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.625,
+        "cents": 0.11
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4468,
+        "cents": -1.66
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.6532,
+        "cents": 0.01
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.699,
+        "cents": 0.84
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 261.6235,
+        "cents": -0.01
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5694,
+        "cents": -0.44
+      }
+    ]
+  },
+  "a07": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.4937,
+        "cents": -1.32
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5666,
+        "cents": -0.47
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4294,
+        "cents": -1.83
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6883,
+        "cents": 0.73
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.5441,
+        "cents": -0.9
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6841,
+        "cents": 0.69
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 162.6911,
+        "cents": -122.44
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5267,
+        "cents": -0.87
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.2803,
+        "cents": -3.1
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5119,
+        "cents": -1.01
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6302,
+        "cents": 0.16
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 261.5315,
+        "cents": -0.62
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.7035,
+        "cents": 0.89
+      }
+    ]
+  },
+  "a08": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.6328,
+        "cents": -0.16
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.7258,
+        "cents": 1.11
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6356,
+        "cents": 0.21
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6033,
+        "cents": -0.11
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.7274,
+        "cents": 0.63
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5533,
+        "cents": -0.6
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6566,
+        "cents": 0.42
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6393,
+        "cents": 0.25
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.6678,
+        "cents": 0.13
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5455,
+        "cents": -0.68
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.7572,
+        "cents": 1.42
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 261.9152,
+        "cents": 1.92
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6344,
+        "cents": 0.2
+      }
+    ]
+  },
+  "a09": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.6238,
+        "cents": -0.24
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4919,
+        "cents": -1.21
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5966,
+        "cents": -0.17
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.7099,
+        "cents": 0.95
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.5234,
+        "cents": -1.08
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6662,
+        "cents": 0.52
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6325,
+        "cents": 0.18
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.2515,
+        "cents": -3.6
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.3831,
+        "cents": -2.25
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.7551,
+        "cents": 1.4
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 173.3195,
+        "cents": -12.88
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 261.1567,
+        "cents": -3.11
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6644,
+        "cents": 0.5
+      }
+    ]
+  },
+  "a10": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.7711,
+        "cents": 0.99
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5228,
+        "cents": -0.91
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.513,
+        "cents": -1.0
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6139,
+        "cents": -0.0
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.7267,
+        "cents": 0.62
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5055,
+        "cents": -1.08
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.8361,
+        "cents": 2.2
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.3195,
+        "cents": -2.92
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.5794,
+        "cents": -0.61
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5417,
+        "cents": -0.72
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.7052,
+        "cents": 0.9
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 261.4194,
+        "cents": -1.36
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.2535,
+        "cents": -3.58
+      }
+    ]
+  },
+  "a11": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.6989,
+        "cents": 0.39
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.3954,
+        "cents": -2.17
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6434,
+        "cents": 0.29
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.3521,
+        "cents": -2.6
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.7019,
+        "cents": 0.41
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5273,
+        "cents": -0.86
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5528,
+        "cents": -0.61
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4128,
+        "cents": -2.0
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.6242,
+        "cents": -0.24
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6613,
+        "cents": 0.47
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6623,
+        "cents": 0.48
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 261.7131,
+        "cents": 0.58
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.7139,
+        "cents": 0.99
+      }
+    ]
+  },
+  "a12": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 206.6521,
+        "cents": -8.36
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.562,
+        "cents": -0.52
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.2035,
+        "cents": -4.08
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6441,
+        "cents": 0.3
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.5155,
+        "cents": -1.14
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.7217,
+        "cents": 1.07
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6416,
+        "cents": 0.27
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5957,
+        "cents": -0.18
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.4343,
+        "cents": -1.82
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5398,
+        "cents": -0.74
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.65,
+        "cents": 0.36
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 261.5182,
+        "cents": -0.71
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.8478,
+        "cents": 2.31
+      }
+    ]
+  },
+  "a13": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.6474,
+        "cents": -0.04
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.2952,
+        "cents": -3.17
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6992,
+        "cents": 0.84
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5208,
+        "cents": -0.93
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.6782,
+        "cents": 0.22
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.2427,
+        "cents": -3.69
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.3859,
+        "cents": -2.26
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.117,
+        "cents": -4.94
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.232,
+        "cents": -3.51
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6146,
+        "cents": 0.01
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 261.4729,
+        "cents": -1.01
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.3452,
+        "cents": -2.67
+      }
+    ]
+  },
+  "a14": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.5194,
+        "cents": -1.11
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5094,
+        "cents": -1.04
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.7925,
+        "cents": 1.77
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.3556,
+        "cents": -2.57
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.6879,
+        "cents": 0.3
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.7004,
+        "cents": 0.85
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5572,
+        "cents": -0.56
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5311,
+        "cents": -0.82
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.6675,
+        "cents": 0.13
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6224,
+        "cents": 0.08
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6085,
+        "cents": -0.06
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 262.1231,
+        "cents": 3.29
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4993,
+        "cents": -1.14
+      }
+    ]
+  },
+  "a15": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.4061,
+        "cents": -2.05
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.781,
+        "cents": 1.65
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 189.3037,
+        "cents": 139.84
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6408,
+        "cents": 0.26
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 230.989,
+        "cents": 184.38
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5866,
+        "cents": -0.27
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6678,
+        "cents": 0.53
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 194.2944,
+        "cents": 184.89
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.7373,
+        "cents": 0.71
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4796,
+        "cents": -1.33
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.8321,
+        "cents": 2.16
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6368,
+        "cents": 0.22
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 214.7418,
+        "cents": 58.12
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 261.5879,
+        "cents": -0.25
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.2177,
+        "cents": -3.93
+      }
+    ]
+  },
+  "a16": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.3995,
+        "cents": -2.11
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4892,
+        "cents": -1.24
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 175.3034,
+        "cents": 6.82
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.7556,
+        "cents": 1.4
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.3552,
+        "cents": -2.48
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 200.0351,
+        "cents": 235.3
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5979,
+        "cents": -0.16
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5796,
+        "cents": -0.34
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.7153,
+        "cents": 0.53
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4896,
+        "cents": -1.24
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4871,
+        "cents": -1.26
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.8134,
+        "cents": 1.97
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.7621,
+        "cents": 0.92
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 261.5756,
+        "cents": -0.33
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6347,
+        "cents": 0.2
+      }
+    ]
+  },
+  "b01": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4752,
+        "cents": -1.38
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 261.7519,
+        "cents": 0.84
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.8024,
+        "cents": 1.25
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5449,
+        "cents": -0.69
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.7266,
+        "cents": 1.11
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5892,
+        "cents": -0.25
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.8538,
+        "cents": 1.68
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.748,
+        "cents": 1.33
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 176.694,
+        "cents": 20.5
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 175.9036,
+        "cents": 12.74
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.3759,
+        "cents": -2.31
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.3943,
+        "cents": -2.18
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.7218,
+        "cents": 1.07
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.8703,
+        "cents": 2.54
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.9748,
+        "cents": 2.69
+      }
+    ]
+  },
+  "b02": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6128,
+        "cents": -0.01
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 261.6532,
+        "cents": 0.18
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.4389,
+        "cents": -1.78
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4304,
+        "cents": -1.82
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.7819,
+        "cents": 1.66
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5753,
+        "cents": -0.38
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.6799,
+        "cents": 0.23
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6922,
+        "cents": 0.77
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 175.679,
+        "cents": 10.53
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 176.2391,
+        "cents": 16.04
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.7031,
+        "cents": 0.42
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5882,
+        "cents": -0.26
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6015,
+        "cents": -0.12
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6645,
+        "cents": 0.5
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.438,
+        "cents": -1.79
+      }
+    ]
+  },
+  "b03": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6746,
+        "cents": 0.6
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 261.7007,
+        "cents": 0.5
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.3664,
+        "cents": -2.46
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4324,
+        "cents": -1.8
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.8195,
+        "cents": 1.39
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5388,
+        "cents": -0.75
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4525,
+        "cents": -1.6
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6103,
+        "cents": -0.04
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.6825,
+        "cents": 0.25
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6062,
+        "cents": -0.08
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4232,
+        "cents": -1.89
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6507,
+        "cents": 0.36
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.9169,
+        "cents": 2.2
+      }
+    ]
+  },
+  "b04": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5773,
+        "cents": -0.37
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 261.5466,
+        "cents": -0.52
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 173.6545,
+        "cents": -9.54
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.7295,
+        "cents": 0.64
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.3409,
+        "cents": -2.71
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4793,
+        "cents": -1.34
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.2184,
+        "cents": -3.93
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.7295,
+        "cents": 0.64
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4607,
+        "cents": -1.52
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4479,
+        "cents": -1.65
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6637,
+        "cents": 0.49
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.6729,
+        "cents": 0.17
+      }
+    ]
+  },
+  "b05": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6576,
+        "cents": 0.43
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 261.6185,
+        "cents": -0.05
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.9308,
+        "cents": 3.14
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6378,
+        "cents": 0.23
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.5868,
+        "cents": -0.55
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.3782,
+        "cents": -2.34
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5923,
+        "cents": -0.22
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.7321,
+        "cents": 1.17
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.5447,
+        "cents": -0.9
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.8043,
+        "cents": 1.88
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6609,
+        "cents": 0.46
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.9915,
+        "cents": 3.74
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.934,
+        "cents": 2.35
+      }
+    ]
+  },
+  "b06": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5635,
+        "cents": -0.5
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 260.8773,
+        "cents": -4.96
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.611,
+        "cents": -0.03
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6487,
+        "cents": 0.34
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.6556,
+        "cents": 0.03
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5423,
+        "cents": -0.71
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.538,
+        "cents": -0.75
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6611,
+        "cents": 0.47
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.7041,
+        "cents": 0.43
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.1478,
+        "cents": -4.63
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5136,
+        "cents": -1.0
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 178.5437,
+        "cents": 38.53
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.4636,
+        "cents": -1.57
+      }
+    ]
+  },
+  "b07": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5117,
+        "cents": -1.02
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 261.7671,
+        "cents": 0.94
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5321,
+        "cents": -0.81
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4162,
+        "cents": -1.96
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.6491,
+        "cents": -0.03
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5734,
+        "cents": -0.4
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.8889,
+        "cents": 2.72
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 184.0187,
+        "cents": 90.82
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.6604,
+        "cents": 0.07
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6003,
+        "cents": -0.14
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.3894,
+        "cents": -2.23
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.0027,
+        "cents": -6.07
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.809,
+        "cents": 1.31
+      }
+    ]
+  },
+  "b08": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.7131,
+        "cents": 0.98
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 261.7701,
+        "cents": 0.96
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5113,
+        "cents": -1.02
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.8697,
+        "cents": 2.53
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 206.9828,
+        "cents": -5.59
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.3048,
+        "cents": -3.07
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5926,
+        "cents": -0.21
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.3411,
+        "cents": -2.71
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.6596,
+        "cents": 0.06
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5862,
+        "cents": -0.28
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.3582,
+        "cents": -2.54
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.7055,
+        "cents": 0.91
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.5829,
+        "cents": -0.58
+      }
+    ]
+  },
+  "b09": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4825,
+        "cents": -1.31
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 261.6558,
+        "cents": 0.2
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 173.3261,
+        "cents": -12.82
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4917,
+        "cents": -1.21
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.2869,
+        "cents": -3.05
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.2862,
+        "cents": -3.25
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.3638,
+        "cents": -2.48
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6477,
+        "cents": 0.33
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.1636,
+        "cents": -4.08
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5819,
+        "cents": -0.32
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5769,
+        "cents": -0.37
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4671,
+        "cents": -1.46
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.8058,
+        "cents": 1.28
+      }
+    ]
+  },
+  "b10": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5999,
+        "cents": -0.14
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 261.6132,
+        "cents": -0.08
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 173.7757,
+        "cents": -8.33
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6476,
+        "cents": 0.33
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.652,
+        "cents": -0.0
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6111,
+        "cents": -0.03
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.51,
+        "cents": -1.03
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6512,
+        "cents": 0.37
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.7299,
+        "cents": 0.65
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4766,
+        "cents": -1.36
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5474,
+        "cents": -0.66
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5594,
+        "cents": -0.54
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.775,
+        "cents": 1.02
+      }
+    ]
+  },
+  "b11": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 173.7758,
+        "cents": -8.33
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 261.5752,
+        "cents": -0.33
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 173.2458,
+        "cents": -13.62
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.6417,
+        "cents": -0.09
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5263,
+        "cents": -0.87
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5301,
+        "cents": -0.83
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.7225,
+        "cents": 1.07
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.3708,
+        "cents": -2.35
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4574,
+        "cents": -1.55
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6189,
+        "cents": 0.05
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4736,
+        "cents": -1.39
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.6388,
+        "cents": -0.11
+      }
+    ]
+  },
+  "b12": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6498,
+        "cents": 0.35
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 261.2998,
+        "cents": -2.16
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.6901,
+        "cents": 0.31
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5939,
+        "cents": -0.2
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5917,
+        "cents": -0.22
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5424,
+        "cents": -0.71
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.4672,
+        "cents": -1.54
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6642,
+        "cents": 0.5
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 175.0136,
+        "cents": 3.96
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 175.3588,
+        "cents": 7.37
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.5748,
+        "cents": -0.65
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.584,
+        "cents": -0.3
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 175.0969,
+        "cents": 4.78
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 176.5519,
+        "cents": 19.11
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.8454,
+        "cents": 1.61
+      }
+    ]
+  },
+  "b13": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.2966,
+        "cents": -3.15
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 261.7879,
+        "cents": 1.07
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.7155,
+        "cents": 1.01
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5321,
+        "cents": -0.81
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6762,
+        "cents": 0.62
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.482,
+        "cents": -1.42
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5466,
+        "cents": -0.67
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 173.6027,
+        "cents": -10.06
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6877,
+        "cents": 0.73
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.3123,
+        "cents": -2.84
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6519,
+        "cents": 0.37
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 175.1396,
+        "cents": 5.2
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 173.9299,
+        "cents": -6.8
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 208.2376,
+        "cents": 4.87
+      }
+    ]
+  },
+  "b14": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4987,
+        "cents": -1.14
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 261.8546,
+        "cents": 1.51
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5387,
+        "cents": -0.75
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.5894,
+        "cents": -0.53
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.3766,
+        "cents": -2.36
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4957,
+        "cents": -1.17
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4711,
+        "cents": -1.42
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.5985,
+        "cents": -0.45
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6772,
+        "cents": 0.63
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6308,
+        "cents": 0.17
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6088,
+        "cents": -0.05
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.5825,
+        "cents": -0.58
+      }
+    ]
+  },
+  "b15": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5453,
+        "cents": -0.68
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 261.5489,
+        "cents": -0.51
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.7629,
+        "cents": 1.47
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.6558,
+        "cents": 0.03
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5251,
+        "cents": -0.88
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.488,
+        "cents": -1.25
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6934,
+        "cents": 0.79
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.5653,
+        "cents": -0.73
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.611,
+        "cents": -0.03
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6161,
+        "cents": 0.02
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6035,
+        "cents": -0.11
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.6724,
+        "cents": 0.17
+      }
+    ]
+  },
+  "b16": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5747,
+        "cents": -0.39
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 261.6873,
+        "cents": 0.41
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6005,
+        "cents": -0.13
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.7696,
+        "cents": 0.98
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.7311,
+        "cents": 1.16
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6043,
+        "cents": -0.1
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.1107,
+        "cents": -5.0
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.4941,
+        "cents": -1.32
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6358,
+        "cents": 0.21
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5839,
+        "cents": -0.3
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4818,
+        "cents": -1.31
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.6669,
+        "cents": 0.12
+      }
+    ]
+  },
+  "s01": {
+    "speaker": "Phascogale",
+    "per_note": [
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.0538,
+        "cents": -0.86
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 415.9021,
+        "cents": 2.49
+      },
+      {
+        "midi": 70,
+        "target_hz": 466.1638,
+        "measured_hz": 341.2015,
+        "cents": -540.26
+      },
+      {
+        "midi": 72,
+        "target_hz": 523.2511,
+        "measured_hz": 523.0678,
+        "cents": -0.61
+      },
+      {
+        "midi": 70,
+        "target_hz": 466.1638,
+        "measured_hz": 465.8948,
+        "cents": -1.0
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 415.1538,
+        "cents": -0.63
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.1988,
+        "cents": -0.15
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 414.6771,
+        "cents": -2.62
+      },
+      {
+        "midi": 72,
+        "target_hz": 523.2511,
+        "measured_hz": 523.2412,
+        "cents": -0.03
+      },
+      {
+        "midi": 75,
+        "target_hz": 622.254,
+        "measured_hz": 621.3417,
+        "cents": -2.54
+      },
+      {
+        "midi": 72,
+        "target_hz": 523.2511,
+        "measured_hz": 522.4963,
+        "cents": -2.5
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.2249,
+        "cents": -0.02
+      }
+    ]
+  },
+  "s02": {
+    "speaker": "Phascogale",
+    "per_note": [
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 415.3863,
+        "cents": 0.34
+      },
+      {
+        "midi": 70,
+        "target_hz": 466.1638,
+        "measured_hz": 467.0125,
+        "cents": 3.15
+      },
+      {
+        "midi": 72,
+        "target_hz": 523.2511,
+        "measured_hz": 525.975,
+        "cents": 8.99
+      },
+      {
+        "midi": 70,
+        "target_hz": 466.1638,
+        "measured_hz": 465.8765,
+        "cents": -1.07
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 415.2149,
+        "cents": -0.37
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 350.23,
+        "cents": 4.96
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 415.326,
+        "cents": 0.09
+      },
+      {
+        "midi": 72,
+        "target_hz": 523.2511,
+        "measured_hz": 523.2593,
+        "cents": 0.03
+      },
+      {
+        "midi": 75,
+        "target_hz": 622.254,
+        "measured_hz": 622.1191,
+        "cents": -0.38
+      },
+      {
+        "midi": 72,
+        "target_hz": 523.2511,
+        "measured_hz": 523.3101,
+        "cents": 0.2
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 415.407,
+        "cents": 0.43
+      },
+      {
+        "midi": 70,
+        "target_hz": 466.1638,
+        "measured_hz": 465.9774,
+        "cents": -0.69
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 411.0712,
+        "cents": -17.74
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.0039,
+        "cents": -1.11
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.3126,
+        "cents": 0.42
+      }
+    ]
+  },
+  "s03": {
+    "speaker": "Phascogale",
+    "per_note": [
+      {
+        "midi": 70,
+        "target_hz": 466.1638,
+        "measured_hz": 466.2436,
+        "cents": 0.3
+      },
+      {
+        "midi": 72,
+        "target_hz": 523.2511,
+        "measured_hz": 523.085,
+        "cents": -0.55
+      },
+      {
+        "midi": 70,
+        "target_hz": 466.1638,
+        "measured_hz": 468.6468,
+        "cents": 9.2
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 412.0006,
+        "cents": -13.83
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.6848,
+        "cents": 2.26
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 415.3329,
+        "cents": 0.12
+      },
+      {
+        "midi": 72,
+        "target_hz": 523.2511,
+        "measured_hz": 523.3529,
+        "cents": 0.34
+      },
+      {
+        "midi": 75,
+        "target_hz": 622.254,
+        "measured_hz": 622.2555,
+        "cents": 0.0
+      },
+      {
+        "midi": 72,
+        "target_hz": 523.2511,
+        "measured_hz": 523.1618,
+        "cents": -0.3
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 415.9046,
+        "cents": 2.5
+      },
+      {
+        "midi": 70,
+        "target_hz": 466.1638,
+        "measured_hz": 461.8131,
+        "cents": -16.23
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 415.2989,
+        "cents": -0.02
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "state": "UNMEASURABLE",
+        "reason": "steady centre under 30 ms"
+      }
+    ]
+  },
+  "s04": {
+    "speaker": "Phascogale",
+    "per_note": [
+      {
+        "midi": 72,
+        "target_hz": 523.2511,
+        "measured_hz": 523.5778,
+        "cents": 1.08
+      },
+      {
+        "midi": 70,
+        "target_hz": 466.1638,
+        "measured_hz": 465.6001,
+        "cents": -2.09
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 415.7626,
+        "cents": 1.91
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 348.8875,
+        "cents": -1.69
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 415.3591,
+        "cents": 0.23
+      },
+      {
+        "midi": 72,
+        "target_hz": 523.2511,
+        "measured_hz": 523.394,
+        "cents": 0.47
+      },
+      {
+        "midi": 75,
+        "target_hz": 622.254,
+        "measured_hz": 622.2619,
+        "cents": 0.02
+      },
+      {
+        "midi": 72,
+        "target_hz": 523.2511,
+        "measured_hz": 522.8716,
+        "cents": -1.26
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 415.2863,
+        "cents": -0.08
+      },
+      {
+        "midi": 70,
+        "target_hz": 466.1638,
+        "measured_hz": 466.1234,
+        "cents": -0.15
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 415.2387,
+        "cents": -0.28
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.2571,
+        "cents": 0.14
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 415.1013,
+        "cents": -0.85
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "state": "UNMEASURABLE",
+        "reason": "steady centre under 30 ms"
+      }
+    ]
+  },
+  "s05": {
+    "speaker": "Phascogale",
+    "per_note": [
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 348.8589,
+        "cents": -1.83
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 414.8102,
+        "cents": -2.06
+      },
+      {
+        "midi": 70,
+        "target_hz": 466.1638,
+        "measured_hz": 466.7989,
+        "cents": 2.36
+      },
+      {
+        "midi": 72,
+        "target_hz": 523.2511,
+        "measured_hz": 522.8321,
+        "cents": -1.39
+      },
+      {
+        "midi": 70,
+        "target_hz": 466.1638,
+        "measured_hz": 466.0126,
+        "cents": -0.56
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 415.2965,
+        "cents": -0.03
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.5593,
+        "cents": 1.64
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 415.5596,
+        "cents": 1.06
+      },
+      {
+        "midi": 72,
+        "target_hz": 523.2511,
+        "measured_hz": 523.2517,
+        "cents": 0.0
+      },
+      {
+        "midi": 75,
+        "target_hz": 622.254,
+        "measured_hz": 621.9156,
+        "cents": -0.94
+      },
+      {
+        "midi": 72,
+        "target_hz": 523.2511,
+        "measured_hz": 522.7508,
+        "cents": -1.66
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 415.0694,
+        "cents": -0.98
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.1154,
+        "cents": -0.56
+      }
+    ]
+  },
+  "s06": {
+    "speaker": "Phascogale",
+    "per_note": [
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 415.5016,
+        "cents": 0.82
+      },
+      {
+        "midi": 70,
+        "target_hz": 466.1638,
+        "measured_hz": 703.6622,
+        "cents": 712.86
+      },
+      {
+        "midi": 72,
+        "target_hz": 523.2511,
+        "measured_hz": 524.9671,
+        "cents": 5.67
+      },
+      {
+        "midi": 70,
+        "target_hz": 466.1638,
+        "measured_hz": 466.0785,
+        "cents": -0.32
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 422.9379,
+        "cents": 31.53
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.3414,
+        "cents": 0.56
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 415.6607,
+        "cents": 1.48
+      },
+      {
+        "midi": 72,
+        "target_hz": 523.2511,
+        "measured_hz": 523.476,
+        "cents": 0.74
+      },
+      {
+        "midi": 75,
+        "target_hz": 622.254,
+        "measured_hz": 622.5095,
+        "cents": 0.71
+      },
+      {
+        "midi": 72,
+        "target_hz": 523.2511,
+        "measured_hz": 523.2572,
+        "cents": 0.02
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 415.2338,
+        "cents": -0.3
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.2577,
+        "cents": 0.15
+      }
+    ]
+  },
+  "s07": {
+    "speaker": "Phascogale",
+    "per_note": [
+      {
+        "midi": 70,
+        "target_hz": 466.1638,
+        "measured_hz": 466.2371,
+        "cents": 0.27
+      },
+      {
+        "midi": 72,
+        "target_hz": 523.2511,
+        "measured_hz": 523.2546,
+        "cents": 0.01
+      },
+      {
+        "midi": 70,
+        "target_hz": 466.1638,
+        "measured_hz": 225.2058,
+        "cents": -1259.51
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 415.2505,
+        "cents": -0.23
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.0876,
+        "cents": -0.7
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 414.5205,
+        "cents": -3.27
+      },
+      {
+        "midi": 72,
+        "target_hz": 523.2511,
+        "measured_hz": 524.3758,
+        "cents": 3.72
+      },
+      {
+        "midi": 75,
+        "target_hz": 622.254,
+        "measured_hz": 622.4205,
+        "cents": 0.46
+      },
+      {
+        "midi": 72,
+        "target_hz": 523.2511,
+        "measured_hz": 522.7277,
+        "cents": -1.73
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 420.0082,
+        "cents": 19.5
+      },
+      {
+        "midi": 70,
+        "target_hz": 466.1638,
+        "measured_hz": 465.9878,
+        "cents": -0.65
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 415.0171,
+        "cents": -1.2
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.1074,
+        "cents": -0.6
+      }
+    ]
+  },
+  "s08": {
+    "speaker": "Phascogale",
+    "per_note": [
+      {
+        "midi": 72,
+        "target_hz": 523.2511,
+        "measured_hz": 523.1928,
+        "cents": -0.19
+      },
+      {
+        "midi": 70,
+        "target_hz": 466.1638,
+        "measured_hz": 465.966,
+        "cents": -0.73
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 415.2605,
+        "cents": -0.18
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.0247,
+        "cents": -1.01
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 415.2275,
+        "cents": -0.32
+      },
+      {
+        "midi": 72,
+        "target_hz": 523.2511,
+        "measured_hz": 525.7272,
+        "cents": 8.17
+      },
+      {
+        "midi": 75,
+        "target_hz": 622.254,
+        "measured_hz": 615.8355,
+        "cents": -17.95
+      },
+      {
+        "midi": 72,
+        "target_hz": 523.2511,
+        "measured_hz": 523.2212,
+        "cents": -0.1
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 414.8835,
+        "cents": -1.76
+      },
+      {
+        "midi": 70,
+        "target_hz": 466.1638,
+        "measured_hz": 467.1104,
+        "cents": 3.51
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 408.7908,
+        "cents": -27.37
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.265,
+        "cents": 0.18
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "state": "UNMEASURABLE",
+        "reason": "steady centre under 30 ms"
+      }
+    ]
+  },
+  "c-guy": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.6664,
+        "cents": 0.12
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6153,
+        "cents": 0.01
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5847,
+        "cents": -0.29
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6555,
+        "cents": 0.41
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.5752,
+        "cents": -0.64
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4351,
+        "cents": -1.78
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5006,
+        "cents": -1.13
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6393,
+        "cents": 0.25
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.7449,
+        "cents": 0.77
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5701,
+        "cents": -0.44
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6986,
+        "cents": 0.84
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.877,
+        "cents": 2.6
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 261.6498,
+        "cents": 0.16
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6315,
+        "cents": 0.17
+      }
+    ]
+  },
+  "c-mirror": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.6587,
+        "cents": 0.05
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6134,
+        "cents": -0.01
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.611,
+        "cents": -0.03
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6046,
+        "cents": -0.09
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.6312,
+        "cents": -0.18
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5315,
+        "cents": -0.82
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.677,
+        "cents": 0.62
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6368,
+        "cents": 0.23
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.7968,
+        "cents": 1.2
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5322,
+        "cents": -0.81
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6199,
+        "cents": 0.06
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6412,
+        "cents": 0.27
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 261.614,
+        "cents": -0.08
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.7138,
+        "cents": 0.99
+      }
+    ]
+  },
+  "c-shion-91": {
+    "speaker": "Phascogale",
+    "per_note": [
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 427.8927,
+        "cents": 51.69
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 362.3761,
+        "cents": 63.98
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.0828,
+        "cents": -0.72
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.0068,
+        "cents": -1.1
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 415.1708,
+        "cents": -0.56
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 363.7689,
+        "cents": 70.62
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.3317,
+        "cents": 0.51
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.2902,
+        "cents": 0.31
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 415.5113,
+        "cents": 0.86
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.1049,
+        "cents": -0.61
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.3671,
+        "cents": 0.69
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 346.5163,
+        "cents": -13.5
+      },
+      {
+        "midi": 72,
+        "target_hz": 523.2511,
+        "measured_hz": 523.6476,
+        "cents": 1.31
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.235,
+        "cents": 0.03
+      }
+    ]
+  },
+  "c-guy-92": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.6326,
+        "cents": -0.17
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5911,
+        "cents": -0.23
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4035,
+        "cents": -2.09
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 175.0729,
+        "cents": 4.54
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 209.5268,
+        "cents": 15.56
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4928,
+        "cents": -1.2
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4801,
+        "cents": -1.33
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6043,
+        "cents": -0.1
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.8892,
+        "cents": 1.97
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6193,
+        "cents": 0.05
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.9863,
+        "cents": 3.69
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 180.2749,
+        "cents": 55.23
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 261.5274,
+        "cents": -0.65
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6427,
+        "cents": 0.28
+      }
+    ]
+  },
+  "c-shion-92": {
+    "speaker": "Phascogale",
+    "per_note": [
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 415.2343,
+        "cents": -0.29
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.068,
+        "cents": -0.79
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.2631,
+        "cents": 0.17
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 348.9283,
+        "cents": -1.49
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 416.3844,
+        "cents": 4.5
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.1647,
+        "cents": -0.31
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.3278,
+        "cents": 0.49
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.2774,
+        "cents": 0.24
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 416.095,
+        "cents": 3.29
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 348.8849,
+        "cents": -1.7
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.4609,
+        "cents": 1.15
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 350.7091,
+        "cents": 7.33
+      },
+      {
+        "midi": 72,
+        "target_hz": 523.2511,
+        "measured_hz": 523.1693,
+        "cents": -0.27
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.1032,
+        "cents": -0.62
+      }
+    ]
+  },
+  "f-guy": {
+    "speaker": "Civet",
+    "per_note": [
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.3627,
+        "cents": -2.42
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.4115,
+        "cents": -2.01
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 175.0142,
+        "cents": 3.96
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.7341,
+        "cents": 1.19
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 207.5885,
+        "cents": -0.53
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.1838,
+        "cents": -4.27
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6454,
+        "cents": 0.31
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 173.897,
+        "cents": -7.12
+      },
+      {
+        "midi": 56,
+        "target_hz": 207.6523,
+        "measured_hz": 206.7155,
+        "cents": -7.83
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.6868,
+        "cents": 0.72
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.5742,
+        "cents": -0.4
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.3263,
+        "cents": -2.86
+      },
+      {
+        "midi": 60,
+        "target_hz": 261.6256,
+        "measured_hz": 261.9546,
+        "cents": 2.18
+      },
+      {
+        "midi": 53,
+        "target_hz": 174.6141,
+        "measured_hz": 174.8048,
+        "cents": 1.89
+      }
+    ]
+  },
+  "f-shion": {
+    "speaker": "Phascogale",
+    "per_note": [
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 415.2322,
+        "cents": -0.3
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.0347,
+        "cents": -0.96
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.3473,
+        "cents": 0.59
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.3607,
+        "cents": 0.66
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 415.5045,
+        "cents": 0.83
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.1336,
+        "cents": -0.47
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.2337,
+        "cents": 0.03
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 351.2941,
+        "cents": 10.21
+      },
+      {
+        "midi": 68,
+        "target_hz": 415.3047,
+        "measured_hz": 415.1282,
+        "cents": -0.74
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.1452,
+        "cents": -0.41
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.0493,
+        "cents": -0.89
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.5924,
+        "cents": 1.8
+      },
+      {
+        "midi": 72,
+        "target_hz": 523.2511,
+        "measured_hz": 523.0765,
+        "cents": -0.58
+      },
+      {
+        "midi": 65,
+        "target_hz": 349.2282,
+        "measured_hz": 349.0586,
+        "cents": -0.84
+      }
+    ]
+  }
+}

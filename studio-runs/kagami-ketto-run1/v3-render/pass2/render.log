@@ -1,0 +1,192 @@
+[render_diffsinger] 47 lines, speakers ['Civet', 'Phascogale']
+[render_diffsinger] [dur] a01: 231 frames (2.68s)
+[render_diffsinger] [dur] a02: 231 frames (2.68s)
+[render_diffsinger] [dur] a03: 226 frames (2.62s)
+[render_diffsinger] [dur] a04: 236 frames (2.74s)
+[render_diffsinger] [dur] a05: 227 frames (2.64s)
+[render_diffsinger] [dur] a06: 231 frames (2.68s)
+[render_diffsinger] [dur] a07: 232 frames (2.69s)
+[render_diffsinger] [dur] a08: 232 frames (2.69s)
+[render_diffsinger] [dur] a09: 234 frames (2.72s)
+[render_diffsinger] [dur] a10: 230 frames (2.67s)
+[render_diffsinger] [dur] a11: 231 frames (2.68s)
+[render_diffsinger] [dur] a12: 231 frames (2.68s)
+[render_diffsinger] [dur] a13: 231 frames (2.68s)
+[render_diffsinger] [dur] a14: 232 frames (2.69s)
+[render_diffsinger] [dur] a15: 237 frames (2.75s)
+[render_diffsinger] [dur] a16: 233 frames (2.71s)
+[render_diffsinger] [dur] b01: 231 frames (2.68s)
+[render_diffsinger] [dur] b02: 231 frames (2.68s)
+[render_diffsinger] [dur] b03: 231 frames (2.68s)
+[render_diffsinger] [dur] b04: 232 frames (2.69s)
+[render_diffsinger] [dur] b05: 225 frames (2.61s)
+[render_diffsinger] [dur] b06: 237 frames (2.75s)
+[render_diffsinger] [dur] b07: 234 frames (2.72s)
+[render_diffsinger] [dur] b08: 233 frames (2.71s)
+[render_diffsinger] [dur] b09: 234 frames (2.72s)
+[render_diffsinger] [dur] b10: 232 frames (2.69s)
+[render_diffsinger] [dur] b11: 231 frames (2.68s)
+[render_diffsinger] [dur] b12: 230 frames (2.67s)
+[render_diffsinger] [dur] b13: 234 frames (2.72s)
+[render_diffsinger] [dur] b14: 231 frames (2.68s)
+[render_diffsinger] [dur] b15: 231 frames (2.68s)
+[render_diffsinger] [dur] b16: 232 frames (2.69s)
+[render_diffsinger] [dur] s01: 229 frames (2.66s)
+[render_diffsinger] [dur] s02: 233 frames (2.71s)
+[render_diffsinger] [dur] s03: 252 frames (2.93s)
+[render_diffsinger] [dur] s04: 286 frames (3.32s)
+[render_diffsinger] [dur] s05: 231 frames (2.68s)
+[render_diffsinger] [dur] s06: 231 frames (2.68s)
+[render_diffsinger] [dur] s07: 228 frames (2.65s)
+[render_diffsinger] [dur] s08: 232 frames (2.69s)
+[render_diffsinger] [dur] c-guy: 462 frames (5.36s)
+[render_diffsinger] [dur] c-mirror: 462 frames (5.36s)
+[render_diffsinger] [dur] c-shion-91: 230 frames (2.67s)
+[render_diffsinger] [dur] c-guy-92: 229 frames (2.66s)
+[render_diffsinger] [dur] c-shion-92: 229 frames (2.66s)
+[render_diffsinger] [dur] f-guy: 232 frames (2.69s)
+[render_diffsinger] [dur] f-shion: 232 frames (2.69s)
+[render_diffsinger] [var] a01: voicing mean -30.48 tension mean 2.18
+[render_diffsinger] [var] a02: voicing mean -27.55 tension mean 2.23
+[render_diffsinger] [var] a03: voicing mean -31.07 tension mean 1.38
+[render_diffsinger] [var] a04: voicing mean -34.63 tension mean 0.93
+[render_diffsinger] [var] a05: voicing mean -29.06 tension mean 1.96
+[render_diffsinger] [var] a06: voicing mean -30.10 tension mean 2.41
+[render_diffsinger] [var] a07: voicing mean -30.02 tension mean 1.71
+[render_diffsinger] [var] a08: voicing mean -29.84 tension mean 1.30
+[render_diffsinger] [var] a09: voicing mean -30.22 tension mean 1.52
+[render_diffsinger] [var] a10: voicing mean -32.18 tension mean 1.50
+[render_diffsinger] [var] a11: voicing mean -30.28 tension mean 1.61
+[render_diffsinger] [var] a12: voicing mean -30.70 tension mean 1.89
+[render_diffsinger] [var] a13: voicing mean -29.03 tension mean 1.89
+[render_diffsinger] [var] a14: voicing mean -29.09 tension mean 1.78
+[render_diffsinger] [var] a15: voicing mean -32.16 tension mean 0.99
+[render_diffsinger] [var] a16: voicing mean -27.49 tension mean 2.49
+[render_diffsinger] [var] b01: voicing mean -28.13 tension mean 2.76
+[render_diffsinger] [var] b02: voicing mean -28.93 tension mean 1.70
+[render_diffsinger] [var] b03: voicing mean -27.90 tension mean 2.52
+[render_diffsinger] [var] b04: voicing mean -28.06 tension mean 2.08
+[render_diffsinger] [var] b05: voicing mean -30.17 tension mean 1.79
+[render_diffsinger] [var] b06: voicing mean -30.21 tension mean 1.46
+[render_diffsinger] [var] b07: voicing mean -31.12 tension mean 1.48
+[render_diffsinger] [var] b08: voicing mean -32.79 tension mean 1.04
+[render_diffsinger] [var] b09: voicing mean -31.43 tension mean 1.67
+[render_diffsinger] [var] b10: voicing mean -28.02 tension mean 1.60
+[render_diffsinger] [var] b11: voicing mean -34.14 tension mean 1.31
+[render_diffsinger] [var] b12: voicing mean -28.38 tension mean 2.37
+[render_diffsinger] [var] b13: voicing mean -33.64 tension mean 1.64
+[render_diffsinger] [var] b14: voicing mean -30.17 tension mean 2.05
+[render_diffsinger] [var] b15: voicing mean -28.49 tension mean 2.53
+[render_diffsinger] [var] b16: voicing mean -27.31 tension mean 2.64
+[render_diffsinger] [var] s01: voicing mean -28.10 tension mean 1.02
+[render_diffsinger] [var] s02: voicing mean -26.85 tension mean 0.83
+[render_diffsinger] [var] s03: voicing mean -24.79 tension mean 0.94
+[render_diffsinger] [var] s04: voicing mean -25.34 tension mean 1.32
+[render_diffsinger] [var] s05: voicing mean -29.30 tension mean 0.95
+[render_diffsinger] [var] s06: voicing mean -29.95 tension mean 0.79
+[render_diffsinger] [var] s07: voicing mean -30.98 tension mean 0.26
+[render_diffsinger] [var] s08: voicing mean -28.11 tension mean 0.55
+[render_diffsinger] [var] c-guy: voicing mean -26.94 tension mean 2.93
+[render_diffsinger] [var] c-mirror: voicing mean -27.13 tension mean 2.80
+[render_diffsinger] [var] c-shion-91: voicing mean -31.50 tension mean 1.02
+[render_diffsinger] [var] c-guy-92: voicing mean -30.41 tension mean 1.83
+[render_diffsinger] [var] c-shion-92: voicing mean -29.40 tension mean 1.71
+[render_diffsinger] [var] f-guy: voicing mean -28.07 tension mean 2.69
+[render_diffsinger] [var] f-shion: voicing mean -30.76 tension mean 1.36
+[render_diffsinger] [acoustic] a01: mel (1, 231, 128)
+[render_diffsinger] [acoustic] a02: mel (1, 231, 128)
+[render_diffsinger] [acoustic] a03: mel (1, 226, 128)
+[render_diffsinger] [acoustic] a04: mel (1, 236, 128)
+[render_diffsinger] [acoustic] a05: mel (1, 227, 128)
+[render_diffsinger] [acoustic] a06: mel (1, 231, 128)
+[render_diffsinger] [acoustic] a07: mel (1, 232, 128)
+[render_diffsinger] [acoustic] a08: mel (1, 232, 128)
+[render_diffsinger] [acoustic] a09: mel (1, 234, 128)
+[render_diffsinger] [acoustic] a10: mel (1, 230, 128)
+[render_diffsinger] [acoustic] a11: mel (1, 231, 128)
+[render_diffsinger] [acoustic] a12: mel (1, 231, 128)
+[render_diffsinger] [acoustic] a13: mel (1, 231, 128)
+[render_diffsinger] [acoustic] a14: mel (1, 232, 128)
+[render_diffsinger] [acoustic] a15: mel (1, 237, 128)
+[render_diffsinger] [acoustic] a16: mel (1, 233, 128)
+[render_diffsinger] [acoustic] b01: mel (1, 231, 128)
+[render_diffsinger] [acoustic] b02: mel (1, 231, 128)
+[render_diffsinger] [acoustic] b03: mel (1, 231, 128)
+[render_diffsinger] [acoustic] b04: mel (1, 232, 128)
+[render_diffsinger] [acoustic] b05: mel (1, 225, 128)
+[render_diffsinger] [acoustic] b06: mel (1, 237, 128)
+[render_diffsinger] [acoustic] b07: mel (1, 234, 128)
+[render_diffsinger] [acoustic] b08: mel (1, 233, 128)
+[render_diffsinger] [acoustic] b09: mel (1, 234, 128)
+[render_diffsinger] [acoustic] b10: mel (1, 232, 128)
+[render_diffsinger] [acoustic] b11: mel (1, 231, 128)
+[render_diffsinger] [acoustic] b12: mel (1, 230, 128)
+[render_diffsinger] [acoustic] b13: mel (1, 234, 128)
+[render_diffsinger] [acoustic] b14: mel (1, 231, 128)
+[render_diffsinger] [acoustic] b15: mel (1, 231, 128)
+[render_diffsinger] [acoustic] b16: mel (1, 232, 128)
+[render_diffsinger] [acoustic] s01: mel (1, 229, 128)
+[render_diffsinger] [acoustic] s02: mel (1, 233, 128)
+[render_diffsinger] [acoustic] s03: mel (1, 252, 128)
+[render_diffsinger] [acoustic] s04: mel (1, 286, 128)
+[render_diffsinger] [acoustic] s05: mel (1, 231, 128)
+[render_diffsinger] [acoustic] s06: mel (1, 231, 128)
+[render_diffsinger] [acoustic] s07: mel (1, 228, 128)
+[render_diffsinger] [acoustic] s08: mel (1, 232, 128)
+[render_diffsinger] [acoustic] c-guy: mel (1, 462, 128)
+[render_diffsinger] [acoustic] c-mirror: mel (1, 462, 128)
+[render_diffsinger] [acoustic] c-shion-91: mel (1, 230, 128)
+[render_diffsinger] [acoustic] c-guy-92: mel (1, 229, 128)
+[render_diffsinger] [acoustic] c-shion-92: mel (1, 229, 128)
+[render_diffsinger] [acoustic] f-guy: mel (1, 232, 128)
+[render_diffsinger] [acoustic] f-shion: mel (1, 232, 128)
+/home/hatch/workspace/resonance/diffsinger-lab/venv/lib/python3.12/site-packages/torch/nn/utils/weight_norm.py:145: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+[render_diffsinger] [vocoder] a01.wav: 118272 samples (peak 0.247, gain 1.000)
+[render_diffsinger] [vocoder] a02.wav: 118272 samples (peak 0.308, gain 1.000)
+[render_diffsinger] [vocoder] a03.wav: 115712 samples (peak 0.215, gain 1.000)
+[render_diffsinger] [vocoder] a04.wav: 120832 samples (peak 0.196, gain 1.000)
+[render_diffsinger] [vocoder] a05.wav: 116224 samples (peak 0.225, gain 1.000)
+[render_diffsinger] [vocoder] a06.wav: 118272 samples (peak 0.284, gain 1.000)
+[render_diffsinger] [vocoder] a07.wav: 118784 samples (peak 0.204, gain 1.000)
+[render_diffsinger] [vocoder] a08.wav: 118784 samples (peak 0.228, gain 1.000)
+[render_diffsinger] [vocoder] a09.wav: 119808 samples (peak 0.203, gain 1.000)
+[render_diffsinger] [vocoder] a10.wav: 117760 samples (peak 0.193, gain 1.000)
+[render_diffsinger] [vocoder] a11.wav: 118272 samples (peak 0.187, gain 1.000)
+[render_diffsinger] [vocoder] a12.wav: 118272 samples (peak 0.245, gain 1.000)
+[render_diffsinger] [vocoder] a13.wav: 118272 samples (peak 0.280, gain 1.000)
+[render_diffsinger] [vocoder] a14.wav: 118784 samples (peak 0.183, gain 1.000)
+[render_diffsinger] [vocoder] a15.wav: 121344 samples (peak 0.182, gain 1.000)
+[render_diffsinger] [vocoder] a16.wav: 119296 samples (peak 0.247, gain 1.000)
+[render_diffsinger] [vocoder] b01.wav: 118272 samples (peak 0.394, gain 1.000)
+[render_diffsinger] [vocoder] b02.wav: 118272 samples (peak 0.226, gain 1.000)
+[render_diffsinger] [vocoder] b03.wav: 118272 samples (peak 0.237, gain 1.000)
+[render_diffsinger] [vocoder] b04.wav: 118784 samples (peak 0.275, gain 1.000)
+[render_diffsinger] [vocoder] b05.wav: 115200 samples (peak 0.208, gain 1.000)
+[render_diffsinger] [vocoder] b06.wav: 121344 samples (peak 0.276, gain 1.000)
+[render_diffsinger] [vocoder] b07.wav: 119808 samples (peak 0.248, gain 1.000)
+[render_diffsinger] [vocoder] b08.wav: 119296 samples (peak 0.191, gain 1.000)
+[render_diffsinger] [vocoder] b09.wav: 119808 samples (peak 0.278, gain 1.000)
+[render_diffsinger] [vocoder] b10.wav: 118784 samples (peak 0.367, gain 1.000)
+[render_diffsinger] [vocoder] b11.wav: 118272 samples (peak 0.206, gain 1.000)
+[render_diffsinger] [vocoder] b12.wav: 117760 samples (peak 0.315, gain 1.000)
+[render_diffsinger] [vocoder] b13.wav: 119808 samples (peak 0.330, gain 1.000)
+[render_diffsinger] [vocoder] b14.wav: 118272 samples (peak 0.296, gain 1.000)
+[render_diffsinger] [vocoder] b15.wav: 118272 samples (peak 0.241, gain 1.000)
+[render_diffsinger] [vocoder] b16.wav: 118784 samples (peak 0.256, gain 1.000)
+[render_diffsinger] [vocoder] s01.wav: 117248 samples (peak 0.228, gain 1.000)
+[render_diffsinger] [vocoder] s02.wav: 119296 samples (peak 0.204, gain 1.000)
+[render_diffsinger] [vocoder] s03.wav: 129024 samples (peak 0.227, gain 1.000)
+[render_diffsinger] [vocoder] s04.wav: 146432 samples (peak 0.280, gain 1.000)
+[render_diffsinger] [vocoder] s05.wav: 118272 samples (peak 0.236, gain 1.000)
+[render_diffsinger] [vocoder] s06.wav: 118272 samples (peak 0.216, gain 1.000)
+[render_diffsinger] [vocoder] s07.wav: 116736 samples (peak 0.192, gain 1.000)
+[render_diffsinger] [vocoder] s08.wav: 118784 samples (peak 0.214, gain 1.000)
+[render_diffsinger] [vocoder] c-guy.wav: 236544 samples (peak 0.291, gain 1.000)
+[render_diffsinger] [vocoder] c-mirror.wav: 236544 samples (peak 0.306, gain 1.000)
+[render_diffsinger] [vocoder] c-shion-91.wav: 117760 samples (peak 0.176, gain 1.000)
+[render_diffsinger] [vocoder] c-guy-92.wav: 117248 samples (peak 0.264, gain 1.000)
+[render_diffsinger] [vocoder] c-shion-92.wav: 117248 samples (peak 0.306, gain 1.000)
+[render_diffsinger] [vocoder] f-guy.wav: 118784 samples (peak 0.283, gain 1.000)
+[render_diffsinger] [vocoder] f-shion.wav: 118784 samples (peak 0.173, gain 1.000)
+[render_diffsinger] [assembly] vocal-stem.wav: 11107688 samples (peak 0.529, gain 1.000)

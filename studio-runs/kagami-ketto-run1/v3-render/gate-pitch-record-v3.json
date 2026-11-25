@@ -1,0 +1,351 @@
+{
+  "stage": "gatepitch",
+  "instrument": "librosa.yin (autocorrelation), lab venv, steady-centre medians",
+  "refuted_instrument": "vocal_exam.judge_pitch via fourier.dominant_frequency -- reads the strongest spectral peak (a harmonic/formant on these voices), not the fundamental; its pitch checks in gate-record-v3.json stand marked refuted, not erased",
+  "v1_sections": {
+    "verse_a": {
+      "n_notes": 210,
+      "n_measured": 210,
+      "median_abs_cents": 1.16,
+      "max_abs_cents": 265.65,
+      "n_over_100": 2,
+      "n_over_200": 1,
+      "named_over_200": [
+        {
+          "line": "a05",
+          "note": 1,
+          "midi": 53,
+          "target_hz": 174.6141,
+          "measured_hz": 203.5725,
+          "cents": 265.65
+        }
+      ]
+    },
+    "verse_b": {
+      "n_notes": 210,
+      "n_measured": 210,
+      "median_abs_cents": 1.01,
+      "max_abs_cents": 1223.13,
+      "n_over_100": 6,
+      "n_over_200": 5,
+      "named_over_200": [
+        {
+          "line": "b01",
+          "note": 9,
+          "midi": 53,
+          "target_hz": 174.6141,
+          "measured_hz": 86.1485,
+          "cents": -1223.13
+        },
+        {
+          "line": "b02",
+          "note": 13,
+          "midi": 53,
+          "target_hz": 174.6141,
+          "measured_hz": 127.2045,
+          "cents": -548.43
+        },
+        {
+          "line": "b01",
+          "note": 13,
+          "midi": 53,
+          "target_hz": 174.6141,
+          "measured_hz": 207.7225,
+          "cents": 300.58
+        },
+        {
+          "line": "b02",
+          "note": 9,
+          "midi": 53,
+          "target_hz": 174.6141,
+          "measured_hz": 207.6177,
+          "cents": 299.71
+        },
+        {
+          "line": "b12",
+          "note": 9,
+          "midi": 53,
+          "target_hz": 174.6141,
+          "measured_hz": 206.8541,
+          "cents": 293.33
+        }
+      ]
+    },
+    "shion": {
+      "n_notes": 105,
+      "n_measured": 102,
+      "median_abs_cents": 1.04,
+      "max_abs_cents": 512.85,
+      "n_over_100": 12,
+      "n_over_200": 9,
+      "named_over_200": [
+        {
+          "line": "s06",
+          "note": 1,
+          "midi": 70,
+          "target_hz": 466.1638,
+          "measured_hz": 626.8907,
+          "cents": 512.85
+        },
+        {
+          "line": "s03",
+          "note": 9,
+          "midi": 68,
+          "target_hz": 415.3047,
+          "measured_hz": 513.9743,
+          "cents": 369.03
+        },
+        {
+          "line": "s02",
+          "note": 2,
+          "midi": 72,
+          "target_hz": 523.2511,
+          "measured_hz": 424.2883,
+          "cents": -362.95
+        },
+        {
+          "line": "s01",
+          "note": 2,
+          "midi": 70,
+          "target_hz": 466.1638,
+          "measured_hz": 568.9404,
+          "cents": 344.93
+        },
+        {
+          "line": "s08",
+          "note": 10,
+          "midi": 68,
+          "target_hz": 415.3047,
+          "measured_hz": 348.2461,
+          "cents": -304.88
+        },
+        {
+          "line": "s08",
+          "note": 6,
+          "midi": 75,
+          "target_hz": 622.254,
+          "measured_hz": 522.5115,
+          "cents": -302.45
+        },
+        {
+          "line": "s08",
+          "note": 5,
+          "midi": 72,
+          "target_hz": 523.2511,
+          "measured_hz": 606.9835,
+          "cents": 256.98
+        },
+        {
+          "line": "s07",
+          "note": 5,
+          "midi": 68,
+          "target_hz": 415.3047,
+          "measured_hz": 469.5811,
+          "cents": 212.64
+        },
+        {
+          "line": "s03",
+          "note": 10,
+          "midi": 70,
+          "target_hz": 466.1638,
+          "measured_hz": 415.0167,
+          "cents": -201.2
+        }
+      ]
+    },
+    "close": {
+      "n_notes": 98,
+      "n_measured": 98,
+      "median_abs_cents": 1.18,
+      "max_abs_cents": 435.7,
+      "n_over_100": 3,
+      "n_over_200": 2,
+      "named_over_200": [
+        {
+          "line": "c-mirror",
+          "note": 11,
+          "midi": 53,
+          "target_hz": 174.6141,
+          "measured_hz": 135.7626,
+          "cents": -435.7
+        },
+        {
+          "line": "c-guy",
+          "note": 8,
+          "midi": 56,
+          "target_hz": 207.6523,
+          "measured_hz": 174.4978,
+          "cents": -301.15
+        }
+      ]
+    }
+  },
+  "v3_sections": {
+    "verse_a": {
+      "n_notes": 210,
+      "n_measured": 210,
+      "median_abs_cents": 0.9,
+      "max_abs_cents": 235.3,
+      "n_over_100": 5,
+      "n_over_200": 1,
+      "named_over_200": [
+        {
+          "line": "a16",
+          "note": 5,
+          "midi": 53,
+          "target_hz": 174.6141,
+          "measured_hz": 200.0351,
+          "cents": 235.3
+        }
+      ]
+    },
+    "verse_b": {
+      "n_notes": 210,
+      "n_measured": 210,
+      "median_abs_cents": 0.91,
+      "max_abs_cents": 90.82,
+      "n_over_100": 0,
+      "n_over_200": 0,
+      "named_over_200": []
+    },
+    "shion": {
+      "n_notes": 105,
+      "n_measured": 102,
+      "median_abs_cents": 0.74,
+      "max_abs_cents": 1259.51,
+      "n_over_100": 3,
+      "n_over_200": 3,
+      "named_over_200": [
+        {
+          "line": "s07",
+          "note": 2,
+          "midi": 70,
+          "target_hz": 466.1638,
+          "measured_hz": 225.2058,
+          "cents": -1259.51
+        },
+        {
+          "line": "s06",
+          "note": 1,
+          "midi": 70,
+          "target_hz": 466.1638,
+          "measured_hz": 703.6622,
+          "cents": 712.86
+        },
+        {
+          "line": "s01",
+          "note": 2,
+          "midi": 70,
+          "target_hz": 466.1638,
+          "measured_hz": 341.2015,
+          "cents": -540.26
+        }
+      ]
+    },
+    "close": {
+      "n_notes": 98,
+      "n_measured": 98,
+      "median_abs_cents": 0.72,
+      "max_abs_cents": 70.62,
+      "n_over_100": 0,
+      "n_over_200": 0,
+      "named_over_200": []
+    }
+  },
+  "final_gate_verdict": {
+    "checks": [
+      {
+        "check": "durations: total",
+        "ok": true,
+        "detail": "99.8387% vs [97, 103]"
+      },
+      {
+        "check": "durations: verse_a",
+        "ok": true,
+        "detail": "99.2666% vs [95, 105]"
+      },
+      {
+        "check": "onsets (audio): verse_a LOW-COVERAGE",
+        "ok": null,
+        "detail": "only 35/210 onsets readable -- verdict rests on .ds drift + totals"
+      },
+      {
+        "check": "onsets (.ds drift): verse_a",
+        "ok": true,
+        "detail": "mean|drift| 14.96 ms, max 76.4 ms over 210 notes"
+      },
+      {
+        "check": "durations: verse_b",
+        "ok": true,
+        "detail": "99.3732% vs [95, 105]"
+      },
+      {
+        "check": "onsets (audio): verse_b LOW-COVERAGE",
+        "ok": null,
+        "detail": "only 36/210 onsets readable -- verdict rests on .ds drift + totals"
+      },
+      {
+        "check": "onsets (.ds drift): verse_b",
+        "ok": true,
+        "detail": "mean|drift| 15.32 ms, max 88.0 ms over 210 notes"
+      },
+      {
+        "check": "durations: shion",
+        "ok": true,
+        "detail": "102.9908% vs [95, 105]"
+      },
+      {
+        "check": "onsets (audio): shion",
+        "ok": true,
+        "detail": "mean|err| 42.18 ms, max 104.76 ms over 23/105 onsets"
+      },
+      {
+        "check": "onsets (.ds drift): shion",
+        "ok": true,
+        "detail": "mean|drift| 17.67 ms, max 57.9 ms over 105 notes"
+      },
+      {
+        "check": "durations: close",
+        "ok": true,
+        "detail": "98.8816% vs [95, 105]"
+      },
+      {
+        "check": "onsets (audio): close LOW-COVERAGE",
+        "ok": null,
+        "detail": "only 12/98 onsets readable -- verdict rests on .ds drift + totals"
+      },
+      {
+        "check": "onsets (.ds drift): close",
+        "ok": true,
+        "detail": "mean|drift| 15.08 ms, max 44.0 ms over 98 notes"
+      },
+      {
+        "check": "language: ja",
+        "ok": true,
+        "detail": "detected ja p=0.8823"
+      },
+      {
+        "check": "pitch (YIN): verse_a",
+        "ok": true,
+        "detail": "median|cents| 0.9, 5/210 notes past 100 cents (2.4%), max 235.3, 1 named past 200"
+      },
+      {
+        "check": "pitch (YIN): verse_b",
+        "ok": true,
+        "detail": "median|cents| 0.91, 0/210 notes past 100 cents (0.0%), max 90.82, 0 named past 200"
+      },
+      {
+        "check": "pitch (YIN): shion",
+        "ok": true,
+        "detail": "median|cents| 0.74, 3/102 notes past 100 cents (2.9%), max 1259.51, 3 named past 200"
+      },
+      {
+        "check": "pitch (YIN): close",
+        "ok": true,
+        "detail": "median|cents| 0.72, 0/98 notes past 100 cents (0.0%), max 70.62, 0 named past 200"
+      }
+    ],
+    "verdict": "PASS",
+    "failed": []
+  }
+}

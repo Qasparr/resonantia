@@ -1,0 +1,104 @@
+[render_diffsinger] 47 lines, speakers ['Civet', 'Phascogale']
+[render_diffsinger] [dur] a01: 231 frames (2.68s)
+[render_diffsinger] [dur] a02: 231 frames (2.68s)
+[render_diffsinger] [dur] a03: 226 frames (2.62s)
+[render_diffsinger] [dur] a04: 236 frames (2.74s)
+[render_diffsinger] [dur] a05: 227 frames (2.64s)
+[render_diffsinger] [dur] a06: 231 frames (2.68s)
+[render_diffsinger] [dur] a07: 232 frames (2.69s)
+[render_diffsinger] [dur] a08: 232 frames (2.69s)
+[render_diffsinger] [dur] a09: 234 frames (2.72s)
+[render_diffsinger] [dur] a10: 230 frames (2.67s)
+[render_diffsinger] [dur] a11: 231 frames (2.68s)
+[render_diffsinger] [dur] a12: 231 frames (2.68s)
+[render_diffsinger] [dur] a13: 231 frames (2.68s)
+[render_diffsinger] [dur] a14: 232 frames (2.69s)
+[render_diffsinger] [dur] a15: 237 frames (2.75s)
+[render_diffsinger] [dur] a16: 233 frames (2.71s)
+[render_diffsinger] [dur] b01: 231 frames (2.68s)
+[render_diffsinger] [dur] b02: 231 frames (2.68s)
+[render_diffsinger] [dur] b03: 231 frames (2.68s)
+[render_diffsinger] [dur] b04: 232 frames (2.69s)
+[render_diffsinger] [dur] b05: 225 frames (2.61s)
+[render_diffsinger] [dur] b06: 237 frames (2.75s)
+[render_diffsinger] [dur] b07: 234 frames (2.72s)
+[render_diffsinger] [dur] b08: 233 frames (2.71s)
+[render_diffsinger] [dur] b09: 234 frames (2.72s)
+[render_diffsinger] [dur] b10: 232 frames (2.69s)
+[render_diffsinger] [dur] b11: 231 frames (2.68s)
+[render_diffsinger] [dur] b12: 230 frames (2.67s)
+[render_diffsinger] [dur] b13: 234 frames (2.72s)
+[render_diffsinger] [dur] b14: 231 frames (2.68s)
+[render_diffsinger] [dur] b15: 231 frames (2.68s)
+[render_diffsinger] [dur] b16: 232 frames (2.69s)
+[render_diffsinger] [dur] s01: 229 frames (2.66s)
+[render_diffsinger] [dur] s02: 233 frames (2.71s)
+[render_diffsinger] [dur] s03: 252 frames (2.93s)
+[render_diffsinger] [dur] s04: 286 frames (3.32s)
+[render_diffsinger] [dur] s05: 231 frames (2.68s)
+[render_diffsinger] [dur] s06: 231 frames (2.68s)
+[render_diffsinger] [dur] s07: 228 frames (2.65s)
+[render_diffsinger] [dur] s08: 232 frames (2.69s)
+[render_diffsinger] [dur] c-guy: 462 frames (5.36s)
+[render_diffsinger] [dur] c-mirror: 462 frames (5.36s)
+[render_diffsinger] [dur] c-shion-91: 230 frames (2.67s)
+[render_diffsinger] [dur] c-guy-92: 229 frames (2.66s)
+[render_diffsinger] [dur] c-shion-92: 229 frames (2.66s)
+[render_diffsinger] [dur] f-guy: 232 frames (2.69s)
+[render_diffsinger] [dur] f-shion: 232 frames (2.69s)
+[render_diffsinger] [var] a01: voicing mean -30.15 tension mean 1.94
+[render_diffsinger] [var] a02: voicing mean -25.62 tension mean 2.44
+[render_diffsinger] [var] a03: voicing mean -31.50 tension mean 2.00
+[render_diffsinger] [var] a04: voicing mean -33.82 tension mean 0.95
+[render_diffsinger] [var] a05: voicing mean -32.47 tension mean 1.65
+[render_diffsinger] [var] a06: voicing mean -29.27 tension mean 2.81
+[render_diffsinger] [var] a07: voicing mean -29.11 tension mean 2.00
+[render_diffsinger] [var] a08: voicing mean -28.79 tension mean 1.89
+[render_diffsinger] [var] a09: voicing mean -28.12 tension mean 1.98
+[render_diffsinger] [var] a10: voicing mean -32.05 tension mean 1.49
+[render_diffsinger] [var] a11: voicing mean -27.94 tension mean 2.20
+[render_diffsinger] [var] a12: voicing mean -31.15 tension mean 2.23
+[render_diffsinger] [var] a13: voicing mean -28.36 tension mean 2.09
+[render_diffsinger] [var] a14: voicing mean -27.48 tension mean 2.33
+[render_diffsinger] [var] a15: voicing mean -32.46 tension mean 1.13
+[render_diffsinger] [var] a16: voicing mean -26.15 tension mean 2.71
+[render_diffsinger] [var] b01: voicing mean -27.86 tension mean 2.55
+[render_diffsinger] [var] b02: voicing mean -28.00 tension mean 1.74
+[render_diffsinger] [var] b03: voicing mean -28.85 tension mean 2.39
+[render_diffsinger] [var] b04: voicing mean -28.59 tension mean 2.53
+[render_diffsinger] [var] b05: voicing mean -28.66 tension mean 2.44
+[render_diffsinger] [var] b06: voicing mean -30.66 tension mean 1.61
+[render_diffsinger] [var] b07: voicing mean -30.18 tension mean 1.71
+[render_diffsinger] [var] b08: voicing mean -33.57 tension mean 0.68
+[render_diffsinger] [var] b09: voicing mean -32.91 tension mean 1.49
+[render_diffsinger] [var] b10: voicing mean -29.11 tension mean 1.31
+[render_diffsinger] [var] b11: voicing mean -33.88 tension mean 1.37
+[render_diffsinger] [var] b12: voicing mean -31.30 tension mean 1.51
+[render_diffsinger] [var] b13: voicing mean -31.68 tension mean 1.57
+[render_diffsinger] [var] b14: voicing mean -31.15 tension mean 1.49
+[render_diffsinger] [var] b15: voicing mean -27.83 tension mean 2.26
+[render_diffsinger] [var] b16: voicing mean -29.61 tension mean 2.14
+[render_diffsinger] [var] s01: voicing mean -27.95 tension mean 1.00
+[render_diffsinger] [var] s02: voicing mean -26.11 tension mean 0.88
+[render_diffsinger] [var] s03: voicing mean -25.13 tension mean 0.89
+[render_diffsinger] [var] s04: voicing mean -25.34 tension mean 1.36
+[render_diffsinger] [var] s05: voicing mean -29.92 tension mean 1.12
+[render_diffsinger] [var] s06: voicing mean -29.06 tension mean 0.77
+[render_diffsinger] [var] s07: voicing mean -32.41 tension mean 0.11
+[render_diffsinger] [var] s08: voicing mean -29.63 tension mean 0.62
+[render_diffsinger] [var] c-guy: voicing mean -26.67 tension mean 2.99
+[render_diffsinger] [var] c-mirror: voicing mean -27.44 tension mean 2.90
+[render_diffsinger] [var] c-shion-91: voicing mean -30.11 tension mean 1.37
+[render_diffsinger] [var] c-guy-92: voicing mean -30.88 tension mean 1.99
+[render_diffsinger] [var] c-shion-92: voicing mean -31.17 tension mean 0.98
+[render_diffsinger] [var] f-guy: voicing mean -30.27 tension mean 2.05
+[render_diffsinger] [var] f-shion: voicing mean -30.27 tension mean 1.24
+[render_diffsinger] [acoustic] a01: mel (1, 231, 128)
+[render_diffsinger] [acoustic] a02: mel (1, 231, 128)
+[render_diffsinger] [acoustic] a03: mel (1, 226, 128)
+[render_diffsinger] [acoustic] a04: mel (1, 236, 128)
+[render_diffsinger] [acoustic] a05: mel (1, 227, 128)
+[render_diffsinger] [acoustic] a06: mel (1, 231, 128)
+[render_diffsinger] [acoustic] a07: mel (1, 232, 128)
+[render_diffsinger] [acoustic] a08: mel (1, 232, 128)
+[render_diffsinger] [acoustic] a09: mel (1, 234, 128)

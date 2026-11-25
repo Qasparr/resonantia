@@ -1,0 +1,25 @@
+{
+  "v3_verdict": "FAIL",
+  "failed": [
+    {
+      "check": "pitch: verse_a",
+      "ok": false,
+      "detail": "median| cents| 1189.43, 121/208 notes past 100 cents (58.2%), max 3806.98"
+    },
+    {
+      "check": "pitch: verse_b",
+      "ok": false,
+      "detail": "median| cents| 1229.26, 135/209 notes past 100 cents (64.6%), max 3987.27"
+    },
+    {
+      "check": "pitch: shion",
+      "ok": false,
+      "detail": "median| cents| 16.22, 23/102 notes past 100 cents (22.5%), max 4245.38"
+    },
+    {
+      "check": "pitch: close",
+      "ok": false,
+      "detail": "median| cents| 1205.7, 63/98 notes past 100 cents (64.3%), max 2806.19"
+    }
+  ]
+}

@@ -1,0 +1,336 @@
+{
+  "stage": "pass1",
+  "proof_id": "pow-26ef27c5d8490bfc9f03c52186cc7f76af6395aeca91efe464f75d1422401da6",
+  "calibration": {
+    "applied": false,
+    "factors": {},
+    "trained_by": [],
+    "per_line": {
+      "a01": {},
+      "a02": {},
+      "a03": {},
+      "a04": {},
+      "a05": {},
+      "a06": {},
+      "a07": {},
+      "a08": {},
+      "a09": {},
+      "a10": {},
+      "a11": {},
+      "a12": {},
+      "a13": {},
+      "a14": {},
+      "a15": {},
+      "a16": {},
+      "b01": {},
+      "b02": {},
+      "b03": {},
+      "b04": {},
+      "b05": {},
+      "b06": {},
+      "b07": {},
+      "b08": {},
+      "b09": {},
+      "b10": {},
+      "b11": {},
+      "b12": {},
+      "b13": {},
+      "b14": {},
+      "b15": {},
+      "b16": {},
+      "s01": {},
+      "s02": {},
+      "s03": {},
+      "s04": {},
+      "s05": {},
+      "s06": {},
+      "s07": {},
+      "s08": {},
+      "c-guy": {},
+      "c-mirror": {},
+      "c-shion-91": {},
+      "c-guy-92": {},
+      "c-shion-92": {},
+      "f-guy": {},
+      "f-shion": {}
+    }
+  },
+  "seat_totals": {
+    "VV": {
+      "asked_s": 12.2253,
+      "realized_s": 10.7127,
+      "phonemes": 90
+    },
+    "Α": {
+      "asked_s": 22.1054,
+      "realized_s": 19.3174,
+      "phonemes": 195
+    },
+    "Ε": {
+      "asked_s": 8.2663,
+      "realized_s": 7.2439,
+      "phonemes": 68
+    },
+    "Ι": {
+      "asked_s": 14.9943,
+      "realized_s": 13.123,
+      "phonemes": 124
+    },
+    "Ο": {
+      "asked_s": 17.2408,
+      "realized_s": 15.1034,
+      "phonemes": 134
+    }
+  },
+  "assembly": {
+    "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass1/vocal-stem.wav",
+    "sample_rate": 44100,
+    "channels": 1,
+    "samples": 11107688,
+    "duration_s": 251.875,
+    "peak": 0.5671,
+    "peak_dbfs": -4.93,
+    "rms": 0.0313,
+    "rms_dbfs": -30.1
+  },
+  "lines": [
+    {
+      "id": "a01",
+      "asked_s": 2.7083,
+      "rendered_s": 2.4033
+    },
+    {
+      "id": "a02",
+      "asked_s": 2.7083,
+      "rendered_s": 2.38
+    },
+    {
+      "id": "a03",
+      "asked_s": 2.7083,
+      "rendered_s": 2.38
+    },
+    {
+      "id": "a04",
+      "asked_s": 2.7083,
+      "rendered_s": 2.4149
+    },
+    {
+      "id": "a05",
+      "asked_s": 2.7083,
+      "rendered_s": 2.3684
+    },
+    {
+      "id": "a06",
+      "asked_s": 2.7083,
+      "rendered_s": 2.3684
+    },
+    {
+      "id": "a07",
+      "asked_s": 2.7083,
+      "rendered_s": 2.3917
+    },
+    {
+      "id": "a08",
+      "asked_s": 2.7083,
+      "rendered_s": 2.38
+    },
+    {
+      "id": "a09",
+      "asked_s": 2.7083,
+      "rendered_s": 2.3684
+    },
+    {
+      "id": "a10",
+      "asked_s": 2.7083,
+      "rendered_s": 2.3917
+    },
+    {
+      "id": "a11",
+      "asked_s": 2.7083,
+      "rendered_s": 2.3568
+    },
+    {
+      "id": "a12",
+      "asked_s": 2.7083,
+      "rendered_s": 2.4149
+    },
+    {
+      "id": "a13",
+      "asked_s": 2.7083,
+      "rendered_s": 2.3917
+    },
+    {
+      "id": "a14",
+      "asked_s": 2.7083,
+      "rendered_s": 2.3917
+    },
+    {
+      "id": "a15",
+      "asked_s": 2.7083,
+      "rendered_s": 2.4265
+    },
+    {
+      "id": "a16",
+      "asked_s": 2.7083,
+      "rendered_s": 2.4033
+    },
+    {
+      "id": "b01",
+      "asked_s": 2.7083,
+      "rendered_s": 2.38
+    },
+    {
+      "id": "b02",
+      "asked_s": 2.7083,
+      "rendered_s": 2.3917
+    },
+    {
+      "id": "b03",
+      "asked_s": 2.7083,
+      "rendered_s": 2.3568
+    },
+    {
+      "id": "b04",
+      "asked_s": 2.7083,
+      "rendered_s": 2.3568
+    },
+    {
+      "id": "b05",
+      "asked_s": 2.7083,
+      "rendered_s": 2.3917
+    },
+    {
+      "id": "b06",
+      "asked_s": 2.7083,
+      "rendered_s": 2.38
+    },
+    {
+      "id": "b07",
+      "asked_s": 2.7083,
+      "rendered_s": 2.3452
+    },
+    {
+      "id": "b08",
+      "asked_s": 2.7083,
+      "rendered_s": 2.38
+    },
+    {
+      "id": "b09",
+      "asked_s": 2.7083,
+      "rendered_s": 2.3684
+    },
+    {
+      "id": "b10",
+      "asked_s": 2.7083,
+      "rendered_s": 2.4033
+    },
+    {
+      "id": "b11",
+      "asked_s": 2.7083,
+      "rendered_s": 2.3684
+    },
+    {
+      "id": "b12",
+      "asked_s": 2.7083,
+      "rendered_s": 2.4381
+    },
+    {
+      "id": "b13",
+      "asked_s": 2.7083,
+      "rendered_s": 2.3917
+    },
+    {
+      "id": "b14",
+      "asked_s": 2.7083,
+      "rendered_s": 2.3452
+    },
+    {
+      "id": "b15",
+      "asked_s": 2.7083,
+      "rendered_s": 2.38
+    },
+    {
+      "id": "b16",
+      "asked_s": 2.7083,
+      "rendered_s": 2.3684
+    },
+    {
+      "id": "s01",
+      "asked_s": 2.7083,
+      "rendered_s": 2.3336
+    },
+    {
+      "id": "s02",
+      "asked_s": 2.7083,
+      "rendered_s": 2.38
+    },
+    {
+      "id": "s03",
+      "asked_s": 2.7083,
+      "rendered_s": 2.5774
+    },
+    {
+      "id": "s04",
+      "asked_s": 2.7083,
+      "rendered_s": 2.9489
+    },
+    {
+      "id": "s05",
+      "asked_s": 2.7083,
+      "rendered_s": 2.3568
+    },
+    {
+      "id": "s06",
+      "asked_s": 2.7083,
+      "rendered_s": 2.322
+    },
+    {
+      "id": "s07",
+      "asked_s": 2.7083,
+      "rendered_s": 2.3336
+    },
+    {
+      "id": "s08",
+      "asked_s": 2.7083,
+      "rendered_s": 2.3917
+    },
+    {
+      "id": "c-guy",
+      "asked_s": 5.4167,
+      "rendered_s": 4.6788
+    },
+    {
+      "id": "c-mirror",
+      "asked_s": 5.4167,
+      "rendered_s": 4.6788
+    },
+    {
+      "id": "c-shion-91",
+      "asked_s": 2.7083,
+      "rendered_s": 2.38
+    },
+    {
+      "id": "c-guy-92",
+      "asked_s": 2.7083,
+      "rendered_s": 2.3917
+    },
+    {
+      "id": "c-shion-92",
+      "asked_s": 2.7083,
+      "rendered_s": 2.3917
+    },
+    {
+      "id": "f-guy",
+      "asked_s": 2.7083,
+      "rendered_s": 2.4033
+    },
+    {
+      "id": "f-shion",
+      "asked_s": 2.7083,
+      "rendered_s": 2.4033
+    }
+  ],
+  "walls": [
+    "line s04: rendered 2.949s against a 2.708s slot -- overhang 0.241s past its bar line, summed into the assembly, not trimmed"
+  ]
+}

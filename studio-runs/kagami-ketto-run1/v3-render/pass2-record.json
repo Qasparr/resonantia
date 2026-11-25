@@ -1,0 +1,1272 @@
+{
+  "stage": "pass2",
+  "proof_id": "pow-68610bb803336cd963c2534fc589fe6a308f341919828316f25eb5ccbc1fe84d",
+  "calibration": {
+    "applied": true,
+    "factors": {
+      "VV": 1.1412,
+      "Α": 1.1443,
+      "Ε": 1.1411,
+      "Ι": 1.1426,
+      "Ο": 1.1415
+    },
+    "trained_by": [
+      "pow-26ef27c5d8490bfc9f03c52186cc7f76af6395aeca91efe464f75d1422401da6"
+    ],
+    "per_line": {
+      "a01": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 4
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 2
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 4
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 1
+        }
+      },
+      "a02": {
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 4
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 2
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 1
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 3
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 2
+        }
+      },
+      "a03": {
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 5
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 2
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 1
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 2
+        }
+      },
+      "a04": {
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 5
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 5
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 1
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 2
+        }
+      },
+      "a05": {
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 4
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 5
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 2
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 3
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 1
+        }
+      },
+      "a06": {
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 5
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 3
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 2
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 1
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 1
+        }
+      },
+      "a07": {
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 3
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 2
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 3
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 4
+        }
+      },
+      "a08": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 3
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 4
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 3
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 2
+        }
+      },
+      "a09": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 5
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 2
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 1
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 4
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 1
+        }
+      },
+      "a10": {
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 3
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 4
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 1
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 1
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 4
+        }
+      },
+      "a11": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 4
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 3
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 4
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 2
+        }
+      },
+      "a12": {
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 3
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 2
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 1
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 3
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 3
+        }
+      },
+      "a13": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 2
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 4
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 1
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 4
+        }
+      },
+      "a14": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 2
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 3
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 5
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 2
+        }
+      },
+      "a15": {
+        "VV": {
+          "factor": 1.1412,
+          "morae": 7
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 3
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 1
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 2
+        }
+      },
+      "a16": {
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 4
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 2
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 8
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 1
+        }
+      },
+      "b01": {
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 5
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 5
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 4
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        }
+      },
+      "b02": {
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 3
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 4
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 4
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 3
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        }
+      },
+      "b03": {
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 6
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 1
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 5
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 1
+        }
+      },
+      "b04": {
+        "VV": {
+          "factor": 1.1412,
+          "morae": 3
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 1
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 6
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 2
+        }
+      },
+      "b05": {
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 5
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 1
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 5
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 1
+        }
+      },
+      "b06": {
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 5
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 6
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 1
+        }
+      },
+      "b07": {
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 5
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 4
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 2
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 2
+        }
+      },
+      "b08": {
+        "VV": {
+          "factor": 1.1412,
+          "morae": 1
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 6
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 1
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 4
+        }
+      },
+      "b09": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 4
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 4
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 2
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 2
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 1
+        }
+      },
+      "b10": {
+        "VV": {
+          "factor": 1.1412,
+          "morae": 3
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 3
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 3
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 3
+        }
+      },
+      "b11": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 5
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 2
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 3
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 1
+        }
+      },
+      "b12": {
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 2
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 6
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 3
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 4
+        }
+      },
+      "b13": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 2
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 5
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 5
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 1
+        }
+      },
+      "b14": {
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 3
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 3
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 2
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 2
+        }
+      },
+      "b15": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 4
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 2
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 3
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 2
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 1
+        }
+      },
+      "b16": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 5
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 2
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 1
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 3
+        }
+      },
+      "s01": {
+        "VV": {
+          "factor": 1.1412,
+          "morae": 3
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 2
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 4
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 2
+        }
+      },
+      "s02": {
+        "VV": {
+          "factor": 1.1412,
+          "morae": 1
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 5
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 3
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 5
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        }
+      },
+      "s03": {
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 3
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 5
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 2
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 1
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 2
+        }
+      },
+      "s04": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 5
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 2
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 3
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 2
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 2
+        }
+      },
+      "s05": {
+        "VV": {
+          "factor": 1.1412,
+          "morae": 3
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 3
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 3
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 3
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        }
+      },
+      "s06": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 4
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 3
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 4
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        }
+      },
+      "s07": {
+        "VV": {
+          "factor": 1.1412,
+          "morae": 3
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 4
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 2
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 2
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        }
+      },
+      "s08": {
+        "VV": {
+          "factor": 1.1412,
+          "morae": 5
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 4
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 2
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 2
+        }
+      },
+      "c-guy": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 8
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 3
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 1
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 1
+        }
+      },
+      "c-mirror": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 8
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 3
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 1
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 1
+        }
+      },
+      "c-shion-91": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 8
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 3
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 1
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 1
+        }
+      },
+      "c-guy-92": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 8
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 3
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 1
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 1
+        }
+      },
+      "c-shion-92": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 8
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 3
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 1
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 1
+        }
+      },
+      "f-guy": {
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 3
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 2
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 4
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 2
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 3
+        }
+      },
+      "f-shion": {
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 3
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 2
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 4
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 2
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 3
+        }
+      }
+    }
+  },
+  "seat_totals": {
+    "VV": {
+      "asked_s": 13.6882,
+      "realized_s": 11.9548,
+      "phonemes": 90
+    },
+    "Α": {
+      "asked_s": 25.5884,
+      "realized_s": 22.2335,
+      "phonemes": 195
+    },
+    "Ε": {
+      "asked_s": 9.2183,
+      "realized_s": 8.0235,
+      "phonemes": 68
+    },
+    "Ι": {
+      "asked_s": 17.3917,
+      "realized_s": 15.1608,
+      "phonemes": 124
+    },
+    "Ο": {
+      "asked_s": 19.2435,
+      "realized_s": 16.7504,
+      "phonemes": 134
+    }
+  },
+  "assembly": {
+    "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/vocal-stem.wav",
+    "sample_rate": 44100,
+    "channels": 1,
+    "samples": 11107688,
+    "duration_s": 251.875,
+    "peak": 0.5294,
+    "peak_dbfs": -5.52,
+    "rms": 0.0349,
+    "rms_dbfs": -29.14
+  },
+  "lines": [
+    {
+      "id": "a01",
+      "asked_s": 2.7083,
+      "rendered_s": 2.6819
+    },
+    {
+      "id": "a02",
+      "asked_s": 2.7083,
+      "rendered_s": 2.6819
+    },
+    {
+      "id": "a03",
+      "asked_s": 2.7083,
+      "rendered_s": 2.6239
+    },
+    {
+      "id": "a04",
+      "asked_s": 2.7083,
+      "rendered_s": 2.74
+    },
+    {
+      "id": "a05",
+      "asked_s": 2.7083,
+      "rendered_s": 2.6355
+    },
+    {
+      "id": "a06",
+      "asked_s": 2.7083,
+      "rendered_s": 2.6819
+    },
+    {
+      "id": "a07",
+      "asked_s": 2.7083,
+      "rendered_s": 2.6935
+    },
+    {
+      "id": "a08",
+      "asked_s": 2.7083,
+      "rendered_s": 2.6935
+    },
+    {
+      "id": "a09",
+      "asked_s": 2.7083,
+      "rendered_s": 2.7167
+    },
+    {
+      "id": "a10",
+      "asked_s": 2.7083,
+      "rendered_s": 2.6703
+    },
+    {
+      "id": "a11",
+      "asked_s": 2.7083,
+      "rendered_s": 2.6819
+    },
+    {
+      "id": "a12",
+      "asked_s": 2.7083,
+      "rendered_s": 2.6819
+    },
+    {
+      "id": "a13",
+      "asked_s": 2.7083,
+      "rendered_s": 2.6819
+    },
+    {
+      "id": "a14",
+      "asked_s": 2.7083,
+      "rendered_s": 2.6935
+    },
+    {
+      "id": "a15",
+      "asked_s": 2.7083,
+      "rendered_s": 2.7516
+    },
+    {
+      "id": "a16",
+      "asked_s": 2.7083,
+      "rendered_s": 2.7051
+    },
+    {
+      "id": "b01",
+      "asked_s": 2.7083,
+      "rendered_s": 2.6819
+    },
+    {
+      "id": "b02",
+      "asked_s": 2.7083,
+      "rendered_s": 2.6819
+    },
+    {
+      "id": "b03",
+      "asked_s": 2.7083,
+      "rendered_s": 2.6819
+    },
+    {
+      "id": "b04",
+      "asked_s": 2.7083,
+      "rendered_s": 2.6935
+    },
+    {
+      "id": "b05",
+      "asked_s": 2.7083,
+      "rendered_s": 2.6122
+    },
+    {
+      "id": "b06",
+      "asked_s": 2.7083,
+      "rendered_s": 2.7516
+    },
+    {
+      "id": "b07",
+      "asked_s": 2.7083,
+      "rendered_s": 2.7167
+    },
+    {
+      "id": "b08",
+      "asked_s": 2.7083,
+      "rendered_s": 2.7051
+    },
+    {
+      "id": "b09",
+      "asked_s": 2.7083,
+      "rendered_s": 2.7167
+    },
+    {
+      "id": "b10",
+      "asked_s": 2.7083,
+      "rendered_s": 2.6935
+    },
+    {
+      "id": "b11",
+      "asked_s": 2.7083,
+      "rendered_s": 2.6819
+    },
+    {
+      "id": "b12",
+      "asked_s": 2.7083,
+      "rendered_s": 2.6703
+    },
+    {
+      "id": "b13",
+      "asked_s": 2.7083,
+      "rendered_s": 2.7167
+    },
+    {
+      "id": "b14",
+      "asked_s": 2.7083,
+      "rendered_s": 2.6819
+    },
+    {
+      "id": "b15",
+      "asked_s": 2.7083,
+      "rendered_s": 2.6819
+    },
+    {
+      "id": "b16",
+      "asked_s": 2.7083,
+      "rendered_s": 2.6935
+    },
+    {
+      "id": "s01",
+      "asked_s": 2.7083,
+      "rendered_s": 2.6587
+    },
+    {
+      "id": "s02",
+      "asked_s": 2.7083,
+      "rendered_s": 2.7051
+    },
+    {
+      "id": "s03",
+      "asked_s": 2.7083,
+      "rendered_s": 2.9257
+    },
+    {
+      "id": "s04",
+      "asked_s": 2.7083,
+      "rendered_s": 3.3205
+    },
+    {
+      "id": "s05",
+      "asked_s": 2.7083,
+      "rendered_s": 2.6819
+    },
+    {
+      "id": "s06",
+      "asked_s": 2.7083,
+      "rendered_s": 2.6819
+    },
+    {
+      "id": "s07",
+      "asked_s": 2.7083,
+      "rendered_s": 2.6471
+    },
+    {
+      "id": "s08",
+      "asked_s": 2.7083,
+      "rendered_s": 2.6935
+    },
+    {
+      "id": "c-guy",
+      "asked_s": 5.4167,
+      "rendered_s": 5.3638
+    },
+    {
+      "id": "c-mirror",
+      "asked_s": 5.4167,
+      "rendered_s": 5.3638
+    },
+    {
+      "id": "c-shion-91",
+      "asked_s": 2.7083,
+      "rendered_s": 2.6703
+    },
+    {
+      "id": "c-guy-92",
+      "asked_s": 2.7083,
+      "rendered_s": 2.6587
+    },
+    {
+      "id": "c-shion-92",
+      "asked_s": 2.7083,
+      "rendered_s": 2.6587
+    },
+    {
+      "id": "f-guy",
+      "asked_s": 2.7083,
+      "rendered_s": 2.6935
+    },
+    {
+      "id": "f-shion",
+      "asked_s": 2.7083,
+      "rendered_s": 2.6935
+    }
+  ],
+  "walls": [
+    "line a04: rendered 2.740s against a 2.708s slot -- overhang 0.032s past its bar line, summed into the assembly, not trimmed",
+    "line a09: rendered 2.717s against a 2.708s slot -- overhang 0.008s past its bar line, summed into the assembly, not trimmed",
+    "line a15: rendered 2.752s against a 2.708s slot -- overhang 0.043s past its bar line, summed into the assembly, not trimmed",
+    "line b06: rendered 2.752s against a 2.708s slot -- overhang 0.043s past its bar line, summed into the assembly, not trimmed",
+    "line b07: rendered 2.717s against a 2.708s slot -- overhang 0.008s past its bar line, summed into the assembly, not trimmed",
+    "line b09: rendered 2.717s against a 2.708s slot -- overhang 0.008s past its bar line, summed into the assembly, not trimmed",
+    "line b13: rendered 2.717s against a 2.708s slot -- overhang 0.008s past its bar line, summed into the assembly, not trimmed",
+    "line s03: rendered 2.926s against a 2.708s slot -- overhang 0.217s past its bar line, summed into the assembly, not trimmed",
+    "line s04: rendered 3.321s against a 2.708s slot -- overhang 0.612s past its bar line, summed into the assembly, not trimmed"
+  ],
+  "realization_pct": 99.8387
+}

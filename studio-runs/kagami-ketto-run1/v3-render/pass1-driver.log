@@ -1,0 +1,33 @@
+bridge result: vocal-stem.wav (335.62s wall)
+proof of work (vocal): pow-26ef27c5d8490bfc9f03c52186cc7f76af6395aeca91efe464f75d1422401da6 appended
+manifest: 47 lines, assembly 251.875s, peak -4.93 dBFS, RMS -30.1 dBFS; walls: 1
+{
+  "pass1_proof": "pow-26ef27c5d8490bfc9f03c52186cc7f76af6395aeca91efe464f75d1422401da6",
+  "seat_totals": {
+    "VV": {
+      "asked_s": 12.2253,
+      "realized_s": 10.7127,
+      "phonemes": 90
+    },
+    "\u0391": {
+      "asked_s": 22.1054,
+      "realized_s": 19.3174,
+      "phonemes": 195
+    },
+    "\u0395": {
+      "asked_s": 8.2663,
+      "realized_s": 7.2439,
+      "phonemes": 68
+    },
+    "\u0399": {
+      "asked_s": 14.9943,
+      "realized_s": 13.123,
+      "phonemes": 124
+    },
+    "\u039f": {
+      "asked_s": 17.2408,
+      "realized_s": 15.1034,
+      "phonemes": 134
+    }
+  }
+}

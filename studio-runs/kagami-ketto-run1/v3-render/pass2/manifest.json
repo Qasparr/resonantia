@@ -1,0 +1,3428 @@
+{
+  "title": "KAGAMI KETTOU -- v3 pass 2 (calibration trained on Kagami pass 1 alone; KUROGANE + MIRROR seat: Civet; SHION seat: Phascogale)",
+  "engine": "DiffSinger (OpenVPI, Apache 2.0) via resonance.studio.diffsinger",
+  "bank": {
+    "name": "Lem the Shapeshifter DS 2.5",
+    "dir": "/home/hatch/workspace/resonance/diffsinger-lab/banks/Lem-the-Shapeshifter-DS-2.5-dur26/lem_v2_5",
+    "vocoder": "/home/hatch/workspace/resonance/diffsinger-lab/DiffSinger/checkpoints/pc_nsf_hifigan_44.1k_hop512_128bin_2025.02"
+  },
+  "sample_rate": 44100,
+  "hop": 512,
+  "lines": [
+    {
+      "id": "a01",
+      "text": "かがみのまえにたつおとこ",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 21.666666666666668,
+      "morae": 12,
+      "phonemes": 22,
+      "notes": 12,
+      "asked_s": 2.7083,
+      "rendered_s": 2.6819,
+      "frames": 231,
+      "seats": {
+        "VV": {
+          "asked_s": 0.1161,
+          "realized_s": 0.1008,
+          "phonemes": 1
+        },
+        "Α": {
+          "asked_s": 0.6037,
+          "realized_s": 0.5243,
+          "phonemes": 4
+        },
+        "Ε": {
+          "asked_s": 0.2322,
+          "realized_s": 0.2016,
+          "phonemes": 1
+        },
+        "Ι": {
+          "asked_s": 0.2438,
+          "realized_s": 0.2117,
+          "phonemes": 2
+        },
+        "Ο": {
+          "asked_s": 0.5805,
+          "realized_s": 0.5041,
+          "phonemes": 4
+        }
+      },
+      "file": "lines/a01.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/a01.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 118272,
+        "duration_s": 2.6819,
+        "peak": 0.2467,
+        "peak_dbfs": -12.16,
+        "rms": 0.0444,
+        "rms_dbfs": -27.05
+      }
+    },
+    {
+      "id": "a02",
+      "text": "おのれしらぬものはまける",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 24.375,
+      "morae": 12,
+      "phonemes": 23,
+      "notes": 12,
+      "asked_s": 2.7083,
+      "rendered_s": 2.6819,
+      "frames": 231,
+      "seats": {
+        "VV": {
+          "asked_s": 0.2322,
+          "realized_s": 0.2024,
+          "phonemes": 2
+        },
+        "Α": {
+          "asked_s": 0.3657,
+          "realized_s": 0.3188,
+          "phonemes": 3
+        },
+        "Ε": {
+          "asked_s": 0.2322,
+          "realized_s": 0.2024,
+          "phonemes": 2
+        },
+        "Ι": {
+          "asked_s": 0.1219,
+          "realized_s": 0.1063,
+          "phonemes": 1
+        },
+        "Ο": {
+          "asked_s": 0.8243,
+          "realized_s": 0.7185,
+          "phonemes": 4
+        }
+      },
+      "file": "lines/a02.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/a02.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 118272,
+        "duration_s": 2.6819,
+        "peak": 0.3082,
+        "peak_dbfs": -10.22,
+        "rms": 0.0449,
+        "rms_dbfs": -26.96
+      }
+    },
+    {
+      "id": "a03",
+      "text": "ことばはけんよりもつよく",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 27.083333333333336,
+      "morae": 12,
+      "phonemes": 23,
+      "notes": 12,
+      "asked_s": 2.7083,
+      "rendered_s": 2.6239,
+      "frames": 226,
+      "seats": {
+        "VV": {
+          "asked_s": 0.2322,
+          "realized_s": 0.2003,
+          "phonemes": 2
+        },
+        "Α": {
+          "asked_s": 0.2438,
+          "realized_s": 0.2103,
+          "phonemes": 2
+        },
+        "Ε": {
+          "asked_s": 0.1161,
+          "realized_s": 0.1001,
+          "phonemes": 1
+        },
+        "Ι": {
+          "asked_s": 0.1219,
+          "realized_s": 0.1052,
+          "phonemes": 1
+        },
+        "Ο": {
+          "asked_s": 0.7024,
+          "realized_s": 0.6059,
+          "phonemes": 5
+        }
+      },
+      "file": "lines/a03.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/a03.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 115712,
+        "duration_s": 2.6239,
+        "peak": 0.2153,
+        "peak_dbfs": -13.34,
+        "rms": 0.0442,
+        "rms_dbfs": -27.08
+      }
+    },
+    {
+      "id": "a04",
+      "text": "しんじつひとつかがみにうつる",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 29.791666666666668,
+      "morae": 14,
+      "phonemes": 26,
+      "notes": 14,
+      "asked_s": 2.7083,
+      "rendered_s": 2.74,
+      "frames": 236,
+      "seats": {
+        "VV": {
+          "asked_s": 0.6966,
+          "realized_s": 0.6204,
+          "phonemes": 5
+        },
+        "Α": {
+          "asked_s": 0.2438,
+          "realized_s": 0.2171,
+          "phonemes": 2
+        },
+        "Ι": {
+          "asked_s": 0.5457,
+          "realized_s": 0.486,
+          "phonemes": 5
+        },
+        "Ο": {
+          "asked_s": 0.1161,
+          "realized_s": 0.1034,
+          "phonemes": 1
+        }
+      },
+      "file": "lines/a04.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/a04.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 120832,
+        "duration_s": 2.74,
+        "peak": 0.1961,
+        "peak_dbfs": -14.15,
+        "rms": 0.0338,
+        "rms_dbfs": -29.43
+      }
+    },
+    {
+      "id": "a05",
+      "text": "デトロイトのかぜほねまでさむい",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 32.5,
+      "morae": 15,
+      "phonemes": 28,
+      "notes": 15,
+      "asked_s": 2.7083,
+      "rendered_s": 2.6355,
+      "frames": 227,
+      "seats": {
+        "VV": {
+          "asked_s": 0.1161,
+          "realized_s": 0.0998,
+          "phonemes": 1
+        },
+        "Α": {
+          "asked_s": 0.3019,
+          "realized_s": 0.2596,
+          "phonemes": 3
+        },
+        "Ε": {
+          "asked_s": 0.4644,
+          "realized_s": 0.3993,
+          "phonemes": 4
+        },
+        "Ι": {
+          "asked_s": 0.4876,
+          "realized_s": 0.4193,
+          "phonemes": 2
+        },
+        "Ο": {
+          "asked_s": 0.4063,
+          "realized_s": 0.3494,
+          "phonemes": 5
+        }
+      },
+      "file": "lines/a05.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/a05.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 116224,
+        "duration_s": 2.6355,
+        "peak": 0.2248,
+        "peak_dbfs": -12.96,
+        "rms": 0.0444,
+        "rms_dbfs": -27.06
+      }
+    },
+    {
+      "id": "a06",
+      "text": "それでもおれはここにたつ",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 35.208333333333336,
+      "morae": 12,
+      "phonemes": 23,
+      "notes": 12,
+      "asked_s": 2.7083,
+      "rendered_s": 2.6819,
+      "frames": 231,
+      "seats": {
+        "VV": {
+          "asked_s": 0.1161,
+          "realized_s": 0.1016,
+          "phonemes": 1
+        },
+        "Α": {
+          "asked_s": 0.2438,
+          "realized_s": 0.2133,
+          "phonemes": 2
+        },
+        "Ε": {
+          "asked_s": 0.3483,
+          "realized_s": 0.3048,
+          "phonemes": 3
+        },
+        "Ι": {
+          "asked_s": 0.1219,
+          "realized_s": 0.1067,
+          "phonemes": 1
+        },
+        "Ο": {
+          "asked_s": 0.8185,
+          "realized_s": 0.7162,
+          "phonemes": 5
+        }
+      },
+      "file": "lines/a06.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/a06.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 118272,
+        "duration_s": 2.6819,
+        "peak": 0.2837,
+        "peak_dbfs": -10.94,
+        "rms": 0.0487,
+        "rms_dbfs": -26.26
+      }
+    },
+    {
+      "id": "a07",
+      "text": "ビートはじゅうさんはくのうみ",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 37.91666666666667,
+      "morae": 13,
+      "phonemes": 22,
+      "notes": 13,
+      "asked_s": 2.7083,
+      "rendered_s": 2.6935,
+      "frames": 232,
+      "seats": {
+        "VV": {
+          "asked_s": 0.6966,
+          "realized_s": 0.6122,
+          "phonemes": 4
+        },
+        "Α": {
+          "asked_s": 0.3657,
+          "realized_s": 0.3214,
+          "phonemes": 3
+        },
+        "Ι": {
+          "asked_s": 0.4876,
+          "realized_s": 0.4285,
+          "phonemes": 3
+        },
+        "Ο": {
+          "asked_s": 0.2322,
+          "realized_s": 0.2041,
+          "phonemes": 2
+        }
+      },
+      "file": "lines/a07.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/a07.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 118784,
+        "duration_s": 2.6935,
+        "peak": 0.2035,
+        "peak_dbfs": -13.83,
+        "rms": 0.042,
+        "rms_dbfs": -27.54
+      }
+    },
+    {
+      "id": "a08",
+      "text": "はちぶおんぷにのるたましい",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 40.625,
+      "morae": 13,
+      "phonemes": 23,
+      "notes": 13,
+      "asked_s": 2.7083,
+      "rendered_s": 2.6935,
+      "frames": 232,
+      "seats": {
+        "VV": {
+          "asked_s": 0.3483,
+          "realized_s": 0.3049,
+          "phonemes": 3
+        },
+        "Α": {
+          "asked_s": 0.3657,
+          "realized_s": 0.3202,
+          "phonemes": 3
+        },
+        "Ι": {
+          "asked_s": 0.6095,
+          "realized_s": 0.5336,
+          "phonemes": 4
+        },
+        "Ο": {
+          "asked_s": 0.3483,
+          "realized_s": 0.3049,
+          "phonemes": 2
+        }
+      },
+      "file": "lines/a08.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/a08.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 118784,
+        "duration_s": 2.6935,
+        "peak": 0.2284,
+        "peak_dbfs": -12.83,
+        "rms": 0.0406,
+        "rms_dbfs": -27.82
+      }
+    },
+    {
+      "id": "a09",
+      "text": "まなべまなべくちよりさきに",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 43.333333333333336,
+      "morae": 13,
+      "phonemes": 26,
+      "notes": 13,
+      "asked_s": 2.7083,
+      "rendered_s": 2.7167,
+      "frames": 234,
+      "seats": {
+        "VV": {
+          "asked_s": 0.1161,
+          "realized_s": 0.101,
+          "phonemes": 1
+        },
+        "Α": {
+          "asked_s": 0.6095,
+          "realized_s": 0.5302,
+          "phonemes": 5
+        },
+        "Ε": {
+          "asked_s": 0.2322,
+          "realized_s": 0.202,
+          "phonemes": 2
+        },
+        "Ι": {
+          "asked_s": 0.4876,
+          "realized_s": 0.4242,
+          "phonemes": 4
+        },
+        "Ο": {
+          "asked_s": 0.1161,
+          "realized_s": 0.101,
+          "phonemes": 1
+        }
+      },
+      "file": "lines/a09.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/a09.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 119808,
+        "duration_s": 2.7167,
+        "peak": 0.2028,
+        "peak_dbfs": -13.86,
+        "rms": 0.0375,
+        "rms_dbfs": -28.52
+      }
+    },
+    {
+      "id": "a10",
+      "text": "みみをすませてこころできけ",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 46.04166666666667,
+      "morae": 13,
+      "phonemes": 25,
+      "notes": 13,
+      "asked_s": 2.7083,
+      "rendered_s": 2.6703,
+      "frames": 230,
+      "seats": {
+        "VV": {
+          "asked_s": 0.1161,
+          "realized_s": 0.1011,
+          "phonemes": 1
+        },
+        "Α": {
+          "asked_s": 0.1219,
+          "realized_s": 0.1062,
+          "phonemes": 1
+        },
+        "Ε": {
+          "asked_s": 0.4644,
+          "realized_s": 0.4046,
+          "phonemes": 4
+        },
+        "Ι": {
+          "asked_s": 0.3657,
+          "realized_s": 0.3186,
+          "phonemes": 3
+        },
+        "Ο": {
+          "asked_s": 0.5805,
+          "realized_s": 0.5057,
+          "phonemes": 4
+        }
+      },
+      "file": "lines/a10.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/a10.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 117760,
+        "duration_s": 2.6703,
+        "peak": 0.193,
+        "peak_dbfs": -14.29,
+        "rms": 0.0372,
+        "rms_dbfs": -28.6
+      }
+    },
+    {
+      "id": "a11",
+      "text": "かがみのおとこてきではない",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 48.75,
+      "morae": 13,
+      "phonemes": 24,
+      "notes": 13,
+      "asked_s": 2.7083,
+      "rendered_s": 2.6819,
+      "frames": 231,
+      "seats": {
+        "Α": {
+          "asked_s": 0.4876,
+          "realized_s": 0.4219,
+          "phonemes": 4
+        },
+        "Ε": {
+          "asked_s": 0.2322,
+          "realized_s": 0.2009,
+          "phonemes": 2
+        },
+        "Ι": {
+          "asked_s": 0.4876,
+          "realized_s": 0.4219,
+          "phonemes": 3
+        },
+        "Ο": {
+          "asked_s": 0.5805,
+          "realized_s": 0.5022,
+          "phonemes": 4
+        }
+      },
+      "file": "lines/a11.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/a11.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 118272,
+        "duration_s": 2.6819,
+        "peak": 0.1867,
+        "peak_dbfs": -14.58,
+        "rms": 0.04,
+        "rms_dbfs": -27.96
+      }
+    },
+    {
+      "id": "a12",
+      "text": "そいつはせんせいかおはおれ",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 51.458333333333336,
+      "morae": 13,
+      "phonemes": 21,
+      "notes": 13,
+      "asked_s": 2.7083,
+      "rendered_s": 2.6819,
+      "frames": 231,
+      "seats": {
+        "VV": {
+          "asked_s": 0.1161,
+          "realized_s": 0.102,
+          "phonemes": 1
+        },
+        "Α": {
+          "asked_s": 0.3657,
+          "realized_s": 0.3212,
+          "phonemes": 3
+        },
+        "Ε": {
+          "asked_s": 0.3483,
+          "realized_s": 0.3059,
+          "phonemes": 3
+        },
+        "Ι": {
+          "asked_s": 0.4876,
+          "realized_s": 0.4283,
+          "phonemes": 2
+        },
+        "Ο": {
+          "asked_s": 0.5805,
+          "realized_s": 0.5099,
+          "phonemes": 3
+        }
+      },
+      "file": "lines/a12.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/a12.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 118272,
+        "duration_s": 2.6819,
+        "peak": 0.2448,
+        "peak_dbfs": -12.23,
+        "rms": 0.0445,
+        "rms_dbfs": -27.04
+      }
+    },
+    {
+      "id": "a13",
+      "text": "まけをしるものつよくなる",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 54.16666666666667,
+      "morae": 12,
+      "phonemes": 23,
+      "notes": 12,
+      "asked_s": 2.7083,
+      "rendered_s": 2.6819,
+      "frames": 231,
+      "seats": {
+        "VV": {
+          "asked_s": 0.4644,
+          "realized_s": 0.4079,
+          "phonemes": 4
+        },
+        "Α": {
+          "asked_s": 0.3599,
+          "realized_s": 0.3161,
+          "phonemes": 2
+        },
+        "Ε": {
+          "asked_s": 0.1161,
+          "realized_s": 0.102,
+          "phonemes": 1
+        },
+        "Ι": {
+          "asked_s": 0.1219,
+          "realized_s": 0.1071,
+          "phonemes": 1
+        },
+        "Ο": {
+          "asked_s": 0.5805,
+          "realized_s": 0.5099,
+          "phonemes": 4
+        }
+      },
+      "file": "lines/a13.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/a13.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 118272,
+        "duration_s": 2.6819,
+        "peak": 0.2798,
+        "peak_dbfs": -11.06,
+        "rms": 0.0472,
+        "rms_dbfs": -26.52
+      }
+    },
+    {
+      "id": "a14",
+      "text": "かちにおぼれるものはおちる",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 56.875,
+      "morae": 13,
+      "phonemes": 24,
+      "notes": 13,
+      "asked_s": 2.7083,
+      "rendered_s": 2.6935,
+      "frames": 232,
+      "seats": {
+        "VV": {
+          "asked_s": 0.2322,
+          "realized_s": 0.2033,
+          "phonemes": 2
+        },
+        "Α": {
+          "asked_s": 0.2438,
+          "realized_s": 0.2134,
+          "phonemes": 2
+        },
+        "Ε": {
+          "asked_s": 0.1161,
+          "realized_s": 0.1016,
+          "phonemes": 1
+        },
+        "Ι": {
+          "asked_s": 0.3657,
+          "realized_s": 0.3202,
+          "phonemes": 3
+        },
+        "Ο": {
+          "asked_s": 0.8127,
+          "realized_s": 0.7115,
+          "phonemes": 5
+        }
+      },
+      "file": "lines/a14.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/a14.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 118784,
+        "duration_s": 2.6935,
+        "peak": 0.1834,
+        "peak_dbfs": -14.73,
+        "rms": 0.0422,
+        "rms_dbfs": -27.5
+      }
+    },
+    {
+      "id": "a15",
+      "text": "きゅうじゅうさんのかずむねにきざむ",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 59.583333333333336,
+      "morae": 15,
+      "phonemes": 27,
+      "notes": 15,
+      "asked_s": 2.7083,
+      "rendered_s": 2.7516,
+      "frames": 237,
+      "seats": {
+        "VV": {
+          "asked_s": 0.8707,
+          "realized_s": 0.7817,
+          "phonemes": 7
+        },
+        "Α": {
+          "asked_s": 0.3657,
+          "realized_s": 0.3283,
+          "phonemes": 3
+        },
+        "Ε": {
+          "asked_s": 0.1161,
+          "realized_s": 0.1042,
+          "phonemes": 1
+        },
+        "Ι": {
+          "asked_s": 0.2438,
+          "realized_s": 0.2189,
+          "phonemes": 2
+        },
+        "Ο": {
+          "asked_s": 0.058,
+          "realized_s": 0.0521,
+          "phonemes": 1
+        }
+      },
+      "file": "lines/a15.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/a15.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 121344,
+        "duration_s": 2.7516,
+        "peak": 0.1824,
+        "peak_dbfs": -14.78,
+        "rms": 0.0358,
+        "rms_dbfs": -28.93
+      }
+    },
+    {
+      "id": "a16",
+      "text": "しょうぶはここからまだおわらない",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 62.29166666666667,
+      "morae": 15,
+      "phonemes": 27,
+      "notes": 15,
+      "asked_s": 2.7083,
+      "rendered_s": 2.7051,
+      "frames": 233,
+      "seats": {
+        "VV": {
+          "asked_s": 0.1741,
+          "realized_s": 0.1514,
+          "phonemes": 2
+        },
+        "Α": {
+          "asked_s": 0.9114,
+          "realized_s": 0.7924,
+          "phonemes": 8
+        },
+        "Ι": {
+          "asked_s": 0.2438,
+          "realized_s": 0.212,
+          "phonemes": 1
+        },
+        "Ο": {
+          "asked_s": 0.5224,
+          "realized_s": 0.4542,
+          "phonemes": 4
+        }
+      },
+      "file": "lines/a16.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/a16.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 119296,
+        "duration_s": 2.7051,
+        "peak": 0.247,
+        "peak_dbfs": -12.15,
+        "rms": 0.0451,
+        "rms_dbfs": -26.92
+      }
+    },
+    {
+      "id": "b01",
+      "text": "おわりではないこここそはじまり",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 65.0,
+      "morae": 15,
+      "phonemes": 28,
+      "notes": 15,
+      "asked_s": 2.7083,
+      "rendered_s": 2.6819,
+      "frames": 231,
+      "seats": {
+        "Α": {
+          "asked_s": 0.5457,
+          "realized_s": 0.4721,
+          "phonemes": 5
+        },
+        "Ε": {
+          "asked_s": 0.1161,
+          "realized_s": 0.1004,
+          "phonemes": 1
+        },
+        "Ι": {
+          "asked_s": 0.5457,
+          "realized_s": 0.4721,
+          "phonemes": 4
+        },
+        "Ο": {
+          "asked_s": 0.5805,
+          "realized_s": 0.5022,
+          "phonemes": 5
+        }
+      },
+      "file": "lines/b01.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/b01.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 118272,
+        "duration_s": 2.6819,
+        "peak": 0.3943,
+        "peak_dbfs": -8.08,
+        "rms": 0.0511,
+        "rms_dbfs": -25.83
+      }
+    },
+    {
+      "id": "b02",
+      "text": "おなじかずをむねにきざみもやす",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 67.70833333333334,
+      "morae": 15,
+      "phonemes": 28,
+      "notes": 15,
+      "asked_s": 2.7083,
+      "rendered_s": 2.6819,
+      "frames": 231,
+      "seats": {
+        "VV": {
+          "asked_s": 0.3483,
+          "realized_s": 0.3036,
+          "phonemes": 3
+        },
+        "Α": {
+          "asked_s": 0.4238,
+          "realized_s": 0.3694,
+          "phonemes": 4
+        },
+        "Ε": {
+          "asked_s": 0.1161,
+          "realized_s": 0.1012,
+          "phonemes": 1
+        },
+        "Ι": {
+          "asked_s": 0.3599,
+          "realized_s": 0.3137,
+          "phonemes": 4
+        },
+        "Ο": {
+          "asked_s": 0.5224,
+          "realized_s": 0.4554,
+          "phonemes": 3
+        }
+      },
+      "file": "lines/b02.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/b02.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 118272,
+        "duration_s": 2.6819,
+        "peak": 0.2255,
+        "peak_dbfs": -12.94,
+        "rms": 0.0439,
+        "rms_dbfs": -27.16
+      }
+    },
+    {
+      "id": "b03",
+      "text": "おちたところからまたのぼる",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 70.41666666666667,
+      "morae": 13,
+      "phonemes": 25,
+      "notes": 13,
+      "asked_s": 2.7083,
+      "rendered_s": 2.6819,
+      "frames": 231,
+      "seats": {
+        "VV": {
+          "asked_s": 0.1161,
+          "realized_s": 0.1008,
+          "phonemes": 1
+        },
+        "Α": {
+          "asked_s": 0.6095,
+          "realized_s": 0.5293,
+          "phonemes": 5
+        },
+        "Ι": {
+          "asked_s": 0.1219,
+          "realized_s": 0.1059,
+          "phonemes": 1
+        },
+        "Ο": {
+          "asked_s": 0.8127,
+          "realized_s": 0.7058,
+          "phonemes": 6
+        }
+      },
+      "file": "lines/b03.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/b03.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 118272,
+        "duration_s": 2.6819,
+        "peak": 0.2374,
+        "peak_dbfs": -12.49,
+        "rms": 0.0467,
+        "rms_dbfs": -26.61
+      }
+    },
+    {
+      "id": "b04",
+      "text": "つよさはまけからうまれる",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 73.125,
+      "morae": 12,
+      "phonemes": 23,
+      "notes": 12,
+      "asked_s": 2.7083,
+      "rendered_s": 2.6935,
+      "frames": 232,
+      "seats": {
+        "VV": {
+          "asked_s": 0.5863,
+          "realized_s": 0.5094,
+          "phonemes": 3
+        },
+        "Α": {
+          "asked_s": 0.7314,
+          "realized_s": 0.6355,
+          "phonemes": 6
+        },
+        "Ε": {
+          "asked_s": 0.2322,
+          "realized_s": 0.2018,
+          "phonemes": 2
+        },
+        "Ο": {
+          "asked_s": 0.1161,
+          "realized_s": 0.1009,
+          "phonemes": 1
+        }
+      },
+      "file": "lines/b04.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/b04.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 118784,
+        "duration_s": 2.6935,
+        "peak": 0.275,
+        "peak_dbfs": -11.21,
+        "rms": 0.0533,
+        "rms_dbfs": -25.46
+      }
+    },
+    {
+      "id": "b05",
+      "text": "せんせいのこえはおれのこえ",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 75.83333333333334,
+      "morae": 13,
+      "phonemes": 21,
+      "notes": 13,
+      "asked_s": 2.7083,
+      "rendered_s": 2.6122,
+      "frames": 225,
+      "seats": {
+        "Α": {
+          "asked_s": 0.1219,
+          "realized_s": 0.1055,
+          "phonemes": 1
+        },
+        "Ε": {
+          "asked_s": 0.8127,
+          "realized_s": 0.7033,
+          "phonemes": 5
+        },
+        "Ι": {
+          "asked_s": 0.2438,
+          "realized_s": 0.211,
+          "phonemes": 1
+        },
+        "Ο": {
+          "asked_s": 0.6966,
+          "realized_s": 0.6028,
+          "phonemes": 5
+        }
+      },
+      "file": "lines/b05.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/b05.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 115200,
+        "duration_s": 2.6122,
+        "peak": 0.2084,
+        "peak_dbfs": -13.62,
+        "rms": 0.0419,
+        "rms_dbfs": -27.55
+      }
+    },
+    {
+      "id": "b06",
+      "text": "てきはいないかがみのなかに",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 78.54166666666667,
+      "morae": 13,
+      "phonemes": 24,
+      "notes": 13,
+      "asked_s": 2.7083,
+      "rendered_s": 2.7516,
+      "frames": 237,
+      "seats": {
+        "Α": {
+          "asked_s": 0.7314,
+          "realized_s": 0.6397,
+          "phonemes": 6
+        },
+        "Ε": {
+          "asked_s": 0.1161,
+          "realized_s": 0.1015,
+          "phonemes": 1
+        },
+        "Ι": {
+          "asked_s": 0.8533,
+          "realized_s": 0.7463,
+          "phonemes": 5
+        },
+        "Ο": {
+          "asked_s": 0.1161,
+          "realized_s": 0.1015,
+          "phonemes": 1
+        }
+      },
+      "file": "lines/b06.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/b06.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 121344,
+        "duration_s": 2.7516,
+        "peak": 0.2764,
+        "peak_dbfs": -11.17,
+        "rms": 0.0366,
+        "rms_dbfs": -28.73
+      }
+    },
+    {
+      "id": "b07",
+      "text": "こころのみみできいたこたえ",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 81.25,
+      "morae": 13,
+      "phonemes": 24,
+      "notes": 13,
+      "asked_s": 2.7083,
+      "rendered_s": 2.7167,
+      "frames": 234,
+      "seats": {
+        "Α": {
+          "asked_s": 0.2438,
+          "realized_s": 0.2145,
+          "phonemes": 2
+        },
+        "Ε": {
+          "asked_s": 0.3483,
+          "realized_s": 0.3064,
+          "phonemes": 2
+        },
+        "Ι": {
+          "asked_s": 0.6095,
+          "realized_s": 0.5362,
+          "phonemes": 4
+        },
+        "Ο": {
+          "asked_s": 0.5805,
+          "realized_s": 0.5107,
+          "phonemes": 5
+        }
+      },
+      "file": "lines/b07.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/b07.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 119808,
+        "duration_s": 2.7167,
+        "peak": 0.2479,
+        "peak_dbfs": -12.11,
+        "rms": 0.0374,
+        "rms_dbfs": -28.53
+      }
+    },
+    {
+      "id": "b08",
+      "text": "くちよりさきにまなんだみち",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 83.95833333333334,
+      "morae": 13,
+      "phonemes": 25,
+      "notes": 13,
+      "asked_s": 2.7083,
+      "rendered_s": 2.7051,
+      "frames": 233,
+      "seats": {
+        "VV": {
+          "asked_s": 0.1161,
+          "realized_s": 0.1009,
+          "phonemes": 1
+        },
+        "Α": {
+          "asked_s": 0.4876,
+          "realized_s": 0.4239,
+          "phonemes": 4
+        },
+        "Ι": {
+          "asked_s": 0.7314,
+          "realized_s": 0.6359,
+          "phonemes": 6
+        },
+        "Ο": {
+          "asked_s": 0.1161,
+          "realized_s": 0.1009,
+          "phonemes": 1
+        }
+      },
+      "file": "lines/b08.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/b08.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 119296,
+        "duration_s": 2.7051,
+        "peak": 0.1911,
+        "peak_dbfs": -14.38,
+        "rms": 0.0334,
+        "rms_dbfs": -29.52
+      }
+    },
+    {
+      "id": "b09",
+      "text": "たましいのせてはちぶのなみ",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 86.66666666666667,
+      "morae": 13,
+      "phonemes": 25,
+      "notes": 13,
+      "asked_s": 2.7083,
+      "rendered_s": 2.7167,
+      "frames": 234,
+      "seats": {
+        "VV": {
+          "asked_s": 0.1161,
+          "realized_s": 0.1014,
+          "phonemes": 1
+        },
+        "Α": {
+          "asked_s": 0.4876,
+          "realized_s": 0.4258,
+          "phonemes": 4
+        },
+        "Ε": {
+          "asked_s": 0.2322,
+          "realized_s": 0.2027,
+          "phonemes": 2
+        },
+        "Ι": {
+          "asked_s": 0.6095,
+          "realized_s": 0.5322,
+          "phonemes": 4
+        },
+        "Ο": {
+          "asked_s": 0.2322,
+          "realized_s": 0.2027,
+          "phonemes": 2
+        }
+      },
+      "file": "lines/b09.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/b09.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 119808,
+        "duration_s": 2.7167,
+        "peak": 0.278,
+        "peak_dbfs": -11.12,
+        "rms": 0.0424,
+        "rms_dbfs": -27.46
+      }
+    },
+    {
+      "id": "b10",
+      "text": "じゅうさんのうみはいまここに",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 89.375,
+      "morae": 13,
+      "phonemes": 22,
+      "notes": 13,
+      "asked_s": 2.7083,
+      "rendered_s": 2.6935,
+      "frames": 232,
+      "seats": {
+        "VV": {
+          "asked_s": 0.5805,
+          "realized_s": 0.5101,
+          "phonemes": 3
+        },
+        "Α": {
+          "asked_s": 0.3657,
+          "realized_s": 0.3214,
+          "phonemes": 3
+        },
+        "Ι": {
+          "asked_s": 0.4876,
+          "realized_s": 0.4285,
+          "phonemes": 3
+        },
+        "Ο": {
+          "asked_s": 0.3483,
+          "realized_s": 0.3061,
+          "phonemes": 3
+        }
+      },
+      "file": "lines/b10.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/b10.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 118784,
+        "duration_s": 2.6935,
+        "peak": 0.3672,
+        "peak_dbfs": -8.7,
+        "rms": 0.0496,
+        "rms_dbfs": -26.09
+      }
+    },
+    {
+      "id": "b11",
+      "text": "さむさのなかでここにたつ",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 92.08333333333334,
+      "morae": 12,
+      "phonemes": 24,
+      "notes": 12,
+      "asked_s": 2.7083,
+      "rendered_s": 2.6819,
+      "frames": 231,
+      "seats": {
+        "VV": {
+          "asked_s": 0.3541,
+          "realized_s": 0.3064,
+          "phonemes": 2
+        },
+        "Α": {
+          "asked_s": 0.6095,
+          "realized_s": 0.5273,
+          "phonemes": 5
+        },
+        "Ε": {
+          "asked_s": 0.1161,
+          "realized_s": 0.1004,
+          "phonemes": 1
+        },
+        "Ι": {
+          "asked_s": 0.1219,
+          "realized_s": 0.1055,
+          "phonemes": 1
+        },
+        "Ο": {
+          "asked_s": 0.3483,
+          "realized_s": 0.3013,
+          "phonemes": 3
+        }
+      },
+      "file": "lines/b11.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/b11.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 118272,
+        "duration_s": 2.6819,
+        "peak": 0.206,
+        "peak_dbfs": -13.72,
+        "rms": 0.0371,
+        "rms_dbfs": -28.62
+      }
+    },
+    {
+      "id": "b12",
+      "text": "デトロイトのかぜはいまもおなじ",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 94.79166666666667,
+      "morae": 15,
+      "phonemes": 27,
+      "notes": 15,
+      "asked_s": 2.7083,
+      "rendered_s": 2.6703,
+      "frames": 230,
+      "seats": {
+        "Α": {
+          "asked_s": 0.3599,
+          "realized_s": 0.3136,
+          "phonemes": 4
+        },
+        "Ε": {
+          "asked_s": 0.2322,
+          "realized_s": 0.2023,
+          "phonemes": 2
+        },
+        "Ι": {
+          "asked_s": 0.4818,
+          "realized_s": 0.4198,
+          "phonemes": 3
+        },
+        "Ο": {
+          "asked_s": 0.6966,
+          "realized_s": 0.6069,
+          "phonemes": 6
+        }
+      },
+      "file": "lines/b12.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/b12.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 117760,
+        "duration_s": 2.6703,
+        "peak": 0.3151,
+        "peak_dbfs": -10.03,
+        "rms": 0.0466,
+        "rms_dbfs": -26.64
+      }
+    },
+    {
+      "id": "b13",
+      "text": "かがみにうつるしんじつひとつ",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 97.5,
+      "morae": 14,
+      "phonemes": 26,
+      "notes": 14,
+      "asked_s": 2.7083,
+      "rendered_s": 2.7167,
+      "frames": 234,
+      "seats": {
+        "VV": {
+          "asked_s": 0.6966,
+          "realized_s": 0.6174,
+          "phonemes": 5
+        },
+        "Α": {
+          "asked_s": 0.2438,
+          "realized_s": 0.2161,
+          "phonemes": 2
+        },
+        "Ι": {
+          "asked_s": 0.5457,
+          "realized_s": 0.4837,
+          "phonemes": 5
+        },
+        "Ο": {
+          "asked_s": 0.058,
+          "realized_s": 0.0515,
+          "phonemes": 1
+        }
+      },
+      "file": "lines/b13.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/b13.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 119808,
+        "duration_s": 2.7167,
+        "peak": 0.3304,
+        "peak_dbfs": -9.62,
+        "rms": 0.0424,
+        "rms_dbfs": -27.45
+      }
+    },
+    {
+      "id": "b14",
+      "text": "けんにまさることばひびく",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 100.20833333333334,
+      "morae": 12,
+      "phonemes": 23,
+      "notes": 12,
+      "asked_s": 2.7083,
+      "rendered_s": 2.6819,
+      "frames": 231,
+      "seats": {
+        "VV": {
+          "asked_s": 0.3541,
+          "realized_s": 0.3087,
+          "phonemes": 2
+        },
+        "Α": {
+          "asked_s": 0.3657,
+          "realized_s": 0.3188,
+          "phonemes": 3
+        },
+        "Ε": {
+          "asked_s": 0.1161,
+          "realized_s": 0.1012,
+          "phonemes": 1
+        },
+        "Ι": {
+          "asked_s": 0.3657,
+          "realized_s": 0.3188,
+          "phonemes": 3
+        },
+        "Ο": {
+          "asked_s": 0.2322,
+          "realized_s": 0.2024,
+          "phonemes": 2
+        }
+      },
+      "file": "lines/b14.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/b14.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 118272,
+        "duration_s": 2.6819,
+        "peak": 0.2964,
+        "peak_dbfs": -10.56,
+        "rms": 0.043,
+        "rms_dbfs": -27.33
+      }
+    },
+    {
+      "id": "b15",
+      "text": "まけるはおのれしらぬやつ",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 102.91666666666667,
+      "morae": 12,
+      "phonemes": 23,
+      "notes": 12,
+      "asked_s": 2.7083,
+      "rendered_s": 2.6819,
+      "frames": 231,
+      "seats": {
+        "VV": {
+          "asked_s": 0.4702,
+          "realized_s": 0.4083,
+          "phonemes": 3
+        },
+        "Α": {
+          "asked_s": 0.4876,
+          "realized_s": 0.4235,
+          "phonemes": 4
+        },
+        "Ε": {
+          "asked_s": 0.2322,
+          "realized_s": 0.2016,
+          "phonemes": 2
+        },
+        "Ι": {
+          "asked_s": 0.1219,
+          "realized_s": 0.1059,
+          "phonemes": 1
+        },
+        "Ο": {
+          "asked_s": 0.3483,
+          "realized_s": 0.3025,
+          "phonemes": 2
+        }
+      },
+      "file": "lines/b15.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/b15.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 118272,
+        "duration_s": 2.6819,
+        "peak": 0.2414,
+        "peak_dbfs": -12.35,
+        "rms": 0.0441,
+        "rms_dbfs": -27.1
+      }
+    },
+    {
+      "id": "b16",
+      "text": "かがみまえにたつはおとこ",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 105.625,
+      "morae": 12,
+      "phonemes": 22,
+      "notes": 12,
+      "asked_s": 2.7083,
+      "rendered_s": 2.6935,
+      "frames": 232,
+      "seats": {
+        "VV": {
+          "asked_s": 0.1161,
+          "realized_s": 0.1005,
+          "phonemes": 1
+        },
+        "Α": {
+          "asked_s": 0.6095,
+          "realized_s": 0.5276,
+          "phonemes": 5
+        },
+        "Ε": {
+          "asked_s": 0.2322,
+          "realized_s": 0.201,
+          "phonemes": 1
+        },
+        "Ι": {
+          "asked_s": 0.2438,
+          "realized_s": 0.2111,
+          "phonemes": 2
+        },
+        "Ο": {
+          "asked_s": 0.5863,
+          "realized_s": 0.5075,
+          "phonemes": 3
+        }
+      },
+      "file": "lines/b16.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/b16.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 118784,
+        "duration_s": 2.6935,
+        "peak": 0.2558,
+        "peak_dbfs": -11.84,
+        "rms": 0.0523,
+        "rms_dbfs": -25.63
+      }
+    },
+    {
+      "id": "s01",
+      "text": "むげつのそらにひらくはな",
+      "lang": "ja",
+      "speaker": "Phascogale",
+      "offset_s": 108.33333333333334,
+      "morae": 12,
+      "phonemes": 24,
+      "notes": 12,
+      "asked_s": 2.7083,
+      "rendered_s": 2.6587,
+      "frames": 229,
+      "seats": {
+        "VV": {
+          "asked_s": 0.2902,
+          "realized_s": 0.2489,
+          "phonemes": 3
+        },
+        "Α": {
+          "asked_s": 0.7256,
+          "realized_s": 0.6224,
+          "phonemes": 4
+        },
+        "Ε": {
+          "asked_s": 0.058,
+          "realized_s": 0.0498,
+          "phonemes": 1
+        },
+        "Ι": {
+          "asked_s": 0.2438,
+          "realized_s": 0.2091,
+          "phonemes": 2
+        },
+        "Ο": {
+          "asked_s": 0.2322,
+          "realized_s": 0.1992,
+          "phonemes": 2
+        }
+      },
+      "file": "lines/s01.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/s01.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 117248,
+        "duration_s": 2.6587,
+        "peak": 0.2275,
+        "peak_dbfs": -12.86,
+        "rms": 0.0455,
+        "rms_dbfs": -26.83
+      }
+    },
+    {
+      "id": "s02",
+      "text": "むらさきのほのおやけどはしない",
+      "lang": "ja",
+      "speaker": "Phascogale",
+      "offset_s": 111.04166666666667,
+      "morae": 15,
+      "phonemes": 28,
+      "notes": 15,
+      "asked_s": 2.7083,
+      "rendered_s": 2.7051,
+      "frames": 233,
+      "seats": {
+        "VV": {
+          "asked_s": 0.1161,
+          "realized_s": 0.1013,
+          "phonemes": 1
+        },
+        "Α": {
+          "asked_s": 0.4818,
+          "realized_s": 0.4205,
+          "phonemes": 5
+        },
+        "Ε": {
+          "asked_s": 0.058,
+          "realized_s": 0.0507,
+          "phonemes": 1
+        },
+        "Ι": {
+          "asked_s": 0.4876,
+          "realized_s": 0.4255,
+          "phonemes": 3
+        },
+        "Ο": {
+          "asked_s": 0.7663,
+          "realized_s": 0.6687,
+          "phonemes": 5
+        }
+      },
+      "file": "lines/s02.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/s02.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 119296,
+        "duration_s": 2.7051,
+        "peak": 0.2042,
+        "peak_dbfs": -13.8,
+        "rms": 0.05,
+        "rms_dbfs": -26.01
+      }
+    },
+    {
+      "id": "s03",
+      "text": "いやすちからをうたにかえて",
+      "lang": "ja",
+      "speaker": "Phascogale",
+      "offset_s": 113.75,
+      "morae": 13,
+      "phonemes": 22,
+      "notes": 13,
+      "asked_s": 2.7083,
+      "rendered_s": 2.9257,
+      "frames": 252,
+      "seats": {
+        "VV": {
+          "asked_s": 0.5341,
+          "realized_s": 0.4657,
+          "phonemes": 2
+        },
+        "Α": {
+          "asked_s": 0.4818,
+          "realized_s": 0.4201,
+          "phonemes": 5
+        },
+        "Ε": {
+          "asked_s": 0.4818,
+          "realized_s": 0.4201,
+          "phonemes": 2
+        },
+        "Ι": {
+          "asked_s": 0.656,
+          "realized_s": 0.572,
+          "phonemes": 3
+        },
+        "Ο": {
+          "asked_s": 0.476,
+          "realized_s": 0.4151,
+          "phonemes": 1
+        }
+      },
+      "file": "lines/s03.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/s03.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 129024,
+        "duration_s": 2.9257,
+        "peak": 0.2271,
+        "peak_dbfs": -12.88,
+        "rms": 0.0612,
+        "rms_dbfs": -24.27
+      }
+    },
+    {
+      "id": "s04",
+      "text": "かがみのむこうであえるあした",
+      "lang": "ja",
+      "speaker": "Phascogale",
+      "offset_s": 116.45833333333334,
+      "morae": 14,
+      "phonemes": 24,
+      "notes": 14,
+      "asked_s": 2.7083,
+      "rendered_s": 3.3205,
+      "frames": 286,
+      "seats": {
+        "VV": {
+          "asked_s": 0.2322,
+          "realized_s": 0.2031,
+          "phonemes": 2
+        },
+        "Α": {
+          "asked_s": 1.1378,
+          "realized_s": 0.9951,
+          "phonemes": 5
+        },
+        "Ε": {
+          "asked_s": 0.5921,
+          "realized_s": 0.5179,
+          "phonemes": 2
+        },
+        "Ι": {
+          "asked_s": 0.18,
+          "realized_s": 0.1574,
+          "phonemes": 2
+        },
+        "Ο": {
+          "asked_s": 0.7082,
+          "realized_s": 0.6194,
+          "phonemes": 3
+        }
+      },
+      "file": "lines/s04.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/s04.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 146432,
+        "duration_s": 3.3205,
+        "peak": 0.2801,
+        "peak_dbfs": -11.05,
+        "rms": 0.0583,
+        "rms_dbfs": -24.69
+      }
+    },
+    {
+      "id": "s05",
+      "text": "ふたりのこえはひとつになる",
+      "lang": "ja",
+      "speaker": "Phascogale",
+      "offset_s": 119.16666666666667,
+      "morae": 13,
+      "phonemes": 25,
+      "notes": 13,
+      "asked_s": 2.7083,
+      "rendered_s": 2.6819,
+      "frames": 231,
+      "seats": {
+        "VV": {
+          "asked_s": 0.4122,
+          "realized_s": 0.3593,
+          "phonemes": 3
+        },
+        "Α": {
+          "asked_s": 0.3019,
+          "realized_s": 0.2631,
+          "phonemes": 3
+        },
+        "Ε": {
+          "asked_s": 0.476,
+          "realized_s": 0.4149,
+          "phonemes": 1
+        },
+        "Ι": {
+          "asked_s": 0.238,
+          "realized_s": 0.2075,
+          "phonemes": 3
+        },
+        "Ο": {
+          "asked_s": 0.3483,
+          "realized_s": 0.3036,
+          "phonemes": 3
+        }
+      },
+      "file": "lines/s05.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/s05.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 118272,
+        "duration_s": 2.6819,
+        "peak": 0.2362,
+        "peak_dbfs": -12.54,
+        "rms": 0.0455,
+        "rms_dbfs": -26.85
+      }
+    },
+    {
+      "id": "s06",
+      "text": "かちもまけもここにはない",
+      "lang": "ja",
+      "speaker": "Phascogale",
+      "offset_s": 121.875,
+      "morae": 12,
+      "phonemes": 23,
+      "notes": 12,
+      "asked_s": 2.7083,
+      "rendered_s": 2.6819,
+      "frames": 231,
+      "seats": {
+        "Α": {
+          "asked_s": 0.4876,
+          "realized_s": 0.4219,
+          "phonemes": 4
+        },
+        "Ε": {
+          "asked_s": 0.1161,
+          "realized_s": 0.1004,
+          "phonemes": 1
+        },
+        "Ι": {
+          "asked_s": 0.8998,
+          "realized_s": 0.7785,
+          "phonemes": 3
+        },
+        "Ο": {
+          "asked_s": 0.4063,
+          "realized_s": 0.3516,
+          "phonemes": 4
+        }
+      },
+      "file": "lines/s06.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/s06.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 118272,
+        "duration_s": 2.6819,
+        "peak": 0.2159,
+        "peak_dbfs": -13.31,
+        "rms": 0.0403,
+        "rms_dbfs": -27.89
+      }
+    },
+    {
+      "id": "s07",
+      "text": "じゅうさんのそらにかけるはし",
+      "lang": "ja",
+      "speaker": "Phascogale",
+      "offset_s": 124.58333333333334,
+      "morae": 13,
+      "phonemes": 24,
+      "notes": 13,
+      "asked_s": 2.7083,
+      "rendered_s": 2.6471,
+      "frames": 228,
+      "seats": {
+        "VV": {
+          "asked_s": 0.6502,
+          "realized_s": 0.5615,
+          "phonemes": 3
+        },
+        "Α": {
+          "asked_s": 0.4238,
+          "realized_s": 0.366,
+          "phonemes": 4
+        },
+        "Ε": {
+          "asked_s": 0.058,
+          "realized_s": 0.0501,
+          "phonemes": 1
+        },
+        "Ι": {
+          "asked_s": 0.3599,
+          "realized_s": 0.3108,
+          "phonemes": 2
+        },
+        "Ο": {
+          "asked_s": 0.1741,
+          "realized_s": 0.1504,
+          "phonemes": 2
+        }
+      },
+      "file": "lines/s07.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/s07.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 116736,
+        "duration_s": 2.6471,
+        "peak": 0.1922,
+        "peak_dbfs": -14.32,
+        "rms": 0.0473,
+        "rms_dbfs": -26.5
+      }
+    },
+    {
+      "id": "s08",
+      "text": "うたいつづけるあかつきまで",
+      "lang": "ja",
+      "speaker": "Phascogale",
+      "offset_s": 127.29166666666667,
+      "morae": 13,
+      "phonemes": 23,
+      "notes": 13,
+      "asked_s": 2.7083,
+      "rendered_s": 2.6935,
+      "frames": 232,
+      "seats": {
+        "VV": {
+          "asked_s": 0.8243,
+          "realized_s": 0.7163,
+          "phonemes": 5
+        },
+        "Α": {
+          "asked_s": 0.8417,
+          "realized_s": 0.7314,
+          "phonemes": 4
+        },
+        "Ε": {
+          "asked_s": 0.0639,
+          "realized_s": 0.0555,
+          "phonemes": 2
+        },
+        "Ι": {
+          "asked_s": 0.5341,
+          "realized_s": 0.4641,
+          "phonemes": 2
+        }
+      },
+      "file": "lines/s08.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/s08.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 118784,
+        "duration_s": 2.6935,
+        "peak": 0.2136,
+        "peak_dbfs": -13.41,
+        "rms": 0.0573,
+        "rms_dbfs": -24.84
+      }
+    },
+    {
+      "id": "c-guy",
+      "text": "かがみはかがみわれらはひとつ",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 238.33333333333334,
+      "morae": 14,
+      "phonemes": 28,
+      "notes": 14,
+      "asked_s": 5.4167,
+      "rendered_s": 5.3638,
+      "frames": 462,
+      "seats": {
+        "VV": {
+          "asked_s": 0.476,
+          "realized_s": 0.4095,
+          "phonemes": 1
+        },
+        "Α": {
+          "asked_s": 1.8054,
+          "realized_s": 1.5532,
+          "phonemes": 8
+        },
+        "Ε": {
+          "asked_s": 0.1161,
+          "realized_s": 0.0999,
+          "phonemes": 1
+        },
+        "Ι": {
+          "asked_s": 0.3657,
+          "realized_s": 0.3146,
+          "phonemes": 3
+        },
+        "Ο": {
+          "asked_s": 0.3541,
+          "realized_s": 0.3046,
+          "phonemes": 1
+        }
+      },
+      "file": "lines/c-guy.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/c-guy.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 236544,
+        "duration_s": 5.3638,
+        "peak": 0.2913,
+        "peak_dbfs": -10.71,
+        "rms": 0.0548,
+        "rms_dbfs": -25.23
+      }
+    },
+    {
+      "id": "c-mirror",
+      "text": "かがみはかがみわれらはひとつ",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 238.33333333333334,
+      "morae": 14,
+      "phonemes": 28,
+      "notes": 14,
+      "asked_s": 5.4167,
+      "rendered_s": 5.3638,
+      "frames": 462,
+      "seats": {
+        "VV": {
+          "asked_s": 0.476,
+          "realized_s": 0.4095,
+          "phonemes": 1
+        },
+        "Α": {
+          "asked_s": 1.8054,
+          "realized_s": 1.5532,
+          "phonemes": 8
+        },
+        "Ε": {
+          "asked_s": 0.1161,
+          "realized_s": 0.0999,
+          "phonemes": 1
+        },
+        "Ι": {
+          "asked_s": 0.3657,
+          "realized_s": 0.3146,
+          "phonemes": 3
+        },
+        "Ο": {
+          "asked_s": 0.3541,
+          "realized_s": 0.3046,
+          "phonemes": 1
+        }
+      },
+      "file": "lines/c-mirror.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/c-mirror.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 236544,
+        "duration_s": 5.3638,
+        "peak": 0.3058,
+        "peak_dbfs": -10.29,
+        "rms": 0.0564,
+        "rms_dbfs": -24.97
+      }
+    },
+    {
+      "id": "c-shion-91",
+      "text": "かがみはかがみわれらはひとつ",
+      "lang": "ja",
+      "speaker": "Phascogale",
+      "offset_s": 243.75,
+      "morae": 14,
+      "phonemes": 28,
+      "notes": 14,
+      "asked_s": 2.7083,
+      "rendered_s": 2.6703,
+      "frames": 230,
+      "seats": {
+        "VV": {
+          "asked_s": 0.3541,
+          "realized_s": 0.3062,
+          "phonemes": 1
+        },
+        "Α": {
+          "asked_s": 0.7198,
+          "realized_s": 0.6224,
+          "phonemes": 8
+        },
+        "Ε": {
+          "asked_s": 0.1161,
+          "realized_s": 0.1004,
+          "phonemes": 1
+        },
+        "Ι": {
+          "asked_s": 0.238,
+          "realized_s": 0.2058,
+          "phonemes": 3
+        },
+        "Ο": {
+          "asked_s": 0.1161,
+          "realized_s": 0.1004,
+          "phonemes": 1
+        }
+      },
+      "file": "lines/c-shion-91.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/c-shion-91.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 117760,
+        "duration_s": 2.6703,
+        "peak": 0.1756,
+        "peak_dbfs": -15.11,
+        "rms": 0.0387,
+        "rms_dbfs": -28.26
+      }
+    },
+    {
+      "id": "c-guy-92",
+      "text": "かがみはかがみわれらはひとつ",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 246.45833333333334,
+      "morae": 14,
+      "phonemes": 28,
+      "notes": 14,
+      "asked_s": 2.7083,
+      "rendered_s": 2.6587,
+      "frames": 229,
+      "seats": {
+        "VV": {
+          "asked_s": 0.238,
+          "realized_s": 0.2057,
+          "phonemes": 1
+        },
+        "Α": {
+          "asked_s": 0.8882,
+          "realized_s": 0.7675,
+          "phonemes": 8
+        },
+        "Ε": {
+          "asked_s": 0.058,
+          "realized_s": 0.0502,
+          "phonemes": 1
+        },
+        "Ι": {
+          "asked_s": 0.1741,
+          "realized_s": 0.1505,
+          "phonemes": 3
+        },
+        "Ο": {
+          "asked_s": 0.18,
+          "realized_s": 0.1555,
+          "phonemes": 1
+        }
+      },
+      "file": "lines/c-guy-92.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/c-guy-92.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 117248,
+        "duration_s": 2.6587,
+        "peak": 0.2639,
+        "peak_dbfs": -11.57,
+        "rms": 0.0476,
+        "rms_dbfs": -26.45
+      }
+    },
+    {
+      "id": "c-shion-92",
+      "text": "かがみはかがみわれらはひとつ",
+      "lang": "ja",
+      "speaker": "Phascogale",
+      "offset_s": 246.45833333333334,
+      "morae": 14,
+      "phonemes": 28,
+      "notes": 14,
+      "asked_s": 2.7083,
+      "rendered_s": 2.6587,
+      "frames": 229,
+      "seats": {
+        "VV": {
+          "asked_s": 0.238,
+          "realized_s": 0.2057,
+          "phonemes": 1
+        },
+        "Α": {
+          "asked_s": 0.8882,
+          "realized_s": 0.7675,
+          "phonemes": 8
+        },
+        "Ε": {
+          "asked_s": 0.058,
+          "realized_s": 0.0502,
+          "phonemes": 1
+        },
+        "Ι": {
+          "asked_s": 0.1741,
+          "realized_s": 0.1505,
+          "phonemes": 3
+        },
+        "Ο": {
+          "asked_s": 0.18,
+          "realized_s": 0.1555,
+          "phonemes": 1
+        }
+      },
+      "file": "lines/c-shion-92.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/c-shion-92.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 117248,
+        "duration_s": 2.6587,
+        "peak": 0.3064,
+        "peak_dbfs": -10.27,
+        "rms": 0.0505,
+        "rms_dbfs": -25.93
+      }
+    },
+    {
+      "id": "f-guy",
+      "text": "しょうぶはひきわけこれがこたえ",
+      "lang": "ja",
+      "speaker": "Civet",
+      "offset_s": 249.16666666666669,
+      "morae": 14,
+      "phonemes": 26,
+      "notes": 14,
+      "asked_s": 2.7083,
+      "rendered_s": 2.6935,
+      "frames": 232,
+      "seats": {
+        "VV": {
+          "asked_s": 0.1741,
+          "realized_s": 0.1519,
+          "phonemes": 2
+        },
+        "Α": {
+          "asked_s": 0.4876,
+          "realized_s": 0.4253,
+          "phonemes": 4
+        },
+        "Ε": {
+          "asked_s": 0.4644,
+          "realized_s": 0.405,
+          "phonemes": 3
+        },
+        "Ι": {
+          "asked_s": 0.2438,
+          "realized_s": 0.2126,
+          "phonemes": 2
+        },
+        "Ο": {
+          "asked_s": 0.3483,
+          "realized_s": 0.3038,
+          "phonemes": 3
+        }
+      },
+      "file": "lines/f-guy.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/f-guy.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 118784,
+        "duration_s": 2.6935,
+        "peak": 0.2825,
+        "peak_dbfs": -10.98,
+        "rms": 0.0524,
+        "rms_dbfs": -25.61
+      }
+    },
+    {
+      "id": "f-shion",
+      "text": "しょうぶはひきわけこれがこたえ",
+      "lang": "ja",
+      "speaker": "Phascogale",
+      "offset_s": 249.16666666666669,
+      "morae": 14,
+      "phonemes": 26,
+      "notes": 14,
+      "asked_s": 2.7083,
+      "rendered_s": 2.6935,
+      "frames": 232,
+      "seats": {
+        "VV": {
+          "asked_s": 0.1741,
+          "realized_s": 0.1519,
+          "phonemes": 2
+        },
+        "Α": {
+          "asked_s": 0.4876,
+          "realized_s": 0.4253,
+          "phonemes": 4
+        },
+        "Ε": {
+          "asked_s": 0.4644,
+          "realized_s": 0.405,
+          "phonemes": 3
+        },
+        "Ι": {
+          "asked_s": 0.2438,
+          "realized_s": 0.2126,
+          "phonemes": 2
+        },
+        "Ο": {
+          "asked_s": 0.3483,
+          "realized_s": 0.3038,
+          "phonemes": 3
+        }
+      },
+      "file": "lines/f-shion.wav",
+      "measured": {
+        "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/lines/f-shion.wav",
+        "sample_rate": 44100,
+        "channels": 1,
+        "samples": 118784,
+        "duration_s": 2.6935,
+        "peak": 0.1729,
+        "peak_dbfs": -15.25,
+        "rms": 0.039,
+        "rms_dbfs": -28.18
+      }
+    }
+  ],
+  "assembly": {
+    "file": "vocal-stem.wav",
+    "measured": {
+      "file": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/pass2/vocal-stem.wav",
+      "sample_rate": 44100,
+      "channels": 1,
+      "samples": 11107688,
+      "duration_s": 251.875,
+      "peak": 0.5294,
+      "peak_dbfs": -5.52,
+      "rms": 0.0349,
+      "rms_dbfs": -29.14
+    }
+  },
+  "nine": {
+    "stations": {
+      "Α": 195,
+      "Ι": 124,
+      "Ο": 134,
+      "Ε": 68,
+      "VV": 90
+    },
+    "dispositions": {
+      "PASS_NATIVE": 551,
+      "SEATED": 611
+    }
+  },
+  "seat_totals": {
+    "VV": {
+      "asked_s": 13.6882,
+      "realized_s": 11.9548,
+      "phonemes": 90
+    },
+    "Α": {
+      "asked_s": 25.5884,
+      "realized_s": 22.2335,
+      "phonemes": 195
+    },
+    "Ε": {
+      "asked_s": 9.2183,
+      "realized_s": 8.0235,
+      "phonemes": 68
+    },
+    "Ι": {
+      "asked_s": 17.3917,
+      "realized_s": 15.1608,
+      "phonemes": 124
+    },
+    "Ο": {
+      "asked_s": 19.2435,
+      "realized_s": 16.7504,
+      "phonemes": 134
+    }
+  },
+  "calibration": {
+    "applied": true,
+    "factors": {
+      "VV": 1.1412,
+      "Α": 1.1443,
+      "Ε": 1.1411,
+      "Ι": 1.1426,
+      "Ο": 1.1415
+    },
+    "trained_by": [
+      "pow-26ef27c5d8490bfc9f03c52186cc7f76af6395aeca91efe464f75d1422401da6"
+    ],
+    "per_line": {
+      "a01": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 4
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 2
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 4
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 1
+        }
+      },
+      "a02": {
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 4
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 2
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 1
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 3
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 2
+        }
+      },
+      "a03": {
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 5
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 2
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 1
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 2
+        }
+      },
+      "a04": {
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 5
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 5
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 1
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 2
+        }
+      },
+      "a05": {
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 4
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 5
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 2
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 3
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 1
+        }
+      },
+      "a06": {
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 5
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 3
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 2
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 1
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 1
+        }
+      },
+      "a07": {
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 3
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 2
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 3
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 4
+        }
+      },
+      "a08": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 3
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 4
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 3
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 2
+        }
+      },
+      "a09": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 5
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 2
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 1
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 4
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 1
+        }
+      },
+      "a10": {
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 3
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 4
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 1
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 1
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 4
+        }
+      },
+      "a11": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 4
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 3
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 4
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 2
+        }
+      },
+      "a12": {
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 3
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 2
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 1
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 3
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 3
+        }
+      },
+      "a13": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 2
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 4
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 1
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 4
+        }
+      },
+      "a14": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 2
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 3
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 5
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 2
+        }
+      },
+      "a15": {
+        "VV": {
+          "factor": 1.1412,
+          "morae": 7
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 3
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 1
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 2
+        }
+      },
+      "a16": {
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 4
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 2
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 8
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 1
+        }
+      },
+      "b01": {
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 5
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 5
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 4
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        }
+      },
+      "b02": {
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 3
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 4
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 4
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 3
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        }
+      },
+      "b03": {
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 6
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 1
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 5
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 1
+        }
+      },
+      "b04": {
+        "VV": {
+          "factor": 1.1412,
+          "morae": 3
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 1
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 6
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 2
+        }
+      },
+      "b05": {
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 5
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 1
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 5
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 1
+        }
+      },
+      "b06": {
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 5
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 6
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 1
+        }
+      },
+      "b07": {
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 5
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 4
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 2
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 2
+        }
+      },
+      "b08": {
+        "VV": {
+          "factor": 1.1412,
+          "morae": 1
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 6
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 1
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 4
+        }
+      },
+      "b09": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 4
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 4
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 2
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 2
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 1
+        }
+      },
+      "b10": {
+        "VV": {
+          "factor": 1.1412,
+          "morae": 3
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 3
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 3
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 3
+        }
+      },
+      "b11": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 5
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 2
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 3
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 1
+        }
+      },
+      "b12": {
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 2
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 6
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 3
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 4
+        }
+      },
+      "b13": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 2
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 5
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 5
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 1
+        }
+      },
+      "b14": {
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 3
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 3
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 2
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 2
+        }
+      },
+      "b15": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 4
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 2
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 3
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 2
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 1
+        }
+      },
+      "b16": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 5
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 2
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 1
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 3
+        }
+      },
+      "s01": {
+        "VV": {
+          "factor": 1.1412,
+          "morae": 3
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 2
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 4
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 2
+        }
+      },
+      "s02": {
+        "VV": {
+          "factor": 1.1412,
+          "morae": 1
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 5
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 3
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 5
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        }
+      },
+      "s03": {
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 3
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 5
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 2
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 1
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 2
+        }
+      },
+      "s04": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 5
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 2
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 3
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 2
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 2
+        }
+      },
+      "s05": {
+        "VV": {
+          "factor": 1.1412,
+          "morae": 3
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 3
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 3
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 3
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        }
+      },
+      "s06": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 4
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 3
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 4
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        }
+      },
+      "s07": {
+        "VV": {
+          "factor": 1.1412,
+          "morae": 3
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 4
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 2
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 2
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        }
+      },
+      "s08": {
+        "VV": {
+          "factor": 1.1412,
+          "morae": 5
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 4
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 2
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 2
+        }
+      },
+      "c-guy": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 8
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 3
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 1
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 1
+        }
+      },
+      "c-mirror": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 8
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 3
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 1
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 1
+        }
+      },
+      "c-shion-91": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 8
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 3
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 1
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 1
+        }
+      },
+      "c-guy-92": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 8
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 3
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 1
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 1
+        }
+      },
+      "c-shion-92": {
+        "Α": {
+          "factor": 1.1443,
+          "morae": 8
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 3
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 1
+        },
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 1
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 1
+        }
+      },
+      "f-guy": {
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 3
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 2
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 4
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 2
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 3
+        }
+      },
+      "f-shion": {
+        "Ο": {
+          "factor": 1.1415,
+          "morae": 3
+        },
+        "VV": {
+          "factor": 1.1412,
+          "morae": 2
+        },
+        "Α": {
+          "factor": 1.1443,
+          "morae": 4
+        },
+        "Ι": {
+          "factor": 1.1426,
+          "morae": 2
+        },
+        "Ε": {
+          "factor": 1.1411,
+          "morae": 3
+        }
+      }
+    }
+  },
+  "walls": [
+    "line a04: rendered 2.740s against a 2.708s slot -- overhang 0.032s past its bar line, summed into the assembly, not trimmed",
+    "line a09: rendered 2.717s against a 2.708s slot -- overhang 0.008s past its bar line, summed into the assembly, not trimmed",
+    "line a15: rendered 2.752s against a 2.708s slot -- overhang 0.043s past its bar line, summed into the assembly, not trimmed",
+    "line b06: rendered 2.752s against a 2.708s slot -- overhang 0.043s past its bar line, summed into the assembly, not trimmed",
+    "line b07: rendered 2.717s against a 2.708s slot -- overhang 0.008s past its bar line, summed into the assembly, not trimmed",
+    "line b09: rendered 2.717s against a 2.708s slot -- overhang 0.008s past its bar line, summed into the assembly, not trimmed",
+    "line b13: rendered 2.717s against a 2.708s slot -- overhang 0.008s past its bar line, summed into the assembly, not trimmed",
+    "line s03: rendered 2.926s against a 2.708s slot -- overhang 0.217s past its bar line, summed into the assembly, not trimmed",
+    "line s04: rendered 3.321s against a 2.708s slot -- overhang 0.612s past its bar line, summed into the assembly, not trimmed"
+  ],
+  "bridge_wall_seconds": 454.53,
+  "wall_seconds": 459.14,
+  "proof": {
+    "id": "pow-68610bb803336cd963c2534fc589fe6a308f341919828316f25eb5ccbc1fe84d",
+    "kind": "vocal",
+    "parents": [
+      "pow-26ef27c5d8490bfc9f03c52186cc7f76af6395aeca91efe464f75d1422401da6"
+    ],
+    "ledger": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/v3-render/ledger-v3.jsonl"
+  }
+}

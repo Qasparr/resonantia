@@ -1,0 +1,18 @@
+bridge result: vocal-stem.wav (454.53s wall)
+proof of work (vocal): pow-68610bb803336cd963c2534fc589fe6a308f341919828316f25eb5ccbc1fe84d appended
+manifest: 47 lines, assembly 251.875s, peak -5.52 dBFS, RMS -29.14 dBFS; walls: 9
+{
+  "pass2_proof": "pow-68610bb803336cd963c2534fc589fe6a308f341919828316f25eb5ccbc1fe84d",
+  "realization_pct": 99.8387,
+  "walls": [
+    "line a04: rendered 2.740s against a 2.708s slot -- overhang 0.032s past its bar line, summed into the assembly, not trimmed",
+    "line a09: rendered 2.717s against a 2.708s slot -- overhang 0.008s past its bar line, summed into the assembly, not trimmed",
+    "line a15: rendered 2.752s against a 2.708s slot -- overhang 0.043s past its bar line, summed into the assembly, not trimmed",
+    "line b06: rendered 2.752s against a 2.708s slot -- overhang 0.043s past its bar line, summed into the assembly, not trimmed",
+    "line b07: rendered 2.717s against a 2.708s slot -- overhang 0.008s past its bar line, summed into the assembly, not trimmed",
+    "line b09: rendered 2.717s against a 2.708s slot -- overhang 0.008s past its bar line, summed into the assembly, not trimmed",
+    "line b13: rendered 2.717s against a 2.708s slot -- overhang 0.008s past its bar line, summed into the assembly, not trimmed",
+    "line s03: rendered 2.926s against a 2.708s slot -- overhang 0.217s past its bar line, summed into the assembly, not trimmed",
+    "line s04: rendered 3.321s against a 2.708s slot -- overhang 0.612s past its bar line, summed into the assembly, not trimmed"
+  ]
+}
