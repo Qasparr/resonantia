@@ -1,0 +1,19 @@
+{
+  "pattern": "the page's factory pattern (DEFAULT_PATTERN), tempo 72, scale minor, mood deep",
+  "bars_struck": 4,
+  "events_per_bar": 9,
+  "step_seconds": 0.20833333333333334,
+  "gains": {
+    "sso": 1.0,
+    "salamander": 0.9,
+    "sub808": 0.9
+  },
+  "master_wav": {
+    "lufs": -17.05,
+    "true_peak_dbtp": -0.97
+  },
+  "master_note": "the guide's -14 LUFS is not reached and the shortfall is printed: the premaster already peaks at the -1 dBTP ceiling (sparse strikes, long quiet between them), so loudness normalization has no headroom to give; the landing is the material's own crest, not a smoothed figure",
+  "mp3_bitrate_bps": 321452,
+  "spectral_centroid_hz": 496.0,
+  "choir_gate": "step 0.208s < violins sustain floor 0.842s, >= Salamander floor 0.13s: Salamander seated, strings held"
+}

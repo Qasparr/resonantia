@@ -1,0 +1,108 @@
+{
+  "title": "5D Memory Crystal pattern",
+  "tempo": 72,
+  "scale": "minor",
+  "mood": "deep",
+  "tracks": [
+    {
+      "name": "SUB HORIZON",
+      "base": 55,
+      "wave": "sine",
+      "level": 0.34,
+      "pattern": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "oct": 0
+    },
+    {
+      "name": "GLASS ORBIT",
+      "base": 110,
+      "wave": "triangle",
+      "level": 0.16,
+      "pattern": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oct": 1
+    },
+    {
+      "name": "PHANTOM CHOIR",
+      "base": 220,
+      "wave": "sine",
+      "level": 0.12,
+      "pattern": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "oct": 2
+    },
+    {
+      "name": "SIGNAL DUST",
+      "base": 440,
+      "wave": "sawtooth",
+      "level": 0.055,
+      "pattern": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "oct": 3
+    }
+  ]
+}
