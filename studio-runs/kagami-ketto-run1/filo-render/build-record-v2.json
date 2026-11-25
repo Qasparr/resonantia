@@ -1,0 +1,212 @@
+{
+  "score_verification": {
+    "checks": 125,
+    "passed": 125
+  },
+  "events": {
+    "VLN": 216,
+    "RH": 340,
+    "LH": 173,
+    "B808": 173
+  },
+  "balance_before_v1": {
+    "per_section": {
+      "verse_a": {
+        "voice_rms": 0.02494211319561462,
+        "bed_rms": 0.19516598263115692,
+        "ratio": 0.1277994907685966,
+        "windows": 43
+      },
+      "verse_b": {
+        "voice_rms": 0.023654643635338063,
+        "bed_rms": 0.19516765105066033,
+        "ratio": 0.12120166179177894,
+        "windows": 43
+      },
+      "shion": {
+        "voice_rms": 0.029670926965001163,
+        "bed_rms": 0.1691572165577145,
+        "ratio": 0.17540444072557662,
+        "windows": 21
+      },
+      "close": {
+        "voice_rms": 0.045436519561529734,
+        "bed_rms": 0.16442999329828495,
+        "ratio": 0.27632744276225457,
+        "windows": 13
+      }
+    },
+    "overall": {
+      "voice_rms": 0.028304423631018708,
+      "bed_rms": 0.18770830134664912,
+      "ratio": 0.15078940796948395,
+      "windows": 120
+    }
+  },
+  "balance_voice_raw_vs_new_bed": {
+    "per_section": {
+      "verse_a": {
+        "voice_rms": 0.04452185036828442,
+        "bed_rms": 0.3254215518231267,
+        "ratio": 0.136812851265865,
+        "windows": 43
+      },
+      "verse_b": {
+        "voice_rms": 0.04231244808769659,
+        "bed_rms": 0.32645322145072847,
+        "ratio": 0.12961259165911707,
+        "windows": 43
+      },
+      "shion": {
+        "voice_rms": 0.05309938909201582,
+        "bed_rms": 0.284802619895646,
+        "ratio": 0.18644276907098634,
+        "windows": 21
+      },
+      "close": {
+        "voice_rms": 0.08143646076630721,
+        "bed_rms": 0.27660819312303103,
+        "ratio": 0.29441087715751624,
+        "windows": 13
+      }
+    },
+    "overall": {
+      "voice_rms": 0.050633014807079164,
+      "bed_rms": 0.31403647273372753,
+      "ratio": 0.16123291147143615,
+      "windows": 120
+    }
+  },
+  "voice_gain": {
+    "linear": 7.879926814450317,
+    "db": 17.930443679161712,
+    "basis": "verse_a + verse_b pooled",
+    "verse_ratio_raw": 0.1332499685243898,
+    "target_verse_ratio": 1.05
+  },
+  "balance_after_v2_premaster": {
+    "per_section": {
+      "verse_a": {
+        "voice_rms": 0.35082892254598913,
+        "bed_rms": 0.3254215518231267,
+        "ratio": 1.0780752552512929,
+        "windows": 43
+      },
+      "verse_b": {
+        "voice_rms": 0.33341899427127736,
+        "bed_rms": 0.32645322145072847,
+        "ratio": 1.021337736505076,
+        "windows": 43
+      },
+      "shion": {
+        "voice_rms": 0.41841929993710614,
+        "bed_rms": 0.284802619895646,
+        "ratio": 1.4691553753628335,
+        "windows": 21
+      },
+      "close": {
+        "voice_rms": 0.6417133508663555,
+        "bed_rms": 0.27660819312303103,
+        "ratio": 2.319936165379351,
+        "windows": 13
+      }
+    },
+    "overall": {
+      "voice_rms": 0.398984451074763,
+      "bed_rms": 0.31403647273372753,
+      "ratio": 1.2705035424756637,
+      "windows": 120
+    }
+  },
+  "01_full_render_v2": {
+    "wav": "01-full-render-kagami-kettou-v2.wav",
+    "mp3": "01-full-render-kagami-kettou-v2.mp3",
+    "mp3_bytes": 10077165,
+    "mastering": {
+      "lufs_before": -5.55,
+      "gain_applied_db": -8.45,
+      "trim_db": -0.23,
+      "lufs_after": -14.29,
+      "sample_peak_db": -1.58,
+      "true_peak_dbtp": -1.37,
+      "ceiling_overrode_loudness": true,
+      "target_lufs": -14.0,
+      "ceiling_dbtp": -1.35
+    },
+    "verdict": {
+      "judge": "masterlaw",
+      "path": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/filo-render/01-full-render-kagami-kettou-v2.mp3",
+      "sample_rate_hz": 48000,
+      "checks": [
+        {
+          "check": "integrated loudness",
+          "value": -14.29,
+          "unit": "LUFS",
+          "law": "-14.0 +/- 0.5 LUFS",
+          "ok": true
+        },
+        {
+          "check": "decoded true peak",
+          "value": -1.35,
+          "unit": "dBTP",
+          "law": "<= -1.0 dBTP",
+          "ok": true
+        },
+        {
+          "check": "bitrate (sworn)",
+          "value": 320000,
+          "unit": "bps",
+          "law": "exactly 320000 bps",
+          "ok": true
+        }
+      ],
+      "compliant": true
+    }
+  },
+  "02_instrumental_v2": {
+    "wav": "02-instrumental-kagami-kettou-v2.wav",
+    "mp3": "02-instrumental-kagami-kettou-v2.mp3",
+    "mp3_bytes": 10077165,
+    "mastering": {
+      "lufs_before": -9.27,
+      "gain_applied_db": -4.73,
+      "trim_db": 0.0,
+      "lufs_after": -14.01,
+      "sample_peak_db": -1.35,
+      "true_peak_dbtp": -1.35,
+      "ceiling_overrode_loudness": false,
+      "target_lufs": -14.0,
+      "ceiling_dbtp": -1.35
+    },
+    "verdict": {
+      "judge": "masterlaw",
+      "path": "/home/hatch/workspace/resonance/studio-runs/kagami-ketto-run1/filo-render/02-instrumental-kagami-kettou-v2.mp3",
+      "sample_rate_hz": 48000,
+      "checks": [
+        {
+          "check": "integrated loudness",
+          "value": -14.01,
+          "unit": "LUFS",
+          "law": "-14.0 +/- 0.5 LUFS",
+          "ok": true
+        },
+        {
+          "check": "decoded true peak",
+          "value": -1.32,
+          "unit": "dBTP",
+          "law": "<= -1.0 dBTP",
+          "ok": true
+        },
+        {
+          "check": "bitrate (sworn)",
+          "value": 320000,
+          "unit": "bps",
+          "law": "exactly 320000 bps",
+          "ok": true
+        }
+      ],
+      "compliant": true
+    }
+  },
+  "03_vocals": "STANDS as v1 (03-vocals-kagami-kettou.mp3): mastered from this same stem, unchanged; not re-struck."
+}
